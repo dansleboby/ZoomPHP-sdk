@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse20028Participants Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -60,7 +60,7 @@ class InlineResponse20028Participants implements ModelInterface, ArrayAccess
         'id' => 'string',
         'user_id' => 'string',
         'user_name' => 'string',
-        'details' => '\Swagger\Client\Model\InlineResponse20028Details[]'
+        'details' => '\Zoom\Api\Model\InlineResponse20028Details[]'
     ];
 
     /**
@@ -297,7 +297,7 @@ class InlineResponse20028Participants implements ModelInterface, ArrayAccess
     /**
      * Gets details
      *
-     * @return \Swagger\Client\Model\InlineResponse20028Details[]
+     * @return \Zoom\Api\Model\InlineResponse20028Details[]
      */
     public function getDetails()
     {
@@ -307,7 +307,7 @@ class InlineResponse20028Participants implements ModelInterface, ArrayAccess
     /**
      * Sets details
      *
-     * @param \Swagger\Client\Model\InlineResponse20028Details[] $details Array of sharing and recording details.
+     * @param \Zoom\Api\Model\InlineResponse20028Details[] $details Array of sharing and recording details.
      *
      * @return $this
      */

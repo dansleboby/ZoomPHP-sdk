@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * UserSettingsUpdate Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,13 +57,13 @@ class UserSettingsUpdate implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'schedule_meeting' => '\Swagger\Client\Model\UserSettingsMeetingSettings',
-        'in_meeting' => '\Swagger\Client\Model\UserSettingsMeetingSettings1',
-        'email_notification' => '\Swagger\Client\Model\UserSettingsNotificationSettings',
-        'recording' => '\Swagger\Client\Model\UserSettingsRecordingSettings',
-        'telephony' => '\Swagger\Client\Model\UserSettingsMeetingSettings2',
-        'feature' => '\Swagger\Client\Model\UserSettingsFeatureSettings1',
-        'tsp' => '\Swagger\Client\Model\UserSettingsTSPSettings'
+        'schedule_meeting' => '\Zoom\Api\Model\UserSettingsMeetingSettings',
+        'in_meeting' => '\Zoom\Api\Model\UserSettingsMeetingSettings1',
+        'email_notification' => '\Zoom\Api\Model\UserSettingsNotificationSettings',
+        'recording' => '\Zoom\Api\Model\UserSettingsRecordingSettings',
+        'telephony' => '\Zoom\Api\Model\UserSettingsMeetingSettings2',
+        'feature' => '\Zoom\Api\Model\UserSettingsFeatureSettings1',
+        'tsp' => '\Zoom\Api\Model\UserSettingsTSPSettings'
     ];
 
     /**
@@ -243,7 +243,7 @@ class UserSettingsUpdate implements ModelInterface, ArrayAccess
     /**
      * Gets schedule_meeting
      *
-     * @return \Swagger\Client\Model\UserSettingsMeetingSettings
+     * @return \Zoom\Api\Model\UserSettingsMeetingSettings
      */
     public function getScheduleMeeting()
     {
@@ -253,7 +253,7 @@ class UserSettingsUpdate implements ModelInterface, ArrayAccess
     /**
      * Sets schedule_meeting
      *
-     * @param \Swagger\Client\Model\UserSettingsMeetingSettings $schedule_meeting schedule_meeting
+     * @param \Zoom\Api\Model\UserSettingsMeetingSettings $schedule_meeting schedule_meeting
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class UserSettingsUpdate implements ModelInterface, ArrayAccess
     /**
      * Gets in_meeting
      *
-     * @return \Swagger\Client\Model\UserSettingsMeetingSettings1
+     * @return \Zoom\Api\Model\UserSettingsMeetingSettings1
      */
     public function getInMeeting()
     {
@@ -277,7 +277,7 @@ class UserSettingsUpdate implements ModelInterface, ArrayAccess
     /**
      * Sets in_meeting
      *
-     * @param \Swagger\Client\Model\UserSettingsMeetingSettings1 $in_meeting in_meeting
+     * @param \Zoom\Api\Model\UserSettingsMeetingSettings1 $in_meeting in_meeting
      *
      * @return $this
      */
@@ -291,7 +291,7 @@ class UserSettingsUpdate implements ModelInterface, ArrayAccess
     /**
      * Gets email_notification
      *
-     * @return \Swagger\Client\Model\UserSettingsNotificationSettings
+     * @return \Zoom\Api\Model\UserSettingsNotificationSettings
      */
     public function getEmailNotification()
     {
@@ -301,7 +301,7 @@ class UserSettingsUpdate implements ModelInterface, ArrayAccess
     /**
      * Sets email_notification
      *
-     * @param \Swagger\Client\Model\UserSettingsNotificationSettings $email_notification email_notification
+     * @param \Zoom\Api\Model\UserSettingsNotificationSettings $email_notification email_notification
      *
      * @return $this
      */
@@ -315,7 +315,7 @@ class UserSettingsUpdate implements ModelInterface, ArrayAccess
     /**
      * Gets recording
      *
-     * @return \Swagger\Client\Model\UserSettingsRecordingSettings
+     * @return \Zoom\Api\Model\UserSettingsRecordingSettings
      */
     public function getRecording()
     {
@@ -325,7 +325,7 @@ class UserSettingsUpdate implements ModelInterface, ArrayAccess
     /**
      * Sets recording
      *
-     * @param \Swagger\Client\Model\UserSettingsRecordingSettings $recording recording
+     * @param \Zoom\Api\Model\UserSettingsRecordingSettings $recording recording
      *
      * @return $this
      */
@@ -339,7 +339,7 @@ class UserSettingsUpdate implements ModelInterface, ArrayAccess
     /**
      * Gets telephony
      *
-     * @return \Swagger\Client\Model\UserSettingsMeetingSettings2
+     * @return \Zoom\Api\Model\UserSettingsMeetingSettings2
      */
     public function getTelephony()
     {
@@ -349,7 +349,7 @@ class UserSettingsUpdate implements ModelInterface, ArrayAccess
     /**
      * Sets telephony
      *
-     * @param \Swagger\Client\Model\UserSettingsMeetingSettings2 $telephony telephony
+     * @param \Zoom\Api\Model\UserSettingsMeetingSettings2 $telephony telephony
      *
      * @return $this
      */
@@ -363,7 +363,7 @@ class UserSettingsUpdate implements ModelInterface, ArrayAccess
     /**
      * Gets feature
      *
-     * @return \Swagger\Client\Model\UserSettingsFeatureSettings1
+     * @return \Zoom\Api\Model\UserSettingsFeatureSettings1
      */
     public function getFeature()
     {
@@ -373,7 +373,7 @@ class UserSettingsUpdate implements ModelInterface, ArrayAccess
     /**
      * Sets feature
      *
-     * @param \Swagger\Client\Model\UserSettingsFeatureSettings1 $feature feature
+     * @param \Zoom\Api\Model\UserSettingsFeatureSettings1 $feature feature
      *
      * @return $this
      */
@@ -387,7 +387,7 @@ class UserSettingsUpdate implements ModelInterface, ArrayAccess
     /**
      * Gets tsp
      *
-     * @return \Swagger\Client\Model\UserSettingsTSPSettings
+     * @return \Zoom\Api\Model\UserSettingsTSPSettings
      */
     public function getTsp()
     {
@@ -397,7 +397,7 @@ class UserSettingsUpdate implements ModelInterface, ArrayAccess
     /**
      * Sets tsp
      *
-     * @param \Swagger\Client\Model\UserSettingsTSPSettings $tsp tsp
+     * @param \Zoom\Api\Model\UserSettingsTSPSettings $tsp tsp
      *
      * @return $this
      */

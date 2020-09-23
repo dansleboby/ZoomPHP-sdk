@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse20128 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class InlineResponse20128 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'sip_trunks' => '\Swagger\Client\Model\InlineResponse20128SipTrunks[]'
+        'sip_trunks' => '\Zoom\Api\Model\InlineResponse20128SipTrunks[]'
     ];
 
     /**
@@ -207,7 +207,7 @@ class InlineResponse20128 implements ModelInterface, ArrayAccess
     /**
      * Gets sip_trunks
      *
-     * @return \Swagger\Client\Model\InlineResponse20128SipTrunks[]
+     * @return \Zoom\Api\Model\InlineResponse20128SipTrunks[]
      */
     public function getSipTrunks()
     {
@@ -217,7 +217,7 @@ class InlineResponse20128 implements ModelInterface, ArrayAccess
     /**
      * Sets sip_trunks
      *
-     * @param \Swagger\Client\Model\InlineResponse20128SipTrunks[] $sip_trunks sip_trunks
+     * @param \Zoom\Api\Model\InlineResponse20128SipTrunks[] $sip_trunks sip_trunks
      *
      * @return $this
      */

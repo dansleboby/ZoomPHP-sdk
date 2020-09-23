@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse20092 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -63,8 +63,8 @@ class InlineResponse20092 implements ModelInterface, ArrayAccess
         'status' => 'string',
         'number_type' => 'string',
         'location' => 'string',
-        'assignee' => '\Swagger\Client\Model\InlineResponse20092Assignee',
-        'site' => '\Swagger\Client\Model\InlineResponse200Site'
+        'assignee' => '\Zoom\Api\Model\InlineResponse20092Assignee',
+        'site' => '\Zoom\Api\Model\InlineResponse200Site'
     ];
 
     /**
@@ -489,7 +489,7 @@ class InlineResponse20092 implements ModelInterface, ArrayAccess
     /**
      * Gets assignee
      *
-     * @return \Swagger\Client\Model\InlineResponse20092Assignee
+     * @return \Zoom\Api\Model\InlineResponse20092Assignee
      */
     public function getAssignee()
     {
@@ -499,7 +499,7 @@ class InlineResponse20092 implements ModelInterface, ArrayAccess
     /**
      * Sets assignee
      *
-     * @param \Swagger\Client\Model\InlineResponse20092Assignee $assignee assignee
+     * @param \Zoom\Api\Model\InlineResponse20092Assignee $assignee assignee
      *
      * @return $this
      */
@@ -513,7 +513,7 @@ class InlineResponse20092 implements ModelInterface, ArrayAccess
     /**
      * Gets site
      *
-     * @return \Swagger\Client\Model\InlineResponse200Site
+     * @return \Zoom\Api\Model\InlineResponse200Site
      */
     public function getSite()
     {
@@ -523,7 +523,7 @@ class InlineResponse20092 implements ModelInterface, ArrayAccess
     /**
      * Sets site
      *
-     * @param \Swagger\Client\Model\InlineResponse200Site $site site
+     * @param \Zoom\Api\Model\InlineResponse200Site $site site
      *
      * @return $this
      */

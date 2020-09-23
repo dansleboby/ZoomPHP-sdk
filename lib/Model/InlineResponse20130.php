@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse20130 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class InlineResponse20130 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'internal_numbers' => '\Swagger\Client\Model\InlineResponse20130InternalNumbers[]'
+        'internal_numbers' => '\Zoom\Api\Model\InlineResponse20130InternalNumbers[]'
     ];
 
     /**
@@ -207,7 +207,7 @@ class InlineResponse20130 implements ModelInterface, ArrayAccess
     /**
      * Gets internal_numbers
      *
-     * @return \Swagger\Client\Model\InlineResponse20130InternalNumbers[]
+     * @return \Zoom\Api\Model\InlineResponse20130InternalNumbers[]
      */
     public function getInternalNumbers()
     {
@@ -217,7 +217,7 @@ class InlineResponse20130 implements ModelInterface, ArrayAccess
     /**
      * Sets internal_numbers
      *
-     * @param \Swagger\Client\Model\InlineResponse20130InternalNumbers[] $internal_numbers internal_numbers
+     * @param \Zoom\Api\Model\InlineResponse20130InternalNumbers[] $internal_numbers internal_numbers
      *
      * @return $this
      */

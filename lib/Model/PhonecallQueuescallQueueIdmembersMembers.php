@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * PhonecallQueuescallQueueIdmembersMembers Class Doc Comment
  *
  * @category Class
  * @description A maximum of 10 members can be added at a time.
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,7 +58,7 @@ class PhonecallQueuescallQueueIdmembersMembers implements ModelInterface, ArrayA
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'users' => '\Swagger\Client\Model\PhonecallQueuescallQueueIdmembersMembersUsers[]',
+        'users' => '\Zoom\Api\Model\PhonecallQueuescallQueueIdmembersMembersUsers[]',
         'common_area_phone_ids' => 'string[]'
     ];
 
@@ -214,7 +214,7 @@ class PhonecallQueuescallQueueIdmembersMembers implements ModelInterface, ArrayA
     /**
      * Gets users
      *
-     * @return \Swagger\Client\Model\PhonecallQueuescallQueueIdmembersMembersUsers[]
+     * @return \Zoom\Api\Model\PhonecallQueuescallQueueIdmembersMembersUsers[]
      */
     public function getUsers()
     {
@@ -224,7 +224,7 @@ class PhonecallQueuescallQueueIdmembersMembers implements ModelInterface, ArrayA
     /**
      * Sets users
      *
-     * @param \Swagger\Client\Model\PhonecallQueuescallQueueIdmembersMembersUsers[] $users users
+     * @param \Zoom\Api\Model\PhonecallQueuescallQueueIdmembersMembersUsers[] $users users
      *
      * @return $this
      */

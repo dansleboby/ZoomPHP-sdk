@@ -10,9 +10,9 @@ Name | Type | Description | Notes
 **timezone** | **string** | Time zone to format start_time. For example, \&quot;America/Los_Angeles\&quot;. For scheduled meetings only. Please reference our [time zone](#timezones) list for supported time zones and their formats. | [optional] 
 **password** | **string** | Meeting passcode. Passcode may only contain the following characters: [a-z A-Z 0-9 @ - _ *] and can have a maximum of 10 characters.  **Note:** If the account owner or the admin has configured [minimum passcode requirement settings](https://support.zoom.us/hc/en-us/articles/360033559832-Meeting-and-webinar-passwords#h_a427384b-e383-4f80-864d-794bf0a37604), the passcode value provided here must meet those requirements. &lt;br&gt;&lt;br&gt;If the requirements are enabled, you can view those requirements by calling either the [Get User Settings API](https://marketplace.zoom.us/docs/api-reference/zoom-api/users/usersettings) or the  [Get Account Settings](https://marketplace.zoom.us/docs/api-reference/zoom-api/accounts/accountsettings) API. | [optional] 
 **agenda** | **string** | Meeting description. | [optional] 
-**tracking_fields** | [**\Swagger\Client\Model\InlineResponse20119TrackingFields[]**](InlineResponse20119TrackingFields.md) | Tracking fields | [optional] 
-**recurrence** | [**\Swagger\Client\Model\UsersuserIdmeetingsRecurrence**](UsersuserIdmeetingsRecurrence.md) |  | [optional] 
-**settings** | [**\Swagger\Client\Model\MeetingUpdateSettings**](MeetingUpdateSettings.md) |  | [optional] 
+**tracking_fields** | [**\Zoom\Api\Model\InlineResponse20119TrackingFields[]**](InlineResponse20119TrackingFields.md) | Tracking fields | [optional] 
+**recurrence** | [**\Zoom\Api\Model\UsersuserIdmeetingsRecurrence**](UsersuserIdmeetingsRecurrence.md) |  | [optional] 
+**settings** | [**\Zoom\Api\Model\MeetingUpdateSettings**](MeetingUpdateSettings.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

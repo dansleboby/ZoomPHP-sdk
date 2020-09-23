@@ -1,4 +1,4 @@
-# Swagger\Client\DevicesApi
+# Zoom\Api\DevicesApi
 
 All URIs are relative to *https://api.zoom.us/v2*
 
@@ -23,15 +23,15 @@ A H.323 or SIP device can make a video call to a [Room Connector](https://suppor
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\DevicesApi(
+$apiInstance = new Zoom\Api\Api\DevicesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\TheH323SIPDeviceObject_(); // \Swagger\Client\Model\TheH323SIPDeviceObject_ | H.323/SIP device.
+$body = new \Zoom\Api\Model\TheH323SIPDeviceObject_(); // \Zoom\Api\Model\TheH323SIPDeviceObject_ | H.323/SIP device.
 
 try {
     $apiInstance->deviceCreate($body);
@@ -45,7 +45,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\TheH323SIPDeviceObject_**](../Model/TheH323SIPDeviceObject_.md)| H.323/SIP device. |
+ **body** | [**\Zoom\Api\Model\TheH323SIPDeviceObject_**](../Model/TheH323SIPDeviceObject_.md)| H.323/SIP device. |
 
 ### Return type
 
@@ -75,9 +75,9 @@ A H.323 or SIP device can make a video call to a [Room Connector](https://suppor
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\DevicesApi(
+$apiInstance = new Zoom\Api\Api\DevicesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -115,7 +115,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **deviceList**
-> \Swagger\Client\Model\H323SIPDeviceList deviceList($page_size, $page_number, $next_page_token)
+> \Zoom\Api\Model\H323SIPDeviceList deviceList($page_size, $page_number, $next_page_token)
 
 List H.323/SIP Devices
 
@@ -127,9 +127,9 @@ A H.323 or SIP device can make a video call to a [Room Connector](https://suppor
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\DevicesApi(
+$apiInstance = new Zoom\Api\Api\DevicesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -158,7 +158,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\H323SIPDeviceList**](../Model/H323SIPDeviceList.md)
+[**\Zoom\Api\Model\H323SIPDeviceList**](../Model/H323SIPDeviceList.md)
 
 ### Authorization
 
@@ -184,16 +184,16 @@ A H.323 or SIP device can make a video call to a [Room Connector](https://suppor
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\DevicesApi(
+$apiInstance = new Zoom\Api\Api\DevicesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $device_id = "device_id_example"; // string | The device ID.
-$body = new \Swagger\Client\Model\TheH323SIPDeviceObject1(); // \Swagger\Client\Model\TheH323SIPDeviceObject1 | 
+$body = new \Zoom\Api\Model\TheH323SIPDeviceObject1(); // \Zoom\Api\Model\TheH323SIPDeviceObject1 | 
 
 try {
     $apiInstance->deviceUpdate($device_id, $body);
@@ -208,7 +208,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **device_id** | **string**| The device ID. |
- **body** | [**\Swagger\Client\Model\TheH323SIPDeviceObject1**](../Model/TheH323SIPDeviceObject1.md)|  |
+ **body** | [**\Zoom\Api\Model\TheH323SIPDeviceObject1**](../Model/TheH323SIPDeviceObject1.md)|  |
 
 ### Return type
 

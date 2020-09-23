@@ -1,4 +1,4 @@
-# Swagger\Client\TrackingFieldApi
+# Zoom\Api\TrackingFieldApi
 
 All URIs are relative to *https://api.zoom.us/v2*
 
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **trackingfieldCreate**
-> \Swagger\Client\Model\InlineResponse2019 trackingfieldCreate($body)
+> \Zoom\Api\Model\InlineResponse2019 trackingfieldCreate($body)
 
 Create a Tracking Field
 
@@ -24,15 +24,15 @@ Create a Tracking Field
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\TrackingFieldApi(
+$apiInstance = new Zoom\Api\Api\TrackingFieldApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\TrackingField(); // \Swagger\Client\Model\TrackingField | Tracking Field
+$body = new \Zoom\Api\Model\TrackingField(); // \Zoom\Api\Model\TrackingField | Tracking Field
 
 try {
     $result = $apiInstance->trackingfieldCreate($body);
@@ -47,11 +47,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\TrackingField**](../Model/TrackingField.md)| Tracking Field |
+ **body** | [**\Zoom\Api\Model\TrackingField**](../Model/TrackingField.md)| Tracking Field |
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2019**](../Model/InlineResponse2019.md)
+[**\Zoom\Api\Model\InlineResponse2019**](../Model/InlineResponse2019.md)
 
 ### Authorization
 
@@ -77,9 +77,9 @@ Delete a Tracking Field
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\TrackingFieldApi(
+$apiInstance = new Zoom\Api\Api\TrackingFieldApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -117,7 +117,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **trackingfieldGet**
-> \Swagger\Client\Model\InlineResponse2019 trackingfieldGet($field_id)
+> \Zoom\Api\Model\InlineResponse2019 trackingfieldGet($field_id)
 
 Get a Tracking Field
 
@@ -129,9 +129,9 @@ Get a Tracking Field
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\TrackingFieldApi(
+$apiInstance = new Zoom\Api\Api\TrackingFieldApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -156,7 +156,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2019**](../Model/InlineResponse2019.md)
+[**\Zoom\Api\Model\InlineResponse2019**](../Model/InlineResponse2019.md)
 
 ### Authorization
 
@@ -182,9 +182,9 @@ List Tracking Fields
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\TrackingFieldApi(
+$apiInstance = new Zoom\Api\Api\TrackingFieldApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -231,16 +231,16 @@ Update a Tracking Field
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\TrackingFieldApi(
+$apiInstance = new Zoom\Api\Api\TrackingFieldApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $field_id = "field_id_example"; // string | The Tracking Field ID
-$body = new \Swagger\Client\Model\TrackingField1(); // \Swagger\Client\Model\TrackingField1 | 
+$body = new \Zoom\Api\Model\TrackingField1(); // \Zoom\Api\Model\TrackingField1 | 
 
 try {
     $apiInstance->trackingfieldUpdate($field_id, $body);
@@ -255,7 +255,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **field_id** | **string**| The Tracking Field ID |
- **body** | [**\Swagger\Client\Model\TrackingField1**](../Model/TrackingField1.md)|  |
+ **body** | [**\Zoom\Api\Model\TrackingField1**](../Model/TrackingField1.md)|  |
 
 ### Return type
 

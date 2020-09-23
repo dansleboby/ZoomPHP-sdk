@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Zoom\Api\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Zoom\Api\ApiException;
+use Zoom\Api\Configuration;
+use Zoom\Api\HeaderSelector;
+use Zoom\Api\ObjectSerializer;
 
 /**
  * CommonAreaPhonesApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -92,11 +92,11 @@ class CommonAreaPhonesApi
      *
      * Add a Common Area Phone
      *
-     * @param  \Swagger\Client\Model\Body75 $body body (optional)
+     * @param  \Zoom\Api\Model\Body75 $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20125
+     * @return \Zoom\Api\Model\InlineResponse20125
      */
     public function addCommonAreaPhone($body = null)
     {
@@ -109,15 +109,15 @@ class CommonAreaPhonesApi
      *
      * Add a Common Area Phone
      *
-     * @param  \Swagger\Client\Model\Body75 $body (optional)
+     * @param  \Zoom\Api\Model\Body75 $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20125, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20125, HTTP status code, HTTP response headers (array of strings)
      */
     public function addCommonAreaPhoneWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20125';
+        $returnType = '\Zoom\Api\Model\InlineResponse20125';
         $request = $this->addCommonAreaPhoneRequest($body);
 
         try {
@@ -169,7 +169,7 @@ class CommonAreaPhonesApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20125',
+                        '\Zoom\Api\Model\InlineResponse20125',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -184,7 +184,7 @@ class CommonAreaPhonesApi
      *
      * Add a Common Area Phone
      *
-     * @param  \Swagger\Client\Model\Body75 $body (optional)
+     * @param  \Zoom\Api\Model\Body75 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -204,14 +204,14 @@ class CommonAreaPhonesApi
      *
      * Add a Common Area Phone
      *
-     * @param  \Swagger\Client\Model\Body75 $body (optional)
+     * @param  \Zoom\Api\Model\Body75 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function addCommonAreaPhoneAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20125';
+        $returnType = '\Zoom\Api\Model\InlineResponse20125';
         $request = $this->addCommonAreaPhoneRequest($body);
 
         return $this->client
@@ -254,7 +254,7 @@ class CommonAreaPhonesApi
     /**
      * Create request for operation 'addCommonAreaPhone'
      *
-     * @param  \Swagger\Client\Model\Body75 $body (optional)
+     * @param  \Zoom\Api\Model\Body75 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -356,7 +356,7 @@ class CommonAreaPhonesApi
      *
      * @param  string $common_area_phone_id Unique Identifier of the common area phone. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -373,7 +373,7 @@ class CommonAreaPhonesApi
      *
      * @param  string $common_area_phone_id Unique Identifier of the common area phone. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -629,9 +629,9 @@ class CommonAreaPhonesApi
      *
      * @param  string $common_area_phone_id Unique Identifier of the Common Area Phone. This can be retrieved from List Common Area Phones API. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20096
+     * @return \Zoom\Api\Model\InlineResponse20096
      */
     public function getACommonAreaPhone($common_area_phone_id)
     {
@@ -646,13 +646,13 @@ class CommonAreaPhonesApi
      *
      * @param  string $common_area_phone_id Unique Identifier of the Common Area Phone. This can be retrieved from List Common Area Phones API. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20096, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20096, HTTP status code, HTTP response headers (array of strings)
      */
     public function getACommonAreaPhoneWithHttpInfo($common_area_phone_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20096';
+        $returnType = '\Zoom\Api\Model\InlineResponse20096';
         $request = $this->getACommonAreaPhoneRequest($common_area_phone_id);
 
         try {
@@ -704,7 +704,7 @@ class CommonAreaPhonesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20096',
+                        '\Zoom\Api\Model\InlineResponse20096',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -746,7 +746,7 @@ class CommonAreaPhonesApi
      */
     public function getACommonAreaPhoneAsyncWithHttpInfo($common_area_phone_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20096';
+        $returnType = '\Zoom\Api\Model\InlineResponse20096';
         $request = $this->getACommonAreaPhoneRequest($common_area_phone_id);
 
         return $this->client
@@ -903,9 +903,9 @@ class CommonAreaPhonesApi
      * @param  int $page_size The total number of records returned from a single API call. (optional, default to 30)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20095
+     * @return \Zoom\Api\Model\InlineResponse20095
      */
     public function listCommonAreaPhones($page_size = '30', $next_page_token = null)
     {
@@ -921,13 +921,13 @@ class CommonAreaPhonesApi
      * @param  int $page_size The total number of records returned from a single API call. (optional, default to 30)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20095, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20095, HTTP status code, HTTP response headers (array of strings)
      */
     public function listCommonAreaPhonesWithHttpInfo($page_size = '30', $next_page_token = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20095';
+        $returnType = '\Zoom\Api\Model\InlineResponse20095';
         $request = $this->listCommonAreaPhonesRequest($page_size, $next_page_token);
 
         try {
@@ -979,7 +979,7 @@ class CommonAreaPhonesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20095',
+                        '\Zoom\Api\Model\InlineResponse20095',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1023,7 +1023,7 @@ class CommonAreaPhonesApi
      */
     public function listCommonAreaPhonesAsyncWithHttpInfo($page_size = '30', $next_page_token = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20095';
+        $returnType = '\Zoom\Api\Model\InlineResponse20095';
         $request = $this->listCommonAreaPhonesRequest($page_size, $next_page_token);
 
         return $this->client
@@ -1177,9 +1177,9 @@ class CommonAreaPhonesApi
      * Update Common Area Phone
      *
      * @param  string $common_area_phone_id common_area_phone_id (required)
-     * @param  \Swagger\Client\Model\Body76 $body body (optional)
+     * @param  \Zoom\Api\Model\Body76 $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -1195,9 +1195,9 @@ class CommonAreaPhonesApi
      * Update Common Area Phone
      *
      * @param  string $common_area_phone_id (required)
-     * @param  \Swagger\Client\Model\Body76 $body (optional)
+     * @param  \Zoom\Api\Model\Body76 $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1271,7 +1271,7 @@ class CommonAreaPhonesApi
      * Update Common Area Phone
      *
      * @param  string $common_area_phone_id (required)
-     * @param  \Swagger\Client\Model\Body76 $body (optional)
+     * @param  \Zoom\Api\Model\Body76 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1292,7 +1292,7 @@ class CommonAreaPhonesApi
      * Update Common Area Phone
      *
      * @param  string $common_area_phone_id (required)
-     * @param  \Swagger\Client\Model\Body76 $body (optional)
+     * @param  \Zoom\Api\Model\Body76 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1343,7 +1343,7 @@ class CommonAreaPhonesApi
      * Create request for operation 'updateCommonAreaPhone'
      *
      * @param  string $common_area_phone_id (required)
-     * @param  \Swagger\Client\Model\Body76 $body (optional)
+     * @param  \Zoom\Api\Model\Body76 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

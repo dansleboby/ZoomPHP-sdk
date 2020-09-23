@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **page_size** | **int** | The number of records returned within a single API call. | [optional] 
 **to** | [**\DateTime**](\DateTime.md) | End date for this report. | [optional] 
 **total_records** | **int** | The number of all records available across pages. | [optional] 
-**users** | [**\Swagger\Client\Model\InlineResponse20031Users[]**](InlineResponse20031Users.md) |  | [optional] 
+**users** | [**\Zoom\Api\Model\InlineResponse20031Users[]**](InlineResponse20031Users.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

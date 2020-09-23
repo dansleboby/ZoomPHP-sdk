@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * Body80 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class Body80 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'members' => '\Swagger\Client\Model\PhonesharedLineGroupssharedLineGroupIdmembersMembers'
+        'members' => '\Zoom\Api\Model\PhonesharedLineGroupssharedLineGroupIdmembersMembers'
     ];
 
     /**
@@ -207,7 +207,7 @@ class Body80 implements ModelInterface, ArrayAccess
     /**
      * Gets members
      *
-     * @return \Swagger\Client\Model\PhonesharedLineGroupssharedLineGroupIdmembersMembers
+     * @return \Zoom\Api\Model\PhonesharedLineGroupssharedLineGroupIdmembersMembers
      */
     public function getMembers()
     {
@@ -217,7 +217,7 @@ class Body80 implements ModelInterface, ArrayAccess
     /**
      * Sets members
      *
-     * @param \Swagger\Client\Model\PhonesharedLineGroupssharedLineGroupIdmembersMembers $members members
+     * @param \Zoom\Api\Model\PhonesharedLineGroupssharedLineGroupIdmembersMembers $members members
      *
      * @return $this
      */

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * MeetingLiveStreamStatus Class Doc Comment
  *
  * @category Class
  * @description Meeting live stream status.
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,7 +59,7 @@ class MeetingLiveStreamStatus implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'action' => 'string',
-        'settings' => '\Swagger\Client\Model\MeetingsmeetingIdlivestreamstatusSettings'
+        'settings' => '\Zoom\Api\Model\MeetingsmeetingIdlivestreamstatusSettings'
     ];
 
     /**
@@ -270,7 +270,7 @@ class MeetingLiveStreamStatus implements ModelInterface, ArrayAccess
     /**
      * Gets settings
      *
-     * @return \Swagger\Client\Model\MeetingsmeetingIdlivestreamstatusSettings
+     * @return \Zoom\Api\Model\MeetingsmeetingIdlivestreamstatusSettings
      */
     public function getSettings()
     {
@@ -280,7 +280,7 @@ class MeetingLiveStreamStatus implements ModelInterface, ArrayAccess
     /**
      * Sets settings
      *
-     * @param \Swagger\Client\Model\MeetingsmeetingIdlivestreamstatusSettings $settings settings
+     * @param \Zoom\Api\Model\MeetingsmeetingIdlivestreamstatusSettings $settings settings
      *
      * @return $this
      */

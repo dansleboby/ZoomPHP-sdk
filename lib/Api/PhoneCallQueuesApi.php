@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Zoom\Api\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Zoom\Api\ApiException;
+use Zoom\Api\Configuration;
+use Zoom\Api\HeaderSelector;
+use Zoom\Api\ObjectSerializer;
 
 /**
  * PhoneCallQueuesApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -93,9 +93,9 @@ class PhoneCallQueuesApi
      * Add Members to a Call Queue
      *
      * @param  string $call_queue_id Unique Identifier of the Call Queue. (required)
-     * @param  \Swagger\Client\Model\Body70 $body body (optional)
+     * @param  \Zoom\Api\Model\Body70 $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -111,9 +111,9 @@ class PhoneCallQueuesApi
      * Add Members to a Call Queue
      *
      * @param  string $call_queue_id Unique Identifier of the Call Queue. (required)
-     * @param  \Swagger\Client\Model\Body70 $body (optional)
+     * @param  \Zoom\Api\Model\Body70 $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -187,7 +187,7 @@ class PhoneCallQueuesApi
      * Add Members to a Call Queue
      *
      * @param  string $call_queue_id Unique Identifier of the Call Queue. (required)
-     * @param  \Swagger\Client\Model\Body70 $body (optional)
+     * @param  \Zoom\Api\Model\Body70 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -208,7 +208,7 @@ class PhoneCallQueuesApi
      * Add Members to a Call Queue
      *
      * @param  string $call_queue_id Unique Identifier of the Call Queue. (required)
-     * @param  \Swagger\Client\Model\Body70 $body (optional)
+     * @param  \Zoom\Api\Model\Body70 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -259,7 +259,7 @@ class PhoneCallQueuesApi
      * Create request for operation 'addMembersToCallQueue'
      *
      * @param  string $call_queue_id Unique Identifier of the Call Queue. (required)
-     * @param  \Swagger\Client\Model\Body70 $body (optional)
+     * @param  \Zoom\Api\Model\Body70 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -374,9 +374,9 @@ class PhoneCallQueuesApi
      * Assign Numbers to a Call Queue
      *
      * @param  string $call_queue_id Unique Identifier of the Call Queue. (required)
-     * @param  \Swagger\Client\Model\Body69 $body body (optional)
+     * @param  \Zoom\Api\Model\Body69 $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -392,9 +392,9 @@ class PhoneCallQueuesApi
      * Assign Numbers to a Call Queue
      *
      * @param  string $call_queue_id Unique Identifier of the Call Queue. (required)
-     * @param  \Swagger\Client\Model\Body69 $body (optional)
+     * @param  \Zoom\Api\Model\Body69 $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -468,7 +468,7 @@ class PhoneCallQueuesApi
      * Assign Numbers to a Call Queue
      *
      * @param  string $call_queue_id Unique Identifier of the Call Queue. (required)
-     * @param  \Swagger\Client\Model\Body69 $body (optional)
+     * @param  \Zoom\Api\Model\Body69 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -489,7 +489,7 @@ class PhoneCallQueuesApi
      * Assign Numbers to a Call Queue
      *
      * @param  string $call_queue_id Unique Identifier of the Call Queue. (required)
-     * @param  \Swagger\Client\Model\Body69 $body (optional)
+     * @param  \Zoom\Api\Model\Body69 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -540,7 +540,7 @@ class PhoneCallQueuesApi
      * Create request for operation 'assignPhoneToCallQueue'
      *
      * @param  string $call_queue_id Unique Identifier of the Call Queue. (required)
-     * @param  \Swagger\Client\Model\Body69 $body (optional)
+     * @param  \Zoom\Api\Model\Body69 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -655,9 +655,9 @@ class PhoneCallQueuesApi
      * Change Call Queue Manager
      *
      * @param  string $call_queue_id Unique Identifier of the Call Queue. (required)
-     * @param  \Swagger\Client\Model\Body71 $body body (optional)
+     * @param  \Zoom\Api\Model\Body71 $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -673,9 +673,9 @@ class PhoneCallQueuesApi
      * Change Call Queue Manager
      *
      * @param  string $call_queue_id Unique Identifier of the Call Queue. (required)
-     * @param  \Swagger\Client\Model\Body71 $body (optional)
+     * @param  \Zoom\Api\Model\Body71 $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -749,7 +749,7 @@ class PhoneCallQueuesApi
      * Change Call Queue Manager
      *
      * @param  string $call_queue_id Unique Identifier of the Call Queue. (required)
-     * @param  \Swagger\Client\Model\Body71 $body (optional)
+     * @param  \Zoom\Api\Model\Body71 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -770,7 +770,7 @@ class PhoneCallQueuesApi
      * Change Call Queue Manager
      *
      * @param  string $call_queue_id Unique Identifier of the Call Queue. (required)
-     * @param  \Swagger\Client\Model\Body71 $body (optional)
+     * @param  \Zoom\Api\Model\Body71 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -821,7 +821,7 @@ class PhoneCallQueuesApi
      * Create request for operation 'changeCallQueueManager'
      *
      * @param  string $call_queue_id Unique Identifier of the Call Queue. (required)
-     * @param  \Swagger\Client\Model\Body71 $body (optional)
+     * @param  \Zoom\Api\Model\Body71 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -935,11 +935,11 @@ class PhoneCallQueuesApi
      *
      * Create a Call Queue
      *
-     * @param  \Swagger\Client\Model\Body67 $body body (optional)
+     * @param  \Zoom\Api\Model\Body67 $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20124
+     * @return \Zoom\Api\Model\InlineResponse20124
      */
     public function createCallQueue($body = null)
     {
@@ -952,15 +952,15 @@ class PhoneCallQueuesApi
      *
      * Create a Call Queue
      *
-     * @param  \Swagger\Client\Model\Body67 $body (optional)
+     * @param  \Zoom\Api\Model\Body67 $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20124, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20124, HTTP status code, HTTP response headers (array of strings)
      */
     public function createCallQueueWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20124';
+        $returnType = '\Zoom\Api\Model\InlineResponse20124';
         $request = $this->createCallQueueRequest($body);
 
         try {
@@ -1012,7 +1012,7 @@ class PhoneCallQueuesApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20124',
+                        '\Zoom\Api\Model\InlineResponse20124',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1027,7 +1027,7 @@ class PhoneCallQueuesApi
      *
      * Create a Call Queue
      *
-     * @param  \Swagger\Client\Model\Body67 $body (optional)
+     * @param  \Zoom\Api\Model\Body67 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1047,14 +1047,14 @@ class PhoneCallQueuesApi
      *
      * Create a Call Queue
      *
-     * @param  \Swagger\Client\Model\Body67 $body (optional)
+     * @param  \Zoom\Api\Model\Body67 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createCallQueueAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20124';
+        $returnType = '\Zoom\Api\Model\InlineResponse20124';
         $request = $this->createCallQueueRequest($body);
 
         return $this->client
@@ -1097,7 +1097,7 @@ class PhoneCallQueuesApi
     /**
      * Create request for operation 'createCallQueue'
      *
-     * @param  \Swagger\Client\Model\Body67 $body (optional)
+     * @param  \Zoom\Api\Model\Body67 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1199,7 +1199,7 @@ class PhoneCallQueuesApi
      *
      * @param  string $call_queue_id Unique Identifier of the call queue. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -1216,7 +1216,7 @@ class PhoneCallQueuesApi
      *
      * @param  string $call_queue_id Unique Identifier of the call queue. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1472,9 +1472,9 @@ class PhoneCallQueuesApi
      *
      * @param  string $call_queue_id Unique Identifier of the Call Queue. This can be retrieved from [List Call Queues API](https://marketplace.zoom.us/docs/api-reference/zoom-api/phone-call-queues/listcallqueues). (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20091
+     * @return \Zoom\Api\Model\InlineResponse20091
      */
     public function getACallQueue($call_queue_id)
     {
@@ -1489,13 +1489,13 @@ class PhoneCallQueuesApi
      *
      * @param  string $call_queue_id Unique Identifier of the Call Queue. This can be retrieved from [List Call Queues API](https://marketplace.zoom.us/docs/api-reference/zoom-api/phone-call-queues/listcallqueues). (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20091, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20091, HTTP status code, HTTP response headers (array of strings)
      */
     public function getACallQueueWithHttpInfo($call_queue_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20091';
+        $returnType = '\Zoom\Api\Model\InlineResponse20091';
         $request = $this->getACallQueueRequest($call_queue_id);
 
         try {
@@ -1547,7 +1547,7 @@ class PhoneCallQueuesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20091',
+                        '\Zoom\Api\Model\InlineResponse20091',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1589,7 +1589,7 @@ class PhoneCallQueuesApi
      */
     public function getACallQueueAsyncWithHttpInfo($call_queue_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20091';
+        $returnType = '\Zoom\Api\Model\InlineResponse20091';
         $request = $this->getACallQueueRequest($call_queue_id);
 
         return $this->client
@@ -1747,9 +1747,9 @@ class PhoneCallQueuesApi
      * @param  int $page_size The number of records returned within a single API call. (optional, default to 30)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse200100
+     * @return \Zoom\Api\Model\InlineResponse200100
      */
     public function getCallQueueRecordings($call_queue_id, $page_size = '30', $next_page_token = null)
     {
@@ -1766,13 +1766,13 @@ class PhoneCallQueuesApi
      * @param  int $page_size The number of records returned within a single API call. (optional, default to 30)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse200100, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse200100, HTTP status code, HTTP response headers (array of strings)
      */
     public function getCallQueueRecordingsWithHttpInfo($call_queue_id, $page_size = '30', $next_page_token = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse200100';
+        $returnType = '\Zoom\Api\Model\InlineResponse200100';
         $request = $this->getCallQueueRecordingsRequest($call_queue_id, $page_size, $next_page_token);
 
         try {
@@ -1824,7 +1824,7 @@ class PhoneCallQueuesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse200100',
+                        '\Zoom\Api\Model\InlineResponse200100',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1870,7 +1870,7 @@ class PhoneCallQueuesApi
      */
     public function getCallQueueRecordingsAsyncWithHttpInfo($call_queue_id, $page_size = '30', $next_page_token = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse200100';
+        $returnType = '\Zoom\Api\Model\InlineResponse200100';
         $request = $this->getCallQueueRecordingsRequest($call_queue_id, $page_size, $next_page_token);
 
         return $this->client
@@ -2041,9 +2041,9 @@ class PhoneCallQueuesApi
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      * @param  int $page_size The number of records returned from a single API call. (optional, default to 30)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20090
+     * @return \Zoom\Api\Model\InlineResponse20090
      */
     public function listCallQueues($next_page_token = null, $page_size = '30')
     {
@@ -2059,13 +2059,13 @@ class PhoneCallQueuesApi
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      * @param  int $page_size The number of records returned from a single API call. (optional, default to 30)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20090, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20090, HTTP status code, HTTP response headers (array of strings)
      */
     public function listCallQueuesWithHttpInfo($next_page_token = null, $page_size = '30')
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20090';
+        $returnType = '\Zoom\Api\Model\InlineResponse20090';
         $request = $this->listCallQueuesRequest($next_page_token, $page_size);
 
         try {
@@ -2117,7 +2117,7 @@ class PhoneCallQueuesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20090',
+                        '\Zoom\Api\Model\InlineResponse20090',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2161,7 +2161,7 @@ class PhoneCallQueuesApi
      */
     public function listCallQueuesAsyncWithHttpInfo($next_page_token = null, $page_size = '30')
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20090';
+        $returnType = '\Zoom\Api\Model\InlineResponse20090';
         $request = $this->listCallQueuesRequest($next_page_token, $page_size);
 
         return $this->client
@@ -2317,7 +2317,7 @@ class PhoneCallQueuesApi
      * @param  string $call_queue_id Unique Identifier of the Call Queue. This can be retrieved from the List Call Queues API. (required)
      * @param  string $phone_number_id Unique Identifier of the Phone Number. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -2335,7 +2335,7 @@ class PhoneCallQueuesApi
      * @param  string $call_queue_id Unique Identifier of the Call Queue. This can be retrieved from the List Call Queues API. (required)
      * @param  string $phone_number_id Unique Identifier of the Phone Number. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2608,7 +2608,7 @@ class PhoneCallQueuesApi
      *
      * @param  string $call_queue_id Unique Identifier of the Call Queue. This can be retrieved from List Call Queues API. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -2625,7 +2625,7 @@ class PhoneCallQueuesApi
      *
      * @param  string $call_queue_id Unique Identifier of the Call Queue. This can be retrieved from List Call Queues API. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2881,7 +2881,7 @@ class PhoneCallQueuesApi
      *
      * @param  string $call_queue_id call_queue_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -2898,7 +2898,7 @@ class PhoneCallQueuesApi
      *
      * @param  string $call_queue_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3155,7 +3155,7 @@ class PhoneCallQueuesApi
      * @param  string $call_queue_id Unique Identifier of the Call Queue from which the member needs to be unassigned. (required)
      * @param  string $member_id Unique Identifier of the member who needs to be unassigned. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -3173,7 +3173,7 @@ class PhoneCallQueuesApi
      * @param  string $call_queue_id Unique Identifier of the Call Queue from which the member needs to be unassigned. (required)
      * @param  string $member_id Unique Identifier of the member who needs to be unassigned. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3445,9 +3445,9 @@ class PhoneCallQueuesApi
      * Update Call Queue Details
      *
      * @param  string $call_queue_id Unique Identifier of the Call Queue. (required)
-     * @param  \Swagger\Client\Model\Body68 $body body (optional)
+     * @param  \Zoom\Api\Model\Body68 $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -3463,9 +3463,9 @@ class PhoneCallQueuesApi
      * Update Call Queue Details
      *
      * @param  string $call_queue_id Unique Identifier of the Call Queue. (required)
-     * @param  \Swagger\Client\Model\Body68 $body (optional)
+     * @param  \Zoom\Api\Model\Body68 $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3539,7 +3539,7 @@ class PhoneCallQueuesApi
      * Update Call Queue Details
      *
      * @param  string $call_queue_id Unique Identifier of the Call Queue. (required)
-     * @param  \Swagger\Client\Model\Body68 $body (optional)
+     * @param  \Zoom\Api\Model\Body68 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3560,7 +3560,7 @@ class PhoneCallQueuesApi
      * Update Call Queue Details
      *
      * @param  string $call_queue_id Unique Identifier of the Call Queue. (required)
-     * @param  \Swagger\Client\Model\Body68 $body (optional)
+     * @param  \Zoom\Api\Model\Body68 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3611,7 +3611,7 @@ class PhoneCallQueuesApi
      * Create request for operation 'updateCallQueue'
      *
      * @param  string $call_queue_id Unique Identifier of the Call Queue. (required)
-     * @param  \Swagger\Client\Model\Body68 $body (optional)
+     * @param  \Zoom\Api\Model\Body68 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * ParticipantQOSUserQos Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,19 +58,19 @@ class ParticipantQOSUserQos implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'date_time' => '\DateTime',
-        'audio_input' => '\Swagger\Client\Model\QOSObject',
-        'audio_output' => '\Swagger\Client\Model\QOSObject',
-        'video_input' => '\Swagger\Client\Model\QOSObject1',
-        'video_output' => '\Swagger\Client\Model\QOSObject1',
-        'as_input' => '\Swagger\Client\Model\QOSObject1',
-        'as_output' => '\Swagger\Client\Model\QOSObject1',
-        'cpu_usage' => '\Swagger\Client\Model\ParticipantQOSCpuUsage',
-        'audio_device_from_crc' => '\Swagger\Client\Model\ParticipantQOSAudioDeviceFromCrc',
-        'audio_device_to_crc' => '\Swagger\Client\Model\ParticipantQOSAudioDeviceToCrc',
-        'video_device_from_crc' => '\Swagger\Client\Model\ParticipantQOSVideoDeviceFromCrc',
-        'video_device_to_crc' => '\Swagger\Client\Model\ParticipantQOSVideoDeviceToCrc',
-        'as_device_from_crc' => '\Swagger\Client\Model\ParticipantQOSAsDeviceFromCrc',
-        'as_device_to_crc' => '\Swagger\Client\Model\ParticipantQOSAsDeviceToCrc'
+        'audio_input' => '\Zoom\Api\Model\QOSObject',
+        'audio_output' => '\Zoom\Api\Model\QOSObject',
+        'video_input' => '\Zoom\Api\Model\QOSObject1',
+        'video_output' => '\Zoom\Api\Model\QOSObject1',
+        'as_input' => '\Zoom\Api\Model\QOSObject1',
+        'as_output' => '\Zoom\Api\Model\QOSObject1',
+        'cpu_usage' => '\Zoom\Api\Model\ParticipantQOSCpuUsage',
+        'audio_device_from_crc' => '\Zoom\Api\Model\ParticipantQOSAudioDeviceFromCrc',
+        'audio_device_to_crc' => '\Zoom\Api\Model\ParticipantQOSAudioDeviceToCrc',
+        'video_device_from_crc' => '\Zoom\Api\Model\ParticipantQOSVideoDeviceFromCrc',
+        'video_device_to_crc' => '\Zoom\Api\Model\ParticipantQOSVideoDeviceToCrc',
+        'as_device_from_crc' => '\Zoom\Api\Model\ParticipantQOSAsDeviceFromCrc',
+        'as_device_to_crc' => '\Zoom\Api\Model\ParticipantQOSAsDeviceToCrc'
     ];
 
     /**
@@ -309,7 +309,7 @@ class ParticipantQOSUserQos implements ModelInterface, ArrayAccess
     /**
      * Gets audio_input
      *
-     * @return \Swagger\Client\Model\QOSObject
+     * @return \Zoom\Api\Model\QOSObject
      */
     public function getAudioInput()
     {
@@ -319,7 +319,7 @@ class ParticipantQOSUserQos implements ModelInterface, ArrayAccess
     /**
      * Sets audio_input
      *
-     * @param \Swagger\Client\Model\QOSObject $audio_input audio_input
+     * @param \Zoom\Api\Model\QOSObject $audio_input audio_input
      *
      * @return $this
      */
@@ -333,7 +333,7 @@ class ParticipantQOSUserQos implements ModelInterface, ArrayAccess
     /**
      * Gets audio_output
      *
-     * @return \Swagger\Client\Model\QOSObject
+     * @return \Zoom\Api\Model\QOSObject
      */
     public function getAudioOutput()
     {
@@ -343,7 +343,7 @@ class ParticipantQOSUserQos implements ModelInterface, ArrayAccess
     /**
      * Sets audio_output
      *
-     * @param \Swagger\Client\Model\QOSObject $audio_output audio_output
+     * @param \Zoom\Api\Model\QOSObject $audio_output audio_output
      *
      * @return $this
      */
@@ -357,7 +357,7 @@ class ParticipantQOSUserQos implements ModelInterface, ArrayAccess
     /**
      * Gets video_input
      *
-     * @return \Swagger\Client\Model\QOSObject1
+     * @return \Zoom\Api\Model\QOSObject1
      */
     public function getVideoInput()
     {
@@ -367,7 +367,7 @@ class ParticipantQOSUserQos implements ModelInterface, ArrayAccess
     /**
      * Sets video_input
      *
-     * @param \Swagger\Client\Model\QOSObject1 $video_input video_input
+     * @param \Zoom\Api\Model\QOSObject1 $video_input video_input
      *
      * @return $this
      */
@@ -381,7 +381,7 @@ class ParticipantQOSUserQos implements ModelInterface, ArrayAccess
     /**
      * Gets video_output
      *
-     * @return \Swagger\Client\Model\QOSObject1
+     * @return \Zoom\Api\Model\QOSObject1
      */
     public function getVideoOutput()
     {
@@ -391,7 +391,7 @@ class ParticipantQOSUserQos implements ModelInterface, ArrayAccess
     /**
      * Sets video_output
      *
-     * @param \Swagger\Client\Model\QOSObject1 $video_output video_output
+     * @param \Zoom\Api\Model\QOSObject1 $video_output video_output
      *
      * @return $this
      */
@@ -405,7 +405,7 @@ class ParticipantQOSUserQos implements ModelInterface, ArrayAccess
     /**
      * Gets as_input
      *
-     * @return \Swagger\Client\Model\QOSObject1
+     * @return \Zoom\Api\Model\QOSObject1
      */
     public function getAsInput()
     {
@@ -415,7 +415,7 @@ class ParticipantQOSUserQos implements ModelInterface, ArrayAccess
     /**
      * Sets as_input
      *
-     * @param \Swagger\Client\Model\QOSObject1 $as_input as_input
+     * @param \Zoom\Api\Model\QOSObject1 $as_input as_input
      *
      * @return $this
      */
@@ -429,7 +429,7 @@ class ParticipantQOSUserQos implements ModelInterface, ArrayAccess
     /**
      * Gets as_output
      *
-     * @return \Swagger\Client\Model\QOSObject1
+     * @return \Zoom\Api\Model\QOSObject1
      */
     public function getAsOutput()
     {
@@ -439,7 +439,7 @@ class ParticipantQOSUserQos implements ModelInterface, ArrayAccess
     /**
      * Sets as_output
      *
-     * @param \Swagger\Client\Model\QOSObject1 $as_output as_output
+     * @param \Zoom\Api\Model\QOSObject1 $as_output as_output
      *
      * @return $this
      */
@@ -453,7 +453,7 @@ class ParticipantQOSUserQos implements ModelInterface, ArrayAccess
     /**
      * Gets cpu_usage
      *
-     * @return \Swagger\Client\Model\ParticipantQOSCpuUsage
+     * @return \Zoom\Api\Model\ParticipantQOSCpuUsage
      */
     public function getCpuUsage()
     {
@@ -463,7 +463,7 @@ class ParticipantQOSUserQos implements ModelInterface, ArrayAccess
     /**
      * Sets cpu_usage
      *
-     * @param \Swagger\Client\Model\ParticipantQOSCpuUsage $cpu_usage cpu_usage
+     * @param \Zoom\Api\Model\ParticipantQOSCpuUsage $cpu_usage cpu_usage
      *
      * @return $this
      */
@@ -477,7 +477,7 @@ class ParticipantQOSUserQos implements ModelInterface, ArrayAccess
     /**
      * Gets audio_device_from_crc
      *
-     * @return \Swagger\Client\Model\ParticipantQOSAudioDeviceFromCrc
+     * @return \Zoom\Api\Model\ParticipantQOSAudioDeviceFromCrc
      */
     public function getAudioDeviceFromCrc()
     {
@@ -487,7 +487,7 @@ class ParticipantQOSUserQos implements ModelInterface, ArrayAccess
     /**
      * Sets audio_device_from_crc
      *
-     * @param \Swagger\Client\Model\ParticipantQOSAudioDeviceFromCrc $audio_device_from_crc audio_device_from_crc
+     * @param \Zoom\Api\Model\ParticipantQOSAudioDeviceFromCrc $audio_device_from_crc audio_device_from_crc
      *
      * @return $this
      */
@@ -501,7 +501,7 @@ class ParticipantQOSUserQos implements ModelInterface, ArrayAccess
     /**
      * Gets audio_device_to_crc
      *
-     * @return \Swagger\Client\Model\ParticipantQOSAudioDeviceToCrc
+     * @return \Zoom\Api\Model\ParticipantQOSAudioDeviceToCrc
      */
     public function getAudioDeviceToCrc()
     {
@@ -511,7 +511,7 @@ class ParticipantQOSUserQos implements ModelInterface, ArrayAccess
     /**
      * Sets audio_device_to_crc
      *
-     * @param \Swagger\Client\Model\ParticipantQOSAudioDeviceToCrc $audio_device_to_crc audio_device_to_crc
+     * @param \Zoom\Api\Model\ParticipantQOSAudioDeviceToCrc $audio_device_to_crc audio_device_to_crc
      *
      * @return $this
      */
@@ -525,7 +525,7 @@ class ParticipantQOSUserQos implements ModelInterface, ArrayAccess
     /**
      * Gets video_device_from_crc
      *
-     * @return \Swagger\Client\Model\ParticipantQOSVideoDeviceFromCrc
+     * @return \Zoom\Api\Model\ParticipantQOSVideoDeviceFromCrc
      */
     public function getVideoDeviceFromCrc()
     {
@@ -535,7 +535,7 @@ class ParticipantQOSUserQos implements ModelInterface, ArrayAccess
     /**
      * Sets video_device_from_crc
      *
-     * @param \Swagger\Client\Model\ParticipantQOSVideoDeviceFromCrc $video_device_from_crc video_device_from_crc
+     * @param \Zoom\Api\Model\ParticipantQOSVideoDeviceFromCrc $video_device_from_crc video_device_from_crc
      *
      * @return $this
      */
@@ -549,7 +549,7 @@ class ParticipantQOSUserQos implements ModelInterface, ArrayAccess
     /**
      * Gets video_device_to_crc
      *
-     * @return \Swagger\Client\Model\ParticipantQOSVideoDeviceToCrc
+     * @return \Zoom\Api\Model\ParticipantQOSVideoDeviceToCrc
      */
     public function getVideoDeviceToCrc()
     {
@@ -559,7 +559,7 @@ class ParticipantQOSUserQos implements ModelInterface, ArrayAccess
     /**
      * Sets video_device_to_crc
      *
-     * @param \Swagger\Client\Model\ParticipantQOSVideoDeviceToCrc $video_device_to_crc video_device_to_crc
+     * @param \Zoom\Api\Model\ParticipantQOSVideoDeviceToCrc $video_device_to_crc video_device_to_crc
      *
      * @return $this
      */
@@ -573,7 +573,7 @@ class ParticipantQOSUserQos implements ModelInterface, ArrayAccess
     /**
      * Gets as_device_from_crc
      *
-     * @return \Swagger\Client\Model\ParticipantQOSAsDeviceFromCrc
+     * @return \Zoom\Api\Model\ParticipantQOSAsDeviceFromCrc
      */
     public function getAsDeviceFromCrc()
     {
@@ -583,7 +583,7 @@ class ParticipantQOSUserQos implements ModelInterface, ArrayAccess
     /**
      * Sets as_device_from_crc
      *
-     * @param \Swagger\Client\Model\ParticipantQOSAsDeviceFromCrc $as_device_from_crc as_device_from_crc
+     * @param \Zoom\Api\Model\ParticipantQOSAsDeviceFromCrc $as_device_from_crc as_device_from_crc
      *
      * @return $this
      */
@@ -597,7 +597,7 @@ class ParticipantQOSUserQos implements ModelInterface, ArrayAccess
     /**
      * Gets as_device_to_crc
      *
-     * @return \Swagger\Client\Model\ParticipantQOSAsDeviceToCrc
+     * @return \Zoom\Api\Model\ParticipantQOSAsDeviceToCrc
      */
     public function getAsDeviceToCrc()
     {
@@ -607,7 +607,7 @@ class ParticipantQOSUserQos implements ModelInterface, ArrayAccess
     /**
      * Sets as_device_to_crc
      *
-     * @param \Swagger\Client\Model\ParticipantQOSAsDeviceToCrc $as_device_to_crc as_device_to_crc
+     * @param \Zoom\Api\Model\ParticipantQOSAsDeviceToCrc $as_device_to_crc as_device_to_crc
      *
      * @return $this
      */

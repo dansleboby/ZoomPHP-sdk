@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse20050 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class InlineResponse20050 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'tsp_accounts' => '\Swagger\Client\Model\TSPAccountsList[]'
+        'tsp_accounts' => '\Zoom\Api\Model\TSPAccountsList[]'
     ];
 
     /**
@@ -207,7 +207,7 @@ class InlineResponse20050 implements ModelInterface, ArrayAccess
     /**
      * Gets tsp_accounts
      *
-     * @return \Swagger\Client\Model\TSPAccountsList[]
+     * @return \Zoom\Api\Model\TSPAccountsList[]
      */
     public function getTspAccounts()
     {
@@ -217,7 +217,7 @@ class InlineResponse20050 implements ModelInterface, ArrayAccess
     /**
      * Sets tsp_accounts
      *
-     * @param \Swagger\Client\Model\TSPAccountsList[] $tsp_accounts tsp_accounts
+     * @param \Zoom\Api\Model\TSPAccountsList[] $tsp_accounts tsp_accounts
      *
      * @return $this
      */

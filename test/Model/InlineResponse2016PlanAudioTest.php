@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  ZoomApi
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,14 +27,14 @@
  * Please update the test case below to test the model.
  */
 
-namespace Swagger\Client;
+namespace ZoomApi;
 
 /**
  * InlineResponse2016PlanAudioTest Class Doc Comment
  *
  * @category    Class
  * @description Additional audio conferencing &lt;a href&#x3D;\&quot;https://marketplace.zoom.us/docs/api-reference/other-references/plans#audio-conferencing-plans\&quot;&gt;plan type.&lt;/a&gt;
- * @package     Swagger\Client
+ * @package     ZoomApi
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */

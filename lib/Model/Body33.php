@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * Body33 Class Doc Comment
  *
  * @category Class
  * @description The user update object represents a user on Zoom.
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -74,7 +74,7 @@ class Body33 implements ModelInterface, ArrayAccess
         'location' => 'string',
         'phone_number' => 'string',
         'phone_country' => 'string',
-        'custom_attributes' => '\Swagger\Client\Model\UsersuserIdCustomAttributes'
+        'custom_attributes' => '\Zoom\Api\Model\UsersuserIdCustomAttributes'
     ];
 
     /**
@@ -743,7 +743,7 @@ class Body33 implements ModelInterface, ArrayAccess
     /**
      * Gets custom_attributes
      *
-     * @return \Swagger\Client\Model\UsersuserIdCustomAttributes
+     * @return \Zoom\Api\Model\UsersuserIdCustomAttributes
      */
     public function getCustomAttributes()
     {
@@ -753,7 +753,7 @@ class Body33 implements ModelInterface, ArrayAccess
     /**
      * Sets custom_attributes
      *
-     * @param \Swagger\Client\Model\UsersuserIdCustomAttributes $custom_attributes custom_attributes
+     * @param \Zoom\Api\Model\UsersuserIdCustomAttributes $custom_attributes custom_attributes
      *
      * @return $this
      */

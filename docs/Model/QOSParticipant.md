@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **mac_addr** | **string** | Participant&#39;s MAC address. | [optional] 
 **harddisk_id** | **string** | Participant&#39;s hard disk ID. | [optional] 
 **version** | **string** | Participant&#39;s Zoom Client version. | [optional] 
-**user_qos** | [**\Swagger\Client\Model\ParticipantQOSUserQos[]**](ParticipantQOSUserQos.md) | Quality of service provided to the user. | [optional] 
+**user_qos** | [**\Zoom\Api\Model\ParticipantQOSUserQos[]**](ParticipantQOSUserQos.md) | Quality of service provided to the user. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

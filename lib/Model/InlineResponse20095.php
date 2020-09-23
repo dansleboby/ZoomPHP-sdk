@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse20095 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -60,7 +60,7 @@ class InlineResponse20095 implements ModelInterface, ArrayAccess
         'next_page_token' => 'string',
         'page_size' => 'int',
         'total_records' => 'int',
-        'common_area_phones' => '\Swagger\Client\Model\InlineResponse20095CommonAreaPhones[]'
+        'common_area_phones' => '\Zoom\Api\Model\InlineResponse20095CommonAreaPhones[]'
     ];
 
     /**
@@ -306,7 +306,7 @@ class InlineResponse20095 implements ModelInterface, ArrayAccess
     /**
      * Gets common_area_phones
      *
-     * @return \Swagger\Client\Model\InlineResponse20095CommonAreaPhones[]
+     * @return \Zoom\Api\Model\InlineResponse20095CommonAreaPhones[]
      */
     public function getCommonAreaPhones()
     {
@@ -316,7 +316,7 @@ class InlineResponse20095 implements ModelInterface, ArrayAccess
     /**
      * Sets common_area_phones
      *
-     * @param \Swagger\Client\Model\InlineResponse20095CommonAreaPhones[] $common_area_phones common_area_phones
+     * @param \Zoom\Api\Model\InlineResponse20095CommonAreaPhones[] $common_area_phones common_area_phones
      *
      * @return $this
      */

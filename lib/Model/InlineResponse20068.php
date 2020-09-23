@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse20068 Class Doc Comment
  *
  * @category Class
  * @description Report object
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -62,7 +62,7 @@ class InlineResponse20068 implements ModelInterface, ArrayAccess
         'to' => 'string',
         'page_size' => 'string',
         'next_page_token' => 'string',
-        'activity_logs' => '\Swagger\Client\Model\InlineResponse20068ActivityLogs[]'
+        'activity_logs' => '\Zoom\Api\Model\InlineResponse20068ActivityLogs[]'
     ];
 
     /**
@@ -328,7 +328,7 @@ class InlineResponse20068 implements ModelInterface, ArrayAccess
     /**
      * Gets activity_logs
      *
-     * @return \Swagger\Client\Model\InlineResponse20068ActivityLogs[]
+     * @return \Zoom\Api\Model\InlineResponse20068ActivityLogs[]
      */
     public function getActivityLogs()
     {
@@ -338,7 +338,7 @@ class InlineResponse20068 implements ModelInterface, ArrayAccess
     /**
      * Sets activity_logs
      *
-     * @param \Swagger\Client\Model\InlineResponse20068ActivityLogs[] $activity_logs Array of activity logs.
+     * @param \Zoom\Api\Model\InlineResponse20068ActivityLogs[] $activity_logs Array of activity logs.
      *
      * @return $this
      */

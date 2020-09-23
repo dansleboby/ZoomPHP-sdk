@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * TSPAccount1 Class Doc Comment
  *
  * @category Class
  * @description TSP account.
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -60,7 +60,7 @@ class TSPAccount1 implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'conference_code' => 'string',
         'leader_pin' => 'string',
-        'dial_in_numbers' => '\Swagger\Client\Model\UsersuserIdtsptspIdDialInNumbers[]',
+        'dial_in_numbers' => '\Zoom\Api\Model\UsersuserIdtsptspIdDialInNumbers[]',
         'tsp_bridge' => 'string'
     ];
 
@@ -333,7 +333,7 @@ class TSPAccount1 implements ModelInterface, ArrayAccess
     /**
      * Gets dial_in_numbers
      *
-     * @return \Swagger\Client\Model\UsersuserIdtsptspIdDialInNumbers[]
+     * @return \Zoom\Api\Model\UsersuserIdtsptspIdDialInNumbers[]
      */
     public function getDialInNumbers()
     {
@@ -343,7 +343,7 @@ class TSPAccount1 implements ModelInterface, ArrayAccess
     /**
      * Sets dial_in_numbers
      *
-     * @param \Swagger\Client\Model\UsersuserIdtsptspIdDialInNumbers[] $dial_in_numbers List of dial in numbers.
+     * @param \Zoom\Api\Model\UsersuserIdtsptspIdDialInNumbers[] $dial_in_numbers List of dial in numbers.
      *
      * @return $this
      */

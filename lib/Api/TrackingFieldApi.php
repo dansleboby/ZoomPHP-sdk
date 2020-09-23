@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Zoom\Api\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Zoom\Api\ApiException;
+use Zoom\Api\Configuration;
+use Zoom\Api\HeaderSelector;
+use Zoom\Api\ObjectSerializer;
 
 /**
  * TrackingFieldApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -92,11 +92,11 @@ class TrackingFieldApi
      *
      * Create a Tracking Field
      *
-     * @param  \Swagger\Client\Model\TrackingField $body Tracking Field (required)
+     * @param  \Zoom\Api\Model\TrackingField $body Tracking Field (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse2019
+     * @return \Zoom\Api\Model\InlineResponse2019
      */
     public function trackingfieldCreate($body)
     {
@@ -109,15 +109,15 @@ class TrackingFieldApi
      *
      * Create a Tracking Field
      *
-     * @param  \Swagger\Client\Model\TrackingField $body Tracking Field (required)
+     * @param  \Zoom\Api\Model\TrackingField $body Tracking Field (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse2019, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse2019, HTTP status code, HTTP response headers (array of strings)
      */
     public function trackingfieldCreateWithHttpInfo($body)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse2019';
+        $returnType = '\Zoom\Api\Model\InlineResponse2019';
         $request = $this->trackingfieldCreateRequest($body);
 
         try {
@@ -169,7 +169,7 @@ class TrackingFieldApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse2019',
+                        '\Zoom\Api\Model\InlineResponse2019',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -184,7 +184,7 @@ class TrackingFieldApi
      *
      * Create a Tracking Field
      *
-     * @param  \Swagger\Client\Model\TrackingField $body Tracking Field (required)
+     * @param  \Zoom\Api\Model\TrackingField $body Tracking Field (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -204,14 +204,14 @@ class TrackingFieldApi
      *
      * Create a Tracking Field
      *
-     * @param  \Swagger\Client\Model\TrackingField $body Tracking Field (required)
+     * @param  \Zoom\Api\Model\TrackingField $body Tracking Field (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function trackingfieldCreateAsyncWithHttpInfo($body)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse2019';
+        $returnType = '\Zoom\Api\Model\InlineResponse2019';
         $request = $this->trackingfieldCreateRequest($body);
 
         return $this->client
@@ -254,7 +254,7 @@ class TrackingFieldApi
     /**
      * Create request for operation 'trackingfieldCreate'
      *
-     * @param  \Swagger\Client\Model\TrackingField $body Tracking Field (required)
+     * @param  \Zoom\Api\Model\TrackingField $body Tracking Field (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -362,7 +362,7 @@ class TrackingFieldApi
      *
      * @param  string $field_id The Tracking Field ID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -378,7 +378,7 @@ class TrackingFieldApi
      *
      * @param  string $field_id The Tracking Field ID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -598,9 +598,9 @@ class TrackingFieldApi
      *
      * @param  string $field_id The Tracking Field ID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse2019
+     * @return \Zoom\Api\Model\InlineResponse2019
      */
     public function trackingfieldGet($field_id)
     {
@@ -615,13 +615,13 @@ class TrackingFieldApi
      *
      * @param  string $field_id The Tracking Field ID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse2019, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse2019, HTTP status code, HTTP response headers (array of strings)
      */
     public function trackingfieldGetWithHttpInfo($field_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse2019';
+        $returnType = '\Zoom\Api\Model\InlineResponse2019';
         $request = $this->trackingfieldGetRequest($field_id);
 
         try {
@@ -673,7 +673,7 @@ class TrackingFieldApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse2019',
+                        '\Zoom\Api\Model\InlineResponse2019',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -715,7 +715,7 @@ class TrackingFieldApi
      */
     public function trackingfieldGetAsyncWithHttpInfo($field_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse2019';
+        $returnType = '\Zoom\Api\Model\InlineResponse2019';
         $request = $this->trackingfieldGetRequest($field_id);
 
         return $this->client
@@ -870,7 +870,7 @@ class TrackingFieldApi
      * List Tracking Fields
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -886,7 +886,7 @@ class TrackingFieldApi
      * List Tracking Fields
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1124,9 +1124,9 @@ class TrackingFieldApi
      * Update a Tracking Field
      *
      * @param  string $field_id The Tracking Field ID (required)
-     * @param  \Swagger\Client\Model\TrackingField1 $body body (required)
+     * @param  \Zoom\Api\Model\TrackingField1 $body body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1141,9 +1141,9 @@ class TrackingFieldApi
      * Update a Tracking Field
      *
      * @param  string $field_id The Tracking Field ID (required)
-     * @param  \Swagger\Client\Model\TrackingField1 $body (required)
+     * @param  \Zoom\Api\Model\TrackingField1 $body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1195,7 +1195,7 @@ class TrackingFieldApi
      * Update a Tracking Field
      *
      * @param  string $field_id The Tracking Field ID (required)
-     * @param  \Swagger\Client\Model\TrackingField1 $body (required)
+     * @param  \Zoom\Api\Model\TrackingField1 $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1216,7 +1216,7 @@ class TrackingFieldApi
      * Update a Tracking Field
      *
      * @param  string $field_id The Tracking Field ID (required)
-     * @param  \Swagger\Client\Model\TrackingField1 $body (required)
+     * @param  \Zoom\Api\Model\TrackingField1 $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1253,7 +1253,7 @@ class TrackingFieldApi
      * Create request for operation 'trackingfieldUpdate'
      *
      * @param  string $field_id The Tracking Field ID (required)
-     * @param  \Swagger\Client\Model\TrackingField1 $body (required)
+     * @param  \Zoom\Api\Model\TrackingField1 $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

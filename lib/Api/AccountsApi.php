@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Zoom\Api\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Zoom\Api\ApiException;
+use Zoom\Api\Configuration;
+use Zoom\Api\HeaderSelector;
+use Zoom\Api\ObjectSerializer;
 
 /**
  * AccountsApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -94,9 +94,9 @@ class AccountsApi
      *
      * @param  string $account_id The account ID. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20012
+     * @return \Zoom\Api\Model\InlineResponse20012
      */
     public function account($account_id)
     {
@@ -111,13 +111,13 @@ class AccountsApi
      *
      * @param  string $account_id The account ID. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20012, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20012, HTTP status code, HTTP response headers (array of strings)
      */
     public function accountWithHttpInfo($account_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20012';
+        $returnType = '\Zoom\Api\Model\InlineResponse20012';
         $request = $this->accountRequest($account_id);
 
         try {
@@ -169,7 +169,7 @@ class AccountsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20012',
+                        '\Zoom\Api\Model\InlineResponse20012',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -211,7 +211,7 @@ class AccountsApi
      */
     public function accountAsyncWithHttpInfo($account_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20012';
+        $returnType = '\Zoom\Api\Model\InlineResponse20012';
         $request = $this->accountRequest($account_id);
 
         return $this->client
@@ -365,11 +365,11 @@ class AccountsApi
      *
      * Create a Sub Account
      *
-     * @param  \Swagger\Client\Model\Body11 $body Account. (required)
+     * @param  \Zoom\Api\Model\Body11 $body Account. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse2015
+     * @return \Zoom\Api\Model\InlineResponse2015
      */
     public function accountCreate($body)
     {
@@ -382,15 +382,15 @@ class AccountsApi
      *
      * Create a Sub Account
      *
-     * @param  \Swagger\Client\Model\Body11 $body Account. (required)
+     * @param  \Zoom\Api\Model\Body11 $body Account. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse2015, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse2015, HTTP status code, HTTP response headers (array of strings)
      */
     public function accountCreateWithHttpInfo($body)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse2015';
+        $returnType = '\Zoom\Api\Model\InlineResponse2015';
         $request = $this->accountCreateRequest($body);
 
         try {
@@ -442,7 +442,7 @@ class AccountsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse2015',
+                        '\Zoom\Api\Model\InlineResponse2015',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -457,7 +457,7 @@ class AccountsApi
      *
      * Create a Sub Account
      *
-     * @param  \Swagger\Client\Model\Body11 $body Account. (required)
+     * @param  \Zoom\Api\Model\Body11 $body Account. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -477,14 +477,14 @@ class AccountsApi
      *
      * Create a Sub Account
      *
-     * @param  \Swagger\Client\Model\Body11 $body Account. (required)
+     * @param  \Zoom\Api\Model\Body11 $body Account. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function accountCreateAsyncWithHttpInfo($body)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse2015';
+        $returnType = '\Zoom\Api\Model\InlineResponse2015';
         $request = $this->accountCreateRequest($body);
 
         return $this->client
@@ -527,7 +527,7 @@ class AccountsApi
     /**
      * Create request for operation 'accountCreate'
      *
-     * @param  \Swagger\Client\Model\Body11 $body Account. (required)
+     * @param  \Zoom\Api\Model\Body11 $body Account. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -635,7 +635,7 @@ class AccountsApi
      *
      * @param  string $account_id The account ID. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -651,7 +651,7 @@ class AccountsApi
      *
      * @param  string $account_id The account ID. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -871,9 +871,9 @@ class AccountsApi
      *
      * @param  string $account_id Unique Identifier of the account. To retrieve locked settings of the Master account or a regular account, provide \&quot;me\&quot; as the value of this field. &lt;br&gt; To retrieve locked settings of a Sub Account, provide the Account ID of the Sub Account in this field. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20013
+     * @return \Zoom\Api\Model\InlineResponse20013
      */
     public function accountManagedDomain($account_id)
     {
@@ -888,13 +888,13 @@ class AccountsApi
      *
      * @param  string $account_id Unique Identifier of the account. To retrieve locked settings of the Master account or a regular account, provide \&quot;me\&quot; as the value of this field. &lt;br&gt; To retrieve locked settings of a Sub Account, provide the Account ID of the Sub Account in this field. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20013, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20013, HTTP status code, HTTP response headers (array of strings)
      */
     public function accountManagedDomainWithHttpInfo($account_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20013';
+        $returnType = '\Zoom\Api\Model\InlineResponse20013';
         $request = $this->accountManagedDomainRequest($account_id);
 
         try {
@@ -946,7 +946,7 @@ class AccountsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20013',
+                        '\Zoom\Api\Model\InlineResponse20013',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -988,7 +988,7 @@ class AccountsApi
      */
     public function accountManagedDomainAsyncWithHttpInfo($account_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20013';
+        $returnType = '\Zoom\Api\Model\InlineResponse20013';
         $request = $this->accountManagedDomainRequest($account_id);
 
         return $this->client
@@ -1143,9 +1143,9 @@ class AccountsApi
      * Update Options
      *
      * @param  string $account_id The account ID. (required)
-     * @param  \Swagger\Client\Model\Body12 $body body (required)
+     * @param  \Zoom\Api\Model\Body12 $body body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1160,9 +1160,9 @@ class AccountsApi
      * Update Options
      *
      * @param  string $account_id The account ID. (required)
-     * @param  \Swagger\Client\Model\Body12 $body (required)
+     * @param  \Zoom\Api\Model\Body12 $body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1214,7 +1214,7 @@ class AccountsApi
      * Update Options
      *
      * @param  string $account_id The account ID. (required)
-     * @param  \Swagger\Client\Model\Body12 $body (required)
+     * @param  \Zoom\Api\Model\Body12 $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1235,7 +1235,7 @@ class AccountsApi
      * Update Options
      *
      * @param  string $account_id The account ID. (required)
-     * @param  \Swagger\Client\Model\Body12 $body (required)
+     * @param  \Zoom\Api\Model\Body12 $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1272,7 +1272,7 @@ class AccountsApi
      * Create request for operation 'accountOptionsUpdate'
      *
      * @param  string $account_id The account ID. (required)
-     * @param  \Swagger\Client\Model\Body12 $body (required)
+     * @param  \Zoom\Api\Model\Body12 $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1395,7 +1395,7 @@ class AccountsApi
      * @param  string $account_id The account ID. (required)
      * @param  string $option &#x60;meeting_authentication&#x60;: Use this query parameter to view [meeting authentication configuration](https://support.zoom.us/hc/en-us/articles/360037117472-Authentication-Profiles-for-Meetings-and-Webinars) applied on the account.&lt;br&gt;&#x60;recording_authentication&#x60;: Use this query parameter to view [recording authentication configuration](https://support.zoom.us/hc/en-us/articles/360037756671-Authentication-Profiles-for-Cloud-Recordings) applied on the account.&lt;br&gt; &#x60;security&#x60;: Use this query parameter to view security settings such as password requirements for user login, two factor authentication etc., applied on the account.&lt;br&gt; (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -1413,7 +1413,7 @@ class AccountsApi
      * @param  string $account_id The account ID. (required)
      * @param  string $option &#x60;meeting_authentication&#x60;: Use this query parameter to view [meeting authentication configuration](https://support.zoom.us/hc/en-us/articles/360037117472-Authentication-Profiles-for-Meetings-and-Webinars) applied on the account.&lt;br&gt;&#x60;recording_authentication&#x60;: Use this query parameter to view [recording authentication configuration](https://support.zoom.us/hc/en-us/articles/360037756671-Authentication-Profiles-for-Cloud-Recordings) applied on the account.&lt;br&gt; &#x60;security&#x60;: Use this query parameter to view security settings such as password requirements for user login, two factor authentication etc., applied on the account.&lt;br&gt; (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1678,7 +1678,7 @@ class AccountsApi
      * @param  object $body body (required)
      * @param  string $option option (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1696,7 +1696,7 @@ class AccountsApi
      * @param  object $body (required)
      * @param  string $option (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1935,7 +1935,7 @@ class AccountsApi
      *
      * @param  string $account_id The account ID. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -1952,7 +1952,7 @@ class AccountsApi
      *
      * @param  string $account_id The account ID. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2210,9 +2210,9 @@ class AccountsApi
      * @param  int $page_number **Deprecated** - This field has been deprecated and we will stop supporting it completely in a future release. Please use \&quot;next_page_token\&quot; for pagination instead of this field.  The page number of the current page in the returned records. (optional, default to 1)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\AccountList
+     * @return \Zoom\Api\Model\AccountList
      */
     public function accounts($page_size = '30', $page_number = '1', $next_page_token = null)
     {
@@ -2229,13 +2229,13 @@ class AccountsApi
      * @param  int $page_number **Deprecated** - This field has been deprecated and we will stop supporting it completely in a future release. Please use \&quot;next_page_token\&quot; for pagination instead of this field.  The page number of the current page in the returned records. (optional, default to 1)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\AccountList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\AccountList, HTTP status code, HTTP response headers (array of strings)
      */
     public function accountsWithHttpInfo($page_size = '30', $page_number = '1', $next_page_token = null)
     {
-        $returnType = '\Swagger\Client\Model\AccountList';
+        $returnType = '\Zoom\Api\Model\AccountList';
         $request = $this->accountsRequest($page_size, $page_number, $next_page_token);
 
         try {
@@ -2287,7 +2287,7 @@ class AccountsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\AccountList',
+                        '\Zoom\Api\Model\AccountList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2333,7 +2333,7 @@ class AccountsApi
      */
     public function accountsAsyncWithHttpInfo($page_size = '30', $page_number = '1', $next_page_token = null)
     {
-        $returnType = '\Swagger\Client\Model\AccountList';
+        $returnType = '\Zoom\Api\Model\AccountList';
         $request = $this->accountsRequest($page_size, $page_number, $next_page_token);
 
         return $this->client
@@ -2493,9 +2493,9 @@ class AccountsApi
      *
      * @param  string $account_id Unique Identifier of the account. To retrieve locked settings of the Master account or a regular account, provide \&quot;me\&quot; as the value of this field. &lt;br&gt; To retrieve locked settings of a Sub Account, provide the Account ID of the Sub Account in this field. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20070
+     * @return \Zoom\Api\Model\InlineResponse20070
      */
     public function getAccountLockSettings($account_id)
     {
@@ -2510,13 +2510,13 @@ class AccountsApi
      *
      * @param  string $account_id Unique Identifier of the account. To retrieve locked settings of the Master account or a regular account, provide \&quot;me\&quot; as the value of this field. &lt;br&gt; To retrieve locked settings of a Sub Account, provide the Account ID of the Sub Account in this field. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20070, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20070, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAccountLockSettingsWithHttpInfo($account_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20070';
+        $returnType = '\Zoom\Api\Model\InlineResponse20070';
         $request = $this->getAccountLockSettingsRequest($account_id);
 
         try {
@@ -2568,7 +2568,7 @@ class AccountsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20070',
+                        '\Zoom\Api\Model\InlineResponse20070',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2610,7 +2610,7 @@ class AccountsApi
      */
     public function getAccountLockSettingsAsyncWithHttpInfo($account_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20070';
+        $returnType = '\Zoom\Api\Model\InlineResponse20070';
         $request = $this->getAccountLockSettingsRequest($account_id);
 
         return $this->client
@@ -2765,9 +2765,9 @@ class AccountsApi
      * Update Locked Settings
      *
      * @param  string $account_id Unique Identifier of the account. To retrieve locked settings of the Master account or a regular account, provide \&quot;me\&quot; as the value of this field. &lt;br&gt; To retrieve locked settings of a Sub Account, provide the Account ID of the Sub Account in this field. (required)
-     * @param  \Swagger\Client\Model\Body52 $body body (optional)
+     * @param  \Zoom\Api\Model\Body52 $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -2783,9 +2783,9 @@ class AccountsApi
      * Update Locked Settings
      *
      * @param  string $account_id Unique Identifier of the account. To retrieve locked settings of the Master account or a regular account, provide \&quot;me\&quot; as the value of this field. &lt;br&gt; To retrieve locked settings of a Sub Account, provide the Account ID of the Sub Account in this field. (required)
-     * @param  \Swagger\Client\Model\Body52 $body (optional)
+     * @param  \Zoom\Api\Model\Body52 $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2867,7 +2867,7 @@ class AccountsApi
      * Update Locked Settings
      *
      * @param  string $account_id Unique Identifier of the account. To retrieve locked settings of the Master account or a regular account, provide \&quot;me\&quot; as the value of this field. &lt;br&gt; To retrieve locked settings of a Sub Account, provide the Account ID of the Sub Account in this field. (required)
-     * @param  \Swagger\Client\Model\Body52 $body (optional)
+     * @param  \Zoom\Api\Model\Body52 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2888,7 +2888,7 @@ class AccountsApi
      * Update Locked Settings
      *
      * @param  string $account_id Unique Identifier of the account. To retrieve locked settings of the Master account or a regular account, provide \&quot;me\&quot; as the value of this field. &lt;br&gt; To retrieve locked settings of a Sub Account, provide the Account ID of the Sub Account in this field. (required)
-     * @param  \Swagger\Client\Model\Body52 $body (optional)
+     * @param  \Zoom\Api\Model\Body52 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2939,7 +2939,7 @@ class AccountsApi
      * Create request for operation 'updateAccountLockSettings'
      *
      * @param  string $account_id Unique Identifier of the account. To retrieve locked settings of the Master account or a regular account, provide \&quot;me\&quot; as the value of this field. &lt;br&gt; To retrieve locked settings of a Sub Account, provide the Account ID of the Sub Account in this field. (required)
-     * @param  \Swagger\Client\Model\Body52 $body (optional)
+     * @param  \Zoom\Api\Model\Body52 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -3054,9 +3054,9 @@ class AccountsApi
      * Update the Account Owner
      *
      * @param  string $account_id Account Id of the account. (required)
-     * @param  \Swagger\Client\Model\Body54 $body body (optional)
+     * @param  \Zoom\Api\Model\Body54 $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -3072,9 +3072,9 @@ class AccountsApi
      * Update the Account Owner
      *
      * @param  string $account_id Account Id of the account. (required)
-     * @param  \Swagger\Client\Model\Body54 $body (optional)
+     * @param  \Zoom\Api\Model\Body54 $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3148,7 +3148,7 @@ class AccountsApi
      * Update the Account Owner
      *
      * @param  string $account_id Account Id of the account. (required)
-     * @param  \Swagger\Client\Model\Body54 $body (optional)
+     * @param  \Zoom\Api\Model\Body54 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3169,7 +3169,7 @@ class AccountsApi
      * Update the Account Owner
      *
      * @param  string $account_id Account Id of the account. (required)
-     * @param  \Swagger\Client\Model\Body54 $body (optional)
+     * @param  \Zoom\Api\Model\Body54 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3220,7 +3220,7 @@ class AccountsApi
      * Create request for operation 'updateAccountOwner'
      *
      * @param  string $account_id Account Id of the account. (required)
-     * @param  \Swagger\Client\Model\Body54 $body (optional)
+     * @param  \Zoom\Api\Model\Body54 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse20025 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,8 +57,8 @@ class InlineResponse20025 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'custom_questions' => '\Swagger\Client\Model\InlineResponse20025CustomQuestions[]',
-        'questions' => '\Swagger\Client\Model\InlineResponse20025Questions[]'
+        'custom_questions' => '\Zoom\Api\Model\InlineResponse20025CustomQuestions[]',
+        'questions' => '\Zoom\Api\Model\InlineResponse20025Questions[]'
     ];
 
     /**
@@ -213,7 +213,7 @@ class InlineResponse20025 implements ModelInterface, ArrayAccess
     /**
      * Gets custom_questions
      *
-     * @return \Swagger\Client\Model\InlineResponse20025CustomQuestions[]
+     * @return \Zoom\Api\Model\InlineResponse20025CustomQuestions[]
      */
     public function getCustomQuestions()
     {
@@ -223,7 +223,7 @@ class InlineResponse20025 implements ModelInterface, ArrayAccess
     /**
      * Sets custom_questions
      *
-     * @param \Swagger\Client\Model\InlineResponse20025CustomQuestions[] $custom_questions Array of Registrant Custom Questions
+     * @param \Zoom\Api\Model\InlineResponse20025CustomQuestions[] $custom_questions Array of Registrant Custom Questions
      *
      * @return $this
      */
@@ -237,7 +237,7 @@ class InlineResponse20025 implements ModelInterface, ArrayAccess
     /**
      * Gets questions
      *
-     * @return \Swagger\Client\Model\InlineResponse20025Questions[]
+     * @return \Zoom\Api\Model\InlineResponse20025Questions[]
      */
     public function getQuestions()
     {
@@ -247,7 +247,7 @@ class InlineResponse20025 implements ModelInterface, ArrayAccess
     /**
      * Sets questions
      *
-     * @param \Swagger\Client\Model\InlineResponse20025Questions[] $questions Array of Registrant Questions
+     * @param \Zoom\Api\Model\InlineResponse20025Questions[] $questions Array of Registrant Questions
      *
      * @return $this
      */

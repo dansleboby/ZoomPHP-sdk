@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * AccountSettingsRecordingAuthenticationUpdate Class Doc Comment
  *
  * @category Class
  * @description Only authenticated users can view cloud recordings The viewers need to authenticate prior to viewing the cloud recordings, hosts can choose one of the authentication methods when sharing a cloud recording.
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,7 +59,7 @@ class AccountSettingsRecordingAuthenticationUpdate implements ModelInterface, Ar
       */
     protected static $swaggerTypes = [
         'recording_authentication' => 'bool',
-        'authentication_option' => '\Swagger\Client\Model\AccountSettingsRecordingAuthenticationUpdateAuthenticationOption'
+        'authentication_option' => '\Zoom\Api\Model\AccountSettingsRecordingAuthenticationUpdateAuthenticationOption'
     ];
 
     /**
@@ -238,7 +238,7 @@ class AccountSettingsRecordingAuthenticationUpdate implements ModelInterface, Ar
     /**
      * Gets authentication_option
      *
-     * @return \Swagger\Client\Model\AccountSettingsRecordingAuthenticationUpdateAuthenticationOption
+     * @return \Zoom\Api\Model\AccountSettingsRecordingAuthenticationUpdateAuthenticationOption
      */
     public function getAuthenticationOption()
     {
@@ -248,7 +248,7 @@ class AccountSettingsRecordingAuthenticationUpdate implements ModelInterface, Ar
     /**
      * Sets authentication_option
      *
-     * @param \Swagger\Client\Model\AccountSettingsRecordingAuthenticationUpdateAuthenticationOption $authentication_option authentication_option
+     * @param \Zoom\Api\Model\AccountSettingsRecordingAuthenticationUpdateAuthenticationOption $authentication_option authentication_option
      *
      * @return $this
      */

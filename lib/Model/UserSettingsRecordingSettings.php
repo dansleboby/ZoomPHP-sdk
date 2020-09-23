@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * UserSettingsRecordingSettings Class Doc Comment
  *
  * @category Class
  * @description 
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -73,7 +73,7 @@ class UserSettingsRecordingSettings implements ModelInterface, ArrayAccess
         'recording_disclaimer' => 'bool',
         'ask_participants_to_consent_disclaimer' => 'bool',
         'ask_host_to_confirm_disclaimer' => 'bool',
-        'recording_password_requirement' => '\Swagger\Client\Model\UserSettingsRecordingSettingsRecordingPasswordRequirement'
+        'recording_password_requirement' => '\Zoom\Api\Model\UserSettingsRecordingSettingsRecordingPasswordRequirement'
     ];
 
     /**
@@ -708,7 +708,7 @@ class UserSettingsRecordingSettings implements ModelInterface, ArrayAccess
     /**
      * Gets recording_password_requirement
      *
-     * @return \Swagger\Client\Model\UserSettingsRecordingSettingsRecordingPasswordRequirement
+     * @return \Zoom\Api\Model\UserSettingsRecordingSettingsRecordingPasswordRequirement
      */
     public function getRecordingPasswordRequirement()
     {
@@ -718,7 +718,7 @@ class UserSettingsRecordingSettings implements ModelInterface, ArrayAccess
     /**
      * Sets recording_password_requirement
      *
-     * @param \Swagger\Client\Model\UserSettingsRecordingSettingsRecordingPasswordRequirement $recording_password_requirement recording_password_requirement
+     * @param \Zoom\Api\Model\UserSettingsRecordingSettingsRecordingPasswordRequirement $recording_password_requirement recording_password_requirement
      *
      * @return $this
      */

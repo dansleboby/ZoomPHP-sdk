@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse20090 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -60,7 +60,7 @@ class InlineResponse20090 implements ModelInterface, ArrayAccess
         'page_size' => 'int',
         'next_page_token' => 'string',
         'total_records' => 'int',
-        'call_queues' => '\Swagger\Client\Model\InlineResponse20090CallQueues[]'
+        'call_queues' => '\Zoom\Api\Model\InlineResponse20090CallQueues[]'
     ];
 
     /**
@@ -306,7 +306,7 @@ class InlineResponse20090 implements ModelInterface, ArrayAccess
     /**
      * Gets call_queues
      *
-     * @return \Swagger\Client\Model\InlineResponse20090CallQueues[]
+     * @return \Zoom\Api\Model\InlineResponse20090CallQueues[]
      */
     public function getCallQueues()
     {
@@ -316,7 +316,7 @@ class InlineResponse20090 implements ModelInterface, ArrayAccess
     /**
      * Sets call_queues
      *
-     * @param \Swagger\Client\Model\InlineResponse20090CallQueues[] $call_queues call_queues
+     * @param \Zoom\Api\Model\InlineResponse20090CallQueues[] $call_queues call_queues
      *
      * @return $this
      */

@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Zoom\Api\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Zoom\Api\ApiException;
+use Zoom\Api\Configuration;
+use Zoom\Api\HeaderSelector;
+use Zoom\Api\ObjectSerializer;
 
 /**
  * SIPPhoneApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -92,9 +92,9 @@ class SIPPhoneApi
      *
      * Create SIP Phone
      *
-     * @param  \Swagger\Client\Model\Body $body body (optional)
+     * @param  \Zoom\Api\Model\Body $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -108,9 +108,9 @@ class SIPPhoneApi
      *
      * Create SIP Phone
      *
-     * @param  \Swagger\Client\Model\Body $body (optional)
+     * @param  \Zoom\Api\Model\Body $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -161,7 +161,7 @@ class SIPPhoneApi
      *
      * Create SIP Phone
      *
-     * @param  \Swagger\Client\Model\Body $body (optional)
+     * @param  \Zoom\Api\Model\Body $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -181,7 +181,7 @@ class SIPPhoneApi
      *
      * Create SIP Phone
      *
-     * @param  \Swagger\Client\Model\Body $body (optional)
+     * @param  \Zoom\Api\Model\Body $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -217,7 +217,7 @@ class SIPPhoneApi
     /**
      * Create request for operation 'createSIPPhone'
      *
-     * @param  \Swagger\Client\Model\Body $body (optional)
+     * @param  \Zoom\Api\Model\Body $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -319,7 +319,7 @@ class SIPPhoneApi
      *
      * @param  string $phone_id Unique Identifier of the SIP Phone. It can be retrieved from the List SIP Phones API. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -335,7 +335,7 @@ class SIPPhoneApi
      *
      * @param  string $phone_id Unique Identifier of the SIP Phone. It can be retrieved from the List SIP Phones API. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -565,9 +565,9 @@ class SIPPhoneApi
      * @param  string $search_key User name or email address of a user. If this parameter is provided, only the SIP phone system integration enabled for that specific user will be returned. Otherwise, all SIP phones on an account will be returned. (optional)
      * @param  int $page_size The number of records returned within a single API call. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse2001
+     * @return \Zoom\Api\Model\InlineResponse2001
      */
     public function listSipPhones($page_number = '1', $search_key = null, $page_size = null)
     {
@@ -584,13 +584,13 @@ class SIPPhoneApi
      * @param  string $search_key User name or email address of a user. If this parameter is provided, only the SIP phone system integration enabled for that specific user will be returned. Otherwise, all SIP phones on an account will be returned. (optional)
      * @param  int $page_size The number of records returned within a single API call. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse2001, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse2001, HTTP status code, HTTP response headers (array of strings)
      */
     public function listSipPhonesWithHttpInfo($page_number = '1', $search_key = null, $page_size = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse2001';
+        $returnType = '\Zoom\Api\Model\InlineResponse2001';
         $request = $this->listSipPhonesRequest($page_number, $search_key, $page_size);
 
         try {
@@ -642,7 +642,7 @@ class SIPPhoneApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse2001',
+                        '\Zoom\Api\Model\InlineResponse2001',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -688,7 +688,7 @@ class SIPPhoneApi
      */
     public function listSipPhonesAsyncWithHttpInfo($page_number = '1', $search_key = null, $page_size = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse2001';
+        $returnType = '\Zoom\Api\Model\InlineResponse2001';
         $request = $this->listSipPhonesRequest($page_number, $search_key, $page_size);
 
         return $this->client
@@ -843,9 +843,9 @@ class SIPPhoneApi
      * Update SIP Phone
      *
      * @param  string $phone_id Unique Identifier of the SIP Phone. This can be retrieved from the List SIP Phones API. (required)
-     * @param  \Swagger\Client\Model\Body1 $body body (optional)
+     * @param  \Zoom\Api\Model\Body1 $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -860,9 +860,9 @@ class SIPPhoneApi
      * Update SIP Phone
      *
      * @param  string $phone_id Unique Identifier of the SIP Phone. This can be retrieved from the List SIP Phones API. (required)
-     * @param  \Swagger\Client\Model\Body1 $body (optional)
+     * @param  \Zoom\Api\Model\Body1 $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -922,7 +922,7 @@ class SIPPhoneApi
      * Update SIP Phone
      *
      * @param  string $phone_id Unique Identifier of the SIP Phone. This can be retrieved from the List SIP Phones API. (required)
-     * @param  \Swagger\Client\Model\Body1 $body (optional)
+     * @param  \Zoom\Api\Model\Body1 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -943,7 +943,7 @@ class SIPPhoneApi
      * Update SIP Phone
      *
      * @param  string $phone_id Unique Identifier of the SIP Phone. This can be retrieved from the List SIP Phones API. (required)
-     * @param  \Swagger\Client\Model\Body1 $body (optional)
+     * @param  \Zoom\Api\Model\Body1 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -980,7 +980,7 @@ class SIPPhoneApi
      * Create request for operation 'updateSIPPhone'
      *
      * @param  string $phone_id Unique Identifier of the SIP Phone. This can be retrieved from the List SIP Phones API. (required)
-     * @param  \Swagger\Client\Model\Body1 $body (optional)
+     * @param  \Zoom\Api\Model\Body1 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

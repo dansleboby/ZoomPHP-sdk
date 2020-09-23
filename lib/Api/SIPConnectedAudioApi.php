@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Zoom\Api\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Zoom\Api\ApiException;
+use Zoom\Api\Configuration;
+use Zoom\Api\HeaderSelector;
+use Zoom\Api\ObjectSerializer;
 
 /**
  * SIPConnectedAudioApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -93,11 +93,11 @@ class SIPConnectedAudioApi
      * Add Internal Call-out Countries
      *
      * @param  string $account_id Unique identifier of the account. To add Call-out enabled countries to a Sub Account, provide the account ID of the Sub Account in the &#x60;accountId&#x60; path parameter. To add Call-out enabled countries to a Master Account, provide &#x60;me&#x60; as the value of the &#x60;accountId&#x60; path parameter. (required)
-     * @param  \Swagger\Client\Model\Body86 $body body (optional)
+     * @param  \Zoom\Api\Model\Body86 $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20129
+     * @return \Zoom\Api\Model\InlineResponse20129
      */
     public function addCalloutCountries($account_id, $body = null)
     {
@@ -111,15 +111,15 @@ class SIPConnectedAudioApi
      * Add Internal Call-out Countries
      *
      * @param  string $account_id Unique identifier of the account. To add Call-out enabled countries to a Sub Account, provide the account ID of the Sub Account in the &#x60;accountId&#x60; path parameter. To add Call-out enabled countries to a Master Account, provide &#x60;me&#x60; as the value of the &#x60;accountId&#x60; path parameter. (required)
-     * @param  \Swagger\Client\Model\Body86 $body (optional)
+     * @param  \Zoom\Api\Model\Body86 $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20129, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20129, HTTP status code, HTTP response headers (array of strings)
      */
     public function addCalloutCountriesWithHttpInfo($account_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20129';
+        $returnType = '\Zoom\Api\Model\InlineResponse20129';
         $request = $this->addCalloutCountriesRequest($account_id, $body);
 
         try {
@@ -171,7 +171,7 @@ class SIPConnectedAudioApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20129',
+                        '\Zoom\Api\Model\InlineResponse20129',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -187,7 +187,7 @@ class SIPConnectedAudioApi
      * Add Internal Call-out Countries
      *
      * @param  string $account_id Unique identifier of the account. To add Call-out enabled countries to a Sub Account, provide the account ID of the Sub Account in the &#x60;accountId&#x60; path parameter. To add Call-out enabled countries to a Master Account, provide &#x60;me&#x60; as the value of the &#x60;accountId&#x60; path parameter. (required)
-     * @param  \Swagger\Client\Model\Body86 $body (optional)
+     * @param  \Zoom\Api\Model\Body86 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -208,14 +208,14 @@ class SIPConnectedAudioApi
      * Add Internal Call-out Countries
      *
      * @param  string $account_id Unique identifier of the account. To add Call-out enabled countries to a Sub Account, provide the account ID of the Sub Account in the &#x60;accountId&#x60; path parameter. To add Call-out enabled countries to a Master Account, provide &#x60;me&#x60; as the value of the &#x60;accountId&#x60; path parameter. (required)
-     * @param  \Swagger\Client\Model\Body86 $body (optional)
+     * @param  \Zoom\Api\Model\Body86 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function addCalloutCountriesAsyncWithHttpInfo($account_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20129';
+        $returnType = '\Zoom\Api\Model\InlineResponse20129';
         $request = $this->addCalloutCountriesRequest($account_id, $body);
 
         return $this->client
@@ -259,7 +259,7 @@ class SIPConnectedAudioApi
      * Create request for operation 'addCalloutCountries'
      *
      * @param  string $account_id Unique identifier of the account. To add Call-out enabled countries to a Sub Account, provide the account ID of the Sub Account in the &#x60;accountId&#x60; path parameter. To add Call-out enabled countries to a Master Account, provide &#x60;me&#x60; as the value of the &#x60;accountId&#x60; path parameter. (required)
-     * @param  \Swagger\Client\Model\Body86 $body (optional)
+     * @param  \Zoom\Api\Model\Body86 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -374,11 +374,11 @@ class SIPConnectedAudioApi
      * Add Internal Numbers
      *
      * @param  string $account_id Unique identifier of the account.&lt;br&gt;To add internal numbers to a Sub Account, provide the account ID of the Sub Account in the &#x60;accountId&#x60; path parameter. To add internal numbers to a Master Account, provide &#x60;me&#x60; as the value of the &#x60;accountId&#x60; path parameter. (required)
-     * @param  \Swagger\Client\Model\Body87 $body body (optional)
+     * @param  \Zoom\Api\Model\Body87 $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20130
+     * @return \Zoom\Api\Model\InlineResponse20130
      */
     public function addInternalNumbers($account_id, $body = null)
     {
@@ -392,15 +392,15 @@ class SIPConnectedAudioApi
      * Add Internal Numbers
      *
      * @param  string $account_id Unique identifier of the account.&lt;br&gt;To add internal numbers to a Sub Account, provide the account ID of the Sub Account in the &#x60;accountId&#x60; path parameter. To add internal numbers to a Master Account, provide &#x60;me&#x60; as the value of the &#x60;accountId&#x60; path parameter. (required)
-     * @param  \Swagger\Client\Model\Body87 $body (optional)
+     * @param  \Zoom\Api\Model\Body87 $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20130, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20130, HTTP status code, HTTP response headers (array of strings)
      */
     public function addInternalNumbersWithHttpInfo($account_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20130';
+        $returnType = '\Zoom\Api\Model\InlineResponse20130';
         $request = $this->addInternalNumbersRequest($account_id, $body);
 
         try {
@@ -452,7 +452,7 @@ class SIPConnectedAudioApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20130',
+                        '\Zoom\Api\Model\InlineResponse20130',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -468,7 +468,7 @@ class SIPConnectedAudioApi
      * Add Internal Numbers
      *
      * @param  string $account_id Unique identifier of the account.&lt;br&gt;To add internal numbers to a Sub Account, provide the account ID of the Sub Account in the &#x60;accountId&#x60; path parameter. To add internal numbers to a Master Account, provide &#x60;me&#x60; as the value of the &#x60;accountId&#x60; path parameter. (required)
-     * @param  \Swagger\Client\Model\Body87 $body (optional)
+     * @param  \Zoom\Api\Model\Body87 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -489,14 +489,14 @@ class SIPConnectedAudioApi
      * Add Internal Numbers
      *
      * @param  string $account_id Unique identifier of the account.&lt;br&gt;To add internal numbers to a Sub Account, provide the account ID of the Sub Account in the &#x60;accountId&#x60; path parameter. To add internal numbers to a Master Account, provide &#x60;me&#x60; as the value of the &#x60;accountId&#x60; path parameter. (required)
-     * @param  \Swagger\Client\Model\Body87 $body (optional)
+     * @param  \Zoom\Api\Model\Body87 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function addInternalNumbersAsyncWithHttpInfo($account_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20130';
+        $returnType = '\Zoom\Api\Model\InlineResponse20130';
         $request = $this->addInternalNumbersRequest($account_id, $body);
 
         return $this->client
@@ -540,7 +540,7 @@ class SIPConnectedAudioApi
      * Create request for operation 'addInternalNumbers'
      *
      * @param  string $account_id Unique identifier of the account.&lt;br&gt;To add internal numbers to a Sub Account, provide the account ID of the Sub Account in the &#x60;accountId&#x60; path parameter. To add internal numbers to a Master Account, provide &#x60;me&#x60; as the value of the &#x60;accountId&#x60; path parameter. (required)
-     * @param  \Swagger\Client\Model\Body87 $body (optional)
+     * @param  \Zoom\Api\Model\Body87 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -655,9 +655,9 @@ class SIPConnectedAudioApi
      * Assign SIP Trunk Configuration
      *
      * @param  string $account_id account_id (required)
-     * @param  \Swagger\Client\Model\Body61 $body body (optional)
+     * @param  \Zoom\Api\Model\Body61 $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -673,9 +673,9 @@ class SIPConnectedAudioApi
      * Assign SIP Trunk Configuration
      *
      * @param  string $account_id (required)
-     * @param  \Swagger\Client\Model\Body61 $body (optional)
+     * @param  \Zoom\Api\Model\Body61 $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -749,7 +749,7 @@ class SIPConnectedAudioApi
      * Assign SIP Trunk Configuration
      *
      * @param  string $account_id (required)
-     * @param  \Swagger\Client\Model\Body61 $body (optional)
+     * @param  \Zoom\Api\Model\Body61 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -770,7 +770,7 @@ class SIPConnectedAudioApi
      * Assign SIP Trunk Configuration
      *
      * @param  string $account_id (required)
-     * @param  \Swagger\Client\Model\Body61 $body (optional)
+     * @param  \Zoom\Api\Model\Body61 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -821,7 +821,7 @@ class SIPConnectedAudioApi
      * Create request for operation 'assignSIPConfig'
      *
      * @param  string $account_id (required)
-     * @param  \Swagger\Client\Model\Body61 $body (optional)
+     * @param  \Zoom\Api\Model\Body61 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -936,11 +936,11 @@ class SIPConnectedAudioApi
      * Assign SIP Trunks
      *
      * @param  string $account_id Unique Identifier of the Sub Account. (required)
-     * @param  \Swagger\Client\Model\Body85 $body body (optional)
+     * @param  \Zoom\Api\Model\Body85 $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20128
+     * @return \Zoom\Api\Model\InlineResponse20128
      */
     public function assignSIPTrunks($account_id, $body = null)
     {
@@ -954,15 +954,15 @@ class SIPConnectedAudioApi
      * Assign SIP Trunks
      *
      * @param  string $account_id Unique Identifier of the Sub Account. (required)
-     * @param  \Swagger\Client\Model\Body85 $body (optional)
+     * @param  \Zoom\Api\Model\Body85 $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20128, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20128, HTTP status code, HTTP response headers (array of strings)
      */
     public function assignSIPTrunksWithHttpInfo($account_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20128';
+        $returnType = '\Zoom\Api\Model\InlineResponse20128';
         $request = $this->assignSIPTrunksRequest($account_id, $body);
 
         try {
@@ -1014,7 +1014,7 @@ class SIPConnectedAudioApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20128',
+                        '\Zoom\Api\Model\InlineResponse20128',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1030,7 +1030,7 @@ class SIPConnectedAudioApi
      * Assign SIP Trunks
      *
      * @param  string $account_id Unique Identifier of the Sub Account. (required)
-     * @param  \Swagger\Client\Model\Body85 $body (optional)
+     * @param  \Zoom\Api\Model\Body85 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1051,14 +1051,14 @@ class SIPConnectedAudioApi
      * Assign SIP Trunks
      *
      * @param  string $account_id Unique Identifier of the Sub Account. (required)
-     * @param  \Swagger\Client\Model\Body85 $body (optional)
+     * @param  \Zoom\Api\Model\Body85 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function assignSIPTrunksAsyncWithHttpInfo($account_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20128';
+        $returnType = '\Zoom\Api\Model\InlineResponse20128';
         $request = $this->assignSIPTrunksRequest($account_id, $body);
 
         return $this->client
@@ -1102,7 +1102,7 @@ class SIPConnectedAudioApi
      * Create request for operation 'assignSIPTrunks'
      *
      * @param  string $account_id Unique Identifier of the Sub Account. (required)
-     * @param  \Swagger\Client\Model\Body85 $body (optional)
+     * @param  \Zoom\Api\Model\Body85 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1217,9 +1217,9 @@ class SIPConnectedAudioApi
      * Assign Numbers
      *
      * @param  string $account_id Unique Identifier of the Sub Account. (required)
-     * @param  \Swagger\Client\Model\Body62 $body body (optional)
+     * @param  \Zoom\Api\Model\Body62 $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -1235,9 +1235,9 @@ class SIPConnectedAudioApi
      * Assign Numbers
      *
      * @param  string $account_id Unique Identifier of the Sub Account. (required)
-     * @param  \Swagger\Client\Model\Body62 $body (optional)
+     * @param  \Zoom\Api\Model\Body62 $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1311,7 +1311,7 @@ class SIPConnectedAudioApi
      * Assign Numbers
      *
      * @param  string $account_id Unique Identifier of the Sub Account. (required)
-     * @param  \Swagger\Client\Model\Body62 $body (optional)
+     * @param  \Zoom\Api\Model\Body62 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1332,7 +1332,7 @@ class SIPConnectedAudioApi
      * Assign Numbers
      *
      * @param  string $account_id Unique Identifier of the Sub Account. (required)
-     * @param  \Swagger\Client\Model\Body62 $body (optional)
+     * @param  \Zoom\Api\Model\Body62 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1383,7 +1383,7 @@ class SIPConnectedAudioApi
      * Create request for operation 'assignSipTrunkNumbers'
      *
      * @param  string $account_id Unique Identifier of the Sub Account. (required)
-     * @param  \Swagger\Client\Model\Body62 $body (optional)
+     * @param  \Zoom\Api\Model\Body62 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1499,7 +1499,7 @@ class SIPConnectedAudioApi
      *
      * @param  string $account_id Account ID of the Sub Account from which the numbers are to be deleted. This can be retrieved from [List Sub Accounts](https://marketplace.zoom.us/docs/api-reference/zoom-api/accounts/account) API. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -1516,7 +1516,7 @@ class SIPConnectedAudioApi
      *
      * @param  string $account_id Account ID of the Sub Account from which the numbers are to be deleted. This can be retrieved from [List Sub Accounts](https://marketplace.zoom.us/docs/api-reference/zoom-api/accounts/account) API. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1773,7 +1773,7 @@ class SIPConnectedAudioApi
      * @param  string $account_id Unique Identifier of the Account.&lt;br&gt; To remove Call-out country from a Sub Account, provide the account ID of the Sub Account in the &#x60;accountId&#x60; path parameter. To remove Call-out country from a Master Account, provide &#x60;me&#x60; as the value of the &#x60;accountId&#x60; path parameter. (required)
      * @param  string $country_id Two lettered Id of the country. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -1791,7 +1791,7 @@ class SIPConnectedAudioApi
      * @param  string $account_id Unique Identifier of the Account.&lt;br&gt; To remove Call-out country from a Sub Account, provide the account ID of the Sub Account in the &#x60;accountId&#x60; path parameter. To remove Call-out country from a Master Account, provide &#x60;me&#x60; as the value of the &#x60;accountId&#x60; path parameter. (required)
      * @param  string $country_id Two lettered Id of the country. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2065,7 +2065,7 @@ class SIPConnectedAudioApi
      * @param  string $account_id Unique Identifier of the account. To delete an internal number from a Sub Account, provide the account ID of the Sub Account in the &#x60;accountId&#x60; path parameter. To delete an internal number from a Master Account, provide &#x60;me&#x60; as the value of the &#x60;accountId&#x60; path parameter. (required)
      * @param  string $number_id Unique identifier of the phone number. This value can be retrieved by calling the List Internal Numbers API. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -2083,7 +2083,7 @@ class SIPConnectedAudioApi
      * @param  string $account_id Unique Identifier of the account. To delete an internal number from a Sub Account, provide the account ID of the Sub Account in the &#x60;accountId&#x60; path parameter. To delete an internal number from a Master Account, provide &#x60;me&#x60; as the value of the &#x60;accountId&#x60; path parameter. (required)
      * @param  string $number_id Unique identifier of the phone number. This value can be retrieved by calling the List Internal Numbers API. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2357,7 +2357,7 @@ class SIPConnectedAudioApi
      * @param  string $account_id Unique identifier of the Sub Account. (required)
      * @param  string $trunk_id Unique identifier of the SIP Trunk that was previously assigned to a Sub Account. To retrieve the value of this field, use the List SIP Trunks API. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -2375,7 +2375,7 @@ class SIPConnectedAudioApi
      * @param  string $account_id Unique identifier of the Sub Account. (required)
      * @param  string $trunk_id Unique identifier of the SIP Trunk that was previously assigned to a Sub Account. To retrieve the value of this field, use the List SIP Trunks API. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2648,9 +2648,9 @@ class SIPConnectedAudioApi
      *
      * @param  string $account_id Unique identifier of the account. To list Call-out enabled countries to a Sub Account, provide the account ID of the Sub Account in the &#x60;accountId&#x60; path parameter. To list Call-out enabled countries of a Sub Account, provide the account ID of the Sub Account in the &#x60;accountId&#x60; path parameter. To list Call-out enabled countries of a Master Account, provide &#x60;me&#x60; as the value of the &#x60;accountId&#x60; path parameter. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse200102
+     * @return \Zoom\Api\Model\InlineResponse200102
      */
     public function listInternalCalloutCountries($account_id)
     {
@@ -2665,13 +2665,13 @@ class SIPConnectedAudioApi
      *
      * @param  string $account_id Unique identifier of the account. To list Call-out enabled countries to a Sub Account, provide the account ID of the Sub Account in the &#x60;accountId&#x60; path parameter. To list Call-out enabled countries of a Sub Account, provide the account ID of the Sub Account in the &#x60;accountId&#x60; path parameter. To list Call-out enabled countries of a Master Account, provide &#x60;me&#x60; as the value of the &#x60;accountId&#x60; path parameter. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse200102, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse200102, HTTP status code, HTTP response headers (array of strings)
      */
     public function listInternalCalloutCountriesWithHttpInfo($account_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse200102';
+        $returnType = '\Zoom\Api\Model\InlineResponse200102';
         $request = $this->listInternalCalloutCountriesRequest($account_id);
 
         try {
@@ -2723,7 +2723,7 @@ class SIPConnectedAudioApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse200102',
+                        '\Zoom\Api\Model\InlineResponse200102',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2765,7 +2765,7 @@ class SIPConnectedAudioApi
      */
     public function listInternalCalloutCountriesAsyncWithHttpInfo($account_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse200102';
+        $returnType = '\Zoom\Api\Model\InlineResponse200102';
         $request = $this->listInternalCalloutCountriesRequest($account_id);
 
         return $this->client
@@ -2923,9 +2923,9 @@ class SIPConnectedAudioApi
      * @param  int $page_size The number of records returned within a single API call. (optional, default to 30)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse200103
+     * @return \Zoom\Api\Model\InlineResponse200103
      */
     public function listInternalNumbers($account_id, $page_size = '30', $next_page_token = null)
     {
@@ -2942,13 +2942,13 @@ class SIPConnectedAudioApi
      * @param  int $page_size The number of records returned within a single API call. (optional, default to 30)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse200103, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse200103, HTTP status code, HTTP response headers (array of strings)
      */
     public function listInternalNumbersWithHttpInfo($account_id, $page_size = '30', $next_page_token = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse200103';
+        $returnType = '\Zoom\Api\Model\InlineResponse200103';
         $request = $this->listInternalNumbersRequest($account_id, $page_size, $next_page_token);
 
         try {
@@ -3000,7 +3000,7 @@ class SIPConnectedAudioApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse200103',
+                        '\Zoom\Api\Model\InlineResponse200103',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3046,7 +3046,7 @@ class SIPConnectedAudioApi
      */
     public function listInternalNumbersAsyncWithHttpInfo($account_id, $page_size = '30', $next_page_token = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse200103';
+        $returnType = '\Zoom\Api\Model\InlineResponse200103';
         $request = $this->listInternalNumbersRequest($account_id, $page_size, $next_page_token);
 
         return $this->client
@@ -3216,9 +3216,9 @@ class SIPConnectedAudioApi
      *
      * @param  string $account_id Unique Identifier of the Account. To retrieve SIP trunks assigned to a Sub Account, provide the account ID of the Sub Account in the as the value of this field. To retrieve SIP trunks of a Master Account, provide &#x60;me&#x60; as the value of this field. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse200101
+     * @return \Zoom\Api\Model\InlineResponse200101
      */
     public function listSIPTrunks($account_id)
     {
@@ -3233,13 +3233,13 @@ class SIPConnectedAudioApi
      *
      * @param  string $account_id Unique Identifier of the Account. To retrieve SIP trunks assigned to a Sub Account, provide the account ID of the Sub Account in the as the value of this field. To retrieve SIP trunks of a Master Account, provide &#x60;me&#x60; as the value of this field. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse200101, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse200101, HTTP status code, HTTP response headers (array of strings)
      */
     public function listSIPTrunksWithHttpInfo($account_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse200101';
+        $returnType = '\Zoom\Api\Model\InlineResponse200101';
         $request = $this->listSIPTrunksRequest($account_id);
 
         try {
@@ -3291,7 +3291,7 @@ class SIPConnectedAudioApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse200101',
+                        '\Zoom\Api\Model\InlineResponse200101',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3333,7 +3333,7 @@ class SIPConnectedAudioApi
      */
     public function listSIPTrunksAsyncWithHttpInfo($account_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse200101';
+        $returnType = '\Zoom\Api\Model\InlineResponse200101';
         $request = $this->listSIPTrunksRequest($account_id);
 
         return $this->client
@@ -3488,9 +3488,9 @@ class SIPConnectedAudioApi
      * List SIP Trunk Numbers
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20082
+     * @return \Zoom\Api\Model\InlineResponse20082
      */
     public function listSipTrunkNumbers()
     {
@@ -3504,13 +3504,13 @@ class SIPConnectedAudioApi
      * List SIP Trunk Numbers
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20082, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20082, HTTP status code, HTTP response headers (array of strings)
      */
     public function listSipTrunkNumbersWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20082';
+        $returnType = '\Zoom\Api\Model\InlineResponse20082';
         $request = $this->listSipTrunkNumbersRequest();
 
         try {
@@ -3562,7 +3562,7 @@ class SIPConnectedAudioApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20082',
+                        '\Zoom\Api\Model\InlineResponse20082',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3602,7 +3602,7 @@ class SIPConnectedAudioApi
      */
     public function listSipTrunkNumbersAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20082';
+        $returnType = '\Zoom\Api\Model\InlineResponse20082';
         $request = $this->listSipTrunkNumbersRequest();
 
         return $this->client

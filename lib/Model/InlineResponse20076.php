@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse20076 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,7 +59,7 @@ class InlineResponse20076 implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'page_size' => 'int',
         'next_page_token' => 'string',
-        'locations' => '\Swagger\Client\Model\InlineResponse20076Locations[]'
+        'locations' => '\Zoom\Api\Model\InlineResponse20076Locations[]'
     ];
 
     /**
@@ -267,7 +267,7 @@ class InlineResponse20076 implements ModelInterface, ArrayAccess
     /**
      * Gets locations
      *
-     * @return \Swagger\Client\Model\InlineResponse20076Locations[]
+     * @return \Zoom\Api\Model\InlineResponse20076Locations[]
      */
     public function getLocations()
     {
@@ -277,7 +277,7 @@ class InlineResponse20076 implements ModelInterface, ArrayAccess
     /**
      * Sets locations
      *
-     * @param \Swagger\Client\Model\InlineResponse20076Locations[] $locations locations
+     * @param \Zoom\Api\Model\InlineResponse20076Locations[] $locations locations
      *
      * @return $this
      */

@@ -1,4 +1,4 @@
-# Swagger\Client\CloudRecordingApi
+# Zoom\Api\CloudRecordingApi
 
 All URIs are relative to *https://api.zoom.us/v2*
 
@@ -21,7 +21,7 @@ Method | HTTP request | Description
 
 
 # **getAccountCloudRecording**
-> \Swagger\Client\Model\InlineResponse20073 getAccountCloudRecording($account_id, $page_size, $next_page_token, $from, $to)
+> \Zoom\Api\Model\InlineResponse20073 getAccountCloudRecording($account_id, $page_size, $next_page_token, $from, $to)
 
 List Recordings of an Account
 
@@ -33,9 +33,9 @@ List [Cloud Recordings](https://support.zoom.us/hc/en-us/articles/203741855-Clou
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\CloudRecordingApi(
+$apiInstance = new Zoom\Api\Api\CloudRecordingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20073**](../Model/InlineResponse20073.md)
+[**\Zoom\Api\Model\InlineResponse20073**](../Model/InlineResponse20073.md)
 
 ### Authorization
 
@@ -82,7 +82,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **meetingRecordingRegistrantCreate**
-> \Swagger\Client\Model\InlineResponse20114 meetingRecordingRegistrantCreate($meeting_id, $body)
+> \Zoom\Api\Model\InlineResponse20114 meetingRecordingRegistrantCreate($meeting_id, $body)
 
 Create a Recording Registrant
 
@@ -94,9 +94,9 @@ Cloud Recordings of past Zoom Meetings can be made [on-demand](https://support.z
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\CloudRecordingApi(
+$apiInstance = new Zoom\Api\Api\CloudRecordingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -123,7 +123,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20114**](../Model/InlineResponse20114.md)
+[**\Zoom\Api\Model\InlineResponse20114**](../Model/InlineResponse20114.md)
 
 ### Authorization
 
@@ -149,16 +149,16 @@ A registrant can either be approved or denied from viewing the [on-demand](https
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\CloudRecordingApi(
+$apiInstance = new Zoom\Api\Api\CloudRecordingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $meeting_id = 789; // int | The meeting ID in **long** format. The data type of this field is \"long\"(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits.
-$body = new \Swagger\Client\Model\Body28(); // \Swagger\Client\Model\Body28 | 
+$body = new \Zoom\Api\Model\Body28(); // \Zoom\Api\Model\Body28 | 
 
 try {
     $apiInstance->meetingRecordingRegistrantStatus($meeting_id, $body);
@@ -173,7 +173,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **meeting_id** | **int**| The meeting ID in **long** format. The data type of this field is \&quot;long\&quot;(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits. |
- **body** | [**\Swagger\Client\Model\Body28**](../Model/Body28.md)|  |
+ **body** | [**\Zoom\Api\Model\Body28**](../Model/Body28.md)|  |
 
 ### Return type
 
@@ -191,7 +191,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **meetingRecordingRegistrants**
-> \Swagger\Client\Model\RegistrationList1 meetingRecordingRegistrants($meeting_id, $status, $page_size, $page_number, $next_page_token)
+> \Zoom\Api\Model\RegistrationList1 meetingRecordingRegistrants($meeting_id, $status, $page_size, $page_number, $next_page_token)
 
 List Recording Registrants
 
@@ -203,9 +203,9 @@ Cloud Recordings of past Zoom Meetings can be made [on-demand](https://support.z
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\CloudRecordingApi(
+$apiInstance = new Zoom\Api\Api\CloudRecordingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -238,7 +238,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\RegistrationList1**](../Model/RegistrationList1.md)
+[**\Zoom\Api\Model\RegistrationList1**](../Model/RegistrationList1.md)
 
 ### Authorization
 
@@ -264,9 +264,9 @@ Delete all recording files of a meeting.<br><br>  **Scopes:** `recording:write:a
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\CloudRecordingApi(
+$apiInstance = new Zoom\Api\Api\CloudRecordingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -318,9 +318,9 @@ Delete a sprecific recording file from a meeting.<br><br> **Scopes**: `recording
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\CloudRecordingApi(
+$apiInstance = new Zoom\Api\Api\CloudRecordingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -374,9 +374,9 @@ Get all the [recordings](https://support.zoom.us/hc/en-us/articles/203741855-Clo
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\CloudRecordingApi(
+$apiInstance = new Zoom\Api\Api\CloudRecordingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -427,9 +427,9 @@ For [on-demand](https://support.zoom.us/hc/en-us/articles/360000488283-On-demand
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\CloudRecordingApi(
+$apiInstance = new Zoom\Api\Api\CloudRecordingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -469,7 +469,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **recordingRegistrantsQuestionsGet**
-> \Swagger\Client\Model\RecordingRegistrantQuestions recordingRegistrantsQuestionsGet($meeting_id)
+> \Zoom\Api\Model\RecordingRegistrantQuestions recordingRegistrantsQuestionsGet($meeting_id)
 
 Get Registration Questions
 
@@ -481,9 +481,9 @@ For [on-demand](https://support.zoom.us/hc/en-us/articles/360000488283-On-demand
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\CloudRecordingApi(
+$apiInstance = new Zoom\Api\Api\CloudRecordingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -508,7 +508,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\RecordingRegistrantQuestions**](../Model/RecordingRegistrantQuestions.md)
+[**\Zoom\Api\Model\RecordingRegistrantQuestions**](../Model/RecordingRegistrantQuestions.md)
 
 ### Authorization
 
@@ -522,7 +522,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **recordingSettingUpdate**
-> \Swagger\Client\Model\RecordingSettings recordingSettingUpdate($meeting_id)
+> \Zoom\Api\Model\RecordingSettings recordingSettingUpdate($meeting_id)
 
 Get Meeting Recording Settings
 
@@ -534,9 +534,9 @@ Retrieve settings applied to a meeting's [Cloud Recording](https://support.zoom.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\CloudRecordingApi(
+$apiInstance = new Zoom\Api\Api\CloudRecordingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -561,7 +561,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\RecordingSettings**](../Model/RecordingSettings.md)
+[**\Zoom\Api\Model\RecordingSettings**](../Model/RecordingSettings.md)
 
 ### Authorization
 
@@ -587,16 +587,16 @@ Update settings applied to a meeting's [Cloud Recording](https://support.zoom.us
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\CloudRecordingApi(
+$apiInstance = new Zoom\Api\Api\CloudRecordingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $meeting_id = "meeting_id_example"; // string | To get Cloud Recordings of a meeting, provide the meeting ID or meeting UUID. If the meeting ID is provided instead of UUID,the response will be for the latest meeting instance.   To get Cloud Recordings of a webinar, provide the webinar ID or the webinar UUID. If the webinar ID is provided instead of UUID,the response will be for the latest webinar instance.   If a UUID starts with \"/\" or contains \"//\" (example: \"/ajXp112QmuoKj4854875==\"), you must **double encode** the UUID before making an API request.
-$body = new \Swagger\Client\Model\RecordingSettings1(); // \Swagger\Client\Model\RecordingSettings1 | Meeting recording Settings
+$body = new \Zoom\Api\Model\RecordingSettings1(); // \Zoom\Api\Model\RecordingSettings1 | Meeting recording Settings
 
 try {
     $apiInstance->recordingSettingsUpdate($meeting_id, $body);
@@ -611,7 +611,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **meeting_id** | **string**| To get Cloud Recordings of a meeting, provide the meeting ID or meeting UUID. If the meeting ID is provided instead of UUID,the response will be for the latest meeting instance.   To get Cloud Recordings of a webinar, provide the webinar ID or the webinar UUID. If the webinar ID is provided instead of UUID,the response will be for the latest webinar instance.   If a UUID starts with \&quot;/\&quot; or contains \&quot;//\&quot; (example: \&quot;/ajXp112QmuoKj4854875&#x3D;&#x3D;\&quot;), you must **double encode** the UUID before making an API request. |
- **body** | [**\Swagger\Client\Model\RecordingSettings1**](../Model/RecordingSettings1.md)| Meeting recording Settings |
+ **body** | [**\Zoom\Api\Model\RecordingSettings1**](../Model/RecordingSettings1.md)| Meeting recording Settings |
 
 ### Return type
 
@@ -641,16 +641,16 @@ Zoom allows users to recover recordings from trash for up to 30 days from the de
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\CloudRecordingApi(
+$apiInstance = new Zoom\Api\Api\CloudRecordingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $meeting_id = "meeting_id_example"; // string | To get Cloud Recordings of a meeting, provide the meeting ID or meeting UUID. If the meeting ID is provided instead of UUID,the response will be for the latest meeting instance.   To get Cloud Recordings of a webinar, provide the webinar ID or the webinar UUID. If the webinar ID is provided instead of UUID,the response will be for the latest webinar instance.   If a UUID starts with \"/\" or contains \"//\" (example: \"/ajXp112QmuoKj4854875==\"), you must **double encode** the UUID before making an API request.
-$body = new \Swagger\Client\Model\Body26(); // \Swagger\Client\Model\Body26 | 
+$body = new \Zoom\Api\Model\Body26(); // \Zoom\Api\Model\Body26 | 
 
 try {
     $apiInstance->recordingStatusUpdate($meeting_id, $body);
@@ -665,7 +665,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **meeting_id** | **string**| To get Cloud Recordings of a meeting, provide the meeting ID or meeting UUID. If the meeting ID is provided instead of UUID,the response will be for the latest meeting instance.   To get Cloud Recordings of a webinar, provide the webinar ID or the webinar UUID. If the webinar ID is provided instead of UUID,the response will be for the latest webinar instance.   If a UUID starts with \&quot;/\&quot; or contains \&quot;//\&quot; (example: \&quot;/ajXp112QmuoKj4854875&#x3D;&#x3D;\&quot;), you must **double encode** the UUID before making an API request. |
- **body** | [**\Swagger\Client\Model\Body26**](../Model/Body26.md)|  |
+ **body** | [**\Zoom\Api\Model\Body26**](../Model/Body26.md)|  |
 
 ### Return type
 
@@ -695,9 +695,9 @@ Zoom allows users to recover recordings from trash for up to 30 days from the de
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\CloudRecordingApi(
+$apiInstance = new Zoom\Api\Api\CloudRecordingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -705,7 +705,7 @@ $apiInstance = new Swagger\Client\Api\CloudRecordingApi(
 );
 $meeting_id = "meeting_id_example"; // string | To get Cloud Recordings of a meeting, provide the meeting ID or meeting UUID. If the meeting ID is provided instead of UUID,the response will be for the latest meeting instance.   To get Cloud Recordings of a webinar, provide the webinar ID or the webinar UUID. If the webinar ID is provided instead of UUID,the response will be for the latest webinar instance.   If a UUID starts with \"/\" or contains \"//\" (example: \"/ajXp112QmuoKj4854875==\"), you must **double encode** the UUID before making an API request.
 $recording_id = "recording_id_example"; // string | The recording ID.
-$body = new \Swagger\Client\Model\Body27(); // \Swagger\Client\Model\Body27 | 
+$body = new \Zoom\Api\Model\Body27(); // \Zoom\Api\Model\Body27 | 
 
 try {
     $apiInstance->recordingStatusUpdateOne($meeting_id, $recording_id, $body);
@@ -721,7 +721,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **meeting_id** | **string**| To get Cloud Recordings of a meeting, provide the meeting ID or meeting UUID. If the meeting ID is provided instead of UUID,the response will be for the latest meeting instance.   To get Cloud Recordings of a webinar, provide the webinar ID or the webinar UUID. If the webinar ID is provided instead of UUID,the response will be for the latest webinar instance.   If a UUID starts with \&quot;/\&quot; or contains \&quot;//\&quot; (example: \&quot;/ajXp112QmuoKj4854875&#x3D;&#x3D;\&quot;), you must **double encode** the UUID before making an API request. |
  **recording_id** | **string**| The recording ID. |
- **body** | [**\Swagger\Client\Model\Body27**](../Model/Body27.md)|  |
+ **body** | [**\Zoom\Api\Model\Body27**](../Model/Body27.md)|  |
 
 ### Return type
 
@@ -739,7 +739,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **recordingsList**
-> \Swagger\Client\Model\RecordingList recordingsList($user_id, $page_size, $next_page_token, $mc, $trash, $from, $to, $trash_type)
+> \Zoom\Api\Model\RecordingList recordingsList($user_id, $page_size, $next_page_token, $mc, $trash, $from, $to, $trash_type)
 
 List All Recordings
 
@@ -751,9 +751,9 @@ When a user records a meeting or a webinar by choosing the **Record to the Cloud
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\CloudRecordingApi(
+$apiInstance = new Zoom\Api\Api\CloudRecordingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -792,7 +792,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\RecordingList**](../Model/RecordingList.md)
+[**\Zoom\Api\Model\RecordingList**](../Model/RecordingList.md)
 
 ### Authorization
 

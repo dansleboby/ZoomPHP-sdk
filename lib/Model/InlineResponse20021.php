@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse20021 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,7 +58,7 @@ class InlineResponse20021 implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'from' => '\DateTime',
-        'messages' => '\Swagger\Client\Model\InlineResponse20021Messages[]',
+        'messages' => '\Zoom\Api\Model\InlineResponse20021Messages[]',
         'next_page_token' => 'string',
         'page_size' => 'int',
         'session_id' => 'string',
@@ -265,7 +265,7 @@ class InlineResponse20021 implements ModelInterface, ArrayAccess
     /**
      * Gets messages
      *
-     * @return \Swagger\Client\Model\InlineResponse20021Messages[]
+     * @return \Zoom\Api\Model\InlineResponse20021Messages[]
      */
     public function getMessages()
     {
@@ -275,7 +275,7 @@ class InlineResponse20021 implements ModelInterface, ArrayAccess
     /**
      * Sets messages
      *
-     * @param \Swagger\Client\Model\InlineResponse20021Messages[] $messages Array of session objects.
+     * @param \Zoom\Api\Model\InlineResponse20021Messages[] $messages Array of session objects.
      *
      * @return $this
      */

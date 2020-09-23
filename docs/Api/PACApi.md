@@ -1,4 +1,4 @@
-# Swagger\Client\PACApi
+# Zoom\Api\PACApi
 
 All URIs are relative to *https://api.zoom.us/v2*
 
@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **userPACs**
-> \Swagger\Client\Model\InlineResponse20049 userPACs($user_id)
+> \Zoom\Api\Model\InlineResponse20049 userPACs($user_id)
 
 List a User's PAC Accounts
 
@@ -20,9 +20,9 @@ List a User's PAC Accounts
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PACApi(
+$apiInstance = new Zoom\Api\Api\PACApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -47,7 +47,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20049**](../Model/InlineResponse20049.md)
+[**\Zoom\Api\Model\InlineResponse20049**](../Model/InlineResponse20049.md)
 
 ### Authorization
 

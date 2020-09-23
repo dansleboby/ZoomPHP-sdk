@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * MeetingRegistrantQuestions Class Doc Comment
  *
  * @category Class
  * @description Meeting Registrant Questions
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,8 +58,8 @@ class MeetingRegistrantQuestions implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'questions' => '\Swagger\Client\Model\InlineResponse20025Questions[]',
-        'custom_questions' => '\Swagger\Client\Model\InlineResponse20025CustomQuestions[]'
+        'questions' => '\Zoom\Api\Model\InlineResponse20025Questions[]',
+        'custom_questions' => '\Zoom\Api\Model\InlineResponse20025CustomQuestions[]'
     ];
 
     /**
@@ -214,7 +214,7 @@ class MeetingRegistrantQuestions implements ModelInterface, ArrayAccess
     /**
      * Gets questions
      *
-     * @return \Swagger\Client\Model\InlineResponse20025Questions[]
+     * @return \Zoom\Api\Model\InlineResponse20025Questions[]
      */
     public function getQuestions()
     {
@@ -224,7 +224,7 @@ class MeetingRegistrantQuestions implements ModelInterface, ArrayAccess
     /**
      * Sets questions
      *
-     * @param \Swagger\Client\Model\InlineResponse20025Questions[] $questions Array of Registrant Questions
+     * @param \Zoom\Api\Model\InlineResponse20025Questions[] $questions Array of Registrant Questions
      *
      * @return $this
      */
@@ -238,7 +238,7 @@ class MeetingRegistrantQuestions implements ModelInterface, ArrayAccess
     /**
      * Gets custom_questions
      *
-     * @return \Swagger\Client\Model\InlineResponse20025CustomQuestions[]
+     * @return \Zoom\Api\Model\InlineResponse20025CustomQuestions[]
      */
     public function getCustomQuestions()
     {
@@ -248,7 +248,7 @@ class MeetingRegistrantQuestions implements ModelInterface, ArrayAccess
     /**
      * Sets custom_questions
      *
-     * @param \Swagger\Client\Model\InlineResponse20025CustomQuestions[] $custom_questions Array of Registrant Custom Questions
+     * @param \Zoom\Api\Model\InlineResponse20025CustomQuestions[] $custom_questions Array of Registrant Custom Questions
      *
      * @return $this
      */

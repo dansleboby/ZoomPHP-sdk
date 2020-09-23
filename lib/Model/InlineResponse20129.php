@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse20129 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class InlineResponse20129 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'callout_countries' => '\Swagger\Client\Model\InlineResponse20129CalloutCountries[]'
+        'callout_countries' => '\Zoom\Api\Model\InlineResponse20129CalloutCountries[]'
     ];
 
     /**
@@ -207,7 +207,7 @@ class InlineResponse20129 implements ModelInterface, ArrayAccess
     /**
      * Gets callout_countries
      *
-     * @return \Swagger\Client\Model\InlineResponse20129CalloutCountries[]
+     * @return \Zoom\Api\Model\InlineResponse20129CalloutCountries[]
      */
     public function getCalloutCountries()
     {
@@ -217,7 +217,7 @@ class InlineResponse20129 implements ModelInterface, ArrayAccess
     /**
      * Sets callout_countries
      *
-     * @param \Swagger\Client\Model\InlineResponse20129CalloutCountries[] $callout_countries List of Call-out countries.
+     * @param \Zoom\Api\Model\InlineResponse20129CalloutCountries[] $callout_countries List of Call-out countries.
      *
      * @return $this
      */

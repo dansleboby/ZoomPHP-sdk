@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse20061 Class Doc Comment
  *
  * @category Class
  * @description Zoom User Profile
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -61,8 +61,8 @@ class InlineResponse20061 implements ModelInterface, ArrayAccess
         'id' => 'string',
         'phone_user_id' => 'string',
         'email' => 'string',
-        'calling_plan' => '\Swagger\Client\Model\InlineResponse20061CallingPlan[]',
-        'phone_numbers' => '\Swagger\Client\Model\InlineResponse20061PhoneNumbers[]',
+        'calling_plan' => '\Zoom\Api\Model\InlineResponse20061CallingPlan[]',
+        'phone_numbers' => '\Zoom\Api\Model\InlineResponse20061PhoneNumbers[]',
         'extension_number' => 'int',
         'status' => 'string',
         'site_id' => 'string',
@@ -351,7 +351,7 @@ class InlineResponse20061 implements ModelInterface, ArrayAccess
     /**
      * Gets calling_plan
      *
-     * @return \Swagger\Client\Model\InlineResponse20061CallingPlan[]
+     * @return \Zoom\Api\Model\InlineResponse20061CallingPlan[]
      */
     public function getCallingPlan()
     {
@@ -361,7 +361,7 @@ class InlineResponse20061 implements ModelInterface, ArrayAccess
     /**
      * Sets calling_plan
      *
-     * @param \Swagger\Client\Model\InlineResponse20061CallingPlan[] $calling_plan Calling Plan of the user
+     * @param \Zoom\Api\Model\InlineResponse20061CallingPlan[] $calling_plan Calling Plan of the user
      *
      * @return $this
      */
@@ -375,7 +375,7 @@ class InlineResponse20061 implements ModelInterface, ArrayAccess
     /**
      * Gets phone_numbers
      *
-     * @return \Swagger\Client\Model\InlineResponse20061PhoneNumbers[]
+     * @return \Zoom\Api\Model\InlineResponse20061PhoneNumbers[]
      */
     public function getPhoneNumbers()
     {
@@ -385,7 +385,7 @@ class InlineResponse20061 implements ModelInterface, ArrayAccess
     /**
      * Sets phone_numbers
      *
-     * @param \Swagger\Client\Model\InlineResponse20061PhoneNumbers[] $phone_numbers phone_numbers
+     * @param \Zoom\Api\Model\InlineResponse20061PhoneNumbers[] $phone_numbers phone_numbers
      *
      * @return $this
      */

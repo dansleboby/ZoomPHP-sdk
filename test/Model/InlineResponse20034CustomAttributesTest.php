@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  ZoomApi
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,14 +27,14 @@
  * Please update the test case below to test the model.
  */
 
-namespace Swagger\Client;
+namespace ZoomApi;
 
 /**
  * InlineResponse20034CustomAttributesTest Class Doc Comment
  *
  * @category    Class
  * @description Custom attribute(s) that have been assigned to the user.
- * @package     Swagger\Client
+ * @package     ZoomApi
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */

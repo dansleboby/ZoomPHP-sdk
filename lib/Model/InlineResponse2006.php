@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse2006 Class Doc Comment
  *
  * @category Class
  * @description Chat message object.
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -61,7 +61,7 @@ class InlineResponse2006 implements ModelInterface, ArrayAccess
         'date' => '\DateTime',
         'page_size' => 'int',
         'next_page_token' => 'string',
-        'messages' => '\Swagger\Client\Model\InlineResponse2006Messages[]'
+        'messages' => '\Zoom\Api\Model\InlineResponse2006Messages[]'
     ];
 
     /**
@@ -298,7 +298,7 @@ class InlineResponse2006 implements ModelInterface, ArrayAccess
     /**
      * Gets messages
      *
-     * @return \Swagger\Client\Model\InlineResponse2006Messages[]
+     * @return \Zoom\Api\Model\InlineResponse2006Messages[]
      */
     public function getMessages()
     {
@@ -308,7 +308,7 @@ class InlineResponse2006 implements ModelInterface, ArrayAccess
     /**
      * Sets messages
      *
-     * @param \Swagger\Client\Model\InlineResponse2006Messages[] $messages List of message(s).
+     * @param \Zoom\Api\Model\InlineResponse2006Messages[] $messages List of message(s).
      *
      * @return $this
      */

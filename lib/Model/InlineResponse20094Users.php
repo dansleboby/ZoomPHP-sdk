@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse20094Users Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -61,10 +61,10 @@ class InlineResponse20094Users implements ModelInterface, ArrayAccess
         'phone_user_id' => 'string',
         'name' => 'string',
         'email' => 'string',
-        'site' => '\Swagger\Client\Model\InlineResponse20094Site',
+        'site' => '\Zoom\Api\Model\InlineResponse20094Site',
         'extension_number' => 'int',
         'status' => 'string',
-        'calling_plans' => '\Swagger\Client\Model\InlineResponse20094CallingPlans[]'
+        'calling_plans' => '\Zoom\Api\Model\InlineResponse20094CallingPlans[]'
     ];
 
     /**
@@ -345,7 +345,7 @@ class InlineResponse20094Users implements ModelInterface, ArrayAccess
     /**
      * Gets site
      *
-     * @return \Swagger\Client\Model\InlineResponse20094Site
+     * @return \Zoom\Api\Model\InlineResponse20094Site
      */
     public function getSite()
     {
@@ -355,7 +355,7 @@ class InlineResponse20094Users implements ModelInterface, ArrayAccess
     /**
      * Sets site
      *
-     * @param \Swagger\Client\Model\InlineResponse20094Site $site site
+     * @param \Zoom\Api\Model\InlineResponse20094Site $site site
      *
      * @return $this
      */
@@ -417,7 +417,7 @@ class InlineResponse20094Users implements ModelInterface, ArrayAccess
     /**
      * Gets calling_plans
      *
-     * @return \Swagger\Client\Model\InlineResponse20094CallingPlans[]
+     * @return \Zoom\Api\Model\InlineResponse20094CallingPlans[]
      */
     public function getCallingPlans()
     {
@@ -427,7 +427,7 @@ class InlineResponse20094Users implements ModelInterface, ArrayAccess
     /**
      * Sets calling_plans
      *
-     * @param \Swagger\Client\Model\InlineResponse20094CallingPlans[] $calling_plans calling_plans
+     * @param \Zoom\Api\Model\InlineResponse20094CallingPlans[] $calling_plans calling_plans
      *
      * @return $this
      */

@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Zoom\Api\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Zoom\Api\ApiException;
+use Zoom\Api\Configuration;
+use Zoom\Api\HeaderSelector;
+use Zoom\Api\ObjectSerializer;
 
 /**
  * PhoneAutoReceptionistsApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -92,11 +92,11 @@ class PhoneAutoReceptionistsApi
      *
      * Add an Auto Receptionist
      *
-     * @param  \Swagger\Client\Model\Body82 $body body (optional)
+     * @param  \Zoom\Api\Model\Body82 $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20127
+     * @return \Zoom\Api\Model\InlineResponse20127
      */
     public function addAutoReceptionist($body = null)
     {
@@ -109,15 +109,15 @@ class PhoneAutoReceptionistsApi
      *
      * Add an Auto Receptionist
      *
-     * @param  \Swagger\Client\Model\Body82 $body (optional)
+     * @param  \Zoom\Api\Model\Body82 $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20127, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20127, HTTP status code, HTTP response headers (array of strings)
      */
     public function addAutoReceptionistWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20127';
+        $returnType = '\Zoom\Api\Model\InlineResponse20127';
         $request = $this->addAutoReceptionistRequest($body);
 
         try {
@@ -169,7 +169,7 @@ class PhoneAutoReceptionistsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20127',
+                        '\Zoom\Api\Model\InlineResponse20127',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -184,7 +184,7 @@ class PhoneAutoReceptionistsApi
      *
      * Add an Auto Receptionist
      *
-     * @param  \Swagger\Client\Model\Body82 $body (optional)
+     * @param  \Zoom\Api\Model\Body82 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -204,14 +204,14 @@ class PhoneAutoReceptionistsApi
      *
      * Add an Auto Receptionist
      *
-     * @param  \Swagger\Client\Model\Body82 $body (optional)
+     * @param  \Zoom\Api\Model\Body82 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function addAutoReceptionistAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20127';
+        $returnType = '\Zoom\Api\Model\InlineResponse20127';
         $request = $this->addAutoReceptionistRequest($body);
 
         return $this->client
@@ -254,7 +254,7 @@ class PhoneAutoReceptionistsApi
     /**
      * Create request for operation 'addAutoReceptionist'
      *
-     * @param  \Swagger\Client\Model\Body82 $body (optional)
+     * @param  \Zoom\Api\Model\Body82 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -355,9 +355,9 @@ class PhoneAutoReceptionistsApi
      * Assign Phone Numbers
      *
      * @param  string $auto_receptionist_id Unique Identifier of the Auto Receptionist. It can be retrieved from the [List Sites API](https://marketplace.zoom.us/docs/api-reference/zoom-api/phone-site/listphonesites). (required)
-     * @param  \Swagger\Client\Model\Body74 $body body (optional)
+     * @param  \Zoom\Api\Model\Body74 $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -373,9 +373,9 @@ class PhoneAutoReceptionistsApi
      * Assign Phone Numbers
      *
      * @param  string $auto_receptionist_id Unique Identifier of the Auto Receptionist. It can be retrieved from the [List Sites API](https://marketplace.zoom.us/docs/api-reference/zoom-api/phone-site/listphonesites). (required)
-     * @param  \Swagger\Client\Model\Body74 $body (optional)
+     * @param  \Zoom\Api\Model\Body74 $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -449,7 +449,7 @@ class PhoneAutoReceptionistsApi
      * Assign Phone Numbers
      *
      * @param  string $auto_receptionist_id Unique Identifier of the Auto Receptionist. It can be retrieved from the [List Sites API](https://marketplace.zoom.us/docs/api-reference/zoom-api/phone-site/listphonesites). (required)
-     * @param  \Swagger\Client\Model\Body74 $body (optional)
+     * @param  \Zoom\Api\Model\Body74 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -470,7 +470,7 @@ class PhoneAutoReceptionistsApi
      * Assign Phone Numbers
      *
      * @param  string $auto_receptionist_id Unique Identifier of the Auto Receptionist. It can be retrieved from the [List Sites API](https://marketplace.zoom.us/docs/api-reference/zoom-api/phone-site/listphonesites). (required)
-     * @param  \Swagger\Client\Model\Body74 $body (optional)
+     * @param  \Zoom\Api\Model\Body74 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -521,7 +521,7 @@ class PhoneAutoReceptionistsApi
      * Create request for operation 'assignPhoneNumbersAutoReceptionist'
      *
      * @param  string $auto_receptionist_id Unique Identifier of the Auto Receptionist. It can be retrieved from the [List Sites API](https://marketplace.zoom.us/docs/api-reference/zoom-api/phone-site/listphonesites). (required)
-     * @param  \Swagger\Client\Model\Body74 $body (optional)
+     * @param  \Zoom\Api\Model\Body74 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -638,7 +638,7 @@ class PhoneAutoReceptionistsApi
      * @param  string $auto_receptionist_id Unique identifier of the auto receptionist. This can be retrieved from the List Phone Sites API. (required)
      * @param  string $phone_number_id Unique Identifier of the phone number or provide the actual phone number in e164 format (example: +19995550123). (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -656,7 +656,7 @@ class PhoneAutoReceptionistsApi
      * @param  string $auto_receptionist_id Unique identifier of the auto receptionist. This can be retrieved from the List Phone Sites API. (required)
      * @param  string $phone_number_id Unique Identifier of the phone number or provide the actual phone number in e164 format (example: +19995550123). (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -929,7 +929,7 @@ class PhoneAutoReceptionistsApi
      *
      * @param  string $auto_receptionist_id auto_receptionist_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -946,7 +946,7 @@ class PhoneAutoReceptionistsApi
      *
      * @param  string $auto_receptionist_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1201,9 +1201,9 @@ class PhoneAutoReceptionistsApi
      * Update Auto Receptionist Details
      *
      * @param  string $auto_receptionist_id Unique Identifier of the Auto Receptionist. It can be retrieved from the [List Sites API](https://marketplace.zoom.us/docs/api-reference/zoom-api/phone-site/listphonesites). (required)
-     * @param  \Swagger\Client\Model\Body73 $body body (optional)
+     * @param  \Zoom\Api\Model\Body73 $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -1219,9 +1219,9 @@ class PhoneAutoReceptionistsApi
      * Update Auto Receptionist Details
      *
      * @param  string $auto_receptionist_id Unique Identifier of the Auto Receptionist. It can be retrieved from the [List Sites API](https://marketplace.zoom.us/docs/api-reference/zoom-api/phone-site/listphonesites). (required)
-     * @param  \Swagger\Client\Model\Body73 $body (optional)
+     * @param  \Zoom\Api\Model\Body73 $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1295,7 +1295,7 @@ class PhoneAutoReceptionistsApi
      * Update Auto Receptionist Details
      *
      * @param  string $auto_receptionist_id Unique Identifier of the Auto Receptionist. It can be retrieved from the [List Sites API](https://marketplace.zoom.us/docs/api-reference/zoom-api/phone-site/listphonesites). (required)
-     * @param  \Swagger\Client\Model\Body73 $body (optional)
+     * @param  \Zoom\Api\Model\Body73 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1316,7 +1316,7 @@ class PhoneAutoReceptionistsApi
      * Update Auto Receptionist Details
      *
      * @param  string $auto_receptionist_id Unique Identifier of the Auto Receptionist. It can be retrieved from the [List Sites API](https://marketplace.zoom.us/docs/api-reference/zoom-api/phone-site/listphonesites). (required)
-     * @param  \Swagger\Client\Model\Body73 $body (optional)
+     * @param  \Zoom\Api\Model\Body73 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1367,7 +1367,7 @@ class PhoneAutoReceptionistsApi
      * Create request for operation 'updateAutoReceptionist'
      *
      * @param  string $auto_receptionist_id Unique Identifier of the Auto Receptionist. It can be retrieved from the [List Sites API](https://marketplace.zoom.us/docs/api-reference/zoom-api/phone-site/listphonesites). (required)
-     * @param  \Swagger\Client\Model\Body73 $body (optional)
+     * @param  \Zoom\Api\Model\Body73 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

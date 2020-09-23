@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse20091Members Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,8 +57,8 @@ class InlineResponse20091Members implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'users' => '\Swagger\Client\Model\InlineResponse20091MembersUsers[]',
-        'common_area_phones' => '\Swagger\Client\Model\InlineResponse20091MembersCommonAreaPhones[]'
+        'users' => '\Zoom\Api\Model\InlineResponse20091MembersUsers[]',
+        'common_area_phones' => '\Zoom\Api\Model\InlineResponse20091MembersCommonAreaPhones[]'
     ];
 
     /**
@@ -213,7 +213,7 @@ class InlineResponse20091Members implements ModelInterface, ArrayAccess
     /**
      * Gets users
      *
-     * @return \Swagger\Client\Model\InlineResponse20091MembersUsers[]
+     * @return \Zoom\Api\Model\InlineResponse20091MembersUsers[]
      */
     public function getUsers()
     {
@@ -223,7 +223,7 @@ class InlineResponse20091Members implements ModelInterface, ArrayAccess
     /**
      * Sets users
      *
-     * @param \Swagger\Client\Model\InlineResponse20091MembersUsers[] $users users
+     * @param \Zoom\Api\Model\InlineResponse20091MembersUsers[] $users users
      *
      * @return $this
      */
@@ -237,7 +237,7 @@ class InlineResponse20091Members implements ModelInterface, ArrayAccess
     /**
      * Gets common_area_phones
      *
-     * @return \Swagger\Client\Model\InlineResponse20091MembersCommonAreaPhones[]
+     * @return \Zoom\Api\Model\InlineResponse20091MembersCommonAreaPhones[]
      */
     public function getCommonAreaPhones()
     {
@@ -247,7 +247,7 @@ class InlineResponse20091Members implements ModelInterface, ArrayAccess
     /**
      * Sets common_area_phones
      *
-     * @param \Swagger\Client\Model\InlineResponse20091MembersCommonAreaPhones[] $common_area_phones common_area_phones
+     * @param \Zoom\Api\Model\InlineResponse20091MembersCommonAreaPhones[] $common_area_phones common_area_phones
      *
      * @return $this
      */

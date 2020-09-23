@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Zoom\Api\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Zoom\Api\ApiException;
+use Zoom\Api\Configuration;
+use Zoom\Api\HeaderSelector;
+use Zoom\Api\ObjectSerializer;
 
 /**
  * PhoneApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -98,9 +98,9 @@ class PhoneApi
      * @param  string $type The type of the call logs. The value can be either \&quot;all\&quot; or \&quot;missed\&quot;. (optional)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20066
+     * @return \Zoom\Api\Model\InlineResponse20066
      */
     public function accountCallLogs($page_size = '30', $from = null, $to = null, $type = null, $next_page_token = null)
     {
@@ -119,13 +119,13 @@ class PhoneApi
      * @param  string $type The type of the call logs. The value can be either \&quot;all\&quot; or \&quot;missed\&quot;. (optional)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20066, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20066, HTTP status code, HTTP response headers (array of strings)
      */
     public function accountCallLogsWithHttpInfo($page_size = '30', $from = null, $to = null, $type = null, $next_page_token = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20066';
+        $returnType = '\Zoom\Api\Model\InlineResponse20066';
         $request = $this->accountCallLogsRequest($page_size, $from, $to, $type, $next_page_token);
 
         try {
@@ -177,7 +177,7 @@ class PhoneApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20066',
+                        '\Zoom\Api\Model\InlineResponse20066',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -227,7 +227,7 @@ class PhoneApi
      */
     public function accountCallLogsAsyncWithHttpInfo($page_size = '30', $from = null, $to = null, $type = null, $next_page_token = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20066';
+        $returnType = '\Zoom\Api\Model\InlineResponse20066';
         $request = $this->accountCallLogsRequest($page_size, $from, $to, $type, $next_page_token);
 
         return $this->client
@@ -396,9 +396,9 @@ class PhoneApi
      * Assign Calling Plan to a User
      *
      * @param  string $user_id user_id (required)
-     * @param  \Swagger\Client\Model\Body48 $body body (optional)
+     * @param  \Zoom\Api\Model\Body48 $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -414,9 +414,9 @@ class PhoneApi
      * Assign Calling Plan to a User
      *
      * @param  string $user_id (required)
-     * @param  \Swagger\Client\Model\Body48 $body (optional)
+     * @param  \Zoom\Api\Model\Body48 $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -490,7 +490,7 @@ class PhoneApi
      * Assign Calling Plan to a User
      *
      * @param  string $user_id (required)
-     * @param  \Swagger\Client\Model\Body48 $body (optional)
+     * @param  \Zoom\Api\Model\Body48 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -511,7 +511,7 @@ class PhoneApi
      * Assign Calling Plan to a User
      *
      * @param  string $user_id (required)
-     * @param  \Swagger\Client\Model\Body48 $body (optional)
+     * @param  \Zoom\Api\Model\Body48 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -562,7 +562,7 @@ class PhoneApi
      * Create request for operation 'assignCallingPlan'
      *
      * @param  string $user_id (required)
-     * @param  \Swagger\Client\Model\Body48 $body (optional)
+     * @param  \Zoom\Api\Model\Body48 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -677,11 +677,11 @@ class PhoneApi
      * Assign Phone Number to User
      *
      * @param  string $user_id user_id (required)
-     * @param  \Swagger\Client\Model\Body47 $body Provide either an id or a number in the request body. (optional)
+     * @param  \Zoom\Api\Model\Body47 $body Provide either an id or a number in the request body. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20067
+     * @return \Zoom\Api\Model\InlineResponse20067
      */
     public function assignPhoneNumber($user_id, $body = null)
     {
@@ -695,15 +695,15 @@ class PhoneApi
      * Assign Phone Number to User
      *
      * @param  string $user_id (required)
-     * @param  \Swagger\Client\Model\Body47 $body Provide either an id or a number in the request body. (optional)
+     * @param  \Zoom\Api\Model\Body47 $body Provide either an id or a number in the request body. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20067, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20067, HTTP status code, HTTP response headers (array of strings)
      */
     public function assignPhoneNumberWithHttpInfo($user_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20067';
+        $returnType = '\Zoom\Api\Model\InlineResponse20067';
         $request = $this->assignPhoneNumberRequest($user_id, $body);
 
         try {
@@ -755,7 +755,7 @@ class PhoneApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20067',
+                        '\Zoom\Api\Model\InlineResponse20067',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -771,7 +771,7 @@ class PhoneApi
      * Assign Phone Number to User
      *
      * @param  string $user_id (required)
-     * @param  \Swagger\Client\Model\Body47 $body Provide either an id or a number in the request body. (optional)
+     * @param  \Zoom\Api\Model\Body47 $body Provide either an id or a number in the request body. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -792,14 +792,14 @@ class PhoneApi
      * Assign Phone Number to User
      *
      * @param  string $user_id (required)
-     * @param  \Swagger\Client\Model\Body47 $body Provide either an id or a number in the request body. (optional)
+     * @param  \Zoom\Api\Model\Body47 $body Provide either an id or a number in the request body. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function assignPhoneNumberAsyncWithHttpInfo($user_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20067';
+        $returnType = '\Zoom\Api\Model\InlineResponse20067';
         $request = $this->assignPhoneNumberRequest($user_id, $body);
 
         return $this->client
@@ -843,7 +843,7 @@ class PhoneApi
      * Create request for operation 'assignPhoneNumber'
      *
      * @param  string $user_id (required)
-     * @param  \Swagger\Client\Model\Body47 $body Provide either an id or a number in the request body. (optional)
+     * @param  \Zoom\Api\Model\Body47 $body Provide either an id or a number in the request body. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -957,9 +957,9 @@ class PhoneApi
      *
      * Change Main Company Number
      *
-     * @param  \Swagger\Client\Model\Body72 $body body (optional)
+     * @param  \Zoom\Api\Model\Body72 $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -974,9 +974,9 @@ class PhoneApi
      *
      * Change Main Company Number
      *
-     * @param  \Swagger\Client\Model\Body72 $body (optional)
+     * @param  \Zoom\Api\Model\Body72 $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1049,7 +1049,7 @@ class PhoneApi
      *
      * Change Main Company Number
      *
-     * @param  \Swagger\Client\Model\Body72 $body (optional)
+     * @param  \Zoom\Api\Model\Body72 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1069,7 +1069,7 @@ class PhoneApi
      *
      * Change Main Company Number
      *
-     * @param  \Swagger\Client\Model\Body72 $body (optional)
+     * @param  \Zoom\Api\Model\Body72 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1119,7 +1119,7 @@ class PhoneApi
     /**
      * Create request for operation 'changeMainCompanyNumber'
      *
-     * @param  \Swagger\Client\Model\Body72 $body (optional)
+     * @param  \Zoom\Api\Model\Body72 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1221,9 +1221,9 @@ class PhoneApi
      *
      * @param  string $number_id Unique Identifier of the Phone Number. This can be retrieved from the List Phone Numbers API. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20092
+     * @return \Zoom\Api\Model\InlineResponse20092
      */
     public function getPhoneNumberDetails($number_id)
     {
@@ -1238,13 +1238,13 @@ class PhoneApi
      *
      * @param  string $number_id Unique Identifier of the Phone Number. This can be retrieved from the List Phone Numbers API. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20092, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20092, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPhoneNumberDetailsWithHttpInfo($number_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20092';
+        $returnType = '\Zoom\Api\Model\InlineResponse20092';
         $request = $this->getPhoneNumberDetailsRequest($number_id);
 
         try {
@@ -1296,7 +1296,7 @@ class PhoneApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20092',
+                        '\Zoom\Api\Model\InlineResponse20092',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1338,7 +1338,7 @@ class PhoneApi
      */
     public function getPhoneNumberDetailsAsyncWithHttpInfo($number_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20092';
+        $returnType = '\Zoom\Api\Model\InlineResponse20092';
         $request = $this->getPhoneNumberDetailsRequest($number_id);
 
         return $this->client
@@ -1500,9 +1500,9 @@ class PhoneApi
      * @param  bool $pending_numbers Include or exclude pending numbers in the response. The value can be either &#x60;true&#x60; or &#x60;false&#x60;. (optional)
      * @param  string $site_id Unique identifier of the site. Use this query parameter if you have [enabled multiple sites](https://support.zoom.us/hc/en-us/articles/360020809672-Managing-multiple-sites#h_05c88e35-1593-491f-b1a8-b7139a75dc15) and would like to filter the response of this API call by a specific phone [site](https://support.zoom.us/hc/en-us/articles/360020809672-Managing-multiple-sites). (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse200
+     * @return \Zoom\Api\Model\InlineResponse200
      */
     public function listAccountPhoneNumbers($next_page_token = null, $type = null, $extension_type = null, $page_size = '30', $number_type = null, $pending_numbers = null, $site_id = null)
     {
@@ -1523,13 +1523,13 @@ class PhoneApi
      * @param  bool $pending_numbers Include or exclude pending numbers in the response. The value can be either &#x60;true&#x60; or &#x60;false&#x60;. (optional)
      * @param  string $site_id Unique identifier of the site. Use this query parameter if you have [enabled multiple sites](https://support.zoom.us/hc/en-us/articles/360020809672-Managing-multiple-sites#h_05c88e35-1593-491f-b1a8-b7139a75dc15) and would like to filter the response of this API call by a specific phone [site](https://support.zoom.us/hc/en-us/articles/360020809672-Managing-multiple-sites). (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
      */
     public function listAccountPhoneNumbersWithHttpInfo($next_page_token = null, $type = null, $extension_type = null, $page_size = '30', $number_type = null, $pending_numbers = null, $site_id = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse200';
+        $returnType = '\Zoom\Api\Model\InlineResponse200';
         $request = $this->listAccountPhoneNumbersRequest($next_page_token, $type, $extension_type, $page_size, $number_type, $pending_numbers, $site_id);
 
         try {
@@ -1581,7 +1581,7 @@ class PhoneApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse200',
+                        '\Zoom\Api\Model\InlineResponse200',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1635,7 +1635,7 @@ class PhoneApi
      */
     public function listAccountPhoneNumbersAsyncWithHttpInfo($next_page_token = null, $type = null, $extension_type = null, $page_size = '30', $number_type = null, $pending_numbers = null, $site_id = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse200';
+        $returnType = '\Zoom\Api\Model\InlineResponse200';
         $request = $this->listAccountPhoneNumbersRequest($next_page_token, $type, $extension_type, $page_size, $number_type, $pending_numbers, $site_id);
 
         return $this->client
@@ -1814,9 +1814,9 @@ class PhoneApi
      * List Calling Plans
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20093
+     * @return \Zoom\Api\Model\InlineResponse20093
      */
     public function listCallingPlans()
     {
@@ -1830,13 +1830,13 @@ class PhoneApi
      * List Calling Plans
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20093, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20093, HTTP status code, HTTP response headers (array of strings)
      */
     public function listCallingPlansWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20093';
+        $returnType = '\Zoom\Api\Model\InlineResponse20093';
         $request = $this->listCallingPlansRequest();
 
         try {
@@ -1888,7 +1888,7 @@ class PhoneApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20093',
+                        '\Zoom\Api\Model\InlineResponse20093',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1928,7 +1928,7 @@ class PhoneApi
      */
     public function listCallingPlansAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20093';
+        $returnType = '\Zoom\Api\Model\InlineResponse20093';
         $request = $this->listCallingPlansRequest();
 
         return $this->client
@@ -2071,9 +2071,9 @@ class PhoneApi
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      * @param  string $site_id Unique Identifier of the site. This can be retrieved from List Phone Sites API. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20094
+     * @return \Zoom\Api\Model\InlineResponse20094
      */
     public function listPhoneUsers($page_size = '30', $next_page_token = null, $site_id = null)
     {
@@ -2090,13 +2090,13 @@ class PhoneApi
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      * @param  string $site_id Unique Identifier of the site. This can be retrieved from List Phone Sites API. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20094, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20094, HTTP status code, HTTP response headers (array of strings)
      */
     public function listPhoneUsersWithHttpInfo($page_size = '30', $next_page_token = null, $site_id = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20094';
+        $returnType = '\Zoom\Api\Model\InlineResponse20094';
         $request = $this->listPhoneUsersRequest($page_size, $next_page_token, $site_id);
 
         try {
@@ -2148,7 +2148,7 @@ class PhoneApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20094',
+                        '\Zoom\Api\Model\InlineResponse20094',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2194,7 +2194,7 @@ class PhoneApi
      */
     public function listPhoneUsersAsyncWithHttpInfo($page_size = '30', $next_page_token = null, $site_id = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20094';
+        $returnType = '\Zoom\Api\Model\InlineResponse20094';
         $request = $this->listPhoneUsersRequest($page_size, $next_page_token, $site_id);
 
         return $this->client
@@ -2354,9 +2354,9 @@ class PhoneApi
      *
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20061
+     * @return \Zoom\Api\Model\InlineResponse20061
      */
     public function phoneUser($user_id)
     {
@@ -2371,13 +2371,13 @@ class PhoneApi
      *
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20061, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20061, HTTP status code, HTTP response headers (array of strings)
      */
     public function phoneUserWithHttpInfo($user_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20061';
+        $returnType = '\Zoom\Api\Model\InlineResponse20061';
         $request = $this->phoneUserRequest($user_id);
 
         try {
@@ -2429,7 +2429,7 @@ class PhoneApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20061',
+                        '\Zoom\Api\Model\InlineResponse20061',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2471,7 +2471,7 @@ class PhoneApi
      */
     public function phoneUserAsyncWithHttpInfo($user_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20061';
+        $returnType = '\Zoom\Api\Model\InlineResponse20061';
         $request = $this->phoneUserRequest($user_id);
 
         return $this->client
@@ -2632,9 +2632,9 @@ class PhoneApi
      * @param  string $type type (optional)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20063
+     * @return \Zoom\Api\Model\InlineResponse20063
      */
     public function phoneUserCallLogs($user_id, $from, $to, $page_size = '30', $type = null, $next_page_token = null)
     {
@@ -2654,13 +2654,13 @@ class PhoneApi
      * @param  string $type (optional)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20063, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20063, HTTP status code, HTTP response headers (array of strings)
      */
     public function phoneUserCallLogsWithHttpInfo($user_id, $from, $to, $page_size = '30', $type = null, $next_page_token = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20063';
+        $returnType = '\Zoom\Api\Model\InlineResponse20063';
         $request = $this->phoneUserCallLogsRequest($user_id, $from, $to, $page_size, $type, $next_page_token);
 
         try {
@@ -2712,7 +2712,7 @@ class PhoneApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20063',
+                        '\Zoom\Api\Model\InlineResponse20063',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2764,7 +2764,7 @@ class PhoneApi
      */
     public function phoneUserCallLogsAsyncWithHttpInfo($user_id, $from, $to, $page_size = '30', $type = null, $next_page_token = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20063';
+        $returnType = '\Zoom\Api\Model\InlineResponse20063';
         $request = $this->phoneUserCallLogsRequest($user_id, $from, $to, $page_size, $type, $next_page_token);
 
         return $this->client
@@ -2963,9 +2963,9 @@ class PhoneApi
      * @param  int $page_size The number of records returned within a single API call. (optional, default to 30)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20064
+     * @return \Zoom\Api\Model\InlineResponse20064
      */
     public function phoneUserRecordings($user_id, $page_size = '30', $next_page_token = null)
     {
@@ -2982,13 +2982,13 @@ class PhoneApi
      * @param  int $page_size The number of records returned within a single API call. (optional, default to 30)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20064, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20064, HTTP status code, HTTP response headers (array of strings)
      */
     public function phoneUserRecordingsWithHttpInfo($user_id, $page_size = '30', $next_page_token = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20064';
+        $returnType = '\Zoom\Api\Model\InlineResponse20064';
         $request = $this->phoneUserRecordingsRequest($user_id, $page_size, $next_page_token);
 
         try {
@@ -3040,7 +3040,7 @@ class PhoneApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20064',
+                        '\Zoom\Api\Model\InlineResponse20064',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3086,7 +3086,7 @@ class PhoneApi
      */
     public function phoneUserRecordingsAsyncWithHttpInfo($user_id, $page_size = '30', $next_page_token = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20064';
+        $returnType = '\Zoom\Api\Model\InlineResponse20064';
         $request = $this->phoneUserRecordingsRequest($user_id, $page_size, $next_page_token);
 
         return $this->client
@@ -3256,9 +3256,9 @@ class PhoneApi
      *
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20062
+     * @return \Zoom\Api\Model\InlineResponse20062
      */
     public function phoneUserSettings($user_id)
     {
@@ -3273,13 +3273,13 @@ class PhoneApi
      *
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20062, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20062, HTTP status code, HTTP response headers (array of strings)
      */
     public function phoneUserSettingsWithHttpInfo($user_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20062';
+        $returnType = '\Zoom\Api\Model\InlineResponse20062';
         $request = $this->phoneUserSettingsRequest($user_id);
 
         try {
@@ -3331,7 +3331,7 @@ class PhoneApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20062',
+                        '\Zoom\Api\Model\InlineResponse20062',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3373,7 +3373,7 @@ class PhoneApi
      */
     public function phoneUserSettingsAsyncWithHttpInfo($user_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20062';
+        $returnType = '\Zoom\Api\Model\InlineResponse20062';
         $request = $this->phoneUserSettingsRequest($user_id);
 
         return $this->client
@@ -3532,9 +3532,9 @@ class PhoneApi
      * @param  string $status Status of the voice mail (optional, default to all)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20065
+     * @return \Zoom\Api\Model\InlineResponse20065
      */
     public function phoneUserVoiceMails($user_id, $page_size = '30', $status = 'all', $next_page_token = null)
     {
@@ -3552,13 +3552,13 @@ class PhoneApi
      * @param  string $status Status of the voice mail (optional, default to all)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20065, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20065, HTTP status code, HTTP response headers (array of strings)
      */
     public function phoneUserVoiceMailsWithHttpInfo($user_id, $page_size = '30', $status = 'all', $next_page_token = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20065';
+        $returnType = '\Zoom\Api\Model\InlineResponse20065';
         $request = $this->phoneUserVoiceMailsRequest($user_id, $page_size, $status, $next_page_token);
 
         try {
@@ -3610,7 +3610,7 @@ class PhoneApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20065',
+                        '\Zoom\Api\Model\InlineResponse20065',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3658,7 +3658,7 @@ class PhoneApi
      */
     public function phoneUserVoiceMailsAsyncWithHttpInfo($user_id, $page_size = '30', $status = 'all', $next_page_token = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20065';
+        $returnType = '\Zoom\Api\Model\InlineResponse20065';
         $request = $this->phoneUserVoiceMailsRequest($user_id, $page_size, $status, $next_page_token);
 
         return $this->client
@@ -3834,7 +3834,7 @@ class PhoneApi
      * @param  string $user_id user_id (required)
      * @param  string $type The [type](https://marketplace.zoom.us/docs/api-reference/other-references/plans#zoom-phone-calling-plans) of the calling plan that was assigned to user. (e.g: The value of type would be \&quot;200\&quot; for Unlimited US/Canada calling plan.) (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -3852,7 +3852,7 @@ class PhoneApi
      * @param  string $user_id (required)
      * @param  string $type The [type](https://marketplace.zoom.us/docs/api-reference/other-references/plans#zoom-phone-calling-plans) of the calling plan that was assigned to user. (e.g: The value of type would be \&quot;200\&quot; for Unlimited US/Canada calling plan.) (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4126,7 +4126,7 @@ class PhoneApi
      * @param  string $user_id Provide either userId or email address of the user. (required)
      * @param  string $phone_number_id Provide either phone number or phoneNumberId of the user. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -4144,7 +4144,7 @@ class PhoneApi
      * @param  string $user_id Provide either userId or email address of the user. (required)
      * @param  string $phone_number_id Provide either phone number or phoneNumberId of the user. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4416,9 +4416,9 @@ class PhoneApi
      * Update User's Profile
      *
      * @param  string $user_id user_id (required)
-     * @param  \Swagger\Client\Model\Body46 $body body (optional)
+     * @param  \Zoom\Api\Model\Body46 $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -4434,9 +4434,9 @@ class PhoneApi
      * Update User's Profile
      *
      * @param  string $user_id (required)
-     * @param  \Swagger\Client\Model\Body46 $body (optional)
+     * @param  \Zoom\Api\Model\Body46 $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4510,7 +4510,7 @@ class PhoneApi
      * Update User's Profile
      *
      * @param  string $user_id (required)
-     * @param  \Swagger\Client\Model\Body46 $body (optional)
+     * @param  \Zoom\Api\Model\Body46 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -4531,7 +4531,7 @@ class PhoneApi
      * Update User's Profile
      *
      * @param  string $user_id (required)
-     * @param  \Swagger\Client\Model\Body46 $body (optional)
+     * @param  \Zoom\Api\Model\Body46 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -4582,7 +4582,7 @@ class PhoneApi
      * Create request for operation 'updateUserProfile'
      *
      * @param  string $user_id (required)
-     * @param  \Swagger\Client\Model\Body46 $body (optional)
+     * @param  \Zoom\Api\Model\Body46 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

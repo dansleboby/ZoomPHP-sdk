@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse20095CommonAreaPhones Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -61,10 +61,10 @@ class InlineResponse20095CommonAreaPhones implements ModelInterface, ArrayAccess
         'display_name' => 'string',
         'device_type' => 'string',
         'mac_address' => 'string',
-        'calling_plans' => '\Swagger\Client\Model\InlineResponse20095CallingPlans[]',
-        'phone_numbers' => '\Swagger\Client\Model\InlineResponse20095PhoneNumbers[]',
+        'calling_plans' => '\Zoom\Api\Model\InlineResponse20095CallingPlans[]',
+        'phone_numbers' => '\Zoom\Api\Model\InlineResponse20095PhoneNumbers[]',
         'status' => 'string',
-        'site' => '\Swagger\Client\Model\InlineResponse20095Site'
+        'site' => '\Zoom\Api\Model\InlineResponse20095Site'
     ];
 
     /**
@@ -345,7 +345,7 @@ class InlineResponse20095CommonAreaPhones implements ModelInterface, ArrayAccess
     /**
      * Gets calling_plans
      *
-     * @return \Swagger\Client\Model\InlineResponse20095CallingPlans[]
+     * @return \Zoom\Api\Model\InlineResponse20095CallingPlans[]
      */
     public function getCallingPlans()
     {
@@ -355,7 +355,7 @@ class InlineResponse20095CommonAreaPhones implements ModelInterface, ArrayAccess
     /**
      * Sets calling_plans
      *
-     * @param \Swagger\Client\Model\InlineResponse20095CallingPlans[] $calling_plans calling_plans
+     * @param \Zoom\Api\Model\InlineResponse20095CallingPlans[] $calling_plans calling_plans
      *
      * @return $this
      */
@@ -369,7 +369,7 @@ class InlineResponse20095CommonAreaPhones implements ModelInterface, ArrayAccess
     /**
      * Gets phone_numbers
      *
-     * @return \Swagger\Client\Model\InlineResponse20095PhoneNumbers[]
+     * @return \Zoom\Api\Model\InlineResponse20095PhoneNumbers[]
      */
     public function getPhoneNumbers()
     {
@@ -379,7 +379,7 @@ class InlineResponse20095CommonAreaPhones implements ModelInterface, ArrayAccess
     /**
      * Sets phone_numbers
      *
-     * @param \Swagger\Client\Model\InlineResponse20095PhoneNumbers[] $phone_numbers phone_numbers
+     * @param \Zoom\Api\Model\InlineResponse20095PhoneNumbers[] $phone_numbers phone_numbers
      *
      * @return $this
      */
@@ -417,7 +417,7 @@ class InlineResponse20095CommonAreaPhones implements ModelInterface, ArrayAccess
     /**
      * Gets site
      *
-     * @return \Swagger\Client\Model\InlineResponse20095Site
+     * @return \Zoom\Api\Model\InlineResponse20095Site
      */
     public function getSite()
     {
@@ -427,7 +427,7 @@ class InlineResponse20095CommonAreaPhones implements ModelInterface, ArrayAccess
     /**
      * Sets site
      *
-     * @param \Swagger\Client\Model\InlineResponse20095Site $site site
+     * @param \Zoom\Api\Model\InlineResponse20095Site $site site
      *
      * @return $this
      */

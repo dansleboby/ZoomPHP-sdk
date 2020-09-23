@@ -1,4 +1,4 @@
-# Swagger\Client\MeetingsApi
+# Zoom\Api\MeetingsApi
 
 All URIs are relative to *https://api.zoom.us/v2*
 
@@ -43,16 +43,16 @@ Use this API to control the [in-meeting](https://support.zoom.us/hc/en-us/articl
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\MeetingsApi(
+$apiInstance = new Zoom\Api\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $meeting_id = "meeting_id_example"; // string | Unique identifier of the live meeting.
-$body = new \Swagger\Client\Model\Body84(); // \Swagger\Client\Model\Body84 | 
+$body = new \Zoom\Api\Model\Body84(); // \Zoom\Api\Model\Body84 | 
 
 try {
     $result = $apiInstance->inMeetingRecordingControl($meeting_id, $body);
@@ -68,7 +68,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **meeting_id** | **string**| Unique identifier of the live meeting. |
- **body** | [**\Swagger\Client\Model\Body84**](../Model/Body84.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\Body84**](../Model/Body84.md)|  | [optional]
 
 ### Return type
 
@@ -86,7 +86,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listPastMeetingPolls**
-> \Swagger\Client\Model\InlineResponse20083 listPastMeetingPolls($meeting_id)
+> \Zoom\Api\Model\InlineResponse20083 listPastMeetingPolls($meeting_id)
 
 List Past Meeting's Poll Results
 
@@ -98,9 +98,9 @@ List Past Meeting's Poll Results
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\MeetingsApi(
+$apiInstance = new Zoom\Api\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -125,7 +125,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20083**](../Model/InlineResponse20083.md)
+[**\Zoom\Api\Model\InlineResponse20083**](../Model/InlineResponse20083.md)
 
 ### Authorization
 
@@ -139,7 +139,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **meeting**
-> \Swagger\Client\Model\InlineResponse20022 meeting($meeting_id, $occurrence_id, $show_previous_occurrences)
+> \Zoom\Api\Model\InlineResponse20022 meeting($meeting_id, $occurrence_id, $show_previous_occurrences)
 
 Get a Meeting
 
@@ -151,9 +151,9 @@ Retrieve the details of a meeting.<br><br> **Scopes:** `meeting:read:admin` `mee
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\MeetingsApi(
+$apiInstance = new Zoom\Api\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -182,7 +182,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20022**](../Model/InlineResponse20022.md)
+[**\Zoom\Api\Model\InlineResponse20022**](../Model/InlineResponse20022.md)
 
 ### Authorization
 
@@ -196,7 +196,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **meetingCreate**
-> \Swagger\Client\Model\InlineResponse20111 meetingCreate($user_id, $body)
+> \Zoom\Api\Model\InlineResponse20111 meetingCreate($user_id, $body)
 
 Create a Meeting
 
@@ -208,16 +208,16 @@ Create a Meeting
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\MeetingsApi(
+$apiInstance = new Zoom\Api\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $user_id = "user_id_example"; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
-$body = new \Swagger\Client\Model\Body23(); // \Swagger\Client\Model\Body23 | Meeting object.
+$body = new \Zoom\Api\Model\Body23(); // \Zoom\Api\Model\Body23 | Meeting object.
 
 try {
     $result = $apiInstance->meetingCreate($user_id, $body);
@@ -233,11 +233,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **string**| The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. |
- **body** | [**\Swagger\Client\Model\Body23**](../Model/Body23.md)| Meeting object. |
+ **body** | [**\Zoom\Api\Model\Body23**](../Model/Body23.md)| Meeting object. |
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20111**](../Model/InlineResponse20111.md)
+[**\Zoom\Api\Model\InlineResponse20111**](../Model/InlineResponse20111.md)
 
 ### Authorization
 
@@ -263,9 +263,9 @@ Delete a meeting.<br><br> **Scopes:** `meeting:write:admin` `meeting:write`<br> 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\MeetingsApi(
+$apiInstance = new Zoom\Api\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -307,7 +307,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **meetingInvitation**
-> \Swagger\Client\Model\MeetingInvitation meetingInvitation($meeting_id)
+> \Zoom\Api\Model\MeetingInvitation meetingInvitation($meeting_id)
 
 Get Meeting Invitation
 
@@ -319,9 +319,9 @@ Retrieve the meeting invite note that was sent for a specific meeting.<br><br> *
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\MeetingsApi(
+$apiInstance = new Zoom\Api\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -346,7 +346,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\MeetingInvitation**](../Model/MeetingInvitation.md)
+[**\Zoom\Api\Model\MeetingInvitation**](../Model/MeetingInvitation.md)
 
 ### Authorization
 
@@ -372,16 +372,16 @@ Zoom allows users to [live stream a meeting](https://support.zoom.us/hc/en-us/ar
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\MeetingsApi(
+$apiInstance = new Zoom\Api\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $meeting_id = 789; // int | The meeting ID in **long** format. The data type of this field is \"long\"(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits.
-$body = new \Swagger\Client\Model\Body44(); // \Swagger\Client\Model\Body44 | Meeting
+$body = new \Zoom\Api\Model\Body44(); // \Zoom\Api\Model\Body44 | Meeting
 
 try {
     $apiInstance->meetingLiveStreamStatusUpdate($meeting_id, $body);
@@ -396,7 +396,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **meeting_id** | **int**| The meeting ID in **long** format. The data type of this field is \&quot;long\&quot;(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits. |
- **body** | [**\Swagger\Client\Model\Body44**](../Model/Body44.md)| Meeting |
+ **body** | [**\Zoom\Api\Model\Body44**](../Model/Body44.md)| Meeting |
 
 ### Return type
 
@@ -426,16 +426,16 @@ Zoom allows users to [live stream a meeting](https://support.zoom.us/hc/en-us/ar
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\MeetingsApi(
+$apiInstance = new Zoom\Api\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $meeting_id = 789; // int | The meeting ID in **long** format. The data type of this field is \"long\"(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits.
-$body = new \Swagger\Client\Model\Body43(); // \Swagger\Client\Model\Body43 | Meeting
+$body = new \Zoom\Api\Model\Body43(); // \Zoom\Api\Model\Body43 | Meeting
 
 try {
     $apiInstance->meetingLiveStreamUpdate($meeting_id, $body);
@@ -450,7 +450,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **meeting_id** | **int**| The meeting ID in **long** format. The data type of this field is \&quot;long\&quot;(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits. |
- **body** | [**\Swagger\Client\Model\Body43**](../Model/Body43.md)| Meeting |
+ **body** | [**\Zoom\Api\Model\Body43**](../Model/Body43.md)| Meeting |
 
 ### Return type
 
@@ -468,7 +468,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **meetingPollCreate**
-> \Swagger\Client\Model\InlineResponse20113 meetingPollCreate($meeting_id, $body)
+> \Zoom\Api\Model\InlineResponse20113 meetingPollCreate($meeting_id, $body)
 
 Create a Meeting Poll
 
@@ -480,9 +480,9 @@ Polls allow the meeting host to survey attendees. Use this API to create a [poll
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\MeetingsApi(
+$apiInstance = new Zoom\Api\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -509,7 +509,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20113**](../Model/InlineResponse20113.md)
+[**\Zoom\Api\Model\InlineResponse20113**](../Model/InlineResponse20113.md)
 
 ### Authorization
 
@@ -535,9 +535,9 @@ Polls allow the meeting host to survey attendees. Use this API to delete a meeti
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\MeetingsApi(
+$apiInstance = new Zoom\Api\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -577,7 +577,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **meetingPollGet**
-> \Swagger\Client\Model\InlineResponse20113 meetingPollGet($meeting_id, $poll_id)
+> \Zoom\Api\Model\InlineResponse20113 meetingPollGet($meeting_id, $poll_id)
 
 Get a Meeting Poll
 
@@ -589,9 +589,9 @@ Polls allow the meeting host to survey attendees. Use this API to get informatio
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\MeetingsApi(
+$apiInstance = new Zoom\Api\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -618,7 +618,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20113**](../Model/InlineResponse20113.md)
+[**\Zoom\Api\Model\InlineResponse20113**](../Model/InlineResponse20113.md)
 
 ### Authorization
 
@@ -644,9 +644,9 @@ Polls allow the meeting host to survey attendees. Use this API to update informa
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\MeetingsApi(
+$apiInstance = new Zoom\Api\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -700,9 +700,9 @@ Polls allow the meeting host to survey attendees. Use this API to list [polls](h
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\MeetingsApi(
+$apiInstance = new Zoom\Api\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -741,7 +741,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **meetingRegistrantCreate**
-> \Swagger\Client\Model\InlineResponse20112 meetingRegistrantCreate($meeting_id, $body, $occurrence_ids)
+> \Zoom\Api\Model\InlineResponse20112 meetingRegistrantCreate($meeting_id, $body, $occurrence_ids)
 
 Add Meeting Registrant
 
@@ -753,9 +753,9 @@ Register a participant for a meeting.<br><br>  **Prerequisite:**<br> * Host user
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\MeetingsApi(
+$apiInstance = new Zoom\Api\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -784,7 +784,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20112**](../Model/InlineResponse20112.md)
+[**\Zoom\Api\Model\InlineResponse20112**](../Model/InlineResponse20112.md)
 
 ### Authorization
 
@@ -810,9 +810,9 @@ Update registration questions that will be displayed to users while [registering
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\MeetingsApi(
+$apiInstance = new Zoom\Api\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -864,16 +864,16 @@ Update a meeting registrant's status by either approving, cancelling or denying 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\MeetingsApi(
+$apiInstance = new Zoom\Api\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $meeting_id = 789; // int | The meeting ID in **long** format. The data type of this field is \"long\"(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits.
-$body = new \Swagger\Client\Model\Body25(); // \Swagger\Client\Model\Body25 | 
+$body = new \Zoom\Api\Model\Body25(); // \Zoom\Api\Model\Body25 | 
 $occurrence_id = "occurrence_id_example"; // string | The meeting occurrence ID.
 
 try {
@@ -889,7 +889,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **meeting_id** | **int**| The meeting ID in **long** format. The data type of this field is \&quot;long\&quot;(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits. |
- **body** | [**\Swagger\Client\Model\Body25**](../Model/Body25.md)|  |
+ **body** | [**\Zoom\Api\Model\Body25**](../Model/Body25.md)|  |
  **occurrence_id** | **string**| The meeting occurrence ID. | [optional]
 
 ### Return type
@@ -908,7 +908,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **meetingRegistrants**
-> \Swagger\Client\Model\RegistrationList meetingRegistrants($meeting_id, $occurrence_id, $status, $page_size, $page_number, $next_page_token)
+> \Zoom\Api\Model\RegistrationList meetingRegistrants($meeting_id, $occurrence_id, $status, $page_size, $page_number, $next_page_token)
 
 List Meeting Registrants
 
@@ -920,9 +920,9 @@ A host or a user with admin permission can require [registration for a Zoom meet
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\MeetingsApi(
+$apiInstance = new Zoom\Api\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -957,7 +957,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\RegistrationList**](../Model/RegistrationList.md)
+[**\Zoom\Api\Model\RegistrationList**](../Model/RegistrationList.md)
 
 ### Authorization
 
@@ -971,7 +971,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **meetingRegistrantsQuestionsGet**
-> \Swagger\Client\Model\InlineResponse20025 meetingRegistrantsQuestionsGet($meeting_id)
+> \Zoom\Api\Model\InlineResponse20025 meetingRegistrantsQuestionsGet($meeting_id)
 
 List Registration Questions
 
@@ -983,9 +983,9 @@ List registration questions that will be displayed to users while [registering f
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\MeetingsApi(
+$apiInstance = new Zoom\Api\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1010,7 +1010,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20025**](../Model/InlineResponse20025.md)
+[**\Zoom\Api\Model\InlineResponse20025**](../Model/InlineResponse20025.md)
 
 ### Authorization
 
@@ -1036,16 +1036,16 @@ Update the status of a meeting.<br><br> **Scopes:** `meeting:write:admin` `meeti
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\MeetingsApi(
+$apiInstance = new Zoom\Api\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $meeting_id = 789; // int | The meeting ID in **long** format. The data type of this field is \"long\"(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits.
-$body = new \Swagger\Client\Model\Body24(); // \Swagger\Client\Model\Body24 | 
+$body = new \Zoom\Api\Model\Body24(); // \Zoom\Api\Model\Body24 | 
 
 try {
     $apiInstance->meetingStatus($meeting_id, $body);
@@ -1060,7 +1060,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **meeting_id** | **int**| The meeting ID in **long** format. The data type of this field is \&quot;long\&quot;(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits. |
- **body** | [**\Swagger\Client\Model\Body24**](../Model/Body24.md)|  |
+ **body** | [**\Zoom\Api\Model\Body24**](../Model/Body24.md)|  |
 
 ### Return type
 
@@ -1090,9 +1090,9 @@ Update the details of a meeting.<br>This API has a rate limit of 100 requests pe
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\MeetingsApi(
+$apiInstance = new Zoom\Api\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1134,7 +1134,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **meetings**
-> \Swagger\Client\Model\GroupList meetings($user_id, $type, $page_size, $next_page_token, $page_number)
+> \Zoom\Api\Model\GroupList meetings($user_id, $type, $page_size, $next_page_token, $page_number)
 
 List Meetings
 
@@ -1146,9 +1146,9 @@ List all the meetings that were scheduled for a user (meeting host). This API on
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\MeetingsApi(
+$apiInstance = new Zoom\Api\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1181,7 +1181,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\GroupList**](../Model/GroupList.md)
+[**\Zoom\Api\Model\GroupList**](../Model/GroupList.md)
 
 ### Authorization
 
@@ -1195,7 +1195,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **pastMeetingDetails**
-> \Swagger\Client\Model\InlineResponse20023 pastMeetingDetails($meeting_uuid)
+> \Zoom\Api\Model\InlineResponse20023 pastMeetingDetails($meeting_uuid)
 
 Get Past Meeting Details
 
@@ -1207,9 +1207,9 @@ Get details on a past meeting. <br><br> **Scopes:** `meeting:read:admin` `meetin
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\MeetingsApi(
+$apiInstance = new Zoom\Api\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1234,7 +1234,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20023**](../Model/InlineResponse20023.md)
+[**\Zoom\Api\Model\InlineResponse20023**](../Model/InlineResponse20023.md)
 
 ### Authorization
 
@@ -1248,7 +1248,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **pastMeetingParticipants**
-> \Swagger\Client\Model\InlineResponse20024 pastMeetingParticipants($meeting_uuid, $page_size, $next_page_token)
+> \Zoom\Api\Model\InlineResponse20024 pastMeetingParticipants($meeting_uuid, $page_size, $next_page_token)
 
 Get Past Meeting Participants
 
@@ -1260,9 +1260,9 @@ Retrieve information on participants from a past meeting. <br><br> **Scopes:** `
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\MeetingsApi(
+$apiInstance = new Zoom\Api\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1291,7 +1291,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20024**](../Model/InlineResponse20024.md)
+[**\Zoom\Api\Model\InlineResponse20024**](../Model/InlineResponse20024.md)
 
 ### Authorization
 
@@ -1317,9 +1317,9 @@ Get a list of ended meeting instances<br><br> **Scopes:** `meeting:read:admin` `
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\MeetingsApi(
+$apiInstance = new Zoom\Api\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),

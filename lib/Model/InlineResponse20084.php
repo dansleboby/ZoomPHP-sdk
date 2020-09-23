@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse20084 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,7 +58,7 @@ class InlineResponse20084 implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'total_records' => 'int',
-        'in_meeting_files' => '\Swagger\Client\Model\InlineResponse20084InMeetingFiles[]'
+        'in_meeting_files' => '\Zoom\Api\Model\InlineResponse20084InMeetingFiles[]'
     ];
 
     /**
@@ -237,7 +237,7 @@ class InlineResponse20084 implements ModelInterface, ArrayAccess
     /**
      * Gets in_meeting_files
      *
-     * @return \Swagger\Client\Model\InlineResponse20084InMeetingFiles[]
+     * @return \Zoom\Api\Model\InlineResponse20084InMeetingFiles[]
      */
     public function getInMeetingFiles()
     {
@@ -247,7 +247,7 @@ class InlineResponse20084 implements ModelInterface, ArrayAccess
     /**
      * Sets in_meeting_files
      *
-     * @param \Swagger\Client\Model\InlineResponse20084InMeetingFiles[] $in_meeting_files in_meeting_files
+     * @param \Zoom\Api\Model\InlineResponse20084InMeetingFiles[] $in_meeting_files in_meeting_files
      *
      * @return $this
      */

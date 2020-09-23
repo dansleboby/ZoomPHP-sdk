@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Zoom\Api\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Zoom\Api\ApiException;
+use Zoom\Api\Configuration;
+use Zoom\Api\HeaderSelector;
+use Zoom\Api\ObjectSerializer;
 
 /**
  * ChatChannelsAccountLevelApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -93,11 +93,11 @@ class ChatChannelsAccountLevelApi
      * Create a Channel
      *
      * @param  string $user_id Unique identifier of the user. (required)
-     * @param  \Swagger\Client\Model\Body7 $body body (optional)
+     * @param  \Zoom\Api\Model\Body7 $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse2012
+     * @return \Zoom\Api\Model\InlineResponse2012
      */
     public function createChannel($user_id, $body = null)
     {
@@ -111,15 +111,15 @@ class ChatChannelsAccountLevelApi
      * Create a Channel
      *
      * @param  string $user_id Unique identifier of the user. (required)
-     * @param  \Swagger\Client\Model\Body7 $body (optional)
+     * @param  \Zoom\Api\Model\Body7 $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse2012, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse2012, HTTP status code, HTTP response headers (array of strings)
      */
     public function createChannelWithHttpInfo($user_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse2012';
+        $returnType = '\Zoom\Api\Model\InlineResponse2012';
         $request = $this->createChannelRequest($user_id, $body);
 
         try {
@@ -171,7 +171,7 @@ class ChatChannelsAccountLevelApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse2012',
+                        '\Zoom\Api\Model\InlineResponse2012',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -187,7 +187,7 @@ class ChatChannelsAccountLevelApi
      * Create a Channel
      *
      * @param  string $user_id Unique identifier of the user. (required)
-     * @param  \Swagger\Client\Model\Body7 $body (optional)
+     * @param  \Zoom\Api\Model\Body7 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -208,14 +208,14 @@ class ChatChannelsAccountLevelApi
      * Create a Channel
      *
      * @param  string $user_id Unique identifier of the user. (required)
-     * @param  \Swagger\Client\Model\Body7 $body (optional)
+     * @param  \Zoom\Api\Model\Body7 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createChannelAsyncWithHttpInfo($user_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse2012';
+        $returnType = '\Zoom\Api\Model\InlineResponse2012';
         $request = $this->createChannelRequest($user_id, $body);
 
         return $this->client
@@ -259,7 +259,7 @@ class ChatChannelsAccountLevelApi
      * Create request for operation 'createChannel'
      *
      * @param  string $user_id Unique identifier of the user. (required)
-     * @param  \Swagger\Client\Model\Body7 $body (optional)
+     * @param  \Zoom\Api\Model\Body7 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -376,7 +376,7 @@ class ChatChannelsAccountLevelApi
      * @param  string $user_id user_id (required)
      * @param  string $channel_id Channel ID: Unique Identifier of a channel. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -394,7 +394,7 @@ class ChatChannelsAccountLevelApi
      * @param  string $user_id (required)
      * @param  string $channel_id Channel ID: Unique Identifier of a channel. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -668,9 +668,9 @@ class ChatChannelsAccountLevelApi
      * @param  string $channel_id Channel ID: Unique Identifier of a channel. (required)
      * @param  string $user_id Unique identifier of the user who is the owner of the channel. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20010
+     * @return \Zoom\Api\Model\InlineResponse20010
      */
     public function getChannel($channel_id, $user_id)
     {
@@ -686,13 +686,13 @@ class ChatChannelsAccountLevelApi
      * @param  string $channel_id Channel ID: Unique Identifier of a channel. (required)
      * @param  string $user_id Unique identifier of the user who is the owner of the channel. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20010, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20010, HTTP status code, HTTP response headers (array of strings)
      */
     public function getChannelWithHttpInfo($channel_id, $user_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20010';
+        $returnType = '\Zoom\Api\Model\InlineResponse20010';
         $request = $this->getChannelRequest($channel_id, $user_id);
 
         try {
@@ -744,7 +744,7 @@ class ChatChannelsAccountLevelApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20010',
+                        '\Zoom\Api\Model\InlineResponse20010',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -788,7 +788,7 @@ class ChatChannelsAccountLevelApi
      */
     public function getChannelAsyncWithHttpInfo($channel_id, $user_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20010';
+        $returnType = '\Zoom\Api\Model\InlineResponse20010';
         $request = $this->getChannelRequest($channel_id, $user_id);
 
         return $this->client
@@ -961,9 +961,9 @@ class ChatChannelsAccountLevelApi
      * @param  int $page_size The number of records returned from a single API call. (optional, default to 10)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse2007
+     * @return \Zoom\Api\Model\InlineResponse2007
      */
     public function getChannels($user_id, $page_size = '10', $next_page_token = null)
     {
@@ -980,13 +980,13 @@ class ChatChannelsAccountLevelApi
      * @param  int $page_size The number of records returned from a single API call. (optional, default to 10)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse2007, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse2007, HTTP status code, HTTP response headers (array of strings)
      */
     public function getChannelsWithHttpInfo($user_id, $page_size = '10', $next_page_token = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse2007';
+        $returnType = '\Zoom\Api\Model\InlineResponse2007';
         $request = $this->getChannelsRequest($user_id, $page_size, $next_page_token);
 
         try {
@@ -1038,7 +1038,7 @@ class ChatChannelsAccountLevelApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse2007',
+                        '\Zoom\Api\Model\InlineResponse2007',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1084,7 +1084,7 @@ class ChatChannelsAccountLevelApi
      */
     public function getChannelsAsyncWithHttpInfo($user_id, $page_size = '10', $next_page_token = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse2007';
+        $returnType = '\Zoom\Api\Model\InlineResponse2007';
         $request = $this->getChannelsRequest($user_id, $page_size, $next_page_token);
 
         return $this->client
@@ -1254,11 +1254,11 @@ class ChatChannelsAccountLevelApi
      *
      * @param  string $channel_id Channel ID: Unique Identifier of the channel. (required)
      * @param  string $user_id Unique identifier of the user who is the owner of this channel. (required)
-     * @param  \Swagger\Client\Model\Body9 $body body (optional)
+     * @param  \Zoom\Api\Model\Body9 $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse2013
+     * @return \Zoom\Api\Model\InlineResponse2013
      */
     public function inviteChannelMembers($channel_id, $user_id, $body = null)
     {
@@ -1273,15 +1273,15 @@ class ChatChannelsAccountLevelApi
      *
      * @param  string $channel_id Channel ID: Unique Identifier of the channel. (required)
      * @param  string $user_id Unique identifier of the user who is the owner of this channel. (required)
-     * @param  \Swagger\Client\Model\Body9 $body (optional)
+     * @param  \Zoom\Api\Model\Body9 $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse2013, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse2013, HTTP status code, HTTP response headers (array of strings)
      */
     public function inviteChannelMembersWithHttpInfo($channel_id, $user_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse2013';
+        $returnType = '\Zoom\Api\Model\InlineResponse2013';
         $request = $this->inviteChannelMembersRequest($channel_id, $user_id, $body);
 
         try {
@@ -1333,7 +1333,7 @@ class ChatChannelsAccountLevelApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse2013',
+                        '\Zoom\Api\Model\InlineResponse2013',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1350,7 +1350,7 @@ class ChatChannelsAccountLevelApi
      *
      * @param  string $channel_id Channel ID: Unique Identifier of the channel. (required)
      * @param  string $user_id Unique identifier of the user who is the owner of this channel. (required)
-     * @param  \Swagger\Client\Model\Body9 $body (optional)
+     * @param  \Zoom\Api\Model\Body9 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1372,14 +1372,14 @@ class ChatChannelsAccountLevelApi
      *
      * @param  string $channel_id Channel ID: Unique Identifier of the channel. (required)
      * @param  string $user_id Unique identifier of the user who is the owner of this channel. (required)
-     * @param  \Swagger\Client\Model\Body9 $body (optional)
+     * @param  \Zoom\Api\Model\Body9 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function inviteChannelMembersAsyncWithHttpInfo($channel_id, $user_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse2013';
+        $returnType = '\Zoom\Api\Model\InlineResponse2013';
         $request = $this->inviteChannelMembersRequest($channel_id, $user_id, $body);
 
         return $this->client
@@ -1424,7 +1424,7 @@ class ChatChannelsAccountLevelApi
      *
      * @param  string $channel_id Channel ID: Unique Identifier of the channel. (required)
      * @param  string $user_id Unique identifier of the user who is the owner of this channel. (required)
-     * @param  \Swagger\Client\Model\Body9 $body (optional)
+     * @param  \Zoom\Api\Model\Body9 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1557,9 +1557,9 @@ class ChatChannelsAccountLevelApi
      * @param  int $page_size The number of records returned with a single API call. (optional, default to 30)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20011
+     * @return \Zoom\Api\Model\InlineResponse20011
      */
     public function listChannelMembers($channel_id, $user_id, $page_size = '30', $next_page_token = null)
     {
@@ -1577,13 +1577,13 @@ class ChatChannelsAccountLevelApi
      * @param  int $page_size The number of records returned with a single API call. (optional, default to 30)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20011, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20011, HTTP status code, HTTP response headers (array of strings)
      */
     public function listChannelMembersWithHttpInfo($channel_id, $user_id, $page_size = '30', $next_page_token = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20011';
+        $returnType = '\Zoom\Api\Model\InlineResponse20011';
         $request = $this->listChannelMembersRequest($channel_id, $user_id, $page_size, $next_page_token);
 
         try {
@@ -1635,7 +1635,7 @@ class ChatChannelsAccountLevelApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20011',
+                        '\Zoom\Api\Model\InlineResponse20011',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1683,7 +1683,7 @@ class ChatChannelsAccountLevelApi
      */
     public function listChannelMembersAsyncWithHttpInfo($channel_id, $user_id, $page_size = '30', $next_page_token = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20011';
+        $returnType = '\Zoom\Api\Model\InlineResponse20011';
         $request = $this->listChannelMembersRequest($channel_id, $user_id, $page_size, $next_page_token);
 
         return $this->client
@@ -1870,7 +1870,7 @@ class ChatChannelsAccountLevelApi
      * @param  string $member_id Email address of the member whom you would like to be remove from the channel. (required)
      * @param  string $user_id Unique identifier of the channel owner. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -1889,7 +1889,7 @@ class ChatChannelsAccountLevelApi
      * @param  string $member_id Email address of the member whom you would like to be remove from the channel. (required)
      * @param  string $user_id Unique identifier of the channel owner. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2179,9 +2179,9 @@ class ChatChannelsAccountLevelApi
      *
      * @param  string $channel_id Channel Id. (required)
      * @param  string $user_id Unique Identifier of the Zoom user who is the owner of the channel. (required)
-     * @param  \Swagger\Client\Model\Body8 $body body (optional)
+     * @param  \Zoom\Api\Model\Body8 $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -2198,9 +2198,9 @@ class ChatChannelsAccountLevelApi
      *
      * @param  string $channel_id Channel Id. (required)
      * @param  string $user_id Unique Identifier of the Zoom user who is the owner of the channel. (required)
-     * @param  \Swagger\Client\Model\Body8 $body (optional)
+     * @param  \Zoom\Api\Model\Body8 $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2275,7 +2275,7 @@ class ChatChannelsAccountLevelApi
      *
      * @param  string $channel_id Channel Id. (required)
      * @param  string $user_id Unique Identifier of the Zoom user who is the owner of the channel. (required)
-     * @param  \Swagger\Client\Model\Body8 $body (optional)
+     * @param  \Zoom\Api\Model\Body8 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2297,7 +2297,7 @@ class ChatChannelsAccountLevelApi
      *
      * @param  string $channel_id Channel Id. (required)
      * @param  string $user_id Unique Identifier of the Zoom user who is the owner of the channel. (required)
-     * @param  \Swagger\Client\Model\Body8 $body (optional)
+     * @param  \Zoom\Api\Model\Body8 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2349,7 +2349,7 @@ class ChatChannelsAccountLevelApi
      *
      * @param  string $channel_id Channel Id. (required)
      * @param  string $user_id Unique Identifier of the Zoom user who is the owner of the channel. (required)
-     * @param  \Swagger\Client\Model\Body8 $body (optional)
+     * @param  \Zoom\Api\Model\Body8 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

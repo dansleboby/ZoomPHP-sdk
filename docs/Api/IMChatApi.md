@@ -1,4 +1,4 @@
-# Swagger\Client\IMChatApi
+# Zoom\Api\IMChatApi
 
 All URIs are relative to *https://api.zoom.us/v2*
 
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **imChatMessages**
-> \Swagger\Client\Model\InlineResponse20021 imChatMessages($session_id, $from, $to, $page_size, $next_page_token)
+> \Zoom\Api\Model\InlineResponse20021 imChatMessages($session_id, $from, $to, $page_size, $next_page_token)
 
 Retrieve IM Chat Messages
 
@@ -23,9 +23,9 @@ Retrieve IM chat messages for a specified period of time. <aside>Note: This API 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\IMChatApi(
+$apiInstance = new Zoom\Api\Api\IMChatApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20021**](../Model/InlineResponse20021.md)
+[**\Zoom\Api\Model\InlineResponse20021**](../Model/InlineResponse20021.md)
 
 ### Authorization
 
@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **imChatSessions**
-> \Swagger\Client\Model\InlineResponse20020 imChatSessions($from, $to, $page_size, $next_page_token)
+> \Zoom\Api\Model\InlineResponse20020 imChatSessions($from, $to, $page_size, $next_page_token)
 
 Get IM Chat Sessions
 
@@ -84,9 +84,9 @@ Retrieve IM Chat sessions for a specified period of time. <aside>Note: This API 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\IMChatApi(
+$apiInstance = new Zoom\Api\Api\IMChatApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20020**](../Model/InlineResponse20020.md)
+[**\Zoom\Api\Model\InlineResponse20020**](../Model/InlineResponse20020.md)
 
 ### Authorization
 
@@ -131,7 +131,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listimmessages**
-> \Swagger\Client\Model\InlineResponse20060 listimmessages($user_id, $chat_user, $channel, $date, $page_size, $next_page_token)
+> \Zoom\Api\Model\InlineResponse20060 listimmessages($user_id, $chat_user, $channel, $date, $page_size, $next_page_token)
 
 Get User’s IM Messages
 
@@ -143,9 +143,9 @@ Get IM Chat messages for a specified period of time. <aside>Note: This API only 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\IMChatApi(
+$apiInstance = new Zoom\Api\Api\IMChatApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -180,7 +180,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20060**](../Model/InlineResponse20060.md)
+[**\Zoom\Api\Model\InlineResponse20060**](../Model/InlineResponse20060.md)
 
 ### Authorization
 
@@ -194,7 +194,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **sendimmessages**
-> \Swagger\Client\Model\InlineResponse20123 sendimmessages($body, $chat_user)
+> \Zoom\Api\Model\InlineResponse20123 sendimmessages($body, $chat_user)
 
 Send IM messages
 
@@ -206,15 +206,15 @@ Send chat message to a user. <aside>Note: This API only supports OAuth 2.0.</asi
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\IMChatApi(
+$apiInstance = new Zoom\Api\Api\IMChatApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\Body45(); // \Swagger\Client\Model\Body45 | 
+$body = new \Zoom\Api\Model\Body45(); // \Zoom\Api\Model\Body45 | 
 $chat_user = "chat_user_example"; // string | The email address (registered with Zoom) or the userId of the chat user.
 
 try {
@@ -230,12 +230,12 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body45**](../Model/Body45.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\Body45**](../Model/Body45.md)|  | [optional]
  **chat_user** | **string**| The email address (registered with Zoom) or the userId of the chat user. | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20123**](../Model/InlineResponse20123.md)
+[**\Zoom\Api\Model\InlineResponse20123**](../Model/InlineResponse20123.md)
 
 ### Authorization
 

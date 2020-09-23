@@ -10,9 +10,9 @@ Name | Type | Description | Notes
 **timezone** | **string** | Time zone to format start_time. For example, \&quot;America/Los_Angeles\&quot;. For scheduled meetings only. Please reference our [time zone](#timezones) list for supported time zones and their formats. | [optional] 
 **password** | **string** | Webinar Passcode. Passcode may only contain the following characters: [a-z A-Z 0-9 @ - _ *]. Max of 10 characters. | [optional] 
 **agenda** | **string** | Webinar description. | [optional] 
-**tracking_fields** | [**\Swagger\Client\Model\InlineResponse20119TrackingFields[]**](InlineResponse20119TrackingFields.md) | Tracking fields | [optional] 
-**recurrence** | [**\Swagger\Client\Model\RecurrenceWebinar**](RecurrenceWebinar.md) |  | [optional] 
-**settings** | [**\Swagger\Client\Model\InlineResponse20119Settings**](InlineResponse20119Settings.md) |  | [optional] 
+**tracking_fields** | [**\Zoom\Api\Model\InlineResponse20119TrackingFields[]**](InlineResponse20119TrackingFields.md) | Tracking fields | [optional] 
+**recurrence** | [**\Zoom\Api\Model\RecurrenceWebinar**](RecurrenceWebinar.md) |  | [optional] 
+**settings** | [**\Zoom\Api\Model\InlineResponse20119Settings**](InlineResponse20119Settings.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

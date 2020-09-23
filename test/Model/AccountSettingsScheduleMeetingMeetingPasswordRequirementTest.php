@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  ZoomApi
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,14 +27,14 @@
  * Please update the test case below to test the model.
  */
 
-namespace Swagger\Client;
+namespace ZoomApi;
 
 /**
  * AccountSettingsScheduleMeetingMeetingPasswordRequirementTest Class Doc Comment
  *
  * @category    Class
  * @description Account wide meeting/webinar [password requirements](https://support.zoom.us/hc/en-us/articles/360033559832-Meeting-and-webinar-passwords#h_a427384b-e383-4f80-864d-794bf0a37604).
- * @package     Swagger\Client
+ * @package     ZoomApi
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */

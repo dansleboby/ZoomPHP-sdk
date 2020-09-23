@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse20090CallQueues Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -60,9 +60,9 @@ class InlineResponse20090CallQueues implements ModelInterface, ArrayAccess
         'id' => 'string',
         'name' => 'string',
         'extension_number' => 'int',
-        'phone_numbers' => '\Swagger\Client\Model\InlineResponse20090PhoneNumbers[]',
+        'phone_numbers' => '\Zoom\Api\Model\InlineResponse20090PhoneNumbers[]',
         'status' => 'string',
-        'site' => '\Swagger\Client\Model\InlineResponse20090Site'
+        'site' => '\Zoom\Api\Model\InlineResponse20090Site'
     ];
 
     /**
@@ -332,7 +332,7 @@ class InlineResponse20090CallQueues implements ModelInterface, ArrayAccess
     /**
      * Gets phone_numbers
      *
-     * @return \Swagger\Client\Model\InlineResponse20090PhoneNumbers[]
+     * @return \Zoom\Api\Model\InlineResponse20090PhoneNumbers[]
      */
     public function getPhoneNumbers()
     {
@@ -342,7 +342,7 @@ class InlineResponse20090CallQueues implements ModelInterface, ArrayAccess
     /**
      * Sets phone_numbers
      *
-     * @param \Swagger\Client\Model\InlineResponse20090PhoneNumbers[] $phone_numbers Phone number(s) assigned to the call queue.
+     * @param \Zoom\Api\Model\InlineResponse20090PhoneNumbers[] $phone_numbers Phone number(s) assigned to the call queue.
      *
      * @return $this
      */
@@ -389,7 +389,7 @@ class InlineResponse20090CallQueues implements ModelInterface, ArrayAccess
     /**
      * Gets site
      *
-     * @return \Swagger\Client\Model\InlineResponse20090Site
+     * @return \Zoom\Api\Model\InlineResponse20090Site
      */
     public function getSite()
     {
@@ -399,7 +399,7 @@ class InlineResponse20090CallQueues implements ModelInterface, ArrayAccess
     /**
      * Sets site
      *
-     * @param \Swagger\Client\Model\InlineResponse20090Site $site site
+     * @param \Zoom\Api\Model\InlineResponse20090Site $site site
      *
      * @return $this
      */

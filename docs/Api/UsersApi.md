@@ -1,4 +1,4 @@
-# Swagger\Client\UsersApi
+# Zoom\Api\UsersApi
 
 All URIs are relative to *https://api.zoom.us/v2*
 
@@ -43,9 +43,9 @@ Disassociate a user from one Account and move the user to another Account under 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\UsersApi(
+$apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -53,7 +53,7 @@ $apiInstance = new Swagger\Client\Api\UsersApi(
 );
 $user_id = "user_id_example"; // string | 
 $account_id = "account_id_example"; // string | 
-$body = new \Swagger\Client\Model\Body55(); // \Swagger\Client\Model\Body55 | 
+$body = new \Zoom\Api\Model\Body55(); // \Zoom\Api\Model\Body55 | 
 
 try {
     $result = $apiInstance->switchUserAccount($user_id, $account_id, $body);
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **string**|  |
  **account_id** | **string**|  |
- **body** | [**\Swagger\Client\Model\Body55**](../Model/Body55.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\Body55**](../Model/Body55.md)|  | [optional]
 
 ### Return type
 
@@ -88,7 +88,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **user**
-> \Swagger\Client\Model\InlineResponse20047 user($user_id, $login_type)
+> \Zoom\Api\Model\InlineResponse20047 user($user_id, $login_type)
 
 Get a User
 
@@ -100,9 +100,9 @@ A Zoom account can have one or more users. Use this API to view information of a
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\UsersApi(
+$apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -129,7 +129,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20047**](../Model/InlineResponse20047.md)
+[**\Zoom\Api\Model\InlineResponse20047**](../Model/InlineResponse20047.md)
 
 ### Authorization
 
@@ -143,7 +143,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **userAssistantCreate**
-> \Swagger\Client\Model\InlineResponse20118 userAssistantCreate($user_id, $body)
+> \Zoom\Api\Model\InlineResponse20118 userAssistantCreate($user_id, $body)
 
 Add Assistants
 
@@ -155,16 +155,16 @@ Assistants are the users to whom the current user has assigned [scheduling privi
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\UsersApi(
+$apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $user_id = "user_id_example"; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
-$body = new \Swagger\Client\Model\UserAssistantsList1(); // \Swagger\Client\Model\UserAssistantsList1 | User assistant.
+$body = new \Zoom\Api\Model\UserAssistantsList1(); // \Zoom\Api\Model\UserAssistantsList1 | User assistant.
 
 try {
     $result = $apiInstance->userAssistantCreate($user_id, $body);
@@ -180,11 +180,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **string**| The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. |
- **body** | [**\Swagger\Client\Model\UserAssistantsList1**](../Model/UserAssistantsList1.md)| User assistant. |
+ **body** | [**\Zoom\Api\Model\UserAssistantsList1**](../Model/UserAssistantsList1.md)| User assistant. |
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20118**](../Model/InlineResponse20118.md)
+[**\Zoom\Api\Model\InlineResponse20118**](../Model/InlineResponse20118.md)
 
 ### Authorization
 
@@ -210,9 +210,9 @@ Delete a specific assistant of a user. Assistants are the users to whom the curr
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\UsersApi(
+$apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -252,7 +252,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **userAssistants**
-> \Swagger\Client\Model\UserAssistantsList userAssistants($user_id)
+> \Zoom\Api\Model\UserAssistantsList userAssistants($user_id)
 
 List User Assistants
 
@@ -264,9 +264,9 @@ List a user's assistants.  Assistants are the users to whom the current user has
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\UsersApi(
+$apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -291,7 +291,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\UserAssistantsList**](../Model/UserAssistantsList.md)
+[**\Zoom\Api\Model\UserAssistantsList**](../Model/UserAssistantsList.md)
 
 ### Authorization
 
@@ -317,9 +317,9 @@ Delete all assistants of the current user.<br> Assistants are the users to whom 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\UsersApi(
+$apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -357,7 +357,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **userCreate**
-> \Swagger\Client\Model\InlineResponse20117 userCreate($body)
+> \Zoom\Api\Model\InlineResponse20117 userCreate($body)
 
 Create Users
 
@@ -369,15 +369,15 @@ A Zoom account can have one or more users. Use this API to add a new user to you
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\UsersApi(
+$apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\Body32(); // \Swagger\Client\Model\Body32 | User
+$body = new \Zoom\Api\Model\Body32(); // \Zoom\Api\Model\Body32 | User
 
 try {
     $result = $apiInstance->userCreate($body);
@@ -392,11 +392,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body32**](../Model/Body32.md)| User |
+ **body** | [**\Zoom\Api\Model\Body32**](../Model/Body32.md)| User |
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20117**](../Model/InlineResponse20117.md)
+[**\Zoom\Api\Model\InlineResponse20117**](../Model/InlineResponse20117.md)
 
 ### Authorization
 
@@ -422,9 +422,9 @@ Deleting a user permanently removes them and their data from Zoom. They will be 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\UsersApi(
+$apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -472,7 +472,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **userEmail**
-> \Swagger\Client\Model\InlineResponse20052 userEmail($email)
+> \Zoom\Api\Model\InlineResponse20052 userEmail($email)
 
 Check a User Email
 
@@ -484,9 +484,9 @@ Verify if a user's email is registered with Zoom.<br><br>  <b>Note: </b>You can 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\UsersApi(
+$apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -511,7 +511,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20052**](../Model/InlineResponse20052.md)
+[**\Zoom\Api\Model\InlineResponse20052**](../Model/InlineResponse20052.md)
 
 ### Authorization
 
@@ -537,16 +537,16 @@ Change a user's [email address](https://support.zoom.us/hc/en-us/articles/201362
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\UsersApi(
+$apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $user_id = "user_id_example"; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
-$body = new \Swagger\Client\Model\Body36(); // \Swagger\Client\Model\Body36 | User email.
+$body = new \Zoom\Api\Model\Body36(); // \Zoom\Api\Model\Body36 | User email.
 
 try {
     $apiInstance->userEmailUpdate($user_id, $body);
@@ -561,7 +561,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **string**| The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. |
- **body** | [**\Swagger\Client\Model\Body36**](../Model/Body36.md)| User email. |
+ **body** | [**\Zoom\Api\Model\Body36**](../Model/Body36.md)| User email. |
 
 ### Return type
 
@@ -591,16 +591,16 @@ Update the [password](https://support.zoom.us/hc/en-us/articles/206344385-Change
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\UsersApi(
+$apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $user_id = "user_id_example"; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
-$body = new \Swagger\Client\Model\Body35(); // \Swagger\Client\Model\Body35 | User password.
+$body = new \Zoom\Api\Model\Body35(); // \Zoom\Api\Model\Body35 | User password.
 
 try {
     $apiInstance->userPassword($user_id, $body);
@@ -615,7 +615,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **string**| The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. |
- **body** | [**\Swagger\Client\Model\Body35**](../Model/Body35.md)| User password. |
+ **body** | [**\Zoom\Api\Model\Body35**](../Model/Body35.md)| User password. |
 
 ### Return type
 
@@ -633,7 +633,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **userPermission**
-> \Swagger\Client\Model\InlineResponse20048 userPermission($user_id)
+> \Zoom\Api\Model\InlineResponse20048 userPermission($user_id)
 
 Get User Permissions
 
@@ -645,9 +645,9 @@ Users can be assigned a set of permissions that allows them to access only the p
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\UsersApi(
+$apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -672,7 +672,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20048**](../Model/InlineResponse20048.md)
+[**\Zoom\Api\Model\InlineResponse20048**](../Model/InlineResponse20048.md)
 
 ### Authorization
 
@@ -698,9 +698,9 @@ Upload a user's profile picture.<br><br>  Provide `multipart/form-data` as the v
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\UsersApi(
+$apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -752,9 +752,9 @@ Revoke a user's SSO token.<br><br> After calling this API, the SSO user will be 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\UsersApi(
+$apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -804,9 +804,9 @@ Delete a Scheduler.  Schedulers are users on whose behalf the current user (assi
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\UsersApi(
+$apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -846,7 +846,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **userSchedulers**
-> \Swagger\Client\Model\UserSchedulersList userSchedulers($user_id)
+> \Zoom\Api\Model\UserSchedulersList userSchedulers($user_id)
 
 List User Schedulers
 
@@ -858,9 +858,9 @@ List all the schedulers of a user. Schedulers in this context are the users for 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\UsersApi(
+$apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -885,7 +885,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\UserSchedulersList**](../Model/UserSchedulersList.md)
+[**\Zoom\Api\Model\UserSchedulersList**](../Model/UserSchedulersList.md)
 
 ### Authorization
 
@@ -911,9 +911,9 @@ Delete all of a user's schedulers. Schedulers are users on whose behalf the curr
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\UsersApi(
+$apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -963,9 +963,9 @@ Retrieve a user's settings.<br><br> **Scopes:** `user:read:admin` `user:read`<br
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\UsersApi(
+$apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1020,9 +1020,9 @@ Update a user's settings.<br><br> **Scopes:** `user:write:admin` `user:write`<br
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\UsersApi(
+$apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1076,16 +1076,16 @@ An account owner or admins can deactivate as well as activate a user in a Zoom a
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\UsersApi(
+$apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $user_id = "user_id_example"; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
-$body = new \Swagger\Client\Model\Body34(); // \Swagger\Client\Model\Body34 | User status.
+$body = new \Zoom\Api\Model\Body34(); // \Zoom\Api\Model\Body34 | User status.
 
 try {
     $apiInstance->userStatus($user_id, $body);
@@ -1100,7 +1100,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **string**| The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. |
- **body** | [**\Swagger\Client\Model\Body34**](../Model/Body34.md)| User status. |
+ **body** | [**\Zoom\Api\Model\Body34**](../Model/Body34.md)| User status. |
 
 ### Return type
 
@@ -1118,7 +1118,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **userToken**
-> \Swagger\Client\Model\InlineResponse20051 userToken($user_id, $type, $ttl)
+> \Zoom\Api\Model\InlineResponse20051 userToken($user_id, $type, $ttl)
 
 Get a User Token
 
@@ -1130,9 +1130,9 @@ Retrieve a user's token.<br><br> This token is used for starting meetings with t
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\UsersApi(
+$apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1161,7 +1161,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20051**](../Model/InlineResponse20051.md)
+[**\Zoom\Api\Model\InlineResponse20051**](../Model/InlineResponse20051.md)
 
 ### Authorization
 
@@ -1187,16 +1187,16 @@ Update information on a user's Zoom [profile](https://support.zoom.us/hc/en-us/a
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\UsersApi(
+$apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $user_id = "user_id_example"; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
-$body = new \Swagger\Client\Model\Body33(); // \Swagger\Client\Model\Body33 | User
+$body = new \Zoom\Api\Model\Body33(); // \Zoom\Api\Model\Body33 | User
 $login_type = "login_type_example"; // string | `0` - Facebook.<br>`1` - Google.<br>`99` - API.<br>`100` - Zoom.<br>`101` - SSO.
 
 try {
@@ -1212,7 +1212,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **string**| The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. |
- **body** | [**\Swagger\Client\Model\Body33**](../Model/Body33.md)| User |
+ **body** | [**\Zoom\Api\Model\Body33**](../Model/Body33.md)| User |
  **login_type** | **string**| &#x60;0&#x60; - Facebook.&lt;br&gt;&#x60;1&#x60; - Google.&lt;br&gt;&#x60;99&#x60; - API.&lt;br&gt;&#x60;100&#x60; - Zoom.&lt;br&gt;&#x60;101&#x60; - SSO. | [optional]
 
 ### Return type
@@ -1231,7 +1231,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **userVanityName**
-> \Swagger\Client\Model\InlineResponse20053 userVanityName($vanity_name)
+> \Zoom\Api\Model\InlineResponse20053 userVanityName($vanity_name)
 
 Check a User's PM Room Name
 
@@ -1243,9 +1243,9 @@ A personal meeting room is a virtual meeting room that can be permanently assign
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\UsersApi(
+$apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1270,7 +1270,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20053**](../Model/InlineResponse20053.md)
+[**\Zoom\Api\Model\InlineResponse20053**](../Model/InlineResponse20053.md)
 
 ### Authorization
 
@@ -1284,7 +1284,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **users**
-> \Swagger\Client\Model\InlineResponse20046 users($status, $page_size, $role_id, $page_number, $include_fields)
+> \Zoom\Api\Model\InlineResponse20046 users($status, $page_size, $role_id, $page_number, $include_fields)
 
 List Users
 
@@ -1296,9 +1296,9 @@ A Zoom account can have one or more users. Use this API to list users on your ac
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\UsersApi(
+$apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1331,7 +1331,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20046**](../Model/InlineResponse20046.md)
+[**\Zoom\Api\Model\InlineResponse20046**](../Model/InlineResponse20046.md)
 
 ### Authorization
 

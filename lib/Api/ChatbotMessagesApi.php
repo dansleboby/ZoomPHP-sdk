@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Zoom\Api\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Zoom\Api\ApiException;
+use Zoom\Api\Configuration;
+use Zoom\Api\HeaderSelector;
+use Zoom\Api\ObjectSerializer;
 
 /**
  * ChatbotMessagesApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -93,11 +93,11 @@ class ChatbotMessagesApi
      * Delete a Chatbot Message
      *
      * @param  string $message_id message_id (required)
-     * @param  \Swagger\Client\Model\Body42 $body body (optional)
+     * @param  \Zoom\Api\Model\Body42 $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20058
+     * @return \Zoom\Api\Model\InlineResponse20058
      */
     public function deleteAChatbotMessage($message_id, $body = null)
     {
@@ -111,15 +111,15 @@ class ChatbotMessagesApi
      * Delete a Chatbot Message
      *
      * @param  string $message_id (required)
-     * @param  \Swagger\Client\Model\Body42 $body (optional)
+     * @param  \Zoom\Api\Model\Body42 $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20058, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20058, HTTP status code, HTTP response headers (array of strings)
      */
     public function deleteAChatbotMessageWithHttpInfo($message_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20058';
+        $returnType = '\Zoom\Api\Model\InlineResponse20058';
         $request = $this->deleteAChatbotMessageRequest($message_id, $body);
 
         try {
@@ -171,7 +171,7 @@ class ChatbotMessagesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20058',
+                        '\Zoom\Api\Model\InlineResponse20058',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -187,7 +187,7 @@ class ChatbotMessagesApi
      * Delete a Chatbot Message
      *
      * @param  string $message_id (required)
-     * @param  \Swagger\Client\Model\Body42 $body (optional)
+     * @param  \Zoom\Api\Model\Body42 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -208,14 +208,14 @@ class ChatbotMessagesApi
      * Delete a Chatbot Message
      *
      * @param  string $message_id (required)
-     * @param  \Swagger\Client\Model\Body42 $body (optional)
+     * @param  \Zoom\Api\Model\Body42 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function deleteAChatbotMessageAsyncWithHttpInfo($message_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20058';
+        $returnType = '\Zoom\Api\Model\InlineResponse20058';
         $request = $this->deleteAChatbotMessageRequest($message_id, $body);
 
         return $this->client
@@ -259,7 +259,7 @@ class ChatbotMessagesApi
      * Create request for operation 'deleteAChatbotMessage'
      *
      * @param  string $message_id (required)
-     * @param  \Swagger\Client\Model\Body42 $body (optional)
+     * @param  \Zoom\Api\Model\Body42 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -374,11 +374,11 @@ class ChatbotMessagesApi
      * Edit a Chatbot Message
      *
      * @param  string $message_id Unique Identifier of the message that needs to be updated. This should be retrieved from the response of [Send Chatbot Message API](https://marketplace.zoom.us/docs/api-reference/zoom-api/im-chat/sendchatbot). (required)
-     * @param  \Swagger\Client\Model\Body41 $body body (optional)
+     * @param  \Zoom\Api\Model\Body41 $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20057
+     * @return \Zoom\Api\Model\InlineResponse20057
      */
     public function editChatbotMessage($message_id, $body = null)
     {
@@ -392,15 +392,15 @@ class ChatbotMessagesApi
      * Edit a Chatbot Message
      *
      * @param  string $message_id Unique Identifier of the message that needs to be updated. This should be retrieved from the response of [Send Chatbot Message API](https://marketplace.zoom.us/docs/api-reference/zoom-api/im-chat/sendchatbot). (required)
-     * @param  \Swagger\Client\Model\Body41 $body (optional)
+     * @param  \Zoom\Api\Model\Body41 $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20057, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20057, HTTP status code, HTTP response headers (array of strings)
      */
     public function editChatbotMessageWithHttpInfo($message_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20057';
+        $returnType = '\Zoom\Api\Model\InlineResponse20057';
         $request = $this->editChatbotMessageRequest($message_id, $body);
 
         try {
@@ -452,7 +452,7 @@ class ChatbotMessagesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20057',
+                        '\Zoom\Api\Model\InlineResponse20057',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -468,7 +468,7 @@ class ChatbotMessagesApi
      * Edit a Chatbot Message
      *
      * @param  string $message_id Unique Identifier of the message that needs to be updated. This should be retrieved from the response of [Send Chatbot Message API](https://marketplace.zoom.us/docs/api-reference/zoom-api/im-chat/sendchatbot). (required)
-     * @param  \Swagger\Client\Model\Body41 $body (optional)
+     * @param  \Zoom\Api\Model\Body41 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -489,14 +489,14 @@ class ChatbotMessagesApi
      * Edit a Chatbot Message
      *
      * @param  string $message_id Unique Identifier of the message that needs to be updated. This should be retrieved from the response of [Send Chatbot Message API](https://marketplace.zoom.us/docs/api-reference/zoom-api/im-chat/sendchatbot). (required)
-     * @param  \Swagger\Client\Model\Body41 $body (optional)
+     * @param  \Zoom\Api\Model\Body41 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function editChatbotMessageAsyncWithHttpInfo($message_id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20057';
+        $returnType = '\Zoom\Api\Model\InlineResponse20057';
         $request = $this->editChatbotMessageRequest($message_id, $body);
 
         return $this->client
@@ -540,7 +540,7 @@ class ChatbotMessagesApi
      * Create request for operation 'editChatbotMessage'
      *
      * @param  string $message_id Unique Identifier of the message that needs to be updated. This should be retrieved from the response of [Send Chatbot Message API](https://marketplace.zoom.us/docs/api-reference/zoom-api/im-chat/sendchatbot). (required)
-     * @param  \Swagger\Client\Model\Body41 $body (optional)
+     * @param  \Zoom\Api\Model\Body41 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -654,9 +654,9 @@ class ChatbotMessagesApi
      *
      * Send Chatbot Messages
      *
-     * @param  \Swagger\Client\Model\Body40 $body body (optional)
+     * @param  \Zoom\Api\Model\Body40 $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -670,9 +670,9 @@ class ChatbotMessagesApi
      *
      * Send Chatbot Messages
      *
-     * @param  \Swagger\Client\Model\Body40 $body (optional)
+     * @param  \Zoom\Api\Model\Body40 $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -723,7 +723,7 @@ class ChatbotMessagesApi
      *
      * Send Chatbot Messages
      *
-     * @param  \Swagger\Client\Model\Body40 $body (optional)
+     * @param  \Zoom\Api\Model\Body40 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -743,7 +743,7 @@ class ChatbotMessagesApi
      *
      * Send Chatbot Messages
      *
-     * @param  \Swagger\Client\Model\Body40 $body (optional)
+     * @param  \Zoom\Api\Model\Body40 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -779,7 +779,7 @@ class ChatbotMessagesApi
     /**
      * Create request for operation 'sendchatbot'
      *
-     * @param  \Swagger\Client\Model\Body40 $body (optional)
+     * @param  \Zoom\Api\Model\Body40 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

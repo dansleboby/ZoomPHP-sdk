@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse20049PacAccounts Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,8 +57,8 @@ class InlineResponse20049PacAccounts implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'dedicated_dial_in_number' => '\Swagger\Client\Model\InlineResponse20049DedicatedDialInNumber[]',
-        'global_dial_in_numbers' => '\Swagger\Client\Model\InlineResponse20049DedicatedDialInNumber[]',
+        'dedicated_dial_in_number' => '\Zoom\Api\Model\InlineResponse20049DedicatedDialInNumber[]',
+        'global_dial_in_numbers' => '\Zoom\Api\Model\InlineResponse20049DedicatedDialInNumber[]',
         'conference_id' => 'int',
         'participant_password' => 'string',
         'listen_only_password' => 'string'
@@ -243,7 +243,7 @@ class InlineResponse20049PacAccounts implements ModelInterface, ArrayAccess
     /**
      * Gets dedicated_dial_in_number
      *
-     * @return \Swagger\Client\Model\InlineResponse20049DedicatedDialInNumber[]
+     * @return \Zoom\Api\Model\InlineResponse20049DedicatedDialInNumber[]
      */
     public function getDedicatedDialInNumber()
     {
@@ -253,7 +253,7 @@ class InlineResponse20049PacAccounts implements ModelInterface, ArrayAccess
     /**
      * Sets dedicated_dial_in_number
      *
-     * @param \Swagger\Client\Model\InlineResponse20049DedicatedDialInNumber[] $dedicated_dial_in_number List of dedicated dial-in numbers.
+     * @param \Zoom\Api\Model\InlineResponse20049DedicatedDialInNumber[] $dedicated_dial_in_number List of dedicated dial-in numbers.
      *
      * @return $this
      */
@@ -267,7 +267,7 @@ class InlineResponse20049PacAccounts implements ModelInterface, ArrayAccess
     /**
      * Gets global_dial_in_numbers
      *
-     * @return \Swagger\Client\Model\InlineResponse20049DedicatedDialInNumber[]
+     * @return \Zoom\Api\Model\InlineResponse20049DedicatedDialInNumber[]
      */
     public function getGlobalDialInNumbers()
     {
@@ -277,7 +277,7 @@ class InlineResponse20049PacAccounts implements ModelInterface, ArrayAccess
     /**
      * Sets global_dial_in_numbers
      *
-     * @param \Swagger\Client\Model\InlineResponse20049DedicatedDialInNumber[] $global_dial_in_numbers List of global dial-in numbers.
+     * @param \Zoom\Api\Model\InlineResponse20049DedicatedDialInNumber[] $global_dial_in_numbers List of global dial-in numbers.
      *
      * @return $this
      */

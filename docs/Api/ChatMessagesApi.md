@@ -1,4 +1,4 @@
-# Swagger\Client\ChatMessagesApi
+# Zoom\Api\ChatMessagesApi
 
 All URIs are relative to *https://api.zoom.us/v2*
 
@@ -23,9 +23,9 @@ Delete a chat message that you previously sent to a contact or a channel. In the
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ChatMessagesApi(
+$apiInstance = new Zoom\Api\Api\ChatMessagesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -81,9 +81,9 @@ Each chat message has a unique identifier. Use this API to edit a chat message t
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ChatMessagesApi(
+$apiInstance = new Zoom\Api\Api\ChatMessagesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -91,7 +91,7 @@ $apiInstance = new Swagger\Client\Api\ChatMessagesApi(
 );
 $user_id = "user_id_example"; // string | 
 $message_id = "message_id_example"; // string | Message ID: Unique Identifier of the message.
-$body = new \Swagger\Client\Model\Body6(); // \Swagger\Client\Model\Body6 | 
+$body = new \Zoom\Api\Model\Body6(); // \Zoom\Api\Model\Body6 | 
 
 try {
     $apiInstance->editMessage($user_id, $message_id, $body);
@@ -107,7 +107,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **string**|  |
  **message_id** | **string**| Message ID: Unique Identifier of the message. |
- **body** | [**\Swagger\Client\Model\Body6**](../Model/Body6.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\Body6**](../Model/Body6.md)|  | [optional]
 
 ### Return type
 
@@ -125,7 +125,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getChatMessages**
-> \Swagger\Client\Model\InlineResponse2006 getChatMessages($user_id, $to_contact, $to_channel, $date, $page_size, $next_page_token)
+> \Zoom\Api\Model\InlineResponse2006 getChatMessages($user_id, $to_contact, $to_channel, $date, $page_size, $next_page_token)
 
 List User's Chat Messages
 
@@ -137,9 +137,9 @@ A Zoom user can have conversations with other Zoom users via chat. Use this API 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ChatMessagesApi(
+$apiInstance = new Zoom\Api\Api\ChatMessagesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -174,7 +174,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2006**](../Model/InlineResponse2006.md)
+[**\Zoom\Api\Model\InlineResponse2006**](../Model/InlineResponse2006.md)
 
 ### Authorization
 
@@ -188,7 +188,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **sendaChatMessage**
-> \Swagger\Client\Model\InlineResponse2011 sendaChatMessage($user_id, $body)
+> \Zoom\Api\Model\InlineResponse2011 sendaChatMessage($user_id, $body)
 
 Send a Chat Message
 
@@ -200,16 +200,16 @@ Send chat messages on Zoom to either an individual user who is in your contact l
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ChatMessagesApi(
+$apiInstance = new Zoom\Api\Api\ChatMessagesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $user_id = "user_id_example"; // string | 
-$body = new \Swagger\Client\Model\Body5(); // \Swagger\Client\Model\Body5 | 
+$body = new \Zoom\Api\Model\Body5(); // \Zoom\Api\Model\Body5 | 
 
 try {
     $result = $apiInstance->sendaChatMessage($user_id, $body);
@@ -225,11 +225,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **string**|  |
- **body** | [**\Swagger\Client\Model\Body5**](../Model/Body5.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\Body5**](../Model/Body5.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2011**](../Model/InlineResponse2011.md)
+[**\Zoom\Api\Model\InlineResponse2011**](../Model/InlineResponse2011.md)
 
 ### Authorization
 

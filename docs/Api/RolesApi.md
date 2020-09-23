@@ -1,4 +1,4 @@
-# Swagger\Client\RolesApi
+# Zoom\Api\RolesApi
 
 All URIs are relative to *https://api.zoom.us/v2*
 
@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 
 # **addRoleMembers**
-> \Swagger\Client\Model\InlineResponse20116 addRoleMembers($role_id, $body)
+> \Zoom\Api\Model\InlineResponse20116 addRoleMembers($role_id, $body)
 
 Assign a Role to Members
 
@@ -27,16 +27,16 @@ User [roles](https://support.zoom.us/hc/en-us/articles/115001078646-Role-Based-A
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\RolesApi(
+$apiInstance = new Zoom\Api\Api\RolesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $role_id = "role_id_example"; // string | The role ID
-$body = new \Swagger\Client\Model\Body30(); // \Swagger\Client\Model\Body30 | Role members
+$body = new \Zoom\Api\Model\Body30(); // \Zoom\Api\Model\Body30 | Role members
 
 try {
     $result = $apiInstance->addRoleMembers($role_id, $body);
@@ -52,11 +52,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **role_id** | **string**| The role ID |
- **body** | [**\Swagger\Client\Model\Body30**](../Model/Body30.md)| Role members |
+ **body** | [**\Zoom\Api\Model\Body30**](../Model/Body30.md)| Role members |
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20116**](../Model/InlineResponse20116.md)
+[**\Zoom\Api\Model\InlineResponse20116**](../Model/InlineResponse20116.md)
 
 ### Authorization
 
@@ -82,15 +82,15 @@ Each Zoom user automatically has a role which can either be owner, administrator
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\RolesApi(
+$apiInstance = new Zoom\Api\Api\RolesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\Body29(); // \Swagger\Client\Model\Body29 | 
+$body = new \Zoom\Api\Model\Body29(); // \Zoom\Api\Model\Body29 | 
 
 try {
     $result = $apiInstance->createRole($body);
@@ -105,7 +105,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body29**](../Model/Body29.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\Body29**](../Model/Body29.md)|  | [optional]
 
 ### Return type
 
@@ -135,9 +135,9 @@ Each Zoom user automatically has a role which can either be owner, administrator
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\RolesApi(
+$apiInstance = new Zoom\Api\Api\RolesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -175,7 +175,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getRoleInformation**
-> \Swagger\Client\Model\InlineResponse20071 getRoleInformation($role_id)
+> \Zoom\Api\Model\InlineResponse20071 getRoleInformation($role_id)
 
 Get Role Information
 
@@ -187,9 +187,9 @@ Each Zoom user automatically has a role which can either be owner, administrator
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\RolesApi(
+$apiInstance = new Zoom\Api\Api\RolesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -214,7 +214,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20071**](../Model/InlineResponse20071.md)
+[**\Zoom\Api\Model\InlineResponse20071**](../Model/InlineResponse20071.md)
 
 ### Authorization
 
@@ -240,9 +240,9 @@ User [roles](https://support.zoom.us/hc/en-us/articles/115001078646-Role-Based-A
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\RolesApi(
+$apiInstance = new Zoom\Api\Api\RolesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -282,7 +282,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **roleMembers**
-> \Swagger\Client\Model\RoleMembersList roleMembers($role_id)
+> \Zoom\Api\Model\RoleMembersList roleMembers($role_id)
 
 List Members in a Role
 
@@ -294,9 +294,9 @@ User [roles](https://support.zoom.us/hc/en-us/articles/115001078646-Role-Based-A
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\RolesApi(
+$apiInstance = new Zoom\Api\Api\RolesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -321,7 +321,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\RoleMembersList**](../Model/RoleMembersList.md)
+[**\Zoom\Api\Model\RoleMembersList**](../Model/RoleMembersList.md)
 
 ### Authorization
 
@@ -347,9 +347,9 @@ List [roles](https://support.zoom.us/hc/en-us/articles/115001078646-Role-Based-A
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\RolesApi(
+$apiInstance = new Zoom\Api\Api\RolesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -396,16 +396,16 @@ Each Zoom user automatically has a [role](https://support.zoom.us/hc/en-us/artic
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\RolesApi(
+$apiInstance = new Zoom\Api\Api\RolesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $role_id = "role_id_example"; // string | Role Id
-$body = new \Swagger\Client\Model\Body53(); // \Swagger\Client\Model\Body53 | 
+$body = new \Zoom\Api\Model\Body53(); // \Zoom\Api\Model\Body53 | 
 
 try {
     $result = $apiInstance->updateRole($role_id, $body);
@@ -421,7 +421,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **role_id** | **string**| Role Id |
- **body** | [**\Swagger\Client\Model\Body53**](../Model/Body53.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\Body53**](../Model/Body53.md)|  | [optional]
 
 ### Return type
 

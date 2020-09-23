@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Zoom\Api\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Zoom\Api\ApiException;
+use Zoom\Api\Configuration;
+use Zoom\Api\HeaderSelector;
+use Zoom\Api\ObjectSerializer;
 
 /**
  * RolesApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -93,11 +93,11 @@ class RolesApi
      * Assign a Role to Members
      *
      * @param  string $role_id The role ID (required)
-     * @param  \Swagger\Client\Model\Body30 $body Role members (required)
+     * @param  \Zoom\Api\Model\Body30 $body Role members (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20116
+     * @return \Zoom\Api\Model\InlineResponse20116
      */
     public function addRoleMembers($role_id, $body)
     {
@@ -111,15 +111,15 @@ class RolesApi
      * Assign a Role to Members
      *
      * @param  string $role_id The role ID (required)
-     * @param  \Swagger\Client\Model\Body30 $body Role members (required)
+     * @param  \Zoom\Api\Model\Body30 $body Role members (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20116, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20116, HTTP status code, HTTP response headers (array of strings)
      */
     public function addRoleMembersWithHttpInfo($role_id, $body)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20116';
+        $returnType = '\Zoom\Api\Model\InlineResponse20116';
         $request = $this->addRoleMembersRequest($role_id, $body);
 
         try {
@@ -171,7 +171,7 @@ class RolesApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20116',
+                        '\Zoom\Api\Model\InlineResponse20116',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -187,7 +187,7 @@ class RolesApi
      * Assign a Role to Members
      *
      * @param  string $role_id The role ID (required)
-     * @param  \Swagger\Client\Model\Body30 $body Role members (required)
+     * @param  \Zoom\Api\Model\Body30 $body Role members (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -208,14 +208,14 @@ class RolesApi
      * Assign a Role to Members
      *
      * @param  string $role_id The role ID (required)
-     * @param  \Swagger\Client\Model\Body30 $body Role members (required)
+     * @param  \Zoom\Api\Model\Body30 $body Role members (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function addRoleMembersAsyncWithHttpInfo($role_id, $body)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20116';
+        $returnType = '\Zoom\Api\Model\InlineResponse20116';
         $request = $this->addRoleMembersRequest($role_id, $body);
 
         return $this->client
@@ -259,7 +259,7 @@ class RolesApi
      * Create request for operation 'addRoleMembers'
      *
      * @param  string $role_id The role ID (required)
-     * @param  \Swagger\Client\Model\Body30 $body Role members (required)
+     * @param  \Zoom\Api\Model\Body30 $body Role members (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -379,9 +379,9 @@ class RolesApi
      *
      * Create a Role
      *
-     * @param  \Swagger\Client\Model\Body29 $body body (optional)
+     * @param  \Zoom\Api\Model\Body29 $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -396,9 +396,9 @@ class RolesApi
      *
      * Create a Role
      *
-     * @param  \Swagger\Client\Model\Body29 $body (optional)
+     * @param  \Zoom\Api\Model\Body29 $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -464,7 +464,7 @@ class RolesApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20115',
+                        '\Zoom\Api\Model\InlineResponse20115',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -479,7 +479,7 @@ class RolesApi
      *
      * Create a Role
      *
-     * @param  \Swagger\Client\Model\Body29 $body (optional)
+     * @param  \Zoom\Api\Model\Body29 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -499,7 +499,7 @@ class RolesApi
      *
      * Create a Role
      *
-     * @param  \Swagger\Client\Model\Body29 $body (optional)
+     * @param  \Zoom\Api\Model\Body29 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -549,7 +549,7 @@ class RolesApi
     /**
      * Create request for operation 'createRole'
      *
-     * @param  \Swagger\Client\Model\Body29 $body (optional)
+     * @param  \Zoom\Api\Model\Body29 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -651,7 +651,7 @@ class RolesApi
      *
      * @param  string $role_id Role Id. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -667,7 +667,7 @@ class RolesApi
      *
      * @param  string $role_id Role Id. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -895,9 +895,9 @@ class RolesApi
      *
      * @param  string $role_id Role Id. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20071
+     * @return \Zoom\Api\Model\InlineResponse20071
      */
     public function getRoleInformation($role_id)
     {
@@ -912,13 +912,13 @@ class RolesApi
      *
      * @param  string $role_id Role Id. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20071, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20071, HTTP status code, HTTP response headers (array of strings)
      */
     public function getRoleInformationWithHttpInfo($role_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20071';
+        $returnType = '\Zoom\Api\Model\InlineResponse20071';
         $request = $this->getRoleInformationRequest($role_id);
 
         try {
@@ -970,7 +970,7 @@ class RolesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20071',
+                        '\Zoom\Api\Model\InlineResponse20071',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1012,7 +1012,7 @@ class RolesApi
      */
     public function getRoleInformationAsyncWithHttpInfo($role_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20071';
+        $returnType = '\Zoom\Api\Model\InlineResponse20071';
         $request = $this->getRoleInformationRequest($role_id);
 
         return $this->client
@@ -1169,7 +1169,7 @@ class RolesApi
      * @param  string $role_id The role ID (required)
      * @param  string $member_id Member&#39;s ID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1186,7 +1186,7 @@ class RolesApi
      * @param  string $role_id The role ID (required)
      * @param  string $member_id Member&#39;s ID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1423,9 +1423,9 @@ class RolesApi
      *
      * @param  string $role_id The role ID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\RoleMembersList
+     * @return \Zoom\Api\Model\RoleMembersList
      */
     public function roleMembers($role_id)
     {
@@ -1440,13 +1440,13 @@ class RolesApi
      *
      * @param  string $role_id The role ID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\RoleMembersList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\RoleMembersList, HTTP status code, HTTP response headers (array of strings)
      */
     public function roleMembersWithHttpInfo($role_id)
     {
-        $returnType = '\Swagger\Client\Model\RoleMembersList';
+        $returnType = '\Zoom\Api\Model\RoleMembersList';
         $request = $this->roleMembersRequest($role_id);
 
         try {
@@ -1498,7 +1498,7 @@ class RolesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\RoleMembersList',
+                        '\Zoom\Api\Model\RoleMembersList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1540,7 +1540,7 @@ class RolesApi
      */
     public function roleMembersAsyncWithHttpInfo($role_id)
     {
-        $returnType = '\Swagger\Client\Model\RoleMembersList';
+        $returnType = '\Zoom\Api\Model\RoleMembersList';
         $request = $this->roleMembersRequest($role_id);
 
         return $this->client
@@ -1695,7 +1695,7 @@ class RolesApi
      * List Roles
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -1711,7 +1711,7 @@ class RolesApi
      * List Roles
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1949,9 +1949,9 @@ class RolesApi
      * Update Role Information
      *
      * @param  string $role_id Role Id (required)
-     * @param  \Swagger\Client\Model\Body53 $body body (optional)
+     * @param  \Zoom\Api\Model\Body53 $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -1967,9 +1967,9 @@ class RolesApi
      * Update Role Information
      *
      * @param  string $role_id Role Id (required)
-     * @param  \Swagger\Client\Model\Body53 $body (optional)
+     * @param  \Zoom\Api\Model\Body53 $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2043,7 +2043,7 @@ class RolesApi
      * Update Role Information
      *
      * @param  string $role_id Role Id (required)
-     * @param  \Swagger\Client\Model\Body53 $body (optional)
+     * @param  \Zoom\Api\Model\Body53 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2064,7 +2064,7 @@ class RolesApi
      * Update Role Information
      *
      * @param  string $role_id Role Id (required)
-     * @param  \Swagger\Client\Model\Body53 $body (optional)
+     * @param  \Zoom\Api\Model\Body53 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2115,7 +2115,7 @@ class RolesApi
      * Create request for operation 'updateRole'
      *
      * @param  string $role_id Role Id (required)
-     * @param  \Swagger\Client\Model\Body53 $body (optional)
+     * @param  \Zoom\Api\Model\Body53 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

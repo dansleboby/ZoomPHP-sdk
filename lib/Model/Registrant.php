@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * Registrant Class Doc Comment
  *
  * @category Class
  * @description Registrant base object.
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -74,7 +74,7 @@ class Registrant implements ModelInterface, ArrayAccess
         'role_in_purchase_process' => 'string',
         'no_of_employees' => 'string',
         'comments' => 'string',
-        'custom_questions' => '\Swagger\Client\Model\WebianrRegistrantCustomQuestions[]'
+        'custom_questions' => '\Zoom\Api\Model\WebianrRegistrantCustomQuestions[]'
     ];
 
     /**
@@ -718,7 +718,7 @@ class Registrant implements ModelInterface, ArrayAccess
     /**
      * Gets custom_questions
      *
-     * @return \Swagger\Client\Model\WebianrRegistrantCustomQuestions[]
+     * @return \Zoom\Api\Model\WebianrRegistrantCustomQuestions[]
      */
     public function getCustomQuestions()
     {
@@ -728,7 +728,7 @@ class Registrant implements ModelInterface, ArrayAccess
     /**
      * Sets custom_questions
      *
-     * @param \Swagger\Client\Model\WebianrRegistrantCustomQuestions[] $custom_questions Custom questions.
+     * @param \Zoom\Api\Model\WebianrRegistrantCustomQuestions[] $custom_questions Custom questions.
      *
      * @return $this
      */

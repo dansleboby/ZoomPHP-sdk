@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * PhonePlan Class Doc Comment
  *
  * @category Class
  * @description Phone Plan Object
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,9 +58,9 @@ class PhonePlan implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'plan_base' => '\Swagger\Client\Model\PhonePlan2PlanBase',
-        'plan_calling' => '\Swagger\Client\Model\PhonePlan2PlanCalling[]',
-        'plan_number' => '\Swagger\Client\Model\PhonePlan2PlanNumber[]'
+        'plan_base' => '\Zoom\Api\Model\PhonePlan2PlanBase',
+        'plan_calling' => '\Zoom\Api\Model\PhonePlan2PlanCalling[]',
+        'plan_number' => '\Zoom\Api\Model\PhonePlan2PlanNumber[]'
     ];
 
     /**
@@ -220,7 +220,7 @@ class PhonePlan implements ModelInterface, ArrayAccess
     /**
      * Gets plan_base
      *
-     * @return \Swagger\Client\Model\PhonePlan2PlanBase
+     * @return \Zoom\Api\Model\PhonePlan2PlanBase
      */
     public function getPlanBase()
     {
@@ -230,7 +230,7 @@ class PhonePlan implements ModelInterface, ArrayAccess
     /**
      * Sets plan_base
      *
-     * @param \Swagger\Client\Model\PhonePlan2PlanBase $plan_base plan_base
+     * @param \Zoom\Api\Model\PhonePlan2PlanBase $plan_base plan_base
      *
      * @return $this
      */
@@ -244,7 +244,7 @@ class PhonePlan implements ModelInterface, ArrayAccess
     /**
      * Gets plan_calling
      *
-     * @return \Swagger\Client\Model\PhonePlan2PlanCalling[]
+     * @return \Zoom\Api\Model\PhonePlan2PlanCalling[]
      */
     public function getPlanCalling()
     {
@@ -254,7 +254,7 @@ class PhonePlan implements ModelInterface, ArrayAccess
     /**
      * Sets plan_calling
      *
-     * @param \Swagger\Client\Model\PhonePlan2PlanCalling[] $plan_calling Additional phone calling plans.
+     * @param \Zoom\Api\Model\PhonePlan2PlanCalling[] $plan_calling Additional phone calling plans.
      *
      * @return $this
      */
@@ -268,7 +268,7 @@ class PhonePlan implements ModelInterface, ArrayAccess
     /**
      * Gets plan_number
      *
-     * @return \Swagger\Client\Model\PhonePlan2PlanNumber[]
+     * @return \Zoom\Api\Model\PhonePlan2PlanNumber[]
      */
     public function getPlanNumber()
     {
@@ -278,7 +278,7 @@ class PhonePlan implements ModelInterface, ArrayAccess
     /**
      * Sets plan_number
      *
-     * @param \Swagger\Client\Model\PhonePlan2PlanNumber[] $plan_number Additional phone number plans.
+     * @param \Zoom\Api\Model\PhonePlan2PlanNumber[] $plan_number Additional phone number plans.
      *
      * @return $this
      */

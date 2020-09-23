@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  ZoomApi
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,14 +27,14 @@
  * Please update the test case below to test the model.
  */
 
-namespace Swagger\Client;
+namespace ZoomApi;
 
 /**
  * AccountSettingsSecurityPasswordRequirementTest Class Doc Comment
  *
  * @category    Class
  * @description This object refers to the [enhanced password rules](https://support.zoom.us/hc/en-us/articles/360034675592-Advanced-security-settings#h_bf8a25f6-9a66-447a-befd-f02ed3404f89) that allows Zoom account admins and owners to apply extra requiremets to the users&#39; Zoom login password.
- * @package     Swagger\Client
+ * @package     ZoomApi
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */

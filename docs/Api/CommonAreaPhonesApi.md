@@ -1,4 +1,4 @@
-# Swagger\Client\CommonAreaPhonesApi
+# Zoom\Api\CommonAreaPhonesApi
 
 All URIs are relative to *https://api.zoom.us/v2*
 
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **addCommonAreaPhone**
-> \Swagger\Client\Model\InlineResponse20125 addCommonAreaPhone($body)
+> \Zoom\Api\Model\InlineResponse20125 addCommonAreaPhone($body)
 
 Add a Common Area Phone
 
@@ -24,15 +24,15 @@ A common area phone can be provisioned by a Zoom account owner or a Zoom admin s
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\CommonAreaPhonesApi(
+$apiInstance = new Zoom\Api\Api\CommonAreaPhonesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\Body75(); // \Swagger\Client\Model\Body75 | 
+$body = new \Zoom\Api\Model\Body75(); // \Zoom\Api\Model\Body75 | 
 
 try {
     $result = $apiInstance->addCommonAreaPhone($body);
@@ -47,11 +47,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body75**](../Model/Body75.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\Body75**](../Model/Body75.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20125**](../Model/InlineResponse20125.md)
+[**\Zoom\Api\Model\InlineResponse20125**](../Model/InlineResponse20125.md)
 
 ### Authorization
 
@@ -77,9 +77,9 @@ A common area phone can be provisioned by a Zoom account owner or a Zoom admin s
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\CommonAreaPhonesApi(
+$apiInstance = new Zoom\Api\Api\CommonAreaPhonesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -118,7 +118,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getACommonAreaPhone**
-> \Swagger\Client\Model\InlineResponse20096 getACommonAreaPhone($common_area_phone_id)
+> \Zoom\Api\Model\InlineResponse20096 getACommonAreaPhone($common_area_phone_id)
 
 Get Common Area Phone Details
 
@@ -130,9 +130,9 @@ A common area phone can be provisioned by a Zoom account owner or a Zoom admin s
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\CommonAreaPhonesApi(
+$apiInstance = new Zoom\Api\Api\CommonAreaPhonesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -157,7 +157,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20096**](../Model/InlineResponse20096.md)
+[**\Zoom\Api\Model\InlineResponse20096**](../Model/InlineResponse20096.md)
 
 ### Authorization
 
@@ -171,7 +171,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listCommonAreaPhones**
-> \Swagger\Client\Model\InlineResponse20095 listCommonAreaPhones($page_size, $next_page_token)
+> \Zoom\Api\Model\InlineResponse20095 listCommonAreaPhones($page_size, $next_page_token)
 
 List Common Area Phones
 
@@ -183,9 +183,9 @@ A common area phone can be provisioned by a Zoom account owner or a Zoom admin s
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\CommonAreaPhonesApi(
+$apiInstance = new Zoom\Api\Api\CommonAreaPhonesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -212,7 +212,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20095**](../Model/InlineResponse20095.md)
+[**\Zoom\Api\Model\InlineResponse20095**](../Model/InlineResponse20095.md)
 
 ### Authorization
 
@@ -238,16 +238,16 @@ A common area phone can be provisioned by a Zoom account owner or a Zoom admin s
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\CommonAreaPhonesApi(
+$apiInstance = new Zoom\Api\Api\CommonAreaPhonesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $common_area_phone_id = "common_area_phone_id_example"; // string | 
-$body = new \Swagger\Client\Model\Body76(); // \Swagger\Client\Model\Body76 | 
+$body = new \Zoom\Api\Model\Body76(); // \Zoom\Api\Model\Body76 | 
 
 try {
     $result = $apiInstance->updateCommonAreaPhone($common_area_phone_id, $body);
@@ -263,7 +263,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **common_area_phone_id** | **string**|  |
- **body** | [**\Swagger\Client\Model\Body76**](../Model/Body76.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\Body76**](../Model/Body76.md)|  | [optional]
 
 ### Return type
 

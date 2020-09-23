@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * UserSchedulersList Class Doc Comment
  *
  * @category Class
  * @description List of user&#39;s schedulers.
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,7 +58,7 @@ class UserSchedulersList implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'schedulers' => '\Swagger\Client\Model\UserSchedulersListSchedulers[]'
+        'schedulers' => '\Zoom\Api\Model\UserSchedulersListSchedulers[]'
     ];
 
     /**
@@ -208,7 +208,7 @@ class UserSchedulersList implements ModelInterface, ArrayAccess
     /**
      * Gets schedulers
      *
-     * @return \Swagger\Client\Model\UserSchedulersListSchedulers[]
+     * @return \Zoom\Api\Model\UserSchedulersListSchedulers[]
      */
     public function getSchedulers()
     {
@@ -218,7 +218,7 @@ class UserSchedulersList implements ModelInterface, ArrayAccess
     /**
      * Sets schedulers
      *
-     * @param \Swagger\Client\Model\UserSchedulersListSchedulers[] $schedulers List of users for whom the current user can schedule meetings.
+     * @param \Zoom\Api\Model\UserSchedulersListSchedulers[] $schedulers List of users for whom the current user can schedule meetings.
      *
      * @return $this
      */

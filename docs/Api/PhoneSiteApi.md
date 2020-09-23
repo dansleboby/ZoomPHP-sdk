@@ -1,4 +1,4 @@
-# Swagger\Client\PhoneSiteApi
+# Zoom\Api\PhoneSiteApi
 
 All URIs are relative to *https://api.zoom.us/v2*
 
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **createPhoneSite**
-> \Swagger\Client\Model\InlineResponse204 createPhoneSite($body)
+> \Zoom\Api\Model\InlineResponse204 createPhoneSite($body)
 
 Create a Phone Site
 
@@ -24,15 +24,15 @@ Sites allow you to organize Zoom Phone users in your organization. Use this API 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PhoneSiteApi(
+$apiInstance = new Zoom\Api\Api\PhoneSiteApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\Body3(); // \Swagger\Client\Model\Body3 | 
+$body = new \Zoom\Api\Model\Body3(); // \Zoom\Api\Model\Body3 | 
 
 try {
     $result = $apiInstance->createPhoneSite($body);
@@ -47,11 +47,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body3**](../Model/Body3.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\Body3**](../Model/Body3.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse204**](../Model/InlineResponse204.md)
+[**\Zoom\Api\Model\InlineResponse204**](../Model/InlineResponse204.md)
 
 ### Authorization
 
@@ -77,9 +77,9 @@ Sites allow you to organize Zoom Phone users in your organization. Use this API 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PhoneSiteApi(
+$apiInstance = new Zoom\Api\Api\PhoneSiteApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getASite**
-> \Swagger\Client\Model\InlineResponse2004 getASite($site_id)
+> \Zoom\Api\Model\InlineResponse2004 getASite($site_id)
 
 Get Phone Site Details
 
@@ -132,9 +132,9 @@ Sites allow you to organize Zoom Phone users in your organization. Use this API 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PhoneSiteApi(
+$apiInstance = new Zoom\Api\Api\PhoneSiteApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -159,7 +159,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2004**](../Model/InlineResponse2004.md)
+[**\Zoom\Api\Model\InlineResponse2004**](../Model/InlineResponse2004.md)
 
 ### Authorization
 
@@ -173,7 +173,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listPhoneSites**
-> \Swagger\Client\Model\InlineResponse2003 listPhoneSites($page_size, $next_page_token)
+> \Zoom\Api\Model\InlineResponse2003 listPhoneSites($page_size, $next_page_token)
 
 List Phone Sites
 
@@ -185,9 +185,9 @@ Sites allow you to organize Zoom Phone users in your organization. Use this API 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PhoneSiteApi(
+$apiInstance = new Zoom\Api\Api\PhoneSiteApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -214,7 +214,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
+[**\Zoom\Api\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
 
 ### Authorization
 
@@ -240,16 +240,16 @@ Sites allow you to organize Zoom Phone users in your organization. Use this API 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PhoneSiteApi(
+$apiInstance = new Zoom\Api\Api\PhoneSiteApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $site_id = "site_id_example"; // string | Unique Identifier of the Site.
-$body = new \Swagger\Client\Model\Body4(); // \Swagger\Client\Model\Body4 | 
+$body = new \Zoom\Api\Model\Body4(); // \Zoom\Api\Model\Body4 | 
 
 try {
     $result = $apiInstance->updateSiteDetails($site_id, $body);
@@ -265,7 +265,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **site_id** | **string**| Unique Identifier of the Site. |
- **body** | [**\Swagger\Client\Model\Body4**](../Model/Body4.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\Body4**](../Model/Body4.md)|  | [optional]
 
 ### Return type
 

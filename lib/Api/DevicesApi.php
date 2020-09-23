@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Zoom\Api\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Zoom\Api\ApiException;
+use Zoom\Api\Configuration;
+use Zoom\Api\HeaderSelector;
+use Zoom\Api\ObjectSerializer;
 
 /**
  * DevicesApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -92,9 +92,9 @@ class DevicesApi
      *
      * Create a H.323/SIP Device
      *
-     * @param  \Swagger\Client\Model\TheH323SIPDeviceObject_ $body H.323/SIP device. (required)
+     * @param  \Zoom\Api\Model\TheH323SIPDeviceObject_ $body H.323/SIP device. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -108,9 +108,9 @@ class DevicesApi
      *
      * Create a H.323/SIP Device
      *
-     * @param  \Swagger\Client\Model\TheH323SIPDeviceObject_ $body H.323/SIP device. (required)
+     * @param  \Zoom\Api\Model\TheH323SIPDeviceObject_ $body H.323/SIP device. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -154,7 +154,7 @@ class DevicesApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse2018',
+                        '\Zoom\Api\Model\InlineResponse2018',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -169,7 +169,7 @@ class DevicesApi
      *
      * Create a H.323/SIP Device
      *
-     * @param  \Swagger\Client\Model\TheH323SIPDeviceObject_ $body H.323/SIP device. (required)
+     * @param  \Zoom\Api\Model\TheH323SIPDeviceObject_ $body H.323/SIP device. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -189,7 +189,7 @@ class DevicesApi
      *
      * Create a H.323/SIP Device
      *
-     * @param  \Swagger\Client\Model\TheH323SIPDeviceObject_ $body H.323/SIP device. (required)
+     * @param  \Zoom\Api\Model\TheH323SIPDeviceObject_ $body H.323/SIP device. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -225,7 +225,7 @@ class DevicesApi
     /**
      * Create request for operation 'deviceCreate'
      *
-     * @param  \Swagger\Client\Model\TheH323SIPDeviceObject_ $body H.323/SIP device. (required)
+     * @param  \Zoom\Api\Model\TheH323SIPDeviceObject_ $body H.323/SIP device. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -333,7 +333,7 @@ class DevicesApi
      *
      * @param  string $device_id The device ID. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -349,7 +349,7 @@ class DevicesApi
      *
      * @param  string $device_id The device ID. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -571,9 +571,9 @@ class DevicesApi
      * @param  int $page_number **Deprecated** - This field has been deprecated and we will stop supporting it completely in a future release. Please use \&quot;next_page_token\&quot; for pagination instead of this field.  The page number of the current page in the returned records. (optional, default to 1)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\H323SIPDeviceList
+     * @return \Zoom\Api\Model\H323SIPDeviceList
      */
     public function deviceList($page_size = '30', $page_number = '1', $next_page_token = null)
     {
@@ -590,13 +590,13 @@ class DevicesApi
      * @param  int $page_number **Deprecated** - This field has been deprecated and we will stop supporting it completely in a future release. Please use \&quot;next_page_token\&quot; for pagination instead of this field.  The page number of the current page in the returned records. (optional, default to 1)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\H323SIPDeviceList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\H323SIPDeviceList, HTTP status code, HTTP response headers (array of strings)
      */
     public function deviceListWithHttpInfo($page_size = '30', $page_number = '1', $next_page_token = null)
     {
-        $returnType = '\Swagger\Client\Model\H323SIPDeviceList';
+        $returnType = '\Zoom\Api\Model\H323SIPDeviceList';
         $request = $this->deviceListRequest($page_size, $page_number, $next_page_token);
 
         try {
@@ -648,7 +648,7 @@ class DevicesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\H323SIPDeviceList',
+                        '\Zoom\Api\Model\H323SIPDeviceList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -694,7 +694,7 @@ class DevicesApi
      */
     public function deviceListAsyncWithHttpInfo($page_size = '30', $page_number = '1', $next_page_token = null)
     {
-        $returnType = '\Swagger\Client\Model\H323SIPDeviceList';
+        $returnType = '\Zoom\Api\Model\H323SIPDeviceList';
         $request = $this->deviceListRequest($page_size, $page_number, $next_page_token);
 
         return $this->client
@@ -853,9 +853,9 @@ class DevicesApi
      * Update a H.323/SIP Device
      *
      * @param  string $device_id The device ID. (required)
-     * @param  \Swagger\Client\Model\TheH323SIPDeviceObject1 $body body (required)
+     * @param  \Zoom\Api\Model\TheH323SIPDeviceObject1 $body body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -870,9 +870,9 @@ class DevicesApi
      * Update a H.323/SIP Device
      *
      * @param  string $device_id The device ID. (required)
-     * @param  \Swagger\Client\Model\TheH323SIPDeviceObject1 $body (required)
+     * @param  \Zoom\Api\Model\TheH323SIPDeviceObject1 $body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -924,7 +924,7 @@ class DevicesApi
      * Update a H.323/SIP Device
      *
      * @param  string $device_id The device ID. (required)
-     * @param  \Swagger\Client\Model\TheH323SIPDeviceObject1 $body (required)
+     * @param  \Zoom\Api\Model\TheH323SIPDeviceObject1 $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -945,7 +945,7 @@ class DevicesApi
      * Update a H.323/SIP Device
      *
      * @param  string $device_id The device ID. (required)
-     * @param  \Swagger\Client\Model\TheH323SIPDeviceObject1 $body (required)
+     * @param  \Zoom\Api\Model\TheH323SIPDeviceObject1 $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -982,7 +982,7 @@ class DevicesApi
      * Create request for operation 'deviceUpdate'
      *
      * @param  string $device_id The device ID. (required)
-     * @param  \Swagger\Client\Model\TheH323SIPDeviceObject1 $body (required)
+     * @param  \Zoom\Api\Model\TheH323SIPDeviceObject1 $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

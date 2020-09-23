@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse20069 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,11 +57,11 @@ class InlineResponse20069 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'schedule_meeting' => '\Swagger\Client\Model\InlineResponse20069ScheduleMeeting',
-        'in_meeting' => '\Swagger\Client\Model\InlineResponse20069InMeeting',
-        'email_notification' => '\Swagger\Client\Model\InlineResponse20069EmailNotification',
-        'recording' => '\Swagger\Client\Model\InlineResponse20069Recording',
-        'telephony' => '\Swagger\Client\Model\InlineResponse20069Telephony'
+        'schedule_meeting' => '\Zoom\Api\Model\InlineResponse20069ScheduleMeeting',
+        'in_meeting' => '\Zoom\Api\Model\InlineResponse20069InMeeting',
+        'email_notification' => '\Zoom\Api\Model\InlineResponse20069EmailNotification',
+        'recording' => '\Zoom\Api\Model\InlineResponse20069Recording',
+        'telephony' => '\Zoom\Api\Model\InlineResponse20069Telephony'
     ];
 
     /**
@@ -231,7 +231,7 @@ class InlineResponse20069 implements ModelInterface, ArrayAccess
     /**
      * Gets schedule_meeting
      *
-     * @return \Swagger\Client\Model\InlineResponse20069ScheduleMeeting
+     * @return \Zoom\Api\Model\InlineResponse20069ScheduleMeeting
      */
     public function getScheduleMeeting()
     {
@@ -241,7 +241,7 @@ class InlineResponse20069 implements ModelInterface, ArrayAccess
     /**
      * Sets schedule_meeting
      *
-     * @param \Swagger\Client\Model\InlineResponse20069ScheduleMeeting $schedule_meeting schedule_meeting
+     * @param \Zoom\Api\Model\InlineResponse20069ScheduleMeeting $schedule_meeting schedule_meeting
      *
      * @return $this
      */
@@ -255,7 +255,7 @@ class InlineResponse20069 implements ModelInterface, ArrayAccess
     /**
      * Gets in_meeting
      *
-     * @return \Swagger\Client\Model\InlineResponse20069InMeeting
+     * @return \Zoom\Api\Model\InlineResponse20069InMeeting
      */
     public function getInMeeting()
     {
@@ -265,7 +265,7 @@ class InlineResponse20069 implements ModelInterface, ArrayAccess
     /**
      * Sets in_meeting
      *
-     * @param \Swagger\Client\Model\InlineResponse20069InMeeting $in_meeting in_meeting
+     * @param \Zoom\Api\Model\InlineResponse20069InMeeting $in_meeting in_meeting
      *
      * @return $this
      */
@@ -279,7 +279,7 @@ class InlineResponse20069 implements ModelInterface, ArrayAccess
     /**
      * Gets email_notification
      *
-     * @return \Swagger\Client\Model\InlineResponse20069EmailNotification
+     * @return \Zoom\Api\Model\InlineResponse20069EmailNotification
      */
     public function getEmailNotification()
     {
@@ -289,7 +289,7 @@ class InlineResponse20069 implements ModelInterface, ArrayAccess
     /**
      * Sets email_notification
      *
-     * @param \Swagger\Client\Model\InlineResponse20069EmailNotification $email_notification email_notification
+     * @param \Zoom\Api\Model\InlineResponse20069EmailNotification $email_notification email_notification
      *
      * @return $this
      */
@@ -303,7 +303,7 @@ class InlineResponse20069 implements ModelInterface, ArrayAccess
     /**
      * Gets recording
      *
-     * @return \Swagger\Client\Model\InlineResponse20069Recording
+     * @return \Zoom\Api\Model\InlineResponse20069Recording
      */
     public function getRecording()
     {
@@ -313,7 +313,7 @@ class InlineResponse20069 implements ModelInterface, ArrayAccess
     /**
      * Sets recording
      *
-     * @param \Swagger\Client\Model\InlineResponse20069Recording $recording recording
+     * @param \Zoom\Api\Model\InlineResponse20069Recording $recording recording
      *
      * @return $this
      */
@@ -327,7 +327,7 @@ class InlineResponse20069 implements ModelInterface, ArrayAccess
     /**
      * Gets telephony
      *
-     * @return \Swagger\Client\Model\InlineResponse20069Telephony
+     * @return \Zoom\Api\Model\InlineResponse20069Telephony
      */
     public function getTelephony()
     {
@@ -337,7 +337,7 @@ class InlineResponse20069 implements ModelInterface, ArrayAccess
     /**
      * Sets telephony
      *
-     * @param \Swagger\Client\Model\InlineResponse20069Telephony $telephony telephony
+     * @param \Zoom\Api\Model\InlineResponse20069Telephony $telephony telephony
      *
      * @return $this
      */

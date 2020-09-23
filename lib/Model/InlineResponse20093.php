@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse20093 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class InlineResponse20093 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'calling_plans' => '\Swagger\Client\Model\InlineResponse20093CallingPlans[]'
+        'calling_plans' => '\Zoom\Api\Model\InlineResponse20093CallingPlans[]'
     ];
 
     /**
@@ -207,7 +207,7 @@ class InlineResponse20093 implements ModelInterface, ArrayAccess
     /**
      * Gets calling_plans
      *
-     * @return \Swagger\Client\Model\InlineResponse20093CallingPlans[]
+     * @return \Zoom\Api\Model\InlineResponse20093CallingPlans[]
      */
     public function getCallingPlans()
     {
@@ -217,7 +217,7 @@ class InlineResponse20093 implements ModelInterface, ArrayAccess
     /**
      * Sets calling_plans
      *
-     * @param \Swagger\Client\Model\InlineResponse20093CallingPlans[] $calling_plans calling_plans
+     * @param \Zoom\Api\Model\InlineResponse20093CallingPlans[] $calling_plans calling_plans
      *
      * @return $this
      */

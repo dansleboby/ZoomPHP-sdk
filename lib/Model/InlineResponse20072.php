@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse20072 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,11 +57,11 @@ class InlineResponse20072 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'plan_base' => '\Swagger\Client\Model\InlineResponse20072PlanBase[]',
-        'plan_webinar' => '\Swagger\Client\Model\InlineResponse20072PlanWebinar[]',
-        'plan_large_meeting' => '\Swagger\Client\Model\InlineResponse20072PlanLargeMeeting[]',
-        'plan_zoom_rooms' => '\Swagger\Client\Model\InlineResponse20072PlanZoomRooms[]',
-        'plan_recording' => '\Swagger\Client\Model\InlineResponse20072PlanRecording'
+        'plan_base' => '\Zoom\Api\Model\InlineResponse20072PlanBase[]',
+        'plan_webinar' => '\Zoom\Api\Model\InlineResponse20072PlanWebinar[]',
+        'plan_large_meeting' => '\Zoom\Api\Model\InlineResponse20072PlanLargeMeeting[]',
+        'plan_zoom_rooms' => '\Zoom\Api\Model\InlineResponse20072PlanZoomRooms[]',
+        'plan_recording' => '\Zoom\Api\Model\InlineResponse20072PlanRecording'
     ];
 
     /**
@@ -231,7 +231,7 @@ class InlineResponse20072 implements ModelInterface, ArrayAccess
     /**
      * Gets plan_base
      *
-     * @return \Swagger\Client\Model\InlineResponse20072PlanBase[]
+     * @return \Zoom\Api\Model\InlineResponse20072PlanBase[]
      */
     public function getPlanBase()
     {
@@ -241,7 +241,7 @@ class InlineResponse20072 implements ModelInterface, ArrayAccess
     /**
      * Sets plan_base
      *
-     * @param \Swagger\Client\Model\InlineResponse20072PlanBase[] $plan_base The base plan subscribed for the sub account.
+     * @param \Zoom\Api\Model\InlineResponse20072PlanBase[] $plan_base The base plan subscribed for the sub account.
      *
      * @return $this
      */
@@ -255,7 +255,7 @@ class InlineResponse20072 implements ModelInterface, ArrayAccess
     /**
      * Gets plan_webinar
      *
-     * @return \Swagger\Client\Model\InlineResponse20072PlanWebinar[]
+     * @return \Zoom\Api\Model\InlineResponse20072PlanWebinar[]
      */
     public function getPlanWebinar()
     {
@@ -265,7 +265,7 @@ class InlineResponse20072 implements ModelInterface, ArrayAccess
     /**
      * Sets plan_webinar
      *
-     * @param \Swagger\Client\Model\InlineResponse20072PlanWebinar[] $plan_webinar Webinar Plan
+     * @param \Zoom\Api\Model\InlineResponse20072PlanWebinar[] $plan_webinar Webinar Plan
      *
      * @return $this
      */
@@ -279,7 +279,7 @@ class InlineResponse20072 implements ModelInterface, ArrayAccess
     /**
      * Gets plan_large_meeting
      *
-     * @return \Swagger\Client\Model\InlineResponse20072PlanLargeMeeting[]
+     * @return \Zoom\Api\Model\InlineResponse20072PlanLargeMeeting[]
      */
     public function getPlanLargeMeeting()
     {
@@ -289,7 +289,7 @@ class InlineResponse20072 implements ModelInterface, ArrayAccess
     /**
      * Sets plan_large_meeting
      *
-     * @param \Swagger\Client\Model\InlineResponse20072PlanLargeMeeting[] $plan_large_meeting Large Meeting Plan
+     * @param \Zoom\Api\Model\InlineResponse20072PlanLargeMeeting[] $plan_large_meeting Large Meeting Plan
      *
      * @return $this
      */
@@ -303,7 +303,7 @@ class InlineResponse20072 implements ModelInterface, ArrayAccess
     /**
      * Gets plan_zoom_rooms
      *
-     * @return \Swagger\Client\Model\InlineResponse20072PlanZoomRooms[]
+     * @return \Zoom\Api\Model\InlineResponse20072PlanZoomRooms[]
      */
     public function getPlanZoomRooms()
     {
@@ -313,7 +313,7 @@ class InlineResponse20072 implements ModelInterface, ArrayAccess
     /**
      * Sets plan_zoom_rooms
      *
-     * @param \Swagger\Client\Model\InlineResponse20072PlanZoomRooms[] $plan_zoom_rooms Zoom Rooms Plan
+     * @param \Zoom\Api\Model\InlineResponse20072PlanZoomRooms[] $plan_zoom_rooms Zoom Rooms Plan
      *
      * @return $this
      */
@@ -327,7 +327,7 @@ class InlineResponse20072 implements ModelInterface, ArrayAccess
     /**
      * Gets plan_recording
      *
-     * @return \Swagger\Client\Model\InlineResponse20072PlanRecording
+     * @return \Zoom\Api\Model\InlineResponse20072PlanRecording
      */
     public function getPlanRecording()
     {
@@ -337,7 +337,7 @@ class InlineResponse20072 implements ModelInterface, ArrayAccess
     /**
      * Sets plan_recording
      *
-     * @param \Swagger\Client\Model\InlineResponse20072PlanRecording $plan_recording plan_recording
+     * @param \Zoom\Api\Model\InlineResponse20072PlanRecording $plan_recording plan_recording
      *
      * @return $this
      */

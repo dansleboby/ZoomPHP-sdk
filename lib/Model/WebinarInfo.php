@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * WebinarInfo Class Doc Comment
  *
  * @category Class
  * @description Webinar object.
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -67,10 +67,10 @@ class WebinarInfo implements ModelInterface, ArrayAccess
         'created_at' => '\DateTime',
         'start_url' => 'string',
         'join_url' => 'string',
-        'tracking_fields' => '\Swagger\Client\Model\InlineResponse20119TrackingFields[]',
-        'occurrences' => '\Swagger\Client\Model\InlineResponse20111Occurrences[]',
-        'settings' => '\Swagger\Client\Model\InlineResponse20119Settings',
-        'recurrence' => '\Swagger\Client\Model\RecurrenceWebinar',
+        'tracking_fields' => '\Zoom\Api\Model\InlineResponse20119TrackingFields[]',
+        'occurrences' => '\Zoom\Api\Model\InlineResponse20111Occurrences[]',
+        'settings' => '\Zoom\Api\Model\InlineResponse20119Settings',
+        'recurrence' => '\Zoom\Api\Model\RecurrenceWebinar',
         'password' => 'string'
     ];
 
@@ -514,7 +514,7 @@ class WebinarInfo implements ModelInterface, ArrayAccess
     /**
      * Gets tracking_fields
      *
-     * @return \Swagger\Client\Model\InlineResponse20119TrackingFields[]
+     * @return \Zoom\Api\Model\InlineResponse20119TrackingFields[]
      */
     public function getTrackingFields()
     {
@@ -524,7 +524,7 @@ class WebinarInfo implements ModelInterface, ArrayAccess
     /**
      * Sets tracking_fields
      *
-     * @param \Swagger\Client\Model\InlineResponse20119TrackingFields[] $tracking_fields Tracking fields
+     * @param \Zoom\Api\Model\InlineResponse20119TrackingFields[] $tracking_fields Tracking fields
      *
      * @return $this
      */
@@ -538,7 +538,7 @@ class WebinarInfo implements ModelInterface, ArrayAccess
     /**
      * Gets occurrences
      *
-     * @return \Swagger\Client\Model\InlineResponse20111Occurrences[]
+     * @return \Zoom\Api\Model\InlineResponse20111Occurrences[]
      */
     public function getOccurrences()
     {
@@ -548,7 +548,7 @@ class WebinarInfo implements ModelInterface, ArrayAccess
     /**
      * Sets occurrences
      *
-     * @param \Swagger\Client\Model\InlineResponse20111Occurrences[] $occurrences Array of occurrence objects.
+     * @param \Zoom\Api\Model\InlineResponse20111Occurrences[] $occurrences Array of occurrence objects.
      *
      * @return $this
      */
@@ -562,7 +562,7 @@ class WebinarInfo implements ModelInterface, ArrayAccess
     /**
      * Gets settings
      *
-     * @return \Swagger\Client\Model\InlineResponse20119Settings
+     * @return \Zoom\Api\Model\InlineResponse20119Settings
      */
     public function getSettings()
     {
@@ -572,7 +572,7 @@ class WebinarInfo implements ModelInterface, ArrayAccess
     /**
      * Sets settings
      *
-     * @param \Swagger\Client\Model\InlineResponse20119Settings $settings settings
+     * @param \Zoom\Api\Model\InlineResponse20119Settings $settings settings
      *
      * @return $this
      */
@@ -586,7 +586,7 @@ class WebinarInfo implements ModelInterface, ArrayAccess
     /**
      * Gets recurrence
      *
-     * @return \Swagger\Client\Model\RecurrenceWebinar
+     * @return \Zoom\Api\Model\RecurrenceWebinar
      */
     public function getRecurrence()
     {
@@ -596,7 +596,7 @@ class WebinarInfo implements ModelInterface, ArrayAccess
     /**
      * Sets recurrence
      *
-     * @param \Swagger\Client\Model\RecurrenceWebinar $recurrence recurrence
+     * @param \Zoom\Api\Model\RecurrenceWebinar $recurrence recurrence
      *
      * @return $this
      */

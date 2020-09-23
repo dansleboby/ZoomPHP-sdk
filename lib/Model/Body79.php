@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * Body79 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,7 +59,7 @@ class Body79 implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'display_name' => 'string',
         'extension_number' => 'int',
-        'primary_number' => '\Swagger\Client\Model\PhonesharedLineGroupssharedLineGroupIdPrimaryNumber',
+        'primary_number' => '\Zoom\Api\Model\PhonesharedLineGroupssharedLineGroupIdPrimaryNumber',
         'timezone' => 'string',
         'status' => 'string'
     ];
@@ -302,7 +302,7 @@ class Body79 implements ModelInterface, ArrayAccess
     /**
      * Gets primary_number
      *
-     * @return \Swagger\Client\Model\PhonesharedLineGroupssharedLineGroupIdPrimaryNumber
+     * @return \Zoom\Api\Model\PhonesharedLineGroupssharedLineGroupIdPrimaryNumber
      */
     public function getPrimaryNumber()
     {
@@ -312,7 +312,7 @@ class Body79 implements ModelInterface, ArrayAccess
     /**
      * Sets primary_number
      *
-     * @param \Swagger\Client\Model\PhonesharedLineGroupssharedLineGroupIdPrimaryNumber $primary_number primary_number
+     * @param \Zoom\Api\Model\PhonesharedLineGroupssharedLineGroupIdPrimaryNumber $primary_number primary_number
      *
      * @return $this
      */

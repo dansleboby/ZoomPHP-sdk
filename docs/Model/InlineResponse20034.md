@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **total_meetings** | **int** | Number of meetings for this range. | [optional] 
 **total_participants** | **int** | Number of participants for this range. | [optional] 
 **total_records** | **int** | The total number of all the records available across pages. | [optional] 
-**users** | [**\Swagger\Client\Model\InlineResponse20034Users[]**](InlineResponse20034Users.md) | Array of user objects. | [optional] 
+**users** | [**\Zoom\Api\Model\InlineResponse20034Users[]**](InlineResponse20034Users.md) | Array of user objects. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

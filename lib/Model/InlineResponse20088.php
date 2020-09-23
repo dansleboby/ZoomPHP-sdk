@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse20088 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -60,7 +60,7 @@ class InlineResponse20088 implements ModelInterface, ArrayAccess
         'next_page_token' => 'string',
         'page_size' => 'int',
         'total_records' => 'string',
-        'devices' => '\Swagger\Client\Model\InlineResponse20088Devices[]'
+        'devices' => '\Zoom\Api\Model\InlineResponse20088Devices[]'
     ];
 
     /**
@@ -297,7 +297,7 @@ class InlineResponse20088 implements ModelInterface, ArrayAccess
     /**
      * Gets devices
      *
-     * @return \Swagger\Client\Model\InlineResponse20088Devices[]
+     * @return \Zoom\Api\Model\InlineResponse20088Devices[]
      */
     public function getDevices()
     {
@@ -307,7 +307,7 @@ class InlineResponse20088 implements ModelInterface, ArrayAccess
     /**
      * Sets devices
      *
-     * @param \Swagger\Client\Model\InlineResponse20088Devices[] $devices devices
+     * @param \Zoom\Api\Model\InlineResponse20088Devices[] $devices devices
      *
      * @return $this
      */

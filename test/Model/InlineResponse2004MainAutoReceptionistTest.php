@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  ZoomApi
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,14 +27,14 @@
  * Please update the test case below to test the model.
  */
 
-namespace Swagger\Client;
+namespace ZoomApi;
 
 /**
  * InlineResponse2004MainAutoReceptionistTest Class Doc Comment
  *
  * @category    Class
  * @description [Main Auto Receptionist](https://support.zoom.us/hc/en-us/articles/360021121312#h_bc7ff1d5-0e6c-40cd-b889-62010cb98c57) for each site.
- * @package     Swagger\Client
+ * @package     ZoomApi
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */

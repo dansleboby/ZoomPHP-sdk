@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Zoom\Api\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Zoom\Api\ApiException;
+use Zoom\Api\Configuration;
+use Zoom\Api\HeaderSelector;
+use Zoom\Api\ObjectSerializer;
 
 /**
  * RoomsLocationApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -92,11 +92,11 @@ class RoomsLocationApi
      *
      * Add a Location
      *
-     * @param  \Swagger\Client\Model\Body57 $body body (optional)
+     * @param  \Zoom\Api\Model\Body57 $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20077
+     * @return \Zoom\Api\Model\InlineResponse20077
      */
     public function addAZRLocation($body = null)
     {
@@ -109,15 +109,15 @@ class RoomsLocationApi
      *
      * Add a Location
      *
-     * @param  \Swagger\Client\Model\Body57 $body (optional)
+     * @param  \Zoom\Api\Model\Body57 $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20077, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20077, HTTP status code, HTTP response headers (array of strings)
      */
     public function addAZRLocationWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20077';
+        $returnType = '\Zoom\Api\Model\InlineResponse20077';
         $request = $this->addAZRLocationRequest($body);
 
         try {
@@ -169,7 +169,7 @@ class RoomsLocationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20077',
+                        '\Zoom\Api\Model\InlineResponse20077',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -184,7 +184,7 @@ class RoomsLocationApi
      *
      * Add a Location
      *
-     * @param  \Swagger\Client\Model\Body57 $body (optional)
+     * @param  \Zoom\Api\Model\Body57 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -204,14 +204,14 @@ class RoomsLocationApi
      *
      * Add a Location
      *
-     * @param  \Swagger\Client\Model\Body57 $body (optional)
+     * @param  \Zoom\Api\Model\Body57 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function addAZRLocationAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20077';
+        $returnType = '\Zoom\Api\Model\InlineResponse20077';
         $request = $this->addAZRLocationRequest($body);
 
         return $this->client
@@ -254,7 +254,7 @@ class RoomsLocationApi
     /**
      * Create request for operation 'addAZRLocation'
      *
-     * @param  \Swagger\Client\Model\Body57 $body (optional)
+     * @param  \Zoom\Api\Model\Body57 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -355,9 +355,9 @@ class RoomsLocationApi
      * Change the Assigned Parent Location
      *
      * @param  string $location_id location_id (required)
-     * @param  \Swagger\Client\Model\Body66 $body body (optional)
+     * @param  \Zoom\Api\Model\Body66 $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -373,9 +373,9 @@ class RoomsLocationApi
      * Change the Assigned Parent Location
      *
      * @param  string $location_id (required)
-     * @param  \Swagger\Client\Model\Body66 $body (optional)
+     * @param  \Zoom\Api\Model\Body66 $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -449,7 +449,7 @@ class RoomsLocationApi
      * Change the Assigned Parent Location
      *
      * @param  string $location_id (required)
-     * @param  \Swagger\Client\Model\Body66 $body (optional)
+     * @param  \Zoom\Api\Model\Body66 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -470,7 +470,7 @@ class RoomsLocationApi
      * Change the Assigned Parent Location
      *
      * @param  string $location_id (required)
-     * @param  \Swagger\Client\Model\Body66 $body (optional)
+     * @param  \Zoom\Api\Model\Body66 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -521,7 +521,7 @@ class RoomsLocationApi
      * Create request for operation 'changeParentLocation'
      *
      * @param  string $location_id (required)
-     * @param  \Swagger\Client\Model\Body66 $body (optional)
+     * @param  \Zoom\Api\Model\Body66 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -637,9 +637,9 @@ class RoomsLocationApi
      *
      * @param  string $location_id Unique identifier of the location type. This can be retrieved using the [List Zoom Room Location API](https://marketplace.zoom.us/docs/api-reference/zoom-api/rooms-location/listzrlocations) (Id property in the response). (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20078
+     * @return \Zoom\Api\Model\InlineResponse20078
      */
     public function getZRLocationProfile($location_id)
     {
@@ -654,13 +654,13 @@ class RoomsLocationApi
      *
      * @param  string $location_id Unique identifier of the location type. This can be retrieved using the [List Zoom Room Location API](https://marketplace.zoom.us/docs/api-reference/zoom-api/rooms-location/listzrlocations) (Id property in the response). (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20078, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20078, HTTP status code, HTTP response headers (array of strings)
      */
     public function getZRLocationProfileWithHttpInfo($location_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20078';
+        $returnType = '\Zoom\Api\Model\InlineResponse20078';
         $request = $this->getZRLocationProfileRequest($location_id);
 
         try {
@@ -712,7 +712,7 @@ class RoomsLocationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20078',
+                        '\Zoom\Api\Model\InlineResponse20078',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -754,7 +754,7 @@ class RoomsLocationApi
      */
     public function getZRLocationProfileAsyncWithHttpInfo($location_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20078';
+        $returnType = '\Zoom\Api\Model\InlineResponse20078';
         $request = $this->getZRLocationProfileRequest($location_id);
 
         return $this->client
@@ -911,7 +911,7 @@ class RoomsLocationApi
      * @param  string $setting_type The type of setting that you would like to retrieve.&lt;br&gt; &#x60;alert&#x60;: Alert Settings applied on the Zoom Rooms Account.&lt;br&gt; &#x60;meeting&#x60;: Meeting settings of the Zoom Rooms Account.&lt;br&gt; &#x60;signage&#x60;: Digital signage settings of the Zoom Rooms Account. (required)
      * @param  string $location_id Unique identifier of the location type. This can be retrieved using the [List Zoom Room Location API](https://marketplace.zoom.us/docs/api-reference/zoom-api/rooms-location/listzrlocations) (Id property in the response). (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -929,7 +929,7 @@ class RoomsLocationApi
      * @param  string $setting_type The type of setting that you would like to retrieve.&lt;br&gt; &#x60;alert&#x60;: Alert Settings applied on the Zoom Rooms Account.&lt;br&gt; &#x60;meeting&#x60;: Meeting settings of the Zoom Rooms Account.&lt;br&gt; &#x60;signage&#x60;: Digital signage settings of the Zoom Rooms Account. (required)
      * @param  string $location_id Unique identifier of the location type. This can be retrieved using the [List Zoom Room Location API](https://marketplace.zoom.us/docs/api-reference/zoom-api/rooms-location/listzrlocations) (Id property in the response). (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1197,9 +1197,9 @@ class RoomsLocationApi
      * Get Zoom Room Location Structure
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20079
+     * @return \Zoom\Api\Model\InlineResponse20079
      */
     public function getZRLocationStructure()
     {
@@ -1213,13 +1213,13 @@ class RoomsLocationApi
      * Get Zoom Room Location Structure
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20079, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20079, HTTP status code, HTTP response headers (array of strings)
      */
     public function getZRLocationStructureWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20079';
+        $returnType = '\Zoom\Api\Model\InlineResponse20079';
         $request = $this->getZRLocationStructureRequest();
 
         try {
@@ -1271,7 +1271,7 @@ class RoomsLocationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20079',
+                        '\Zoom\Api\Model\InlineResponse20079',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1311,7 +1311,7 @@ class RoomsLocationApi
      */
     public function getZRLocationStructureAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20079';
+        $returnType = '\Zoom\Api\Model\InlineResponse20079';
         $request = $this->getZRLocationStructureRequest();
 
         return $this->client
@@ -1455,9 +1455,9 @@ class RoomsLocationApi
      * @param  int $page_size The number of records returned within a single API call. (optional, default to 30)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20076
+     * @return \Zoom\Api\Model\InlineResponse20076
      */
     public function listZRLocations($parent_location_id = null, $type = null, $page_size = '30', $next_page_token = null)
     {
@@ -1475,13 +1475,13 @@ class RoomsLocationApi
      * @param  int $page_size The number of records returned within a single API call. (optional, default to 30)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20076, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20076, HTTP status code, HTTP response headers (array of strings)
      */
     public function listZRLocationsWithHttpInfo($parent_location_id = null, $type = null, $page_size = '30', $next_page_token = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20076';
+        $returnType = '\Zoom\Api\Model\InlineResponse20076';
         $request = $this->listZRLocationsRequest($parent_location_id, $type, $page_size, $next_page_token);
 
         try {
@@ -1533,7 +1533,7 @@ class RoomsLocationApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20076',
+                        '\Zoom\Api\Model\InlineResponse20076',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1581,7 +1581,7 @@ class RoomsLocationApi
      */
     public function listZRLocationsAsyncWithHttpInfo($parent_location_id = null, $type = null, $page_size = '30', $next_page_token = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20076';
+        $returnType = '\Zoom\Api\Model\InlineResponse20076';
         $request = $this->listZRLocationsRequest($parent_location_id, $type, $page_size, $next_page_token);
 
         return $this->client
@@ -1745,9 +1745,9 @@ class RoomsLocationApi
      * Update Zoom Room Location Profile
      *
      * @param  string $location_id Unique Identifier of the location. This can be retrieved from the [List Zoom Room Locations](https://marketplace.zoom.us/docs/api-reference/zoom-api/rooms-location/listzrlocations) API. (required)
-     * @param  \Swagger\Client\Model\Body58 $body body (optional)
+     * @param  \Zoom\Api\Model\Body58 $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -1763,9 +1763,9 @@ class RoomsLocationApi
      * Update Zoom Room Location Profile
      *
      * @param  string $location_id Unique Identifier of the location. This can be retrieved from the [List Zoom Room Locations](https://marketplace.zoom.us/docs/api-reference/zoom-api/rooms-location/listzrlocations) API. (required)
-     * @param  \Swagger\Client\Model\Body58 $body (optional)
+     * @param  \Zoom\Api\Model\Body58 $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1839,7 +1839,7 @@ class RoomsLocationApi
      * Update Zoom Room Location Profile
      *
      * @param  string $location_id Unique Identifier of the location. This can be retrieved from the [List Zoom Room Locations](https://marketplace.zoom.us/docs/api-reference/zoom-api/rooms-location/listzrlocations) API. (required)
-     * @param  \Swagger\Client\Model\Body58 $body (optional)
+     * @param  \Zoom\Api\Model\Body58 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1860,7 +1860,7 @@ class RoomsLocationApi
      * Update Zoom Room Location Profile
      *
      * @param  string $location_id Unique Identifier of the location. This can be retrieved from the [List Zoom Room Locations](https://marketplace.zoom.us/docs/api-reference/zoom-api/rooms-location/listzrlocations) API. (required)
-     * @param  \Swagger\Client\Model\Body58 $body (optional)
+     * @param  \Zoom\Api\Model\Body58 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1911,7 +1911,7 @@ class RoomsLocationApi
      * Create request for operation 'updateZRLocationProfile'
      *
      * @param  string $location_id Unique Identifier of the location. This can be retrieved from the [List Zoom Room Locations](https://marketplace.zoom.us/docs/api-reference/zoom-api/rooms-location/listzrlocations) API. (required)
-     * @param  \Swagger\Client\Model\Body58 $body (optional)
+     * @param  \Zoom\Api\Model\Body58 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2029,7 +2029,7 @@ class RoomsLocationApi
      * @param  string $location_id Unique identifier of the location type. This can be retrieved using the [List Zoom Room Location API](https://marketplace.zoom.us/docs/api-reference/zoom-api/rooms-location/listzrlocations) (Id property in the response). (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -2048,7 +2048,7 @@ class RoomsLocationApi
      * @param  string $location_id Unique identifier of the location type. This can be retrieved using the [List Zoom Room Location API](https://marketplace.zoom.us/docs/api-reference/zoom-api/rooms-location/listzrlocations) (Id property in the response). (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2321,9 +2321,9 @@ class RoomsLocationApi
      *
      * Update Zoom Rooms Location Structure
      *
-     * @param  \Swagger\Client\Model\Body59 $body body (optional)
+     * @param  \Zoom\Api\Model\Body59 $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -2338,9 +2338,9 @@ class RoomsLocationApi
      *
      * Update Zoom Rooms Location Structure
      *
-     * @param  \Swagger\Client\Model\Body59 $body (optional)
+     * @param  \Zoom\Api\Model\Body59 $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2413,7 +2413,7 @@ class RoomsLocationApi
      *
      * Update Zoom Rooms Location Structure
      *
-     * @param  \Swagger\Client\Model\Body59 $body (optional)
+     * @param  \Zoom\Api\Model\Body59 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2433,7 +2433,7 @@ class RoomsLocationApi
      *
      * Update Zoom Rooms Location Structure
      *
-     * @param  \Swagger\Client\Model\Body59 $body (optional)
+     * @param  \Zoom\Api\Model\Body59 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2483,7 +2483,7 @@ class RoomsLocationApi
     /**
      * Create request for operation 'updateZoomRoomsLocationStructure'
      *
-     * @param  \Swagger\Client\Model\Body59 $body (optional)
+     * @param  \Zoom\Api\Model\Body59 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

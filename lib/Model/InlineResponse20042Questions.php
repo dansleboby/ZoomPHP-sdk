@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse20042Questions Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,7 +59,7 @@ class InlineResponse20042Questions implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'name' => 'string',
         'email' => 'string',
-        'question_details' => '\Swagger\Client\Model\InlineResponse20038QuestionDetails[]'
+        'question_details' => '\Zoom\Api\Model\InlineResponse20038QuestionDetails[]'
     ];
 
     /**
@@ -267,7 +267,7 @@ class InlineResponse20042Questions implements ModelInterface, ArrayAccess
     /**
      * Gets question_details
      *
-     * @return \Swagger\Client\Model\InlineResponse20038QuestionDetails[]
+     * @return \Zoom\Api\Model\InlineResponse20038QuestionDetails[]
      */
     public function getQuestionDetails()
     {
@@ -277,7 +277,7 @@ class InlineResponse20042Questions implements ModelInterface, ArrayAccess
     /**
      * Sets question_details
      *
-     * @param \Swagger\Client\Model\InlineResponse20038QuestionDetails[] $question_details Array of questions from user.
+     * @param \Zoom\Api\Model\InlineResponse20038QuestionDetails[] $question_details Array of questions from user.
      *
      * @return $this
      */

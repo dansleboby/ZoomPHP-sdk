@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse2005 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,7 +59,7 @@ class InlineResponse2005 implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'page_size' => 'int',
         'next_page_token' => 'string',
-        'contacts' => '\Swagger\Client\Model\InlineResponse2005Contacts[]'
+        'contacts' => '\Zoom\Api\Model\InlineResponse2005Contacts[]'
     ];
 
     /**
@@ -276,7 +276,7 @@ class InlineResponse2005 implements ModelInterface, ArrayAccess
     /**
      * Gets contacts
      *
-     * @return \Swagger\Client\Model\InlineResponse2005Contacts[]
+     * @return \Zoom\Api\Model\InlineResponse2005Contacts[]
      */
     public function getContacts()
     {
@@ -286,7 +286,7 @@ class InlineResponse2005 implements ModelInterface, ArrayAccess
     /**
      * Sets contacts
      *
-     * @param \Swagger\Client\Model\InlineResponse2005Contacts[] $contacts contacts
+     * @param \Zoom\Api\Model\InlineResponse2005Contacts[] $contacts contacts
      *
      * @return $this
      */

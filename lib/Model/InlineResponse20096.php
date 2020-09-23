@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse20096 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -62,7 +62,7 @@ class InlineResponse20096 implements ModelInterface, ArrayAccess
         'device_type' => 'string',
         'mac_address' => 'string',
         'status' => 'string',
-        'site' => '\Swagger\Client\Model\InlineResponse20095Site'
+        'site' => '\Zoom\Api\Model\InlineResponse20095Site'
     ];
 
     /**
@@ -357,7 +357,7 @@ class InlineResponse20096 implements ModelInterface, ArrayAccess
     /**
      * Gets site
      *
-     * @return \Swagger\Client\Model\InlineResponse20095Site
+     * @return \Zoom\Api\Model\InlineResponse20095Site
      */
     public function getSite()
     {
@@ -367,7 +367,7 @@ class InlineResponse20096 implements ModelInterface, ArrayAccess
     /**
      * Sets site
      *
-     * @param \Swagger\Client\Model\InlineResponse20095Site $site site
+     * @param \Zoom\Api\Model\InlineResponse20095Site $site site
      *
      * @return $this
      */

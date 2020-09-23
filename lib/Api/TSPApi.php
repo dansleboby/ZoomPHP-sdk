@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Zoom\Api\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Zoom\Api\ApiException;
+use Zoom\Api\Configuration;
+use Zoom\Api\HeaderSelector;
+use Zoom\Api\ObjectSerializer;
 
 /**
  * TSPApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -93,9 +93,9 @@ class TSPApi
      * Get Account's TSP Information
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20045
+     * @return \Zoom\Api\Model\InlineResponse20045
      */
     public function tsp()
     {
@@ -109,13 +109,13 @@ class TSPApi
      * Get Account's TSP Information
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20045, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20045, HTTP status code, HTTP response headers (array of strings)
      */
     public function tspWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20045';
+        $returnType = '\Zoom\Api\Model\InlineResponse20045';
         $request = $this->tspRequest();
 
         try {
@@ -167,7 +167,7 @@ class TSPApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20045',
+                        '\Zoom\Api\Model\InlineResponse20045',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -207,7 +207,7 @@ class TSPApi
      */
     public function tspAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20045';
+        $returnType = '\Zoom\Api\Model\InlineResponse20045';
         $request = $this->tspRequest();
 
         return $this->client
@@ -346,9 +346,9 @@ class TSPApi
      *
      * Update account's TSP information
      *
-     * @param  \Swagger\Client\Model\Body31 $body TSP Account (required)
+     * @param  \Zoom\Api\Model\Body31 $body TSP Account (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -362,9 +362,9 @@ class TSPApi
      *
      * Update account's TSP information
      *
-     * @param  \Swagger\Client\Model\Body31 $body TSP Account (required)
+     * @param  \Zoom\Api\Model\Body31 $body TSP Account (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -415,7 +415,7 @@ class TSPApi
      *
      * Update account's TSP information
      *
-     * @param  \Swagger\Client\Model\Body31 $body TSP Account (required)
+     * @param  \Zoom\Api\Model\Body31 $body TSP Account (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -435,7 +435,7 @@ class TSPApi
      *
      * Update account's TSP information
      *
-     * @param  \Swagger\Client\Model\Body31 $body TSP Account (required)
+     * @param  \Zoom\Api\Model\Body31 $body TSP Account (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -471,7 +471,7 @@ class TSPApi
     /**
      * Create request for operation 'tspUpdate'
      *
-     * @param  \Swagger\Client\Model\Body31 $body TSP Account (required)
+     * @param  \Zoom\Api\Model\Body31 $body TSP Account (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -578,9 +578,9 @@ class TSPApi
      * Set Global Dial-in URL for a TSP User
      *
      * @param  string $user_id The userId or email address of the user. (required)
-     * @param  \Swagger\Client\Model\TSPGlobalDialInURLSetting $body Global dial-in URL of the user. (optional)
+     * @param  \Zoom\Api\Model\TSPGlobalDialInURLSetting $body Global dial-in URL of the user. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -595,9 +595,9 @@ class TSPApi
      * Set Global Dial-in URL for a TSP User
      *
      * @param  string $user_id The userId or email address of the user. (required)
-     * @param  \Swagger\Client\Model\TSPGlobalDialInURLSetting $body Global dial-in URL of the user. (optional)
+     * @param  \Zoom\Api\Model\TSPGlobalDialInURLSetting $body Global dial-in URL of the user. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -649,7 +649,7 @@ class TSPApi
      * Set Global Dial-in URL for a TSP User
      *
      * @param  string $user_id The userId or email address of the user. (required)
-     * @param  \Swagger\Client\Model\TSPGlobalDialInURLSetting $body Global dial-in URL of the user. (optional)
+     * @param  \Zoom\Api\Model\TSPGlobalDialInURLSetting $body Global dial-in URL of the user. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -670,7 +670,7 @@ class TSPApi
      * Set Global Dial-in URL for a TSP User
      *
      * @param  string $user_id The userId or email address of the user. (required)
-     * @param  \Swagger\Client\Model\TSPGlobalDialInURLSetting $body Global dial-in URL of the user. (optional)
+     * @param  \Zoom\Api\Model\TSPGlobalDialInURLSetting $body Global dial-in URL of the user. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -707,7 +707,7 @@ class TSPApi
      * Create request for operation 'tspUrlUpdate'
      *
      * @param  string $user_id The userId or email address of the user. (required)
-     * @param  \Swagger\Client\Model\TSPGlobalDialInURLSetting $body Global dial-in URL of the user. (optional)
+     * @param  \Zoom\Api\Model\TSPGlobalDialInURLSetting $body Global dial-in URL of the user. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -824,9 +824,9 @@ class TSPApi
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
      * @param  string $tsp_id TSP account ID. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\TSPAccount
+     * @return \Zoom\Api\Model\TSPAccount
      */
     public function userTSP($user_id, $tsp_id)
     {
@@ -842,13 +842,13 @@ class TSPApi
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
      * @param  string $tsp_id TSP account ID. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\TSPAccount, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\TSPAccount, HTTP status code, HTTP response headers (array of strings)
      */
     public function userTSPWithHttpInfo($user_id, $tsp_id)
     {
-        $returnType = '\Swagger\Client\Model\TSPAccount';
+        $returnType = '\Zoom\Api\Model\TSPAccount';
         $request = $this->userTSPRequest($user_id, $tsp_id);
 
         try {
@@ -900,7 +900,7 @@ class TSPApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\TSPAccount',
+                        '\Zoom\Api\Model\TSPAccount',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -944,7 +944,7 @@ class TSPApi
      */
     public function userTSPAsyncWithHttpInfo($user_id, $tsp_id)
     {
-        $returnType = '\Swagger\Client\Model\TSPAccount';
+        $returnType = '\Zoom\Api\Model\TSPAccount';
         $request = $this->userTSPRequest($user_id, $tsp_id);
 
         return $this->client
@@ -1114,11 +1114,11 @@ class TSPApi
      * Add a User's TSP Account
      *
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
-     * @param  \Swagger\Client\Model\TSPAccountsList1 $body TSP account. (required)
+     * @param  \Zoom\Api\Model\TSPAccountsList1 $body TSP account. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\TSPAccountsList2
+     * @return \Zoom\Api\Model\TSPAccountsList2
      */
     public function userTSPCreate($user_id, $body)
     {
@@ -1132,15 +1132,15 @@ class TSPApi
      * Add a User's TSP Account
      *
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
-     * @param  \Swagger\Client\Model\TSPAccountsList1 $body TSP account. (required)
+     * @param  \Zoom\Api\Model\TSPAccountsList1 $body TSP account. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\TSPAccountsList2, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\TSPAccountsList2, HTTP status code, HTTP response headers (array of strings)
      */
     public function userTSPCreateWithHttpInfo($user_id, $body)
     {
-        $returnType = '\Swagger\Client\Model\TSPAccountsList2';
+        $returnType = '\Zoom\Api\Model\TSPAccountsList2';
         $request = $this->userTSPCreateRequest($user_id, $body);
 
         try {
@@ -1192,7 +1192,7 @@ class TSPApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\TSPAccountsList2',
+                        '\Zoom\Api\Model\TSPAccountsList2',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1208,7 +1208,7 @@ class TSPApi
      * Add a User's TSP Account
      *
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
-     * @param  \Swagger\Client\Model\TSPAccountsList1 $body TSP account. (required)
+     * @param  \Zoom\Api\Model\TSPAccountsList1 $body TSP account. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1229,14 +1229,14 @@ class TSPApi
      * Add a User's TSP Account
      *
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
-     * @param  \Swagger\Client\Model\TSPAccountsList1 $body TSP account. (required)
+     * @param  \Zoom\Api\Model\TSPAccountsList1 $body TSP account. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function userTSPCreateAsyncWithHttpInfo($user_id, $body)
     {
-        $returnType = '\Swagger\Client\Model\TSPAccountsList2';
+        $returnType = '\Zoom\Api\Model\TSPAccountsList2';
         $request = $this->userTSPCreateRequest($user_id, $body);
 
         return $this->client
@@ -1280,7 +1280,7 @@ class TSPApi
      * Create request for operation 'userTSPCreate'
      *
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
-     * @param  \Swagger\Client\Model\TSPAccountsList1 $body TSP account. (required)
+     * @param  \Zoom\Api\Model\TSPAccountsList1 $body TSP account. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1403,7 +1403,7 @@ class TSPApi
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
      * @param  string $tsp_id TSP account ID. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1420,7 +1420,7 @@ class TSPApi
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
      * @param  string $tsp_id TSP account ID. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1657,9 +1657,9 @@ class TSPApi
      *
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
      * @param  string $tsp_id TSP account ID. (required)
-     * @param  \Swagger\Client\Model\TSPAccount1 $body TSP account. (required)
+     * @param  \Zoom\Api\Model\TSPAccount1 $body TSP account. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1675,9 +1675,9 @@ class TSPApi
      *
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
      * @param  string $tsp_id TSP account ID. (required)
-     * @param  \Swagger\Client\Model\TSPAccount1 $body TSP account. (required)
+     * @param  \Zoom\Api\Model\TSPAccount1 $body TSP account. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1730,7 +1730,7 @@ class TSPApi
      *
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
      * @param  string $tsp_id TSP account ID. (required)
-     * @param  \Swagger\Client\Model\TSPAccount1 $body TSP account. (required)
+     * @param  \Zoom\Api\Model\TSPAccount1 $body TSP account. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1752,7 +1752,7 @@ class TSPApi
      *
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
      * @param  string $tsp_id TSP account ID. (required)
-     * @param  \Swagger\Client\Model\TSPAccount1 $body TSP account. (required)
+     * @param  \Zoom\Api\Model\TSPAccount1 $body TSP account. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1790,7 +1790,7 @@ class TSPApi
      *
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
      * @param  string $tsp_id TSP account ID. (required)
-     * @param  \Swagger\Client\Model\TSPAccount1 $body TSP account. (required)
+     * @param  \Zoom\Api\Model\TSPAccount1 $body TSP account. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1926,9 +1926,9 @@ class TSPApi
      *
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20050
+     * @return \Zoom\Api\Model\InlineResponse20050
      */
     public function userTSPs($user_id)
     {
@@ -1943,13 +1943,13 @@ class TSPApi
      *
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20050, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20050, HTTP status code, HTTP response headers (array of strings)
      */
     public function userTSPsWithHttpInfo($user_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20050';
+        $returnType = '\Zoom\Api\Model\InlineResponse20050';
         $request = $this->userTSPsRequest($user_id);
 
         try {
@@ -2001,7 +2001,7 @@ class TSPApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20050',
+                        '\Zoom\Api\Model\InlineResponse20050',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2043,7 +2043,7 @@ class TSPApi
      */
     public function userTSPsAsyncWithHttpInfo($user_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20050';
+        $returnType = '\Zoom\Api\Model\InlineResponse20050';
         $request = $this->userTSPsRequest($user_id);
 
         return $this->client

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse20032 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -60,7 +60,7 @@ class InlineResponse20032 implements ModelInterface, ArrayAccess
         'from' => '\DateTime',
         'to' => '\DateTime',
         'total_records' => 'int',
-        'client_feedbacks' => '\Swagger\Client\Model\InlineResponse20032ClientFeedbacks[]'
+        'client_feedbacks' => '\Zoom\Api\Model\InlineResponse20032ClientFeedbacks[]'
     ];
 
     /**
@@ -297,7 +297,7 @@ class InlineResponse20032 implements ModelInterface, ArrayAccess
     /**
      * Gets client_feedbacks
      *
-     * @return \Swagger\Client\Model\InlineResponse20032ClientFeedbacks[]
+     * @return \Zoom\Api\Model\InlineResponse20032ClientFeedbacks[]
      */
     public function getClientFeedbacks()
     {
@@ -307,7 +307,7 @@ class InlineResponse20032 implements ModelInterface, ArrayAccess
     /**
      * Sets client_feedbacks
      *
-     * @param \Swagger\Client\Model\InlineResponse20032ClientFeedbacks[] $client_feedbacks client_feedbacks
+     * @param \Zoom\Api\Model\InlineResponse20032ClientFeedbacks[] $client_feedbacks client_feedbacks
      *
      * @return $this
      */

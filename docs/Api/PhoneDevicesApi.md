@@ -1,4 +1,4 @@
-# Swagger\Client\PhoneDevicesApi
+# Zoom\Api\PhoneDevicesApi
 
 All URIs are relative to *https://api.zoom.us/v2*
 
@@ -24,15 +24,15 @@ By default, all Zoom Phone users can make and receive calls using the Zoom deskt
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PhoneDevicesApi(
+$apiInstance = new Zoom\Api\Api\PhoneDevicesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\Body63(); // \Swagger\Client\Model\Body63 | 
+$body = new \Zoom\Api\Model\Body63(); // \Zoom\Api\Model\Body63 | 
 
 try {
     $result = $apiInstance->addPhoneDevice($body);
@@ -47,7 +47,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body63**](../Model/Body63.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\Body63**](../Model/Body63.md)|  | [optional]
 
 ### Return type
 
@@ -77,9 +77,9 @@ Remove a [desk phone device](https://support.zoom.us/hc/en-us/articles/360021119
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PhoneDevicesApi(
+$apiInstance = new Zoom\Api\Api\PhoneDevicesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -118,7 +118,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getADevice**
-> \Swagger\Client\Model\InlineResponse20089 getADevice($device_id)
+> \Zoom\Api\Model\InlineResponse20089 getADevice($device_id)
 
 Get Device Details
 
@@ -130,9 +130,9 @@ Get detailed information about a specific [desk phone device](https://support.zo
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PhoneDevicesApi(
+$apiInstance = new Zoom\Api\Api\PhoneDevicesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -157,7 +157,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20089**](../Model/InlineResponse20089.md)
+[**\Zoom\Api\Model\InlineResponse20089**](../Model/InlineResponse20089.md)
 
 ### Authorization
 
@@ -171,7 +171,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listPhoneDevices**
-> \Swagger\Client\Model\InlineResponse20088 listPhoneDevices($type, $next_page_token, $page_size)
+> \Zoom\Api\Model\InlineResponse20088 listPhoneDevices($type, $next_page_token, $page_size)
 
 List Devices
 
@@ -183,9 +183,9 @@ List all the [desk phone devices](https://support.zoom.us/hc/en-us/articles/3600
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PhoneDevicesApi(
+$apiInstance = new Zoom\Api\Api\PhoneDevicesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -214,7 +214,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20088**](../Model/InlineResponse20088.md)
+[**\Zoom\Api\Model\InlineResponse20088**](../Model/InlineResponse20088.md)
 
 ### Authorization
 
@@ -240,16 +240,16 @@ Update information of a [desk phone device](https://support.zoom.us/hc/en-us/art
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PhoneDevicesApi(
+$apiInstance = new Zoom\Api\Api\PhoneDevicesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $device_id = "device_id_example"; // string | Unique Identifier of the Device.
-$body = new \Swagger\Client\Model\Body64(); // \Swagger\Client\Model\Body64 | 
+$body = new \Zoom\Api\Model\Body64(); // \Zoom\Api\Model\Body64 | 
 
 try {
     $result = $apiInstance->updateADevice($device_id, $body);
@@ -265,7 +265,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **device_id** | **string**| Unique Identifier of the Device. |
- **body** | [**\Swagger\Client\Model\Body64**](../Model/Body64.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\Body64**](../Model/Body64.md)|  | [optional]
 
 ### Return type
 

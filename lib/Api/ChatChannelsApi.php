@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Zoom\Api\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Zoom\Api\ApiException;
+use Zoom\Api\Configuration;
+use Zoom\Api\HeaderSelector;
+use Zoom\Api\ObjectSerializer;
 
 /**
  * ChatChannelsApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -94,7 +94,7 @@ class ChatChannelsApi
      *
      * @param  string $channel_id Channel ID: Unique Identifier of a channel. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -111,7 +111,7 @@ class ChatChannelsApi
      *
      * @param  string $channel_id Channel ID: Unique Identifier of a channel. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -367,9 +367,9 @@ class ChatChannelsApi
      *
      * @param  string $channel_id Channel ID: Unique Identifier of a channel. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20010
+     * @return \Zoom\Api\Model\InlineResponse20010
      */
     public function getUserLevelChannel($channel_id)
     {
@@ -384,13 +384,13 @@ class ChatChannelsApi
      *
      * @param  string $channel_id Channel ID: Unique Identifier of a channel. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20010, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20010, HTTP status code, HTTP response headers (array of strings)
      */
     public function getUserLevelChannelWithHttpInfo($channel_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20010';
+        $returnType = '\Zoom\Api\Model\InlineResponse20010';
         $request = $this->getUserLevelChannelRequest($channel_id);
 
         try {
@@ -442,7 +442,7 @@ class ChatChannelsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20010',
+                        '\Zoom\Api\Model\InlineResponse20010',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -484,7 +484,7 @@ class ChatChannelsApi
      */
     public function getUserLevelChannelAsyncWithHttpInfo($channel_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20010';
+        $returnType = '\Zoom\Api\Model\InlineResponse20010';
         $request = $this->getUserLevelChannelRequest($channel_id);
 
         return $this->client
@@ -640,9 +640,9 @@ class ChatChannelsApi
      *
      * @param  string $channel_id Channel Id. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse2014
+     * @return \Zoom\Api\Model\InlineResponse2014
      */
     public function joinChannel($channel_id)
     {
@@ -657,13 +657,13 @@ class ChatChannelsApi
      *
      * @param  string $channel_id Channel Id. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse2014, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse2014, HTTP status code, HTTP response headers (array of strings)
      */
     public function joinChannelWithHttpInfo($channel_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse2014';
+        $returnType = '\Zoom\Api\Model\InlineResponse2014';
         $request = $this->joinChannelRequest($channel_id);
 
         try {
@@ -715,7 +715,7 @@ class ChatChannelsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse2014',
+                        '\Zoom\Api\Model\InlineResponse2014',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -757,7 +757,7 @@ class ChatChannelsApi
      */
     public function joinChannelAsyncWithHttpInfo($channel_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse2014';
+        $returnType = '\Zoom\Api\Model\InlineResponse2014';
         $request = $this->joinChannelRequest($channel_id);
 
         return $this->client
@@ -913,7 +913,7 @@ class ChatChannelsApi
      *
      * @param  string $channel_id Channel ID: Unique Identifier of a channel. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -930,7 +930,7 @@ class ChatChannelsApi
      *
      * @param  string $channel_id Channel ID: Unique Identifier of a channel. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1187,7 +1187,7 @@ class ChatChannelsApi
      * @param  string $channel_id Unique Identifier of the Channel from where you would like to remove a member. This can be retrieved from the [List Channels API](https://marketplace.zoom.us/docs/api-reference/zoom-api/chat-channels/getchannels). (required)
      * @param  string $member_id Email address of the member whom you would like to be remove from the channel. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -1205,7 +1205,7 @@ class ChatChannelsApi
      * @param  string $channel_id Unique Identifier of the Channel from where you would like to remove a member. This can be retrieved from the [List Channels API](https://marketplace.zoom.us/docs/api-reference/zoom-api/chat-channels/getchannels). (required)
      * @param  string $member_id Email address of the member whom you would like to be remove from the channel. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1477,9 +1477,9 @@ class ChatChannelsApi
      * Update a Channel
      *
      * @param  string $channel_id Channel Id. (required)
-     * @param  \Swagger\Client\Model\Body10 $body body (optional)
+     * @param  \Zoom\Api\Model\Body10 $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -1495,9 +1495,9 @@ class ChatChannelsApi
      * Update a Channel
      *
      * @param  string $channel_id Channel Id. (required)
-     * @param  \Swagger\Client\Model\Body10 $body (optional)
+     * @param  \Zoom\Api\Model\Body10 $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1571,7 +1571,7 @@ class ChatChannelsApi
      * Update a Channel
      *
      * @param  string $channel_id Channel Id. (required)
-     * @param  \Swagger\Client\Model\Body10 $body (optional)
+     * @param  \Zoom\Api\Model\Body10 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1592,7 +1592,7 @@ class ChatChannelsApi
      * Update a Channel
      *
      * @param  string $channel_id Channel Id. (required)
-     * @param  \Swagger\Client\Model\Body10 $body (optional)
+     * @param  \Zoom\Api\Model\Body10 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1643,7 +1643,7 @@ class ChatChannelsApi
      * Create request for operation 'updateUserLevelChannel'
      *
      * @param  string $channel_id Channel Id. (required)
-     * @param  \Swagger\Client\Model\Body10 $body (optional)
+     * @param  \Zoom\Api\Model\Body10 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

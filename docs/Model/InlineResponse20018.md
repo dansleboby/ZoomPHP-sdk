@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**members** | [**\Swagger\Client\Model\InlineResponse20018Members[]**](InlineResponse20018Members.md) |  | [optional] 
+**members** | [**\Zoom\Api\Model\InlineResponse20018Members[]**](InlineResponse20018Members.md) |  | [optional] 
 **page_count** | **int** | The number of pages returned from this request. | [optional] 
 **page_number** | **int** | The page number of the current results. | [optional] 
 **page_size** | **int** | The number of records returned from a single API call. | [optional] 

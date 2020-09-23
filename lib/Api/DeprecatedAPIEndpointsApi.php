@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Zoom\Api\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Zoom\Api\ApiException;
+use Zoom\Api\Configuration;
+use Zoom\Api\HeaderSelector;
+use Zoom\Api\ObjectSerializer;
 
 /**
  * DeprecatedAPIEndpointsApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -94,9 +94,9 @@ class DeprecatedAPIEndpointsApi
      *
      * @param  int $meeting_id The meeting ID in **long** format. The data type of this field is \&quot;long\&quot;(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20084
+     * @return \Zoom\Api\Model\InlineResponse20084
      */
     public function listPastMeetingFiles($meeting_id)
     {
@@ -111,13 +111,13 @@ class DeprecatedAPIEndpointsApi
      *
      * @param  int $meeting_id The meeting ID in **long** format. The data type of this field is \&quot;long\&quot;(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20084, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20084, HTTP status code, HTTP response headers (array of strings)
      */
     public function listPastMeetingFilesWithHttpInfo($meeting_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20084';
+        $returnType = '\Zoom\Api\Model\InlineResponse20084';
         $request = $this->listPastMeetingFilesRequest($meeting_id);
 
         try {
@@ -169,7 +169,7 @@ class DeprecatedAPIEndpointsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20084',
+                        '\Zoom\Api\Model\InlineResponse20084',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -211,7 +211,7 @@ class DeprecatedAPIEndpointsApi
      */
     public function listPastMeetingFilesAsyncWithHttpInfo($meeting_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20084';
+        $returnType = '\Zoom\Api\Model\InlineResponse20084';
         $request = $this->listPastMeetingFilesRequest($meeting_id);
 
         return $this->client

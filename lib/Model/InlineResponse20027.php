@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse20027 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -60,7 +60,7 @@ class InlineResponse20027 implements ModelInterface, ArrayAccess
         'next_page_token' => 'string',
         'page_count' => 'int',
         'page_size' => 'int',
-        'participants' => '\Swagger\Client\Model\InlineResponse20027Participants[]',
+        'participants' => '\Zoom\Api\Model\InlineResponse20027Participants[]',
         'total_records' => 'int'
     ];
 
@@ -312,7 +312,7 @@ class InlineResponse20027 implements ModelInterface, ArrayAccess
     /**
      * Gets participants
      *
-     * @return \Swagger\Client\Model\InlineResponse20027Participants[]
+     * @return \Zoom\Api\Model\InlineResponse20027Participants[]
      */
     public function getParticipants()
     {
@@ -322,7 +322,7 @@ class InlineResponse20027 implements ModelInterface, ArrayAccess
     /**
      * Sets participants
      *
-     * @param \Swagger\Client\Model\InlineResponse20027Participants[] $participants Array of participant session objects. If a participant left a meeting and rejoined the same meeting, their information will appear multiple times (as many times as they joined the meeting).
+     * @param \Zoom\Api\Model\InlineResponse20027Participants[] $participants Array of participant session objects. If a participant left a meeting and rejoined the same meeting, their information will appear multiple times (as many times as they joined the meeting).
      *
      * @return $this
      */

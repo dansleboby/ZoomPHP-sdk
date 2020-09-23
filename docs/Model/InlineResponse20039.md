@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **duration** | **int** | Meeting duration. | [optional] 
 **total_minutes** | **int** | Number of Webinar minutes. This represents the total amount of Webinar minutes attended by each participant including the host, for a Webinar hosted by the user. For instance if there were one host(named A) and one participant(named B) in a Webinar, the value of total_minutes would be calculated as below:  **total_minutes** &#x3D; Total Webinar Attendance Minutes of A + Total Webinar Attendance Minutes of B | [optional] 
 **participants_count** | **int** | Number of meeting participants. | [optional] 
-**tracking_fields** | [**\Swagger\Client\Model\InlineResponse20036TrackingFields[]**](InlineResponse20036TrackingFields.md) | Tracking fields. | [optional] 
+**tracking_fields** | [**\Zoom\Api\Model\InlineResponse20036TrackingFields[]**](InlineResponse20036TrackingFields.md) | Tracking fields. | [optional] 
 **dept** | **string** | Department of the host. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

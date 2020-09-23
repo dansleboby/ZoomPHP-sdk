@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * QOSParticipantList Class Doc Comment
  *
  * @category Class
  * @description Participant QOS list.
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,7 +58,7 @@ class QOSParticipantList implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'participants' => '\Swagger\Client\Model\ParticipantQOS[]'
+        'participants' => '\Zoom\Api\Model\ParticipantQOS[]'
     ];
 
     /**
@@ -208,7 +208,7 @@ class QOSParticipantList implements ModelInterface, ArrayAccess
     /**
      * Gets participants
      *
-     * @return \Swagger\Client\Model\ParticipantQOS[]
+     * @return \Zoom\Api\Model\ParticipantQOS[]
      */
     public function getParticipants()
     {
@@ -218,7 +218,7 @@ class QOSParticipantList implements ModelInterface, ArrayAccess
     /**
      * Sets participants
      *
-     * @param \Swagger\Client\Model\ParticipantQOS[] $participants Array of user objects.
+     * @param \Zoom\Api\Model\ParticipantQOS[] $participants Array of user objects.
      *
      * @return $this
      */

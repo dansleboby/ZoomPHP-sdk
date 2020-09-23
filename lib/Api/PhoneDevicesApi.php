@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Zoom\Api\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Zoom\Api\ApiException;
+use Zoom\Api\Configuration;
+use Zoom\Api\HeaderSelector;
+use Zoom\Api\ObjectSerializer;
 
 /**
  * PhoneDevicesApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -92,9 +92,9 @@ class PhoneDevicesApi
      *
      * Add a Device
      *
-     * @param  \Swagger\Client\Model\Body63 $body body (optional)
+     * @param  \Zoom\Api\Model\Body63 $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -109,9 +109,9 @@ class PhoneDevicesApi
      *
      * Add a Device
      *
-     * @param  \Swagger\Client\Model\Body63 $body (optional)
+     * @param  \Zoom\Api\Model\Body63 $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -184,7 +184,7 @@ class PhoneDevicesApi
      *
      * Add a Device
      *
-     * @param  \Swagger\Client\Model\Body63 $body (optional)
+     * @param  \Zoom\Api\Model\Body63 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -204,7 +204,7 @@ class PhoneDevicesApi
      *
      * Add a Device
      *
-     * @param  \Swagger\Client\Model\Body63 $body (optional)
+     * @param  \Zoom\Api\Model\Body63 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -254,7 +254,7 @@ class PhoneDevicesApi
     /**
      * Create request for operation 'addPhoneDevice'
      *
-     * @param  \Swagger\Client\Model\Body63 $body (optional)
+     * @param  \Zoom\Api\Model\Body63 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -356,7 +356,7 @@ class PhoneDevicesApi
      *
      * @param  string $device_id Unique Identifier of the device. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -373,7 +373,7 @@ class PhoneDevicesApi
      *
      * @param  string $device_id Unique Identifier of the device. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -629,9 +629,9 @@ class PhoneDevicesApi
      *
      * @param  string $device_id Unique Identifier of the device. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20089
+     * @return \Zoom\Api\Model\InlineResponse20089
      */
     public function getADevice($device_id)
     {
@@ -646,13 +646,13 @@ class PhoneDevicesApi
      *
      * @param  string $device_id Unique Identifier of the device. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20089, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20089, HTTP status code, HTTP response headers (array of strings)
      */
     public function getADeviceWithHttpInfo($device_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20089';
+        $returnType = '\Zoom\Api\Model\InlineResponse20089';
         $request = $this->getADeviceRequest($device_id);
 
         try {
@@ -704,7 +704,7 @@ class PhoneDevicesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20089',
+                        '\Zoom\Api\Model\InlineResponse20089',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -746,7 +746,7 @@ class PhoneDevicesApi
      */
     public function getADeviceAsyncWithHttpInfo($device_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20089';
+        $returnType = '\Zoom\Api\Model\InlineResponse20089';
         $request = $this->getADeviceRequest($device_id);
 
         return $this->client
@@ -904,9 +904,9 @@ class PhoneDevicesApi
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      * @param  int $page_size The number of records returned within a single API call. (optional, default to 30)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20088
+     * @return \Zoom\Api\Model\InlineResponse20088
      */
     public function listPhoneDevices($type, $next_page_token = null, $page_size = '30')
     {
@@ -923,13 +923,13 @@ class PhoneDevicesApi
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      * @param  int $page_size The number of records returned within a single API call. (optional, default to 30)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20088, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20088, HTTP status code, HTTP response headers (array of strings)
      */
     public function listPhoneDevicesWithHttpInfo($type, $next_page_token = null, $page_size = '30')
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20088';
+        $returnType = '\Zoom\Api\Model\InlineResponse20088';
         $request = $this->listPhoneDevicesRequest($type, $next_page_token, $page_size);
 
         try {
@@ -981,7 +981,7 @@ class PhoneDevicesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20088',
+                        '\Zoom\Api\Model\InlineResponse20088',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1027,7 +1027,7 @@ class PhoneDevicesApi
      */
     public function listPhoneDevicesAsyncWithHttpInfo($type, $next_page_token = null, $page_size = '30')
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20088';
+        $returnType = '\Zoom\Api\Model\InlineResponse20088';
         $request = $this->listPhoneDevicesRequest($type, $next_page_token, $page_size);
 
         return $this->client
@@ -1192,9 +1192,9 @@ class PhoneDevicesApi
      * Update a Device
      *
      * @param  string $device_id Unique Identifier of the Device. (required)
-     * @param  \Swagger\Client\Model\Body64 $body body (optional)
+     * @param  \Zoom\Api\Model\Body64 $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -1210,9 +1210,9 @@ class PhoneDevicesApi
      * Update a Device
      *
      * @param  string $device_id Unique Identifier of the Device. (required)
-     * @param  \Swagger\Client\Model\Body64 $body (optional)
+     * @param  \Zoom\Api\Model\Body64 $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1286,7 +1286,7 @@ class PhoneDevicesApi
      * Update a Device
      *
      * @param  string $device_id Unique Identifier of the Device. (required)
-     * @param  \Swagger\Client\Model\Body64 $body (optional)
+     * @param  \Zoom\Api\Model\Body64 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1307,7 +1307,7 @@ class PhoneDevicesApi
      * Update a Device
      *
      * @param  string $device_id Unique Identifier of the Device. (required)
-     * @param  \Swagger\Client\Model\Body64 $body (optional)
+     * @param  \Zoom\Api\Model\Body64 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1358,7 +1358,7 @@ class PhoneDevicesApi
      * Create request for operation 'updateADevice'
      *
      * @param  string $device_id Unique Identifier of the Device. (required)
-     * @param  \Swagger\Client\Model\Body64 $body (optional)
+     * @param  \Zoom\Api\Model\Body64 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

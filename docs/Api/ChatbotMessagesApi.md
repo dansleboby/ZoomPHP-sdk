@@ -1,4 +1,4 @@
-# Swagger\Client\ChatbotMessagesApi
+# Zoom\Api\ChatbotMessagesApi
 
 All URIs are relative to *https://api.zoom.us/v2*
 
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **deleteAChatbotMessage**
-> \Swagger\Client\Model\InlineResponse20058 deleteAChatbotMessage($message_id, $body)
+> \Zoom\Api\Model\InlineResponse20058 deleteAChatbotMessage($message_id, $body)
 
 Delete a Chatbot Message
 
@@ -22,16 +22,16 @@ Delete a message that was sent by your chatbot app.<br><br> **Scopes:** `imchat:
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: Client Credentials
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ChatbotMessagesApi(
+$apiInstance = new Zoom\Api\Api\ChatbotMessagesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $message_id = "message_id_example"; // string | 
-$body = new \Swagger\Client\Model\Body42(); // \Swagger\Client\Model\Body42 | 
+$body = new \Zoom\Api\Model\Body42(); // \Zoom\Api\Model\Body42 | 
 
 try {
     $result = $apiInstance->deleteAChatbotMessage($message_id, $body);
@@ -47,11 +47,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **message_id** | **string**|  |
- **body** | [**\Swagger\Client\Model\Body42**](../Model/Body42.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\Body42**](../Model/Body42.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20058**](../Model/InlineResponse20058.md)
+[**\Zoom\Api\Model\InlineResponse20058**](../Model/InlineResponse20058.md)
 
 ### Authorization
 
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **editChatbotMessage**
-> \Swagger\Client\Model\InlineResponse20057 editChatbotMessage($message_id, $body)
+> \Zoom\Api\Model\InlineResponse20057 editChatbotMessage($message_id, $body)
 
 Edit a Chatbot Message
 
@@ -77,16 +77,16 @@ Edit a message that was [sent](https://marketplace.zoom.us/docs/api-reference/zo
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: Client Credentials
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ChatbotMessagesApi(
+$apiInstance = new Zoom\Api\Api\ChatbotMessagesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $message_id = "message_id_example"; // string | Unique Identifier of the message that needs to be updated. This should be retrieved from the response of [Send Chatbot Message API](https://marketplace.zoom.us/docs/api-reference/zoom-api/im-chat/sendchatbot).
-$body = new \Swagger\Client\Model\Body41(); // \Swagger\Client\Model\Body41 | 
+$body = new \Zoom\Api\Model\Body41(); // \Zoom\Api\Model\Body41 | 
 
 try {
     $result = $apiInstance->editChatbotMessage($message_id, $body);
@@ -102,11 +102,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **message_id** | **string**| Unique Identifier of the message that needs to be updated. This should be retrieved from the response of [Send Chatbot Message API](https://marketplace.zoom.us/docs/api-reference/zoom-api/im-chat/sendchatbot). |
- **body** | [**\Swagger\Client\Model\Body41**](../Model/Body41.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\Body41**](../Model/Body41.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20057**](../Model/InlineResponse20057.md)
+[**\Zoom\Api\Model\InlineResponse20057**](../Model/InlineResponse20057.md)
 
 ### Authorization
 
@@ -132,15 +132,15 @@ Send chatbot messages from your marketplace chatbot app.<br><br> **Scopes:** `im
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: Client Credentials
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ChatbotMessagesApi(
+$apiInstance = new Zoom\Api\Api\ChatbotMessagesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\Body40(); // \Swagger\Client\Model\Body40 | 
+$body = new \Zoom\Api\Model\Body40(); // \Zoom\Api\Model\Body40 | 
 
 try {
     $apiInstance->sendchatbot($body);
@@ -154,7 +154,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body40**](../Model/Body40.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\Body40**](../Model/Body40.md)|  | [optional]
 
 ### Return type
 

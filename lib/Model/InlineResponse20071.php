@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse20071 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -62,7 +62,7 @@ class InlineResponse20071 implements ModelInterface, ArrayAccess
         'description' => 'string',
         'total_members' => 'int',
         'privileges' => 'string[]',
-        'sub_account_privileges' => '\Swagger\Client\Model\InlineResponse20071SubAccountPrivileges'
+        'sub_account_privileges' => '\Zoom\Api\Model\InlineResponse20071SubAccountPrivileges'
     ];
 
     /**
@@ -357,7 +357,7 @@ class InlineResponse20071 implements ModelInterface, ArrayAccess
     /**
      * Gets sub_account_privileges
      *
-     * @return \Swagger\Client\Model\InlineResponse20071SubAccountPrivileges
+     * @return \Zoom\Api\Model\InlineResponse20071SubAccountPrivileges
      */
     public function getSubAccountPrivileges()
     {
@@ -367,7 +367,7 @@ class InlineResponse20071 implements ModelInterface, ArrayAccess
     /**
      * Sets sub_account_privileges
      *
-     * @param \Swagger\Client\Model\InlineResponse20071SubAccountPrivileges $sub_account_privileges sub_account_privileges
+     * @param \Zoom\Api\Model\InlineResponse20071SubAccountPrivileges $sub_account_privileges sub_account_privileges
      *
      * @return $this
      */

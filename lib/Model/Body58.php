@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * Body58 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class Body58 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'basic' => '\Swagger\Client\Model\RoomslocationslocationIdBasic'
+        'basic' => '\Zoom\Api\Model\RoomslocationslocationIdBasic'
     ];
 
     /**
@@ -207,7 +207,7 @@ class Body58 implements ModelInterface, ArrayAccess
     /**
      * Gets basic
      *
-     * @return \Swagger\Client\Model\RoomslocationslocationIdBasic
+     * @return \Zoom\Api\Model\RoomslocationslocationIdBasic
      */
     public function getBasic()
     {
@@ -217,7 +217,7 @@ class Body58 implements ModelInterface, ArrayAccess
     /**
      * Sets basic
      *
-     * @param \Swagger\Client\Model\RoomslocationslocationIdBasic $basic basic
+     * @param \Zoom\Api\Model\RoomslocationslocationIdBasic $basic basic
      *
      * @return $this
      */

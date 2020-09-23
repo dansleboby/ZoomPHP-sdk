@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **page_number** | **int** | The page number of the current results. | [optional] 
 **page_size** | **int** | The number of records returned within a single API call. | [optional] 
 **total_records** | **int** | The total number of all the records available across pages. | [optional] 
-**phones** | [**\Swagger\Client\Model\InlineResponse2001Phones[]**](InlineResponse2001Phones.md) | SIP phones object. | [optional] 
+**phones** | [**\Zoom\Api\Model\InlineResponse2001Phones[]**](InlineResponse2001Phones.md) | SIP phones object. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

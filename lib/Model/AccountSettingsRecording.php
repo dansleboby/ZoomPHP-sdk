@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * AccountSettingsRecording Class Doc Comment
  *
  * @category Class
  * @description Account Settings: Recording.
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -72,7 +72,7 @@ class AccountSettingsRecording implements ModelInterface, ArrayAccess
         'account_user_access_recording' => 'bool',
         'auto_delete_cmr' => 'bool',
         'auto_delete_cmr_days' => 'int',
-        'recording_password_requirement' => '\Swagger\Client\Model\AccountSettingsRecordingRecordingPasswordRequirement',
+        'recording_password_requirement' => '\Zoom\Api\Model\AccountSettingsRecordingRecordingPasswordRequirement',
         'allow_recovery_deleted_cloud_recordings' => 'bool',
         'recording_disclaimer' => 'bool',
         'host_delete_cloud_recording' => 'bool',
@@ -686,7 +686,7 @@ class AccountSettingsRecording implements ModelInterface, ArrayAccess
     /**
      * Gets recording_password_requirement
      *
-     * @return \Swagger\Client\Model\AccountSettingsRecordingRecordingPasswordRequirement
+     * @return \Zoom\Api\Model\AccountSettingsRecordingRecordingPasswordRequirement
      */
     public function getRecordingPasswordRequirement()
     {
@@ -696,7 +696,7 @@ class AccountSettingsRecording implements ModelInterface, ArrayAccess
     /**
      * Sets recording_password_requirement
      *
-     * @param \Swagger\Client\Model\AccountSettingsRecordingRecordingPasswordRequirement $recording_password_requirement recording_password_requirement
+     * @param \Zoom\Api\Model\AccountSettingsRecordingRecordingPasswordRequirement $recording_password_requirement recording_password_requirement
      *
      * @return $this
      */

@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **last_name** | **string** | User&#39;s last name. | 
 **email** | **string** | User&#39;s email address. | 
 **password** | **string** | User&#39;s password. | 
-**options** | [**\Swagger\Client\Model\Body12**](Body12.md) |  | [optional] 
+**options** | [**\Zoom\Api\Model\Body12**](Body12.md) |  | [optional] 
 **vanity_url** | **string** | Account Vanity URL | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

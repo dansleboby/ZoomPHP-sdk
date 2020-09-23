@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse20099 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -60,10 +60,10 @@ class InlineResponse20099 implements ModelInterface, ArrayAccess
         'id' => 'string',
         'display_name' => 'string',
         'extension_number' => 'int',
-        'phone_numbers' => '\Swagger\Client\Model\InlineResponse20099PhoneNumbers[]',
+        'phone_numbers' => '\Zoom\Api\Model\InlineResponse20099PhoneNumbers[]',
         'primary_number' => 'string',
-        'site' => '\Swagger\Client\Model\InlineResponse20099Site',
-        'members' => '\Swagger\Client\Model\InlineResponse20099Members',
+        'site' => '\Zoom\Api\Model\InlineResponse20099Site',
+        'members' => '\Zoom\Api\Model\InlineResponse20099Members',
         'timezone' => 'string',
         'status' => 'string'
     ];
@@ -350,7 +350,7 @@ class InlineResponse20099 implements ModelInterface, ArrayAccess
     /**
      * Gets phone_numbers
      *
-     * @return \Swagger\Client\Model\InlineResponse20099PhoneNumbers[]
+     * @return \Zoom\Api\Model\InlineResponse20099PhoneNumbers[]
      */
     public function getPhoneNumbers()
     {
@@ -360,7 +360,7 @@ class InlineResponse20099 implements ModelInterface, ArrayAccess
     /**
      * Sets phone_numbers
      *
-     * @param \Swagger\Client\Model\InlineResponse20099PhoneNumbers[] $phone_numbers Object representing information about phone number(s) assigned to the group.
+     * @param \Zoom\Api\Model\InlineResponse20099PhoneNumbers[] $phone_numbers Object representing information about phone number(s) assigned to the group.
      *
      * @return $this
      */
@@ -398,7 +398,7 @@ class InlineResponse20099 implements ModelInterface, ArrayAccess
     /**
      * Gets site
      *
-     * @return \Swagger\Client\Model\InlineResponse20099Site
+     * @return \Zoom\Api\Model\InlineResponse20099Site
      */
     public function getSite()
     {
@@ -408,7 +408,7 @@ class InlineResponse20099 implements ModelInterface, ArrayAccess
     /**
      * Sets site
      *
-     * @param \Swagger\Client\Model\InlineResponse20099Site $site site
+     * @param \Zoom\Api\Model\InlineResponse20099Site $site site
      *
      * @return $this
      */
@@ -422,7 +422,7 @@ class InlineResponse20099 implements ModelInterface, ArrayAccess
     /**
      * Gets members
      *
-     * @return \Swagger\Client\Model\InlineResponse20099Members
+     * @return \Zoom\Api\Model\InlineResponse20099Members
      */
     public function getMembers()
     {
@@ -432,7 +432,7 @@ class InlineResponse20099 implements ModelInterface, ArrayAccess
     /**
      * Sets members
      *
-     * @param \Swagger\Client\Model\InlineResponse20099Members $members members
+     * @param \Zoom\Api\Model\InlineResponse20099Members $members members
      *
      * @return $this
      */

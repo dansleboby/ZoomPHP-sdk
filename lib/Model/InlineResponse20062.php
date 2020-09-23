@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse20062 Class Doc Comment
  *
  * @category Class
  * @description Phone User Setting
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,7 +58,7 @@ class InlineResponse20062 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'outbound_caller' => '\Swagger\Client\Model\InlineResponse20062OutboundCaller',
+        'outbound_caller' => '\Zoom\Api\Model\InlineResponse20062OutboundCaller',
         'area_code' => 'string',
         'company_number' => 'string'
     ];
@@ -220,7 +220,7 @@ class InlineResponse20062 implements ModelInterface, ArrayAccess
     /**
      * Gets outbound_caller
      *
-     * @return \Swagger\Client\Model\InlineResponse20062OutboundCaller
+     * @return \Zoom\Api\Model\InlineResponse20062OutboundCaller
      */
     public function getOutboundCaller()
     {
@@ -230,7 +230,7 @@ class InlineResponse20062 implements ModelInterface, ArrayAccess
     /**
      * Sets outbound_caller
      *
-     * @param \Swagger\Client\Model\InlineResponse20062OutboundCaller $outbound_caller outbound_caller
+     * @param \Zoom\Api\Model\InlineResponse20062OutboundCaller $outbound_caller outbound_caller
      *
      * @return $this
      */

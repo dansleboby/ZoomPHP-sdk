@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse20049 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class InlineResponse20049 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'pac_accounts' => '\Swagger\Client\Model\InlineResponse20049PacAccounts[]'
+        'pac_accounts' => '\Zoom\Api\Model\InlineResponse20049PacAccounts[]'
     ];
 
     /**
@@ -207,7 +207,7 @@ class InlineResponse20049 implements ModelInterface, ArrayAccess
     /**
      * Gets pac_accounts
      *
-     * @return \Swagger\Client\Model\InlineResponse20049PacAccounts[]
+     * @return \Zoom\Api\Model\InlineResponse20049PacAccounts[]
      */
     public function getPacAccounts()
     {
@@ -217,7 +217,7 @@ class InlineResponse20049 implements ModelInterface, ArrayAccess
     /**
      * Sets pac_accounts
      *
-     * @param \Swagger\Client\Model\InlineResponse20049PacAccounts[] $pac_accounts pac_accounts
+     * @param \Zoom\Api\Model\InlineResponse20049PacAccounts[] $pac_accounts pac_accounts
      *
      * @return $this
      */

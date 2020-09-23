@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse20073Meetings Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -65,7 +65,7 @@ class InlineResponse20073Meetings implements ModelInterface, ArrayAccess
         'duration' => 'int',
         'total_size' => 'int',
         'recording_count' => 'int',
-        'recording_files' => '\Swagger\Client\Model\InlineResponse20073RecordingFiles[]'
+        'recording_files' => '\Zoom\Api\Model\InlineResponse20073RecordingFiles[]'
     ];
 
     /**
@@ -447,7 +447,7 @@ class InlineResponse20073Meetings implements ModelInterface, ArrayAccess
     /**
      * Gets recording_files
      *
-     * @return \Swagger\Client\Model\InlineResponse20073RecordingFiles[]
+     * @return \Zoom\Api\Model\InlineResponse20073RecordingFiles[]
      */
     public function getRecordingFiles()
     {
@@ -457,7 +457,7 @@ class InlineResponse20073Meetings implements ModelInterface, ArrayAccess
     /**
      * Sets recording_files
      *
-     * @param \Swagger\Client\Model\InlineResponse20073RecordingFiles[] $recording_files Recording files object
+     * @param \Zoom\Api\Model\InlineResponse20073RecordingFiles[] $recording_files Recording files object
      *
      * @return $this
      */

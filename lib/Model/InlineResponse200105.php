@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse200105 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,7 +58,7 @@ class InlineResponse200105 implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'total_records' => 'int',
-        'templates' => '\Swagger\Client\Model\InlineResponse200105Templates[]'
+        'templates' => '\Zoom\Api\Model\InlineResponse200105Templates[]'
     ];
 
     /**
@@ -237,7 +237,7 @@ class InlineResponse200105 implements ModelInterface, ArrayAccess
     /**
      * Gets templates
      *
-     * @return \Swagger\Client\Model\InlineResponse200105Templates[]
+     * @return \Zoom\Api\Model\InlineResponse200105Templates[]
      */
     public function getTemplates()
     {
@@ -247,7 +247,7 @@ class InlineResponse200105 implements ModelInterface, ArrayAccess
     /**
      * Sets templates
      *
-     * @param \Swagger\Client\Model\InlineResponse200105Templates[] $templates templates
+     * @param \Zoom\Api\Model\InlineResponse200105Templates[] $templates templates
      *
      * @return $this
      */

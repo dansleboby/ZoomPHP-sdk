@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * Body74 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class Body74 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'phone_numbers' => '\Swagger\Client\Model\PhoneautoReceptionistsautoReceptionistIdphoneNumbersPhoneNumbers[]'
+        'phone_numbers' => '\Zoom\Api\Model\PhoneautoReceptionistsautoReceptionistIdphoneNumbersPhoneNumbers[]'
     ];
 
     /**
@@ -207,7 +207,7 @@ class Body74 implements ModelInterface, ArrayAccess
     /**
      * Gets phone_numbers
      *
-     * @return \Swagger\Client\Model\PhoneautoReceptionistsautoReceptionistIdphoneNumbersPhoneNumbers[]
+     * @return \Zoom\Api\Model\PhoneautoReceptionistsautoReceptionistIdphoneNumbersPhoneNumbers[]
      */
     public function getPhoneNumbers()
     {
@@ -217,7 +217,7 @@ class Body74 implements ModelInterface, ArrayAccess
     /**
      * Sets phone_numbers
      *
-     * @param \Swagger\Client\Model\PhoneautoReceptionistsautoReceptionistIdphoneNumbersPhoneNumbers[] $phone_numbers Provide either the unique identifier of the Phone Number  in the `id` field or provide the phone number in the `number` field.
+     * @param \Zoom\Api\Model\PhoneautoReceptionistsautoReceptionistIdphoneNumbersPhoneNumbers[] $phone_numbers Provide either the unique identifier of the Phone Number  in the `id` field or provide the phone number in the `number` field.
      *
      * @return $this
      */

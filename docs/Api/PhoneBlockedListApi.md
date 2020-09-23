@@ -1,4 +1,4 @@
-# Swagger\Client\PhoneBlockedListApi
+# Zoom\Api\PhoneBlockedListApi
 
 All URIs are relative to *https://api.zoom.us/v2*
 
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **addAnumberToBlockedList**
-> \Swagger\Client\Model\InlineResponse20126 addAnumberToBlockedList($body)
+> \Zoom\Api\Model\InlineResponse20126 addAnumberToBlockedList($body)
 
 Create a Blocked List
 
@@ -24,15 +24,15 @@ A Zoom account owner or a user with admin privilege can block phone numbers for 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PhoneBlockedListApi(
+$apiInstance = new Zoom\Api\Api\PhoneBlockedListApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\Body77(); // \Swagger\Client\Model\Body77 | 
+$body = new \Zoom\Api\Model\Body77(); // \Zoom\Api\Model\Body77 | 
 
 try {
     $result = $apiInstance->addAnumberToBlockedList($body);
@@ -47,11 +47,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body77**](../Model/Body77.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\Body77**](../Model/Body77.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20126**](../Model/InlineResponse20126.md)
+[**\Zoom\Api\Model\InlineResponse20126**](../Model/InlineResponse20126.md)
 
 ### Authorization
 
@@ -77,9 +77,9 @@ A Zoom account owner or a user with admin privilege can block phone numbers for 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PhoneBlockedListApi(
+$apiInstance = new Zoom\Api\Api\PhoneBlockedListApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -118,7 +118,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getABlockedList**
-> \Swagger\Client\Model\InlineResponse20098 getABlockedList($blocked_list_id)
+> \Zoom\Api\Model\InlineResponse20098 getABlockedList($blocked_list_id)
 
 Get Blocked List Details
 
@@ -130,9 +130,9 @@ A Zoom account owner or a user with admin privilege can block phone numbers for 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PhoneBlockedListApi(
+$apiInstance = new Zoom\Api\Api\PhoneBlockedListApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -157,7 +157,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20098**](../Model/InlineResponse20098.md)
+[**\Zoom\Api\Model\InlineResponse20098**](../Model/InlineResponse20098.md)
 
 ### Authorization
 
@@ -171,7 +171,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listBlockedList**
-> \Swagger\Client\Model\InlineResponse20097 listBlockedList($next_page_token, $page_size)
+> \Zoom\Api\Model\InlineResponse20097 listBlockedList($next_page_token, $page_size)
 
 List Blocked Lists
 
@@ -183,9 +183,9 @@ A Zoom account owner or a user with admin privilege can block phone numbers for 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PhoneBlockedListApi(
+$apiInstance = new Zoom\Api\Api\PhoneBlockedListApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -212,7 +212,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20097**](../Model/InlineResponse20097.md)
+[**\Zoom\Api\Model\InlineResponse20097**](../Model/InlineResponse20097.md)
 
 ### Authorization
 
@@ -238,16 +238,16 @@ A Zoom account owner or a user with admin privilege can block phone numbers for 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PhoneBlockedListApi(
+$apiInstance = new Zoom\Api\Api\PhoneBlockedListApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $blocked_list_id = "blocked_list_id_example"; // string | Unique Identifier for the blocked list.
-$body = new \Swagger\Client\Model\Body78(); // \Swagger\Client\Model\Body78 | 
+$body = new \Zoom\Api\Model\Body78(); // \Zoom\Api\Model\Body78 | 
 
 try {
     $result = $apiInstance->updateBlockedList($blocked_list_id, $body);
@@ -263,7 +263,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **blocked_list_id** | **string**| Unique Identifier for the blocked list. |
- **body** | [**\Swagger\Client\Model\Body78**](../Model/Body78.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\Body78**](../Model/Body78.md)|  | [optional]
 
 ### Return type
 

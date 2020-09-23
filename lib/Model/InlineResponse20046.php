@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse20046 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -61,7 +61,7 @@ class InlineResponse20046 implements ModelInterface, ArrayAccess
         'page_number' => 'int',
         'page_size' => 'int',
         'total_records' => 'int',
-        'users' => '\Swagger\Client\Model\InlineResponse20046Users[]'
+        'users' => '\Zoom\Api\Model\InlineResponse20046Users[]'
     ];
 
     /**
@@ -336,7 +336,7 @@ class InlineResponse20046 implements ModelInterface, ArrayAccess
     /**
      * Gets users
      *
-     * @return \Swagger\Client\Model\InlineResponse20046Users[]
+     * @return \Zoom\Api\Model\InlineResponse20046Users[]
      */
     public function getUsers()
     {
@@ -346,7 +346,7 @@ class InlineResponse20046 implements ModelInterface, ArrayAccess
     /**
      * Sets users
      *
-     * @param \Swagger\Client\Model\InlineResponse20046Users[] $users List of user objects.
+     * @param \Zoom\Api\Model\InlineResponse20046Users[] $users List of user objects.
      *
      * @return $this
      */

@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **cms_user_id** | **string** | CMS ID of user, only enabled for Kaltura integration. | [optional] 
 **company** | **string** | User&#39;s company. | [optional] 
 **created_at** | [**\DateTime**](\DateTime.md) | The date and time at which this user was created. | [optional] 
-**custom_attributes** | [**\Swagger\Client\Model\InlineResponse20034CustomAttributes**](InlineResponse20034CustomAttributes.md) |  | [optional] 
+**custom_attributes** | [**\Zoom\Api\Model\InlineResponse20034CustomAttributes**](InlineResponse20034CustomAttributes.md) |  | [optional] 
 **dept** | **string** | Department. | [optional] 
 **email** | **string** | User&#39;s email address. | [default to 'john.doe@email.com']
 **first_name** | **string** | User&#39;s first name. | [optional] 

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * Body30 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class Body30 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'members' => '\Swagger\Client\Model\RolesroleIdmembersMembers[]'
+        'members' => '\Zoom\Api\Model\RolesroleIdmembersMembers[]'
     ];
 
     /**
@@ -207,7 +207,7 @@ class Body30 implements ModelInterface, ArrayAccess
     /**
      * Gets members
      *
-     * @return \Swagger\Client\Model\RolesroleIdmembersMembers[]
+     * @return \Zoom\Api\Model\RolesroleIdmembersMembers[]
      */
     public function getMembers()
     {
@@ -217,7 +217,7 @@ class Body30 implements ModelInterface, ArrayAccess
     /**
      * Sets members
      *
-     * @param \Swagger\Client\Model\RolesroleIdmembersMembers[] $members Array of userId/user email of users to whom you would like to assign this role. Upto 30 users can be assigned a role at once.
+     * @param \Zoom\Api\Model\RolesroleIdmembersMembers[] $members Array of userId/user email of users to whom you would like to assign this role. Upto 30 users can be assigned a role at once.
      *
      * @return $this
      */

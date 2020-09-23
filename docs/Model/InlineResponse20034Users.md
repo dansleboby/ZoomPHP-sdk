@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **meetings** | **int** | Number of meetings for user. | [optional] 
 **participants** | **int** | Number of participants in meetings for user. | [optional] 
 **meeting_minutes** | **int** | Number of meeting minutes for user. | [optional] 
-**custom_attributes** | [**\Swagger\Client\Model\InlineResponse20034CustomAttributes**](InlineResponse20034CustomAttributes.md) |  | [optional] 
+**custom_attributes** | [**\Zoom\Api\Model\InlineResponse20034CustomAttributes**](InlineResponse20034CustomAttributes.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

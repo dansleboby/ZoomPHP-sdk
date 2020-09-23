@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse2007 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -60,7 +60,7 @@ class InlineResponse2007 implements ModelInterface, ArrayAccess
         'total_records' => 'int',
         'page_size' => 'int',
         'next_page_token' => 'string',
-        'channels' => '\Swagger\Client\Model\InlineResponse2007Channels[]'
+        'channels' => '\Zoom\Api\Model\InlineResponse2007Channels[]'
     ];
 
     /**
@@ -306,7 +306,7 @@ class InlineResponse2007 implements ModelInterface, ArrayAccess
     /**
      * Gets channels
      *
-     * @return \Swagger\Client\Model\InlineResponse2007Channels[]
+     * @return \Zoom\Api\Model\InlineResponse2007Channels[]
      */
     public function getChannels()
     {
@@ -316,7 +316,7 @@ class InlineResponse2007 implements ModelInterface, ArrayAccess
     /**
      * Sets channels
      *
-     * @param \Swagger\Client\Model\InlineResponse2007Channels[] $channels Chat Channel object(s).
+     * @param \Zoom\Api\Model\InlineResponse2007Channels[] $channels Chat Channel object(s).
      *
      * @return $this
      */

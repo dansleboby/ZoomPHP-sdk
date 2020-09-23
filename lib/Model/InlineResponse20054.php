@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse20054 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -64,15 +64,15 @@ class InlineResponse20054 implements ModelInterface, ArrayAccess
         'host_id' => 'string',
         'id' => 'int',
         'join_url' => 'string',
-        'occurrences' => '\Swagger\Client\Model\InlineResponse20111Occurrences[]',
+        'occurrences' => '\Zoom\Api\Model\InlineResponse20111Occurrences[]',
         'password' => 'string',
-        'recurrence' => '\Swagger\Client\Model\RecurrenceWebinar',
-        'settings' => '\Swagger\Client\Model\InlineResponse20119Settings',
+        'recurrence' => '\Zoom\Api\Model\RecurrenceWebinar',
+        'settings' => '\Zoom\Api\Model\InlineResponse20119Settings',
         'start_time' => '\DateTime',
         'start_url' => 'string',
         'timezone' => 'string',
         'topic' => 'string',
-        'tracking_fields' => '\Swagger\Client\Model\InlineResponse20119TrackingFields[]',
+        'tracking_fields' => '\Zoom\Api\Model\InlineResponse20119TrackingFields[]',
         'type' => 'int',
         'uuid' => 'string'
     ];
@@ -485,7 +485,7 @@ class InlineResponse20054 implements ModelInterface, ArrayAccess
     /**
      * Gets occurrences
      *
-     * @return \Swagger\Client\Model\InlineResponse20111Occurrences[]
+     * @return \Zoom\Api\Model\InlineResponse20111Occurrences[]
      */
     public function getOccurrences()
     {
@@ -495,7 +495,7 @@ class InlineResponse20054 implements ModelInterface, ArrayAccess
     /**
      * Sets occurrences
      *
-     * @param \Swagger\Client\Model\InlineResponse20111Occurrences[] $occurrences Array of occurrence objects.
+     * @param \Zoom\Api\Model\InlineResponse20111Occurrences[] $occurrences Array of occurrence objects.
      *
      * @return $this
      */
@@ -537,7 +537,7 @@ class InlineResponse20054 implements ModelInterface, ArrayAccess
     /**
      * Gets recurrence
      *
-     * @return \Swagger\Client\Model\RecurrenceWebinar
+     * @return \Zoom\Api\Model\RecurrenceWebinar
      */
     public function getRecurrence()
     {
@@ -547,7 +547,7 @@ class InlineResponse20054 implements ModelInterface, ArrayAccess
     /**
      * Sets recurrence
      *
-     * @param \Swagger\Client\Model\RecurrenceWebinar $recurrence recurrence
+     * @param \Zoom\Api\Model\RecurrenceWebinar $recurrence recurrence
      *
      * @return $this
      */
@@ -561,7 +561,7 @@ class InlineResponse20054 implements ModelInterface, ArrayAccess
     /**
      * Gets settings
      *
-     * @return \Swagger\Client\Model\InlineResponse20119Settings
+     * @return \Zoom\Api\Model\InlineResponse20119Settings
      */
     public function getSettings()
     {
@@ -571,7 +571,7 @@ class InlineResponse20054 implements ModelInterface, ArrayAccess
     /**
      * Sets settings
      *
-     * @param \Swagger\Client\Model\InlineResponse20119Settings $settings settings
+     * @param \Zoom\Api\Model\InlineResponse20119Settings $settings settings
      *
      * @return $this
      */
@@ -685,7 +685,7 @@ class InlineResponse20054 implements ModelInterface, ArrayAccess
     /**
      * Gets tracking_fields
      *
-     * @return \Swagger\Client\Model\InlineResponse20119TrackingFields[]
+     * @return \Zoom\Api\Model\InlineResponse20119TrackingFields[]
      */
     public function getTrackingFields()
     {
@@ -695,7 +695,7 @@ class InlineResponse20054 implements ModelInterface, ArrayAccess
     /**
      * Sets tracking_fields
      *
-     * @param \Swagger\Client\Model\InlineResponse20119TrackingFields[] $tracking_fields Tracking fields
+     * @param \Zoom\Api\Model\InlineResponse20119TrackingFields[] $tracking_fields Tracking fields
      *
      * @return $this
      */

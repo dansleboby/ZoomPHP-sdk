@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * RecordingRegistrantQuestions Class Doc Comment
  *
  * @category Class
  * @description Recording Registrant Questions
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,8 +58,8 @@ class RecordingRegistrantQuestions implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'questions' => '\Swagger\Client\Model\RecordingRegistrantQuestionsQuestions[]',
-        'custom_questions' => '\Swagger\Client\Model\RecordingRegistrantQuestionsCustomQuestions[]'
+        'questions' => '\Zoom\Api\Model\RecordingRegistrantQuestionsQuestions[]',
+        'custom_questions' => '\Zoom\Api\Model\RecordingRegistrantQuestionsCustomQuestions[]'
     ];
 
     /**
@@ -214,7 +214,7 @@ class RecordingRegistrantQuestions implements ModelInterface, ArrayAccess
     /**
      * Gets questions
      *
-     * @return \Swagger\Client\Model\RecordingRegistrantQuestionsQuestions[]
+     * @return \Zoom\Api\Model\RecordingRegistrantQuestionsQuestions[]
      */
     public function getQuestions()
     {
@@ -224,7 +224,7 @@ class RecordingRegistrantQuestions implements ModelInterface, ArrayAccess
     /**
      * Sets questions
      *
-     * @param \Swagger\Client\Model\RecordingRegistrantQuestionsQuestions[] $questions Array of Registrant Questions
+     * @param \Zoom\Api\Model\RecordingRegistrantQuestionsQuestions[] $questions Array of Registrant Questions
      *
      * @return $this
      */
@@ -238,7 +238,7 @@ class RecordingRegistrantQuestions implements ModelInterface, ArrayAccess
     /**
      * Gets custom_questions
      *
-     * @return \Swagger\Client\Model\RecordingRegistrantQuestionsCustomQuestions[]
+     * @return \Zoom\Api\Model\RecordingRegistrantQuestionsCustomQuestions[]
      */
     public function getCustomQuestions()
     {
@@ -248,7 +248,7 @@ class RecordingRegistrantQuestions implements ModelInterface, ArrayAccess
     /**
      * Sets custom_questions
      *
-     * @param \Swagger\Client\Model\RecordingRegistrantQuestionsCustomQuestions[] $custom_questions Array of Registrant Custom Questions
+     * @param \Zoom\Api\Model\RecordingRegistrantQuestionsCustomQuestions[] $custom_questions Array of Registrant Custom Questions
      *
      * @return $this
      */

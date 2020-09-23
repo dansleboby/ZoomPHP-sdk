@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * UserSettingsScheduleMeeting Class Doc Comment
  *
  * @category Class
  * @description 
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -73,7 +73,7 @@ class UserSettingsScheduleMeeting implements ModelInterface, ArrayAccess
         'require_password_for_pmi_meetings' => 'string',
         'pmi_password' => 'string',
         'embed_password_in_join_link' => 'bool',
-        'meeting_password_requirement' => '\Swagger\Client\Model\UserSettingsMeetingSettingsMeetingPasswordRequirement',
+        'meeting_password_requirement' => '\Zoom\Api\Model\UserSettingsMeetingSettingsMeetingPasswordRequirement',
         'personal_meeting' => 'bool'
     ];
 
@@ -734,7 +734,7 @@ class UserSettingsScheduleMeeting implements ModelInterface, ArrayAccess
     /**
      * Gets meeting_password_requirement
      *
-     * @return \Swagger\Client\Model\UserSettingsMeetingSettingsMeetingPasswordRequirement
+     * @return \Zoom\Api\Model\UserSettingsMeetingSettingsMeetingPasswordRequirement
      */
     public function getMeetingPasswordRequirement()
     {
@@ -744,7 +744,7 @@ class UserSettingsScheduleMeeting implements ModelInterface, ArrayAccess
     /**
      * Sets meeting_password_requirement
      *
-     * @param \Swagger\Client\Model\UserSettingsMeetingSettingsMeetingPasswordRequirement $meeting_password_requirement meeting_password_requirement
+     * @param \Zoom\Api\Model\UserSettingsMeetingSettingsMeetingPasswordRequirement $meeting_password_requirement meeting_password_requirement
      *
      * @return $this
      */

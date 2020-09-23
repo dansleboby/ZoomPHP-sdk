@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Zoom\Api\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Zoom\Api\ApiException;
+use Zoom\Api\Configuration;
+use Zoom\Api\HeaderSelector;
+use Zoom\Api\ObjectSerializer;
 
 /**
  * GroupsApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -94,9 +94,9 @@ class GroupsApi
      *
      * @param  string $group_id Id of the group. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20069
+     * @return \Zoom\Api\Model\InlineResponse20069
      */
     public function getGroupLockSettings($group_id)
     {
@@ -111,13 +111,13 @@ class GroupsApi
      *
      * @param  string $group_id Id of the group. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20069, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20069, HTTP status code, HTTP response headers (array of strings)
      */
     public function getGroupLockSettingsWithHttpInfo($group_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20069';
+        $returnType = '\Zoom\Api\Model\InlineResponse20069';
         $request = $this->getGroupLockSettingsRequest($group_id);
 
         try {
@@ -169,7 +169,7 @@ class GroupsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20069',
+                        '\Zoom\Api\Model\InlineResponse20069',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -211,7 +211,7 @@ class GroupsApi
      */
     public function getGroupLockSettingsAsyncWithHttpInfo($group_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20069';
+        $returnType = '\Zoom\Api\Model\InlineResponse20069';
         $request = $this->getGroupLockSettingsRequest($group_id);
 
         return $this->client
@@ -368,7 +368,7 @@ class GroupsApi
      * @param  string $group_id group_id (required)
      * @param  string $option &#x60;meeting_authentication&#x60;: Use this query parameter to view [meeting authentication configuration](https://support.zoom.us/hc/en-us/articles/360037117472-Authentication-Profiles-for-Meetings-and-Webinars) applied on the account.&lt;br&gt;&#x60;recording_authentication&#x60;: Use this query parameter to view [recording authentication configuration](https://support.zoom.us/hc/en-us/articles/360037756671-Authentication-Profiles-for-Cloud-Recordings) applied on the account. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -386,7 +386,7 @@ class GroupsApi
      * @param  string $group_id (required)
      * @param  string $option &#x60;meeting_authentication&#x60;: Use this query parameter to view [meeting authentication configuration](https://support.zoom.us/hc/en-us/articles/360037117472-Authentication-Profiles-for-Meetings-and-Webinars) applied on the account.&lt;br&gt;&#x60;recording_authentication&#x60;: Use this query parameter to view [recording authentication configuration](https://support.zoom.us/hc/en-us/articles/360037756671-Authentication-Profiles-for-Cloud-Recordings) applied on the account. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -649,9 +649,9 @@ class GroupsApi
      *
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups). (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20017
+     * @return \Zoom\Api\Model\InlineResponse20017
      */
     public function group($group_id)
     {
@@ -666,13 +666,13 @@ class GroupsApi
      *
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups). (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20017, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20017, HTTP status code, HTTP response headers (array of strings)
      */
     public function groupWithHttpInfo($group_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20017';
+        $returnType = '\Zoom\Api\Model\InlineResponse20017';
         $request = $this->groupRequest($group_id);
 
         try {
@@ -724,7 +724,7 @@ class GroupsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20017',
+                        '\Zoom\Api\Model\InlineResponse20017',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -766,7 +766,7 @@ class GroupsApi
      */
     public function groupAsyncWithHttpInfo($group_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20017';
+        $returnType = '\Zoom\Api\Model\InlineResponse20017';
         $request = $this->groupRequest($group_id);
 
         return $this->client
@@ -920,9 +920,9 @@ class GroupsApi
      *
      * Create a Group
      *
-     * @param  \Swagger\Client\Model\Body16 $body body (required)
+     * @param  \Zoom\Api\Model\Body16 $body body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -936,9 +936,9 @@ class GroupsApi
      *
      * Create a Group
      *
-     * @param  \Swagger\Client\Model\Body16 $body (required)
+     * @param  \Zoom\Api\Model\Body16 $body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -982,7 +982,7 @@ class GroupsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse2017',
+                        '\Zoom\Api\Model\InlineResponse2017',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -997,7 +997,7 @@ class GroupsApi
      *
      * Create a Group
      *
-     * @param  \Swagger\Client\Model\Body16 $body (required)
+     * @param  \Zoom\Api\Model\Body16 $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1017,7 +1017,7 @@ class GroupsApi
      *
      * Create a Group
      *
-     * @param  \Swagger\Client\Model\Body16 $body (required)
+     * @param  \Zoom\Api\Model\Body16 $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1053,7 +1053,7 @@ class GroupsApi
     /**
      * Create request for operation 'groupCreate'
      *
-     * @param  \Swagger\Client\Model\Body16 $body (required)
+     * @param  \Zoom\Api\Model\Body16 $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1161,7 +1161,7 @@ class GroupsApi
      *
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups). (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1177,7 +1177,7 @@ class GroupsApi
      *
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups). (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1396,9 +1396,9 @@ class GroupsApi
      * Update Locked Settings
      *
      * @param  string $group_id The Id of the group. (required)
-     * @param  \Swagger\Client\Model\Body51 $body body (optional)
+     * @param  \Zoom\Api\Model\Body51 $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -1414,9 +1414,9 @@ class GroupsApi
      * Update Locked Settings
      *
      * @param  string $group_id The Id of the group. (required)
-     * @param  \Swagger\Client\Model\Body51 $body (optional)
+     * @param  \Zoom\Api\Model\Body51 $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1490,7 +1490,7 @@ class GroupsApi
      * Update Locked Settings
      *
      * @param  string $group_id The Id of the group. (required)
-     * @param  \Swagger\Client\Model\Body51 $body (optional)
+     * @param  \Zoom\Api\Model\Body51 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1511,7 +1511,7 @@ class GroupsApi
      * Update Locked Settings
      *
      * @param  string $group_id The Id of the group. (required)
-     * @param  \Swagger\Client\Model\Body51 $body (optional)
+     * @param  \Zoom\Api\Model\Body51 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1562,7 +1562,7 @@ class GroupsApi
      * Create request for operation 'groupLockedSettings'
      *
      * @param  string $group_id The Id of the group. (required)
-     * @param  \Swagger\Client\Model\Body51 $body (optional)
+     * @param  \Zoom\Api\Model\Body51 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1680,9 +1680,9 @@ class GroupsApi
      * @param  int $page_size The number of records returned within a single API call. (optional, default to 30)
      * @param  int $page_number **Deprecated** - This field has been deprecated and we will stop supporting it completely in a future release. Please use \&quot;next_page_token\&quot; for pagination instead of this field.  The page number of the current page in the returned records. (optional, default to 1)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20018
+     * @return \Zoom\Api\Model\InlineResponse20018
      */
     public function groupMembers($group_id, $page_size = '30', $page_number = '1')
     {
@@ -1699,13 +1699,13 @@ class GroupsApi
      * @param  int $page_size The number of records returned within a single API call. (optional, default to 30)
      * @param  int $page_number **Deprecated** - This field has been deprecated and we will stop supporting it completely in a future release. Please use \&quot;next_page_token\&quot; for pagination instead of this field.  The page number of the current page in the returned records. (optional, default to 1)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20018, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20018, HTTP status code, HTTP response headers (array of strings)
      */
     public function groupMembersWithHttpInfo($group_id, $page_size = '30', $page_number = '1')
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20018';
+        $returnType = '\Zoom\Api\Model\InlineResponse20018';
         $request = $this->groupMembersRequest($group_id, $page_size, $page_number);
 
         try {
@@ -1757,7 +1757,7 @@ class GroupsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20018',
+                        '\Zoom\Api\Model\InlineResponse20018',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1803,7 +1803,7 @@ class GroupsApi
      */
     public function groupMembersAsyncWithHttpInfo($group_id, $page_size = '30', $page_number = '1')
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20018';
+        $returnType = '\Zoom\Api\Model\InlineResponse20018';
         $request = $this->groupMembersRequest($group_id, $page_size, $page_number);
 
         return $this->client
@@ -1972,9 +1972,9 @@ class GroupsApi
      * Add Group Members
      *
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups). (required)
-     * @param  \Swagger\Client\Model\Body18 $body body (required)
+     * @param  \Zoom\Api\Model\Body18 $body body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1989,9 +1989,9 @@ class GroupsApi
      * Add Group Members
      *
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups). (required)
-     * @param  \Swagger\Client\Model\Body18 $body (required)
+     * @param  \Zoom\Api\Model\Body18 $body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2051,7 +2051,7 @@ class GroupsApi
      * Add Group Members
      *
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups). (required)
-     * @param  \Swagger\Client\Model\Body18 $body (required)
+     * @param  \Zoom\Api\Model\Body18 $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2072,7 +2072,7 @@ class GroupsApi
      * Add Group Members
      *
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups). (required)
-     * @param  \Swagger\Client\Model\Body18 $body (required)
+     * @param  \Zoom\Api\Model\Body18 $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2109,7 +2109,7 @@ class GroupsApi
      * Create request for operation 'groupMembersCreate'
      *
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups). (required)
-     * @param  \Swagger\Client\Model\Body18 $body (required)
+     * @param  \Zoom\Api\Model\Body18 $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2232,7 +2232,7 @@ class GroupsApi
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups). (required)
      * @param  string $member_id The member ID. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2249,7 +2249,7 @@ class GroupsApi
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups). (required)
      * @param  string $member_id The member ID. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2485,9 +2485,9 @@ class GroupsApi
      * Update a Group
      *
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups). (required)
-     * @param  \Swagger\Client\Model\Body17 $body body (required)
+     * @param  \Zoom\Api\Model\Body17 $body body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2502,9 +2502,9 @@ class GroupsApi
      * Update a Group
      *
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups). (required)
-     * @param  \Swagger\Client\Model\Body17 $body (required)
+     * @param  \Zoom\Api\Model\Body17 $body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2556,7 +2556,7 @@ class GroupsApi
      * Update a Group
      *
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups). (required)
-     * @param  \Swagger\Client\Model\Body17 $body (required)
+     * @param  \Zoom\Api\Model\Body17 $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2577,7 +2577,7 @@ class GroupsApi
      * Update a Group
      *
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups). (required)
-     * @param  \Swagger\Client\Model\Body17 $body (required)
+     * @param  \Zoom\Api\Model\Body17 $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2614,7 +2614,7 @@ class GroupsApi
      * Create request for operation 'groupUpdate'
      *
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups). (required)
-     * @param  \Swagger\Client\Model\Body17 $body (required)
+     * @param  \Zoom\Api\Model\Body17 $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2735,9 +2735,9 @@ class GroupsApi
      * List Groups
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20016
+     * @return \Zoom\Api\Model\InlineResponse20016
      */
     public function groups()
     {
@@ -2751,13 +2751,13 @@ class GroupsApi
      * List Groups
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20016, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20016, HTTP status code, HTTP response headers (array of strings)
      */
     public function groupsWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20016';
+        $returnType = '\Zoom\Api\Model\InlineResponse20016';
         $request = $this->groupsRequest();
 
         try {
@@ -2809,7 +2809,7 @@ class GroupsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20016',
+                        '\Zoom\Api\Model\InlineResponse20016',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2849,7 +2849,7 @@ class GroupsApi
      */
     public function groupsAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20016';
+        $returnType = '\Zoom\Api\Model\InlineResponse20016';
         $request = $this->groupsRequest();
 
         return $this->client
@@ -2990,9 +2990,9 @@ class GroupsApi
      *
      * @param  string $group_id Unique Identifier of the group. Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups) API.&lt;br&gt; To change a member&#39;s primary group, provide the groupId of the member&#39;s current primary group as the value of this field.&lt;br&gt; To remove a member from one group and move the member to another group, provide the groupId of the group from which the member is to be moved. (required)
      * @param  string $member_id Unique Identifier of the group member. Can be retrieved by calling the [List Group Members](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groupmembers) API. (required)
-     * @param  \Swagger\Client\Model\Body19 $body body (optional)
+     * @param  \Zoom\Api\Model\Body19 $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -3009,9 +3009,9 @@ class GroupsApi
      *
      * @param  string $group_id Unique Identifier of the group. Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups) API.&lt;br&gt; To change a member&#39;s primary group, provide the groupId of the member&#39;s current primary group as the value of this field.&lt;br&gt; To remove a member from one group and move the member to another group, provide the groupId of the group from which the member is to be moved. (required)
      * @param  string $member_id Unique Identifier of the group member. Can be retrieved by calling the [List Group Members](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groupmembers) API. (required)
-     * @param  \Swagger\Client\Model\Body19 $body (optional)
+     * @param  \Zoom\Api\Model\Body19 $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3086,7 +3086,7 @@ class GroupsApi
      *
      * @param  string $group_id Unique Identifier of the group. Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups) API.&lt;br&gt; To change a member&#39;s primary group, provide the groupId of the member&#39;s current primary group as the value of this field.&lt;br&gt; To remove a member from one group and move the member to another group, provide the groupId of the group from which the member is to be moved. (required)
      * @param  string $member_id Unique Identifier of the group member. Can be retrieved by calling the [List Group Members](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groupmembers) API. (required)
-     * @param  \Swagger\Client\Model\Body19 $body (optional)
+     * @param  \Zoom\Api\Model\Body19 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3108,7 +3108,7 @@ class GroupsApi
      *
      * @param  string $group_id Unique Identifier of the group. Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups) API.&lt;br&gt; To change a member&#39;s primary group, provide the groupId of the member&#39;s current primary group as the value of this field.&lt;br&gt; To remove a member from one group and move the member to another group, provide the groupId of the group from which the member is to be moved. (required)
      * @param  string $member_id Unique Identifier of the group member. Can be retrieved by calling the [List Group Members](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groupmembers) API. (required)
-     * @param  \Swagger\Client\Model\Body19 $body (optional)
+     * @param  \Zoom\Api\Model\Body19 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3160,7 +3160,7 @@ class GroupsApi
      *
      * @param  string $group_id Unique Identifier of the group. Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups) API.&lt;br&gt; To change a member&#39;s primary group, provide the groupId of the member&#39;s current primary group as the value of this field.&lt;br&gt; To remove a member from one group and move the member to another group, provide the groupId of the group from which the member is to be moved. (required)
      * @param  string $member_id Unique Identifier of the group member. Can be retrieved by calling the [List Group Members](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groupmembers) API. (required)
-     * @param  \Swagger\Client\Model\Body19 $body (optional)
+     * @param  \Zoom\Api\Model\Body19 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -3292,7 +3292,7 @@ class GroupsApi
      * @param  object $body body (optional)
      * @param  string $option option (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -3310,7 +3310,7 @@ class GroupsApi
      * @param  object $body (optional)
      * @param  string $option (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * CreateWebinar Class Doc Comment
  *
  * @category Class
  * @description Base webinar object for sessions.
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -65,9 +65,9 @@ class CreateWebinar implements ModelInterface, ArrayAccess
         'timezone' => 'string',
         'password' => 'string',
         'agenda' => 'string',
-        'tracking_fields' => '\Swagger\Client\Model\CreateWebinarTrackingFields[]',
-        'recurrence' => '\Swagger\Client\Model\RecurrenceWebinar',
-        'settings' => '\Swagger\Client\Model\CreateWebinarSettings'
+        'tracking_fields' => '\Zoom\Api\Model\CreateWebinarTrackingFields[]',
+        'recurrence' => '\Zoom\Api\Model\RecurrenceWebinar',
+        'settings' => '\Zoom\Api\Model\CreateWebinarSettings'
     ];
 
     /**
@@ -430,7 +430,7 @@ class CreateWebinar implements ModelInterface, ArrayAccess
     /**
      * Gets tracking_fields
      *
-     * @return \Swagger\Client\Model\CreateWebinarTrackingFields[]
+     * @return \Zoom\Api\Model\CreateWebinarTrackingFields[]
      */
     public function getTrackingFields()
     {
@@ -440,7 +440,7 @@ class CreateWebinar implements ModelInterface, ArrayAccess
     /**
      * Sets tracking_fields
      *
-     * @param \Swagger\Client\Model\CreateWebinarTrackingFields[] $tracking_fields Tracking fields
+     * @param \Zoom\Api\Model\CreateWebinarTrackingFields[] $tracking_fields Tracking fields
      *
      * @return $this
      */
@@ -454,7 +454,7 @@ class CreateWebinar implements ModelInterface, ArrayAccess
     /**
      * Gets recurrence
      *
-     * @return \Swagger\Client\Model\RecurrenceWebinar
+     * @return \Zoom\Api\Model\RecurrenceWebinar
      */
     public function getRecurrence()
     {
@@ -464,7 +464,7 @@ class CreateWebinar implements ModelInterface, ArrayAccess
     /**
      * Sets recurrence
      *
-     * @param \Swagger\Client\Model\RecurrenceWebinar $recurrence recurrence
+     * @param \Zoom\Api\Model\RecurrenceWebinar $recurrence recurrence
      *
      * @return $this
      */
@@ -478,7 +478,7 @@ class CreateWebinar implements ModelInterface, ArrayAccess
     /**
      * Gets settings
      *
-     * @return \Swagger\Client\Model\CreateWebinarSettings
+     * @return \Zoom\Api\Model\CreateWebinarSettings
      */
     public function getSettings()
     {
@@ -488,7 +488,7 @@ class CreateWebinar implements ModelInterface, ArrayAccess
     /**
      * Sets settings
      *
-     * @param \Swagger\Client\Model\CreateWebinarSettings $settings settings
+     * @param \Zoom\Api\Model\CreateWebinarSettings $settings settings
      *
      * @return $this
      */

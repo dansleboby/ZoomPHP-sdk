@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * MeetingCreate Class Doc Comment
  *
  * @category Class
  * @description Base object for meeting.
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -66,9 +66,9 @@ class MeetingCreate implements ModelInterface, ArrayAccess
         'timezone' => 'string',
         'password' => 'string',
         'agenda' => 'string',
-        'tracking_fields' => '\Swagger\Client\Model\UsersuserIdmeetingsTrackingFields[]',
-        'recurrence' => '\Swagger\Client\Model\UsersuserIdmeetingsRecurrence',
-        'settings' => '\Swagger\Client\Model\UsersuserIdmeetingsSettings'
+        'tracking_fields' => '\Zoom\Api\Model\UsersuserIdmeetingsTrackingFields[]',
+        'recurrence' => '\Zoom\Api\Model\UsersuserIdmeetingsRecurrence',
+        'settings' => '\Zoom\Api\Model\UsersuserIdmeetingsSettings'
     ];
 
     /**
@@ -476,7 +476,7 @@ class MeetingCreate implements ModelInterface, ArrayAccess
     /**
      * Gets tracking_fields
      *
-     * @return \Swagger\Client\Model\UsersuserIdmeetingsTrackingFields[]
+     * @return \Zoom\Api\Model\UsersuserIdmeetingsTrackingFields[]
      */
     public function getTrackingFields()
     {
@@ -486,7 +486,7 @@ class MeetingCreate implements ModelInterface, ArrayAccess
     /**
      * Sets tracking_fields
      *
-     * @param \Swagger\Client\Model\UsersuserIdmeetingsTrackingFields[] $tracking_fields Tracking fields
+     * @param \Zoom\Api\Model\UsersuserIdmeetingsTrackingFields[] $tracking_fields Tracking fields
      *
      * @return $this
      */
@@ -500,7 +500,7 @@ class MeetingCreate implements ModelInterface, ArrayAccess
     /**
      * Gets recurrence
      *
-     * @return \Swagger\Client\Model\UsersuserIdmeetingsRecurrence
+     * @return \Zoom\Api\Model\UsersuserIdmeetingsRecurrence
      */
     public function getRecurrence()
     {
@@ -510,7 +510,7 @@ class MeetingCreate implements ModelInterface, ArrayAccess
     /**
      * Sets recurrence
      *
-     * @param \Swagger\Client\Model\UsersuserIdmeetingsRecurrence $recurrence recurrence
+     * @param \Zoom\Api\Model\UsersuserIdmeetingsRecurrence $recurrence recurrence
      *
      * @return $this
      */
@@ -524,7 +524,7 @@ class MeetingCreate implements ModelInterface, ArrayAccess
     /**
      * Gets settings
      *
-     * @return \Swagger\Client\Model\UsersuserIdmeetingsSettings
+     * @return \Zoom\Api\Model\UsersuserIdmeetingsSettings
      */
     public function getSettings()
     {
@@ -534,7 +534,7 @@ class MeetingCreate implements ModelInterface, ArrayAccess
     /**
      * Sets settings
      *
-     * @param \Swagger\Client\Model\UsersuserIdmeetingsSettings $settings settings
+     * @param \Zoom\Api\Model\UsersuserIdmeetingsSettings $settings settings
      *
      * @return $this
      */

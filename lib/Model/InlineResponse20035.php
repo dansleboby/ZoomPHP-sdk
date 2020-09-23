@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse20035 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,7 +58,7 @@ class InlineResponse20035 implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'from' => '\DateTime',
-        'meetings' => '\Swagger\Client\Model\InlineResponse20035Meetings[]',
+        'meetings' => '\Zoom\Api\Model\InlineResponse20035Meetings[]',
         'next_page_token' => 'string',
         'page_count' => 'int',
         'page_number' => 'int',
@@ -277,7 +277,7 @@ class InlineResponse20035 implements ModelInterface, ArrayAccess
     /**
      * Gets meetings
      *
-     * @return \Swagger\Client\Model\InlineResponse20035Meetings[]
+     * @return \Zoom\Api\Model\InlineResponse20035Meetings[]
      */
     public function getMeetings()
     {
@@ -287,7 +287,7 @@ class InlineResponse20035 implements ModelInterface, ArrayAccess
     /**
      * Sets meetings
      *
-     * @param \Swagger\Client\Model\InlineResponse20035Meetings[] $meetings Array of meeting objects.
+     * @param \Zoom\Api\Model\InlineResponse20035Meetings[] $meetings Array of meeting objects.
      *
      * @return $this
      */

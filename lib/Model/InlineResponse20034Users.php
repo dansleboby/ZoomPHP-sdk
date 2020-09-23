@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse20034Users Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -65,7 +65,7 @@ class InlineResponse20034Users implements ModelInterface, ArrayAccess
         'meetings' => 'int',
         'participants' => 'int',
         'meeting_minutes' => 'int',
-        'custom_attributes' => '\Swagger\Client\Model\InlineResponse20034CustomAttributes'
+        'custom_attributes' => '\Zoom\Api\Model\InlineResponse20034CustomAttributes'
     ];
 
     /**
@@ -447,7 +447,7 @@ class InlineResponse20034Users implements ModelInterface, ArrayAccess
     /**
      * Gets custom_attributes
      *
-     * @return \Swagger\Client\Model\InlineResponse20034CustomAttributes
+     * @return \Zoom\Api\Model\InlineResponse20034CustomAttributes
      */
     public function getCustomAttributes()
     {
@@ -457,7 +457,7 @@ class InlineResponse20034Users implements ModelInterface, ArrayAccess
     /**
      * Sets custom_attributes
      *
-     * @param \Swagger\Client\Model\InlineResponse20034CustomAttributes $custom_attributes custom_attributes
+     * @param \Zoom\Api\Model\InlineResponse20034CustomAttributes $custom_attributes custom_attributes
      *
      * @return $this
      */

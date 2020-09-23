@@ -1,4 +1,4 @@
-# Swagger\Client\ChatChannelsAccountLevelApi
+# Zoom\Api\ChatChannelsAccountLevelApi
 
 All URIs are relative to *https://api.zoom.us/v2*
 
@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 
 # **createChannel**
-> \Swagger\Client\Model\InlineResponse2012 createChannel($user_id, $body)
+> \Zoom\Api\Model\InlineResponse2012 createChannel($user_id, $body)
 
 Create a Channel
 
@@ -27,16 +27,16 @@ Zoom chat channels allow users to communicate via chat in private or public grou
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ChatChannelsAccountLevelApi(
+$apiInstance = new Zoom\Api\Api\ChatChannelsAccountLevelApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $user_id = "user_id_example"; // string | Unique identifier of the user.
-$body = new \Swagger\Client\Model\Body7(); // \Swagger\Client\Model\Body7 | 
+$body = new \Zoom\Api\Model\Body7(); // \Zoom\Api\Model\Body7 | 
 
 try {
     $result = $apiInstance->createChannel($user_id, $body);
@@ -52,11 +52,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **string**| Unique identifier of the user. |
- **body** | [**\Swagger\Client\Model\Body7**](../Model/Body7.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\Body7**](../Model/Body7.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2012**](../Model/InlineResponse2012.md)
+[**\Zoom\Api\Model\InlineResponse2012**](../Model/InlineResponse2012.md)
 
 ### Authorization
 
@@ -82,9 +82,9 @@ Zoom chat [channels](https://support.zoom.us/hc/en-us/articles/200912909-Getting
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ChatChannelsAccountLevelApi(
+$apiInstance = new Zoom\Api\Api\ChatChannelsAccountLevelApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -125,7 +125,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getChannel**
-> \Swagger\Client\Model\InlineResponse20010 getChannel($channel_id, $user_id)
+> \Zoom\Api\Model\InlineResponse20010 getChannel($channel_id, $user_id)
 
 Get a Channel
 
@@ -137,9 +137,9 @@ Zoom chat [channels](https://support.zoom.us/hc/en-us/articles/200912909-Getting
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ChatChannelsAccountLevelApi(
+$apiInstance = new Zoom\Api\Api\ChatChannelsAccountLevelApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -166,7 +166,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20010**](../Model/InlineResponse20010.md)
+[**\Zoom\Api\Model\InlineResponse20010**](../Model/InlineResponse20010.md)
 
 ### Authorization
 
@@ -180,7 +180,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getChannels**
-> \Swagger\Client\Model\InlineResponse2007 getChannels($user_id, $page_size, $next_page_token)
+> \Zoom\Api\Model\InlineResponse2007 getChannels($user_id, $page_size, $next_page_token)
 
 List User's Channels
 
@@ -192,9 +192,9 @@ Zoom chat [channels](https://support.zoom.us/hc/en-us/articles/200912909-Getting
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ChatChannelsAccountLevelApi(
+$apiInstance = new Zoom\Api\Api\ChatChannelsAccountLevelApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -223,7 +223,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2007**](../Model/InlineResponse2007.md)
+[**\Zoom\Api\Model\InlineResponse2007**](../Model/InlineResponse2007.md)
 
 ### Authorization
 
@@ -237,7 +237,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **inviteChannelMembers**
-> \Swagger\Client\Model\InlineResponse2013 inviteChannelMembers($channel_id, $user_id, $body)
+> \Zoom\Api\Model\InlineResponse2013 inviteChannelMembers($channel_id, $user_id, $body)
 
 Invite Channel Members
 
@@ -249,9 +249,9 @@ A [channel](https://support.zoom.us/hc/en-us/articles/200912909-Getting-Started-
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ChatChannelsAccountLevelApi(
+$apiInstance = new Zoom\Api\Api\ChatChannelsAccountLevelApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -259,7 +259,7 @@ $apiInstance = new Swagger\Client\Api\ChatChannelsAccountLevelApi(
 );
 $channel_id = "channel_id_example"; // string | Channel ID: Unique Identifier of the channel.
 $user_id = "user_id_example"; // string | Unique identifier of the user who is the owner of this channel.
-$body = new \Swagger\Client\Model\Body9(); // \Swagger\Client\Model\Body9 | 
+$body = new \Zoom\Api\Model\Body9(); // \Zoom\Api\Model\Body9 | 
 
 try {
     $result = $apiInstance->inviteChannelMembers($channel_id, $user_id, $body);
@@ -276,11 +276,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **channel_id** | **string**| Channel ID: Unique Identifier of the channel. |
  **user_id** | **string**| Unique identifier of the user who is the owner of this channel. |
- **body** | [**\Swagger\Client\Model\Body9**](../Model/Body9.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\Body9**](../Model/Body9.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2013**](../Model/InlineResponse2013.md)
+[**\Zoom\Api\Model\InlineResponse2013**](../Model/InlineResponse2013.md)
 
 ### Authorization
 
@@ -294,7 +294,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listChannelMembers**
-> \Swagger\Client\Model\InlineResponse20011 listChannelMembers($channel_id, $user_id, $page_size, $next_page_token)
+> \Zoom\Api\Model\InlineResponse20011 listChannelMembers($channel_id, $user_id, $page_size, $next_page_token)
 
 List Channel Members
 
@@ -306,9 +306,9 @@ A [channel](https://support.zoom.us/hc/en-us/articles/200912909-Getting-Started-
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ChatChannelsAccountLevelApi(
+$apiInstance = new Zoom\Api\Api\ChatChannelsAccountLevelApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -339,7 +339,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20011**](../Model/InlineResponse20011.md)
+[**\Zoom\Api\Model\InlineResponse20011**](../Model/InlineResponse20011.md)
 
 ### Authorization
 
@@ -365,9 +365,9 @@ A [channel](https://support.zoom.us/hc/en-us/articles/200912909-Getting-Started-
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ChatChannelsAccountLevelApi(
+$apiInstance = new Zoom\Api\Api\ChatChannelsAccountLevelApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -422,9 +422,9 @@ Zoom chat channels allow users to communicate via chat in private or public chan
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ChatChannelsAccountLevelApi(
+$apiInstance = new Zoom\Api\Api\ChatChannelsAccountLevelApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -432,7 +432,7 @@ $apiInstance = new Swagger\Client\Api\ChatChannelsAccountLevelApi(
 );
 $channel_id = "channel_id_example"; // string | Channel Id.
 $user_id = "user_id_example"; // string | Unique Identifier of the Zoom user who is the owner of the channel.
-$body = new \Swagger\Client\Model\Body8(); // \Swagger\Client\Model\Body8 | 
+$body = new \Zoom\Api\Model\Body8(); // \Zoom\Api\Model\Body8 | 
 
 try {
     $result = $apiInstance->updateChannel($channel_id, $user_id, $body);
@@ -449,7 +449,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **channel_id** | **string**| Channel Id. |
  **user_id** | **string**| Unique Identifier of the Zoom user who is the owner of the channel. |
- **body** | [**\Swagger\Client\Model\Body8**](../Model/Body8.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\Body8**](../Model/Body8.md)|  | [optional]
 
 ### Return type
 

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * AccountSettings Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,16 +57,16 @@ class AccountSettings implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'schedule_meeting' => '\Swagger\Client\Model\AccountSettingsScheduleMeeting',
-        'in_meeting' => '\Swagger\Client\Model\AccountSettingsInMeeting',
-        'email_notification' => '\Swagger\Client\Model\AccountSettingsEmailNotification',
-        'zoom_rooms' => '\Swagger\Client\Model\AccountSettingsZoomRooms',
-        'security' => '\Swagger\Client\Model\AccountSettingsSecurity',
-        'recording' => '\Swagger\Client\Model\AccountSettingsRecording',
-        'telephony' => '\Swagger\Client\Model\AccountSettingsTelephony',
-        'integration' => '\Swagger\Client\Model\AccountSettingsIntegration',
-        'feature' => '\Swagger\Client\Model\AccountSettingsFeature',
-        'tsp' => '\Swagger\Client\Model\AccountSettingsTsp'
+        'schedule_meeting' => '\Zoom\Api\Model\AccountSettingsScheduleMeeting',
+        'in_meeting' => '\Zoom\Api\Model\AccountSettingsInMeeting',
+        'email_notification' => '\Zoom\Api\Model\AccountSettingsEmailNotification',
+        'zoom_rooms' => '\Zoom\Api\Model\AccountSettingsZoomRooms',
+        'security' => '\Zoom\Api\Model\AccountSettingsSecurity',
+        'recording' => '\Zoom\Api\Model\AccountSettingsRecording',
+        'telephony' => '\Zoom\Api\Model\AccountSettingsTelephony',
+        'integration' => '\Zoom\Api\Model\AccountSettingsIntegration',
+        'feature' => '\Zoom\Api\Model\AccountSettingsFeature',
+        'tsp' => '\Zoom\Api\Model\AccountSettingsTsp'
     ];
 
     /**
@@ -261,7 +261,7 @@ class AccountSettings implements ModelInterface, ArrayAccess
     /**
      * Gets schedule_meeting
      *
-     * @return \Swagger\Client\Model\AccountSettingsScheduleMeeting
+     * @return \Zoom\Api\Model\AccountSettingsScheduleMeeting
      */
     public function getScheduleMeeting()
     {
@@ -271,7 +271,7 @@ class AccountSettings implements ModelInterface, ArrayAccess
     /**
      * Sets schedule_meeting
      *
-     * @param \Swagger\Client\Model\AccountSettingsScheduleMeeting $schedule_meeting schedule_meeting
+     * @param \Zoom\Api\Model\AccountSettingsScheduleMeeting $schedule_meeting schedule_meeting
      *
      * @return $this
      */
@@ -285,7 +285,7 @@ class AccountSettings implements ModelInterface, ArrayAccess
     /**
      * Gets in_meeting
      *
-     * @return \Swagger\Client\Model\AccountSettingsInMeeting
+     * @return \Zoom\Api\Model\AccountSettingsInMeeting
      */
     public function getInMeeting()
     {
@@ -295,7 +295,7 @@ class AccountSettings implements ModelInterface, ArrayAccess
     /**
      * Sets in_meeting
      *
-     * @param \Swagger\Client\Model\AccountSettingsInMeeting $in_meeting in_meeting
+     * @param \Zoom\Api\Model\AccountSettingsInMeeting $in_meeting in_meeting
      *
      * @return $this
      */
@@ -309,7 +309,7 @@ class AccountSettings implements ModelInterface, ArrayAccess
     /**
      * Gets email_notification
      *
-     * @return \Swagger\Client\Model\AccountSettingsEmailNotification
+     * @return \Zoom\Api\Model\AccountSettingsEmailNotification
      */
     public function getEmailNotification()
     {
@@ -319,7 +319,7 @@ class AccountSettings implements ModelInterface, ArrayAccess
     /**
      * Sets email_notification
      *
-     * @param \Swagger\Client\Model\AccountSettingsEmailNotification $email_notification email_notification
+     * @param \Zoom\Api\Model\AccountSettingsEmailNotification $email_notification email_notification
      *
      * @return $this
      */
@@ -333,7 +333,7 @@ class AccountSettings implements ModelInterface, ArrayAccess
     /**
      * Gets zoom_rooms
      *
-     * @return \Swagger\Client\Model\AccountSettingsZoomRooms
+     * @return \Zoom\Api\Model\AccountSettingsZoomRooms
      */
     public function getZoomRooms()
     {
@@ -343,7 +343,7 @@ class AccountSettings implements ModelInterface, ArrayAccess
     /**
      * Sets zoom_rooms
      *
-     * @param \Swagger\Client\Model\AccountSettingsZoomRooms $zoom_rooms zoom_rooms
+     * @param \Zoom\Api\Model\AccountSettingsZoomRooms $zoom_rooms zoom_rooms
      *
      * @return $this
      */
@@ -357,7 +357,7 @@ class AccountSettings implements ModelInterface, ArrayAccess
     /**
      * Gets security
      *
-     * @return \Swagger\Client\Model\AccountSettingsSecurity
+     * @return \Zoom\Api\Model\AccountSettingsSecurity
      */
     public function getSecurity()
     {
@@ -367,7 +367,7 @@ class AccountSettings implements ModelInterface, ArrayAccess
     /**
      * Sets security
      *
-     * @param \Swagger\Client\Model\AccountSettingsSecurity $security security
+     * @param \Zoom\Api\Model\AccountSettingsSecurity $security security
      *
      * @return $this
      */
@@ -381,7 +381,7 @@ class AccountSettings implements ModelInterface, ArrayAccess
     /**
      * Gets recording
      *
-     * @return \Swagger\Client\Model\AccountSettingsRecording
+     * @return \Zoom\Api\Model\AccountSettingsRecording
      */
     public function getRecording()
     {
@@ -391,7 +391,7 @@ class AccountSettings implements ModelInterface, ArrayAccess
     /**
      * Sets recording
      *
-     * @param \Swagger\Client\Model\AccountSettingsRecording $recording recording
+     * @param \Zoom\Api\Model\AccountSettingsRecording $recording recording
      *
      * @return $this
      */
@@ -405,7 +405,7 @@ class AccountSettings implements ModelInterface, ArrayAccess
     /**
      * Gets telephony
      *
-     * @return \Swagger\Client\Model\AccountSettingsTelephony
+     * @return \Zoom\Api\Model\AccountSettingsTelephony
      */
     public function getTelephony()
     {
@@ -415,7 +415,7 @@ class AccountSettings implements ModelInterface, ArrayAccess
     /**
      * Sets telephony
      *
-     * @param \Swagger\Client\Model\AccountSettingsTelephony $telephony telephony
+     * @param \Zoom\Api\Model\AccountSettingsTelephony $telephony telephony
      *
      * @return $this
      */
@@ -429,7 +429,7 @@ class AccountSettings implements ModelInterface, ArrayAccess
     /**
      * Gets integration
      *
-     * @return \Swagger\Client\Model\AccountSettingsIntegration
+     * @return \Zoom\Api\Model\AccountSettingsIntegration
      */
     public function getIntegration()
     {
@@ -439,7 +439,7 @@ class AccountSettings implements ModelInterface, ArrayAccess
     /**
      * Sets integration
      *
-     * @param \Swagger\Client\Model\AccountSettingsIntegration $integration integration
+     * @param \Zoom\Api\Model\AccountSettingsIntegration $integration integration
      *
      * @return $this
      */
@@ -453,7 +453,7 @@ class AccountSettings implements ModelInterface, ArrayAccess
     /**
      * Gets feature
      *
-     * @return \Swagger\Client\Model\AccountSettingsFeature
+     * @return \Zoom\Api\Model\AccountSettingsFeature
      */
     public function getFeature()
     {
@@ -463,7 +463,7 @@ class AccountSettings implements ModelInterface, ArrayAccess
     /**
      * Sets feature
      *
-     * @param \Swagger\Client\Model\AccountSettingsFeature $feature feature
+     * @param \Zoom\Api\Model\AccountSettingsFeature $feature feature
      *
      * @return $this
      */
@@ -477,7 +477,7 @@ class AccountSettings implements ModelInterface, ArrayAccess
     /**
      * Gets tsp
      *
-     * @return \Swagger\Client\Model\AccountSettingsTsp
+     * @return \Zoom\Api\Model\AccountSettingsTsp
      */
     public function getTsp()
     {
@@ -487,7 +487,7 @@ class AccountSettings implements ModelInterface, ArrayAccess
     /**
      * Sets tsp
      *
-     * @param \Swagger\Client\Model\AccountSettingsTsp $tsp tsp
+     * @param \Zoom\Api\Model\AccountSettingsTsp $tsp tsp
      *
      * @return $this
      */

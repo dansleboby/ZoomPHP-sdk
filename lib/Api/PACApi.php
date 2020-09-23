@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Zoom\Api\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Zoom\Api\ApiException;
+use Zoom\Api\Configuration;
+use Zoom\Api\HeaderSelector;
+use Zoom\Api\ObjectSerializer;
 
 /**
  * PACApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -94,9 +94,9 @@ class PACApi
      *
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20049
+     * @return \Zoom\Api\Model\InlineResponse20049
      */
     public function userPACs($user_id)
     {
@@ -111,13 +111,13 @@ class PACApi
      *
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20049, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20049, HTTP status code, HTTP response headers (array of strings)
      */
     public function userPACsWithHttpInfo($user_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20049';
+        $returnType = '\Zoom\Api\Model\InlineResponse20049';
         $request = $this->userPACsRequest($user_id);
 
         try {
@@ -169,7 +169,7 @@ class PACApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20049',
+                        '\Zoom\Api\Model\InlineResponse20049',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -211,7 +211,7 @@ class PACApi
      */
     public function userPACsAsyncWithHttpInfo($user_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20049';
+        $returnType = '\Zoom\Api\Model\InlineResponse20049';
         $request = $this->userPACsRequest($user_id);
 
         return $this->client

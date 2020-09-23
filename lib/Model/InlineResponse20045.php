@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse20045 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,7 +59,7 @@ class InlineResponse20045 implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'tsp_provider' => 'string',
         'enable' => 'bool',
-        'dial_in_numbers' => '\Swagger\Client\Model\InlineResponse20045DialInNumbers[]',
+        'dial_in_numbers' => '\Zoom\Api\Model\InlineResponse20045DialInNumbers[]',
         'tsp_enabled' => 'bool',
         'master_account_setting_extended' => 'bool',
         'modify_credential_forbidden' => 'bool',
@@ -320,7 +320,7 @@ class InlineResponse20045 implements ModelInterface, ArrayAccess
     /**
      * Gets dial_in_numbers
      *
-     * @return \Swagger\Client\Model\InlineResponse20045DialInNumbers[]
+     * @return \Zoom\Api\Model\InlineResponse20045DialInNumbers[]
      */
     public function getDialInNumbers()
     {
@@ -330,7 +330,7 @@ class InlineResponse20045 implements ModelInterface, ArrayAccess
     /**
      * Sets dial_in_numbers
      *
-     * @param \Swagger\Client\Model\InlineResponse20045DialInNumbers[] $dial_in_numbers dial_in_numbers
+     * @param \Zoom\Api\Model\InlineResponse20045DialInNumbers[] $dial_in_numbers dial_in_numbers
      *
      * @return $this
      */

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse200104 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,7 +59,7 @@ class InlineResponse200104 implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'page_size' => 'int',
         'next_page_token' => 'string',
-        'contents' => '\Swagger\Client\Model\InlineResponse200104Contents[]'
+        'contents' => '\Zoom\Api\Model\InlineResponse200104Contents[]'
     ];
 
     /**
@@ -267,7 +267,7 @@ class InlineResponse200104 implements ModelInterface, ArrayAccess
     /**
      * Gets contents
      *
-     * @return \Swagger\Client\Model\InlineResponse200104Contents[]
+     * @return \Zoom\Api\Model\InlineResponse200104Contents[]
      */
     public function getContents()
     {
@@ -277,7 +277,7 @@ class InlineResponse200104 implements ModelInterface, ArrayAccess
     /**
      * Sets contents
      *
-     * @param \Swagger\Client\Model\InlineResponse200104Contents[] $contents contents
+     * @param \Zoom\Api\Model\InlineResponse200104Contents[] $contents contents
      *
      * @return $this
      */

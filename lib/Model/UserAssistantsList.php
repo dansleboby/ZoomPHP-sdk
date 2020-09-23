@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * UserAssistantsList Class Doc Comment
  *
  * @category Class
  * @description List of user&#39;s assistants.
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,7 +58,7 @@ class UserAssistantsList implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'assistants' => '\Swagger\Client\Model\UserAssistantsListAssistants[]'
+        'assistants' => '\Zoom\Api\Model\UserAssistantsListAssistants[]'
     ];
 
     /**
@@ -208,7 +208,7 @@ class UserAssistantsList implements ModelInterface, ArrayAccess
     /**
      * Gets assistants
      *
-     * @return \Swagger\Client\Model\UserAssistantsListAssistants[]
+     * @return \Zoom\Api\Model\UserAssistantsListAssistants[]
      */
     public function getAssistants()
     {
@@ -218,7 +218,7 @@ class UserAssistantsList implements ModelInterface, ArrayAccess
     /**
      * Sets assistants
      *
-     * @param \Swagger\Client\Model\UserAssistantsListAssistants[] $assistants List of User's assistants.
+     * @param \Zoom\Api\Model\UserAssistantsListAssistants[] $assistants List of User's assistants.
      *
      * @return $this
      */

@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **page_count** | **int** | The number of pages returned for the request made. | [optional] 
 **page_number** | **int** | **Deprecated**: This field has been deprecated. Please use the \&quot;next_page_token\&quot; field for pagination instead of this field.  The page number of the current results. | [optional] 
 **page_size** | **int** | The number of records returned with a single API call. | [optional] 
-**telephony_usage** | [**\Swagger\Client\Model\InlineResponse20043TelephonyUsage[]**](InlineResponse20043TelephonyUsage.md) | Array of telephony objects. | [optional] 
+**telephony_usage** | [**\Zoom\Api\Model\InlineResponse20043TelephonyUsage[]**](InlineResponse20043TelephonyUsage.md) | Array of telephony objects. | [optional] 
 **to** | [**\DateTime**](\DateTime.md) | End date for this report. | [optional] 
 **total_records** | **int** | The total number of all the records available across pages. | [optional] 
 

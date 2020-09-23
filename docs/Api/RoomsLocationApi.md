@@ -1,4 +1,4 @@
-# Swagger\Client\RoomsLocationApi
+# Zoom\Api\RoomsLocationApi
 
 All URIs are relative to *https://api.zoom.us/v2*
 
@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 
 # **addAZRLocation**
-> \Swagger\Client\Model\InlineResponse20077 addAZRLocation($body)
+> \Zoom\Api\Model\InlineResponse20077 addAZRLocation($body)
 
 Add a Location
 
@@ -28,15 +28,15 @@ Add a location to the [location hierarchial structure(s)](https://support.zoom.u
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\RoomsLocationApi(
+$apiInstance = new Zoom\Api\Api\RoomsLocationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\Body57(); // \Swagger\Client\Model\Body57 | 
+$body = new \Zoom\Api\Model\Body57(); // \Zoom\Api\Model\Body57 | 
 
 try {
     $result = $apiInstance->addAZRLocation($body);
@@ -51,11 +51,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body57**](../Model/Body57.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\Body57**](../Model/Body57.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20077**](../Model/InlineResponse20077.md)
+[**\Zoom\Api\Model\InlineResponse20077**](../Model/InlineResponse20077.md)
 
 ### Authorization
 
@@ -81,16 +81,16 @@ An account owner of a Zoom account can establish a [Zoom Rooms Location Hierarch
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\RoomsLocationApi(
+$apiInstance = new Zoom\Api\Api\RoomsLocationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $location_id = "location_id_example"; // string | 
-$body = new \Swagger\Client\Model\Body66(); // \Swagger\Client\Model\Body66 | 
+$body = new \Zoom\Api\Model\Body66(); // \Zoom\Api\Model\Body66 | 
 
 try {
     $result = $apiInstance->changeParentLocation($location_id, $body);
@@ -106,7 +106,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **location_id** | **string**|  |
- **body** | [**\Swagger\Client\Model\Body66**](../Model/Body66.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\Body66**](../Model/Body66.md)|  | [optional]
 
 ### Return type
 
@@ -124,7 +124,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getZRLocationProfile**
-> \Swagger\Client\Model\InlineResponse20078 getZRLocationProfile($location_id)
+> \Zoom\Api\Model\InlineResponse20078 getZRLocationProfile($location_id)
 
 Get Zoom Room Location Profile
 
@@ -136,9 +136,9 @@ Each location type of the [Zoom Rooms location hierarchy](https://support.zoom.u
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\RoomsLocationApi(
+$apiInstance = new Zoom\Api\Api\RoomsLocationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -163,7 +163,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20078**](../Model/InlineResponse20078.md)
+[**\Zoom\Api\Model\InlineResponse20078**](../Model/InlineResponse20078.md)
 
 ### Authorization
 
@@ -189,9 +189,9 @@ Get information on meeting or alert settings applied to Zoom Rooms located in a 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\RoomsLocationApi(
+$apiInstance = new Zoom\Api\Api\RoomsLocationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -232,7 +232,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getZRLocationStructure**
-> \Swagger\Client\Model\InlineResponse20079 getZRLocationStructure()
+> \Zoom\Api\Model\InlineResponse20079 getZRLocationStructure()
 
 Get Zoom Room Location Structure
 
@@ -244,9 +244,9 @@ Get the [location hierarchial structure(s)](https://support.zoom.us/hc/en-us/art
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\RoomsLocationApi(
+$apiInstance = new Zoom\Api\Api\RoomsLocationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -267,7 +267,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20079**](../Model/InlineResponse20079.md)
+[**\Zoom\Api\Model\InlineResponse20079**](../Model/InlineResponse20079.md)
 
 ### Authorization
 
@@ -281,7 +281,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listZRLocations**
-> \Swagger\Client\Model\InlineResponse20076 listZRLocations($parent_location_id, $type, $page_size, $next_page_token)
+> \Zoom\Api\Model\InlineResponse20076 listZRLocations($parent_location_id, $type, $page_size, $next_page_token)
 
 List Zoom Room Locations
 
@@ -293,9 +293,9 @@ A Zoom account owner or a Zoom Room administrator can establish a [location hier
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\RoomsLocationApi(
+$apiInstance = new Zoom\Api\Api\RoomsLocationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -326,7 +326,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20076**](../Model/InlineResponse20076.md)
+[**\Zoom\Api\Model\InlineResponse20076**](../Model/InlineResponse20076.md)
 
 ### Authorization
 
@@ -352,16 +352,16 @@ Each location type of the [Zoom Rooms location hierarchy](https://support.zoom.u
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\RoomsLocationApi(
+$apiInstance = new Zoom\Api\Api\RoomsLocationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $location_id = "location_id_example"; // string | Unique Identifier of the location. This can be retrieved from the [List Zoom Room Locations](https://marketplace.zoom.us/docs/api-reference/zoom-api/rooms-location/listzrlocations) API.
-$body = new \Swagger\Client\Model\Body58(); // \Swagger\Client\Model\Body58 | 
+$body = new \Zoom\Api\Model\Body58(); // \Zoom\Api\Model\Body58 | 
 
 try {
     $result = $apiInstance->updateZRLocationProfile($location_id, $body);
@@ -377,7 +377,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **location_id** | **string**| Unique Identifier of the location. This can be retrieved from the [List Zoom Room Locations](https://marketplace.zoom.us/docs/api-reference/zoom-api/rooms-location/listzrlocations) API. |
- **body** | [**\Swagger\Client\Model\Body58**](../Model/Body58.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\Body58**](../Model/Body58.md)|  | [optional]
 
 ### Return type
 
@@ -407,9 +407,9 @@ Update information on either meeting or alert settings applied to Zoom Rooms loc
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\RoomsLocationApi(
+$apiInstance = new Zoom\Api\Api\RoomsLocationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -464,15 +464,15 @@ Update the [location hierarchial structure(s)](https://support.zoom.us/hc/en-us/
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\RoomsLocationApi(
+$apiInstance = new Zoom\Api\Api\RoomsLocationApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\Body59(); // \Swagger\Client\Model\Body59 | 
+$body = new \Zoom\Api\Model\Body59(); // \Zoom\Api\Model\Body59 | 
 
 try {
     $result = $apiInstance->updateZoomRoomsLocationStructure($body);
@@ -487,7 +487,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body59**](../Model/Body59.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\Body59**](../Model/Body59.md)|  | [optional]
 
 ### Return type
 

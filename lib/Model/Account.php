@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * Account Class Doc Comment
  *
  * @category Class
  * @description The account object represents an account on Zoom. The account owner is the user who created the account or had an account created for them. You can read more about the Zoom account structure &lt;a href&#x3D;&#39;https://medium.com/zoom-developer-blog/a-brief-look-at-zoom-account-structures-1d19c745bf8a&#39; target&#x3D;&#39;_blank&#39;&gt;here&lt;/a&gt;.
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -62,7 +62,7 @@ class Account implements ModelInterface, ArrayAccess
         'last_name' => 'string',
         'email' => 'string',
         'password' => 'string',
-        'options' => '\Swagger\Client\Model\Body12',
+        'options' => '\Zoom\Api\Model\Body12',
         'vanity_url' => 'string'
     ];
 
@@ -346,7 +346,7 @@ class Account implements ModelInterface, ArrayAccess
     /**
      * Gets options
      *
-     * @return \Swagger\Client\Model\Body12
+     * @return \Zoom\Api\Model\Body12
      */
     public function getOptions()
     {
@@ -356,7 +356,7 @@ class Account implements ModelInterface, ArrayAccess
     /**
      * Sets options
      *
-     * @param \Swagger\Client\Model\Body12 $options options
+     * @param \Zoom\Api\Model\Body12 $options options
      *
      * @return $this
      */

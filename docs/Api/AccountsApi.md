@@ -1,4 +1,4 @@
-# Swagger\Client\AccountsApi
+# Zoom\Api\AccountsApi
 
 All URIs are relative to *https://api.zoom.us/v2*
 
@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 
 # **account**
-> \Swagger\Client\Model\InlineResponse20012 account($account_id)
+> \Zoom\Api\Model\InlineResponse20012 account($account_id)
 
 Get a Sub Account
 
@@ -31,9 +31,9 @@ Get a Sub Account under the Master Account. Your account must be a Master Accoun
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\AccountsApi(
+$apiInstance = new Zoom\Api\Api\AccountsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20012**](../Model/InlineResponse20012.md)
+[**\Zoom\Api\Model\InlineResponse20012**](../Model/InlineResponse20012.md)
 
 ### Authorization
 
@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **accountCreate**
-> \Swagger\Client\Model\InlineResponse2015 accountCreate($body)
+> \Zoom\Api\Model\InlineResponse2015 accountCreate($body)
 
 Create a Sub Account
 
@@ -84,15 +84,15 @@ Create a Sub Account under the Master Account. <aside>Your account must be a Mas
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\AccountsApi(
+$apiInstance = new Zoom\Api\Api\AccountsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\Body11(); // \Swagger\Client\Model\Body11 | Account.
+$body = new \Zoom\Api\Model\Body11(); // \Zoom\Api\Model\Body11 | Account.
 
 try {
     $result = $apiInstance->accountCreate($body);
@@ -107,11 +107,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body11**](../Model/Body11.md)| Account. |
+ **body** | [**\Zoom\Api\Model\Body11**](../Model/Body11.md)| Account. |
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2015**](../Model/InlineResponse2015.md)
+[**\Zoom\Api\Model\InlineResponse2015**](../Model/InlineResponse2015.md)
 
 ### Authorization
 
@@ -137,9 +137,9 @@ Disassociate a Sub Account from the Master Account. This will leave the Sub Acco
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\AccountsApi(
+$apiInstance = new Zoom\Api\Api\AccountsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -177,7 +177,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **accountManagedDomain**
-> \Swagger\Client\Model\InlineResponse20013 accountManagedDomain($account_id)
+> \Zoom\Api\Model\InlineResponse20013 accountManagedDomain($account_id)
 
 Get Managed Domains
 
@@ -189,9 +189,9 @@ Get a Sub Account's [managed domains](https://support.zoom.us/hc/en-us/articles/
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\AccountsApi(
+$apiInstance = new Zoom\Api\Api\AccountsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -216,7 +216,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20013**](../Model/InlineResponse20013.md)
+[**\Zoom\Api\Model\InlineResponse20013**](../Model/InlineResponse20013.md)
 
 ### Authorization
 
@@ -242,16 +242,16 @@ Update a Sub Account's options under the Master Account.<br> <aside>Your account
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\AccountsApi(
+$apiInstance = new Zoom\Api\Api\AccountsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $account_id = "account_id_example"; // string | The account ID.
-$body = new \Swagger\Client\Model\Body12(); // \Swagger\Client\Model\Body12 | 
+$body = new \Zoom\Api\Model\Body12(); // \Zoom\Api\Model\Body12 | 
 
 try {
     $apiInstance->accountOptionsUpdate($account_id, $body);
@@ -266,7 +266,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **account_id** | **string**| The account ID. |
- **body** | [**\Swagger\Client\Model\Body12**](../Model/Body12.md)|  |
+ **body** | [**\Zoom\Api\Model\Body12**](../Model/Body12.md)|  |
 
 ### Return type
 
@@ -296,9 +296,9 @@ Get the settings of an account.<br> To get the settings of a ISV enabled Master 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\AccountsApi(
+$apiInstance = new Zoom\Api\Api\AccountsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -351,9 +351,9 @@ Update the settings of a Sub Account that is under a Master Account.<br> To upda
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\AccountsApi(
+$apiInstance = new Zoom\Api\Api\AccountsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -407,9 +407,9 @@ Get trusted domains of a Sub Account. To get the trusted domains of a Master Acc
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\AccountsApi(
+$apiInstance = new Zoom\Api\Api\AccountsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -448,7 +448,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **accounts**
-> \Swagger\Client\Model\AccountList accounts($page_size, $page_number, $next_page_token)
+> \Zoom\Api\Model\AccountList accounts($page_size, $page_number, $next_page_token)
 
 List Sub Accounts
 
@@ -460,9 +460,9 @@ List all the Sub Accounts under the Master Account.<br><br> Only Master Accounts
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\AccountsApi(
+$apiInstance = new Zoom\Api\Api\AccountsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -491,7 +491,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\AccountList**](../Model/AccountList.md)
+[**\Zoom\Api\Model\AccountList**](../Model/AccountList.md)
 
 ### Authorization
 
@@ -505,7 +505,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getAccountLockSettings**
-> \Swagger\Client\Model\InlineResponse20070 getAccountLockSettings($account_id)
+> \Zoom\Api\Model\InlineResponse20070 getAccountLockSettings($account_id)
 
 Get Locked Settings
 
@@ -517,9 +517,9 @@ Get Locked Settings
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\AccountsApi(
+$apiInstance = new Zoom\Api\Api\AccountsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -544,7 +544,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20070**](../Model/InlineResponse20070.md)
+[**\Zoom\Api\Model\InlineResponse20070**](../Model/InlineResponse20070.md)
 
 ### Authorization
 
@@ -570,16 +570,16 @@ Update Locked Settings
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\AccountsApi(
+$apiInstance = new Zoom\Api\Api\AccountsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $account_id = "account_id_example"; // string | Unique Identifier of the account. To retrieve locked settings of the Master account or a regular account, provide \"me\" as the value of this field. <br> To retrieve locked settings of a Sub Account, provide the Account ID of the Sub Account in this field.
-$body = new \Swagger\Client\Model\Body52(); // \Swagger\Client\Model\Body52 | 
+$body = new \Zoom\Api\Model\Body52(); // \Zoom\Api\Model\Body52 | 
 
 try {
     $result = $apiInstance->updateAccountLockSettings($account_id, $body);
@@ -595,7 +595,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **account_id** | **string**| Unique Identifier of the account. To retrieve locked settings of the Master account or a regular account, provide \&quot;me\&quot; as the value of this field. &lt;br&gt; To retrieve locked settings of a Sub Account, provide the Account ID of the Sub Account in this field. |
- **body** | [**\Swagger\Client\Model\Body52**](../Model/Body52.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\Body52**](../Model/Body52.md)|  | [optional]
 
 ### Return type
 
@@ -625,16 +625,16 @@ The current account owner can [change the owner of an account](https://support.z
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\AccountsApi(
+$apiInstance = new Zoom\Api\Api\AccountsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $account_id = "account_id_example"; // string | Account Id of the account.
-$body = new \Swagger\Client\Model\Body54(); // \Swagger\Client\Model\Body54 | 
+$body = new \Zoom\Api\Model\Body54(); // \Zoom\Api\Model\Body54 | 
 
 try {
     $result = $apiInstance->updateAccountOwner($account_id, $body);
@@ -650,7 +650,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **account_id** | **string**| Account Id of the account. |
- **body** | [**\Swagger\Client\Model\Body54**](../Model/Body54.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\Body54**](../Model/Body54.md)|  | [optional]
 
 ### Return type
 

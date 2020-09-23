@@ -1,4 +1,4 @@
-# Swagger\Client\WebinarsApi
+# Zoom\Api\WebinarsApi
 
 All URIs are relative to *https://api.zoom.us/v2*
 
@@ -35,7 +35,7 @@ Method | HTTP request | Description
 
 
 # **getTrackingSources**
-> \Swagger\Client\Model\InlineResponse20074 getTrackingSources($webinar_id)
+> \Zoom\Api\Model\InlineResponse20074 getTrackingSources($webinar_id)
 
 Get Webinar Tracking Sources
 
@@ -47,9 +47,9 @@ Get Webinar Tracking Sources
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -74,7 +74,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20074**](../Model/InlineResponse20074.md)
+[**\Zoom\Api\Model\InlineResponse20074**](../Model/InlineResponse20074.md)
 
 ### Authorization
 
@@ -88,7 +88,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listPastWebinarFiles**
-> \Swagger\Client\Model\InlineResponse20084 listPastWebinarFiles($webinar_id)
+> \Zoom\Api\Model\InlineResponse20084 listPastWebinarFiles($webinar_id)
 
 List Past Webinar Files
 
@@ -100,9 +100,9 @@ List files sent via in-meeting chat during a meeting. The in-meeting files are d
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -127,7 +127,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20084**](../Model/InlineResponse20084.md)
+[**\Zoom\Api\Model\InlineResponse20084**](../Model/InlineResponse20084.md)
 
 ### Authorization
 
@@ -141,7 +141,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listPastWebinarPollResults**
-> \Swagger\Client\Model\InlineResponse20085 listPastWebinarPollResults($webinar_id)
+> \Zoom\Api\Model\InlineResponse20085 listPastWebinarPollResults($webinar_id)
 
 List Past Webinar Poll Results
 
@@ -153,9 +153,9 @@ The polling feature for webinar allows you to create single choice or multiple c
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -180,7 +180,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20085**](../Model/InlineResponse20085.md)
+[**\Zoom\Api\Model\InlineResponse20085**](../Model/InlineResponse20085.md)
 
 ### Authorization
 
@@ -194,7 +194,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listPastWebinarQA**
-> \Swagger\Client\Model\InlineResponse20086 listPastWebinarQA($webinar_id)
+> \Zoom\Api\Model\InlineResponse20086 listPastWebinarQA($webinar_id)
 
 List Q&A of Past Webinar
 
@@ -206,9 +206,9 @@ The [Question & Answer (Q&A)](https://support.zoom.us/hc/en-us/articles/20368601
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -233,7 +233,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20086**](../Model/InlineResponse20086.md)
+[**\Zoom\Api\Model\InlineResponse20086**](../Model/InlineResponse20086.md)
 
 ### Authorization
 
@@ -247,7 +247,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listWebinarTemplates**
-> \Swagger\Client\Model\InlineResponse200105 listWebinarTemplates($user_id)
+> \Zoom\Api\Model\InlineResponse200105 listWebinarTemplates($user_id)
 
 List Webinar Templates
 
@@ -259,9 +259,9 @@ When you schedule a webinar, you can save the settings for that webinar as a tem
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -286,7 +286,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200105**](../Model/InlineResponse200105.md)
+[**\Zoom\Api\Model\InlineResponse200105**](../Model/InlineResponse200105.md)
 
 ### Authorization
 
@@ -312,9 +312,9 @@ List past webinar instances.<br><br> **Scopes:** `webinar:read:admin` `webinar:r
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -353,7 +353,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **webinar**
-> \Swagger\Client\Model\InlineResponse20054 webinar($webinar_id, $occurrence_id, $show_previous_occurrences)
+> \Zoom\Api\Model\InlineResponse20054 webinar($webinar_id, $occurrence_id, $show_previous_occurrences)
 
 Get a Webinar
 
@@ -365,9 +365,9 @@ Zoom users with a [Webinar Plan](https://zoom.us/webinar) have access to creatin
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -396,7 +396,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20054**](../Model/InlineResponse20054.md)
+[**\Zoom\Api\Model\InlineResponse20054**](../Model/InlineResponse20054.md)
 
 ### Authorization
 
@@ -410,7 +410,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **webinarAbsentees**
-> \Swagger\Client\Model\RegistrationList webinarAbsentees($webinar_uuid, $occurrence_id, $page_size, $next_page_token)
+> \Zoom\Api\Model\RegistrationList webinarAbsentees($webinar_uuid, $occurrence_id, $page_size, $next_page_token)
 
 Get Webinar Absentees
 
@@ -422,9 +422,9 @@ List absentees of a webinar.<br><br> **Scopes:** `webinar:read:admin` `webinar:r
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -455,7 +455,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\RegistrationList**](../Model/RegistrationList.md)
+[**\Zoom\Api\Model\RegistrationList**](../Model/RegistrationList.md)
 
 ### Authorization
 
@@ -469,7 +469,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **webinarCreate**
-> \Swagger\Client\Model\InlineResponse20119 webinarCreate($user_id, $body)
+> \Zoom\Api\Model\InlineResponse20119 webinarCreate($user_id, $body)
 
 Create a Webinar
 
@@ -481,9 +481,9 @@ Zoom users with a [Webinar Plan](https://zoom.us/webinar) have access to creatin
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -510,7 +510,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20119**](../Model/InlineResponse20119.md)
+[**\Zoom\Api\Model\InlineResponse20119**](../Model/InlineResponse20119.md)
 
 ### Authorization
 
@@ -536,9 +536,9 @@ Delete a Webinar.<br><br> **Scopes:** `webinar:write:admin` `webinar:write`<br> 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -590,16 +590,16 @@ Panelists in a Webinar can view and send video, screen share, annotate, etc and 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $webinar_id = 789; // int | The webinar ID in \"**long**\" format(represented as int64 data type in JSON).
-$body = new \Swagger\Client\Model\Body38(); // \Swagger\Client\Model\Body38 | 
+$body = new \Zoom\Api\Model\Body38(); // \Zoom\Api\Model\Body38 | 
 
 try {
     $apiInstance->webinarPanelistCreate($webinar_id, $body);
@@ -614,7 +614,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **webinar_id** | **int**| The webinar ID in \&quot;**long**\&quot; format(represented as int64 data type in JSON). |
- **body** | [**\Swagger\Client\Model\Body38**](../Model/Body38.md)|  |
+ **body** | [**\Zoom\Api\Model\Body38**](../Model/Body38.md)|  |
 
 ### Return type
 
@@ -644,9 +644,9 @@ Remove a Panelist
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -686,7 +686,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **webinarPanelists**
-> \Swagger\Client\Model\InlineResponse20055 webinarPanelists($webinar_id)
+> \Zoom\Api\Model\InlineResponse20055 webinarPanelists($webinar_id)
 
 List Panelists
 
@@ -698,9 +698,9 @@ Panelists in a Webinar can view and send video, screen share, annotate, etc and 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -725,7 +725,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20055**](../Model/InlineResponse20055.md)
+[**\Zoom\Api\Model\InlineResponse20055**](../Model/InlineResponse20055.md)
 
 ### Authorization
 
@@ -751,9 +751,9 @@ Remove all the panelists from a Webinar.<br> **Scopes:** `webinar:write:admin` `
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -791,7 +791,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **webinarPollCreate**
-> \Swagger\Client\Model\InlineResponse20122 webinarPollCreate($webinar_id, $body)
+> \Zoom\Api\Model\InlineResponse20122 webinarPollCreate($webinar_id, $body)
 
 Create a Webinar's Poll
 
@@ -803,9 +803,9 @@ Create a [poll](https://support.zoom.us/hc/en-us/articles/203749865-Polling-for-
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -832,7 +832,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20122**](../Model/InlineResponse20122.md)
+[**\Zoom\Api\Model\InlineResponse20122**](../Model/InlineResponse20122.md)
 
 ### Authorization
 
@@ -858,9 +858,9 @@ Delete a webinar's [poll](https://support.zoom.us/hc/en-us/articles/203749865-Po
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -900,7 +900,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **webinarPollGet**
-> \Swagger\Client\Model\InlineResponse20122 webinarPollGet($webinar_id, $poll_id)
+> \Zoom\Api\Model\InlineResponse20122 webinarPollGet($webinar_id, $poll_id)
 
 Get a Webinar Poll
 
@@ -912,9 +912,9 @@ Get a webinar's [poll](https://support.zoom.us/hc/en-us/articles/203749865-Polli
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -941,7 +941,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20122**](../Model/InlineResponse20122.md)
+[**\Zoom\Api\Model\InlineResponse20122**](../Model/InlineResponse20122.md)
 
 ### Authorization
 
@@ -967,9 +967,9 @@ Update a webinar's [poll](https://support.zoom.us/hc/en-us/articles/203749865-Po
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1023,9 +1023,9 @@ List all the [polls](https://support.zoom.us/hc/en-us/articles/203749865-Polling
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1064,7 +1064,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **webinarRegistrantCreate**
-> \Swagger\Client\Model\InlineResponse20121 webinarRegistrantCreate($webinar_id, $body, $occurrence_ids)
+> \Zoom\Api\Model\InlineResponse20121 webinarRegistrantCreate($webinar_id, $body, $occurrence_ids)
 
 Add a Webinar Registrant
 
@@ -1076,9 +1076,9 @@ Zoom users with a [Webinar Plan](https://zoom.us/webinar) have access to creatin
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1107,7 +1107,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20121**](../Model/InlineResponse20121.md)
+[**\Zoom\Api\Model\InlineResponse20121**](../Model/InlineResponse20121.md)
 
 ### Authorization
 
@@ -1121,7 +1121,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **webinarRegistrantGet**
-> \Swagger\Client\Model\WebianrRegistrant webinarRegistrantGet($webinar_id, $registrant_id, $occurrence_id)
+> \Zoom\Api\Model\WebianrRegistrant webinarRegistrantGet($webinar_id, $registrant_id, $occurrence_id)
 
 Get a Webinar Registrant
 
@@ -1133,9 +1133,9 @@ Zoom users with a [Webinar Plan](https://zoom.us/webinar) have access to creatin
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1164,7 +1164,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\WebianrRegistrant**](../Model/WebianrRegistrant.md)
+[**\Zoom\Api\Model\WebianrRegistrant**](../Model/WebianrRegistrant.md)
 
 ### Authorization
 
@@ -1190,9 +1190,9 @@ Scheduling a [Webinar with registration](https://support.zoom.us/hc/en-us/articl
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1244,16 +1244,16 @@ Update a webinar registrant's status. Using this API, you can specify whether yo
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $webinar_id = 789; // int | The webinar ID in \"**long**\" format(represented as int64 data type in JSON).
-$body = new \Swagger\Client\Model\Body39(); // \Swagger\Client\Model\Body39 | 
+$body = new \Zoom\Api\Model\Body39(); // \Zoom\Api\Model\Body39 | 
 $occurrence_id = "occurrence_id_example"; // string | The meeting occurrence ID.
 
 try {
@@ -1269,7 +1269,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **webinar_id** | **int**| The webinar ID in \&quot;**long**\&quot; format(represented as int64 data type in JSON). |
- **body** | [**\Swagger\Client\Model\Body39**](../Model/Body39.md)|  |
+ **body** | [**\Zoom\Api\Model\Body39**](../Model/Body39.md)|  |
  **occurrence_id** | **string**| The meeting occurrence ID. | [optional]
 
 ### Return type
@@ -1288,7 +1288,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **webinarRegistrants**
-> \Swagger\Client\Model\RegistrationList webinarRegistrants($webinar_id, $occurrence_id, $status, $page_size, $page_number, $next_page_token)
+> \Zoom\Api\Model\RegistrationList webinarRegistrants($webinar_id, $occurrence_id, $status, $page_size, $page_number, $next_page_token)
 
 List Webinar Registrants
 
@@ -1300,9 +1300,9 @@ Zoom users with a [Webinar Plan](https://zoom.us/webinar) have access to creatin
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1337,7 +1337,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\RegistrationList**](../Model/RegistrationList.md)
+[**\Zoom\Api\Model\RegistrationList**](../Model/RegistrationList.md)
 
 ### Authorization
 
@@ -1351,7 +1351,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **webinarRegistrantsQuestionsGet**
-> \Swagger\Client\Model\InlineResponse20056 webinarRegistrantsQuestionsGet($webinar_id)
+> \Zoom\Api\Model\InlineResponse20056 webinarRegistrantsQuestionsGet($webinar_id)
 
 List Registration Questions
 
@@ -1363,9 +1363,9 @@ Scheduling a [Webinar with registration](https://support.zoom.us/hc/en-us/articl
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1390,7 +1390,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20056**](../Model/InlineResponse20056.md)
+[**\Zoom\Api\Model\InlineResponse20056**](../Model/InlineResponse20056.md)
 
 ### Authorization
 
@@ -1416,16 +1416,16 @@ Update a webinar's status. Use this API to end an ongoing webinar.<br><br> **Sco
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $webinar_id = 789; // int | The webinar ID in \"**long**\" format(represented as int64 data type in JSON).
-$body = new \Swagger\Client\Model\Body37(); // \Swagger\Client\Model\Body37 | 
+$body = new \Zoom\Api\Model\Body37(); // \Zoom\Api\Model\Body37 | 
 
 try {
     $apiInstance->webinarStatus($webinar_id, $body);
@@ -1440,7 +1440,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **webinar_id** | **int**| The webinar ID in \&quot;**long**\&quot; format(represented as int64 data type in JSON). |
- **body** | [**\Swagger\Client\Model\Body37**](../Model/Body37.md)|  |
+ **body** | [**\Zoom\Api\Model\Body37**](../Model/Body37.md)|  |
 
 ### Return type
 
@@ -1470,9 +1470,9 @@ Zoom users with a [Webinar Plan](https://zoom.us/webinar) have access to creatin
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1514,7 +1514,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **webinars**
-> \Swagger\Client\Model\UserList webinars($user_id, $page_size, $page_number)
+> \Zoom\Api\Model\UserList webinars($user_id, $page_size, $page_number)
 
 List Webinars
 
@@ -1526,9 +1526,9 @@ Zoom users with a [Webinar Plan](https://zoom.us/webinar) have access to creatin
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1557,7 +1557,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\UserList**](../Model/UserList.md)
+[**\Zoom\Api\Model\UserList**](../Model/UserList.md)
 
 ### Authorization
 

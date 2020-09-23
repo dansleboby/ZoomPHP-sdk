@@ -21,7 +21,7 @@ Name | Type | Description | Notes
 **close_registration** | **bool** | Close registration after event date | [optional] [default to false]
 **waiting_room** | **bool** | Enable waiting room | [optional] [default to false]
 **global_dial_in_countries** | **string[]** | List of global dial-in countries | [optional] 
-**global_dial_in_numbers** | [**\Swagger\Client\Model\InlineResponse20111SettingsGlobalDialInNumbers[]**](InlineResponse20111SettingsGlobalDialInNumbers.md) | Global Dial-in Countries/Regions | [optional] 
+**global_dial_in_numbers** | [**\Zoom\Api\Model\InlineResponse20111SettingsGlobalDialInNumbers[]**](InlineResponse20111SettingsGlobalDialInNumbers.md) | Global Dial-in Countries/Regions | [optional] 
 **contact_name** | **string** | Contact name for registration | [optional] 
 **contact_email** | **string** | Contact email for registration | [optional] 
 **registrants_confirmation_email** | **bool** | Send confirmation email to registrants upon successful registration. | [optional] 

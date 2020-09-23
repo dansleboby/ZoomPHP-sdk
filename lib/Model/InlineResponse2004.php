@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse2004 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -60,9 +60,9 @@ class InlineResponse2004 implements ModelInterface, ArrayAccess
         'id' => 'string',
         'name' => 'string',
         'site_code' => 'int',
-        'country' => '\Swagger\Client\Model\InlineResponse2003Country',
-        'main_auto_receptionist' => '\Swagger\Client\Model\InlineResponse2004MainAutoReceptionist',
-        'short_extension' => '\Swagger\Client\Model\InlineResponse2004ShortExtension'
+        'country' => '\Zoom\Api\Model\InlineResponse2003Country',
+        'main_auto_receptionist' => '\Zoom\Api\Model\InlineResponse2004MainAutoReceptionist',
+        'short_extension' => '\Zoom\Api\Model\InlineResponse2004ShortExtension'
     ];
 
     /**
@@ -309,7 +309,7 @@ class InlineResponse2004 implements ModelInterface, ArrayAccess
     /**
      * Gets country
      *
-     * @return \Swagger\Client\Model\InlineResponse2003Country
+     * @return \Zoom\Api\Model\InlineResponse2003Country
      */
     public function getCountry()
     {
@@ -319,7 +319,7 @@ class InlineResponse2004 implements ModelInterface, ArrayAccess
     /**
      * Sets country
      *
-     * @param \Swagger\Client\Model\InlineResponse2003Country $country country
+     * @param \Zoom\Api\Model\InlineResponse2003Country $country country
      *
      * @return $this
      */
@@ -333,7 +333,7 @@ class InlineResponse2004 implements ModelInterface, ArrayAccess
     /**
      * Gets main_auto_receptionist
      *
-     * @return \Swagger\Client\Model\InlineResponse2004MainAutoReceptionist
+     * @return \Zoom\Api\Model\InlineResponse2004MainAutoReceptionist
      */
     public function getMainAutoReceptionist()
     {
@@ -343,7 +343,7 @@ class InlineResponse2004 implements ModelInterface, ArrayAccess
     /**
      * Sets main_auto_receptionist
      *
-     * @param \Swagger\Client\Model\InlineResponse2004MainAutoReceptionist $main_auto_receptionist main_auto_receptionist
+     * @param \Zoom\Api\Model\InlineResponse2004MainAutoReceptionist $main_auto_receptionist main_auto_receptionist
      *
      * @return $this
      */
@@ -357,7 +357,7 @@ class InlineResponse2004 implements ModelInterface, ArrayAccess
     /**
      * Gets short_extension
      *
-     * @return \Swagger\Client\Model\InlineResponse2004ShortExtension
+     * @return \Zoom\Api\Model\InlineResponse2004ShortExtension
      */
     public function getShortExtension()
     {
@@ -367,7 +367,7 @@ class InlineResponse2004 implements ModelInterface, ArrayAccess
     /**
      * Sets short_extension
      *
-     * @param \Swagger\Client\Model\InlineResponse2004ShortExtension $short_extension short_extension
+     * @param \Zoom\Api\Model\InlineResponse2004ShortExtension $short_extension short_extension
      *
      * @return $this
      */

@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Zoom\Api\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Zoom\Api\ApiException;
+use Zoom\Api\Configuration;
+use Zoom\Api\HeaderSelector;
+use Zoom\Api\ObjectSerializer;
 
 /**
  * UsersApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -94,9 +94,9 @@ class UsersApi
      *
      * @param  string $user_id user_id (required)
      * @param  string $account_id account_id (required)
-     * @param  \Swagger\Client\Model\Body55 $body body (optional)
+     * @param  \Zoom\Api\Model\Body55 $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -113,9 +113,9 @@ class UsersApi
      *
      * @param  string $user_id (required)
      * @param  string $account_id (required)
-     * @param  \Swagger\Client\Model\Body55 $body (optional)
+     * @param  \Zoom\Api\Model\Body55 $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -190,7 +190,7 @@ class UsersApi
      *
      * @param  string $user_id (required)
      * @param  string $account_id (required)
-     * @param  \Swagger\Client\Model\Body55 $body (optional)
+     * @param  \Zoom\Api\Model\Body55 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -212,7 +212,7 @@ class UsersApi
      *
      * @param  string $user_id (required)
      * @param  string $account_id (required)
-     * @param  \Swagger\Client\Model\Body55 $body (optional)
+     * @param  \Zoom\Api\Model\Body55 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -264,7 +264,7 @@ class UsersApi
      *
      * @param  string $user_id (required)
      * @param  string $account_id (required)
-     * @param  \Swagger\Client\Model\Body55 $body (optional)
+     * @param  \Zoom\Api\Model\Body55 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -395,9 +395,9 @@ class UsersApi
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
      * @param  string $login_type &#x60;0&#x60; - Facebook.&lt;br&gt;&#x60;1&#x60; - Google.&lt;br&gt;&#x60;99&#x60; - API.&lt;br&gt;&#x60;100&#x60; - Zoom.&lt;br&gt;&#x60;101&#x60; - SSO. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20047
+     * @return \Zoom\Api\Model\InlineResponse20047
      */
     public function user($user_id, $login_type = null)
     {
@@ -413,13 +413,13 @@ class UsersApi
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
      * @param  string $login_type &#x60;0&#x60; - Facebook.&lt;br&gt;&#x60;1&#x60; - Google.&lt;br&gt;&#x60;99&#x60; - API.&lt;br&gt;&#x60;100&#x60; - Zoom.&lt;br&gt;&#x60;101&#x60; - SSO. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20047, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20047, HTTP status code, HTTP response headers (array of strings)
      */
     public function userWithHttpInfo($user_id, $login_type = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20047';
+        $returnType = '\Zoom\Api\Model\InlineResponse20047';
         $request = $this->userRequest($user_id, $login_type);
 
         try {
@@ -471,7 +471,7 @@ class UsersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20047',
+                        '\Zoom\Api\Model\InlineResponse20047',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -515,7 +515,7 @@ class UsersApi
      */
     public function userAsyncWithHttpInfo($user_id, $login_type = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20047';
+        $returnType = '\Zoom\Api\Model\InlineResponse20047';
         $request = $this->userRequest($user_id, $login_type);
 
         return $this->client
@@ -675,11 +675,11 @@ class UsersApi
      * Add Assistants
      *
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
-     * @param  \Swagger\Client\Model\UserAssistantsList1 $body User assistant. (required)
+     * @param  \Zoom\Api\Model\UserAssistantsList1 $body User assistant. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20118
+     * @return \Zoom\Api\Model\InlineResponse20118
      */
     public function userAssistantCreate($user_id, $body)
     {
@@ -693,15 +693,15 @@ class UsersApi
      * Add Assistants
      *
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
-     * @param  \Swagger\Client\Model\UserAssistantsList1 $body User assistant. (required)
+     * @param  \Zoom\Api\Model\UserAssistantsList1 $body User assistant. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20118, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20118, HTTP status code, HTTP response headers (array of strings)
      */
     public function userAssistantCreateWithHttpInfo($user_id, $body)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20118';
+        $returnType = '\Zoom\Api\Model\InlineResponse20118';
         $request = $this->userAssistantCreateRequest($user_id, $body);
 
         try {
@@ -753,7 +753,7 @@ class UsersApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20118',
+                        '\Zoom\Api\Model\InlineResponse20118',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -769,7 +769,7 @@ class UsersApi
      * Add Assistants
      *
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
-     * @param  \Swagger\Client\Model\UserAssistantsList1 $body User assistant. (required)
+     * @param  \Zoom\Api\Model\UserAssistantsList1 $body User assistant. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -790,14 +790,14 @@ class UsersApi
      * Add Assistants
      *
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
-     * @param  \Swagger\Client\Model\UserAssistantsList1 $body User assistant. (required)
+     * @param  \Zoom\Api\Model\UserAssistantsList1 $body User assistant. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function userAssistantCreateAsyncWithHttpInfo($user_id, $body)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20118';
+        $returnType = '\Zoom\Api\Model\InlineResponse20118';
         $request = $this->userAssistantCreateRequest($user_id, $body);
 
         return $this->client
@@ -841,7 +841,7 @@ class UsersApi
      * Create request for operation 'userAssistantCreate'
      *
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
-     * @param  \Swagger\Client\Model\UserAssistantsList1 $body User assistant. (required)
+     * @param  \Zoom\Api\Model\UserAssistantsList1 $body User assistant. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -964,7 +964,7 @@ class UsersApi
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
      * @param  string $assistant_id Assistant ID. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -981,7 +981,7 @@ class UsersApi
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
      * @param  string $assistant_id Assistant ID. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1218,9 +1218,9 @@ class UsersApi
      *
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\UserAssistantsList
+     * @return \Zoom\Api\Model\UserAssistantsList
      */
     public function userAssistants($user_id)
     {
@@ -1235,13 +1235,13 @@ class UsersApi
      *
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\UserAssistantsList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\UserAssistantsList, HTTP status code, HTTP response headers (array of strings)
      */
     public function userAssistantsWithHttpInfo($user_id)
     {
-        $returnType = '\Swagger\Client\Model\UserAssistantsList';
+        $returnType = '\Zoom\Api\Model\UserAssistantsList';
         $request = $this->userAssistantsRequest($user_id);
 
         try {
@@ -1293,7 +1293,7 @@ class UsersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\UserAssistantsList',
+                        '\Zoom\Api\Model\UserAssistantsList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1335,7 +1335,7 @@ class UsersApi
      */
     public function userAssistantsAsyncWithHttpInfo($user_id)
     {
-        $returnType = '\Swagger\Client\Model\UserAssistantsList';
+        $returnType = '\Zoom\Api\Model\UserAssistantsList';
         $request = $this->userAssistantsRequest($user_id);
 
         return $this->client
@@ -1491,7 +1491,7 @@ class UsersApi
      *
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1507,7 +1507,7 @@ class UsersApi
      *
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1725,11 +1725,11 @@ class UsersApi
      *
      * Create Users
      *
-     * @param  \Swagger\Client\Model\Body32 $body User (required)
+     * @param  \Zoom\Api\Model\Body32 $body User (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20117
+     * @return \Zoom\Api\Model\InlineResponse20117
      */
     public function userCreate($body)
     {
@@ -1742,15 +1742,15 @@ class UsersApi
      *
      * Create Users
      *
-     * @param  \Swagger\Client\Model\Body32 $body User (required)
+     * @param  \Zoom\Api\Model\Body32 $body User (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20117, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20117, HTTP status code, HTTP response headers (array of strings)
      */
     public function userCreateWithHttpInfo($body)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20117';
+        $returnType = '\Zoom\Api\Model\InlineResponse20117';
         $request = $this->userCreateRequest($body);
 
         try {
@@ -1802,7 +1802,7 @@ class UsersApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20117',
+                        '\Zoom\Api\Model\InlineResponse20117',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1817,7 +1817,7 @@ class UsersApi
      *
      * Create Users
      *
-     * @param  \Swagger\Client\Model\Body32 $body User (required)
+     * @param  \Zoom\Api\Model\Body32 $body User (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1837,14 +1837,14 @@ class UsersApi
      *
      * Create Users
      *
-     * @param  \Swagger\Client\Model\Body32 $body User (required)
+     * @param  \Zoom\Api\Model\Body32 $body User (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function userCreateAsyncWithHttpInfo($body)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20117';
+        $returnType = '\Zoom\Api\Model\InlineResponse20117';
         $request = $this->userCreateRequest($body);
 
         return $this->client
@@ -1887,7 +1887,7 @@ class UsersApi
     /**
      * Create request for operation 'userCreate'
      *
-     * @param  \Swagger\Client\Model\Body32 $body User (required)
+     * @param  \Zoom\Api\Model\Body32 $body User (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2000,7 +2000,7 @@ class UsersApi
      * @param  bool $transfer_webinar Transfer webinar. (optional)
      * @param  bool $transfer_recording Transfer recording. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2021,7 +2021,7 @@ class UsersApi
      * @param  bool $transfer_webinar Transfer webinar. (optional)
      * @param  bool $transfer_recording Transfer recording. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2276,9 +2276,9 @@ class UsersApi
      *
      * @param  string $email The email address to be verified. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20052
+     * @return \Zoom\Api\Model\InlineResponse20052
      */
     public function userEmail($email)
     {
@@ -2293,13 +2293,13 @@ class UsersApi
      *
      * @param  string $email The email address to be verified. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20052, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20052, HTTP status code, HTTP response headers (array of strings)
      */
     public function userEmailWithHttpInfo($email)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20052';
+        $returnType = '\Zoom\Api\Model\InlineResponse20052';
         $request = $this->userEmailRequest($email);
 
         try {
@@ -2351,7 +2351,7 @@ class UsersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20052',
+                        '\Zoom\Api\Model\InlineResponse20052',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2393,7 +2393,7 @@ class UsersApi
      */
     public function userEmailAsyncWithHttpInfo($email)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20052';
+        $returnType = '\Zoom\Api\Model\InlineResponse20052';
         $request = $this->userEmailRequest($email);
 
         return $this->client
@@ -2544,9 +2544,9 @@ class UsersApi
      * Update a User's Email
      *
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
-     * @param  \Swagger\Client\Model\Body36 $body User email. (required)
+     * @param  \Zoom\Api\Model\Body36 $body User email. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2561,9 +2561,9 @@ class UsersApi
      * Update a User's Email
      *
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
-     * @param  \Swagger\Client\Model\Body36 $body User email. (required)
+     * @param  \Zoom\Api\Model\Body36 $body User email. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2615,7 +2615,7 @@ class UsersApi
      * Update a User's Email
      *
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
-     * @param  \Swagger\Client\Model\Body36 $body User email. (required)
+     * @param  \Zoom\Api\Model\Body36 $body User email. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2636,7 +2636,7 @@ class UsersApi
      * Update a User's Email
      *
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
-     * @param  \Swagger\Client\Model\Body36 $body User email. (required)
+     * @param  \Zoom\Api\Model\Body36 $body User email. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2673,7 +2673,7 @@ class UsersApi
      * Create request for operation 'userEmailUpdate'
      *
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
-     * @param  \Swagger\Client\Model\Body36 $body User email. (required)
+     * @param  \Zoom\Api\Model\Body36 $body User email. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2794,9 +2794,9 @@ class UsersApi
      * Update a User's Password
      *
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
-     * @param  \Swagger\Client\Model\Body35 $body User password. (required)
+     * @param  \Zoom\Api\Model\Body35 $body User password. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2811,9 +2811,9 @@ class UsersApi
      * Update a User's Password
      *
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
-     * @param  \Swagger\Client\Model\Body35 $body User password. (required)
+     * @param  \Zoom\Api\Model\Body35 $body User password. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2865,7 +2865,7 @@ class UsersApi
      * Update a User's Password
      *
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
-     * @param  \Swagger\Client\Model\Body35 $body User password. (required)
+     * @param  \Zoom\Api\Model\Body35 $body User password. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2886,7 +2886,7 @@ class UsersApi
      * Update a User's Password
      *
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
-     * @param  \Swagger\Client\Model\Body35 $body User password. (required)
+     * @param  \Zoom\Api\Model\Body35 $body User password. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2923,7 +2923,7 @@ class UsersApi
      * Create request for operation 'userPassword'
      *
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
-     * @param  \Swagger\Client\Model\Body35 $body User password. (required)
+     * @param  \Zoom\Api\Model\Body35 $body User password. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -3045,9 +3045,9 @@ class UsersApi
      *
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20048
+     * @return \Zoom\Api\Model\InlineResponse20048
      */
     public function userPermission($user_id)
     {
@@ -3062,13 +3062,13 @@ class UsersApi
      *
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20048, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20048, HTTP status code, HTTP response headers (array of strings)
      */
     public function userPermissionWithHttpInfo($user_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20048';
+        $returnType = '\Zoom\Api\Model\InlineResponse20048';
         $request = $this->userPermissionRequest($user_id);
 
         try {
@@ -3120,7 +3120,7 @@ class UsersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20048',
+                        '\Zoom\Api\Model\InlineResponse20048',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3162,7 +3162,7 @@ class UsersApi
      */
     public function userPermissionAsyncWithHttpInfo($user_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20048';
+        $returnType = '\Zoom\Api\Model\InlineResponse20048';
         $request = $this->userPermissionRequest($user_id);
 
         return $this->client
@@ -3319,7 +3319,7 @@ class UsersApi
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
      * @param  \SplFileObject $pic_file The file&#39;s path. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -3336,7 +3336,7 @@ class UsersApi
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
      * @param  \SplFileObject $pic_file The file&#39;s path. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3570,7 +3570,7 @@ class UsersApi
      *
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -3586,7 +3586,7 @@ class UsersApi
      *
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3807,7 +3807,7 @@ class UsersApi
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
      * @param  string $scheduler_id Scheduler&#39;s ID. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -3824,7 +3824,7 @@ class UsersApi
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
      * @param  string $scheduler_id Scheduler&#39;s ID. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4061,9 +4061,9 @@ class UsersApi
      *
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\UserSchedulersList
+     * @return \Zoom\Api\Model\UserSchedulersList
      */
     public function userSchedulers($user_id)
     {
@@ -4078,13 +4078,13 @@ class UsersApi
      *
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\UserSchedulersList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\UserSchedulersList, HTTP status code, HTTP response headers (array of strings)
      */
     public function userSchedulersWithHttpInfo($user_id)
     {
-        $returnType = '\Swagger\Client\Model\UserSchedulersList';
+        $returnType = '\Zoom\Api\Model\UserSchedulersList';
         $request = $this->userSchedulersRequest($user_id);
 
         try {
@@ -4136,7 +4136,7 @@ class UsersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\UserSchedulersList',
+                        '\Zoom\Api\Model\UserSchedulersList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4178,7 +4178,7 @@ class UsersApi
      */
     public function userSchedulersAsyncWithHttpInfo($user_id)
     {
-        $returnType = '\Swagger\Client\Model\UserSchedulersList';
+        $returnType = '\Zoom\Api\Model\UserSchedulersList';
         $request = $this->userSchedulersRequest($user_id);
 
         return $this->client
@@ -4334,7 +4334,7 @@ class UsersApi
      *
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -4350,7 +4350,7 @@ class UsersApi
      *
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4572,7 +4572,7 @@ class UsersApi
      * @param  string $login_type &#x60;0&#x60; - Facebook.&lt;br&gt;&#x60;1&#x60; - Google.&lt;br&gt;&#x60;99&#x60; - API.&lt;br&gt;&#x60;100&#x60; - Zoom.&lt;br&gt;&#x60;101&#x60; - SSO. (optional)
      * @param  string $option &#x60;meeting_authentication&#x60;: Use this query parameter to view [meeting authentication configuration](https://support.zoom.us/hc/en-us/articles/360037117472-Authentication-Profiles-for-Meetings-and-Webinars) applied on the account.&lt;br&gt;&#x60;recording_authentication&#x60;: Use this query parameter to view [recording authentication configuration](https://support.zoom.us/hc/en-us/articles/360037756671-Authentication-Profiles-for-Cloud-Recordings) applied on the account. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -4591,7 +4591,7 @@ class UsersApi
      * @param  string $login_type &#x60;0&#x60; - Facebook.&lt;br&gt;&#x60;1&#x60; - Google.&lt;br&gt;&#x60;99&#x60; - API.&lt;br&gt;&#x60;100&#x60; - Zoom.&lt;br&gt;&#x60;101&#x60; - SSO. (optional)
      * @param  string $option &#x60;meeting_authentication&#x60;: Use this query parameter to view [meeting authentication configuration](https://support.zoom.us/hc/en-us/articles/360037117472-Authentication-Profiles-for-Meetings-and-Webinars) applied on the account.&lt;br&gt;&#x60;recording_authentication&#x60;: Use this query parameter to view [recording authentication configuration](https://support.zoom.us/hc/en-us/articles/360037756671-Authentication-Profiles-for-Cloud-Recordings) applied on the account. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4863,7 +4863,7 @@ class UsersApi
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
      * @param  string $option option (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -4881,7 +4881,7 @@ class UsersApi
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
      * @param  string $option (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -5119,9 +5119,9 @@ class UsersApi
      * Update User Status
      *
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
-     * @param  \Swagger\Client\Model\Body34 $body User status. (required)
+     * @param  \Zoom\Api\Model\Body34 $body User status. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -5136,9 +5136,9 @@ class UsersApi
      * Update User Status
      *
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
-     * @param  \Swagger\Client\Model\Body34 $body User status. (required)
+     * @param  \Zoom\Api\Model\Body34 $body User status. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -5190,7 +5190,7 @@ class UsersApi
      * Update User Status
      *
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
-     * @param  \Swagger\Client\Model\Body34 $body User status. (required)
+     * @param  \Zoom\Api\Model\Body34 $body User status. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -5211,7 +5211,7 @@ class UsersApi
      * Update User Status
      *
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
-     * @param  \Swagger\Client\Model\Body34 $body User status. (required)
+     * @param  \Zoom\Api\Model\Body34 $body User status. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -5248,7 +5248,7 @@ class UsersApi
      * Create request for operation 'userStatus'
      *
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
-     * @param  \Swagger\Client\Model\Body34 $body User status. (required)
+     * @param  \Zoom\Api\Model\Body34 $body User status. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -5372,9 +5372,9 @@ class UsersApi
      * @param  string $type User token types:&lt;br&gt;&#x60;token&#x60; - Used for starting meetings with the client SDK. This token expires in 14 days and a new token will be returned after the expiry.&lt;br&gt;&#x60;zak&#x60; - Used for generating the start meeting URL. The token expiration time is two hours. For API users, the expiration time is 90 days. (optional)
      * @param  int $ttl Use this field in conjunction with the &#x60;type&#x60; field where the value of &#x60;type&#x60; field is &#x60;zak&#x60;. The value of this field denotes the expiry time of the &#x60;zak&#x60; token in seconds. For example, if you would like the zak token to be expired after one hour of the token generation, the value of this field should be &#x60;3600&#x60;. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20051
+     * @return \Zoom\Api\Model\InlineResponse20051
      */
     public function userToken($user_id, $type = null, $ttl = null)
     {
@@ -5391,13 +5391,13 @@ class UsersApi
      * @param  string $type User token types:&lt;br&gt;&#x60;token&#x60; - Used for starting meetings with the client SDK. This token expires in 14 days and a new token will be returned after the expiry.&lt;br&gt;&#x60;zak&#x60; - Used for generating the start meeting URL. The token expiration time is two hours. For API users, the expiration time is 90 days. (optional)
      * @param  int $ttl Use this field in conjunction with the &#x60;type&#x60; field where the value of &#x60;type&#x60; field is &#x60;zak&#x60;. The value of this field denotes the expiry time of the &#x60;zak&#x60; token in seconds. For example, if you would like the zak token to be expired after one hour of the token generation, the value of this field should be &#x60;3600&#x60;. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20051, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20051, HTTP status code, HTTP response headers (array of strings)
      */
     public function userTokenWithHttpInfo($user_id, $type = null, $ttl = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20051';
+        $returnType = '\Zoom\Api\Model\InlineResponse20051';
         $request = $this->userTokenRequest($user_id, $type, $ttl);
 
         try {
@@ -5449,7 +5449,7 @@ class UsersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20051',
+                        '\Zoom\Api\Model\InlineResponse20051',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5495,7 +5495,7 @@ class UsersApi
      */
     public function userTokenAsyncWithHttpInfo($user_id, $type = null, $ttl = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20051';
+        $returnType = '\Zoom\Api\Model\InlineResponse20051';
         $request = $this->userTokenRequest($user_id, $type, $ttl);
 
         return $this->client
@@ -5660,10 +5660,10 @@ class UsersApi
      * Update a User
      *
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
-     * @param  \Swagger\Client\Model\Body33 $body User (required)
+     * @param  \Zoom\Api\Model\Body33 $body User (required)
      * @param  string $login_type &#x60;0&#x60; - Facebook.&lt;br&gt;&#x60;1&#x60; - Google.&lt;br&gt;&#x60;99&#x60; - API.&lt;br&gt;&#x60;100&#x60; - Zoom.&lt;br&gt;&#x60;101&#x60; - SSO. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -5678,10 +5678,10 @@ class UsersApi
      * Update a User
      *
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
-     * @param  \Swagger\Client\Model\Body33 $body User (required)
+     * @param  \Zoom\Api\Model\Body33 $body User (required)
      * @param  string $login_type &#x60;0&#x60; - Facebook.&lt;br&gt;&#x60;1&#x60; - Google.&lt;br&gt;&#x60;99&#x60; - API.&lt;br&gt;&#x60;100&#x60; - Zoom.&lt;br&gt;&#x60;101&#x60; - SSO. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -5733,7 +5733,7 @@ class UsersApi
      * Update a User
      *
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
-     * @param  \Swagger\Client\Model\Body33 $body User (required)
+     * @param  \Zoom\Api\Model\Body33 $body User (required)
      * @param  string $login_type &#x60;0&#x60; - Facebook.&lt;br&gt;&#x60;1&#x60; - Google.&lt;br&gt;&#x60;99&#x60; - API.&lt;br&gt;&#x60;100&#x60; - Zoom.&lt;br&gt;&#x60;101&#x60; - SSO. (optional)
      *
      * @throws \InvalidArgumentException
@@ -5755,7 +5755,7 @@ class UsersApi
      * Update a User
      *
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
-     * @param  \Swagger\Client\Model\Body33 $body User (required)
+     * @param  \Zoom\Api\Model\Body33 $body User (required)
      * @param  string $login_type &#x60;0&#x60; - Facebook.&lt;br&gt;&#x60;1&#x60; - Google.&lt;br&gt;&#x60;99&#x60; - API.&lt;br&gt;&#x60;100&#x60; - Zoom.&lt;br&gt;&#x60;101&#x60; - SSO. (optional)
      *
      * @throws \InvalidArgumentException
@@ -5793,7 +5793,7 @@ class UsersApi
      * Create request for operation 'userUpdate'
      *
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
-     * @param  \Swagger\Client\Model\Body33 $body User (required)
+     * @param  \Zoom\Api\Model\Body33 $body User (required)
      * @param  string $login_type &#x60;0&#x60; - Facebook.&lt;br&gt;&#x60;1&#x60; - Google.&lt;br&gt;&#x60;99&#x60; - API.&lt;br&gt;&#x60;100&#x60; - Zoom.&lt;br&gt;&#x60;101&#x60; - SSO. (optional)
      *
      * @throws \InvalidArgumentException
@@ -5920,9 +5920,9 @@ class UsersApi
      *
      * @param  string $vanity_name Personal meeting room name. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20053
+     * @return \Zoom\Api\Model\InlineResponse20053
      */
     public function userVanityName($vanity_name)
     {
@@ -5937,13 +5937,13 @@ class UsersApi
      *
      * @param  string $vanity_name Personal meeting room name. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20053, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20053, HTTP status code, HTTP response headers (array of strings)
      */
     public function userVanityNameWithHttpInfo($vanity_name)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20053';
+        $returnType = '\Zoom\Api\Model\InlineResponse20053';
         $request = $this->userVanityNameRequest($vanity_name);
 
         try {
@@ -5995,7 +5995,7 @@ class UsersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20053',
+                        '\Zoom\Api\Model\InlineResponse20053',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6037,7 +6037,7 @@ class UsersApi
      */
     public function userVanityNameAsyncWithHttpInfo($vanity_name)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20053';
+        $returnType = '\Zoom\Api\Model\InlineResponse20053';
         $request = $this->userVanityNameRequest($vanity_name);
 
         return $this->client
@@ -6193,9 +6193,9 @@ class UsersApi
      * @param  string $page_number The page number of the current page in the returned records. (optional)
      * @param  string $include_fields Provide a value for this field if you would like to see the following attribute in the response of this API call:&lt;br&gt;  &#x60;custom_attributes&#x60;: Returns custom attributes that are associated with the user. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20046
+     * @return \Zoom\Api\Model\InlineResponse20046
      */
     public function users($status = 'active', $page_size = '30', $role_id = null, $page_number = null, $include_fields = null)
     {
@@ -6214,13 +6214,13 @@ class UsersApi
      * @param  string $page_number The page number of the current page in the returned records. (optional)
      * @param  string $include_fields Provide a value for this field if you would like to see the following attribute in the response of this API call:&lt;br&gt;  &#x60;custom_attributes&#x60;: Returns custom attributes that are associated with the user. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20046, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20046, HTTP status code, HTTP response headers (array of strings)
      */
     public function usersWithHttpInfo($status = 'active', $page_size = '30', $role_id = null, $page_number = null, $include_fields = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20046';
+        $returnType = '\Zoom\Api\Model\InlineResponse20046';
         $request = $this->usersRequest($status, $page_size, $role_id, $page_number, $include_fields);
 
         try {
@@ -6272,7 +6272,7 @@ class UsersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20046',
+                        '\Zoom\Api\Model\InlineResponse20046',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6322,7 +6322,7 @@ class UsersApi
      */
     public function usersAsyncWithHttpInfo($status = 'active', $page_size = '30', $role_id = null, $page_number = null, $include_fields = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20046';
+        $returnType = '\Zoom\Api\Model\InlineResponse20046';
         $request = $this->usersRequest($status, $page_size, $role_id, $page_number, $include_fields);
 
         return $this->client

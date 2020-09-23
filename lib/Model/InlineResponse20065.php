@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse20065 Class Doc Comment
  *
  * @category Class
  * @description Phone User Voice Mails
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -62,7 +62,7 @@ class InlineResponse20065 implements ModelInterface, ArrayAccess
         'page_size' => 'string',
         'total_records' => 'string',
         'next_page_token' => 'string',
-        'voice_mails' => '\Swagger\Client\Model\InlineResponse20065VoiceMails[]'
+        'voice_mails' => '\Zoom\Api\Model\InlineResponse20065VoiceMails[]'
     ];
 
     /**
@@ -328,7 +328,7 @@ class InlineResponse20065 implements ModelInterface, ArrayAccess
     /**
      * Gets voice_mails
      *
-     * @return \Swagger\Client\Model\InlineResponse20065VoiceMails[]
+     * @return \Zoom\Api\Model\InlineResponse20065VoiceMails[]
      */
     public function getVoiceMails()
     {
@@ -338,7 +338,7 @@ class InlineResponse20065 implements ModelInterface, ArrayAccess
     /**
      * Sets voice_mails
      *
-     * @param \Swagger\Client\Model\InlineResponse20065VoiceMails[] $voice_mails Voice Mails
+     * @param \Zoom\Api\Model\InlineResponse20065VoiceMails[] $voice_mails Voice Mails
      *
      * @return $this
      */

@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Zoom\Api\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Zoom\Api\ApiException;
+use Zoom\Api\Configuration;
+use Zoom\Api\HeaderSelector;
+use Zoom\Api\ObjectSerializer;
 
 /**
  * ReportsApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -95,7 +95,7 @@ class ReportsApi
      * @param  \DateTime $from Start date in &#39;yyyy-mm-dd&#39; format. The date range defined by the \&quot;from\&quot; and \&quot;to\&quot; parameters should only be one month as the report includes only one month worth of data at once. (required)
      * @param  \DateTime $to End date. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -113,7 +113,7 @@ class ReportsApi
      * @param  \DateTime $from Start date in &#39;yyyy-mm-dd&#39; format. The date range defined by the \&quot;from\&quot; and \&quot;to\&quot; parameters should only be one month as the report includes only one month worth of data at once. (required)
      * @param  \DateTime $to End date. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -379,7 +379,7 @@ class ReportsApi
      * @param  int $year Year for this report (optional)
      * @param  int $month Month for this report (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -397,7 +397,7 @@ class ReportsApi
      * @param  int $year Year for this report (optional)
      * @param  int $month Month for this report (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -650,9 +650,9 @@ class ReportsApi
      *
      * @param  string $meeting_id The meeting ID or meeting UUID. If given the meeting ID it will take the last meeting instance. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20036
+     * @return \Zoom\Api\Model\InlineResponse20036
      */
     public function reportMeetingDetails($meeting_id)
     {
@@ -667,13 +667,13 @@ class ReportsApi
      *
      * @param  string $meeting_id The meeting ID or meeting UUID. If given the meeting ID it will take the last meeting instance. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20036, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20036, HTTP status code, HTTP response headers (array of strings)
      */
     public function reportMeetingDetailsWithHttpInfo($meeting_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20036';
+        $returnType = '\Zoom\Api\Model\InlineResponse20036';
         $request = $this->reportMeetingDetailsRequest($meeting_id);
 
         try {
@@ -725,7 +725,7 @@ class ReportsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20036',
+                        '\Zoom\Api\Model\InlineResponse20036',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -767,7 +767,7 @@ class ReportsApi
      */
     public function reportMeetingDetailsAsyncWithHttpInfo($meeting_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20036';
+        $returnType = '\Zoom\Api\Model\InlineResponse20036';
         $request = $this->reportMeetingDetailsRequest($meeting_id);
 
         return $this->client
@@ -925,9 +925,9 @@ class ReportsApi
      * @param  int $page_size The number of records returned within a single API call. (optional, default to 30)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20037
+     * @return \Zoom\Api\Model\InlineResponse20037
      */
     public function reportMeetingParticipants($meeting_id, $page_size = '30', $next_page_token = null)
     {
@@ -944,13 +944,13 @@ class ReportsApi
      * @param  int $page_size The number of records returned within a single API call. (optional, default to 30)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20037, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20037, HTTP status code, HTTP response headers (array of strings)
      */
     public function reportMeetingParticipantsWithHttpInfo($meeting_id, $page_size = '30', $next_page_token = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20037';
+        $returnType = '\Zoom\Api\Model\InlineResponse20037';
         $request = $this->reportMeetingParticipantsRequest($meeting_id, $page_size, $next_page_token);
 
         try {
@@ -1002,7 +1002,7 @@ class ReportsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20037',
+                        '\Zoom\Api\Model\InlineResponse20037',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1048,7 +1048,7 @@ class ReportsApi
      */
     public function reportMeetingParticipantsAsyncWithHttpInfo($meeting_id, $page_size = '30', $next_page_token = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20037';
+        $returnType = '\Zoom\Api\Model\InlineResponse20037';
         $request = $this->reportMeetingParticipantsRequest($meeting_id, $page_size, $next_page_token);
 
         return $this->client
@@ -1218,9 +1218,9 @@ class ReportsApi
      *
      * @param  string $meeting_id The meeting ID or meeting UUID. If given the meeting ID it will take the last meeting instance. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20038
+     * @return \Zoom\Api\Model\InlineResponse20038
      */
     public function reportMeetingPolls($meeting_id)
     {
@@ -1235,13 +1235,13 @@ class ReportsApi
      *
      * @param  string $meeting_id The meeting ID or meeting UUID. If given the meeting ID it will take the last meeting instance. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20038, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20038, HTTP status code, HTTP response headers (array of strings)
      */
     public function reportMeetingPollsWithHttpInfo($meeting_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20038';
+        $returnType = '\Zoom\Api\Model\InlineResponse20038';
         $request = $this->reportMeetingPollsRequest($meeting_id);
 
         try {
@@ -1293,7 +1293,7 @@ class ReportsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20038',
+                        '\Zoom\Api\Model\InlineResponse20038',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1335,7 +1335,7 @@ class ReportsApi
      */
     public function reportMeetingPollsAsyncWithHttpInfo($meeting_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20038';
+        $returnType = '\Zoom\Api\Model\InlineResponse20038';
         $request = $this->reportMeetingPollsRequest($meeting_id);
 
         return $this->client
@@ -1496,9 +1496,9 @@ class ReportsApi
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      * @param  string $type The meeting types: &lt;br&gt;&#x60;past&#x60; - Past meetings.&lt;br&gt;&#x60;pastOne&#x60; - Past one user meetings. (optional, default to past)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20035
+     * @return \Zoom\Api\Model\InlineResponse20035
      */
     public function reportMeetings($user_id, $from, $to, $page_size = '30', $next_page_token = null, $type = 'past')
     {
@@ -1518,13 +1518,13 @@ class ReportsApi
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      * @param  string $type The meeting types: &lt;br&gt;&#x60;past&#x60; - Past meetings.&lt;br&gt;&#x60;pastOne&#x60; - Past one user meetings. (optional, default to past)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20035, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20035, HTTP status code, HTTP response headers (array of strings)
      */
     public function reportMeetingsWithHttpInfo($user_id, $from, $to, $page_size = '30', $next_page_token = null, $type = 'past')
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20035';
+        $returnType = '\Zoom\Api\Model\InlineResponse20035';
         $request = $this->reportMeetingsRequest($user_id, $from, $to, $page_size, $next_page_token, $type);
 
         try {
@@ -1576,7 +1576,7 @@ class ReportsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20035',
+                        '\Zoom\Api\Model\InlineResponse20035',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1628,7 +1628,7 @@ class ReportsApi
      */
     public function reportMeetingsAsyncWithHttpInfo($user_id, $from, $to, $page_size = '30', $next_page_token = null, $type = 'past')
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20035';
+        $returnType = '\Zoom\Api\Model\InlineResponse20035';
         $request = $this->reportMeetingsRequest($user_id, $from, $to, $page_size, $next_page_token, $type);
 
         return $this->client
@@ -1828,9 +1828,9 @@ class ReportsApi
      * @param  int $page_size The number of records returned within a single API call. (optional, default to 30)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20044
+     * @return \Zoom\Api\Model\InlineResponse20044
      */
     public function reportOperationLogs($from, $to, $page_size = '30', $next_page_token = null)
     {
@@ -1848,13 +1848,13 @@ class ReportsApi
      * @param  int $page_size The number of records returned within a single API call. (optional, default to 30)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20044, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20044, HTTP status code, HTTP response headers (array of strings)
      */
     public function reportOperationLogsWithHttpInfo($from, $to, $page_size = '30', $next_page_token = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20044';
+        $returnType = '\Zoom\Api\Model\InlineResponse20044';
         $request = $this->reportOperationLogsRequest($from, $to, $page_size, $next_page_token);
 
         try {
@@ -1906,7 +1906,7 @@ class ReportsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20044',
+                        '\Zoom\Api\Model\InlineResponse20044',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1954,7 +1954,7 @@ class ReportsApi
      */
     public function reportOperationLogsAsyncWithHttpInfo($from, $to, $page_size = '30', $next_page_token = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20044';
+        $returnType = '\Zoom\Api\Model\InlineResponse20044';
         $request = $this->reportOperationLogsRequest($from, $to, $page_size, $next_page_token);
 
         return $this->client
@@ -2134,9 +2134,9 @@ class ReportsApi
      * @param  int $page_size The number of records to be returned within a single API call (optional)
      * @param  string $next_page_token Next page token is used to paginate through large result sets (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20068
+     * @return \Zoom\Api\Model\InlineResponse20068
      */
     public function reportSignInSignOutActivities($from = null, $to = null, $page_size = null, $next_page_token = null)
     {
@@ -2154,13 +2154,13 @@ class ReportsApi
      * @param  int $page_size The number of records to be returned within a single API call (optional)
      * @param  string $next_page_token Next page token is used to paginate through large result sets (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20068, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20068, HTTP status code, HTTP response headers (array of strings)
      */
     public function reportSignInSignOutActivitiesWithHttpInfo($from = null, $to = null, $page_size = null, $next_page_token = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20068';
+        $returnType = '\Zoom\Api\Model\InlineResponse20068';
         $request = $this->reportSignInSignOutActivitiesRequest($from, $to, $page_size, $next_page_token);
 
         try {
@@ -2212,7 +2212,7 @@ class ReportsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20068',
+                        '\Zoom\Api\Model\InlineResponse20068',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2260,7 +2260,7 @@ class ReportsApi
      */
     public function reportSignInSignOutActivitiesAsyncWithHttpInfo($from = null, $to = null, $page_size = null, $next_page_token = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20068';
+        $returnType = '\Zoom\Api\Model\InlineResponse20068';
         $request = $this->reportSignInSignOutActivitiesRequest($from, $to, $page_size, $next_page_token);
 
         return $this->client
@@ -2425,9 +2425,9 @@ class ReportsApi
      * @param  int $page_size The number of records returned within a single API call. (optional, default to 30)
      * @param  int $page_number **Deprecated** - This field has been deprecated and we will stop supporting it completely in a future release. Please use \&quot;next_page_token\&quot; for pagination instead of this field.  The page number of the current page in the returned records. (optional, default to 1)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20043
+     * @return \Zoom\Api\Model\InlineResponse20043
      */
     public function reportTelephone($from, $to, $type = '1', $page_size = '30', $page_number = '1')
     {
@@ -2446,13 +2446,13 @@ class ReportsApi
      * @param  int $page_size The number of records returned within a single API call. (optional, default to 30)
      * @param  int $page_number **Deprecated** - This field has been deprecated and we will stop supporting it completely in a future release. Please use \&quot;next_page_token\&quot; for pagination instead of this field.  The page number of the current page in the returned records. (optional, default to 1)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20043, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20043, HTTP status code, HTTP response headers (array of strings)
      */
     public function reportTelephoneWithHttpInfo($from, $to, $type = '1', $page_size = '30', $page_number = '1')
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20043';
+        $returnType = '\Zoom\Api\Model\InlineResponse20043';
         $request = $this->reportTelephoneRequest($from, $to, $type, $page_size, $page_number);
 
         try {
@@ -2504,7 +2504,7 @@ class ReportsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20043',
+                        '\Zoom\Api\Model\InlineResponse20043',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2554,7 +2554,7 @@ class ReportsApi
      */
     public function reportTelephoneAsyncWithHttpInfo($from, $to, $type = '1', $page_size = '30', $page_number = '1')
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20043';
+        $returnType = '\Zoom\Api\Model\InlineResponse20043';
         $request = $this->reportTelephoneRequest($from, $to, $type, $page_size, $page_number);
 
         return $this->client
@@ -2740,9 +2740,9 @@ class ReportsApi
      * @param  int $page_size The number of records returned within a single API call. (optional, default to 30)
      * @param  int $page_number **Deprecated** - This field has been deprecated and we will stop supporting it completely in a future release. Please use \&quot;next_page_token\&quot; for pagination instead of this field.  The page number of the current page in the returned records. (optional, default to 1)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20034
+     * @return \Zoom\Api\Model\InlineResponse20034
      */
     public function reportUsers($from, $to, $type = null, $page_size = '30', $page_number = '1')
     {
@@ -2761,13 +2761,13 @@ class ReportsApi
      * @param  int $page_size The number of records returned within a single API call. (optional, default to 30)
      * @param  int $page_number **Deprecated** - This field has been deprecated and we will stop supporting it completely in a future release. Please use \&quot;next_page_token\&quot; for pagination instead of this field.  The page number of the current page in the returned records. (optional, default to 1)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20034, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20034, HTTP status code, HTTP response headers (array of strings)
      */
     public function reportUsersWithHttpInfo($from, $to, $type = null, $page_size = '30', $page_number = '1')
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20034';
+        $returnType = '\Zoom\Api\Model\InlineResponse20034';
         $request = $this->reportUsersRequest($from, $to, $type, $page_size, $page_number);
 
         try {
@@ -2819,7 +2819,7 @@ class ReportsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20034',
+                        '\Zoom\Api\Model\InlineResponse20034',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2869,7 +2869,7 @@ class ReportsApi
      */
     public function reportUsersAsyncWithHttpInfo($from, $to, $type = null, $page_size = '30', $page_number = '1')
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20034';
+        $returnType = '\Zoom\Api\Model\InlineResponse20034';
         $request = $this->reportUsersRequest($from, $to, $type, $page_size, $page_number);
 
         return $this->client
@@ -3051,9 +3051,9 @@ class ReportsApi
      *
      * @param  string $webinar_id The webinar ID or webinar UUID. If given the webinar ID it will take the last webinar instance. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20039
+     * @return \Zoom\Api\Model\InlineResponse20039
      */
     public function reportWebinarDetails($webinar_id)
     {
@@ -3068,13 +3068,13 @@ class ReportsApi
      *
      * @param  string $webinar_id The webinar ID or webinar UUID. If given the webinar ID it will take the last webinar instance. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20039, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20039, HTTP status code, HTTP response headers (array of strings)
      */
     public function reportWebinarDetailsWithHttpInfo($webinar_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20039';
+        $returnType = '\Zoom\Api\Model\InlineResponse20039';
         $request = $this->reportWebinarDetailsRequest($webinar_id);
 
         try {
@@ -3126,7 +3126,7 @@ class ReportsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20039',
+                        '\Zoom\Api\Model\InlineResponse20039',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3168,7 +3168,7 @@ class ReportsApi
      */
     public function reportWebinarDetailsAsyncWithHttpInfo($webinar_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20039';
+        $returnType = '\Zoom\Api\Model\InlineResponse20039';
         $request = $this->reportWebinarDetailsRequest($webinar_id);
 
         return $this->client
@@ -3326,9 +3326,9 @@ class ReportsApi
      * @param  int $page_size The number of records returned within a single API call. (optional, default to 30)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20040
+     * @return \Zoom\Api\Model\InlineResponse20040
      */
     public function reportWebinarParticipants($webinar_id, $page_size = '30', $next_page_token = null)
     {
@@ -3345,13 +3345,13 @@ class ReportsApi
      * @param  int $page_size The number of records returned within a single API call. (optional, default to 30)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20040, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20040, HTTP status code, HTTP response headers (array of strings)
      */
     public function reportWebinarParticipantsWithHttpInfo($webinar_id, $page_size = '30', $next_page_token = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20040';
+        $returnType = '\Zoom\Api\Model\InlineResponse20040';
         $request = $this->reportWebinarParticipantsRequest($webinar_id, $page_size, $next_page_token);
 
         try {
@@ -3403,7 +3403,7 @@ class ReportsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20040',
+                        '\Zoom\Api\Model\InlineResponse20040',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3449,7 +3449,7 @@ class ReportsApi
      */
     public function reportWebinarParticipantsAsyncWithHttpInfo($webinar_id, $page_size = '30', $next_page_token = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20040';
+        $returnType = '\Zoom\Api\Model\InlineResponse20040';
         $request = $this->reportWebinarParticipantsRequest($webinar_id, $page_size, $next_page_token);
 
         return $this->client
@@ -3619,9 +3619,9 @@ class ReportsApi
      *
      * @param  string $webinar_id The webinar ID or webinar UUID. If given the webinar ID it will take the last webinar instance. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20041
+     * @return \Zoom\Api\Model\InlineResponse20041
      */
     public function reportWebinarPolls($webinar_id)
     {
@@ -3636,13 +3636,13 @@ class ReportsApi
      *
      * @param  string $webinar_id The webinar ID or webinar UUID. If given the webinar ID it will take the last webinar instance. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20041, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20041, HTTP status code, HTTP response headers (array of strings)
      */
     public function reportWebinarPollsWithHttpInfo($webinar_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20041';
+        $returnType = '\Zoom\Api\Model\InlineResponse20041';
         $request = $this->reportWebinarPollsRequest($webinar_id);
 
         try {
@@ -3694,7 +3694,7 @@ class ReportsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20041',
+                        '\Zoom\Api\Model\InlineResponse20041',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3736,7 +3736,7 @@ class ReportsApi
      */
     public function reportWebinarPollsAsyncWithHttpInfo($webinar_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20041';
+        $returnType = '\Zoom\Api\Model\InlineResponse20041';
         $request = $this->reportWebinarPollsRequest($webinar_id);
 
         return $this->client
@@ -3892,9 +3892,9 @@ class ReportsApi
      *
      * @param  string $webinar_id The webinar ID or webinar UUID. If given the webinar ID it will take the last webinar instance. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20042
+     * @return \Zoom\Api\Model\InlineResponse20042
      */
     public function reportWebinarQA($webinar_id)
     {
@@ -3909,13 +3909,13 @@ class ReportsApi
      *
      * @param  string $webinar_id The webinar ID or webinar UUID. If given the webinar ID it will take the last webinar instance. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20042, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20042, HTTP status code, HTTP response headers (array of strings)
      */
     public function reportWebinarQAWithHttpInfo($webinar_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20042';
+        $returnType = '\Zoom\Api\Model\InlineResponse20042';
         $request = $this->reportWebinarQARequest($webinar_id);
 
         try {
@@ -3967,7 +3967,7 @@ class ReportsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20042',
+                        '\Zoom\Api\Model\InlineResponse20042',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4009,7 +4009,7 @@ class ReportsApi
      */
     public function reportWebinarQAAsyncWithHttpInfo($webinar_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20042';
+        $returnType = '\Zoom\Api\Model\InlineResponse20042';
         $request = $this->reportWebinarQARequest($webinar_id);
 
         return $this->client

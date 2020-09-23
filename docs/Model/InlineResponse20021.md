@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **from** | [**\DateTime**](\DateTime.md) | Start date. | [optional] 
-**messages** | [**\Swagger\Client\Model\InlineResponse20021Messages[]**](InlineResponse20021Messages.md) | Array of session objects. | [optional] 
+**messages** | [**\Zoom\Api\Model\InlineResponse20021Messages[]**](InlineResponse20021Messages.md) | Array of session objects. | [optional] 
 **next_page_token** | **string** | The Next page token is used to paginate through large result sets. A next page token will be returned whenever the set of the available result list exceeds the page size. The expiration period is 15 minutes. | [optional] 
 **page_size** | **int** | The amount of records returns within a single API call. | [optional] 
 **session_id** | **string** | IM chat session ID. | [optional] 

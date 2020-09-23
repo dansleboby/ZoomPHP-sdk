@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * RecordingRegistrantStatus Class Doc Comment
  *
  * @category Class
  * @description Registrant Status
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,7 +59,7 @@ class RecordingRegistrantStatus implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'action' => 'string',
-        'registrants' => '\Swagger\Client\Model\MeetingsmeetingIdrecordingsregistrantsstatusRegistrants[]'
+        'registrants' => '\Zoom\Api\Model\MeetingsmeetingIdrecordingsregistrantsstatusRegistrants[]'
     ];
 
     /**
@@ -273,7 +273,7 @@ class RecordingRegistrantStatus implements ModelInterface, ArrayAccess
     /**
      * Gets registrants
      *
-     * @return \Swagger\Client\Model\MeetingsmeetingIdrecordingsregistrantsstatusRegistrants[]
+     * @return \Zoom\Api\Model\MeetingsmeetingIdrecordingsregistrantsstatusRegistrants[]
      */
     public function getRegistrants()
     {
@@ -283,7 +283,7 @@ class RecordingRegistrantStatus implements ModelInterface, ArrayAccess
     /**
      * Sets registrants
      *
-     * @param \Swagger\Client\Model\MeetingsmeetingIdrecordingsregistrantsstatusRegistrants[] $registrants List of registrants
+     * @param \Zoom\Api\Model\MeetingsmeetingIdrecordingsregistrantsstatusRegistrants[] $registrants List of registrants
      *
      * @return $this
      */

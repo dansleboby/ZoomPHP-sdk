@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * Body7 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,7 +59,7 @@ class Body7 implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'name' => 'string',
         'type' => 'int',
-        'members' => '\Swagger\Client\Model\ChatusersuserIdchannelsMembers[]'
+        'members' => '\Zoom\Api\Model\ChatusersuserIdchannelsMembers[]'
     ];
 
     /**
@@ -275,7 +275,7 @@ class Body7 implements ModelInterface, ArrayAccess
     /**
      * Gets members
      *
-     * @return \Swagger\Client\Model\ChatusersuserIdchannelsMembers[]
+     * @return \Zoom\Api\Model\ChatusersuserIdchannelsMembers[]
      */
     public function getMembers()
     {
@@ -285,7 +285,7 @@ class Body7 implements ModelInterface, ArrayAccess
     /**
      * Sets members
      *
-     * @param \Swagger\Client\Model\ChatusersuserIdchannelsMembers[] $members Member(s) to include in the channel. A max of 5 members can be added to the channel at once with this API.
+     * @param \Zoom\Api\Model\ChatusersuserIdchannelsMembers[] $members Member(s) to include in the channel. A max of 5 members can be added to the channel at once with this API.
      *
      * @return $this
      */

@@ -1,4 +1,4 @@
-# Swagger\Client\GroupsApi
+# Zoom\Api\GroupsApi
 
 All URIs are relative to *https://api.zoom.us/v2*
 
@@ -20,7 +20,7 @@ Method | HTTP request | Description
 
 
 # **getGroupLockSettings**
-> \Swagger\Client\Model\InlineResponse20069 getGroupLockSettings($group_id)
+> \Zoom\Api\Model\InlineResponse20069 getGroupLockSettings($group_id)
 
 Get Locked Settings
 
@@ -32,9 +32,9 @@ Retrieve a [group's](https://support.zoom.us/hc/en-us/articles/204519819-Group-M
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\GroupsApi(
+$apiInstance = new Zoom\Api\Api\GroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20069**](../Model/InlineResponse20069.md)
+[**\Zoom\Api\Model\InlineResponse20069**](../Model/InlineResponse20069.md)
 
 ### Authorization
 
@@ -85,9 +85,9 @@ Get settings for a [group](https://support.zoom.us/hc/en-us/articles/204519819-G
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\GroupsApi(
+$apiInstance = new Zoom\Api\Api\GroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -128,7 +128,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **group**
-> \Swagger\Client\Model\InlineResponse20017 group($group_id)
+> \Zoom\Api\Model\InlineResponse20017 group($group_id)
 
 Get a Group
 
@@ -140,9 +140,9 @@ Get a [group](https://support.zoom.us/hc/en-us/articles/204519819-Group-Manageme
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\GroupsApi(
+$apiInstance = new Zoom\Api\Api\GroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -167,7 +167,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20017**](../Model/InlineResponse20017.md)
+[**\Zoom\Api\Model\InlineResponse20017**](../Model/InlineResponse20017.md)
 
 ### Authorization
 
@@ -193,15 +193,15 @@ Create a [group](https://support.zoom.us/hc/en-us/articles/204519819-Group-Manag
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\GroupsApi(
+$apiInstance = new Zoom\Api\Api\GroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\Body16(); // \Swagger\Client\Model\Body16 | 
+$body = new \Zoom\Api\Model\Body16(); // \Zoom\Api\Model\Body16 | 
 
 try {
     $apiInstance->groupCreate($body);
@@ -215,7 +215,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body16**](../Model/Body16.md)|  |
+ **body** | [**\Zoom\Api\Model\Body16**](../Model/Body16.md)|  |
 
 ### Return type
 
@@ -245,9 +245,9 @@ Delete a [group](https://support.zoom.us/hc/en-us/articles/204519819-Group-Manag
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\GroupsApi(
+$apiInstance = new Zoom\Api\Api\GroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -297,16 +297,16 @@ Update a [group's](https://support.zoom.us/hc/en-us/articles/204519819-Group-Man
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\GroupsApi(
+$apiInstance = new Zoom\Api\Api\GroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $group_id = "group_id_example"; // string | The Id of the group.
-$body = new \Swagger\Client\Model\Body51(); // \Swagger\Client\Model\Body51 | 
+$body = new \Zoom\Api\Model\Body51(); // \Zoom\Api\Model\Body51 | 
 
 try {
     $result = $apiInstance->groupLockedSettings($group_id, $body);
@@ -322,7 +322,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **group_id** | **string**| The Id of the group. |
- **body** | [**\Swagger\Client\Model\Body51**](../Model/Body51.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\Body51**](../Model/Body51.md)|  | [optional]
 
 ### Return type
 
@@ -340,7 +340,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **groupMembers**
-> \Swagger\Client\Model\InlineResponse20018 groupMembers($group_id, $page_size, $page_number)
+> \Zoom\Api\Model\InlineResponse20018 groupMembers($group_id, $page_size, $page_number)
 
 List Group Members
 
@@ -352,9 +352,9 @@ List the members of a [group](https://support.zoom.us/hc/en-us/articles/20451981
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\GroupsApi(
+$apiInstance = new Zoom\Api\Api\GroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -383,7 +383,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20018**](../Model/InlineResponse20018.md)
+[**\Zoom\Api\Model\InlineResponse20018**](../Model/InlineResponse20018.md)
 
 ### Authorization
 
@@ -409,16 +409,16 @@ Add members to a [group](https://support.zoom.us/hc/en-us/articles/204519819-Gro
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\GroupsApi(
+$apiInstance = new Zoom\Api\Api\GroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $group_id = "group_id_example"; // string | The group ID.<br> Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups).
-$body = new \Swagger\Client\Model\Body18(); // \Swagger\Client\Model\Body18 | 
+$body = new \Zoom\Api\Model\Body18(); // \Zoom\Api\Model\Body18 | 
 
 try {
     $apiInstance->groupMembersCreate($group_id, $body);
@@ -433,7 +433,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **group_id** | **string**| The group ID.&lt;br&gt; Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups). |
- **body** | [**\Swagger\Client\Model\Body18**](../Model/Body18.md)|  |
+ **body** | [**\Zoom\Api\Model\Body18**](../Model/Body18.md)|  |
 
 ### Return type
 
@@ -463,9 +463,9 @@ Delete a member from a [group](https://support.zoom.us/hc/en-us/articles/2045198
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\GroupsApi(
+$apiInstance = new Zoom\Api\Api\GroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -517,16 +517,16 @@ Update a [group](https://support.zoom.us/hc/en-us/articles/204519819-Group-Manag
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\GroupsApi(
+$apiInstance = new Zoom\Api\Api\GroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $group_id = "group_id_example"; // string | The group ID.<br> Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups).
-$body = new \Swagger\Client\Model\Body17(); // \Swagger\Client\Model\Body17 | 
+$body = new \Zoom\Api\Model\Body17(); // \Zoom\Api\Model\Body17 | 
 
 try {
     $apiInstance->groupUpdate($group_id, $body);
@@ -541,7 +541,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **group_id** | **string**| The group ID.&lt;br&gt; Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups). |
- **body** | [**\Swagger\Client\Model\Body17**](../Model/Body17.md)|  |
+ **body** | [**\Zoom\Api\Model\Body17**](../Model/Body17.md)|  |
 
 ### Return type
 
@@ -559,7 +559,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **groups**
-> \Swagger\Client\Model\InlineResponse20016 groups()
+> \Zoom\Api\Model\InlineResponse20016 groups()
 
 List Groups
 
@@ -571,9 +571,9 @@ List [groups](https://support.zoom.us/hc/en-us/articles/204519819-Group-Manageme
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\GroupsApi(
+$apiInstance = new Zoom\Api\Api\GroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -594,7 +594,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20016**](../Model/InlineResponse20016.md)
+[**\Zoom\Api\Model\InlineResponse20016**](../Model/InlineResponse20016.md)
 
 ### Authorization
 
@@ -620,9 +620,9 @@ If a user is a member in multiple groups, you can [set a primary group](https://
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\GroupsApi(
+$apiInstance = new Zoom\Api\Api\GroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -630,7 +630,7 @@ $apiInstance = new Swagger\Client\Api\GroupsApi(
 );
 $group_id = "group_id_example"; // string | Unique Identifier of the group. Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups) API.<br> To change a member's primary group, provide the groupId of the member's current primary group as the value of this field.<br> To remove a member from one group and move the member to another group, provide the groupId of the group from which the member is to be moved.
 $member_id = "member_id_example"; // string | Unique Identifier of the group member. Can be retrieved by calling the [List Group Members](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groupmembers) API.
-$body = new \Swagger\Client\Model\Body19(); // \Swagger\Client\Model\Body19 | 
+$body = new \Zoom\Api\Model\Body19(); // \Zoom\Api\Model\Body19 | 
 
 try {
     $result = $apiInstance->updateAGroupMember($group_id, $member_id, $body);
@@ -647,7 +647,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **group_id** | **string**| Unique Identifier of the group. Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups) API.&lt;br&gt; To change a member&#39;s primary group, provide the groupId of the member&#39;s current primary group as the value of this field.&lt;br&gt; To remove a member from one group and move the member to another group, provide the groupId of the group from which the member is to be moved. |
  **member_id** | **string**| Unique Identifier of the group member. Can be retrieved by calling the [List Group Members](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groupmembers) API. |
- **body** | [**\Swagger\Client\Model\Body19**](../Model/Body19.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\Body19**](../Model/Body19.md)|  | [optional]
 
 ### Return type
 
@@ -677,9 +677,9 @@ Update settings for a [group](https://support.zoom.us/hc/en-us/articles/20451981
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\GroupsApi(
+$apiInstance = new Zoom\Api\Api\GroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),

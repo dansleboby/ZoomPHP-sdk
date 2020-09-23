@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Zoom\Api\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Zoom\Api\ApiException;
+use Zoom\Api\Configuration;
+use Zoom\Api\HeaderSelector;
+use Zoom\Api\ObjectSerializer;
 
 /**
  * IMGroupsApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -94,9 +94,9 @@ class IMGroupsApi
      *
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups). (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20019
+     * @return \Zoom\Api\Model\InlineResponse20019
      */
     public function imGroup($group_id)
     {
@@ -111,13 +111,13 @@ class IMGroupsApi
      *
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups). (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20019, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20019, HTTP status code, HTTP response headers (array of strings)
      */
     public function imGroupWithHttpInfo($group_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20019';
+        $returnType = '\Zoom\Api\Model\InlineResponse20019';
         $request = $this->imGroupRequest($group_id);
 
         try {
@@ -169,7 +169,7 @@ class IMGroupsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20019',
+                        '\Zoom\Api\Model\InlineResponse20019',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -211,7 +211,7 @@ class IMGroupsApi
      */
     public function imGroupAsyncWithHttpInfo($group_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20019';
+        $returnType = '\Zoom\Api\Model\InlineResponse20019';
         $request = $this->imGroupRequest($group_id);
 
         return $this->client
@@ -365,9 +365,9 @@ class IMGroupsApi
      *
      * Create an IM Directory Group
      *
-     * @param  \Swagger\Client\Model\Body20 $body body (required)
+     * @param  \Zoom\Api\Model\Body20 $body body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -381,9 +381,9 @@ class IMGroupsApi
      *
      * Create an IM Directory Group
      *
-     * @param  \Swagger\Client\Model\Body20 $body (required)
+     * @param  \Zoom\Api\Model\Body20 $body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -427,7 +427,7 @@ class IMGroupsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20110',
+                        '\Zoom\Api\Model\InlineResponse20110',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -442,7 +442,7 @@ class IMGroupsApi
      *
      * Create an IM Directory Group
      *
-     * @param  \Swagger\Client\Model\Body20 $body (required)
+     * @param  \Zoom\Api\Model\Body20 $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -462,7 +462,7 @@ class IMGroupsApi
      *
      * Create an IM Directory Group
      *
-     * @param  \Swagger\Client\Model\Body20 $body (required)
+     * @param  \Zoom\Api\Model\Body20 $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -498,7 +498,7 @@ class IMGroupsApi
     /**
      * Create request for operation 'imGroupCreate'
      *
-     * @param  \Swagger\Client\Model\Body20 $body (required)
+     * @param  \Zoom\Api\Model\Body20 $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -606,7 +606,7 @@ class IMGroupsApi
      *
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups). (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -622,7 +622,7 @@ class IMGroupsApi
      *
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups). (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -845,9 +845,9 @@ class IMGroupsApi
      * @param  int $page_number **Deprecated** - This field has been deprecated and we will stop supporting it completely in a future release. Please use \&quot;next_page_token\&quot; for pagination instead of this field.  The page number of the current page in the returned records. (optional, default to 1)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\GroupMemberList
+     * @return \Zoom\Api\Model\GroupMemberList
      */
     public function imGroupMembers($group_id, $page_size = '30', $page_number = '1', $next_page_token = null)
     {
@@ -865,13 +865,13 @@ class IMGroupsApi
      * @param  int $page_number **Deprecated** - This field has been deprecated and we will stop supporting it completely in a future release. Please use \&quot;next_page_token\&quot; for pagination instead of this field.  The page number of the current page in the returned records. (optional, default to 1)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\GroupMemberList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\GroupMemberList, HTTP status code, HTTP response headers (array of strings)
      */
     public function imGroupMembersWithHttpInfo($group_id, $page_size = '30', $page_number = '1', $next_page_token = null)
     {
-        $returnType = '\Swagger\Client\Model\GroupMemberList';
+        $returnType = '\Zoom\Api\Model\GroupMemberList';
         $request = $this->imGroupMembersRequest($group_id, $page_size, $page_number, $next_page_token);
 
         try {
@@ -923,7 +923,7 @@ class IMGroupsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\GroupMemberList',
+                        '\Zoom\Api\Model\GroupMemberList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -971,7 +971,7 @@ class IMGroupsApi
      */
     public function imGroupMembersAsyncWithHttpInfo($group_id, $page_size = '30', $page_number = '1', $next_page_token = null)
     {
-        $returnType = '\Swagger\Client\Model\GroupMemberList';
+        $returnType = '\Zoom\Api\Model\GroupMemberList';
         $request = $this->imGroupMembersRequest($group_id, $page_size, $page_number, $next_page_token);
 
         return $this->client
@@ -1145,9 +1145,9 @@ class IMGroupsApi
      * Add IM Directory Group Members
      *
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups). (required)
-     * @param  \Swagger\Client\Model\Body22 $body body (required)
+     * @param  \Zoom\Api\Model\Body22 $body body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1162,9 +1162,9 @@ class IMGroupsApi
      * Add IM Directory Group Members
      *
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups). (required)
-     * @param  \Swagger\Client\Model\Body22 $body (required)
+     * @param  \Zoom\Api\Model\Body22 $body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1224,7 +1224,7 @@ class IMGroupsApi
      * Add IM Directory Group Members
      *
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups). (required)
-     * @param  \Swagger\Client\Model\Body22 $body (required)
+     * @param  \Zoom\Api\Model\Body22 $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1245,7 +1245,7 @@ class IMGroupsApi
      * Add IM Directory Group Members
      *
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups). (required)
-     * @param  \Swagger\Client\Model\Body22 $body (required)
+     * @param  \Zoom\Api\Model\Body22 $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1282,7 +1282,7 @@ class IMGroupsApi
      * Create request for operation 'imGroupMembersCreate'
      *
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups). (required)
-     * @param  \Swagger\Client\Model\Body22 $body (required)
+     * @param  \Zoom\Api\Model\Body22 $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1405,7 +1405,7 @@ class IMGroupsApi
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups). (required)
      * @param  string $member_id The member ID. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1422,7 +1422,7 @@ class IMGroupsApi
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups). (required)
      * @param  string $member_id The member ID. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1658,9 +1658,9 @@ class IMGroupsApi
      * Update an IM Directory Group
      *
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups). (required)
-     * @param  \Swagger\Client\Model\Body21 $body body (required)
+     * @param  \Zoom\Api\Model\Body21 $body body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1675,9 +1675,9 @@ class IMGroupsApi
      * Update an IM Directory Group
      *
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups). (required)
-     * @param  \Swagger\Client\Model\Body21 $body (required)
+     * @param  \Zoom\Api\Model\Body21 $body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1729,7 +1729,7 @@ class IMGroupsApi
      * Update an IM Directory Group
      *
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups). (required)
-     * @param  \Swagger\Client\Model\Body21 $body (required)
+     * @param  \Zoom\Api\Model\Body21 $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1750,7 +1750,7 @@ class IMGroupsApi
      * Update an IM Directory Group
      *
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups). (required)
-     * @param  \Swagger\Client\Model\Body21 $body (required)
+     * @param  \Zoom\Api\Model\Body21 $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1787,7 +1787,7 @@ class IMGroupsApi
      * Create request for operation 'imGroupUpdate'
      *
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling [GET /groups](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups). (required)
-     * @param  \Swagger\Client\Model\Body21 $body (required)
+     * @param  \Zoom\Api\Model\Body21 $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1908,7 +1908,7 @@ class IMGroupsApi
      * List IM Directory Groups
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -1924,7 +1924,7 @@ class IMGroupsApi
      * List IM Directory Groups
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */

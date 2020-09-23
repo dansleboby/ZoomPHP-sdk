@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse20059 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class InlineResponse20059 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'client_feedback_details' => '\Swagger\Client\Model\InlineResponse20059ClientFeedbackDetails[]',
+        'client_feedback_details' => '\Zoom\Api\Model\InlineResponse20059ClientFeedbackDetails[]',
         'from' => '\DateTime',
         'next_page_token' => 'string',
         'page_size' => 'int',
@@ -235,7 +235,7 @@ class InlineResponse20059 implements ModelInterface, ArrayAccess
     /**
      * Gets client_feedback_details
      *
-     * @return \Swagger\Client\Model\InlineResponse20059ClientFeedbackDetails[]
+     * @return \Zoom\Api\Model\InlineResponse20059ClientFeedbackDetails[]
      */
     public function getClientFeedbackDetails()
     {
@@ -245,7 +245,7 @@ class InlineResponse20059 implements ModelInterface, ArrayAccess
     /**
      * Sets client_feedback_details
      *
-     * @param \Swagger\Client\Model\InlineResponse20059ClientFeedbackDetails[] $client_feedback_details client_feedback_details
+     * @param \Zoom\Api\Model\InlineResponse20059ClientFeedbackDetails[] $client_feedback_details client_feedback_details
      *
      * @return $this
      */

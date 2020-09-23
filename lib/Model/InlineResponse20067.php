@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse20067 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class InlineResponse20067 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'phone_numbers' => '\Swagger\Client\Model\InlineResponse20067PhoneNumbers[]'
+        'phone_numbers' => '\Zoom\Api\Model\InlineResponse20067PhoneNumbers[]'
     ];
 
     /**
@@ -207,7 +207,7 @@ class InlineResponse20067 implements ModelInterface, ArrayAccess
     /**
      * Gets phone_numbers
      *
-     * @return \Swagger\Client\Model\InlineResponse20067PhoneNumbers[]
+     * @return \Zoom\Api\Model\InlineResponse20067PhoneNumbers[]
      */
     public function getPhoneNumbers()
     {
@@ -217,7 +217,7 @@ class InlineResponse20067 implements ModelInterface, ArrayAccess
     /**
      * Sets phone_numbers
      *
-     * @param \Swagger\Client\Model\InlineResponse20067PhoneNumbers[] $phone_numbers Assigned phone number
+     * @param \Zoom\Api\Model\InlineResponse20067PhoneNumbers[] $phone_numbers Assigned phone number
      *
      * @return $this
      */

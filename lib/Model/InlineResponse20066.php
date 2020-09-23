@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse20066 Class Doc Comment
  *
  * @category Class
  * @description Account Call Logs
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -64,7 +64,7 @@ class InlineResponse20066 implements ModelInterface, ArrayAccess
         'page_size' => 'string',
         'total_records' => 'string',
         'next_page_token' => 'string',
-        'call_logs' => '\Swagger\Client\Model\InlineResponse20063CallLogs[]'
+        'call_logs' => '\Zoom\Api\Model\InlineResponse20063CallLogs[]'
     ];
 
     /**
@@ -388,7 +388,7 @@ class InlineResponse20066 implements ModelInterface, ArrayAccess
     /**
      * Gets call_logs
      *
-     * @return \Swagger\Client\Model\InlineResponse20063CallLogs[]
+     * @return \Zoom\Api\Model\InlineResponse20063CallLogs[]
      */
     public function getCallLogs()
     {
@@ -398,7 +398,7 @@ class InlineResponse20066 implements ModelInterface, ArrayAccess
     /**
      * Sets call_logs
      *
-     * @param \Swagger\Client\Model\InlineResponse20063CallLogs[] $call_logs Call Log
+     * @param \Zoom\Api\Model\InlineResponse20063CallLogs[] $call_logs Call Log
      *
      * @return $this
      */

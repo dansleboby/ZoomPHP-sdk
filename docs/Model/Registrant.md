@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 **role_in_purchase_process** | **string** | Role in Purchase Process:&lt;br&gt;&#x60;Decision Maker&#x60;&lt;br&gt;&#x60;Evaluator/Recommender&#x60;&lt;br&gt;&#x60;Influencer&#x60;&lt;br&gt;&#x60;Not involved&#x60; | [optional] 
 **no_of_employees** | **string** | Number of Employees:&lt;br&gt;&#x60;1-20&#x60;&lt;br&gt;&#x60;21-50&#x60;&lt;br&gt;&#x60;51-100&#x60;&lt;br&gt;&#x60;101-500&#x60;&lt;br&gt;&#x60;500-1,000&#x60;&lt;br&gt;&#x60;1,001-5,000&#x60;&lt;br&gt;&#x60;5,001-10,000&#x60;&lt;br&gt;&#x60;More than 10,000&#x60; | [optional] 
 **comments** | **string** | A field that allows registrants to provide any questions or comments that they might have. | [optional] 
-**custom_questions** | [**\Swagger\Client\Model\WebianrRegistrantCustomQuestions[]**](WebianrRegistrantCustomQuestions.md) | Custom questions. | [optional] 
+**custom_questions** | [**\Zoom\Api\Model\WebianrRegistrantCustomQuestions[]**](WebianrRegistrantCustomQuestions.md) | Custom questions. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

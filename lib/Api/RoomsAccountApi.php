@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Zoom\Api\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Zoom\Api\ApiException;
+use Zoom\Api\Configuration;
+use Zoom\Api\HeaderSelector;
+use Zoom\Api\ObjectSerializer;
 
 /**
  * RoomsAccountApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -93,9 +93,9 @@ class RoomsAccountApi
      * Get Zoom Room Account Profile
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20075
+     * @return \Zoom\Api\Model\InlineResponse20075
      */
     public function getZRAccountProfile()
     {
@@ -109,13 +109,13 @@ class RoomsAccountApi
      * Get Zoom Room Account Profile
      *
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20075, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20075, HTTP status code, HTTP response headers (array of strings)
      */
     public function getZRAccountProfileWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20075';
+        $returnType = '\Zoom\Api\Model\InlineResponse20075';
         $request = $this->getZRAccountProfileRequest();
 
         try {
@@ -167,7 +167,7 @@ class RoomsAccountApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20075',
+                        '\Zoom\Api\Model\InlineResponse20075',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -207,7 +207,7 @@ class RoomsAccountApi
      */
     public function getZRAccountProfileAsyncWithHttpInfo()
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20075';
+        $returnType = '\Zoom\Api\Model\InlineResponse20075';
         $request = $this->getZRAccountProfileRequest();
 
         return $this->client
@@ -348,7 +348,7 @@ class RoomsAccountApi
      *
      * @param  string $setting_type The type of setting that you would like to retrieve.&lt;br&gt; &#x60;alert&#x60;: Alert Settings applied on the Zoom Rooms Account.&lt;br&gt; &#x60;meeting&#x60;: Meeting settings of the Zoom Rooms Account. &lt;br&gt; &#x60;signage&#x60;: View digital signage settings of the Zoom Rooms Account. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -365,7 +365,7 @@ class RoomsAccountApi
      *
      * @param  string $setting_type The type of setting that you would like to retrieve.&lt;br&gt; &#x60;alert&#x60;: Alert Settings applied on the Zoom Rooms Account.&lt;br&gt; &#x60;meeting&#x60;: Meeting settings of the Zoom Rooms Account. &lt;br&gt; &#x60;signage&#x60;: View digital signage settings of the Zoom Rooms Account. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -615,9 +615,9 @@ class RoomsAccountApi
      *
      * Update Zoom Room Account Profile
      *
-     * @param  \Swagger\Client\Model\Body56 $body body (optional)
+     * @param  \Zoom\Api\Model\Body56 $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -632,9 +632,9 @@ class RoomsAccountApi
      *
      * Update Zoom Room Account Profile
      *
-     * @param  \Swagger\Client\Model\Body56 $body (optional)
+     * @param  \Zoom\Api\Model\Body56 $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -707,7 +707,7 @@ class RoomsAccountApi
      *
      * Update Zoom Room Account Profile
      *
-     * @param  \Swagger\Client\Model\Body56 $body (optional)
+     * @param  \Zoom\Api\Model\Body56 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -727,7 +727,7 @@ class RoomsAccountApi
      *
      * Update Zoom Room Account Profile
      *
-     * @param  \Swagger\Client\Model\Body56 $body (optional)
+     * @param  \Zoom\Api\Model\Body56 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -777,7 +777,7 @@ class RoomsAccountApi
     /**
      * Create request for operation 'updateZRAccProfile'
      *
-     * @param  \Swagger\Client\Model\Body56 $body (optional)
+     * @param  \Zoom\Api\Model\Body56 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -880,7 +880,7 @@ class RoomsAccountApi
      * @param  string $setting_type The type of setting that you would like to update.&lt;br&gt; &#x60;alert&#x60;: Alert Settings applied on the Zoom Rooms Account.&lt;br&gt; &#x60;meeting&#x60;: Meeting settings of the Zoom Rooms Account.&lt;br&gt; &#x60;signage&#x60;: View digital signage settings of the Zoom Rooms Account. (required)
      * @param  object $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -898,7 +898,7 @@ class RoomsAccountApi
      * @param  string $setting_type The type of setting that you would like to update.&lt;br&gt; &#x60;alert&#x60;: Alert Settings applied on the Zoom Rooms Account.&lt;br&gt; &#x60;meeting&#x60;: Meeting settings of the Zoom Rooms Account.&lt;br&gt; &#x60;signage&#x60;: View digital signage settings of the Zoom Rooms Account. (required)
      * @param  object $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * PhonecallQueuesMembers Class Doc Comment
  *
  * @category Class
  * @description A list of one or more phone users to be included in the call queue. Provide either users or common area phone(s). Provide at least one user in the users object.
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,7 +58,7 @@ class PhonecallQueuesMembers implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'users' => '\Swagger\Client\Model\PhonecallQueuesMembersUsers[]',
+        'users' => '\Zoom\Api\Model\PhonecallQueuesMembersUsers[]',
         'common_area_phone_ids' => 'string[]'
     ];
 
@@ -214,7 +214,7 @@ class PhonecallQueuesMembers implements ModelInterface, ArrayAccess
     /**
      * Gets users
      *
-     * @return \Swagger\Client\Model\PhonecallQueuesMembersUsers[]
+     * @return \Zoom\Api\Model\PhonecallQueuesMembersUsers[]
      */
     public function getUsers()
     {
@@ -224,7 +224,7 @@ class PhonecallQueuesMembers implements ModelInterface, ArrayAccess
     /**
      * Sets users
      *
-     * @param \Swagger\Client\Model\PhonecallQueuesMembersUsers[] $users Users object. Provide either the id (userId) field or the email address of the user.
+     * @param \Zoom\Api\Model\PhonecallQueuesMembersUsers[] $users Users object. Provide either the id (userId) field or the email address of the user.
      *
      * @return $this
      */

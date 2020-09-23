@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse20020 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -60,7 +60,7 @@ class InlineResponse20020 implements ModelInterface, ArrayAccess
         'from' => '\DateTime',
         'next_page_token' => 'string',
         'page_size' => 'int',
-        'sessions' => '\Swagger\Client\Model\InlineResponse20020Sessions[]',
+        'sessions' => '\Zoom\Api\Model\InlineResponse20020Sessions[]',
         'to' => '\DateTime'
     ];
 
@@ -312,7 +312,7 @@ class InlineResponse20020 implements ModelInterface, ArrayAccess
     /**
      * Gets sessions
      *
-     * @return \Swagger\Client\Model\InlineResponse20020Sessions[]
+     * @return \Zoom\Api\Model\InlineResponse20020Sessions[]
      */
     public function getSessions()
     {
@@ -322,7 +322,7 @@ class InlineResponse20020 implements ModelInterface, ArrayAccess
     /**
      * Sets sessions
      *
-     * @param \Swagger\Client\Model\InlineResponse20020Sessions[] $sessions Array of session objects.
+     * @param \Zoom\Api\Model\InlineResponse20020Sessions[] $sessions Array of session objects.
      *
      * @return $this
      */

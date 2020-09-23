@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse20046Users Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -72,7 +72,7 @@ class InlineResponse20046Users implements ModelInterface, ArrayAccess
         'group_ids' => 'string[]',
         'im_group_ids' => 'string[]',
         'verified' => 'int',
-        'custom_attributes' => '\Swagger\Client\Model\InlineResponse20046CustomAttributes[]'
+        'custom_attributes' => '\Zoom\Api\Model\InlineResponse20046CustomAttributes[]'
     ];
 
     /**
@@ -679,7 +679,7 @@ class InlineResponse20046Users implements ModelInterface, ArrayAccess
     /**
      * Gets custom_attributes
      *
-     * @return \Swagger\Client\Model\InlineResponse20046CustomAttributes[]
+     * @return \Zoom\Api\Model\InlineResponse20046CustomAttributes[]
      */
     public function getCustomAttributes()
     {
@@ -689,7 +689,7 @@ class InlineResponse20046Users implements ModelInterface, ArrayAccess
     /**
      * Sets custom_attributes
      *
-     * @param \Swagger\Client\Model\InlineResponse20046CustomAttributes[] $custom_attributes Custom attributes. This field is only returned if users have been assigned custom attributes and if you provided `custom_attributes` as the value of `include_fields` query parameter in the API request.
+     * @param \Zoom\Api\Model\InlineResponse20046CustomAttributes[] $custom_attributes Custom attributes. This field is only returned if users have been assigned custom attributes and if you provided `custom_attributes` as the value of `include_fields` query parameter in the API request.
      *
      * @return $this
      */

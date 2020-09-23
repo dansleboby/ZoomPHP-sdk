@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse20036 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -68,7 +68,7 @@ class InlineResponse20036 implements ModelInterface, ArrayAccess
         'duration' => 'int',
         'total_minutes' => 'int',
         'participants_count' => 'int',
-        'tracking_fields' => '\Swagger\Client\Model\InlineResponse20036TrackingFields[]',
+        'tracking_fields' => '\Zoom\Api\Model\InlineResponse20036TrackingFields[]',
         'dept' => 'string'
     ];
 
@@ -543,7 +543,7 @@ class InlineResponse20036 implements ModelInterface, ArrayAccess
     /**
      * Gets tracking_fields
      *
-     * @return \Swagger\Client\Model\InlineResponse20036TrackingFields[]
+     * @return \Zoom\Api\Model\InlineResponse20036TrackingFields[]
      */
     public function getTrackingFields()
     {
@@ -553,7 +553,7 @@ class InlineResponse20036 implements ModelInterface, ArrayAccess
     /**
      * Sets tracking_fields
      *
-     * @param \Swagger\Client\Model\InlineResponse20036TrackingFields[] $tracking_fields Tracking fields.
+     * @param \Zoom\Api\Model\InlineResponse20036TrackingFields[] $tracking_fields Tracking fields.
      *
      * @return $this
      */

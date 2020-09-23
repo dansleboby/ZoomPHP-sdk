@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * RoleMembersAdd Class Doc Comment
  *
  * @category Class
  * @description Add Role Members
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,7 +58,7 @@ class RoleMembersAdd implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'members' => '\Swagger\Client\Model\RoleMembersAddMembers[]'
+        'members' => '\Zoom\Api\Model\RoleMembersAddMembers[]'
     ];
 
     /**
@@ -208,7 +208,7 @@ class RoleMembersAdd implements ModelInterface, ArrayAccess
     /**
      * Gets members
      *
-     * @return \Swagger\Client\Model\RoleMembersAddMembers[]
+     * @return \Zoom\Api\Model\RoleMembersAddMembers[]
      */
     public function getMembers()
     {
@@ -218,7 +218,7 @@ class RoleMembersAdd implements ModelInterface, ArrayAccess
     /**
      * Sets members
      *
-     * @param \Swagger\Client\Model\RoleMembersAddMembers[] $members List of Role's members
+     * @param \Zoom\Api\Model\RoleMembersAddMembers[] $members List of Role's members
      *
      * @return $this
      */

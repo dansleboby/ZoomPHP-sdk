@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse20044 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,7 +58,7 @@ class InlineResponse20044 implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'next_page_token' => 'string',
-        'operation_logs' => '\Swagger\Client\Model\InlineResponse20044OperationLogs[]',
+        'operation_logs' => '\Zoom\Api\Model\InlineResponse20044OperationLogs[]',
         'page_size' => 'int'
     ];
 
@@ -247,7 +247,7 @@ class InlineResponse20044 implements ModelInterface, ArrayAccess
     /**
      * Gets operation_logs
      *
-     * @return \Swagger\Client\Model\InlineResponse20044OperationLogs[]
+     * @return \Zoom\Api\Model\InlineResponse20044OperationLogs[]
      */
     public function getOperationLogs()
     {
@@ -257,7 +257,7 @@ class InlineResponse20044 implements ModelInterface, ArrayAccess
     /**
      * Sets operation_logs
      *
-     * @param \Swagger\Client\Model\InlineResponse20044OperationLogs[] $operation_logs Array of operation log objects
+     * @param \Zoom\Api\Model\InlineResponse20044OperationLogs[] $operation_logs Array of operation log objects
      *
      * @return $this
      */

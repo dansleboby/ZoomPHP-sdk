@@ -1,4 +1,4 @@
-# Swagger\Client\ContactsApi
+# Zoom\Api\ContactsApi
 
 All URIs are relative to *https://api.zoom.us/v2*
 
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **getUserContact**
-> \Swagger\Client\Model\InlineResponse2009 getUserContact($contact_id, $query_presence_status)
+> \Zoom\Api\Model\InlineResponse2009 getUserContact($contact_id, $query_presence_status)
 
 Get User's Contact Details
 
@@ -22,9 +22,9 @@ A user under an organization’s Zoom account has internal users listed under Co
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ContactsApi(
+$apiInstance = new Zoom\Api\Api\ContactsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -51,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2009**](../Model/InlineResponse2009.md)
+[**\Zoom\Api\Model\InlineResponse2009**](../Model/InlineResponse2009.md)
 
 ### Authorization
 
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getUserContacts**
-> \Swagger\Client\Model\InlineResponse2008 getUserContacts($type, $page_size, $next_page_token)
+> \Zoom\Api\Model\InlineResponse2008 getUserContacts($type, $page_size, $next_page_token)
 
 List User's Contacts
 
@@ -77,9 +77,9 @@ A user under an organization’s Zoom account has internal users listed under Co
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ContactsApi(
+$apiInstance = new Zoom\Api\Api\ContactsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -108,7 +108,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2008**](../Model/InlineResponse2008.md)
+[**\Zoom\Api\Model\InlineResponse2008**](../Model/InlineResponse2008.md)
 
 ### Authorization
 
@@ -122,7 +122,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **searchCompanyContacts**
-> \Swagger\Client\Model\InlineResponse2005 searchCompanyContacts($search_key, $query_presence_status, $page_size, $next_page_token)
+> \Zoom\Api\Model\InlineResponse2005 searchCompanyContacts($search_key, $query_presence_status, $page_size, $next_page_token)
 
 Search Company Contacts
 
@@ -134,9 +134,9 @@ A user under an organization's Zoom account has internal users listed under Comp
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ContactsApi(
+$apiInstance = new Zoom\Api\Api\ContactsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -167,7 +167,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2005**](../Model/InlineResponse2005.md)
+[**\Zoom\Api\Model\InlineResponse2005**](../Model/InlineResponse2005.md)
 
 ### Authorization
 

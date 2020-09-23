@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * QOSParticipant Class Doc Comment
  *
  * @category Class
  * @description Participant QOS.
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -70,7 +70,7 @@ class QOSParticipant implements ModelInterface, ArrayAccess
         'mac_addr' => 'string',
         'harddisk_id' => 'string',
         'version' => 'string',
-        'user_qos' => '\Swagger\Client\Model\ParticipantQOSUserQos[]'
+        'user_qos' => '\Zoom\Api\Model\ParticipantQOSUserQos[]'
     ];
 
     /**
@@ -568,7 +568,7 @@ class QOSParticipant implements ModelInterface, ArrayAccess
     /**
      * Gets user_qos
      *
-     * @return \Swagger\Client\Model\ParticipantQOSUserQos[]
+     * @return \Zoom\Api\Model\ParticipantQOSUserQos[]
      */
     public function getUserQos()
     {
@@ -578,7 +578,7 @@ class QOSParticipant implements ModelInterface, ArrayAccess
     /**
      * Sets user_qos
      *
-     * @param \Swagger\Client\Model\ParticipantQOSUserQos[] $user_qos Quality of service provided to the user.
+     * @param \Zoom\Api\Model\ParticipantQOSUserQos[] $user_qos Quality of service provided to the user.
      *
      * @return $this
      */

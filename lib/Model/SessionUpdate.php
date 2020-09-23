@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * SessionUpdate Class Doc Comment
  *
  * @category Class
  * @description Base object for sessions.
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -65,9 +65,9 @@ class SessionUpdate implements ModelInterface, ArrayAccess
         'timezone' => 'string',
         'password' => 'string',
         'agenda' => 'string',
-        'tracking_fields' => '\Swagger\Client\Model\InlineResponse20119TrackingFields[]',
-        'recurrence' => '\Swagger\Client\Model\UsersuserIdmeetingsRecurrence',
-        'settings' => '\Swagger\Client\Model\MeetingUpdateSettings'
+        'tracking_fields' => '\Zoom\Api\Model\InlineResponse20119TrackingFields[]',
+        'recurrence' => '\Zoom\Api\Model\UsersuserIdmeetingsRecurrence',
+        'settings' => '\Zoom\Api\Model\MeetingUpdateSettings'
     ];
 
     /**
@@ -446,7 +446,7 @@ class SessionUpdate implements ModelInterface, ArrayAccess
     /**
      * Gets tracking_fields
      *
-     * @return \Swagger\Client\Model\InlineResponse20119TrackingFields[]
+     * @return \Zoom\Api\Model\InlineResponse20119TrackingFields[]
      */
     public function getTrackingFields()
     {
@@ -456,7 +456,7 @@ class SessionUpdate implements ModelInterface, ArrayAccess
     /**
      * Sets tracking_fields
      *
-     * @param \Swagger\Client\Model\InlineResponse20119TrackingFields[] $tracking_fields Tracking fields
+     * @param \Zoom\Api\Model\InlineResponse20119TrackingFields[] $tracking_fields Tracking fields
      *
      * @return $this
      */
@@ -470,7 +470,7 @@ class SessionUpdate implements ModelInterface, ArrayAccess
     /**
      * Gets recurrence
      *
-     * @return \Swagger\Client\Model\UsersuserIdmeetingsRecurrence
+     * @return \Zoom\Api\Model\UsersuserIdmeetingsRecurrence
      */
     public function getRecurrence()
     {
@@ -480,7 +480,7 @@ class SessionUpdate implements ModelInterface, ArrayAccess
     /**
      * Sets recurrence
      *
-     * @param \Swagger\Client\Model\UsersuserIdmeetingsRecurrence $recurrence recurrence
+     * @param \Zoom\Api\Model\UsersuserIdmeetingsRecurrence $recurrence recurrence
      *
      * @return $this
      */
@@ -494,7 +494,7 @@ class SessionUpdate implements ModelInterface, ArrayAccess
     /**
      * Gets settings
      *
-     * @return \Swagger\Client\Model\MeetingUpdateSettings
+     * @return \Zoom\Api\Model\MeetingUpdateSettings
      */
     public function getSettings()
     {
@@ -504,7 +504,7 @@ class SessionUpdate implements ModelInterface, ArrayAccess
     /**
      * Sets settings
      *
-     * @param \Swagger\Client\Model\MeetingUpdateSettings $settings settings
+     * @param \Zoom\Api\Model\MeetingUpdateSettings $settings settings
      *
      * @return $this
      */

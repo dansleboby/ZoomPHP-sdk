@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse20033 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,7 +58,7 @@ class InlineResponse20033 implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'from' => '\DateTime',
-        'issue_details' => '\Swagger\Client\Model\InlineResponse20033IssueDetails[]',
+        'issue_details' => '\Zoom\Api\Model\InlineResponse20033IssueDetails[]',
         'next_page_token' => 'string',
         'page_count' => 'int',
         'page_size' => 'int',
@@ -271,7 +271,7 @@ class InlineResponse20033 implements ModelInterface, ArrayAccess
     /**
      * Gets issue_details
      *
-     * @return \Swagger\Client\Model\InlineResponse20033IssueDetails[]
+     * @return \Zoom\Api\Model\InlineResponse20033IssueDetails[]
      */
     public function getIssueDetails()
     {
@@ -281,7 +281,7 @@ class InlineResponse20033 implements ModelInterface, ArrayAccess
     /**
      * Sets issue_details
      *
-     * @param \Swagger\Client\Model\InlineResponse20033IssueDetails[] $issue_details issue_details
+     * @param \Zoom\Api\Model\InlineResponse20033IssueDetails[] $issue_details issue_details
      *
      * @return $this
      */

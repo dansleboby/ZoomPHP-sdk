@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse20064 Class Doc Comment
  *
  * @category Class
  * @description Phone User Recordings
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -62,7 +62,7 @@ class InlineResponse20064 implements ModelInterface, ArrayAccess
         'page_size' => 'string',
         'total_records' => 'string',
         'next_page_token' => 'string',
-        'recordings' => '\Swagger\Client\Model\InlineResponse20064Recordings[]'
+        'recordings' => '\Zoom\Api\Model\InlineResponse20064Recordings[]'
     ];
 
     /**
@@ -328,7 +328,7 @@ class InlineResponse20064 implements ModelInterface, ArrayAccess
     /**
      * Gets recordings
      *
-     * @return \Swagger\Client\Model\InlineResponse20064Recordings[]
+     * @return \Zoom\Api\Model\InlineResponse20064Recordings[]
      */
     public function getRecordings()
     {
@@ -338,7 +338,7 @@ class InlineResponse20064 implements ModelInterface, ArrayAccess
     /**
      * Sets recordings
      *
-     * @param \Swagger\Client\Model\InlineResponse20064Recordings[] $recordings Recordings
+     * @param \Zoom\Api\Model\InlineResponse20064Recordings[] $recordings Recordings
      *
      * @return $this
      */

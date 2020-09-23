@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **account_user_access_recording** | **bool** | Cloud recordings are only accessible to account members. People outside of your organization cannot open links that provide access to cloud recordings. | [optional] 
 **auto_delete_cmr** | **bool** | Allow Zoom to permanantly delete recordings automatically after a specified number of days. | [optional] 
 **auto_delete_cmr_days** | **int** | When &#x60;auto_delete_cmr&#x60; function is &#39;true&#39; this value will set the number of days before the auto deletion of cloud recordings. | [optional] 
-**recording_password_requirement** | [**\Swagger\Client\Model\AccountSettingsRecordingRecordingPasswordRequirement**](AccountSettingsRecordingRecordingPasswordRequirement.md) |  | [optional] 
+**recording_password_requirement** | [**\Zoom\Api\Model\AccountSettingsRecordingRecordingPasswordRequirement**](AccountSettingsRecordingRecordingPasswordRequirement.md) |  | [optional] 
 **allow_recovery_deleted_cloud_recordings** | **bool** | Allow recovery of deleted cloud recordings from trash.  If the value of this field is set to &#x60;true&#x60;, deleted cloud recordings will be kept in trash for 30 days after deletion and can be recovered within that period. | [optional] 
 **recording_disclaimer** | **bool** | Show a disclaimer to participants before a recording starts | [optional] 
 **host_delete_cloud_recording** | **bool** | If the value of this field is set to &#x60;true&#x60;, hosts will be able to delete the recordings. If this option is set to &#x60;false&#x60;, the recordings cannot be deleted by the host and only admin can delete them. | [optional] 

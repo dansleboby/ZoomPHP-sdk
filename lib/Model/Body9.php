@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * Body9 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class Body9 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'members' => '\Swagger\Client\Model\ChatusersuserIdchannelschannelIdmembersMembers[]'
+        'members' => '\Zoom\Api\Model\ChatusersuserIdchannelschannelIdmembersMembers[]'
     ];
 
     /**
@@ -207,7 +207,7 @@ class Body9 implements ModelInterface, ArrayAccess
     /**
      * Gets members
      *
-     * @return \Swagger\Client\Model\ChatusersuserIdchannelschannelIdmembersMembers[]
+     * @return \Zoom\Api\Model\ChatusersuserIdchannelschannelIdmembersMembers[]
      */
     public function getMembers()
     {
@@ -217,7 +217,7 @@ class Body9 implements ModelInterface, ArrayAccess
     /**
      * Sets members
      *
-     * @param \Swagger\Client\Model\ChatusersuserIdchannelschannelIdmembersMembers[] $members Members of a channel. You can invite up to a max number of 5 members with a single API call.
+     * @param \Zoom\Api\Model\ChatusersuserIdchannelschannelIdmembersMembers[] $members Members of a channel. You can invite up to a max number of 5 members with a single API call.
      *
      * @return $this
      */

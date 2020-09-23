@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * Body48 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class Body48 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'calling_plans' => '\Swagger\Client\Model\PhoneusersuserIdcallingPlansCallingPlans[]'
+        'calling_plans' => '\Zoom\Api\Model\PhoneusersuserIdcallingPlansCallingPlans[]'
     ];
 
     /**
@@ -207,7 +207,7 @@ class Body48 implements ModelInterface, ArrayAccess
     /**
      * Gets calling_plans
      *
-     * @return \Swagger\Client\Model\PhoneusersuserIdcallingPlansCallingPlans[]
+     * @return \Zoom\Api\Model\PhoneusersuserIdcallingPlansCallingPlans[]
      */
     public function getCallingPlans()
     {
@@ -217,7 +217,7 @@ class Body48 implements ModelInterface, ArrayAccess
     /**
      * Sets calling_plans
      *
-     * @param \Swagger\Client\Model\PhoneusersuserIdcallingPlansCallingPlans[] $calling_plans calling_plans
+     * @param \Zoom\Api\Model\PhoneusersuserIdcallingPlansCallingPlans[] $calling_plans calling_plans
      *
      * @return $this
      */

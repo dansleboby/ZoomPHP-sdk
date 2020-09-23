@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * TSPAccountsList Class Doc Comment
  *
  * @category Class
  * @description List of TSP accounts.
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -61,7 +61,7 @@ class TSPAccountsList implements ModelInterface, ArrayAccess
         'id' => 'int',
         'conference_code' => 'string',
         'leader_pin' => 'string',
-        'dial_in_numbers' => '\Swagger\Client\Model\InlineResponse20050DialInNumbers[]',
+        'dial_in_numbers' => '\Zoom\Api\Model\InlineResponse20050DialInNumbers[]',
         'tsp_bridge' => 'string'
     ];
 
@@ -363,7 +363,7 @@ class TSPAccountsList implements ModelInterface, ArrayAccess
     /**
      * Gets dial_in_numbers
      *
-     * @return \Swagger\Client\Model\InlineResponse20050DialInNumbers[]
+     * @return \Zoom\Api\Model\InlineResponse20050DialInNumbers[]
      */
     public function getDialInNumbers()
     {
@@ -373,7 +373,7 @@ class TSPAccountsList implements ModelInterface, ArrayAccess
     /**
      * Sets dial_in_numbers
      *
-     * @param \Swagger\Client\Model\InlineResponse20050DialInNumbers[] $dial_in_numbers List of dial in numbers.
+     * @param \Zoom\Api\Model\InlineResponse20050DialInNumbers[] $dial_in_numbers List of dial in numbers.
      *
      * @return $this
      */

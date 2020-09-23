@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **page_size** | **int** | The number of records returned within a single API call. | [optional] 
 **to** | [**\DateTime**](\DateTime.md) | End date for this report in &#39;yyyy-mm-dd&#39; format. | [optional] 
 **total_records** | **int** | The number of all records available across pages. | [optional] 
-**webinars** | [**\Swagger\Client\Model\WebinarMetrics[]**](WebinarMetrics.md) | Array of webinar objects. | [optional] 
+**webinars** | [**\Zoom\Api\Model\WebinarMetrics[]**](WebinarMetrics.md) | Array of webinar objects. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

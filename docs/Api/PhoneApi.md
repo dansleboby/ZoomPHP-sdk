@@ -1,4 +1,4 @@
-# Swagger\Client\PhoneApi
+# Zoom\Api\PhoneApi
 
 All URIs are relative to *https://api.zoom.us/v2*
 
@@ -23,7 +23,7 @@ Method | HTTP request | Description
 
 
 # **accountCallLogs**
-> \Swagger\Client\Model\InlineResponse20066 accountCallLogs($page_size, $from, $to, $type, $next_page_token)
+> \Zoom\Api\Model\InlineResponse20066 accountCallLogs($page_size, $from, $to, $type, $next_page_token)
 
 Get Account's Call Logs
 
@@ -35,9 +35,9 @@ Retrieve [call logs](https://support.zoom.us/hc/en-us/articles/360021114452-View
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PhoneApi(
+$apiInstance = new Zoom\Api\Api\PhoneApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20066**](../Model/InlineResponse20066.md)
+[**\Zoom\Api\Model\InlineResponse20066**](../Model/InlineResponse20066.md)
 
 ### Authorization
 
@@ -96,16 +96,16 @@ Assign [calling plan](https://marketplace.zoom.us/docs/api-reference/other-refer
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PhoneApi(
+$apiInstance = new Zoom\Api\Api\PhoneApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $user_id = "user_id_example"; // string | 
-$body = new \Swagger\Client\Model\Body48(); // \Swagger\Client\Model\Body48 | 
+$body = new \Zoom\Api\Model\Body48(); // \Zoom\Api\Model\Body48 | 
 
 try {
     $result = $apiInstance->assignCallingPlan($user_id, $body);
@@ -121,7 +121,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **string**|  |
- **body** | [**\Swagger\Client\Model\Body48**](../Model/Body48.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\Body48**](../Model/Body48.md)|  | [optional]
 
 ### Return type
 
@@ -139,7 +139,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **assignPhoneNumber**
-> \Swagger\Client\Model\InlineResponse20067 assignPhoneNumber($user_id, $body)
+> \Zoom\Api\Model\InlineResponse20067 assignPhoneNumber($user_id, $body)
 
 Assign Phone Number to User
 
@@ -151,16 +151,16 @@ Assign a [phone number](https://support.zoom.us/hc/en-us/articles/360020808292-M
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PhoneApi(
+$apiInstance = new Zoom\Api\Api\PhoneApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $user_id = "user_id_example"; // string | 
-$body = new \Swagger\Client\Model\Body47(); // \Swagger\Client\Model\Body47 | Provide either an id or a number in the request body.
+$body = new \Zoom\Api\Model\Body47(); // \Zoom\Api\Model\Body47 | Provide either an id or a number in the request body.
 
 try {
     $result = $apiInstance->assignPhoneNumber($user_id, $body);
@@ -176,11 +176,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **string**|  |
- **body** | [**\Swagger\Client\Model\Body47**](../Model/Body47.md)| Provide either an id or a number in the request body. | [optional]
+ **body** | [**\Zoom\Api\Model\Body47**](../Model/Body47.md)| Provide either an id or a number in the request body. | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20067**](../Model/InlineResponse20067.md)
+[**\Zoom\Api\Model\InlineResponse20067**](../Model/InlineResponse20067.md)
 
 ### Authorization
 
@@ -206,15 +206,15 @@ The [main company number](https://support.zoom.us/hc/en-us/articles/360028553691
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PhoneApi(
+$apiInstance = new Zoom\Api\Api\PhoneApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\Body72(); // \Swagger\Client\Model\Body72 | 
+$body = new \Zoom\Api\Model\Body72(); // \Zoom\Api\Model\Body72 | 
 
 try {
     $result = $apiInstance->changeMainCompanyNumber($body);
@@ -229,7 +229,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body72**](../Model/Body72.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\Body72**](../Model/Body72.md)|  | [optional]
 
 ### Return type
 
@@ -247,7 +247,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPhoneNumberDetails**
-> \Swagger\Client\Model\InlineResponse20092 getPhoneNumberDetails($number_id)
+> \Zoom\Api\Model\InlineResponse20092 getPhoneNumberDetails($number_id)
 
 Get Phone Number Details
 
@@ -259,9 +259,9 @@ A Zoom account owner or admin can purchase phone numbers and assign them to Zoom
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PhoneApi(
+$apiInstance = new Zoom\Api\Api\PhoneApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -286,7 +286,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20092**](../Model/InlineResponse20092.md)
+[**\Zoom\Api\Model\InlineResponse20092**](../Model/InlineResponse20092.md)
 
 ### Authorization
 
@@ -300,7 +300,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listAccountPhoneNumbers**
-> \Swagger\Client\Model\InlineResponse200 listAccountPhoneNumbers($next_page_token, $type, $extension_type, $page_size, $number_type, $pending_numbers, $site_id)
+> \Zoom\Api\Model\InlineResponse200 listAccountPhoneNumbers($next_page_token, $type, $extension_type, $page_size, $number_type, $pending_numbers, $site_id)
 
 List Phone Numbers
 
@@ -312,9 +312,9 @@ A Zoom account owner or admin can purchase phone numbers and assign them to Zoom
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PhoneApi(
+$apiInstance = new Zoom\Api\Api\PhoneApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -351,7 +351,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200**](../Model/InlineResponse200.md)
+[**\Zoom\Api\Model\InlineResponse200**](../Model/InlineResponse200.md)
 
 ### Authorization
 
@@ -365,7 +365,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listCallingPlans**
-> \Swagger\Client\Model\InlineResponse20093 listCallingPlans()
+> \Zoom\Api\Model\InlineResponse20093 listCallingPlans()
 
 List Calling Plans
 
@@ -377,9 +377,9 @@ List all Zoom Phone [calling plans](https://marketplace.zoom.us/docs/api-referen
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PhoneApi(
+$apiInstance = new Zoom\Api\Api\PhoneApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -400,7 +400,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20093**](../Model/InlineResponse20093.md)
+[**\Zoom\Api\Model\InlineResponse20093**](../Model/InlineResponse20093.md)
 
 ### Authorization
 
@@ -414,7 +414,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listPhoneUsers**
-> \Swagger\Client\Model\InlineResponse20094 listPhoneUsers($page_size, $next_page_token, $site_id)
+> \Zoom\Api\Model\InlineResponse20094 listPhoneUsers($page_size, $next_page_token, $site_id)
 
 List Phone Users
 
@@ -426,9 +426,9 @@ List all the users on an account who have been assigned Zoom Phone licenses.<br>
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PhoneApi(
+$apiInstance = new Zoom\Api\Api\PhoneApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -457,7 +457,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20094**](../Model/InlineResponse20094.md)
+[**\Zoom\Api\Model\InlineResponse20094**](../Model/InlineResponse20094.md)
 
 ### Authorization
 
@@ -471,7 +471,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **phoneUser**
-> \Swagger\Client\Model\InlineResponse20061 phoneUser($user_id)
+> \Zoom\Api\Model\InlineResponse20061 phoneUser($user_id)
 
 Get User's Profile
 
@@ -483,9 +483,9 @@ Retrieve a user's [zoom phone](https://support.zoom.us/hc/en-us/articles/3600012
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PhoneApi(
+$apiInstance = new Zoom\Api\Api\PhoneApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -510,7 +510,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20061**](../Model/InlineResponse20061.md)
+[**\Zoom\Api\Model\InlineResponse20061**](../Model/InlineResponse20061.md)
 
 ### Authorization
 
@@ -524,7 +524,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **phoneUserCallLogs**
-> \Swagger\Client\Model\InlineResponse20063 phoneUserCallLogs($user_id, $from, $to, $page_size, $type, $next_page_token)
+> \Zoom\Api\Model\InlineResponse20063 phoneUserCallLogs($user_id, $from, $to, $page_size, $type, $next_page_token)
 
 Get User's Call Logs
 
@@ -536,9 +536,9 @@ Retrieve a [zoom phone](https://support.zoom.us/hc/en-us/articles/360001297663-Q
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PhoneApi(
+$apiInstance = new Zoom\Api\Api\PhoneApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -573,7 +573,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20063**](../Model/InlineResponse20063.md)
+[**\Zoom\Api\Model\InlineResponse20063**](../Model/InlineResponse20063.md)
 
 ### Authorization
 
@@ -587,7 +587,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **phoneUserRecordings**
-> \Swagger\Client\Model\InlineResponse20064 phoneUserRecordings($user_id, $page_size, $next_page_token)
+> \Zoom\Api\Model\InlineResponse20064 phoneUserRecordings($user_id, $page_size, $next_page_token)
 
 Get User's Recordings
 
@@ -599,9 +599,9 @@ Retrieve a user's zoom [phone recordings](https://support.zoom.us/hc/en-us/artic
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PhoneApi(
+$apiInstance = new Zoom\Api\Api\PhoneApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -630,7 +630,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20064**](../Model/InlineResponse20064.md)
+[**\Zoom\Api\Model\InlineResponse20064**](../Model/InlineResponse20064.md)
 
 ### Authorization
 
@@ -644,7 +644,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **phoneUserSettings**
-> \Swagger\Client\Model\InlineResponse20062 phoneUserSettings($user_id)
+> \Zoom\Api\Model\InlineResponse20062 phoneUserSettings($user_id)
 
 Get User's Settings
 
@@ -656,9 +656,9 @@ Retrieve a user's zoom phone profile [settings](https://support.zoom.us/hc/en-us
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PhoneApi(
+$apiInstance = new Zoom\Api\Api\PhoneApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -683,7 +683,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20062**](../Model/InlineResponse20062.md)
+[**\Zoom\Api\Model\InlineResponse20062**](../Model/InlineResponse20062.md)
 
 ### Authorization
 
@@ -697,7 +697,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **phoneUserVoiceMails**
-> \Swagger\Client\Model\InlineResponse20065 phoneUserVoiceMails($user_id, $page_size, $status, $next_page_token)
+> \Zoom\Api\Model\InlineResponse20065 phoneUserVoiceMails($user_id, $page_size, $status, $next_page_token)
 
 Get User's Voicemails
 
@@ -709,9 +709,9 @@ Retrieve a user's Zoom Phone voicemails.   **Scopes:** `phone:read`, `phone:read
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PhoneApi(
+$apiInstance = new Zoom\Api\Api\PhoneApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -742,7 +742,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20065**](../Model/InlineResponse20065.md)
+[**\Zoom\Api\Model\InlineResponse20065**](../Model/InlineResponse20065.md)
 
 ### Authorization
 
@@ -768,9 +768,9 @@ Unassign a [calling plan](https://marketplace.zoom.us/docs/api-reference/other-r
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PhoneApi(
+$apiInstance = new Zoom\Api\Api\PhoneApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -823,9 +823,9 @@ Unassign [phone number](https://support.zoom.us/hc/en-us/articles/360020808292-M
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PhoneApi(
+$apiInstance = new Zoom\Api\Api\PhoneApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -878,16 +878,16 @@ Update a [Zoom Phone](https://support.zoom.us/hc/en-us/categories/360001370051-Z
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PhoneApi(
+$apiInstance = new Zoom\Api\Api\PhoneApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $user_id = "user_id_example"; // string | 
-$body = new \Swagger\Client\Model\Body46(); // \Swagger\Client\Model\Body46 | 
+$body = new \Zoom\Api\Model\Body46(); // \Zoom\Api\Model\Body46 | 
 
 try {
     $result = $apiInstance->updateUserProfile($user_id, $body);
@@ -903,7 +903,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **string**|  |
- **body** | [**\Swagger\Client\Model\Body46**](../Model/Body46.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\Body46**](../Model/Body46.md)|  | [optional]
 
 ### Return type
 

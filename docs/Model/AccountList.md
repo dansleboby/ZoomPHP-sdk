@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**accounts** | [**\Swagger\Client\Model\AccountListAccounts[]**](AccountListAccounts.md) | List of Account objects. | [optional] 
+**accounts** | [**\Zoom\Api\Model\AccountListAccounts[]**](AccountListAccounts.md) | List of Account objects. | [optional] 
 **next_page_token** | **string** | The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. | [optional] 
 **page_count** | **int** | The number of pages returned for the request made. | [optional] 
 **page_number** | **int** | **Deprecated**: This field has been deprecated. Please use the \&quot;next_page_token\&quot; field for pagination instead of this field.  The page number of the current results. | [optional] 

@@ -1,4 +1,4 @@
-# Swagger\Client\BillingApi
+# Zoom\Api\BillingApi
 
 All URIs are relative to *https://api.zoom.us/v2*
 
@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 
 # **accountBilling**
-> \Swagger\Client\Model\InlineResponse20014 accountBilling($account_id)
+> \Zoom\Api\Model\InlineResponse20014 accountBilling($account_id)
 
 Get Billing Information
 
@@ -29,9 +29,9 @@ Get [billing information](https://support.zoom.us/hc/en-us/articles/201363263-Ab
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\BillingApi(
+$apiInstance = new Zoom\Api\Api\BillingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -56,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20014**](../Model/InlineResponse20014.md)
+[**\Zoom\Api\Model\InlineResponse20014**](../Model/InlineResponse20014.md)
 
 ### Authorization
 
@@ -82,16 +82,16 @@ Update [billing information](https://support.zoom.us/hc/en-us/articles/201363263
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\BillingApi(
+$apiInstance = new Zoom\Api\Api\BillingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $account_id = "account_id_example"; // string | The account ID.
-$body = new \Swagger\Client\Model\Body13(); // \Swagger\Client\Model\Body13 | 
+$body = new \Zoom\Api\Model\Body13(); // \Zoom\Api\Model\Body13 | 
 
 try {
     $apiInstance->accountBillingUpdate($account_id, $body);
@@ -106,7 +106,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **account_id** | **string**| The account ID. |
- **body** | [**\Swagger\Client\Model\Body13**](../Model/Body13.md)|  |
+ **body** | [**\Zoom\Api\Model\Body13**](../Model/Body13.md)|  |
 
 ### Return type
 
@@ -136,16 +136,16 @@ Cancel  Additional Plans
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\BillingApi(
+$apiInstance = new Zoom\Api\Api\BillingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $account_id = "account_id_example"; // string | 
-$body = new \Swagger\Client\Model\Body50(); // \Swagger\Client\Model\Body50 | 
+$body = new \Zoom\Api\Model\Body50(); // \Zoom\Api\Model\Body50 | 
 
 try {
     $apiInstance->accountPlanAddonCancel($account_id, $body);
@@ -160,7 +160,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **account_id** | **string**|  |
- **body** | [**\Swagger\Client\Model\Body50**](../Model/Body50.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\Body50**](../Model/Body50.md)|  | [optional]
 
 ### Return type
 
@@ -190,9 +190,9 @@ Add an additional plan for a Sub Account. <br> <aside> Only a Master Account can
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\BillingApi(
+$apiInstance = new Zoom\Api\Api\BillingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -244,16 +244,16 @@ Update an additional plan for a sub account.<br><br> <aside> Only a Master Accou
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\BillingApi(
+$apiInstance = new Zoom\Api\Api\BillingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $account_id = "account_id_example"; // string | The account ID.
-$body = new \Swagger\Client\Model\Body15(); // \Swagger\Client\Model\Body15 | 
+$body = new \Zoom\Api\Model\Body15(); // \Zoom\Api\Model\Body15 | 
 
 try {
     $apiInstance->accountPlanAddonUpdate($account_id, $body);
@@ -268,7 +268,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **account_id** | **string**| The account ID. |
- **body** | [**\Swagger\Client\Model\Body15**](../Model/Body15.md)|  |
+ **body** | [**\Zoom\Api\Model\Body15**](../Model/Body15.md)|  |
 
 ### Return type
 
@@ -298,16 +298,16 @@ Cancel Base Plan
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\BillingApi(
+$apiInstance = new Zoom\Api\Api\BillingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $account_id = "account_id_example"; // string | 
-$body = new \Swagger\Client\Model\Body49(); // \Swagger\Client\Model\Body49 | 
+$body = new \Zoom\Api\Model\Body49(); // \Zoom\Api\Model\Body49 | 
 
 try {
     $apiInstance->accountPlanBaseDelete($account_id, $body);
@@ -322,7 +322,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **account_id** | **string**|  |
- **body** | [**\Swagger\Client\Model\Body49**](../Model/Body49.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\Body49**](../Model/Body49.md)|  | [optional]
 
 ### Return type
 
@@ -352,16 +352,16 @@ Update a base plan of a Sub Account. <aside> <aside> Only a Master Account can u
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\BillingApi(
+$apiInstance = new Zoom\Api\Api\BillingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $account_id = "account_id_example"; // string | The account ID.
-$body = new \Swagger\Client\Model\Body14(); // \Swagger\Client\Model\Body14 | 
+$body = new \Zoom\Api\Model\Body14(); // \Zoom\Api\Model\Body14 | 
 
 try {
     $apiInstance->accountPlanBaseUpdate($account_id, $body);
@@ -376,7 +376,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **account_id** | **string**| The account ID. |
- **body** | [**\Swagger\Client\Model\Body14**](../Model/Body14.md)|  |
+ **body** | [**\Zoom\Api\Model\Body14**](../Model/Body14.md)|  |
 
 ### Return type
 
@@ -406,9 +406,9 @@ Subscribe plans for a Sub Account under a Master Account. <aside> The plans can 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\BillingApi(
+$apiInstance = new Zoom\Api\Api\BillingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -449,7 +449,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **accountPlans**
-> \Swagger\Client\Model\InlineResponse20015 accountPlans($account_id)
+> \Zoom\Api\Model\InlineResponse20015 accountPlans($account_id)
 
 Get Plan Information
 
@@ -461,9 +461,9 @@ Get plan information for a Sub Account under the Master account.  <aside> This A
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\BillingApi(
+$apiInstance = new Zoom\Api\Api\BillingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -488,7 +488,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20015**](../Model/InlineResponse20015.md)
+[**\Zoom\Api\Model\InlineResponse20015**](../Model/InlineResponse20015.md)
 
 ### Authorization
 
@@ -502,7 +502,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPlanUsage**
-> \Swagger\Client\Model\InlineResponse20072 getPlanUsage($account_id)
+> \Zoom\Api\Model\InlineResponse20072 getPlanUsage($account_id)
 
 Get Plan Usage
 
@@ -514,9 +514,9 @@ Get information on usage of [plans](https://marketplace.zoom.us/docs/api-referen
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\BillingApi(
+$apiInstance = new Zoom\Api\Api\BillingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -541,7 +541,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20072**](../Model/InlineResponse20072.md)
+[**\Zoom\Api\Model\InlineResponse20072**](../Model/InlineResponse20072.md)
 
 ### Authorization
 

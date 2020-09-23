@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * Poll Class Doc Comment
  *
  * @category Class
  * @description Poll
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,7 +59,7 @@ class Poll implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'title' => 'string',
-        'questions' => '\Swagger\Client\Model\InlineResponse20113Questions[]'
+        'questions' => '\Zoom\Api\Model\InlineResponse20113Questions[]'
     ];
 
     /**
@@ -238,7 +238,7 @@ class Poll implements ModelInterface, ArrayAccess
     /**
      * Gets questions
      *
-     * @return \Swagger\Client\Model\InlineResponse20113Questions[]
+     * @return \Zoom\Api\Model\InlineResponse20113Questions[]
      */
     public function getQuestions()
     {
@@ -248,7 +248,7 @@ class Poll implements ModelInterface, ArrayAccess
     /**
      * Sets questions
      *
-     * @param \Swagger\Client\Model\InlineResponse20113Questions[] $questions Array of Polls
+     * @param \Zoom\Api\Model\InlineResponse20113Questions[] $questions Array of Polls
      *
      * @return $this
      */

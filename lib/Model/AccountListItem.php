@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * AccountListItem Class Doc Comment
  *
  * @category Class
  * @description Account object in the account list.
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,7 +58,7 @@ class AccountListItem implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'accounts' => '\Swagger\Client\Model\AccountListAccounts[]'
+        'accounts' => '\Zoom\Api\Model\AccountListAccounts[]'
     ];
 
     /**
@@ -208,7 +208,7 @@ class AccountListItem implements ModelInterface, ArrayAccess
     /**
      * Gets accounts
      *
-     * @return \Swagger\Client\Model\AccountListAccounts[]
+     * @return \Zoom\Api\Model\AccountListAccounts[]
      */
     public function getAccounts()
     {
@@ -218,7 +218,7 @@ class AccountListItem implements ModelInterface, ArrayAccess
     /**
      * Sets accounts
      *
-     * @param \Swagger\Client\Model\AccountListAccounts[] $accounts List of Account objects.
+     * @param \Zoom\Api\Model\AccountListAccounts[] $accounts List of Account objects.
      *
      * @return $this
      */

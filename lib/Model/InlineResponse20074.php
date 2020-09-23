@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse20074 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,7 +58,7 @@ class InlineResponse20074 implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'total_records' => 'int',
-        'tracking_sources' => '\Swagger\Client\Model\InlineResponse20074TrackingSources[]'
+        'tracking_sources' => '\Zoom\Api\Model\InlineResponse20074TrackingSources[]'
     ];
 
     /**
@@ -237,7 +237,7 @@ class InlineResponse20074 implements ModelInterface, ArrayAccess
     /**
      * Gets tracking_sources
      *
-     * @return \Swagger\Client\Model\InlineResponse20074TrackingSources[]
+     * @return \Zoom\Api\Model\InlineResponse20074TrackingSources[]
      */
     public function getTrackingSources()
     {
@@ -247,7 +247,7 @@ class InlineResponse20074 implements ModelInterface, ArrayAccess
     /**
      * Sets tracking_sources
      *
-     * @param \Swagger\Client\Model\InlineResponse20074TrackingSources[] $tracking_sources Tracking Sources object.
+     * @param \Zoom\Api\Model\InlineResponse20074TrackingSources[] $tracking_sources Tracking Sources object.
      *
      * @return $this
      */

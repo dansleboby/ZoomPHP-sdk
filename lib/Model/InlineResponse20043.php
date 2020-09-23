@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse20043 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -62,7 +62,7 @@ class InlineResponse20043 implements ModelInterface, ArrayAccess
         'page_count' => 'int',
         'page_number' => 'int',
         'page_size' => 'int',
-        'telephony_usage' => '\Swagger\Client\Model\InlineResponse20043TelephonyUsage[]',
+        'telephony_usage' => '\Zoom\Api\Model\InlineResponse20043TelephonyUsage[]',
         'to' => '\DateTime',
         'total_records' => 'int'
     ];
@@ -378,7 +378,7 @@ class InlineResponse20043 implements ModelInterface, ArrayAccess
     /**
      * Gets telephony_usage
      *
-     * @return \Swagger\Client\Model\InlineResponse20043TelephonyUsage[]
+     * @return \Zoom\Api\Model\InlineResponse20043TelephonyUsage[]
      */
     public function getTelephonyUsage()
     {
@@ -388,7 +388,7 @@ class InlineResponse20043 implements ModelInterface, ArrayAccess
     /**
      * Sets telephony_usage
      *
-     * @param \Swagger\Client\Model\InlineResponse20043TelephonyUsage[] $telephony_usage Array of telephony objects.
+     * @param \Zoom\Api\Model\InlineResponse20043TelephonyUsage[] $telephony_usage Array of telephony objects.
      *
      * @return $this
      */

@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Zoom\Api\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Zoom\Api\ApiException;
+use Zoom\Api\Configuration;
+use Zoom\Api\HeaderSelector;
+use Zoom\Api\ObjectSerializer;
 
 /**
  * MeetingsApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -93,9 +93,9 @@ class MeetingsApi
      * Use In-Meeting Recording Controls
      *
      * @param  string $meeting_id Unique identifier of the live meeting. (required)
-     * @param  \Swagger\Client\Model\Body84 $body body (optional)
+     * @param  \Zoom\Api\Model\Body84 $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -111,9 +111,9 @@ class MeetingsApi
      * Use In-Meeting Recording Controls
      *
      * @param  string $meeting_id Unique identifier of the live meeting. (required)
-     * @param  \Swagger\Client\Model\Body84 $body (optional)
+     * @param  \Zoom\Api\Model\Body84 $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -187,7 +187,7 @@ class MeetingsApi
      * Use In-Meeting Recording Controls
      *
      * @param  string $meeting_id Unique identifier of the live meeting. (required)
-     * @param  \Swagger\Client\Model\Body84 $body (optional)
+     * @param  \Zoom\Api\Model\Body84 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -208,7 +208,7 @@ class MeetingsApi
      * Use In-Meeting Recording Controls
      *
      * @param  string $meeting_id Unique identifier of the live meeting. (required)
-     * @param  \Swagger\Client\Model\Body84 $body (optional)
+     * @param  \Zoom\Api\Model\Body84 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -259,7 +259,7 @@ class MeetingsApi
      * Create request for operation 'inMeetingRecordingControl'
      *
      * @param  string $meeting_id Unique identifier of the live meeting. (required)
-     * @param  \Swagger\Client\Model\Body84 $body (optional)
+     * @param  \Zoom\Api\Model\Body84 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -375,9 +375,9 @@ class MeetingsApi
      *
      * @param  string $meeting_id The meeting ID or meeting UUID. If   meeting ID is provided, it will take the last meeting instance. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20083
+     * @return \Zoom\Api\Model\InlineResponse20083
      */
     public function listPastMeetingPolls($meeting_id)
     {
@@ -392,13 +392,13 @@ class MeetingsApi
      *
      * @param  string $meeting_id The meeting ID or meeting UUID. If   meeting ID is provided, it will take the last meeting instance. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20083, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20083, HTTP status code, HTTP response headers (array of strings)
      */
     public function listPastMeetingPollsWithHttpInfo($meeting_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20083';
+        $returnType = '\Zoom\Api\Model\InlineResponse20083';
         $request = $this->listPastMeetingPollsRequest($meeting_id);
 
         try {
@@ -450,7 +450,7 @@ class MeetingsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20083',
+                        '\Zoom\Api\Model\InlineResponse20083',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -492,7 +492,7 @@ class MeetingsApi
      */
     public function listPastMeetingPollsAsyncWithHttpInfo($meeting_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20083';
+        $returnType = '\Zoom\Api\Model\InlineResponse20083';
         $request = $this->listPastMeetingPollsRequest($meeting_id);
 
         return $this->client
@@ -650,9 +650,9 @@ class MeetingsApi
      * @param  string $occurrence_id Meeting Occurrence ID. Provide this field to view meeting details of a particular occurrence of the [recurring meeting](https://support.zoom.us/hc/en-us/articles/214973206-Scheduling-Recurring-Meetings). (optional)
      * @param  bool $show_previous_occurrences Set the value of this field to &#x60;true&#x60; if you would like to view meeting details of all previous occurrences of a [recurring meeting](https://support.zoom.us/hc/en-us/articles/214973206-Scheduling-Recurring-Meetings). (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20022
+     * @return \Zoom\Api\Model\InlineResponse20022
      */
     public function meeting($meeting_id, $occurrence_id = null, $show_previous_occurrences = null)
     {
@@ -669,13 +669,13 @@ class MeetingsApi
      * @param  string $occurrence_id Meeting Occurrence ID. Provide this field to view meeting details of a particular occurrence of the [recurring meeting](https://support.zoom.us/hc/en-us/articles/214973206-Scheduling-Recurring-Meetings). (optional)
      * @param  bool $show_previous_occurrences Set the value of this field to &#x60;true&#x60; if you would like to view meeting details of all previous occurrences of a [recurring meeting](https://support.zoom.us/hc/en-us/articles/214973206-Scheduling-Recurring-Meetings). (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20022, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20022, HTTP status code, HTTP response headers (array of strings)
      */
     public function meetingWithHttpInfo($meeting_id, $occurrence_id = null, $show_previous_occurrences = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20022';
+        $returnType = '\Zoom\Api\Model\InlineResponse20022';
         $request = $this->meetingRequest($meeting_id, $occurrence_id, $show_previous_occurrences);
 
         try {
@@ -727,7 +727,7 @@ class MeetingsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20022',
+                        '\Zoom\Api\Model\InlineResponse20022',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -773,7 +773,7 @@ class MeetingsApi
      */
     public function meetingAsyncWithHttpInfo($meeting_id, $occurrence_id = null, $show_previous_occurrences = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20022';
+        $returnType = '\Zoom\Api\Model\InlineResponse20022';
         $request = $this->meetingRequest($meeting_id, $occurrence_id, $show_previous_occurrences);
 
         return $this->client
@@ -938,11 +938,11 @@ class MeetingsApi
      * Create a Meeting
      *
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
-     * @param  \Swagger\Client\Model\Body23 $body Meeting object. (required)
+     * @param  \Zoom\Api\Model\Body23 $body Meeting object. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20111
+     * @return \Zoom\Api\Model\InlineResponse20111
      */
     public function meetingCreate($user_id, $body)
     {
@@ -956,15 +956,15 @@ class MeetingsApi
      * Create a Meeting
      *
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
-     * @param  \Swagger\Client\Model\Body23 $body Meeting object. (required)
+     * @param  \Zoom\Api\Model\Body23 $body Meeting object. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20111, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20111, HTTP status code, HTTP response headers (array of strings)
      */
     public function meetingCreateWithHttpInfo($user_id, $body)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20111';
+        $returnType = '\Zoom\Api\Model\InlineResponse20111';
         $request = $this->meetingCreateRequest($user_id, $body);
 
         try {
@@ -1016,7 +1016,7 @@ class MeetingsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20111',
+                        '\Zoom\Api\Model\InlineResponse20111',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1032,7 +1032,7 @@ class MeetingsApi
      * Create a Meeting
      *
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
-     * @param  \Swagger\Client\Model\Body23 $body Meeting object. (required)
+     * @param  \Zoom\Api\Model\Body23 $body Meeting object. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1053,14 +1053,14 @@ class MeetingsApi
      * Create a Meeting
      *
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
-     * @param  \Swagger\Client\Model\Body23 $body Meeting object. (required)
+     * @param  \Zoom\Api\Model\Body23 $body Meeting object. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function meetingCreateAsyncWithHttpInfo($user_id, $body)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20111';
+        $returnType = '\Zoom\Api\Model\InlineResponse20111';
         $request = $this->meetingCreateRequest($user_id, $body);
 
         return $this->client
@@ -1104,7 +1104,7 @@ class MeetingsApi
      * Create request for operation 'meetingCreate'
      *
      * @param  string $user_id The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. (required)
-     * @param  \Swagger\Client\Model\Body23 $body Meeting object. (required)
+     * @param  \Zoom\Api\Model\Body23 $body Meeting object. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1228,7 +1228,7 @@ class MeetingsApi
      * @param  string $occurrence_id The meeting occurrence ID. (optional)
      * @param  bool $schedule_for_reminder &#x60;true&#x60;: Notify host and alternative host about the meeting cancellation via email. &#x60;false&#x60;: Do not send any email notification. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1246,7 +1246,7 @@ class MeetingsApi
      * @param  string $occurrence_id The meeting occurrence ID. (optional)
      * @param  bool $schedule_for_reminder &#x60;true&#x60;: Notify host and alternative host about the meeting cancellation via email. &#x60;false&#x60;: Do not send any email notification. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1480,9 +1480,9 @@ class MeetingsApi
      *
      * @param  int $meeting_id The meeting ID in **long** format. The data type of this field is \&quot;long\&quot;(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\MeetingInvitation
+     * @return \Zoom\Api\Model\MeetingInvitation
      */
     public function meetingInvitation($meeting_id)
     {
@@ -1497,13 +1497,13 @@ class MeetingsApi
      *
      * @param  int $meeting_id The meeting ID in **long** format. The data type of this field is \&quot;long\&quot;(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\MeetingInvitation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\MeetingInvitation, HTTP status code, HTTP response headers (array of strings)
      */
     public function meetingInvitationWithHttpInfo($meeting_id)
     {
-        $returnType = '\Swagger\Client\Model\MeetingInvitation';
+        $returnType = '\Zoom\Api\Model\MeetingInvitation';
         $request = $this->meetingInvitationRequest($meeting_id);
 
         try {
@@ -1555,7 +1555,7 @@ class MeetingsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\MeetingInvitation',
+                        '\Zoom\Api\Model\MeetingInvitation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1597,7 +1597,7 @@ class MeetingsApi
      */
     public function meetingInvitationAsyncWithHttpInfo($meeting_id)
     {
-        $returnType = '\Swagger\Client\Model\MeetingInvitation';
+        $returnType = '\Zoom\Api\Model\MeetingInvitation';
         $request = $this->meetingInvitationRequest($meeting_id);
 
         return $this->client
@@ -1752,9 +1752,9 @@ class MeetingsApi
      * Update Live Stream Status
      *
      * @param  int $meeting_id The meeting ID in **long** format. The data type of this field is \&quot;long\&quot;(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits. (required)
-     * @param  \Swagger\Client\Model\Body44 $body Meeting (required)
+     * @param  \Zoom\Api\Model\Body44 $body Meeting (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1769,9 +1769,9 @@ class MeetingsApi
      * Update Live Stream Status
      *
      * @param  int $meeting_id The meeting ID in **long** format. The data type of this field is \&quot;long\&quot;(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits. (required)
-     * @param  \Swagger\Client\Model\Body44 $body Meeting (required)
+     * @param  \Zoom\Api\Model\Body44 $body Meeting (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1823,7 +1823,7 @@ class MeetingsApi
      * Update Live Stream Status
      *
      * @param  int $meeting_id The meeting ID in **long** format. The data type of this field is \&quot;long\&quot;(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits. (required)
-     * @param  \Swagger\Client\Model\Body44 $body Meeting (required)
+     * @param  \Zoom\Api\Model\Body44 $body Meeting (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1844,7 +1844,7 @@ class MeetingsApi
      * Update Live Stream Status
      *
      * @param  int $meeting_id The meeting ID in **long** format. The data type of this field is \&quot;long\&quot;(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits. (required)
-     * @param  \Swagger\Client\Model\Body44 $body Meeting (required)
+     * @param  \Zoom\Api\Model\Body44 $body Meeting (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1881,7 +1881,7 @@ class MeetingsApi
      * Create request for operation 'meetingLiveStreamStatusUpdate'
      *
      * @param  int $meeting_id The meeting ID in **long** format. The data type of this field is \&quot;long\&quot;(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits. (required)
-     * @param  \Swagger\Client\Model\Body44 $body Meeting (required)
+     * @param  \Zoom\Api\Model\Body44 $body Meeting (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2002,9 +2002,9 @@ class MeetingsApi
      * Update Live Stream
      *
      * @param  int $meeting_id The meeting ID in **long** format. The data type of this field is \&quot;long\&quot;(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits. (required)
-     * @param  \Swagger\Client\Model\Body43 $body Meeting (required)
+     * @param  \Zoom\Api\Model\Body43 $body Meeting (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2019,9 +2019,9 @@ class MeetingsApi
      * Update Live Stream
      *
      * @param  int $meeting_id The meeting ID in **long** format. The data type of this field is \&quot;long\&quot;(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits. (required)
-     * @param  \Swagger\Client\Model\Body43 $body Meeting (required)
+     * @param  \Zoom\Api\Model\Body43 $body Meeting (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2073,7 +2073,7 @@ class MeetingsApi
      * Update Live Stream
      *
      * @param  int $meeting_id The meeting ID in **long** format. The data type of this field is \&quot;long\&quot;(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits. (required)
-     * @param  \Swagger\Client\Model\Body43 $body Meeting (required)
+     * @param  \Zoom\Api\Model\Body43 $body Meeting (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2094,7 +2094,7 @@ class MeetingsApi
      * Update Live Stream
      *
      * @param  int $meeting_id The meeting ID in **long** format. The data type of this field is \&quot;long\&quot;(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits. (required)
-     * @param  \Swagger\Client\Model\Body43 $body Meeting (required)
+     * @param  \Zoom\Api\Model\Body43 $body Meeting (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2131,7 +2131,7 @@ class MeetingsApi
      * Create request for operation 'meetingLiveStreamUpdate'
      *
      * @param  int $meeting_id The meeting ID in **long** format. The data type of this field is \&quot;long\&quot;(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits. (required)
-     * @param  \Swagger\Client\Model\Body43 $body Meeting (required)
+     * @param  \Zoom\Api\Model\Body43 $body Meeting (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2254,9 +2254,9 @@ class MeetingsApi
      * @param  int $meeting_id The meeting ID in **long** format. The data type of this field is \&quot;long\&quot;(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits. (required)
      * @param  object $body Meeting poll object (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20113
+     * @return \Zoom\Api\Model\InlineResponse20113
      */
     public function meetingPollCreate($meeting_id, $body)
     {
@@ -2272,13 +2272,13 @@ class MeetingsApi
      * @param  int $meeting_id The meeting ID in **long** format. The data type of this field is \&quot;long\&quot;(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits. (required)
      * @param  object $body Meeting poll object (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20113, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20113, HTTP status code, HTTP response headers (array of strings)
      */
     public function meetingPollCreateWithHttpInfo($meeting_id, $body)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20113';
+        $returnType = '\Zoom\Api\Model\InlineResponse20113';
         $request = $this->meetingPollCreateRequest($meeting_id, $body);
 
         try {
@@ -2330,7 +2330,7 @@ class MeetingsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20113',
+                        '\Zoom\Api\Model\InlineResponse20113',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2374,7 +2374,7 @@ class MeetingsApi
      */
     public function meetingPollCreateAsyncWithHttpInfo($meeting_id, $body)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20113';
+        $returnType = '\Zoom\Api\Model\InlineResponse20113';
         $request = $this->meetingPollCreateRequest($meeting_id, $body);
 
         return $this->client
@@ -2541,7 +2541,7 @@ class MeetingsApi
      * @param  int $meeting_id The meeting ID in **long** format. The data type of this field is \&quot;long\&quot;(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits. (required)
      * @param  string $poll_id The poll ID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2558,7 +2558,7 @@ class MeetingsApi
      * @param  int $meeting_id The meeting ID in **long** format. The data type of this field is \&quot;long\&quot;(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits. (required)
      * @param  string $poll_id The poll ID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2796,9 +2796,9 @@ class MeetingsApi
      * @param  int $meeting_id The meeting ID in **long** format. The data type of this field is \&quot;long\&quot;(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits. (required)
      * @param  string $poll_id The poll ID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20113
+     * @return \Zoom\Api\Model\InlineResponse20113
      */
     public function meetingPollGet($meeting_id, $poll_id)
     {
@@ -2814,13 +2814,13 @@ class MeetingsApi
      * @param  int $meeting_id The meeting ID in **long** format. The data type of this field is \&quot;long\&quot;(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits. (required)
      * @param  string $poll_id The poll ID (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20113, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20113, HTTP status code, HTTP response headers (array of strings)
      */
     public function meetingPollGetWithHttpInfo($meeting_id, $poll_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20113';
+        $returnType = '\Zoom\Api\Model\InlineResponse20113';
         $request = $this->meetingPollGetRequest($meeting_id, $poll_id);
 
         try {
@@ -2872,7 +2872,7 @@ class MeetingsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20113',
+                        '\Zoom\Api\Model\InlineResponse20113',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2916,7 +2916,7 @@ class MeetingsApi
      */
     public function meetingPollGetAsyncWithHttpInfo($meeting_id, $poll_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20113';
+        $returnType = '\Zoom\Api\Model\InlineResponse20113';
         $request = $this->meetingPollGetRequest($meeting_id, $poll_id);
 
         return $this->client
@@ -3089,7 +3089,7 @@ class MeetingsApi
      * @param  string $poll_id The poll ID (required)
      * @param  object $body Meeting Poll (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -3107,7 +3107,7 @@ class MeetingsApi
      * @param  string $poll_id The poll ID (required)
      * @param  object $body Meeting Poll (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3356,7 +3356,7 @@ class MeetingsApi
      *
      * @param  int $meeting_id The meeting ID in **long** format. The data type of this field is \&quot;long\&quot;(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -3373,7 +3373,7 @@ class MeetingsApi
      *
      * @param  int $meeting_id The meeting ID in **long** format. The data type of this field is \&quot;long\&quot;(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3631,9 +3631,9 @@ class MeetingsApi
      * @param  object $body body (required)
      * @param  string $occurrence_ids Occurrence IDs. You can find these with the meeting get API. Multiple values separated by comma. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20112
+     * @return \Zoom\Api\Model\InlineResponse20112
      */
     public function meetingRegistrantCreate($meeting_id, $body, $occurrence_ids = null)
     {
@@ -3650,13 +3650,13 @@ class MeetingsApi
      * @param  object $body (required)
      * @param  string $occurrence_ids Occurrence IDs. You can find these with the meeting get API. Multiple values separated by comma. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20112, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20112, HTTP status code, HTTP response headers (array of strings)
      */
     public function meetingRegistrantCreateWithHttpInfo($meeting_id, $body, $occurrence_ids = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20112';
+        $returnType = '\Zoom\Api\Model\InlineResponse20112';
         $request = $this->meetingRegistrantCreateRequest($meeting_id, $body, $occurrence_ids);
 
         try {
@@ -3708,7 +3708,7 @@ class MeetingsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20112',
+                        '\Zoom\Api\Model\InlineResponse20112',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3754,7 +3754,7 @@ class MeetingsApi
      */
     public function meetingRegistrantCreateAsyncWithHttpInfo($meeting_id, $body, $occurrence_ids = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20112';
+        $returnType = '\Zoom\Api\Model\InlineResponse20112';
         $request = $this->meetingRegistrantCreateRequest($meeting_id, $body, $occurrence_ids);
 
         return $this->client
@@ -3926,7 +3926,7 @@ class MeetingsApi
      * @param  int $meeting_id The meeting ID in **long** format. The data type of this field is \&quot;long\&quot;(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits. (required)
      * @param  object $body Meeting Registrant Questions (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -3943,7 +3943,7 @@ class MeetingsApi
      * @param  int $meeting_id The meeting ID in **long** format. The data type of this field is \&quot;long\&quot;(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits. (required)
      * @param  object $body Meeting Registrant Questions (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4174,10 +4174,10 @@ class MeetingsApi
      * Update Meeting Registrant Status
      *
      * @param  int $meeting_id The meeting ID in **long** format. The data type of this field is \&quot;long\&quot;(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits. (required)
-     * @param  \Swagger\Client\Model\Body25 $body body (required)
+     * @param  \Zoom\Api\Model\Body25 $body body (required)
      * @param  string $occurrence_id The meeting occurrence ID. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -4192,10 +4192,10 @@ class MeetingsApi
      * Update Meeting Registrant Status
      *
      * @param  int $meeting_id The meeting ID in **long** format. The data type of this field is \&quot;long\&quot;(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits. (required)
-     * @param  \Swagger\Client\Model\Body25 $body (required)
+     * @param  \Zoom\Api\Model\Body25 $body (required)
      * @param  string $occurrence_id The meeting occurrence ID. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4247,7 +4247,7 @@ class MeetingsApi
      * Update Meeting Registrant Status
      *
      * @param  int $meeting_id The meeting ID in **long** format. The data type of this field is \&quot;long\&quot;(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits. (required)
-     * @param  \Swagger\Client\Model\Body25 $body (required)
+     * @param  \Zoom\Api\Model\Body25 $body (required)
      * @param  string $occurrence_id The meeting occurrence ID. (optional)
      *
      * @throws \InvalidArgumentException
@@ -4269,7 +4269,7 @@ class MeetingsApi
      * Update Meeting Registrant Status
      *
      * @param  int $meeting_id The meeting ID in **long** format. The data type of this field is \&quot;long\&quot;(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits. (required)
-     * @param  \Swagger\Client\Model\Body25 $body (required)
+     * @param  \Zoom\Api\Model\Body25 $body (required)
      * @param  string $occurrence_id The meeting occurrence ID. (optional)
      *
      * @throws \InvalidArgumentException
@@ -4307,7 +4307,7 @@ class MeetingsApi
      * Create request for operation 'meetingRegistrantStatus'
      *
      * @param  int $meeting_id The meeting ID in **long** format. The data type of this field is \&quot;long\&quot;(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits. (required)
-     * @param  \Swagger\Client\Model\Body25 $body (required)
+     * @param  \Zoom\Api\Model\Body25 $body (required)
      * @param  string $occurrence_id The meeting occurrence ID. (optional)
      *
      * @throws \InvalidArgumentException
@@ -4439,9 +4439,9 @@ class MeetingsApi
      * @param  int $page_number **Deprecated** - This field has been deprecated and we will stop supporting it completely in a future release. Please use \&quot;next_page_token\&quot; for pagination instead of this field.  The page number of the current page in the returned records. (optional, default to 1)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\RegistrationList
+     * @return \Zoom\Api\Model\RegistrationList
      */
     public function meetingRegistrants($meeting_id, $occurrence_id = null, $status = 'approved', $page_size = '30', $page_number = '1', $next_page_token = null)
     {
@@ -4461,13 +4461,13 @@ class MeetingsApi
      * @param  int $page_number **Deprecated** - This field has been deprecated and we will stop supporting it completely in a future release. Please use \&quot;next_page_token\&quot; for pagination instead of this field.  The page number of the current page in the returned records. (optional, default to 1)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\RegistrationList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\RegistrationList, HTTP status code, HTTP response headers (array of strings)
      */
     public function meetingRegistrantsWithHttpInfo($meeting_id, $occurrence_id = null, $status = 'approved', $page_size = '30', $page_number = '1', $next_page_token = null)
     {
-        $returnType = '\Swagger\Client\Model\RegistrationList';
+        $returnType = '\Zoom\Api\Model\RegistrationList';
         $request = $this->meetingRegistrantsRequest($meeting_id, $occurrence_id, $status, $page_size, $page_number, $next_page_token);
 
         try {
@@ -4519,7 +4519,7 @@ class MeetingsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\RegistrationList',
+                        '\Zoom\Api\Model\RegistrationList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4571,7 +4571,7 @@ class MeetingsApi
      */
     public function meetingRegistrantsAsyncWithHttpInfo($meeting_id, $occurrence_id = null, $status = 'approved', $page_size = '30', $page_number = '1', $next_page_token = null)
     {
-        $returnType = '\Swagger\Client\Model\RegistrationList';
+        $returnType = '\Zoom\Api\Model\RegistrationList';
         $request = $this->meetingRegistrantsRequest($meeting_id, $occurrence_id, $status, $page_size, $page_number, $next_page_token);
 
         return $this->client
@@ -4756,9 +4756,9 @@ class MeetingsApi
      *
      * @param  int $meeting_id The meeting ID in **long** format. The data type of this field is \&quot;long\&quot;(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20025
+     * @return \Zoom\Api\Model\InlineResponse20025
      */
     public function meetingRegistrantsQuestionsGet($meeting_id)
     {
@@ -4773,13 +4773,13 @@ class MeetingsApi
      *
      * @param  int $meeting_id The meeting ID in **long** format. The data type of this field is \&quot;long\&quot;(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20025, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20025, HTTP status code, HTTP response headers (array of strings)
      */
     public function meetingRegistrantsQuestionsGetWithHttpInfo($meeting_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20025';
+        $returnType = '\Zoom\Api\Model\InlineResponse20025';
         $request = $this->meetingRegistrantsQuestionsGetRequest($meeting_id);
 
         try {
@@ -4831,7 +4831,7 @@ class MeetingsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20025',
+                        '\Zoom\Api\Model\InlineResponse20025',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4873,7 +4873,7 @@ class MeetingsApi
      */
     public function meetingRegistrantsQuestionsGetAsyncWithHttpInfo($meeting_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20025';
+        $returnType = '\Zoom\Api\Model\InlineResponse20025';
         $request = $this->meetingRegistrantsQuestionsGetRequest($meeting_id);
 
         return $this->client
@@ -5028,9 +5028,9 @@ class MeetingsApi
      * Update Meeting Status
      *
      * @param  int $meeting_id The meeting ID in **long** format. The data type of this field is \&quot;long\&quot;(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits. (required)
-     * @param  \Swagger\Client\Model\Body24 $body body (required)
+     * @param  \Zoom\Api\Model\Body24 $body body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -5045,9 +5045,9 @@ class MeetingsApi
      * Update Meeting Status
      *
      * @param  int $meeting_id The meeting ID in **long** format. The data type of this field is \&quot;long\&quot;(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits. (required)
-     * @param  \Swagger\Client\Model\Body24 $body (required)
+     * @param  \Zoom\Api\Model\Body24 $body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -5099,7 +5099,7 @@ class MeetingsApi
      * Update Meeting Status
      *
      * @param  int $meeting_id The meeting ID in **long** format. The data type of this field is \&quot;long\&quot;(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits. (required)
-     * @param  \Swagger\Client\Model\Body24 $body (required)
+     * @param  \Zoom\Api\Model\Body24 $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -5120,7 +5120,7 @@ class MeetingsApi
      * Update Meeting Status
      *
      * @param  int $meeting_id The meeting ID in **long** format. The data type of this field is \&quot;long\&quot;(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits. (required)
-     * @param  \Swagger\Client\Model\Body24 $body (required)
+     * @param  \Zoom\Api\Model\Body24 $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -5157,7 +5157,7 @@ class MeetingsApi
      * Create request for operation 'meetingStatus'
      *
      * @param  int $meeting_id The meeting ID in **long** format. The data type of this field is \&quot;long\&quot;(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits. (required)
-     * @param  \Swagger\Client\Model\Body24 $body (required)
+     * @param  \Zoom\Api\Model\Body24 $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -5281,7 +5281,7 @@ class MeetingsApi
      * @param  object $body Meeting (required)
      * @param  string $occurrence_id Meeting occurrence id. Support change of agenda, start_time, duration, settings: {host_video, participant_video, join_before_host, mute_upon_entry, waiting_room, watermark, auto_recording} (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -5299,7 +5299,7 @@ class MeetingsApi
      * @param  object $body Meeting (required)
      * @param  string $occurrence_id Meeting occurrence id. Support change of agenda, start_time, duration, settings: {host_video, participant_video, join_before_host, mute_upon_entry, waiting_room, watermark, auto_recording} (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -5542,9 +5542,9 @@ class MeetingsApi
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      * @param  string $page_number The page number of the current page in the returned records. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\GroupList
+     * @return \Zoom\Api\Model\GroupList
      */
     public function meetings($user_id, $type = 'live', $page_size = '30', $next_page_token = null, $page_number = null)
     {
@@ -5563,13 +5563,13 @@ class MeetingsApi
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      * @param  string $page_number The page number of the current page in the returned records. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\GroupList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\GroupList, HTTP status code, HTTP response headers (array of strings)
      */
     public function meetingsWithHttpInfo($user_id, $type = 'live', $page_size = '30', $next_page_token = null, $page_number = null)
     {
-        $returnType = '\Swagger\Client\Model\GroupList';
+        $returnType = '\Zoom\Api\Model\GroupList';
         $request = $this->meetingsRequest($user_id, $type, $page_size, $next_page_token, $page_number);
 
         try {
@@ -5621,7 +5621,7 @@ class MeetingsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\GroupList',
+                        '\Zoom\Api\Model\GroupList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5671,7 +5671,7 @@ class MeetingsApi
      */
     public function meetingsAsyncWithHttpInfo($user_id, $type = 'live', $page_size = '30', $next_page_token = null, $page_number = null)
     {
-        $returnType = '\Swagger\Client\Model\GroupList';
+        $returnType = '\Zoom\Api\Model\GroupList';
         $request = $this->meetingsRequest($user_id, $type, $page_size, $next_page_token, $page_number);
 
         return $this->client
@@ -5851,9 +5851,9 @@ class MeetingsApi
      *
      * @param  string $meeting_uuid The meeting UUID. Each meeting instance will generate its own Meeting UUID (i.e., after a meeting ends, a new UUID will be generated for the next instance of the meeting). Please double encode your UUID when using it for other API calls if the UUID begins with a &#39;/&#39;or contains &#39;//&#39; in it. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20023
+     * @return \Zoom\Api\Model\InlineResponse20023
      */
     public function pastMeetingDetails($meeting_uuid)
     {
@@ -5868,13 +5868,13 @@ class MeetingsApi
      *
      * @param  string $meeting_uuid The meeting UUID. Each meeting instance will generate its own Meeting UUID (i.e., after a meeting ends, a new UUID will be generated for the next instance of the meeting). Please double encode your UUID when using it for other API calls if the UUID begins with a &#39;/&#39;or contains &#39;//&#39; in it. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20023, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20023, HTTP status code, HTTP response headers (array of strings)
      */
     public function pastMeetingDetailsWithHttpInfo($meeting_uuid)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20023';
+        $returnType = '\Zoom\Api\Model\InlineResponse20023';
         $request = $this->pastMeetingDetailsRequest($meeting_uuid);
 
         try {
@@ -5926,7 +5926,7 @@ class MeetingsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20023',
+                        '\Zoom\Api\Model\InlineResponse20023',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5968,7 +5968,7 @@ class MeetingsApi
      */
     public function pastMeetingDetailsAsyncWithHttpInfo($meeting_uuid)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20023';
+        $returnType = '\Zoom\Api\Model\InlineResponse20023';
         $request = $this->pastMeetingDetailsRequest($meeting_uuid);
 
         return $this->client
@@ -6126,9 +6126,9 @@ class MeetingsApi
      * @param  int $page_size The number of records returned within a single API call. (optional, default to 30)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20024
+     * @return \Zoom\Api\Model\InlineResponse20024
      */
     public function pastMeetingParticipants($meeting_uuid, $page_size = '30', $next_page_token = null)
     {
@@ -6145,13 +6145,13 @@ class MeetingsApi
      * @param  int $page_size The number of records returned within a single API call. (optional, default to 30)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20024, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20024, HTTP status code, HTTP response headers (array of strings)
      */
     public function pastMeetingParticipantsWithHttpInfo($meeting_uuid, $page_size = '30', $next_page_token = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20024';
+        $returnType = '\Zoom\Api\Model\InlineResponse20024';
         $request = $this->pastMeetingParticipantsRequest($meeting_uuid, $page_size, $next_page_token);
 
         try {
@@ -6203,7 +6203,7 @@ class MeetingsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20024',
+                        '\Zoom\Api\Model\InlineResponse20024',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6249,7 +6249,7 @@ class MeetingsApi
      */
     public function pastMeetingParticipantsAsyncWithHttpInfo($meeting_uuid, $page_size = '30', $next_page_token = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20024';
+        $returnType = '\Zoom\Api\Model\InlineResponse20024';
         $request = $this->pastMeetingParticipantsRequest($meeting_uuid, $page_size, $next_page_token);
 
         return $this->client
@@ -6419,7 +6419,7 @@ class MeetingsApi
      *
      * @param  int $meeting_id The meeting ID in **long** format. The data type of this field is \&quot;long\&quot;(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -6436,7 +6436,7 @@ class MeetingsApi
      *
      * @param  int $meeting_id The meeting ID in **long** format. The data type of this field is \&quot;long\&quot;(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */

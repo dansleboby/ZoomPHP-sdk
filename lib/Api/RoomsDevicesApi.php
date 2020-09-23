@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Zoom\Api\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Zoom\Api\ApiException;
+use Zoom\Api\Configuration;
+use Zoom\Api\HeaderSelector;
+use Zoom\Api\ObjectSerializer;
 
 /**
  * RoomsDevicesApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -94,9 +94,9 @@ class RoomsDevicesApi
      *
      * @param  string $room_id Unique Identifier of the Zoom Room. (required)
      * @param  string $device_id Unique Identifier of the Mac or the Windows device. The value of this field can be retrieved from the [List Zoom Room Devices API](https://marketplace.zoom.us/docs/api-reference/zoom-api/rooms/listzrdevices). (required)
-     * @param  \Swagger\Client\Model\Body88 $body body (optional)
+     * @param  \Zoom\Api\Model\Body88 $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -113,9 +113,9 @@ class RoomsDevicesApi
      *
      * @param  string $room_id Unique Identifier of the Zoom Room. (required)
      * @param  string $device_id Unique Identifier of the Mac or the Windows device. The value of this field can be retrieved from the [List Zoom Room Devices API](https://marketplace.zoom.us/docs/api-reference/zoom-api/rooms/listzrdevices). (required)
-     * @param  \Swagger\Client\Model\Body88 $body (optional)
+     * @param  \Zoom\Api\Model\Body88 $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -190,7 +190,7 @@ class RoomsDevicesApi
      *
      * @param  string $room_id Unique Identifier of the Zoom Room. (required)
      * @param  string $device_id Unique Identifier of the Mac or the Windows device. The value of this field can be retrieved from the [List Zoom Room Devices API](https://marketplace.zoom.us/docs/api-reference/zoom-api/rooms/listzrdevices). (required)
-     * @param  \Swagger\Client\Model\Body88 $body (optional)
+     * @param  \Zoom\Api\Model\Body88 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -212,7 +212,7 @@ class RoomsDevicesApi
      *
      * @param  string $room_id Unique Identifier of the Zoom Room. (required)
      * @param  string $device_id Unique Identifier of the Mac or the Windows device. The value of this field can be retrieved from the [List Zoom Room Devices API](https://marketplace.zoom.us/docs/api-reference/zoom-api/rooms/listzrdevices). (required)
-     * @param  \Swagger\Client\Model\Body88 $body (optional)
+     * @param  \Zoom\Api\Model\Body88 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -264,7 +264,7 @@ class RoomsDevicesApi
      *
      * @param  string $room_id Unique Identifier of the Zoom Room. (required)
      * @param  string $device_id Unique Identifier of the Mac or the Windows device. The value of this field can be retrieved from the [List Zoom Room Devices API](https://marketplace.zoom.us/docs/api-reference/zoom-api/rooms/listzrdevices). (required)
-     * @param  \Swagger\Client\Model\Body88 $body (optional)
+     * @param  \Zoom\Api\Model\Body88 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

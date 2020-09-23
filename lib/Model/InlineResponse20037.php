@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse20037 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -60,7 +60,7 @@ class InlineResponse20037 implements ModelInterface, ArrayAccess
         'next_page_token' => 'string',
         'page_count' => 'int',
         'page_size' => 'int',
-        'participants' => '\Swagger\Client\Model\InlineResponse20037Participants[]',
+        'participants' => '\Zoom\Api\Model\InlineResponse20037Participants[]',
         'total_records' => 'int'
     ];
 
@@ -312,7 +312,7 @@ class InlineResponse20037 implements ModelInterface, ArrayAccess
     /**
      * Gets participants
      *
-     * @return \Swagger\Client\Model\InlineResponse20037Participants[]
+     * @return \Zoom\Api\Model\InlineResponse20037Participants[]
      */
     public function getParticipants()
     {
@@ -322,7 +322,7 @@ class InlineResponse20037 implements ModelInterface, ArrayAccess
     /**
      * Sets participants
      *
-     * @param \Swagger\Client\Model\InlineResponse20037Participants[] $participants Array of meeting participant objects.
+     * @param \Zoom\Api\Model\InlineResponse20037Participants[] $participants Array of meeting participant objects.
      *
      * @return $this
      */

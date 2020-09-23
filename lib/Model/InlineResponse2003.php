@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse2003 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -60,7 +60,7 @@ class InlineResponse2003 implements ModelInterface, ArrayAccess
         'next_page_token' => 'string',
         'page_size' => 'string',
         'total_records' => 'string',
-        'sites' => '\Swagger\Client\Model\InlineResponse2003Sites[]'
+        'sites' => '\Zoom\Api\Model\InlineResponse2003Sites[]'
     ];
 
     /**
@@ -297,7 +297,7 @@ class InlineResponse2003 implements ModelInterface, ArrayAccess
     /**
      * Gets sites
      *
-     * @return \Swagger\Client\Model\InlineResponse2003Sites[]
+     * @return \Zoom\Api\Model\InlineResponse2003Sites[]
      */
     public function getSites()
     {
@@ -307,7 +307,7 @@ class InlineResponse2003 implements ModelInterface, ArrayAccess
     /**
      * Sets sites
      *
-     * @param \Swagger\Client\Model\InlineResponse2003Sites[] $sites List of site(s).
+     * @param \Zoom\Api\Model\InlineResponse2003Sites[] $sites List of site(s).
      *
      * @return $this
      */

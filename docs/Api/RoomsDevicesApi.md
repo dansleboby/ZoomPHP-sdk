@@ -1,4 +1,4 @@
-# Swagger\Client\RoomsDevicesApi
+# Zoom\Api\RoomsDevicesApi
 
 All URIs are relative to *https://api.zoom.us/v2*
 
@@ -20,9 +20,9 @@ Change Zoom Rooms App Version
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\RoomsDevicesApi(
+$apiInstance = new Zoom\Api\Api\RoomsDevicesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -30,7 +30,7 @@ $apiInstance = new Swagger\Client\Api\RoomsDevicesApi(
 );
 $room_id = "room_id_example"; // string | Unique Identifier of the Zoom Room.
 $device_id = "device_id_example"; // string | Unique Identifier of the Mac or the Windows device. The value of this field can be retrieved from the [List Zoom Room Devices API](https://marketplace.zoom.us/docs/api-reference/zoom-api/rooms/listzrdevices).
-$body = new \Swagger\Client\Model\Body88(); // \Swagger\Client\Model\Body88 | 
+$body = new \Zoom\Api\Model\Body88(); // \Zoom\Api\Model\Body88 | 
 
 try {
     $result = $apiInstance->changeZoomRoomsAppVersion($room_id, $device_id, $body);
@@ -47,7 +47,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **room_id** | **string**| Unique Identifier of the Zoom Room. |
  **device_id** | **string**| Unique Identifier of the Mac or the Windows device. The value of this field can be retrieved from the [List Zoom Room Devices API](https://marketplace.zoom.us/docs/api-reference/zoom-api/rooms/listzrdevices). |
- **body** | [**\Swagger\Client\Model\Body88**](../Model/Body88.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\Body88**](../Model/Body88.md)|  | [optional]
 
 ### Return type
 

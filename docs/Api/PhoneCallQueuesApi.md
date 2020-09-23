@@ -1,4 +1,4 @@
-# Swagger\Client\PhoneCallQueuesApi
+# Zoom\Api\PhoneCallQueuesApi
 
 All URIs are relative to *https://api.zoom.us/v2*
 
@@ -32,16 +32,16 @@ Add phone users and/or [common area phones](https://support.zoom.us/hc/en-us/art
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PhoneCallQueuesApi(
+$apiInstance = new Zoom\Api\Api\PhoneCallQueuesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $call_queue_id = "call_queue_id_example"; // string | Unique Identifier of the Call Queue.
-$body = new \Swagger\Client\Model\Body70(); // \Swagger\Client\Model\Body70 | 
+$body = new \Zoom\Api\Model\Body70(); // \Zoom\Api\Model\Body70 | 
 
 try {
     $result = $apiInstance->addMembersToCallQueue($call_queue_id, $body);
@@ -57,7 +57,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **call_queue_id** | **string**| Unique Identifier of the Call Queue. |
- **body** | [**\Swagger\Client\Model\Body70**](../Model/Body70.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\Body70**](../Model/Body70.md)|  | [optional]
 
 ### Return type
 
@@ -87,16 +87,16 @@ After [buying phone number(s)](https://support.zoom.us/hc/en-us/articles/3600208
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PhoneCallQueuesApi(
+$apiInstance = new Zoom\Api\Api\PhoneCallQueuesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $call_queue_id = "call_queue_id_example"; // string | Unique Identifier of the Call Queue.
-$body = new \Swagger\Client\Model\Body69(); // \Swagger\Client\Model\Body69 | 
+$body = new \Zoom\Api\Model\Body69(); // \Zoom\Api\Model\Body69 | 
 
 try {
     $result = $apiInstance->assignPhoneToCallQueue($call_queue_id, $body);
@@ -112,7 +112,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **call_queue_id** | **string**| Unique Identifier of the Call Queue. |
- **body** | [**\Swagger\Client\Model\Body69**](../Model/Body69.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\Body69**](../Model/Body69.md)|  | [optional]
 
 ### Return type
 
@@ -142,16 +142,16 @@ A call queue manager has the privileges to maanage the call queue's voicemail in
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PhoneCallQueuesApi(
+$apiInstance = new Zoom\Api\Api\PhoneCallQueuesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $call_queue_id = "call_queue_id_example"; // string | Unique Identifier of the Call Queue.
-$body = new \Swagger\Client\Model\Body71(); // \Swagger\Client\Model\Body71 | 
+$body = new \Zoom\Api\Model\Body71(); // \Zoom\Api\Model\Body71 | 
 
 try {
     $result = $apiInstance->changeCallQueueManager($call_queue_id, $body);
@@ -167,7 +167,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **call_queue_id** | **string**| Unique Identifier of the Call Queue. |
- **body** | [**\Swagger\Client\Model\Body71**](../Model/Body71.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\Body71**](../Model/Body71.md)|  | [optional]
 
 ### Return type
 
@@ -185,7 +185,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **createCallQueue**
-> \Swagger\Client\Model\InlineResponse20124 createCallQueue($body)
+> \Zoom\Api\Model\InlineResponse20124 createCallQueue($body)
 
 Create a Call Queue
 
@@ -197,15 +197,15 @@ Call queues allow you to route incoming calls to a group of users. For instance,
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PhoneCallQueuesApi(
+$apiInstance = new Zoom\Api\Api\PhoneCallQueuesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\Body67(); // \Swagger\Client\Model\Body67 | 
+$body = new \Zoom\Api\Model\Body67(); // \Zoom\Api\Model\Body67 | 
 
 try {
     $result = $apiInstance->createCallQueue($body);
@@ -220,11 +220,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body67**](../Model/Body67.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\Body67**](../Model/Body67.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20124**](../Model/InlineResponse20124.md)
+[**\Zoom\Api\Model\InlineResponse20124**](../Model/InlineResponse20124.md)
 
 ### Authorization
 
@@ -250,9 +250,9 @@ Call queues allow you to route incoming calls to a group of users. For instance,
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PhoneCallQueuesApi(
+$apiInstance = new Zoom\Api\Api\PhoneCallQueuesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -291,7 +291,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getACallQueue**
-> \Swagger\Client\Model\InlineResponse20091 getACallQueue($call_queue_id)
+> \Zoom\Api\Model\InlineResponse20091 getACallQueue($call_queue_id)
 
 Get Call Queue Details
 
@@ -303,9 +303,9 @@ Call queues allow you to route incoming calls to a group of users. For instance,
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PhoneCallQueuesApi(
+$apiInstance = new Zoom\Api\Api\PhoneCallQueuesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -330,7 +330,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20091**](../Model/InlineResponse20091.md)
+[**\Zoom\Api\Model\InlineResponse20091**](../Model/InlineResponse20091.md)
 
 ### Authorization
 
@@ -344,7 +344,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getCallQueueRecordings**
-> \Swagger\Client\Model\InlineResponse200100 getCallQueueRecordings($call_queue_id, $page_size, $next_page_token)
+> \Zoom\Api\Model\InlineResponse200100 getCallQueueRecordings($call_queue_id, $page_size, $next_page_token)
 
 Get Call Queue Recordings
 
@@ -356,9 +356,9 @@ Use this API to view [call recordings](https://support.zoom.us/hc/en-us/articles
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PhoneCallQueuesApi(
+$apiInstance = new Zoom\Api\Api\PhoneCallQueuesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -387,7 +387,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200100**](../Model/InlineResponse200100.md)
+[**\Zoom\Api\Model\InlineResponse200100**](../Model/InlineResponse200100.md)
 
 ### Authorization
 
@@ -401,7 +401,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listCallQueues**
-> \Swagger\Client\Model\InlineResponse20090 listCallQueues($next_page_token, $page_size)
+> \Zoom\Api\Model\InlineResponse20090 listCallQueues($next_page_token, $page_size)
 
 List Call Queues
 
@@ -413,9 +413,9 @@ Call queues allow you to route incoming calls to a group of users. For instance,
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PhoneCallQueuesApi(
+$apiInstance = new Zoom\Api\Api\PhoneCallQueuesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -442,7 +442,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20090**](../Model/InlineResponse20090.md)
+[**\Zoom\Api\Model\InlineResponse20090**](../Model/InlineResponse20090.md)
 
 ### Authorization
 
@@ -468,9 +468,9 @@ After assigning a phone number, you can unbind it if you don't want it to be ass
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PhoneCallQueuesApi(
+$apiInstance = new Zoom\Api\Api\PhoneCallQueuesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -523,9 +523,9 @@ Use this API to unbind all phone numbers that are assigned to a [Call Queue](htt
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PhoneCallQueuesApi(
+$apiInstance = new Zoom\Api\Api\PhoneCallQueuesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -576,9 +576,9 @@ Use this API to remove all members from a Call Queue who were previously assigne
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PhoneCallQueuesApi(
+$apiInstance = new Zoom\Api\Api\PhoneCallQueuesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -629,9 +629,9 @@ Use this API to remove a member from a Call Queue who was previously added to th
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PhoneCallQueuesApi(
+$apiInstance = new Zoom\Api\Api\PhoneCallQueuesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -684,16 +684,16 @@ Call queues allow you to route incoming calls to a group of users. For instance,
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PhoneCallQueuesApi(
+$apiInstance = new Zoom\Api\Api\PhoneCallQueuesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $call_queue_id = "call_queue_id_example"; // string | Unique Identifier of the Call Queue.
-$body = new \Swagger\Client\Model\Body68(); // \Swagger\Client\Model\Body68 | 
+$body = new \Zoom\Api\Model\Body68(); // \Zoom\Api\Model\Body68 | 
 
 try {
     $result = $apiInstance->updateCallQueue($call_queue_id, $body);
@@ -709,7 +709,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **call_queue_id** | **string**| Unique Identifier of the Call Queue. |
- **body** | [**\Swagger\Client\Model\Body68**](../Model/Body68.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\Body68**](../Model/Body68.md)|  | [optional]
 
 ### Return type
 

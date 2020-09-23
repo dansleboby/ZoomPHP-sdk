@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse20011 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -60,7 +60,7 @@ class InlineResponse20011 implements ModelInterface, ArrayAccess
         'total_records' => 'int',
         'page_size' => 'int',
         'next_page_token' => 'string',
-        'members' => '\Swagger\Client\Model\InlineResponse20011Members[]'
+        'members' => '\Zoom\Api\Model\InlineResponse20011Members[]'
     ];
 
     /**
@@ -306,7 +306,7 @@ class InlineResponse20011 implements ModelInterface, ArrayAccess
     /**
      * Gets members
      *
-     * @return \Swagger\Client\Model\InlineResponse20011Members[]
+     * @return \Zoom\Api\Model\InlineResponse20011Members[]
      */
     public function getMembers()
     {
@@ -316,7 +316,7 @@ class InlineResponse20011 implements ModelInterface, ArrayAccess
     /**
      * Sets members
      *
-     * @param \Swagger\Client\Model\InlineResponse20011Members[] $members Members in a channel.
+     * @param \Zoom\Api\Model\InlineResponse20011Members[] $members Members in a channel.
      *
      * @return $this
      */

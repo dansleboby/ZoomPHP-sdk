@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Zoom\Api\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Zoom\Api\ApiException;
+use Zoom\Api\Configuration;
+use Zoom\Api\HeaderSelector;
+use Zoom\Api\ObjectSerializer;
 
 /**
  * RoomsApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -92,11 +92,11 @@ class RoomsApi
      *
      * Add a Zoom Room
      *
-     * @param  \Swagger\Client\Model\Body2 $body body (optional)
+     * @param  \Zoom\Api\Model\Body2 $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse201
+     * @return \Zoom\Api\Model\InlineResponse201
      */
     public function addARoom($body = null)
     {
@@ -109,15 +109,15 @@ class RoomsApi
      *
      * Add a Zoom Room
      *
-     * @param  \Swagger\Client\Model\Body2 $body (optional)
+     * @param  \Zoom\Api\Model\Body2 $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse201, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse201, HTTP status code, HTTP response headers (array of strings)
      */
     public function addARoomWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse201';
+        $returnType = '\Zoom\Api\Model\InlineResponse201';
         $request = $this->addARoomRequest($body);
 
         try {
@@ -169,7 +169,7 @@ class RoomsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse201',
+                        '\Zoom\Api\Model\InlineResponse201',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -184,7 +184,7 @@ class RoomsApi
      *
      * Add a Zoom Room
      *
-     * @param  \Swagger\Client\Model\Body2 $body (optional)
+     * @param  \Zoom\Api\Model\Body2 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -204,14 +204,14 @@ class RoomsApi
      *
      * Add a Zoom Room
      *
-     * @param  \Swagger\Client\Model\Body2 $body (optional)
+     * @param  \Zoom\Api\Model\Body2 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function addARoomAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse201';
+        $returnType = '\Zoom\Api\Model\InlineResponse201';
         $request = $this->addARoomRequest($body);
 
         return $this->client
@@ -254,7 +254,7 @@ class RoomsApi
     /**
      * Create request for operation 'addARoom'
      *
-     * @param  \Swagger\Client\Model\Body2 $body (optional)
+     * @param  \Zoom\Api\Model\Body2 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -355,9 +355,9 @@ class RoomsApi
      * Change a Zoom Room's Location
      *
      * @param  string $room_id Unique Identifier of the Zoom Room. (required)
-     * @param  \Swagger\Client\Model\Body65 $body body (optional)
+     * @param  \Zoom\Api\Model\Body65 $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -373,9 +373,9 @@ class RoomsApi
      * Change a Zoom Room's Location
      *
      * @param  string $room_id Unique Identifier of the Zoom Room. (required)
-     * @param  \Swagger\Client\Model\Body65 $body (optional)
+     * @param  \Zoom\Api\Model\Body65 $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -449,7 +449,7 @@ class RoomsApi
      * Change a Zoom Room's Location
      *
      * @param  string $room_id Unique Identifier of the Zoom Room. (required)
-     * @param  \Swagger\Client\Model\Body65 $body (optional)
+     * @param  \Zoom\Api\Model\Body65 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -470,7 +470,7 @@ class RoomsApi
      * Change a Zoom Room's Location
      *
      * @param  string $room_id Unique Identifier of the Zoom Room. (required)
-     * @param  \Swagger\Client\Model\Body65 $body (optional)
+     * @param  \Zoom\Api\Model\Body65 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -521,7 +521,7 @@ class RoomsApi
      * Create request for operation 'changeZRLocation'
      *
      * @param  string $room_id Unique Identifier of the Zoom Room. (required)
-     * @param  \Swagger\Client\Model\Body65 $body (optional)
+     * @param  \Zoom\Api\Model\Body65 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -636,9 +636,9 @@ class RoomsApi
      * Check-in or Check-out of a Zoom Room
      *
      * @param  string $id Room ID (required)
-     * @param  \Swagger\Client\Model\Body83 $body body (optional)
+     * @param  \Zoom\Api\Model\Body83 $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -654,9 +654,9 @@ class RoomsApi
      * Check-in or Check-out of a Zoom Room
      *
      * @param  string $id Room ID (required)
-     * @param  \Swagger\Client\Model\Body83 $body (optional)
+     * @param  \Zoom\Api\Model\Body83 $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -730,7 +730,7 @@ class RoomsApi
      * Check-in or Check-out of a Zoom Room
      *
      * @param  string $id Room ID (required)
-     * @param  \Swagger\Client\Model\Body83 $body (optional)
+     * @param  \Zoom\Api\Model\Body83 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -751,7 +751,7 @@ class RoomsApi
      * Check-in or Check-out of a Zoom Room
      *
      * @param  string $id Room ID (required)
-     * @param  \Swagger\Client\Model\Body83 $body (optional)
+     * @param  \Zoom\Api\Model\Body83 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -802,7 +802,7 @@ class RoomsApi
      * Create request for operation 'checkInRooms'
      *
      * @param  string $id Room ID (required)
-     * @param  \Swagger\Client\Model\Body83 $body (optional)
+     * @param  \Zoom\Api\Model\Body83 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -918,7 +918,7 @@ class RoomsApi
      *
      * @param  string $room_id Unique Identifier of a Zoom Room. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -935,7 +935,7 @@ class RoomsApi
      *
      * @param  string $room_id Unique Identifier of a Zoom Room. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1191,9 +1191,9 @@ class RoomsApi
      *
      * @param  string $room_id Unique Identifier of the Zoom Room. This can be retrieved from the response of [List Zoom Rooms](https://marketplace.zoom.us/docs/api-reference/zoom-api/rooms/listzoomrooms) API. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20080
+     * @return \Zoom\Api\Model\InlineResponse20080
      */
     public function getZRProfile($room_id)
     {
@@ -1208,13 +1208,13 @@ class RoomsApi
      *
      * @param  string $room_id Unique Identifier of the Zoom Room. This can be retrieved from the response of [List Zoom Rooms](https://marketplace.zoom.us/docs/api-reference/zoom-api/rooms/listzoomrooms) API. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20080, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20080, HTTP status code, HTTP response headers (array of strings)
      */
     public function getZRProfileWithHttpInfo($room_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20080';
+        $returnType = '\Zoom\Api\Model\InlineResponse20080';
         $request = $this->getZRProfileRequest($room_id);
 
         try {
@@ -1266,7 +1266,7 @@ class RoomsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20080',
+                        '\Zoom\Api\Model\InlineResponse20080',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1308,7 +1308,7 @@ class RoomsApi
      */
     public function getZRProfileAsyncWithHttpInfo($room_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20080';
+        $returnType = '\Zoom\Api\Model\InlineResponse20080';
         $request = $this->getZRProfileRequest($room_id);
 
         return $this->client
@@ -1465,7 +1465,7 @@ class RoomsApi
      * @param  string $setting_type The type of setting that you would like to retrieve.&lt;br&gt; &#x60;alert&#x60;: Alert Settings applied on the Zoom Rooms Account.&lt;br&gt; &#x60;meeting&#x60;: Meeting settings of the Zoom Rooms Account. (required)
      * @param  string $room_id Unique identifier of the Zoom Room. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -1483,7 +1483,7 @@ class RoomsApi
      * @param  string $setting_type The type of setting that you would like to retrieve.&lt;br&gt; &#x60;alert&#x60;: Alert Settings applied on the Zoom Rooms Account.&lt;br&gt; &#x60;meeting&#x60;: Meeting settings of the Zoom Rooms Account. (required)
      * @param  string $room_id Unique identifier of the Zoom Room. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1755,9 +1755,9 @@ class RoomsApi
      * @param  int $page_size The number of records returned within a single API call. (optional, default to 30)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse200104
+     * @return \Zoom\Api\Model\InlineResponse200104
      */
     public function listDigitalSignageContent($type = null, $folder_id = null, $page_size = '30', $next_page_token = null)
     {
@@ -1775,13 +1775,13 @@ class RoomsApi
      * @param  int $page_size The number of records returned within a single API call. (optional, default to 30)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse200104, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse200104, HTTP status code, HTTP response headers (array of strings)
      */
     public function listDigitalSignageContentWithHttpInfo($type = null, $folder_id = null, $page_size = '30', $next_page_token = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse200104';
+        $returnType = '\Zoom\Api\Model\InlineResponse200104';
         $request = $this->listDigitalSignageContentRequest($type, $folder_id, $page_size, $next_page_token);
 
         try {
@@ -1833,7 +1833,7 @@ class RoomsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse200104',
+                        '\Zoom\Api\Model\InlineResponse200104',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1881,7 +1881,7 @@ class RoomsApi
      */
     public function listDigitalSignageContentAsyncWithHttpInfo($type = null, $folder_id = null, $page_size = '30', $next_page_token = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse200104';
+        $returnType = '\Zoom\Api\Model\InlineResponse200104';
         $request = $this->listDigitalSignageContentRequest($type, $folder_id, $page_size, $next_page_token);
 
         return $this->client
@@ -2046,9 +2046,9 @@ class RoomsApi
      *
      * @param  string $room_id Unique Identifier of the Zoom Room. This can be retrieved from the response of [List Zoom Rooms](https://marketplace.zoom.us/docs/api-reference/zoom-api/rooms/listzoomrooms) API. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20081
+     * @return \Zoom\Api\Model\InlineResponse20081
      */
     public function listZRDevices($room_id)
     {
@@ -2063,13 +2063,13 @@ class RoomsApi
      *
      * @param  string $room_id Unique Identifier of the Zoom Room. This can be retrieved from the response of [List Zoom Rooms](https://marketplace.zoom.us/docs/api-reference/zoom-api/rooms/listzoomrooms) API. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20081, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20081, HTTP status code, HTTP response headers (array of strings)
      */
     public function listZRDevicesWithHttpInfo($room_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20081';
+        $returnType = '\Zoom\Api\Model\InlineResponse20081';
         $request = $this->listZRDevicesRequest($room_id);
 
         try {
@@ -2121,7 +2121,7 @@ class RoomsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20081',
+                        '\Zoom\Api\Model\InlineResponse20081',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2163,7 +2163,7 @@ class RoomsApi
      */
     public function listZRDevicesAsyncWithHttpInfo($room_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20081';
+        $returnType = '\Zoom\Api\Model\InlineResponse20081';
         $request = $this->listZRDevicesRequest($room_id);
 
         return $this->client
@@ -2324,9 +2324,9 @@ class RoomsApi
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      * @param  string $location_id Parent location ID of the Zoom Room. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse2002
+     * @return \Zoom\Api\Model\InlineResponse2002
      */
     public function listZoomRooms($status = null, $type = null, $unassigned_rooms = 'false', $page_size = '30', $next_page_token = null, $location_id = null)
     {
@@ -2346,13 +2346,13 @@ class RoomsApi
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      * @param  string $location_id Parent location ID of the Zoom Room. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse2002, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse2002, HTTP status code, HTTP response headers (array of strings)
      */
     public function listZoomRoomsWithHttpInfo($status = null, $type = null, $unassigned_rooms = 'false', $page_size = '30', $next_page_token = null, $location_id = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse2002';
+        $returnType = '\Zoom\Api\Model\InlineResponse2002';
         $request = $this->listZoomRoomsRequest($status, $type, $unassigned_rooms, $page_size, $next_page_token, $location_id);
 
         try {
@@ -2404,7 +2404,7 @@ class RoomsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse2002',
+                        '\Zoom\Api\Model\InlineResponse2002',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2456,7 +2456,7 @@ class RoomsApi
      */
     public function listZoomRoomsAsyncWithHttpInfo($status = null, $type = null, $unassigned_rooms = 'false', $page_size = '30', $next_page_token = null, $location_id = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse2002';
+        $returnType = '\Zoom\Api\Model\InlineResponse2002';
         $request = $this->listZoomRoomsRequest($status, $type, $unassigned_rooms, $page_size, $next_page_token, $location_id);
 
         return $this->client
@@ -2630,9 +2630,9 @@ class RoomsApi
      * Update a Zoom Room Profile
      *
      * @param  string $room_id Unique Identifier of a Zoom Room. (required)
-     * @param  \Swagger\Client\Model\Body60 $body body (optional)
+     * @param  \Zoom\Api\Model\Body60 $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -2648,9 +2648,9 @@ class RoomsApi
      * Update a Zoom Room Profile
      *
      * @param  string $room_id Unique Identifier of a Zoom Room. (required)
-     * @param  \Swagger\Client\Model\Body60 $body (optional)
+     * @param  \Zoom\Api\Model\Body60 $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2724,7 +2724,7 @@ class RoomsApi
      * Update a Zoom Room Profile
      *
      * @param  string $room_id Unique Identifier of a Zoom Room. (required)
-     * @param  \Swagger\Client\Model\Body60 $body (optional)
+     * @param  \Zoom\Api\Model\Body60 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2745,7 +2745,7 @@ class RoomsApi
      * Update a Zoom Room Profile
      *
      * @param  string $room_id Unique Identifier of a Zoom Room. (required)
-     * @param  \Swagger\Client\Model\Body60 $body (optional)
+     * @param  \Zoom\Api\Model\Body60 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2796,7 +2796,7 @@ class RoomsApi
      * Create request for operation 'updateRoomProfile'
      *
      * @param  string $room_id Unique Identifier of a Zoom Room. (required)
-     * @param  \Swagger\Client\Model\Body60 $body (optional)
+     * @param  \Zoom\Api\Model\Body60 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2914,7 +2914,7 @@ class RoomsApi
      * @param  object $body body (optional)
      * @param  string $setting_type The type of setting that you would like to update.&lt;br&gt; &#x60;alert&#x60;: Alert Settings applied on the Zoom Room.&lt;br&gt; &#x60;meeting&#x60;: Meeting settings of the Zoom Room.&lt;br&gt; &#x60;signage&#x60;: Digital signage settings applied on the Zoom Room. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -2933,7 +2933,7 @@ class RoomsApi
      * @param  object $body (optional)
      * @param  string $setting_type The type of setting that you would like to update.&lt;br&gt; &#x60;alert&#x60;: Alert Settings applied on the Zoom Room.&lt;br&gt; &#x60;meeting&#x60;: Meeting settings of the Zoom Room.&lt;br&gt; &#x60;signage&#x60;: Digital signage settings applied on the Zoom Room. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */

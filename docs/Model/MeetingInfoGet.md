@@ -17,10 +17,10 @@ Name | Type | Description | Notes
 **h323_password** | **string** | H.323/SIP room system passcode. | [optional] 
 **encrypted_password** | **string** | Encrypted passcode for third party endpoints (H323/SIP). | [optional] 
 **pmi** | **int** | Personal Meeting Id. Only used for scheduled meetings and recurring meetings with no fixed time. | [optional] 
-**tracking_fields** | [**\Swagger\Client\Model\InlineResponse20022TrackingFields[]**](InlineResponse20022TrackingFields.md) | Tracking fields | [optional] 
-**occurrences** | [**\Swagger\Client\Model\InlineResponse20111Occurrences[]**](InlineResponse20111Occurrences.md) | Array of occurrence objects. | [optional] 
-**settings** | [**\Swagger\Client\Model\InlineResponse20111Settings**](InlineResponse20111Settings.md) |  | [optional] 
-**recurrence** | [**\Swagger\Client\Model\UsersuserIdmeetingsRecurrence**](UsersuserIdmeetingsRecurrence.md) |  | [optional] 
+**tracking_fields** | [**\Zoom\Api\Model\InlineResponse20022TrackingFields[]**](InlineResponse20022TrackingFields.md) | Tracking fields | [optional] 
+**occurrences** | [**\Zoom\Api\Model\InlineResponse20111Occurrences[]**](InlineResponse20111Occurrences.md) | Array of occurrence objects. | [optional] 
+**settings** | [**\Zoom\Api\Model\InlineResponse20111Settings**](InlineResponse20111Settings.md) |  | [optional] 
+**recurrence** | [**\Zoom\Api\Model\UsersuserIdmeetingsRecurrence**](UsersuserIdmeetingsRecurrence.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **recording_disclaimer** | **bool** | Show a disclaimer to participants before a recording starts | [optional] 
 **ask_participants_to_consent_disclaimer** | **bool** | This field can be used if &#x60;recording_disclaimer&#x60; is set to true. This field indicates whether or not you would like to ask participants for consent when a recording starts. The value can be one of the following:&lt;br&gt; * &#x60;true&#x60;: Ask participants for consent when a recording starts. &lt;br&gt; * &#x60;false&#x60;: Do not ask participants for consent when a recording starts. | [optional] 
 **ask_host_to_confirm_disclaimer** | **bool** | Ask host to confirm the disclaimer. | [optional] 
-**recording_password_requirement** | [**\Swagger\Client\Model\UserSettingsRecordingSettingsRecordingPasswordRequirement**](UserSettingsRecordingSettingsRecordingPasswordRequirement.md) |  | [optional] 
+**recording_password_requirement** | [**\Zoom\Api\Model\UserSettingsRecordingSettingsRecordingPasswordRequirement**](UserSettingsRecordingSettingsRecordingPasswordRequirement.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

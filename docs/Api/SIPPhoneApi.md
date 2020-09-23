@@ -1,4 +1,4 @@
-# Swagger\Client\SIPPhoneApi
+# Zoom\Api\SIPPhoneApi
 
 All URIs are relative to *https://api.zoom.us/v2*
 
@@ -23,15 +23,15 @@ Zoom’s Phone System Integration (PSI), also referred as SIP phones, enables an
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\SIPPhoneApi(
+$apiInstance = new Zoom\Api\Api\SIPPhoneApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\Body(); // \Swagger\Client\Model\Body | 
+$body = new \Zoom\Api\Model\Body(); // \Zoom\Api\Model\Body | 
 
 try {
     $apiInstance->createSIPPhone($body);
@@ -45,7 +45,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body**](../Model/Body.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\Body**](../Model/Body.md)|  | [optional]
 
 ### Return type
 
@@ -75,9 +75,9 @@ Zoom’s Phone System Integration (PSI), also referred as SIP phones, enables an
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\SIPPhoneApi(
+$apiInstance = new Zoom\Api\Api\SIPPhoneApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -115,7 +115,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listSipPhones**
-> \Swagger\Client\Model\InlineResponse2001 listSipPhones($page_number, $search_key, $page_size)
+> \Zoom\Api\Model\InlineResponse2001 listSipPhones($page_number, $search_key, $page_size)
 
 List SIP Phones
 
@@ -127,9 +127,9 @@ Zoom’s Phone System Integration (PSI), also referred as SIP phones, enables an
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\SIPPhoneApi(
+$apiInstance = new Zoom\Api\Api\SIPPhoneApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -158,7 +158,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
+[**\Zoom\Api\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
 
 ### Authorization
 
@@ -184,16 +184,16 @@ Zoom’s Phone System Integration (PSI), also referred as SIP phones, enables an
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\SIPPhoneApi(
+$apiInstance = new Zoom\Api\Api\SIPPhoneApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $phone_id = "phone_id_example"; // string | Unique Identifier of the SIP Phone. This can be retrieved from the List SIP Phones API.
-$body = new \Swagger\Client\Model\Body1(); // \Swagger\Client\Model\Body1 | 
+$body = new \Zoom\Api\Model\Body1(); // \Zoom\Api\Model\Body1 | 
 
 try {
     $apiInstance->updateSIPPhone($phone_id, $body);
@@ -208,7 +208,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **phone_id** | **string**| Unique Identifier of the SIP Phone. This can be retrieved from the List SIP Phones API. |
- **body** | [**\Swagger\Client\Model\Body1**](../Model/Body1.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\Body1**](../Model/Body1.md)|  | [optional]
 
 ### Return type
 

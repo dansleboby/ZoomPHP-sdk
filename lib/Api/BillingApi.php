@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Zoom\Api\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Zoom\Api\ApiException;
+use Zoom\Api\Configuration;
+use Zoom\Api\HeaderSelector;
+use Zoom\Api\ObjectSerializer;
 
 /**
  * BillingApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -94,9 +94,9 @@ class BillingApi
      *
      * @param  string $account_id The account ID. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20014
+     * @return \Zoom\Api\Model\InlineResponse20014
      */
     public function accountBilling($account_id)
     {
@@ -111,13 +111,13 @@ class BillingApi
      *
      * @param  string $account_id The account ID. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20014, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20014, HTTP status code, HTTP response headers (array of strings)
      */
     public function accountBillingWithHttpInfo($account_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20014';
+        $returnType = '\Zoom\Api\Model\InlineResponse20014';
         $request = $this->accountBillingRequest($account_id);
 
         try {
@@ -169,7 +169,7 @@ class BillingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20014',
+                        '\Zoom\Api\Model\InlineResponse20014',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -211,7 +211,7 @@ class BillingApi
      */
     public function accountBillingAsyncWithHttpInfo($account_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20014';
+        $returnType = '\Zoom\Api\Model\InlineResponse20014';
         $request = $this->accountBillingRequest($account_id);
 
         return $this->client
@@ -366,9 +366,9 @@ class BillingApi
      * Update Billing Information
      *
      * @param  string $account_id The account ID. (required)
-     * @param  \Swagger\Client\Model\Body13 $body body (required)
+     * @param  \Zoom\Api\Model\Body13 $body body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -383,9 +383,9 @@ class BillingApi
      * Update Billing Information
      *
      * @param  string $account_id The account ID. (required)
-     * @param  \Swagger\Client\Model\Body13 $body (required)
+     * @param  \Zoom\Api\Model\Body13 $body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -437,7 +437,7 @@ class BillingApi
      * Update Billing Information
      *
      * @param  string $account_id The account ID. (required)
-     * @param  \Swagger\Client\Model\Body13 $body (required)
+     * @param  \Zoom\Api\Model\Body13 $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -458,7 +458,7 @@ class BillingApi
      * Update Billing Information
      *
      * @param  string $account_id The account ID. (required)
-     * @param  \Swagger\Client\Model\Body13 $body (required)
+     * @param  \Zoom\Api\Model\Body13 $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -495,7 +495,7 @@ class BillingApi
      * Create request for operation 'accountBillingUpdate'
      *
      * @param  string $account_id The account ID. (required)
-     * @param  \Swagger\Client\Model\Body13 $body (required)
+     * @param  \Zoom\Api\Model\Body13 $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -616,9 +616,9 @@ class BillingApi
      * Cancel  Additional Plans
      *
      * @param  string $account_id account_id (required)
-     * @param  \Swagger\Client\Model\Body50 $body body (optional)
+     * @param  \Zoom\Api\Model\Body50 $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -633,9 +633,9 @@ class BillingApi
      * Cancel  Additional Plans
      *
      * @param  string $account_id (required)
-     * @param  \Swagger\Client\Model\Body50 $body (optional)
+     * @param  \Zoom\Api\Model\Body50 $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -695,7 +695,7 @@ class BillingApi
      * Cancel  Additional Plans
      *
      * @param  string $account_id (required)
-     * @param  \Swagger\Client\Model\Body50 $body (optional)
+     * @param  \Zoom\Api\Model\Body50 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -716,7 +716,7 @@ class BillingApi
      * Cancel  Additional Plans
      *
      * @param  string $account_id (required)
-     * @param  \Swagger\Client\Model\Body50 $body (optional)
+     * @param  \Zoom\Api\Model\Body50 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -753,7 +753,7 @@ class BillingApi
      * Create request for operation 'accountPlanAddonCancel'
      *
      * @param  string $account_id (required)
-     * @param  \Swagger\Client\Model\Body50 $body (optional)
+     * @param  \Zoom\Api\Model\Body50 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -870,7 +870,7 @@ class BillingApi
      * @param  string $account_id The account ID. (required)
      * @param  object $body body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -887,7 +887,7 @@ class BillingApi
      * @param  string $account_id The account ID. (required)
      * @param  object $body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1118,9 +1118,9 @@ class BillingApi
      * Update an Additional Plan
      *
      * @param  string $account_id The account ID. (required)
-     * @param  \Swagger\Client\Model\Body15 $body body (required)
+     * @param  \Zoom\Api\Model\Body15 $body body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1135,9 +1135,9 @@ class BillingApi
      * Update an Additional Plan
      *
      * @param  string $account_id The account ID. (required)
-     * @param  \Swagger\Client\Model\Body15 $body (required)
+     * @param  \Zoom\Api\Model\Body15 $body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1189,7 +1189,7 @@ class BillingApi
      * Update an Additional Plan
      *
      * @param  string $account_id The account ID. (required)
-     * @param  \Swagger\Client\Model\Body15 $body (required)
+     * @param  \Zoom\Api\Model\Body15 $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1210,7 +1210,7 @@ class BillingApi
      * Update an Additional Plan
      *
      * @param  string $account_id The account ID. (required)
-     * @param  \Swagger\Client\Model\Body15 $body (required)
+     * @param  \Zoom\Api\Model\Body15 $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1247,7 +1247,7 @@ class BillingApi
      * Create request for operation 'accountPlanAddonUpdate'
      *
      * @param  string $account_id The account ID. (required)
-     * @param  \Swagger\Client\Model\Body15 $body (required)
+     * @param  \Zoom\Api\Model\Body15 $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1368,9 +1368,9 @@ class BillingApi
      * Cancel Base Plan
      *
      * @param  string $account_id account_id (required)
-     * @param  \Swagger\Client\Model\Body49 $body body (optional)
+     * @param  \Zoom\Api\Model\Body49 $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1385,9 +1385,9 @@ class BillingApi
      * Cancel Base Plan
      *
      * @param  string $account_id (required)
-     * @param  \Swagger\Client\Model\Body49 $body (optional)
+     * @param  \Zoom\Api\Model\Body49 $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1447,7 +1447,7 @@ class BillingApi
      * Cancel Base Plan
      *
      * @param  string $account_id (required)
-     * @param  \Swagger\Client\Model\Body49 $body (optional)
+     * @param  \Zoom\Api\Model\Body49 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1468,7 +1468,7 @@ class BillingApi
      * Cancel Base Plan
      *
      * @param  string $account_id (required)
-     * @param  \Swagger\Client\Model\Body49 $body (optional)
+     * @param  \Zoom\Api\Model\Body49 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1505,7 +1505,7 @@ class BillingApi
      * Create request for operation 'accountPlanBaseDelete'
      *
      * @param  string $account_id (required)
-     * @param  \Swagger\Client\Model\Body49 $body (optional)
+     * @param  \Zoom\Api\Model\Body49 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1620,9 +1620,9 @@ class BillingApi
      * Update a Base Plan
      *
      * @param  string $account_id The account ID. (required)
-     * @param  \Swagger\Client\Model\Body14 $body body (required)
+     * @param  \Zoom\Api\Model\Body14 $body body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1637,9 +1637,9 @@ class BillingApi
      * Update a Base Plan
      *
      * @param  string $account_id The account ID. (required)
-     * @param  \Swagger\Client\Model\Body14 $body (required)
+     * @param  \Zoom\Api\Model\Body14 $body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1691,7 +1691,7 @@ class BillingApi
      * Update a Base Plan
      *
      * @param  string $account_id The account ID. (required)
-     * @param  \Swagger\Client\Model\Body14 $body (required)
+     * @param  \Zoom\Api\Model\Body14 $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1712,7 +1712,7 @@ class BillingApi
      * Update a Base Plan
      *
      * @param  string $account_id The account ID. (required)
-     * @param  \Swagger\Client\Model\Body14 $body (required)
+     * @param  \Zoom\Api\Model\Body14 $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1749,7 +1749,7 @@ class BillingApi
      * Create request for operation 'accountPlanBaseUpdate'
      *
      * @param  string $account_id The account ID. (required)
-     * @param  \Swagger\Client\Model\Body14 $body (required)
+     * @param  \Zoom\Api\Model\Body14 $body (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1872,7 +1872,7 @@ class BillingApi
      * @param  string $account_id The account ID. (required)
      * @param  object $body body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -1890,7 +1890,7 @@ class BillingApi
      * @param  string $account_id The account ID. (required)
      * @param  object $body (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1956,7 +1956,7 @@ class BillingApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse2016',
+                        '\Zoom\Api\Model\InlineResponse2016',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2166,9 +2166,9 @@ class BillingApi
      *
      * @param  string $account_id The account ID. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20015
+     * @return \Zoom\Api\Model\InlineResponse20015
      */
     public function accountPlans($account_id)
     {
@@ -2183,13 +2183,13 @@ class BillingApi
      *
      * @param  string $account_id The account ID. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20015, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20015, HTTP status code, HTTP response headers (array of strings)
      */
     public function accountPlansWithHttpInfo($account_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20015';
+        $returnType = '\Zoom\Api\Model\InlineResponse20015';
         $request = $this->accountPlansRequest($account_id);
 
         try {
@@ -2241,7 +2241,7 @@ class BillingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20015',
+                        '\Zoom\Api\Model\InlineResponse20015',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2283,7 +2283,7 @@ class BillingApi
      */
     public function accountPlansAsyncWithHttpInfo($account_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20015';
+        $returnType = '\Zoom\Api\Model\InlineResponse20015';
         $request = $this->accountPlansRequest($account_id);
 
         return $this->client
@@ -2439,9 +2439,9 @@ class BillingApi
      *
      * @param  string $account_id account_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20072
+     * @return \Zoom\Api\Model\InlineResponse20072
      */
     public function getPlanUsage($account_id)
     {
@@ -2456,13 +2456,13 @@ class BillingApi
      *
      * @param  string $account_id (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20072, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20072, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPlanUsageWithHttpInfo($account_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20072';
+        $returnType = '\Zoom\Api\Model\InlineResponse20072';
         $request = $this->getPlanUsageRequest($account_id);
 
         try {
@@ -2514,7 +2514,7 @@ class BillingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20072',
+                        '\Zoom\Api\Model\InlineResponse20072',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2556,7 +2556,7 @@ class BillingApi
      */
     public function getPlanUsageAsyncWithHttpInfo($account_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20072';
+        $returnType = '\Zoom\Api\Model\InlineResponse20072';
         $request = $this->getPlanUsageRequest($account_id);
 
         return $this->client

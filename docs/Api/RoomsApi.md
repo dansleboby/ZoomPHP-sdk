@@ -1,4 +1,4 @@
-# Swagger\Client\RoomsApi
+# Zoom\Api\RoomsApi
 
 All URIs are relative to *https://api.zoom.us/v2*
 
@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 
 # **addARoom**
-> \Swagger\Client\Model\InlineResponse201 addARoom($body)
+> \Zoom\Api\Model\InlineResponse201 addARoom($body)
 
 Add a Zoom Room
 
@@ -30,15 +30,15 @@ Use this API to [add a Zoom Room](https://support.zoom.us/hc/en-us/articles/2028
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\RoomsApi(
+$apiInstance = new Zoom\Api\Api\RoomsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\Body2(); // \Swagger\Client\Model\Body2 | 
+$body = new \Zoom\Api\Model\Body2(); // \Zoom\Api\Model\Body2 | 
 
 try {
     $result = $apiInstance->addARoom($body);
@@ -53,11 +53,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body2**](../Model/Body2.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\Body2**](../Model/Body2.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse201**](../Model/InlineResponse201.md)
+[**\Zoom\Api\Model\InlineResponse201**](../Model/InlineResponse201.md)
 
 ### Authorization
 
@@ -83,16 +83,16 @@ An account owner of a Zoom account can establish a [Zoom Rooms Location Hierarch
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\RoomsApi(
+$apiInstance = new Zoom\Api\Api\RoomsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $room_id = "room_id_example"; // string | Unique Identifier of the Zoom Room.
-$body = new \Swagger\Client\Model\Body65(); // \Swagger\Client\Model\Body65 | 
+$body = new \Zoom\Api\Model\Body65(); // \Zoom\Api\Model\Body65 | 
 
 try {
     $result = $apiInstance->changeZRLocation($room_id, $body);
@@ -108,7 +108,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **room_id** | **string**| Unique Identifier of the Zoom Room. |
- **body** | [**\Swagger\Client\Model\Body65**](../Model/Body65.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\Body65**](../Model/Body65.md)|  | [optional]
 
 ### Return type
 
@@ -138,16 +138,16 @@ The Zoom Rooms check-in feature helps maximize your room utilization. Use this A
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\RoomsApi(
+$apiInstance = new Zoom\Api\Api\RoomsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = "id_example"; // string | Room ID
-$body = new \Swagger\Client\Model\Body83(); // \Swagger\Client\Model\Body83 | 
+$body = new \Zoom\Api\Model\Body83(); // \Zoom\Api\Model\Body83 | 
 
 try {
     $result = $apiInstance->checkInRooms($id, $body);
@@ -163,7 +163,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**| Room ID |
- **body** | [**\Swagger\Client\Model\Body83**](../Model/Body83.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\Body83**](../Model/Body83.md)|  | [optional]
 
 ### Return type
 
@@ -193,9 +193,9 @@ Delete a Zoom Room
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\RoomsApi(
+$apiInstance = new Zoom\Api\Api\RoomsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -234,7 +234,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getZRProfile**
-> \Swagger\Client\Model\InlineResponse20080 getZRProfile($room_id)
+> \Zoom\Api\Model\InlineResponse20080 getZRProfile($room_id)
 
 Get Zoom Room Profile
 
@@ -246,9 +246,9 @@ Zoom Rooms is a software-based room system that provides an integrated experienc
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\RoomsApi(
+$apiInstance = new Zoom\Api\Api\RoomsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -273,7 +273,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20080**](../Model/InlineResponse20080.md)
+[**\Zoom\Api\Model\InlineResponse20080**](../Model/InlineResponse20080.md)
 
 ### Authorization
 
@@ -299,9 +299,9 @@ Get information on meeting or alert settings applied to a specific Zoom Room. By
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\RoomsApi(
+$apiInstance = new Zoom\Api\Api\RoomsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -342,7 +342,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listDigitalSignageContent**
-> \Swagger\Client\Model\InlineResponse200104 listDigitalSignageContent($type, $folder_id, $page_size, $next_page_token)
+> \Zoom\Api\Model\InlineResponse200104 listDigitalSignageContent($type, $folder_id, $page_size, $next_page_token)
 
 List Digital Signage Contents
 
@@ -354,9 +354,9 @@ List information about existing [Zoom Rooms digital signage](https://support.zoo
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\RoomsApi(
+$apiInstance = new Zoom\Api\Api\RoomsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -387,7 +387,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200104**](../Model/InlineResponse200104.md)
+[**\Zoom\Api\Model\InlineResponse200104**](../Model/InlineResponse200104.md)
 
 ### Authorization
 
@@ -401,7 +401,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listZRDevices**
-> \Swagger\Client\Model\InlineResponse20081 listZRDevices($room_id)
+> \Zoom\Api\Model\InlineResponse20081 listZRDevices($room_id)
 
 List Zoom Room Devices
 
@@ -413,9 +413,9 @@ List information about the devices that are being used for a specific [Zoom Room
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\RoomsApi(
+$apiInstance = new Zoom\Api\Api\RoomsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -440,7 +440,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20081**](../Model/InlineResponse20081.md)
+[**\Zoom\Api\Model\InlineResponse20081**](../Model/InlineResponse20081.md)
 
 ### Authorization
 
@@ -454,7 +454,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listZoomRooms**
-> \Swagger\Client\Model\InlineResponse2002 listZoomRooms($status, $type, $unassigned_rooms, $page_size, $next_page_token, $location_id)
+> \Zoom\Api\Model\InlineResponse2002 listZoomRooms($status, $type, $unassigned_rooms, $page_size, $next_page_token, $location_id)
 
 List Zoom Rooms
 
@@ -466,9 +466,9 @@ Zoom Rooms is a software-based room system that provides an integrated experienc
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\RoomsApi(
+$apiInstance = new Zoom\Api\Api\RoomsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -503,7 +503,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
+[**\Zoom\Api\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
 
 ### Authorization
 
@@ -529,16 +529,16 @@ Update basic information on a specific Zoom Room in a Zoom account.<br>  **Prere
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\RoomsApi(
+$apiInstance = new Zoom\Api\Api\RoomsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $room_id = "room_id_example"; // string | Unique Identifier of a Zoom Room.
-$body = new \Swagger\Client\Model\Body60(); // \Swagger\Client\Model\Body60 | 
+$body = new \Zoom\Api\Model\Body60(); // \Zoom\Api\Model\Body60 | 
 
 try {
     $result = $apiInstance->updateRoomProfile($room_id, $body);
@@ -554,7 +554,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **room_id** | **string**| Unique Identifier of a Zoom Room. |
- **body** | [**\Swagger\Client\Model\Body60**](../Model/Body60.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\Body60**](../Model/Body60.md)|  | [optional]
 
 ### Return type
 
@@ -584,9 +584,9 @@ Update either meeting or alert settings applied to a specific Zoom Room. To upda
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\RoomsApi(
+$apiInstance = new Zoom\Api\Api\RoomsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),

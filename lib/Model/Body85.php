@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * Body85 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class Body85 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'sip_trunks' => '\Swagger\Client\Model\AccountsaccountIdsipTrunktrunksSipTrunks[]'
+        'sip_trunks' => '\Zoom\Api\Model\AccountsaccountIdsipTrunktrunksSipTrunks[]'
     ];
 
     /**
@@ -207,7 +207,7 @@ class Body85 implements ModelInterface, ArrayAccess
     /**
      * Gets sip_trunks
      *
-     * @return \Swagger\Client\Model\AccountsaccountIdsipTrunktrunksSipTrunks[]
+     * @return \Zoom\Api\Model\AccountsaccountIdsipTrunktrunksSipTrunks[]
      */
     public function getSipTrunks()
     {
@@ -217,7 +217,7 @@ class Body85 implements ModelInterface, ArrayAccess
     /**
      * Sets sip_trunks
      *
-     * @param \Swagger\Client\Model\AccountsaccountIdsipTrunktrunksSipTrunks[] $sip_trunks Array of one or more SIP Trunk objects.
+     * @param \Zoom\Api\Model\AccountsaccountIdsipTrunktrunksSipTrunks[] $sip_trunks Array of one or more SIP Trunk objects.
      *
      * @return $this
      */

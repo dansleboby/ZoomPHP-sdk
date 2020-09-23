@@ -1,4 +1,4 @@
-# Swagger\Client\ReportsApi
+# Zoom\Api\ReportsApi
 
 All URIs are relative to *https://api.zoom.us/v2*
 
@@ -33,9 +33,9 @@ Retrieve cloud recording usage report for a specified period. You can only get c
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ReportsApi(
+$apiInstance = new Zoom\Api\Api\ReportsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -88,9 +88,9 @@ Retrieve daily report to access the account-wide usage of Zoom services for each
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ReportsApi(
+$apiInstance = new Zoom\Api\Api\ReportsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -131,7 +131,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **reportMeetingDetails**
-> \Swagger\Client\Model\InlineResponse20036 reportMeetingDetails($meeting_id)
+> \Zoom\Api\Model\InlineResponse20036 reportMeetingDetails($meeting_id)
 
 Get Meeting Detail Reports
 
@@ -143,9 +143,9 @@ Get a detailed report for a past meeting. <br> **Scopes:** `report:read:admin`<b
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ReportsApi(
+$apiInstance = new Zoom\Api\Api\ReportsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -170,7 +170,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20036**](../Model/InlineResponse20036.md)
+[**\Zoom\Api\Model\InlineResponse20036**](../Model/InlineResponse20036.md)
 
 ### Authorization
 
@@ -184,7 +184,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **reportMeetingParticipants**
-> \Swagger\Client\Model\InlineResponse20037 reportMeetingParticipants($meeting_id, $page_size, $next_page_token)
+> \Zoom\Api\Model\InlineResponse20037 reportMeetingParticipants($meeting_id, $page_size, $next_page_token)
 
 Get Meeting Participant Reports
 
@@ -196,9 +196,9 @@ Get participant report for a past meeting.<br><br> **Scopes:** `report:read:admi
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ReportsApi(
+$apiInstance = new Zoom\Api\Api\ReportsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -227,7 +227,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20037**](../Model/InlineResponse20037.md)
+[**\Zoom\Api\Model\InlineResponse20037**](../Model/InlineResponse20037.md)
 
 ### Authorization
 
@@ -241,7 +241,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **reportMeetingPolls**
-> \Swagger\Client\Model\InlineResponse20038 reportMeetingPolls($meeting_id)
+> \Zoom\Api\Model\InlineResponse20038 reportMeetingPolls($meeting_id)
 
 Get Meeting Poll Reports
 
@@ -253,9 +253,9 @@ Retrieve a report of [poll](https://support.zoom.us/hc/en-us/articles/213756303-
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ReportsApi(
+$apiInstance = new Zoom\Api\Api\ReportsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -280,7 +280,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20038**](../Model/InlineResponse20038.md)
+[**\Zoom\Api\Model\InlineResponse20038**](../Model/InlineResponse20038.md)
 
 ### Authorization
 
@@ -294,7 +294,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **reportMeetings**
-> \Swagger\Client\Model\InlineResponse20035 reportMeetings($user_id, $from, $to, $page_size, $next_page_token, $type)
+> \Zoom\Api\Model\InlineResponse20035 reportMeetings($user_id, $from, $to, $page_size, $next_page_token, $type)
 
 Get Meeting Reports
 
@@ -306,9 +306,9 @@ Retrieve [report](https://support.zoom.us/hc/en-us/articles/216378603-Meeting-Re
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ReportsApi(
+$apiInstance = new Zoom\Api\Api\ReportsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -343,7 +343,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20035**](../Model/InlineResponse20035.md)
+[**\Zoom\Api\Model\InlineResponse20035**](../Model/InlineResponse20035.md)
 
 ### Authorization
 
@@ -357,7 +357,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **reportOperationLogs**
-> \Swagger\Client\Model\InlineResponse20044 reportOperationLogs($from, $to, $page_size, $next_page_token)
+> \Zoom\Api\Model\InlineResponse20044 reportOperationLogs($from, $to, $page_size, $next_page_token)
 
 Get Operation Logs Report
 
@@ -369,9 +369,9 @@ The [Operations Logs](https://support.zoom.us/hc/en-us/articles/360032748331-Ope
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ReportsApi(
+$apiInstance = new Zoom\Api\Api\ReportsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -402,7 +402,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20044**](../Model/InlineResponse20044.md)
+[**\Zoom\Api\Model\InlineResponse20044**](../Model/InlineResponse20044.md)
 
 ### Authorization
 
@@ -416,7 +416,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **reportSignInSignOutActivities**
-> \Swagger\Client\Model\InlineResponse20068 reportSignInSignOutActivities($from, $to, $page_size, $next_page_token)
+> \Zoom\Api\Model\InlineResponse20068 reportSignInSignOutActivities($from, $to, $page_size, $next_page_token)
 
 Get Sign In / Sign Out Activity Report
 
@@ -428,9 +428,9 @@ Retrieve a list of sign in / sign out activity logs [report](https://support.zoo
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ReportsApi(
+$apiInstance = new Zoom\Api\Api\ReportsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -461,7 +461,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20068**](../Model/InlineResponse20068.md)
+[**\Zoom\Api\Model\InlineResponse20068**](../Model/InlineResponse20068.md)
 
 ### Authorization
 
@@ -475,7 +475,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **reportTelephone**
-> \Swagger\Client\Model\InlineResponse20043 reportTelephone($from, $to, $type, $page_size, $page_number)
+> \Zoom\Api\Model\InlineResponse20043 reportTelephone($from, $to, $type, $page_size, $page_number)
 
 Get Telephone Reports
 
@@ -487,9 +487,9 @@ The Telephone report allows you to view who dialed into meetings via phone (Audi
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ReportsApi(
+$apiInstance = new Zoom\Api\Api\ReportsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -522,7 +522,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20043**](../Model/InlineResponse20043.md)
+[**\Zoom\Api\Model\InlineResponse20043**](../Model/InlineResponse20043.md)
 
 ### Authorization
 
@@ -536,7 +536,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **reportUsers**
-> \Swagger\Client\Model\InlineResponse20034 reportUsers($from, $to, $type, $page_size, $page_number)
+> \Zoom\Api\Model\InlineResponse20034 reportUsers($from, $to, $type, $page_size, $page_number)
 
 Get Active/Inactive Host Reports
 
@@ -548,9 +548,9 @@ A user is considered to be an active host during the month specified in the \"fr
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ReportsApi(
+$apiInstance = new Zoom\Api\Api\ReportsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -583,7 +583,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20034**](../Model/InlineResponse20034.md)
+[**\Zoom\Api\Model\InlineResponse20034**](../Model/InlineResponse20034.md)
 
 ### Authorization
 
@@ -597,7 +597,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **reportWebinarDetails**
-> \Swagger\Client\Model\InlineResponse20039 reportWebinarDetails($webinar_id)
+> \Zoom\Api\Model\InlineResponse20039 reportWebinarDetails($webinar_id)
 
 Get Webinar Detail Reports
 
@@ -609,9 +609,9 @@ Retrieve a [report](https://support.zoom.us/hc/en-us/articles/201393719-Webinar-
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ReportsApi(
+$apiInstance = new Zoom\Api\Api\ReportsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -636,7 +636,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20039**](../Model/InlineResponse20039.md)
+[**\Zoom\Api\Model\InlineResponse20039**](../Model/InlineResponse20039.md)
 
 ### Authorization
 
@@ -650,7 +650,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **reportWebinarParticipants**
-> \Swagger\Client\Model\InlineResponse20040 reportWebinarParticipants($webinar_id, $page_size, $next_page_token)
+> \Zoom\Api\Model\InlineResponse20040 reportWebinarParticipants($webinar_id, $page_size, $next_page_token)
 
 Get Webinar Participant Reports
 
@@ -662,9 +662,9 @@ Get detailed report on each attendee of a webinar.<br><br> **Scopes:** `report:r
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ReportsApi(
+$apiInstance = new Zoom\Api\Api\ReportsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -693,7 +693,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20040**](../Model/InlineResponse20040.md)
+[**\Zoom\Api\Model\InlineResponse20040**](../Model/InlineResponse20040.md)
 
 ### Authorization
 
@@ -707,7 +707,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **reportWebinarPolls**
-> \Swagger\Client\Model\InlineResponse20041 reportWebinarPolls($webinar_id)
+> \Zoom\Api\Model\InlineResponse20041 reportWebinarPolls($webinar_id)
 
 Get Webinar Poll Reports
 
@@ -719,9 +719,9 @@ Retrieve a report on past [webinar polls](https://support.zoom.us/hc/en-us/artic
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ReportsApi(
+$apiInstance = new Zoom\Api\Api\ReportsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -746,7 +746,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20041**](../Model/InlineResponse20041.md)
+[**\Zoom\Api\Model\InlineResponse20041**](../Model/InlineResponse20041.md)
 
 ### Authorization
 
@@ -760,7 +760,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **reportWebinarQA**
-> \Swagger\Client\Model\InlineResponse20042 reportWebinarQA($webinar_id)
+> \Zoom\Api\Model\InlineResponse20042 reportWebinarQA($webinar_id)
 
 Get Webinar Q&A Report
 
@@ -772,9 +772,9 @@ The Question & Answer (Q&A) feature for webinars allows attendees to ask questio
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\ReportsApi(
+$apiInstance = new Zoom\Api\Api\ReportsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -799,7 +799,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20042**](../Model/InlineResponse20042.md)
+[**\Zoom\Api\Model\InlineResponse20042**](../Model/InlineResponse20042.md)
 
 ### Authorization
 

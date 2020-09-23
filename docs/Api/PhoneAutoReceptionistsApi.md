@@ -1,4 +1,4 @@
-# Swagger\Client\PhoneAutoReceptionistsApi
+# Zoom\Api\PhoneAutoReceptionistsApi
 
 All URIs are relative to *https://api.zoom.us/v2*
 
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **addAutoReceptionist**
-> \Swagger\Client\Model\InlineResponse20127 addAutoReceptionist($body)
+> \Zoom\Api\Model\InlineResponse20127 addAutoReceptionist($body)
 
 Add an Auto Receptionist
 
@@ -24,15 +24,15 @@ Auto receptionists answer calls with a personalized recording and routes calls t
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PhoneAutoReceptionistsApi(
+$apiInstance = new Zoom\Api\Api\PhoneAutoReceptionistsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\Body82(); // \Swagger\Client\Model\Body82 | 
+$body = new \Zoom\Api\Model\Body82(); // \Zoom\Api\Model\Body82 | 
 
 try {
     $result = $apiInstance->addAutoReceptionist($body);
@@ -47,11 +47,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body82**](../Model/Body82.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\Body82**](../Model/Body82.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20127**](../Model/InlineResponse20127.md)
+[**\Zoom\Api\Model\InlineResponse20127**](../Model/InlineResponse20127.md)
 
 ### Authorization
 
@@ -77,16 +77,16 @@ Assign available phone numbers to an [auto receptionist](https://support.zoom.us
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PhoneAutoReceptionistsApi(
+$apiInstance = new Zoom\Api\Api\PhoneAutoReceptionistsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $auto_receptionist_id = "auto_receptionist_id_example"; // string | Unique Identifier of the Auto Receptionist. It can be retrieved from the [List Sites API](https://marketplace.zoom.us/docs/api-reference/zoom-api/phone-site/listphonesites).
-$body = new \Swagger\Client\Model\Body74(); // \Swagger\Client\Model\Body74 | 
+$body = new \Zoom\Api\Model\Body74(); // \Zoom\Api\Model\Body74 | 
 
 try {
     $result = $apiInstance->assignPhoneNumbersAutoReceptionist($auto_receptionist_id, $body);
@@ -102,7 +102,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **auto_receptionist_id** | **string**| Unique Identifier of the Auto Receptionist. It can be retrieved from the [List Sites API](https://marketplace.zoom.us/docs/api-reference/zoom-api/phone-site/listphonesites). |
- **body** | [**\Swagger\Client\Model\Body74**](../Model/Body74.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\Body74**](../Model/Body74.md)|  | [optional]
 
 ### Return type
 
@@ -132,9 +132,9 @@ Unassign a specific phone number that was previously assigned to an [auto recept
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PhoneAutoReceptionistsApi(
+$apiInstance = new Zoom\Api\Api\PhoneAutoReceptionistsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -187,9 +187,9 @@ Unassign all phone numbers that were previously assigned to an [auto receptionis
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PhoneAutoReceptionistsApi(
+$apiInstance = new Zoom\Api\Api\PhoneAutoReceptionistsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -240,16 +240,16 @@ An auto receptionist answers calls with a personalized recording and routes call
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PhoneAutoReceptionistsApi(
+$apiInstance = new Zoom\Api\Api\PhoneAutoReceptionistsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $auto_receptionist_id = "auto_receptionist_id_example"; // string | Unique Identifier of the Auto Receptionist. It can be retrieved from the [List Sites API](https://marketplace.zoom.us/docs/api-reference/zoom-api/phone-site/listphonesites).
-$body = new \Swagger\Client\Model\Body73(); // \Swagger\Client\Model\Body73 | 
+$body = new \Zoom\Api\Model\Body73(); // \Zoom\Api\Model\Body73 | 
 
 try {
     $result = $apiInstance->updateAutoReceptionist($auto_receptionist_id, $body);
@@ -265,7 +265,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **auto_receptionist_id** | **string**| Unique Identifier of the Auto Receptionist. It can be retrieved from the [List Sites API](https://marketplace.zoom.us/docs/api-reference/zoom-api/phone-site/listphonesites). |
- **body** | [**\Swagger\Client\Model\Body73**](../Model/Body73.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\Body73**](../Model/Body73.md)|  | [optional]
 
 ### Return type
 

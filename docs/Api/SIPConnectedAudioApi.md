@@ -1,4 +1,4 @@
-# Swagger\Client\SIPConnectedAudioApi
+# Zoom\Api\SIPConnectedAudioApi
 
 All URIs are relative to *https://api.zoom.us/v2*
 
@@ -20,7 +20,7 @@ Method | HTTP request | Description
 
 
 # **addCalloutCountries**
-> \Swagger\Client\Model\InlineResponse20129 addCalloutCountries($account_id, $body)
+> \Zoom\Api\Model\InlineResponse20129 addCalloutCountries($account_id, $body)
 
 Add Internal Call-out Countries
 
@@ -32,16 +32,16 @@ Specify the list of [call-out](https://support.zoom.us/hc/en-us/articles/2009428
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\SIPConnectedAudioApi(
+$apiInstance = new Zoom\Api\Api\SIPConnectedAudioApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $account_id = "account_id_example"; // string | Unique identifier of the account. To add Call-out enabled countries to a Sub Account, provide the account ID of the Sub Account in the `accountId` path parameter. To add Call-out enabled countries to a Master Account, provide `me` as the value of the `accountId` path parameter.
-$body = new \Swagger\Client\Model\Body86(); // \Swagger\Client\Model\Body86 | 
+$body = new \Zoom\Api\Model\Body86(); // \Zoom\Api\Model\Body86 | 
 
 try {
     $result = $apiInstance->addCalloutCountries($account_id, $body);
@@ -57,11 +57,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **account_id** | **string**| Unique identifier of the account. To add Call-out enabled countries to a Sub Account, provide the account ID of the Sub Account in the &#x60;accountId&#x60; path parameter. To add Call-out enabled countries to a Master Account, provide &#x60;me&#x60; as the value of the &#x60;accountId&#x60; path parameter. |
- **body** | [**\Swagger\Client\Model\Body86**](../Model/Body86.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\Body86**](../Model/Body86.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20129**](../Model/InlineResponse20129.md)
+[**\Zoom\Api\Model\InlineResponse20129**](../Model/InlineResponse20129.md)
 
 ### Authorization
 
@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **addInternalNumbers**
-> \Swagger\Client\Model\InlineResponse20130 addInternalNumbers($account_id, $body)
+> \Zoom\Api\Model\InlineResponse20130 addInternalNumbers($account_id, $body)
 
 Add Internal Numbers
 
@@ -87,16 +87,16 @@ This API allows a Master Account with SIP Connected Audio plan to assign interna
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\SIPConnectedAudioApi(
+$apiInstance = new Zoom\Api\Api\SIPConnectedAudioApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $account_id = "account_id_example"; // string | Unique identifier of the account.<br>To add internal numbers to a Sub Account, provide the account ID of the Sub Account in the `accountId` path parameter. To add internal numbers to a Master Account, provide `me` as the value of the `accountId` path parameter.
-$body = new \Swagger\Client\Model\Body87(); // \Swagger\Client\Model\Body87 | 
+$body = new \Zoom\Api\Model\Body87(); // \Zoom\Api\Model\Body87 | 
 
 try {
     $result = $apiInstance->addInternalNumbers($account_id, $body);
@@ -112,11 +112,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **account_id** | **string**| Unique identifier of the account.&lt;br&gt;To add internal numbers to a Sub Account, provide the account ID of the Sub Account in the &#x60;accountId&#x60; path parameter. To add internal numbers to a Master Account, provide &#x60;me&#x60; as the value of the &#x60;accountId&#x60; path parameter. |
- **body** | [**\Swagger\Client\Model\Body87**](../Model/Body87.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\Body87**](../Model/Body87.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20130**](../Model/InlineResponse20130.md)
+[**\Zoom\Api\Model\InlineResponse20130**](../Model/InlineResponse20130.md)
 
 ### Authorization
 
@@ -142,16 +142,16 @@ With SIP-connected audio, Zoom establishes a SIP trunk (a network connection spe
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\SIPConnectedAudioApi(
+$apiInstance = new Zoom\Api\Api\SIPConnectedAudioApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $account_id = "account_id_example"; // string | 
-$body = new \Swagger\Client\Model\Body61(); // \Swagger\Client\Model\Body61 | 
+$body = new \Zoom\Api\Model\Body61(); // \Zoom\Api\Model\Body61 | 
 
 try {
     $result = $apiInstance->assignSIPConfig($account_id, $body);
@@ -167,7 +167,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **account_id** | **string**|  |
- **body** | [**\Swagger\Client\Model\Body61**](../Model/Body61.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\Body61**](../Model/Body61.md)|  | [optional]
 
 ### Return type
 
@@ -185,7 +185,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **assignSIPTrunks**
-> \Swagger\Client\Model\InlineResponse20128 assignSIPTrunks($account_id, $body)
+> \Zoom\Api\Model\InlineResponse20128 assignSIPTrunks($account_id, $body)
 
 Assign SIP Trunks
 
@@ -197,16 +197,16 @@ With SIP-connected audio, Zoom establishes a SIP trunk (a network connection spe
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\SIPConnectedAudioApi(
+$apiInstance = new Zoom\Api\Api\SIPConnectedAudioApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $account_id = "account_id_example"; // string | Unique Identifier of the Sub Account.
-$body = new \Swagger\Client\Model\Body85(); // \Swagger\Client\Model\Body85 | 
+$body = new \Zoom\Api\Model\Body85(); // \Zoom\Api\Model\Body85 | 
 
 try {
     $result = $apiInstance->assignSIPTrunks($account_id, $body);
@@ -222,11 +222,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **account_id** | **string**| Unique Identifier of the Sub Account. |
- **body** | [**\Swagger\Client\Model\Body85**](../Model/Body85.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\Body85**](../Model/Body85.md)|  | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20128**](../Model/InlineResponse20128.md)
+[**\Zoom\Api\Model\InlineResponse20128**](../Model/InlineResponse20128.md)
 
 ### Authorization
 
@@ -252,16 +252,16 @@ With SIP-connected audio, Zoom establishes a SIP trunk (a network connection spe
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\SIPConnectedAudioApi(
+$apiInstance = new Zoom\Api\Api\SIPConnectedAudioApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $account_id = "account_id_example"; // string | Unique Identifier of the Sub Account.
-$body = new \Swagger\Client\Model\Body62(); // \Swagger\Client\Model\Body62 | 
+$body = new \Zoom\Api\Model\Body62(); // \Zoom\Api\Model\Body62 | 
 
 try {
     $result = $apiInstance->assignSipTrunkNumbers($account_id, $body);
@@ -277,7 +277,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **account_id** | **string**| Unique Identifier of the Sub Account. |
- **body** | [**\Swagger\Client\Model\Body62**](../Model/Body62.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\Body62**](../Model/Body62.md)|  | [optional]
 
 ### Return type
 
@@ -307,9 +307,9 @@ With SIP-connected audio, Zoom establishes a SIP trunk (a network connection spe
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\SIPConnectedAudioApi(
+$apiInstance = new Zoom\Api\Api\SIPConnectedAudioApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -360,9 +360,9 @@ Delete a previously assigned [call-out](https://support.zoom.us/hc/en-us/article
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\SIPConnectedAudioApi(
+$apiInstance = new Zoom\Api\Api\SIPConnectedAudioApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -415,9 +415,9 @@ This API allows a Master Account with SIP Connected Audio plan to delete a previ
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\SIPConnectedAudioApi(
+$apiInstance = new Zoom\Api\Api\SIPConnectedAudioApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -470,9 +470,9 @@ Use this API to remove existing SIP Trunk of a Sub Account.<br> <br><b>Prerequis
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\SIPConnectedAudioApi(
+$apiInstance = new Zoom\Api\Api\SIPConnectedAudioApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -513,7 +513,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listInternalCalloutCountries**
-> \Swagger\Client\Model\InlineResponse200102 listInternalCalloutCountries($account_id)
+> \Zoom\Api\Model\InlineResponse200102 listInternalCalloutCountries($account_id)
 
 List Internal Call-out Countries
 
@@ -525,9 +525,9 @@ Retrieve the list of internal [call-out](https://support.zoom.us/hc/en-us/articl
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\SIPConnectedAudioApi(
+$apiInstance = new Zoom\Api\Api\SIPConnectedAudioApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -552,7 +552,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200102**](../Model/InlineResponse200102.md)
+[**\Zoom\Api\Model\InlineResponse200102**](../Model/InlineResponse200102.md)
 
 ### Authorization
 
@@ -566,7 +566,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listInternalNumbers**
-> \Swagger\Client\Model\InlineResponse200103 listInternalNumbers($account_id, $page_size, $next_page_token)
+> \Zoom\Api\Model\InlineResponse200103 listInternalNumbers($account_id, $page_size, $next_page_token)
 
 List Internal Numbers
 
@@ -578,9 +578,9 @@ This API allows a Master Account with SIP Connected Audio plan to list internal 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\SIPConnectedAudioApi(
+$apiInstance = new Zoom\Api\Api\SIPConnectedAudioApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -609,7 +609,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200103**](../Model/InlineResponse200103.md)
+[**\Zoom\Api\Model\InlineResponse200103**](../Model/InlineResponse200103.md)
 
 ### Authorization
 
@@ -623,7 +623,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listSIPTrunks**
-> \Swagger\Client\Model\InlineResponse200101 listSIPTrunks($account_id)
+> \Zoom\Api\Model\InlineResponse200101 listSIPTrunks($account_id)
 
 List SIP Trunks
 
@@ -635,9 +635,9 @@ With SIP-connected audio, Zoom establishes a SIP trunk (a network connection spe
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\SIPConnectedAudioApi(
+$apiInstance = new Zoom\Api\Api\SIPConnectedAudioApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -662,7 +662,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse200101**](../Model/InlineResponse200101.md)
+[**\Zoom\Api\Model\InlineResponse200101**](../Model/InlineResponse200101.md)
 
 ### Authorization
 
@@ -676,7 +676,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listSipTrunkNumbers**
-> \Swagger\Client\Model\InlineResponse20082 listSipTrunkNumbers()
+> \Zoom\Api\Model\InlineResponse20082 listSipTrunkNumbers()
 
 List SIP Trunk Numbers
 
@@ -688,9 +688,9 @@ With SIP-connected audio, Zoom establishes a SIP trunk (a network connection spe
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\SIPConnectedAudioApi(
+$apiInstance = new Zoom\Api\Api\SIPConnectedAudioApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -711,7 +711,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20082**](../Model/InlineResponse20082.md)
+[**\Zoom\Api\Model\InlineResponse20082**](../Model/InlineResponse20082.md)
 
 ### Authorization
 

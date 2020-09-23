@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * Body69 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class Body69 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'phone_numbers' => '\Swagger\Client\Model\PhonecallQueuescallQueueIdphoneNumbersPhoneNumbers[]'
+        'phone_numbers' => '\Zoom\Api\Model\PhonecallQueuescallQueueIdphoneNumbersPhoneNumbers[]'
     ];
 
     /**
@@ -207,7 +207,7 @@ class Body69 implements ModelInterface, ArrayAccess
     /**
      * Gets phone_numbers
      *
-     * @return \Swagger\Client\Model\PhonecallQueuescallQueueIdphoneNumbersPhoneNumbers[]
+     * @return \Zoom\Api\Model\PhonecallQueuescallQueueIdphoneNumbersPhoneNumbers[]
      */
     public function getPhoneNumbers()
     {
@@ -217,7 +217,7 @@ class Body69 implements ModelInterface, ArrayAccess
     /**
      * Sets phone_numbers
      *
-     * @param \Swagger\Client\Model\PhonecallQueuescallQueueIdphoneNumbersPhoneNumbers[] $phone_numbers Provide either the `id` or the `number` field. Only a max of 5 numbers can be assigned to a call queue at a time.
+     * @param \Zoom\Api\Model\PhonecallQueuescallQueueIdphoneNumbersPhoneNumbers[] $phone_numbers Provide either the `id` or the `number` field. Only a max of 5 numbers can be assigned to a call queue at a time.
      *
      * @return $this
      */

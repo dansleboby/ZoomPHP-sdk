@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * MeetingSettings Class Doc Comment
  *
  * @category Class
  * @description Meeting settings.
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -76,7 +76,7 @@ class MeetingSettings implements ModelInterface, ArrayAccess
         'close_registration' => 'bool',
         'waiting_room' => 'bool',
         'global_dial_in_countries' => 'string[]',
-        'global_dial_in_numbers' => '\Swagger\Client\Model\InlineResponse20111SettingsGlobalDialInNumbers[]',
+        'global_dial_in_numbers' => '\Zoom\Api\Model\InlineResponse20111SettingsGlobalDialInNumbers[]',
         'contact_name' => 'string',
         'contact_email' => 'string',
         'registrants_confirmation_email' => 'bool',
@@ -864,7 +864,7 @@ class MeetingSettings implements ModelInterface, ArrayAccess
     /**
      * Gets global_dial_in_numbers
      *
-     * @return \Swagger\Client\Model\InlineResponse20111SettingsGlobalDialInNumbers[]
+     * @return \Zoom\Api\Model\InlineResponse20111SettingsGlobalDialInNumbers[]
      */
     public function getGlobalDialInNumbers()
     {
@@ -874,7 +874,7 @@ class MeetingSettings implements ModelInterface, ArrayAccess
     /**
      * Sets global_dial_in_numbers
      *
-     * @param \Swagger\Client\Model\InlineResponse20111SettingsGlobalDialInNumbers[] $global_dial_in_numbers Global Dial-in Countries/Regions
+     * @param \Zoom\Api\Model\InlineResponse20111SettingsGlobalDialInNumbers[] $global_dial_in_numbers Global Dial-in Countries/Regions
      *
      * @return $this
      */

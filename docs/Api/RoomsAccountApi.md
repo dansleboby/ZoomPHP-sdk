@@ -1,4 +1,4 @@
-# Swagger\Client\RoomsAccountApi
+# Zoom\Api\RoomsAccountApi
 
 All URIs are relative to *https://api.zoom.us/v2*
 
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **getZRAccountProfile**
-> \Swagger\Client\Model\InlineResponse20075 getZRAccountProfile()
+> \Zoom\Api\Model\InlineResponse20075 getZRAccountProfile()
 
 Get Zoom Room Account Profile
 
@@ -23,9 +23,9 @@ Get details on the account profile of a Zoom Room. This information can only by 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\RoomsAccountApi(
+$apiInstance = new Zoom\Api\Api\RoomsAccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -46,7 +46,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20075**](../Model/InlineResponse20075.md)
+[**\Zoom\Api\Model\InlineResponse20075**](../Model/InlineResponse20075.md)
 
 ### Authorization
 
@@ -72,9 +72,9 @@ Get details on Account Settings of a Zoom Room. With this API, you can view eith
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\RoomsAccountApi(
+$apiInstance = new Zoom\Api\Api\RoomsAccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -125,15 +125,15 @@ Update information on the account profile of a Zoom Room. This information can o
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\RoomsAccountApi(
+$apiInstance = new Zoom\Api\Api\RoomsAccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\Model\Body56(); // \Swagger\Client\Model\Body56 | 
+$body = new \Zoom\Api\Model\Body56(); // \Zoom\Api\Model\Body56 | 
 
 try {
     $result = $apiInstance->updateZRAccProfile($body);
@@ -148,7 +148,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body56**](../Model/Body56.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\Body56**](../Model/Body56.md)|  | [optional]
 
 ### Return type
 
@@ -178,9 +178,9 @@ Update account settings applied for Zoom Rooms in a Zoom account. With this API,
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\RoomsAccountApi(
+$apiInstance = new Zoom\Api\Api\RoomsAccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),

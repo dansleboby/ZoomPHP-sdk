@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse20087 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -60,7 +60,7 @@ class InlineResponse20087 implements ModelInterface, ArrayAccess
         'from' => '\DateTime',
         'to' => '\DateTime',
         'total_records' => 'int',
-        'client_satisfaction' => '\Swagger\Client\Model\InlineResponse20087ClientSatisfaction[]'
+        'client_satisfaction' => '\Zoom\Api\Model\InlineResponse20087ClientSatisfaction[]'
     ];
 
     /**
@@ -297,7 +297,7 @@ class InlineResponse20087 implements ModelInterface, ArrayAccess
     /**
      * Gets client_satisfaction
      *
-     * @return \Swagger\Client\Model\InlineResponse20087ClientSatisfaction[]
+     * @return \Zoom\Api\Model\InlineResponse20087ClientSatisfaction[]
      */
     public function getClientSatisfaction()
     {
@@ -307,7 +307,7 @@ class InlineResponse20087 implements ModelInterface, ArrayAccess
     /**
      * Sets client_satisfaction
      *
-     * @param \Swagger\Client\Model\InlineResponse20087ClientSatisfaction[] $client_satisfaction client_satisfaction
+     * @param \Zoom\Api\Model\InlineResponse20087ClientSatisfaction[] $client_satisfaction client_satisfaction
      *
      * @return $this
      */

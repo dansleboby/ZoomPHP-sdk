@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * Body22 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class Body22 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'members' => '\Swagger\Client\Model\ImgroupsgroupIdmembersMembers[]'
+        'members' => '\Zoom\Api\Model\ImgroupsgroupIdmembersMembers[]'
     ];
 
     /**
@@ -207,7 +207,7 @@ class Body22 implements ModelInterface, ArrayAccess
     /**
      * Gets members
      *
-     * @return \Swagger\Client\Model\ImgroupsgroupIdmembersMembers[]
+     * @return \Zoom\Api\Model\ImgroupsgroupIdmembersMembers[]
      */
     public function getMembers()
     {
@@ -217,7 +217,7 @@ class Body22 implements ModelInterface, ArrayAccess
     /**
      * Sets members
      *
-     * @param \Swagger\Client\Model\ImgroupsgroupIdmembersMembers[] $members List of IM group members.
+     * @param \Zoom\Api\Model\ImgroupsgroupIdmembersMembers[] $members List of IM group members.
      *
      * @return $this
      */

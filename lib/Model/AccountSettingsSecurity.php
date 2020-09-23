@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * AccountSettingsSecurity Class Doc Comment
  *
  * @category Class
  * @description [Security settings](https://support.zoom.us/hc/en-us/articles/360034675592-Advanced-security-settings#h_bf8a25f6-9a66-447a-befd-f02ed3404f89) of an Account.
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -61,7 +61,7 @@ class AccountSettingsSecurity implements ModelInterface, ArrayAccess
         'admin_change_name_pic' => 'bool',
         'import_photos_from_devices' => 'bool',
         'hide_billing_info' => 'bool',
-        'password_requirement' => '\Swagger\Client\Model\AccountSettingsSecurityPasswordRequirement',
+        'password_requirement' => '\Zoom\Api\Model\AccountSettingsSecurityPasswordRequirement',
         'sign_in_with_two_factor_auth' => 'string',
         'sign_again_period_for_inactivity_on_client' => 'int',
         'sign_again_period_for_inactivity_on_web' => 'int',
@@ -355,7 +355,7 @@ class AccountSettingsSecurity implements ModelInterface, ArrayAccess
     /**
      * Gets password_requirement
      *
-     * @return \Swagger\Client\Model\AccountSettingsSecurityPasswordRequirement
+     * @return \Zoom\Api\Model\AccountSettingsSecurityPasswordRequirement
      */
     public function getPasswordRequirement()
     {
@@ -365,7 +365,7 @@ class AccountSettingsSecurity implements ModelInterface, ArrayAccess
     /**
      * Sets password_requirement
      *
-     * @param \Swagger\Client\Model\AccountSettingsSecurityPasswordRequirement $password_requirement password_requirement
+     * @param \Zoom\Api\Model\AccountSettingsSecurityPasswordRequirement $password_requirement password_requirement
      *
      * @return $this
      */

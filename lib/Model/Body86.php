@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * Body86 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class Body86 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'callout_countries' => '\Swagger\Client\Model\AccountsaccountIdsipTrunkcalloutCountriesCalloutCountries[]'
+        'callout_countries' => '\Zoom\Api\Model\AccountsaccountIdsipTrunkcalloutCountriesCalloutCountries[]'
     ];
 
     /**
@@ -210,7 +210,7 @@ class Body86 implements ModelInterface, ArrayAccess
     /**
      * Gets callout_countries
      *
-     * @return \Swagger\Client\Model\AccountsaccountIdsipTrunkcalloutCountriesCalloutCountries[]
+     * @return \Zoom\Api\Model\AccountsaccountIdsipTrunkcalloutCountriesCalloutCountries[]
      */
     public function getCalloutCountries()
     {
@@ -220,7 +220,7 @@ class Body86 implements ModelInterface, ArrayAccess
     /**
      * Sets callout_countries
      *
-     * @param \Swagger\Client\Model\AccountsaccountIdsipTrunkcalloutCountriesCalloutCountries[] $callout_countries List of callout countries.
+     * @param \Zoom\Api\Model\AccountsaccountIdsipTrunkcalloutCountriesCalloutCountries[] $callout_countries List of callout countries.
      *
      * @return $this
      */

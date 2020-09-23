@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * Body3 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -60,8 +60,8 @@ class Body3 implements ModelInterface, ArrayAccess
         'name' => 'string',
         'site_code' => 'int',
         'auto_receptionist_name' => 'string',
-        'default_emergency_address' => '\Swagger\Client\Model\PhonesitesDefaultEmergencyAddress',
-        'short_extension' => '\Swagger\Client\Model\PhonesitesShortExtension'
+        'default_emergency_address' => '\Zoom\Api\Model\PhonesitesDefaultEmergencyAddress',
+        'short_extension' => '\Zoom\Api\Model\PhonesitesShortExtension'
     ];
 
     /**
@@ -324,7 +324,7 @@ class Body3 implements ModelInterface, ArrayAccess
     /**
      * Gets default_emergency_address
      *
-     * @return \Swagger\Client\Model\PhonesitesDefaultEmergencyAddress
+     * @return \Zoom\Api\Model\PhonesitesDefaultEmergencyAddress
      */
     public function getDefaultEmergencyAddress()
     {
@@ -334,7 +334,7 @@ class Body3 implements ModelInterface, ArrayAccess
     /**
      * Sets default_emergency_address
      *
-     * @param \Swagger\Client\Model\PhonesitesDefaultEmergencyAddress $default_emergency_address default_emergency_address
+     * @param \Zoom\Api\Model\PhonesitesDefaultEmergencyAddress $default_emergency_address default_emergency_address
      *
      * @return $this
      */
@@ -348,7 +348,7 @@ class Body3 implements ModelInterface, ArrayAccess
     /**
      * Gets short_extension
      *
-     * @return \Swagger\Client\Model\PhonesitesShortExtension
+     * @return \Zoom\Api\Model\PhonesitesShortExtension
      */
     public function getShortExtension()
     {
@@ -358,7 +358,7 @@ class Body3 implements ModelInterface, ArrayAccess
     /**
      * Sets short_extension
      *
-     * @param \Swagger\Client\Model\PhonesitesShortExtension $short_extension short_extension
+     * @param \Zoom\Api\Model\PhonesitesShortExtension $short_extension short_extension
      *
      * @return $this
      */

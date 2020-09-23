@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **group_ids** | **string[]** | IDs of groups where the user is a member. | [optional] 
 **im_group_ids** | **string[]** | IDs of IM directory groups where the user is a member. | [optional] 
 **verified** | **int** | Display whether the user&#39;s email address for the Zoom account is verified or not. &lt;br&gt; &#x60;1&#x60; - Verified user email.&lt;br&gt; &#x60;0&#x60; - User&#39;s email not verified. | [optional] 
-**custom_attributes** | [**\Swagger\Client\Model\InlineResponse20046CustomAttributes[]**](InlineResponse20046CustomAttributes.md) | Custom attributes. This field is only returned if users have been assigned custom attributes and if you provided &#x60;custom_attributes&#x60; as the value of &#x60;include_fields&#x60; query parameter in the API request. | [optional] 
+**custom_attributes** | [**\Zoom\Api\Model\InlineResponse20046CustomAttributes[]**](InlineResponse20046CustomAttributes.md) | Custom attributes. This field is only returned if users have been assigned custom attributes and if you provided &#x60;custom_attributes&#x60; as the value of &#x60;include_fields&#x60; query parameter in the API request. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Zoom\Api\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Zoom\Api\ApiException;
+use Zoom\Api\Configuration;
+use Zoom\Api\HeaderSelector;
+use Zoom\Api\ObjectSerializer;
 
 /**
  * PhoneSharedLineGroupsApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -93,9 +93,9 @@ class PhoneSharedLineGroupsApi
      * Add Members to a Shared Line Group
      *
      * @param  string $shared_line_group_id Unique Identifier of the shared line group. (required)
-     * @param  \Swagger\Client\Model\Body80 $body body (optional)
+     * @param  \Zoom\Api\Model\Body80 $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -111,9 +111,9 @@ class PhoneSharedLineGroupsApi
      * Add Members to a Shared Line Group
      *
      * @param  string $shared_line_group_id Unique Identifier of the shared line group. (required)
-     * @param  \Swagger\Client\Model\Body80 $body (optional)
+     * @param  \Zoom\Api\Model\Body80 $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -187,7 +187,7 @@ class PhoneSharedLineGroupsApi
      * Add Members to a Shared Line Group
      *
      * @param  string $shared_line_group_id Unique Identifier of the shared line group. (required)
-     * @param  \Swagger\Client\Model\Body80 $body (optional)
+     * @param  \Zoom\Api\Model\Body80 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -208,7 +208,7 @@ class PhoneSharedLineGroupsApi
      * Add Members to a Shared Line Group
      *
      * @param  string $shared_line_group_id Unique Identifier of the shared line group. (required)
-     * @param  \Swagger\Client\Model\Body80 $body (optional)
+     * @param  \Zoom\Api\Model\Body80 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -259,7 +259,7 @@ class PhoneSharedLineGroupsApi
      * Create request for operation 'addMembersToSharedLineGroup'
      *
      * @param  string $shared_line_group_id Unique Identifier of the shared line group. (required)
-     * @param  \Swagger\Client\Model\Body80 $body (optional)
+     * @param  \Zoom\Api\Model\Body80 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -374,9 +374,9 @@ class PhoneSharedLineGroupsApi
      * Assign Phone Numbers
      *
      * @param  string $shared_line_group_id Unique Identifier of the Shared Line Group. (required)
-     * @param  \Swagger\Client\Model\Body81 $body body (optional)
+     * @param  \Zoom\Api\Model\Body81 $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -391,9 +391,9 @@ class PhoneSharedLineGroupsApi
      * Assign Phone Numbers
      *
      * @param  string $shared_line_group_id Unique Identifier of the Shared Line Group. (required)
-     * @param  \Swagger\Client\Model\Body81 $body (optional)
+     * @param  \Zoom\Api\Model\Body81 $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -445,7 +445,7 @@ class PhoneSharedLineGroupsApi
      * Assign Phone Numbers
      *
      * @param  string $shared_line_group_id Unique Identifier of the Shared Line Group. (required)
-     * @param  \Swagger\Client\Model\Body81 $body (optional)
+     * @param  \Zoom\Api\Model\Body81 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -466,7 +466,7 @@ class PhoneSharedLineGroupsApi
      * Assign Phone Numbers
      *
      * @param  string $shared_line_group_id Unique Identifier of the Shared Line Group. (required)
-     * @param  \Swagger\Client\Model\Body81 $body (optional)
+     * @param  \Zoom\Api\Model\Body81 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -503,7 +503,7 @@ class PhoneSharedLineGroupsApi
      * Create request for operation 'assignPhoneNumbersSLG'
      *
      * @param  string $shared_line_group_id Unique Identifier of the Shared Line Group. (required)
-     * @param  \Swagger\Client\Model\Body81 $body (optional)
+     * @param  \Zoom\Api\Model\Body81 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -620,7 +620,7 @@ class PhoneSharedLineGroupsApi
      * @param  string $shared_line_group_id Unique Identifier of the shared line group from which you would like to remove a member. (required)
      * @param  string $member_id Unique identifier of the member who is to be removed. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -637,7 +637,7 @@ class PhoneSharedLineGroupsApi
      * @param  string $shared_line_group_id Unique Identifier of the shared line group from which you would like to remove a member. (required)
      * @param  string $member_id Unique identifier of the member who is to be removed. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -875,7 +875,7 @@ class PhoneSharedLineGroupsApi
      * @param  string $shared_line_group_id Unique identifier of the shared line group from which you would like to unassign a phone number. (required)
      * @param  string $phone_number_id Unique identifier of the phone number which is to be unassigned. This can be retrieved from Get a Shared Line Group API. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -892,7 +892,7 @@ class PhoneSharedLineGroupsApi
      * @param  string $shared_line_group_id Unique identifier of the shared line group from which you would like to unassign a phone number. (required)
      * @param  string $phone_number_id Unique identifier of the phone number which is to be unassigned. This can be retrieved from Get a Shared Line Group API. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1129,7 +1129,7 @@ class PhoneSharedLineGroupsApi
      *
      * @param  string $shared_line_group_id Unique Identifier of the shared line group that you would like to delete. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -1146,7 +1146,7 @@ class PhoneSharedLineGroupsApi
      *
      * @param  string $shared_line_group_id Unique Identifier of the shared line group that you would like to delete. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1402,7 +1402,7 @@ class PhoneSharedLineGroupsApi
      *
      * @param  string $shared_line_group_id Unique identifier of the Shared Line Group that you would like to delete. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -1419,7 +1419,7 @@ class PhoneSharedLineGroupsApi
      *
      * @param  string $shared_line_group_id Unique identifier of the Shared Line Group that you would like to delete. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1675,9 +1675,9 @@ class PhoneSharedLineGroupsApi
      *
      * @param  string $shared_line_group_id Unique Identifier of the Shared Line Group. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20099
+     * @return \Zoom\Api\Model\InlineResponse20099
      */
     public function getASharedLineGroup($shared_line_group_id)
     {
@@ -1692,13 +1692,13 @@ class PhoneSharedLineGroupsApi
      *
      * @param  string $shared_line_group_id Unique Identifier of the Shared Line Group. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20099, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20099, HTTP status code, HTTP response headers (array of strings)
      */
     public function getASharedLineGroupWithHttpInfo($shared_line_group_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20099';
+        $returnType = '\Zoom\Api\Model\InlineResponse20099';
         $request = $this->getASharedLineGroupRequest($shared_line_group_id);
 
         try {
@@ -1750,7 +1750,7 @@ class PhoneSharedLineGroupsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20099',
+                        '\Zoom\Api\Model\InlineResponse20099',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1792,7 +1792,7 @@ class PhoneSharedLineGroupsApi
      */
     public function getASharedLineGroupAsyncWithHttpInfo($shared_line_group_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20099';
+        $returnType = '\Zoom\Api\Model\InlineResponse20099';
         $request = $this->getASharedLineGroupRequest($shared_line_group_id);
 
         return $this->client
@@ -1947,9 +1947,9 @@ class PhoneSharedLineGroupsApi
      * Update a Shared Line Group
      *
      * @param  string $shared_line_group_id Unique identifier of the shared line group that is to be updated. (required)
-     * @param  \Swagger\Client\Model\Body79 $body body (optional)
+     * @param  \Zoom\Api\Model\Body79 $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -1965,9 +1965,9 @@ class PhoneSharedLineGroupsApi
      * Update a Shared Line Group
      *
      * @param  string $shared_line_group_id Unique identifier of the shared line group that is to be updated. (required)
-     * @param  \Swagger\Client\Model\Body79 $body (optional)
+     * @param  \Zoom\Api\Model\Body79 $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2041,7 +2041,7 @@ class PhoneSharedLineGroupsApi
      * Update a Shared Line Group
      *
      * @param  string $shared_line_group_id Unique identifier of the shared line group that is to be updated. (required)
-     * @param  \Swagger\Client\Model\Body79 $body (optional)
+     * @param  \Zoom\Api\Model\Body79 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2062,7 +2062,7 @@ class PhoneSharedLineGroupsApi
      * Update a Shared Line Group
      *
      * @param  string $shared_line_group_id Unique identifier of the shared line group that is to be updated. (required)
-     * @param  \Swagger\Client\Model\Body79 $body (optional)
+     * @param  \Zoom\Api\Model\Body79 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2113,7 +2113,7 @@ class PhoneSharedLineGroupsApi
      * Create request for operation 'updateASharedLineGroup'
      *
      * @param  string $shared_line_group_id Unique identifier of the shared line group that is to be updated. (required)
-     * @param  \Swagger\Client\Model\Body79 $body (optional)
+     * @param  \Zoom\Api\Model\Body79 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

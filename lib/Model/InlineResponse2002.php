@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse2002 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -59,7 +59,7 @@ class InlineResponse2002 implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'page_size' => 'int',
         'next_page_token' => 'string',
-        'rooms' => '\Swagger\Client\Model\InlineResponse2002Rooms[]'
+        'rooms' => '\Zoom\Api\Model\InlineResponse2002Rooms[]'
     ];
 
     /**
@@ -267,7 +267,7 @@ class InlineResponse2002 implements ModelInterface, ArrayAccess
     /**
      * Gets rooms
      *
-     * @return \Swagger\Client\Model\InlineResponse2002Rooms[]
+     * @return \Zoom\Api\Model\InlineResponse2002Rooms[]
      */
     public function getRooms()
     {
@@ -277,7 +277,7 @@ class InlineResponse2002 implements ModelInterface, ArrayAccess
     /**
      * Sets rooms
      *
-     * @param \Swagger\Client\Model\InlineResponse2002Rooms[] $rooms List of existing Zoom Rooms.
+     * @param \Zoom\Api\Model\InlineResponse2002Rooms[] $rooms List of existing Zoom Rooms.
      *
      * @return $this
      */

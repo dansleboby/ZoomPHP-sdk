@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse2001 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -61,7 +61,7 @@ class InlineResponse2001 implements ModelInterface, ArrayAccess
         'page_number' => 'int',
         'page_size' => 'int',
         'total_records' => 'int',
-        'phones' => '\Swagger\Client\Model\InlineResponse2001Phones[]'
+        'phones' => '\Zoom\Api\Model\InlineResponse2001Phones[]'
     ];
 
     /**
@@ -327,7 +327,7 @@ class InlineResponse2001 implements ModelInterface, ArrayAccess
     /**
      * Gets phones
      *
-     * @return \Swagger\Client\Model\InlineResponse2001Phones[]
+     * @return \Zoom\Api\Model\InlineResponse2001Phones[]
      */
     public function getPhones()
     {
@@ -337,7 +337,7 @@ class InlineResponse2001 implements ModelInterface, ArrayAccess
     /**
      * Sets phones
      *
-     * @param \Swagger\Client\Model\InlineResponse2001Phones[] $phones SIP phones object.
+     * @param \Zoom\Api\Model\InlineResponse2001Phones[] $phones SIP phones object.
      *
      * @return $this
      */

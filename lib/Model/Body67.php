@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * Body67 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -61,7 +61,7 @@ class Body67 implements ModelInterface, ArrayAccess
         'name' => 'string',
         'extension_number' => 'int',
         'description' => 'string',
-        'members' => '\Swagger\Client\Model\PhonecallQueuesMembers'
+        'members' => '\Zoom\Api\Model\PhonecallQueuesMembers'
     ];
 
     /**
@@ -356,7 +356,7 @@ class Body67 implements ModelInterface, ArrayAccess
     /**
      * Gets members
      *
-     * @return \Swagger\Client\Model\PhonecallQueuesMembers
+     * @return \Zoom\Api\Model\PhonecallQueuesMembers
      */
     public function getMembers()
     {
@@ -366,7 +366,7 @@ class Body67 implements ModelInterface, ArrayAccess
     /**
      * Sets members
      *
-     * @param \Swagger\Client\Model\PhonecallQueuesMembers $members members
+     * @param \Zoom\Api\Model\PhonecallQueuesMembers $members members
      *
      * @return $this
      */

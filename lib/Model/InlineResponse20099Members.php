@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse20099Members Class Doc Comment
  *
  * @category Class
  * @description View current [members](https://support.zoom.us/hc/en-us/articles/360038850792-Setting-up-shared-line-groups#h_3ffbbb77-a009-4c09-91e4-81fc264b61d6) of the shared line group.
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,8 +58,8 @@ class InlineResponse20099Members implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'users' => '\Swagger\Client\Model\InlineResponse20099MembersUsers[]',
-        'common_area_phones' => '\Swagger\Client\Model\InlineResponse20099MembersCommonAreaPhones[]'
+        'users' => '\Zoom\Api\Model\InlineResponse20099MembersUsers[]',
+        'common_area_phones' => '\Zoom\Api\Model\InlineResponse20099MembersCommonAreaPhones[]'
     ];
 
     /**
@@ -214,7 +214,7 @@ class InlineResponse20099Members implements ModelInterface, ArrayAccess
     /**
      * Gets users
      *
-     * @return \Swagger\Client\Model\InlineResponse20099MembersUsers[]
+     * @return \Zoom\Api\Model\InlineResponse20099MembersUsers[]
      */
     public function getUsers()
     {
@@ -224,7 +224,7 @@ class InlineResponse20099Members implements ModelInterface, ArrayAccess
     /**
      * Sets users
      *
-     * @param \Swagger\Client\Model\InlineResponse20099MembersUsers[] $users Users who are members of the Shared Line Group.
+     * @param \Zoom\Api\Model\InlineResponse20099MembersUsers[] $users Users who are members of the Shared Line Group.
      *
      * @return $this
      */
@@ -238,7 +238,7 @@ class InlineResponse20099Members implements ModelInterface, ArrayAccess
     /**
      * Gets common_area_phones
      *
-     * @return \Swagger\Client\Model\InlineResponse20099MembersCommonAreaPhones[]
+     * @return \Zoom\Api\Model\InlineResponse20099MembersCommonAreaPhones[]
      */
     public function getCommonAreaPhones()
     {
@@ -248,7 +248,7 @@ class InlineResponse20099Members implements ModelInterface, ArrayAccess
     /**
      * Sets common_area_phones
      *
-     * @param \Swagger\Client\Model\InlineResponse20099MembersCommonAreaPhones[] $common_area_phones [Common Area Phones](https://support.zoom.us/hc/en-us/articles/360028516231-Managing-Common-Area-Phones) that are members of the shared line group.
+     * @param \Zoom\Api\Model\InlineResponse20099MembersCommonAreaPhones[] $common_area_phones [Common Area Phones](https://support.zoom.us/hc/en-us/articles/360028516231-Managing-Common-Area-Phones) that are members of the shared line group.
      *
      * @return $this
      */

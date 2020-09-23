@@ -1,4 +1,4 @@
-# Swagger\Client\PhoneSharedLineGroupsApi
+# Zoom\Api\PhoneSharedLineGroupsApi
 
 All URIs are relative to *https://api.zoom.us/v2*
 
@@ -27,16 +27,16 @@ A [shared line group](https://support.zoom.us/hc/en-us/articles/360038850792) al
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PhoneSharedLineGroupsApi(
+$apiInstance = new Zoom\Api\Api\PhoneSharedLineGroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $shared_line_group_id = "shared_line_group_id_example"; // string | Unique Identifier of the shared line group.
-$body = new \Swagger\Client\Model\Body80(); // \Swagger\Client\Model\Body80 | 
+$body = new \Zoom\Api\Model\Body80(); // \Zoom\Api\Model\Body80 | 
 
 try {
     $result = $apiInstance->addMembersToSharedLineGroup($shared_line_group_id, $body);
@@ -52,7 +52,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **shared_line_group_id** | **string**| Unique Identifier of the shared line group. |
- **body** | [**\Swagger\Client\Model\Body80**](../Model/Body80.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\Body80**](../Model/Body80.md)|  | [optional]
 
 ### Return type
 
@@ -82,16 +82,16 @@ Use this API to assign phone numbers to a shared line groups. These direct phone
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PhoneSharedLineGroupsApi(
+$apiInstance = new Zoom\Api\Api\PhoneSharedLineGroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $shared_line_group_id = "shared_line_group_id_example"; // string | Unique Identifier of the Shared Line Group.
-$body = new \Swagger\Client\Model\Body81(); // \Swagger\Client\Model\Body81 | 
+$body = new \Zoom\Api\Model\Body81(); // \Zoom\Api\Model\Body81 | 
 
 try {
     $apiInstance->assignPhoneNumbersSLG($shared_line_group_id, $body);
@@ -106,7 +106,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **shared_line_group_id** | **string**| Unique Identifier of the Shared Line Group. |
- **body** | [**\Swagger\Client\Model\Body81**](../Model/Body81.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\Body81**](../Model/Body81.md)|  | [optional]
 
 ### Return type
 
@@ -136,9 +136,9 @@ Members of the [shared line group](https://support.zoom.us/hc/en-us/articles/360
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PhoneSharedLineGroupsApi(
+$apiInstance = new Zoom\Api\Api\PhoneSharedLineGroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -190,9 +190,9 @@ Use this API to unassign a specific phone number that was assigned to the [share
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PhoneSharedLineGroupsApi(
+$apiInstance = new Zoom\Api\Api\PhoneSharedLineGroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -244,9 +244,9 @@ A [shared line group](https://support.zoom.us/hc/en-us/articles/360038850792) al
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PhoneSharedLineGroupsApi(
+$apiInstance = new Zoom\Api\Api\PhoneSharedLineGroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -297,9 +297,9 @@ Members of the [shared line group](https://support.zoom.us/hc/en-us/articles/360
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PhoneSharedLineGroupsApi(
+$apiInstance = new Zoom\Api\Api\PhoneSharedLineGroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -338,7 +338,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getASharedLineGroup**
-> \Swagger\Client\Model\InlineResponse20099 getASharedLineGroup($shared_line_group_id)
+> \Zoom\Api\Model\InlineResponse20099 getASharedLineGroup($shared_line_group_id)
 
 Get a Shared Line Group
 
@@ -350,9 +350,9 @@ A [shared line group](https://support.zoom.us/hc/en-us/articles/360038850792) al
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PhoneSharedLineGroupsApi(
+$apiInstance = new Zoom\Api\Api\PhoneSharedLineGroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -377,7 +377,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse20099**](../Model/InlineResponse20099.md)
+[**\Zoom\Api\Model\InlineResponse20099**](../Model/InlineResponse20099.md)
 
 ### Authorization
 
@@ -403,16 +403,16 @@ A [shared line group](https://support.zoom.us/hc/en-us/articles/360038850792) al
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
-$apiInstance = new Swagger\Client\Api\PhoneSharedLineGroupsApi(
+$apiInstance = new Zoom\Api\Api\PhoneSharedLineGroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $shared_line_group_id = "shared_line_group_id_example"; // string | Unique identifier of the shared line group that is to be updated.
-$body = new \Swagger\Client\Model\Body79(); // \Swagger\Client\Model\Body79 | 
+$body = new \Zoom\Api\Model\Body79(); // \Zoom\Api\Model\Body79 | 
 
 try {
     $result = $apiInstance->updateASharedLineGroup($shared_line_group_id, $body);
@@ -428,7 +428,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **shared_line_group_id** | **string**| Unique identifier of the shared line group that is to be updated. |
- **body** | [**\Swagger\Client\Model\Body79**](../Model/Body79.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\Body79**](../Model/Body79.md)|  | [optional]
 
 ### Return type
 

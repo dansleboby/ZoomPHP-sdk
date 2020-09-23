@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * PhonesharedLineGroupssharedLineGroupIdmembersMembers Class Doc Comment
  *
  * @category Class
  * @description Members can comprise of users on the account as well as common area phones. You can add a maximum of 10 members at once.
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,7 +58,7 @@ class PhonesharedLineGroupssharedLineGroupIdmembersMembers implements ModelInter
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'users' => '\Swagger\Client\Model\PhonesharedLineGroupssharedLineGroupIdmembersMembersUsers[]',
+        'users' => '\Zoom\Api\Model\PhonesharedLineGroupssharedLineGroupIdmembersMembersUsers[]',
         'common_area_phone_ids' => 'string[]'
     ];
 
@@ -214,7 +214,7 @@ class PhonesharedLineGroupssharedLineGroupIdmembersMembers implements ModelInter
     /**
      * Gets users
      *
-     * @return \Swagger\Client\Model\PhonesharedLineGroupssharedLineGroupIdmembersMembersUsers[]
+     * @return \Zoom\Api\Model\PhonesharedLineGroupssharedLineGroupIdmembersMembersUsers[]
      */
     public function getUsers()
     {
@@ -224,7 +224,7 @@ class PhonesharedLineGroupssharedLineGroupIdmembersMembers implements ModelInter
     /**
      * Sets users
      *
-     * @param \Swagger\Client\Model\PhonesharedLineGroupssharedLineGroupIdmembersMembersUsers[] $users Zoom Phone users on the account.
+     * @param \Zoom\Api\Model\PhonesharedLineGroupssharedLineGroupIdmembersMembersUsers[] $users Zoom Phone users on the account.
      *
      * @return $this
      */

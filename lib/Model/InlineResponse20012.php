@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse20012 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -61,7 +61,7 @@ class InlineResponse20012 implements ModelInterface, ArrayAccess
         'owner_id' => 'string',
         'owner_email' => 'string',
         'created_at' => '\DateTime',
-        'options' => '\Swagger\Client\Model\AccountsOptions',
+        'options' => '\Zoom\Api\Model\AccountsOptions',
         'vanity_url' => 'string'
     ];
 
@@ -333,7 +333,7 @@ class InlineResponse20012 implements ModelInterface, ArrayAccess
     /**
      * Gets options
      *
-     * @return \Swagger\Client\Model\AccountsOptions
+     * @return \Zoom\Api\Model\AccountsOptions
      */
     public function getOptions()
     {
@@ -343,7 +343,7 @@ class InlineResponse20012 implements ModelInterface, ArrayAccess
     /**
      * Sets options
      *
-     * @param \Swagger\Client\Model\AccountsOptions $options options
+     * @param \Zoom\Api\Model\AccountsOptions $options options
      *
      * @return $this
      */

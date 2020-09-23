@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **duration** | **int** | The scheduled duration of the meeting. | [optional] 
 **total_size** | **int** | The total size of the meeting in bytes. | [optional] 
 **recording_count** | **int** | The total number of recordings retrieved from the account. | [optional] 
-**recording_files** | [**\Swagger\Client\Model\InlineResponse20073RecordingFiles[]**](InlineResponse20073RecordingFiles.md) | Recording files object | [optional] 
+**recording_files** | [**\Zoom\Api\Model\InlineResponse20073RecordingFiles[]**](InlineResponse20073RecordingFiles.md) | Recording files object | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

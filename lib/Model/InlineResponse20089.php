@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse20089 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -61,9 +61,9 @@ class InlineResponse20089 implements ModelInterface, ArrayAccess
         'display_name' => 'string',
         'device_type' => 'string',
         'mac_address' => 'string',
-        'assignee' => '\Swagger\Client\Model\InlineResponse20089Assignee',
+        'assignee' => '\Zoom\Api\Model\InlineResponse20089Assignee',
         'status' => 'string',
-        'site' => '\Swagger\Client\Model\InlineResponse20088Site'
+        'site' => '\Zoom\Api\Model\InlineResponse20088Site'
     ];
 
     /**
@@ -362,7 +362,7 @@ class InlineResponse20089 implements ModelInterface, ArrayAccess
     /**
      * Gets assignee
      *
-     * @return \Swagger\Client\Model\InlineResponse20089Assignee
+     * @return \Zoom\Api\Model\InlineResponse20089Assignee
      */
     public function getAssignee()
     {
@@ -372,7 +372,7 @@ class InlineResponse20089 implements ModelInterface, ArrayAccess
     /**
      * Sets assignee
      *
-     * @param \Swagger\Client\Model\InlineResponse20089Assignee $assignee assignee
+     * @param \Zoom\Api\Model\InlineResponse20089Assignee $assignee assignee
      *
      * @return $this
      */
@@ -419,7 +419,7 @@ class InlineResponse20089 implements ModelInterface, ArrayAccess
     /**
      * Gets site
      *
-     * @return \Swagger\Client\Model\InlineResponse20088Site
+     * @return \Zoom\Api\Model\InlineResponse20088Site
      */
     public function getSite()
     {
@@ -429,7 +429,7 @@ class InlineResponse20089 implements ModelInterface, ArrayAccess
     /**
      * Sets site
      *
-     * @param \Swagger\Client\Model\InlineResponse20088Site $site site
+     * @param \Zoom\Api\Model\InlineResponse20088Site $site site
      *
      * @return $this
      */

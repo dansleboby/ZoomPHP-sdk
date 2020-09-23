@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * Body83 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,7 +58,7 @@ class Body83 implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'method' => 'string',
-        'params' => '\Swagger\Client\Model\V2roomsideventsParams'
+        'params' => '\Zoom\Api\Model\V2roomsideventsParams'
     ];
 
     /**
@@ -237,7 +237,7 @@ class Body83 implements ModelInterface, ArrayAccess
     /**
      * Gets params
      *
-     * @return \Swagger\Client\Model\V2roomsideventsParams
+     * @return \Zoom\Api\Model\V2roomsideventsParams
      */
     public function getParams()
     {
@@ -247,7 +247,7 @@ class Body83 implements ModelInterface, ArrayAccess
     /**
      * Sets params
      *
-     * @param \Swagger\Client\Model\V2roomsideventsParams $params params
+     * @param \Zoom\Api\Model\V2roomsideventsParams $params params
      *
      * @return $this
      */

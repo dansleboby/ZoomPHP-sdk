@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse2016 Class Doc Comment
  *
  * @category Class
  * @description Account Plans object.
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,14 +58,14 @@ class InlineResponse2016 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'plan_base' => '\Swagger\Client\Model\InlineResponse2016PlanBase',
-        'plan_zoom_rooms' => '\Swagger\Client\Model\InlineResponse2016PlanZoomRooms',
-        'plan_room_connector' => '\Swagger\Client\Model\InlineResponse2016PlanZoomRooms',
-        'plan_large_meeting' => '\Swagger\Client\Model\InlineResponse2016PlanZoomRooms[]',
-        'plan_webinar' => '\Swagger\Client\Model\InlineResponse2016PlanZoomRooms[]',
+        'plan_base' => '\Zoom\Api\Model\InlineResponse2016PlanBase',
+        'plan_zoom_rooms' => '\Zoom\Api\Model\InlineResponse2016PlanZoomRooms',
+        'plan_room_connector' => '\Zoom\Api\Model\InlineResponse2016PlanZoomRooms',
+        'plan_large_meeting' => '\Zoom\Api\Model\InlineResponse2016PlanZoomRooms[]',
+        'plan_webinar' => '\Zoom\Api\Model\InlineResponse2016PlanZoomRooms[]',
         'plan_recording' => 'string',
-        'plan_audio' => '\Swagger\Client\Model\InlineResponse2016PlanAudio',
-        'plan_phone' => '\Swagger\Client\Model\PhonePlan2'
+        'plan_audio' => '\Zoom\Api\Model\InlineResponse2016PlanAudio',
+        'plan_phone' => '\Zoom\Api\Model\PhonePlan2'
     ];
 
     /**
@@ -253,7 +253,7 @@ class InlineResponse2016 implements ModelInterface, ArrayAccess
     /**
      * Gets plan_base
      *
-     * @return \Swagger\Client\Model\InlineResponse2016PlanBase
+     * @return \Zoom\Api\Model\InlineResponse2016PlanBase
      */
     public function getPlanBase()
     {
@@ -263,7 +263,7 @@ class InlineResponse2016 implements ModelInterface, ArrayAccess
     /**
      * Sets plan_base
      *
-     * @param \Swagger\Client\Model\InlineResponse2016PlanBase $plan_base plan_base
+     * @param \Zoom\Api\Model\InlineResponse2016PlanBase $plan_base plan_base
      *
      * @return $this
      */
@@ -277,7 +277,7 @@ class InlineResponse2016 implements ModelInterface, ArrayAccess
     /**
      * Gets plan_zoom_rooms
      *
-     * @return \Swagger\Client\Model\InlineResponse2016PlanZoomRooms
+     * @return \Zoom\Api\Model\InlineResponse2016PlanZoomRooms
      */
     public function getPlanZoomRooms()
     {
@@ -287,7 +287,7 @@ class InlineResponse2016 implements ModelInterface, ArrayAccess
     /**
      * Sets plan_zoom_rooms
      *
-     * @param \Swagger\Client\Model\InlineResponse2016PlanZoomRooms $plan_zoom_rooms plan_zoom_rooms
+     * @param \Zoom\Api\Model\InlineResponse2016PlanZoomRooms $plan_zoom_rooms plan_zoom_rooms
      *
      * @return $this
      */
@@ -301,7 +301,7 @@ class InlineResponse2016 implements ModelInterface, ArrayAccess
     /**
      * Gets plan_room_connector
      *
-     * @return \Swagger\Client\Model\InlineResponse2016PlanZoomRooms
+     * @return \Zoom\Api\Model\InlineResponse2016PlanZoomRooms
      */
     public function getPlanRoomConnector()
     {
@@ -311,7 +311,7 @@ class InlineResponse2016 implements ModelInterface, ArrayAccess
     /**
      * Sets plan_room_connector
      *
-     * @param \Swagger\Client\Model\InlineResponse2016PlanZoomRooms $plan_room_connector plan_room_connector
+     * @param \Zoom\Api\Model\InlineResponse2016PlanZoomRooms $plan_room_connector plan_room_connector
      *
      * @return $this
      */
@@ -325,7 +325,7 @@ class InlineResponse2016 implements ModelInterface, ArrayAccess
     /**
      * Gets plan_large_meeting
      *
-     * @return \Swagger\Client\Model\InlineResponse2016PlanZoomRooms[]
+     * @return \Zoom\Api\Model\InlineResponse2016PlanZoomRooms[]
      */
     public function getPlanLargeMeeting()
     {
@@ -335,7 +335,7 @@ class InlineResponse2016 implements ModelInterface, ArrayAccess
     /**
      * Sets plan_large_meeting
      *
-     * @param \Swagger\Client\Model\InlineResponse2016PlanZoomRooms[] $plan_large_meeting Additional large meeting Plans.
+     * @param \Zoom\Api\Model\InlineResponse2016PlanZoomRooms[] $plan_large_meeting Additional large meeting Plans.
      *
      * @return $this
      */
@@ -349,7 +349,7 @@ class InlineResponse2016 implements ModelInterface, ArrayAccess
     /**
      * Gets plan_webinar
      *
-     * @return \Swagger\Client\Model\InlineResponse2016PlanZoomRooms[]
+     * @return \Zoom\Api\Model\InlineResponse2016PlanZoomRooms[]
      */
     public function getPlanWebinar()
     {
@@ -359,7 +359,7 @@ class InlineResponse2016 implements ModelInterface, ArrayAccess
     /**
      * Sets plan_webinar
      *
-     * @param \Swagger\Client\Model\InlineResponse2016PlanZoomRooms[] $plan_webinar Additional webinar plans.
+     * @param \Zoom\Api\Model\InlineResponse2016PlanZoomRooms[] $plan_webinar Additional webinar plans.
      *
      * @return $this
      */
@@ -397,7 +397,7 @@ class InlineResponse2016 implements ModelInterface, ArrayAccess
     /**
      * Gets plan_audio
      *
-     * @return \Swagger\Client\Model\InlineResponse2016PlanAudio
+     * @return \Zoom\Api\Model\InlineResponse2016PlanAudio
      */
     public function getPlanAudio()
     {
@@ -407,7 +407,7 @@ class InlineResponse2016 implements ModelInterface, ArrayAccess
     /**
      * Sets plan_audio
      *
-     * @param \Swagger\Client\Model\InlineResponse2016PlanAudio $plan_audio plan_audio
+     * @param \Zoom\Api\Model\InlineResponse2016PlanAudio $plan_audio plan_audio
      *
      * @return $this
      */
@@ -421,7 +421,7 @@ class InlineResponse2016 implements ModelInterface, ArrayAccess
     /**
      * Gets plan_phone
      *
-     * @return \Swagger\Client\Model\PhonePlan2
+     * @return \Zoom\Api\Model\PhonePlan2
      */
     public function getPlanPhone()
     {
@@ -431,7 +431,7 @@ class InlineResponse2016 implements ModelInterface, ArrayAccess
     /**
      * Sets plan_phone
      *
-     * @param \Swagger\Client\Model\PhonePlan2 $plan_phone plan_phone
+     * @param \Zoom\Api\Model\PhonePlan2 $plan_phone plan_phone
      *
      * @return $this
      */

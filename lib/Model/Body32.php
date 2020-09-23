@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * Body32 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -58,7 +58,7 @@ class Body32 implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'action' => 'string',
-        'user_info' => '\Swagger\Client\Model\UsersUserInfo'
+        'user_info' => '\Zoom\Api\Model\UsersUserInfo'
     ];
 
     /**
@@ -276,7 +276,7 @@ class Body32 implements ModelInterface, ArrayAccess
     /**
      * Gets user_info
      *
-     * @return \Swagger\Client\Model\UsersUserInfo
+     * @return \Zoom\Api\Model\UsersUserInfo
      */
     public function getUserInfo()
     {
@@ -286,7 +286,7 @@ class Body32 implements ModelInterface, ArrayAccess
     /**
      * Sets user_info
      *
-     * @param \Swagger\Client\Model\UsersUserInfo $user_info user_info
+     * @param \Zoom\Api\Model\UsersUserInfo $user_info user_info
      *
      * @return $this
      */

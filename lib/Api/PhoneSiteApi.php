@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Zoom\Api\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Zoom\Api\ApiException;
+use Zoom\Api\Configuration;
+use Zoom\Api\HeaderSelector;
+use Zoom\Api\ObjectSerializer;
 
 /**
  * PhoneSiteApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -92,11 +92,11 @@ class PhoneSiteApi
      *
      * Create a Phone Site
      *
-     * @param  \Swagger\Client\Model\Body3 $body body (optional)
+     * @param  \Zoom\Api\Model\Body3 $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse204
+     * @return \Zoom\Api\Model\InlineResponse204
      */
     public function createPhoneSite($body = null)
     {
@@ -109,15 +109,15 @@ class PhoneSiteApi
      *
      * Create a Phone Site
      *
-     * @param  \Swagger\Client\Model\Body3 $body (optional)
+     * @param  \Zoom\Api\Model\Body3 $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse204, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse204, HTTP status code, HTTP response headers (array of strings)
      */
     public function createPhoneSiteWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse204';
+        $returnType = '\Zoom\Api\Model\InlineResponse204';
         $request = $this->createPhoneSiteRequest($body);
 
         try {
@@ -169,7 +169,7 @@ class PhoneSiteApi
                 case 204:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse204',
+                        '\Zoom\Api\Model\InlineResponse204',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -184,7 +184,7 @@ class PhoneSiteApi
      *
      * Create a Phone Site
      *
-     * @param  \Swagger\Client\Model\Body3 $body (optional)
+     * @param  \Zoom\Api\Model\Body3 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -204,14 +204,14 @@ class PhoneSiteApi
      *
      * Create a Phone Site
      *
-     * @param  \Swagger\Client\Model\Body3 $body (optional)
+     * @param  \Zoom\Api\Model\Body3 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createPhoneSiteAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse204';
+        $returnType = '\Zoom\Api\Model\InlineResponse204';
         $request = $this->createPhoneSiteRequest($body);
 
         return $this->client
@@ -254,7 +254,7 @@ class PhoneSiteApi
     /**
      * Create request for operation 'createPhoneSite'
      *
-     * @param  \Swagger\Client\Model\Body3 $body (optional)
+     * @param  \Zoom\Api\Model\Body3 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -357,7 +357,7 @@ class PhoneSiteApi
      * @param  string $site_id Unique Identifier of the Site. (required)
      * @param  string $transfer_site_id The Site ID of another site where the assets of the current site (users, numbers and phones) can be transferred to. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -375,7 +375,7 @@ class PhoneSiteApi
      * @param  string $site_id Unique Identifier of the Site. (required)
      * @param  string $transfer_site_id The Site ID of another site where the assets of the current site (users, numbers and phones) can be transferred to. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -644,9 +644,9 @@ class PhoneSiteApi
      *
      * @param  string $site_id Unique Identifier of the Site. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse2004
+     * @return \Zoom\Api\Model\InlineResponse2004
      */
     public function getASite($site_id)
     {
@@ -661,13 +661,13 @@ class PhoneSiteApi
      *
      * @param  string $site_id Unique Identifier of the Site. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse2004, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse2004, HTTP status code, HTTP response headers (array of strings)
      */
     public function getASiteWithHttpInfo($site_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse2004';
+        $returnType = '\Zoom\Api\Model\InlineResponse2004';
         $request = $this->getASiteRequest($site_id);
 
         try {
@@ -719,7 +719,7 @@ class PhoneSiteApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse2004',
+                        '\Zoom\Api\Model\InlineResponse2004',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -761,7 +761,7 @@ class PhoneSiteApi
      */
     public function getASiteAsyncWithHttpInfo($site_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse2004';
+        $returnType = '\Zoom\Api\Model\InlineResponse2004';
         $request = $this->getASiteRequest($site_id);
 
         return $this->client
@@ -918,9 +918,9 @@ class PhoneSiteApi
      * @param  int $page_size The number of records returned within a single API call. (optional, default to 30)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse2003
+     * @return \Zoom\Api\Model\InlineResponse2003
      */
     public function listPhoneSites($page_size = '30', $next_page_token = null)
     {
@@ -936,13 +936,13 @@ class PhoneSiteApi
      * @param  int $page_size The number of records returned within a single API call. (optional, default to 30)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse2003, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse2003, HTTP status code, HTTP response headers (array of strings)
      */
     public function listPhoneSitesWithHttpInfo($page_size = '30', $next_page_token = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse2003';
+        $returnType = '\Zoom\Api\Model\InlineResponse2003';
         $request = $this->listPhoneSitesRequest($page_size, $next_page_token);
 
         try {
@@ -994,7 +994,7 @@ class PhoneSiteApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse2003',
+                        '\Zoom\Api\Model\InlineResponse2003',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1038,7 +1038,7 @@ class PhoneSiteApi
      */
     public function listPhoneSitesAsyncWithHttpInfo($page_size = '30', $next_page_token = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse2003';
+        $returnType = '\Zoom\Api\Model\InlineResponse2003';
         $request = $this->listPhoneSitesRequest($page_size, $next_page_token);
 
         return $this->client
@@ -1192,9 +1192,9 @@ class PhoneSiteApi
      * Update Phone Site Details
      *
      * @param  string $site_id Unique Identifier of the Site. (required)
-     * @param  \Swagger\Client\Model\Body4 $body body (optional)
+     * @param  \Zoom\Api\Model\Body4 $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -1210,9 +1210,9 @@ class PhoneSiteApi
      * Update Phone Site Details
      *
      * @param  string $site_id Unique Identifier of the Site. (required)
-     * @param  \Swagger\Client\Model\Body4 $body (optional)
+     * @param  \Zoom\Api\Model\Body4 $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1286,7 +1286,7 @@ class PhoneSiteApi
      * Update Phone Site Details
      *
      * @param  string $site_id Unique Identifier of the Site. (required)
-     * @param  \Swagger\Client\Model\Body4 $body (optional)
+     * @param  \Zoom\Api\Model\Body4 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1307,7 +1307,7 @@ class PhoneSiteApi
      * Update Phone Site Details
      *
      * @param  string $site_id Unique Identifier of the Site. (required)
-     * @param  \Swagger\Client\Model\Body4 $body (optional)
+     * @param  \Zoom\Api\Model\Body4 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1358,7 +1358,7 @@ class PhoneSiteApi
      * Create request for operation 'updateSiteDetails'
      *
      * @param  string $site_id Unique Identifier of the Site. (required)
-     * @param  \Swagger\Client\Model\Body4 $body (optional)
+     * @param  \Zoom\Api\Model\Body4 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * InlineResponse20018 Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -57,7 +57,7 @@ class InlineResponse20018 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'members' => '\Swagger\Client\Model\InlineResponse20018Members[]',
+        'members' => '\Zoom\Api\Model\InlineResponse20018Members[]',
         'page_count' => 'int',
         'page_number' => 'int',
         'page_size' => 'int',
@@ -231,7 +231,7 @@ class InlineResponse20018 implements ModelInterface, ArrayAccess
     /**
      * Gets members
      *
-     * @return \Swagger\Client\Model\InlineResponse20018Members[]
+     * @return \Zoom\Api\Model\InlineResponse20018Members[]
      */
     public function getMembers()
     {
@@ -241,7 +241,7 @@ class InlineResponse20018 implements ModelInterface, ArrayAccess
     /**
      * Sets members
      *
-     * @param \Swagger\Client\Model\InlineResponse20018Members[] $members members
+     * @param \Zoom\Api\Model\InlineResponse20018Members[] $members members
      *
      * @return $this
      */

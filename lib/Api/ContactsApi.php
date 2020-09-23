@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Zoom\Api\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Zoom\Api\ApiException;
+use Zoom\Api\Configuration;
+use Zoom\Api\HeaderSelector;
+use Zoom\Api\ObjectSerializer;
 
 /**
  * ContactsApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -95,9 +95,9 @@ class ContactsApi
      * @param  string $contact_id The user&#39;s contact Id or email address. The contact can be either a company contact or an external contact. (required)
      * @param  bool $query_presence_status The presence status of the contact.  Include this query parameter with a value of &#x60;true&#x60; to get the presence status of the contact in the response. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse2009
+     * @return \Zoom\Api\Model\InlineResponse2009
      */
     public function getUserContact($contact_id, $query_presence_status = null)
     {
@@ -113,13 +113,13 @@ class ContactsApi
      * @param  string $contact_id The user&#39;s contact Id or email address. The contact can be either a company contact or an external contact. (required)
      * @param  bool $query_presence_status The presence status of the contact.  Include this query parameter with a value of &#x60;true&#x60; to get the presence status of the contact in the response. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse2009, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse2009, HTTP status code, HTTP response headers (array of strings)
      */
     public function getUserContactWithHttpInfo($contact_id, $query_presence_status = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse2009';
+        $returnType = '\Zoom\Api\Model\InlineResponse2009';
         $request = $this->getUserContactRequest($contact_id, $query_presence_status);
 
         try {
@@ -171,7 +171,7 @@ class ContactsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse2009',
+                        '\Zoom\Api\Model\InlineResponse2009',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -215,7 +215,7 @@ class ContactsApi
      */
     public function getUserContactAsyncWithHttpInfo($contact_id, $query_presence_status = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse2009';
+        $returnType = '\Zoom\Api\Model\InlineResponse2009';
         $request = $this->getUserContactRequest($contact_id, $query_presence_status);
 
         return $this->client
@@ -378,9 +378,9 @@ class ContactsApi
      * @param  int $page_size The number of records returned with a single API call. (optional, default to 10)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse2008
+     * @return \Zoom\Api\Model\InlineResponse2008
      */
     public function getUserContacts($type = 'company', $page_size = '10', $next_page_token = null)
     {
@@ -397,13 +397,13 @@ class ContactsApi
      * @param  int $page_size The number of records returned with a single API call. (optional, default to 10)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse2008, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse2008, HTTP status code, HTTP response headers (array of strings)
      */
     public function getUserContactsWithHttpInfo($type = 'company', $page_size = '10', $next_page_token = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse2008';
+        $returnType = '\Zoom\Api\Model\InlineResponse2008';
         $request = $this->getUserContactsRequest($type, $page_size, $next_page_token);
 
         try {
@@ -455,7 +455,7 @@ class ContactsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse2008',
+                        '\Zoom\Api\Model\InlineResponse2008',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -501,7 +501,7 @@ class ContactsApi
      */
     public function getUserContactsAsyncWithHttpInfo($type = 'company', $page_size = '10', $next_page_token = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse2008';
+        $returnType = '\Zoom\Api\Model\InlineResponse2008';
         $request = $this->getUserContactsRequest($type, $page_size, $next_page_token);
 
         return $this->client
@@ -664,9 +664,9 @@ class ContactsApi
      * @param  int $page_size The number of records to be returned with a single API call. (optional, default to 1)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse2005
+     * @return \Zoom\Api\Model\InlineResponse2005
      */
     public function searchCompanyContacts($search_key, $query_presence_status = null, $page_size = '1', $next_page_token = null)
     {
@@ -684,13 +684,13 @@ class ContactsApi
      * @param  int $page_size The number of records to be returned with a single API call. (optional, default to 1)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse2005, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse2005, HTTP status code, HTTP response headers (array of strings)
      */
     public function searchCompanyContactsWithHttpInfo($search_key, $query_presence_status = null, $page_size = '1', $next_page_token = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse2005';
+        $returnType = '\Zoom\Api\Model\InlineResponse2005';
         $request = $this->searchCompanyContactsRequest($search_key, $query_presence_status, $page_size, $next_page_token);
 
         try {
@@ -742,7 +742,7 @@ class ContactsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse2005',
+                        '\Zoom\Api\Model\InlineResponse2005',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -790,7 +790,7 @@ class ContactsApi
      */
     public function searchCompanyContactsAsyncWithHttpInfo($search_key, $query_presence_status = null, $page_size = '1', $next_page_token = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse2005';
+        $returnType = '\Zoom\Api\Model\InlineResponse2005';
         $request = $this->searchCompanyContactsRequest($search_key, $query_presence_status, $page_size, $next_page_token);
 
         return $this->client

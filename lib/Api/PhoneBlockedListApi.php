@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Zoom\Api\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use Swagger\Client\ApiException;
-use Swagger\Client\Configuration;
-use Swagger\Client\HeaderSelector;
-use Swagger\Client\ObjectSerializer;
+use Zoom\Api\ApiException;
+use Zoom\Api\Configuration;
+use Zoom\Api\HeaderSelector;
+use Zoom\Api\ObjectSerializer;
 
 /**
  * PhoneBlockedListApi Class Doc Comment
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -92,11 +92,11 @@ class PhoneBlockedListApi
      *
      * Create a Blocked List
      *
-     * @param  \Swagger\Client\Model\Body77 $body body (optional)
+     * @param  \Zoom\Api\Model\Body77 $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20126
+     * @return \Zoom\Api\Model\InlineResponse20126
      */
     public function addAnumberToBlockedList($body = null)
     {
@@ -109,15 +109,15 @@ class PhoneBlockedListApi
      *
      * Create a Blocked List
      *
-     * @param  \Swagger\Client\Model\Body77 $body (optional)
+     * @param  \Zoom\Api\Model\Body77 $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20126, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20126, HTTP status code, HTTP response headers (array of strings)
      */
     public function addAnumberToBlockedListWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20126';
+        $returnType = '\Zoom\Api\Model\InlineResponse20126';
         $request = $this->addAnumberToBlockedListRequest($body);
 
         try {
@@ -169,7 +169,7 @@ class PhoneBlockedListApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20126',
+                        '\Zoom\Api\Model\InlineResponse20126',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -184,7 +184,7 @@ class PhoneBlockedListApi
      *
      * Create a Blocked List
      *
-     * @param  \Swagger\Client\Model\Body77 $body (optional)
+     * @param  \Zoom\Api\Model\Body77 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -204,14 +204,14 @@ class PhoneBlockedListApi
      *
      * Create a Blocked List
      *
-     * @param  \Swagger\Client\Model\Body77 $body (optional)
+     * @param  \Zoom\Api\Model\Body77 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function addAnumberToBlockedListAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20126';
+        $returnType = '\Zoom\Api\Model\InlineResponse20126';
         $request = $this->addAnumberToBlockedListRequest($body);
 
         return $this->client
@@ -254,7 +254,7 @@ class PhoneBlockedListApi
     /**
      * Create request for operation 'addAnumberToBlockedList'
      *
-     * @param  \Swagger\Client\Model\Body77 $body (optional)
+     * @param  \Zoom\Api\Model\Body77 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -356,7 +356,7 @@ class PhoneBlockedListApi
      *
      * @param  string $blocked_list_id Unique Identifier of the blocked list. This can be retrieved from the List Blocked List API. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -373,7 +373,7 @@ class PhoneBlockedListApi
      *
      * @param  string $blocked_list_id Unique Identifier of the blocked list. This can be retrieved from the List Blocked List API. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -629,9 +629,9 @@ class PhoneBlockedListApi
      *
      * @param  string $blocked_list_id Unique Identifier of the blocked list. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20098
+     * @return \Zoom\Api\Model\InlineResponse20098
      */
     public function getABlockedList($blocked_list_id)
     {
@@ -646,13 +646,13 @@ class PhoneBlockedListApi
      *
      * @param  string $blocked_list_id Unique Identifier of the blocked list. (required)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20098, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20098, HTTP status code, HTTP response headers (array of strings)
      */
     public function getABlockedListWithHttpInfo($blocked_list_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20098';
+        $returnType = '\Zoom\Api\Model\InlineResponse20098';
         $request = $this->getABlockedListRequest($blocked_list_id);
 
         try {
@@ -704,7 +704,7 @@ class PhoneBlockedListApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20098',
+                        '\Zoom\Api\Model\InlineResponse20098',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -746,7 +746,7 @@ class PhoneBlockedListApi
      */
     public function getABlockedListAsyncWithHttpInfo($blocked_list_id)
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20098';
+        $returnType = '\Zoom\Api\Model\InlineResponse20098';
         $request = $this->getABlockedListRequest($blocked_list_id);
 
         return $this->client
@@ -903,9 +903,9 @@ class PhoneBlockedListApi
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      * @param  int $page_size The total number of records returned from a single API call. (optional, default to 30)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse20097
+     * @return \Zoom\Api\Model\InlineResponse20097
      */
     public function listBlockedList($next_page_token = null, $page_size = '30')
     {
@@ -921,13 +921,13 @@ class PhoneBlockedListApi
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      * @param  int $page_size The total number of records returned from a single API call. (optional, default to 30)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse20097, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\InlineResponse20097, HTTP status code, HTTP response headers (array of strings)
      */
     public function listBlockedListWithHttpInfo($next_page_token = null, $page_size = '30')
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20097';
+        $returnType = '\Zoom\Api\Model\InlineResponse20097';
         $request = $this->listBlockedListRequest($next_page_token, $page_size);
 
         try {
@@ -979,7 +979,7 @@ class PhoneBlockedListApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse20097',
+                        '\Zoom\Api\Model\InlineResponse20097',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1023,7 +1023,7 @@ class PhoneBlockedListApi
      */
     public function listBlockedListAsyncWithHttpInfo($next_page_token = null, $page_size = '30')
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse20097';
+        $returnType = '\Zoom\Api\Model\InlineResponse20097';
         $request = $this->listBlockedListRequest($next_page_token, $page_size);
 
         return $this->client
@@ -1177,9 +1177,9 @@ class PhoneBlockedListApi
      * Update a Blocked List
      *
      * @param  string $blocked_list_id Unique Identifier for the blocked list. (required)
-     * @param  \Swagger\Client\Model\Body78 $body body (optional)
+     * @param  \Zoom\Api\Model\Body78 $body body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -1195,9 +1195,9 @@ class PhoneBlockedListApi
      * Update a Blocked List
      *
      * @param  string $blocked_list_id Unique Identifier for the blocked list. (required)
-     * @param  \Swagger\Client\Model\Body78 $body (optional)
+     * @param  \Zoom\Api\Model\Body78 $body (optional)
      *
-     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1271,7 +1271,7 @@ class PhoneBlockedListApi
      * Update a Blocked List
      *
      * @param  string $blocked_list_id Unique Identifier for the blocked list. (required)
-     * @param  \Swagger\Client\Model\Body78 $body (optional)
+     * @param  \Zoom\Api\Model\Body78 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1292,7 +1292,7 @@ class PhoneBlockedListApi
      * Update a Blocked List
      *
      * @param  string $blocked_list_id Unique Identifier for the blocked list. (required)
-     * @param  \Swagger\Client\Model\Body78 $body (optional)
+     * @param  \Zoom\Api\Model\Body78 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1343,7 +1343,7 @@ class PhoneBlockedListApi
      * Create request for operation 'updateBlockedList'
      *
      * @param  string $blocked_list_id Unique Identifier for the blocked list. (required)
-     * @param  \Swagger\Client\Model\Body78 $body (optional)
+     * @param  \Zoom\Api\Model\Body78 $body (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

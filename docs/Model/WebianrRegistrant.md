@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **city** | **string** | Registrant&#39;s city. | [optional] 
 **comments** | **string** | A field that allows registrants to provide any questions or comments that they might have. | [optional] 
 **country** | **string** | Registrant&#39;s country. The value of this field must be in two-letter abbreviated form and must match the ID field provided in the [Countries](https://marketplace.zoom.us/docs/api-reference/other-references/abbreviation-lists#countries) table. | [optional] 
-**custom_questions** | [**\Swagger\Client\Model\WebianrRegistrantCustomQuestions[]**](WebianrRegistrantCustomQuestions.md) | Custom questions. | [optional] 
+**custom_questions** | [**\Zoom\Api\Model\WebianrRegistrantCustomQuestions[]**](WebianrRegistrantCustomQuestions.md) | Custom questions. | [optional] 
 **email** | **string** | A valid email address of the registrant. | 
 **first_name** | **string** | Registrant&#39;s first name. | 
 **industry** | **string** | Registrant&#39;s Industry. | [optional] 

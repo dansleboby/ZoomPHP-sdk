@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -27,17 +27,17 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \Swagger\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * AccountSettingsScheduleMeeting Class Doc Comment
  *
  * @category Class
  * @description Account Settings: Schedule Meeting.
- * @package  Swagger\Client
+ * @package  Zoom\Api
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
@@ -73,7 +73,7 @@ class AccountSettingsScheduleMeeting implements ModelInterface, ArrayAccess
         'require_password_for_scheduled_meetings' => 'bool',
         'require_password_for_instant_meetings' => 'bool',
         'require_password_for_pmi_meetings' => 'string',
-        'meeting_password_requirement' => '\Swagger\Client\Model\AccountSettingsScheduleMeetingMeetingPasswordRequirement',
+        'meeting_password_requirement' => '\Zoom\Api\Model\AccountSettingsScheduleMeetingMeetingPasswordRequirement',
         'personal_meeting' => 'bool'
     ];
 
@@ -734,7 +734,7 @@ class AccountSettingsScheduleMeeting implements ModelInterface, ArrayAccess
     /**
      * Gets meeting_password_requirement
      *
-     * @return \Swagger\Client\Model\AccountSettingsScheduleMeetingMeetingPasswordRequirement
+     * @return \Zoom\Api\Model\AccountSettingsScheduleMeetingMeetingPasswordRequirement
      */
     public function getMeetingPasswordRequirement()
     {
@@ -744,7 +744,7 @@ class AccountSettingsScheduleMeeting implements ModelInterface, ArrayAccess
     /**
      * Sets meeting_password_requirement
      *
-     * @param \Swagger\Client\Model\AccountSettingsScheduleMeetingMeetingPasswordRequirement $meeting_password_requirement meeting_password_requirement
+     * @param \Zoom\Api\Model\AccountSettingsScheduleMeetingMeetingPasswordRequirement $meeting_password_requirement meeting_password_requirement
      *
      * @return $this
      */
