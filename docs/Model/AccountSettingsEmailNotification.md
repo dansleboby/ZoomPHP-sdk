@@ -1,6 +1,7 @@
-# AccountSettingsEmailNotification
+# # AccountSettingsEmailNotification
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **cloud_recording_avaliable_reminder** | **bool** | Notify host when cloud recording is available. | [optional] 
@@ -10,6 +11,6 @@ Name | Type | Description | Notes
 **alternative_host_reminder** | **bool** | Notify when an alternative host is set or removed from a meeting. | [optional] 
 **schedule_for_reminder** | **bool** | Notify the host there is a meeting is scheduled, rescheduled, or cancelled. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

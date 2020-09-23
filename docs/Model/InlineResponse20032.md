@@ -1,6 +1,7 @@
-# InlineResponse20032
+# # InlineResponse20032
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **from** | [**\DateTime**](\DateTime.md) | Start date for this report | [optional] 
@@ -8,6 +9,6 @@ Name | Type | Description | Notes
 **total_records** | **int** | The number of all records available across pages | [optional] 
 **client_feedbacks** | [**\Zoom\Api\Model\InlineResponse20032ClientFeedbacks[]**](InlineResponse20032ClientFeedbacks.md) |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

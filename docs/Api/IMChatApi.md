@@ -10,7 +10,9 @@ Method | HTTP request | Description
 [**sendimmessages**](IMChatApi.md#sendimmessages) | **POST** /im/users/me/chat/messages | Send IM messages
 
 
-# **imChatMessages**
+
+## imChatMessages
+
 > \Zoom\Api\Model\InlineResponse20021 imChatMessages($session_id, $from, $to, $page_size, $next_page_token)
 
 Retrieve IM Chat Messages
@@ -18,12 +20,15 @@ Retrieve IM Chat Messages
 Retrieve IM chat messages for a specified period of time. <aside>Note: This API only supports oauth2.</aside><br><br>  **Scopes:** `imchat:read`<br>   **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`<br>
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\IMChatApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -31,11 +36,11 @@ $apiInstance = new Zoom\Api\Api\IMChatApi(
     new GuzzleHttp\Client(),
     $config
 );
-$session_id = "session_id_example"; // string | IM chat session ID.
-$from = new \DateTime("2013-10-20"); // \DateTime | Start date in 'yyyy-mm-dd' format. The date range defined by the \"from\" and \"to\" parameters should only be one month as the report includes only one month worth of data at once.
-$to = new \DateTime("2013-10-20"); // \DateTime | End date.
+$session_id = 'session_id_example'; // string | IM chat session ID.
+$from = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Start date in 'yyyy-mm-dd' format. The date range defined by the \"from\" and \"to\" parameters should only be one month as the report includes only one month worth of data at once.
+$to = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | End date.
 $page_size = 30; // int | The number of records returned within a single API call.
-$next_page_token = "next_page_token_example"; // string | The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
+$next_page_token = 'next_page_token_example'; // string | The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
 
 try {
     $result = $apiInstance->imChatMessages($session_id, $from, $to, $page_size, $next_page_token);
@@ -47,6 +52,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -66,12 +72,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **imChatSessions**
+
+## imChatSessions
+
 > \Zoom\Api\Model\InlineResponse20020 imChatSessions($from, $to, $page_size, $next_page_token)
 
 Get IM Chat Sessions
@@ -79,12 +89,15 @@ Get IM Chat Sessions
 Retrieve IM Chat sessions for a specified period of time. <aside>Note: This API only supports Oauth2.</aside><br>    **Scopes:** `imchat:read, imchat:read:admin`<br>  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\IMChatApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -92,10 +105,10 @@ $apiInstance = new Zoom\Api\Api\IMChatApi(
     new GuzzleHttp\Client(),
     $config
 );
-$from = new \DateTime("2013-10-20"); // \DateTime | Start date in 'yyyy-mm-dd' format. The date range defined by the \"from\" and \"to\" parameters should only be one month as the report includes only one month worth of data at once.
-$to = new \DateTime("2013-10-20"); // \DateTime | End date.
+$from = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Start date in 'yyyy-mm-dd' format. The date range defined by the \"from\" and \"to\" parameters should only be one month as the report includes only one month worth of data at once.
+$to = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | End date.
 $page_size = 30; // int | The number of records returned within a single API call.
-$next_page_token = "next_page_token_example"; // string | The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
+$next_page_token = 'next_page_token_example'; // string | The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
 
 try {
     $result = $apiInstance->imChatSessions($from, $to, $page_size, $next_page_token);
@@ -107,6 +120,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -125,12 +139,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **listimmessages**
+
+## listimmessages
+
 > \Zoom\Api\Model\InlineResponse20060 listimmessages($user_id, $chat_user, $channel, $date, $page_size, $next_page_token)
 
 Get User’s IM Messages
@@ -138,12 +156,15 @@ Get User’s IM Messages
 Get IM Chat messages for a specified period of time. <aside>Note: This API only supports Oauth2.</aside><br><br> **Scopes:** `imchat:read`<br> **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`<br>
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\IMChatApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -151,12 +172,12 @@ $apiInstance = new Zoom\Api\Api\IMChatApi(
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = "user_id_example"; // string | The user ID or email address.
-$chat_user = "chat_user_example"; // string | Chat user's ID or email address.
-$channel = "channel_example"; // string | IM Channel's ID.
-$date = "date_example"; // string | IM message's query date time, format as yyyy-MM-dd.
+$user_id = 'user_id_example'; // string | The user ID or email address.
+$chat_user = 'chat_user_example'; // string | Chat user's ID or email address.
+$channel = 'channel_example'; // string | IM Channel's ID.
+$date = 'date_example'; // string | IM message's query date time, format as yyyy-MM-dd.
 $page_size = 30; // int | The number of records returned within a single API call.
-$next_page_token = "next_page_token_example"; // string | The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
+$next_page_token = 'next_page_token_example'; // string | The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
 
 try {
     $result = $apiInstance->listimmessages($user_id, $chat_user, $channel, $date, $page_size, $next_page_token);
@@ -168,6 +189,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -188,25 +210,32 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **sendimmessages**
-> \Zoom\Api\Model\InlineResponse20123 sendimmessages($body, $chat_user)
+
+## sendimmessages
+
+> \Zoom\Api\Model\InlineResponse20123 sendimmessages($chat_user, $body)
 
 Send IM messages
 
 Send chat message to a user. <aside>Note: This API only supports OAuth 2.0.</aside><br><br>**Scope:** `imchat:write`    **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\IMChatApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -214,11 +243,11 @@ $apiInstance = new Zoom\Api\Api\IMChatApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Zoom\Api\Model\Body45(); // \Zoom\Api\Model\Body45 | 
-$chat_user = "chat_user_example"; // string | The email address (registered with Zoom) or the userId of the chat user.
+$chat_user = 'chat_user_example'; // string | The email address (registered with Zoom) or the userId of the chat user.
+$body = new \Zoom\Api\Model\InlineObject45(); // \Zoom\Api\Model\InlineObject45 | 
 
 try {
-    $result = $apiInstance->sendimmessages($body, $chat_user);
+    $result = $apiInstance->sendimmessages($chat_user, $body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling IMChatApi->sendimmessages: ', $e->getMessage(), PHP_EOL;
@@ -228,10 +257,11 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Zoom\Api\Model\Body45**](../Model/Body45.md)|  | [optional]
  **chat_user** | **string**| The email address (registered with Zoom) or the userId of the chat user. | [optional]
+ **body** | [**\Zoom\Api\Model\InlineObject45**](../Model/InlineObject45.md)|  | [optional]
 
 ### Return type
 
@@ -243,8 +273,10 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: application/json, multipart/form-data
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 

@@ -1,6 +1,7 @@
-# CreateWebinar
+# # CreateWebinar
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **topic** | **string** | Webinar topic. | [optional] 
@@ -14,6 +15,6 @@ Name | Type | Description | Notes
 **recurrence** | [**\Zoom\Api\Model\RecurrenceWebinar**](RecurrenceWebinar.md) |  | [optional] 
 **settings** | [**\Zoom\Api\Model\CreateWebinarSettings**](CreateWebinarSettings.md) |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

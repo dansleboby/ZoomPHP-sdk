@@ -1,6 +1,7 @@
-# Device
+# # Device
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **string** | Device name. | 
@@ -8,6 +9,6 @@ Name | Type | Description | Notes
 **ip** | **string** | Device IP. | 
 **encryption** | **string** | Device encryption:&lt;br&gt;&#x60;auto&#x60; - auto.&lt;br&gt;&#x60;yes&#x60; - yes.&lt;br&gt;&#x60;no&#x60; - no. | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

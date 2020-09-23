@@ -1,6 +1,7 @@
-# InlineResponse20072
+# # InlineResponse20072
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **plan_base** | [**\Zoom\Api\Model\InlineResponse20072PlanBase[]**](InlineResponse20072PlanBase.md) | The base plan subscribed for the sub account. | [optional] 
@@ -9,6 +10,6 @@ Name | Type | Description | Notes
 **plan_zoom_rooms** | [**\Zoom\Api\Model\InlineResponse20072PlanZoomRooms[]**](InlineResponse20072PlanZoomRooms.md) | Zoom Rooms Plan | [optional] 
 **plan_recording** | [**\Zoom\Api\Model\InlineResponse20072PlanRecording**](InlineResponse20072PlanRecording.md) |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

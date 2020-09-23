@@ -1,6 +1,7 @@
-# AccountSettingsInMeeting
+# # AccountSettingsInMeeting
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **e2e_encryption** | **bool** | Zoom requires encryption for all data between the Zoom cloud, Zoom client, and Zoom Room. Require encryption for 3rd party endpoints (H323/SIP). | [optional] 
@@ -52,6 +53,6 @@ Name | Type | Description | Notes
 **who_can_share_screen** | **string** | Indicates who can share their screen or content during meetings. The value can be one of the following: &lt;br&gt; &#x60;host&#x60;: Only host can share the screen.&lt;br&gt; &#x60;all&#x60;: Both hosts and attendees can share their screen during meetings. For Webinar, the hosts and panelists can start screen sharing, but not the attendees. | [optional] 
 **who_can_share_screen_when_someone_is_sharing** | **string** | Indicates who is allowed to start sharing screen when someone else in the meeting is sharing their screen. The value can be one of the following:&lt;br&gt; &#x60;host&#x60;: Only a host can share the screen when someone else is sharing.&lt;br&gt; &#x60;all&#x60;: Anyone in the meeting is allowed to start sharing their screen when someone else is sharing. For Webinar, the hosts and panelists can start screen sharing, but not the attendees. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

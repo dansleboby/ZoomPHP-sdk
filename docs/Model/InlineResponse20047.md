@@ -1,6 +1,7 @@
-# InlineResponse20047
+# # InlineResponse20047
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **account_id** | **string** | User&#39;s account ID. | [optional] 
@@ -35,6 +36,6 @@ Name | Type | Description | Notes
 **vanity_url** | **string** | Personal meeting room URL, if the user has one. | [optional] 
 **verified** | **int** | Displays whether user is verified or not. &lt;br&gt; &#x60;1&#x60; - Account verified.&lt;br&gt; &#x60;0&#x60; - Account not verified. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

@@ -1,6 +1,7 @@
-# AccountsaccountIdlockSettingsInMeeting
+# # AccountsAccountIdLockSettingsInMeeting
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **e2e_encryption** | **bool** | Require that all meetings are encrypted using AES. | [optional] 
@@ -35,6 +36,6 @@ Name | Type | Description | Notes
 **screen_sharing** | **bool** | Allow host and participants to share their screen or content during meetings. | [optional] 
 **custom_data_center_regions** | **bool** | If set to &#x60;true&#x60;, account owners and admins on paid accounts can [select data center regions](https://support.zoom.us/hc/en-us/articles/360042411451-Selecting-data-center-regions-for-hosted-meetings-and-webinars) to use for hosting their real-time meeting and webinar traffic. These regions can be provided in the &#x60;data_center_regions&#x60; field in the account settings. If set to &#x60;false&#x60;, the regions cannot be customized and the default regions will be used. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

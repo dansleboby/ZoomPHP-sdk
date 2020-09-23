@@ -1,6 +1,7 @@
-# InlineResponse2005Contacts
+# # InlineResponse2005Contacts
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **string** | User ID of the contact. | [optional] 
@@ -18,6 +19,6 @@ Name | Type | Description | Notes
 **job_title** | **string** | Department of the user as provided in the user&#39;s Zoom profile. | [optional] 
 **location** | **string** | Location of the user as provided in the user&#39;s Zoom profile. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

@@ -1,6 +1,7 @@
-# AccountSettingsRecording
+# # AccountSettingsRecording
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **local_recording** | **bool** | Allow hosts and participants to record the meeting using a local file. | [optional] 
@@ -23,6 +24,6 @@ Name | Type | Description | Notes
 **host_delete_cloud_recording** | **bool** | If the value of this field is set to &#x60;true&#x60;, hosts will be able to delete the recordings. If this option is set to &#x60;false&#x60;, the recordings cannot be deleted by the host and only admin can delete them. | [optional] 
 **required_password_for_existing_cloud_recordings** | **bool** |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

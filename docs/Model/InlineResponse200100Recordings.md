@@ -1,6 +1,7 @@
-# InlineResponse200100Recordings
+# # InlineResponse200100Recordings
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **string** | Unique Identifier of the recording. | [optional] 
@@ -15,6 +16,6 @@ Name | Type | Description | Notes
 **download_url** | **string** | URL using which the recording can be downloaded. | [optional] 
 **date_time** | [**\DateTime**](\DateTime.md) | Date of the recording. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

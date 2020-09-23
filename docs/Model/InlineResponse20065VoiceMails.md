@@ -1,6 +1,7 @@
-# InlineResponse20065VoiceMails
+# # InlineResponse20065VoiceMails
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **string** | Id of voice mail | [optional] 
@@ -15,6 +16,6 @@ Name | Type | Description | Notes
 **callee_name** | **string** | Contact name of callee | [optional] 
 **status** | **string** | Status of the voice mail. Can be either &#39;read&#39; or &#39;unread&#39; | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

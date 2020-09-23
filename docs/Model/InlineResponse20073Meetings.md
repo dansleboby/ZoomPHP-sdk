@@ -1,6 +1,7 @@
-# InlineResponse20073Meetings
+# # InlineResponse20073Meetings
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **uuid** | **string** | Universally Unique Identifier of a meeting instance. Each meeting instance will have its own meeting UUID. | [optional] 
@@ -13,6 +14,6 @@ Name | Type | Description | Notes
 **recording_count** | **int** | The total number of recordings retrieved from the account. | [optional] 
 **recording_files** | [**\Zoom\Api\Model\InlineResponse20073RecordingFiles[]**](InlineResponse20073RecordingFiles.md) | Recording files object | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

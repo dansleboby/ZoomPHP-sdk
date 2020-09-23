@@ -10,7 +10,9 @@ Method | HTTP request | Description
 [**updateZoomRoomAccSettings**](RoomsAccountApi.md#updateZoomRoomAccSettings) | **PATCH** /rooms/account_settings | Update Zoom Room Account Settings
 
 
-# **getZRAccountProfile**
+
+## getZRAccountProfile
+
 > \Zoom\Api\Model\InlineResponse20075 getZRAccountProfile()
 
 Get Zoom Room Account Profile
@@ -18,12 +20,15 @@ Get Zoom Room Account Profile
 Get details on the account profile of a Zoom Room. This information can only by accessed either by the Zoom Room Account Owner or a user with Zoom Rooms admin permission. To get information on an individual Room Profile, use [Get Zoom Room Profile API](https://marketplace.zoom.us/docs/api-reference/zoom-api/rooms/getzrprofile) instead.  **Prerequisites:**<br> * Zoom account owner or Zoom Rooms admin permissions<br>  **Scopes:** `room:read:admin`<br>   **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\RoomsAccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -42,6 +47,7 @@ try {
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -54,12 +60,16 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **getZRAccountSettings**
+
+## getZRAccountSettings
+
 > object getZRAccountSettings($setting_type)
 
 Get Zoom Room Account Settings
@@ -67,12 +77,15 @@ Get Zoom Room Account Settings
 Get details on Account Settings of a Zoom Room. With this API, you can view either the **Account Meeting Settings** or the **Alert Settings** (Client Alert Settings and Notfication Settings) of the Zoom Rooms account. By default, only **Account Meeting Settings** are returned. To view only **Alert Settings**, specify `alert` as the value of the `setting_type` query parameter.<br><br> **Prerequisites:**<br> * Zoom Room licenses * Owner or Admin privileges on the Zoom Account.<br> **Scopes:** `room:read:admin`<br><br>     **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\RoomsAccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -80,7 +93,7 @@ $apiInstance = new Zoom\Api\Api\RoomsAccountApi(
     new GuzzleHttp\Client(),
     $config
 );
-$setting_type = "meeting"; // string | The type of setting that you would like to retrieve.<br> `alert`: Alert Settings applied on the Zoom Rooms Account.<br> `meeting`: Meeting settings of the Zoom Rooms Account. <br> `signage`: View digital signage settings of the Zoom Rooms Account.
+$setting_type = 'meeting'; // string | The type of setting that you would like to retrieve.<br> `alert`: Alert Settings applied on the Zoom Rooms Account.<br> `meeting`: Meeting settings of the Zoom Rooms Account. <br> `signage`: View digital signage settings of the Zoom Rooms Account.
 
 try {
     $result = $apiInstance->getZRAccountSettings($setting_type);
@@ -93,9 +106,10 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **setting_type** | **string**| The type of setting that you would like to retrieve.&lt;br&gt; &#x60;alert&#x60;: Alert Settings applied on the Zoom Rooms Account.&lt;br&gt; &#x60;meeting&#x60;: Meeting settings of the Zoom Rooms Account. &lt;br&gt; &#x60;signage&#x60;: View digital signage settings of the Zoom Rooms Account. | [default to meeting]
+ **setting_type** | **string**| The type of setting that you would like to retrieve.&lt;br&gt; &#x60;alert&#x60;: Alert Settings applied on the Zoom Rooms Account.&lt;br&gt; &#x60;meeting&#x60;: Meeting settings of the Zoom Rooms Account. &lt;br&gt; &#x60;signage&#x60;: View digital signage settings of the Zoom Rooms Account. | [default to &#39;meeting&#39;]
 
 ### Return type
 
@@ -107,12 +121,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **updateZRAccProfile**
+
+## updateZRAccProfile
+
 > object updateZRAccProfile($body)
 
 Update Zoom Room Account Profile
@@ -120,12 +138,15 @@ Update Zoom Room Account Profile
 Update information on the account profile of a Zoom Room. This information can only by accessed either by the Zoom Room Account Owner or a user with Zoom Rooms admin permission. To update information on an individual Room Profile, use [Update Zoom Room Profile API](https://marketplace.zoom.us/docs/api-reference/zoom-api/rooms/updatezrprofile) instead.  **Prerequisites:**<br> * Zoom account owner or Zoom Rooms admin permissions<br>  **Scopes:** `room:write:admin`<br>   **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\RoomsAccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -133,7 +154,7 @@ $apiInstance = new Zoom\Api\Api\RoomsAccountApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Zoom\Api\Model\Body56(); // \Zoom\Api\Model\Body56 | 
+$body = new \Zoom\Api\Model\InlineObject56(); // \Zoom\Api\Model\InlineObject56 | 
 
 try {
     $result = $apiInstance->updateZRAccProfile($body);
@@ -146,9 +167,10 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Zoom\Api\Model\Body56**](../Model/Body56.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\InlineObject56**](../Model/InlineObject56.md)|  | [optional]
 
 ### Return type
 
@@ -160,12 +182,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: application/json, multipart/form-data
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **updateZoomRoomAccSettings**
+
+## updateZoomRoomAccSettings
+
 > object updateZoomRoomAccSettings($setting_type, $body)
 
 Update Zoom Room Account Settings
@@ -173,12 +199,15 @@ Update Zoom Room Account Settings
 Update account settings applied for Zoom Rooms in a Zoom account. With this API, you can update either the **Account Meeting Settings** or the **Alert Settings** (Client Alert Settings and Notfication Settings) of the Zoom Rooms account by specifying the required setting type in the `setting_type` parameter. To update only **Alert Settings**, specify `alert` as the value of the `setting_type` query parameter and to update only **Account Meeting Settings**, specify `meeting` as the value of the `setting_type` query parameter.<br><br> **Prerequisites:**<br> * Zoom Room licenses * Owner or Admin privileges on the Zoom Account.<br> **Scopes:** `room:write:admin`<br>     **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\RoomsAccountApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -186,7 +215,7 @@ $apiInstance = new Zoom\Api\Api\RoomsAccountApi(
     new GuzzleHttp\Client(),
     $config
 );
-$setting_type = "meeting"; // string | The type of setting that you would like to update.<br> `alert`: Alert Settings applied on the Zoom Rooms Account.<br> `meeting`: Meeting settings of the Zoom Rooms Account.<br> `signage`: View digital signage settings of the Zoom Rooms Account.
+$setting_type = 'meeting'; // string | The type of setting that you would like to update.<br> `alert`: Alert Settings applied on the Zoom Rooms Account.<br> `meeting`: Meeting settings of the Zoom Rooms Account.<br> `signage`: View digital signage settings of the Zoom Rooms Account.
 $body = new \stdClass; // object | 
 
 try {
@@ -200,9 +229,10 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **setting_type** | **string**| The type of setting that you would like to update.&lt;br&gt; &#x60;alert&#x60;: Alert Settings applied on the Zoom Rooms Account.&lt;br&gt; &#x60;meeting&#x60;: Meeting settings of the Zoom Rooms Account.&lt;br&gt; &#x60;signage&#x60;: View digital signage settings of the Zoom Rooms Account. | [default to meeting]
+ **setting_type** | **string**| The type of setting that you would like to update.&lt;br&gt; &#x60;alert&#x60;: Alert Settings applied on the Zoom Rooms Account.&lt;br&gt; &#x60;meeting&#x60;: Meeting settings of the Zoom Rooms Account.&lt;br&gt; &#x60;signage&#x60;: View digital signage settings of the Zoom Rooms Account. | [default to &#39;meeting&#39;]
  **body** | **object**|  | [optional]
 
 ### Return type
@@ -215,8 +245,10 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: application/json, multipart/form-data
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 

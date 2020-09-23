@@ -1,6 +1,7 @@
-# BillingContact
+# # BillingContact
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **first_name** | **string** | Billing Contact&#39;s first name. | [optional] 
@@ -14,6 +15,6 @@ Name | Type | Description | Notes
 **zip** | **string** | Billing Contact&#39;s zip/postal code. | [optional] 
 **country** | **string** | Billing Contact&#39;s country. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

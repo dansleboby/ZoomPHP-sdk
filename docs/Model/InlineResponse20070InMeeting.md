@@ -1,6 +1,7 @@
-# InlineResponse20070InMeeting
+# # InlineResponse20070InMeeting
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **e2e_encryption** | **bool** | Require that all meetings are encrypted using AES. | [optional] 
@@ -35,6 +36,6 @@ Name | Type | Description | Notes
 **screen_sharing** | **bool** | Allow host and participants to share their screen or content during meetings. | [optional] 
 **custom_data_center_regions** | **bool** | Displays whether or not custom [data center regions](https://support.zoom.us/hc/en-us/articles/360042411451-Selecting-data-center-regions-for-hosted-meetings-and-webinars) have been selected for meetings/webinars hosted by the account. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

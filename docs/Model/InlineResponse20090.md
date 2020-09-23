@@ -1,6 +1,7 @@
-# InlineResponse20090
+# # InlineResponse20090
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **page_size** | **int** | The number of records returned from a single API call. | [optional] 
@@ -8,6 +9,6 @@ Name | Type | Description | Notes
 **total_records** | **int** | The total number of records found for this query. | [optional] 
 **call_queues** | [**\Zoom\Api\Model\InlineResponse20090CallQueues[]**](InlineResponse20090CallQueues.md) |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

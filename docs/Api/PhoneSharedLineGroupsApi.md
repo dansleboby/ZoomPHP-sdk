@@ -14,7 +14,9 @@ Method | HTTP request | Description
 [**updateASharedLineGroup**](PhoneSharedLineGroupsApi.md#updateASharedLineGroup) | **PATCH** /phone/shared_line_groups/{sharedLineGroupId} | Update a Shared Line Group
 
 
-# **addMembersToSharedLineGroup**
+
+## addMembersToSharedLineGroup
+
 > object addMembersToSharedLineGroup($shared_line_group_id, $body)
 
 Add Members to a Shared Line Group
@@ -22,12 +24,15 @@ Add Members to a Shared Line Group
 A [shared line group](https://support.zoom.us/hc/en-us/articles/360038850792) allows Zoom Phone admins to share a phone number and extension with a group of phone users or common area phones. This gives members of the shared line group access to the group's direct phone number and voicemail. Use this API to [add members](https://support.zoom.us/hc/en-us/articles/360038850792-Setting-up-shared-line-groups#h_7cb42370-48f6-4a8f-84f4-c6eee4d9f0ca) to a Shared Line Group. Note that a member can only be added to one shared line group.   **Prerequisties:** <br> * Pro or higher account with Zoom Phone license. * A valid Shared Line Group * Account owner or admin privileges   **Scopes:** `phone:write:admin`    **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\PhoneSharedLineGroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -35,8 +40,8 @@ $apiInstance = new Zoom\Api\Api\PhoneSharedLineGroupsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$shared_line_group_id = "shared_line_group_id_example"; // string | Unique Identifier of the shared line group.
-$body = new \Zoom\Api\Model\Body80(); // \Zoom\Api\Model\Body80 | 
+$shared_line_group_id = 'shared_line_group_id_example'; // string | Unique Identifier of the shared line group.
+$body = new \Zoom\Api\Model\InlineObject80(); // \Zoom\Api\Model\InlineObject80 | 
 
 try {
     $result = $apiInstance->addMembersToSharedLineGroup($shared_line_group_id, $body);
@@ -49,10 +54,11 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **shared_line_group_id** | **string**| Unique Identifier of the shared line group. |
- **body** | [**\Zoom\Api\Model\Body80**](../Model/Body80.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\InlineObject80**](../Model/InlineObject80.md)|  | [optional]
 
 ### Return type
 
@@ -64,12 +70,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: application/json, multipart/form-data
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **assignPhoneNumbersSLG**
+
+## assignPhoneNumbersSLG
+
 > assignPhoneNumbersSLG($shared_line_group_id, $body)
 
 Assign Phone Numbers
@@ -77,12 +87,15 @@ Assign Phone Numbers
 Use this API to assign phone numbers to a shared line groups. These direct phone numbers will be shared among members of the [shared line group](https://support.zoom.us/hc/en-us/articles/360038850792-Setting-up-shared-line-groups). **Prerequisties:** <br> * Pro or higher account with Zoom Phone license. * A valid Shared Line Group * Account owner or admin privileges  **Scopes:** `phone:write:admin`  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\PhoneSharedLineGroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -90,8 +103,8 @@ $apiInstance = new Zoom\Api\Api\PhoneSharedLineGroupsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$shared_line_group_id = "shared_line_group_id_example"; // string | Unique Identifier of the Shared Line Group.
-$body = new \Zoom\Api\Model\Body81(); // \Zoom\Api\Model\Body81 | 
+$shared_line_group_id = 'shared_line_group_id_example'; // string | Unique Identifier of the Shared Line Group.
+$body = new \Zoom\Api\Model\InlineObject81(); // \Zoom\Api\Model\InlineObject81 | 
 
 try {
     $apiInstance->assignPhoneNumbersSLG($shared_line_group_id, $body);
@@ -103,10 +116,11 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **shared_line_group_id** | **string**| Unique Identifier of the Shared Line Group. |
- **body** | [**\Zoom\Api\Model\Body81**](../Model/Body81.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\InlineObject81**](../Model/InlineObject81.md)|  | [optional]
 
 ### Return type
 
@@ -118,12 +132,16 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: application/json, multipart/form-data
+- **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **deleteAMemberSLG**
+
+## deleteAMemberSLG
+
 > deleteAMemberSLG($shared_line_group_id, $member_id)
 
 Unassign a Member From a Shared Line Group
@@ -131,12 +149,15 @@ Unassign a Member From a Shared Line Group
 Members of the [shared line group](https://support.zoom.us/hc/en-us/articles/360038850792) have access to the group's phone number and voicemail. Use this API to unassign **a specific member** from a Shared Line Group. **Prerequisties:** <br> * Pro or higher account with Zoom Phone license. * A valid Shared Line Group * Account owner or admin privileges  **Scopes:** `phone:write:admin`    **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\PhoneSharedLineGroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -144,8 +165,8 @@ $apiInstance = new Zoom\Api\Api\PhoneSharedLineGroupsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$shared_line_group_id = "shared_line_group_id_example"; // string | Unique Identifier of the shared line group from which you would like to remove a member.
-$member_id = "member_id_example"; // string | Unique identifier of the member who is to be removed.
+$shared_line_group_id = 'shared_line_group_id_example'; // string | Unique Identifier of the shared line group from which you would like to remove a member.
+$member_id = 'member_id_example'; // string | Unique identifier of the member who is to be removed.
 
 try {
     $apiInstance->deleteAMemberSLG($shared_line_group_id, $member_id);
@@ -156,6 +177,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -172,12 +194,16 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **deleteAPhoneNumberSLG**
+
+## deleteAPhoneNumberSLG
+
 > deleteAPhoneNumberSLG($shared_line_group_id, $phone_number_id)
 
 Unassign a Phone Number
@@ -185,12 +211,15 @@ Unassign a Phone Number
 Use this API to unassign a specific phone number that was assigned to the [shared line group](https://support.zoom.us/hc/en-us/articles/360038850792-Setting-up-shared-line-groups). **Prerequisties:** <br> * Pro or higher account with Zoom Phone license. * A valid Shared Line Group * Account owner or admin privileges  **Scopes:** `phone:write:admin`  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\PhoneSharedLineGroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -198,8 +227,8 @@ $apiInstance = new Zoom\Api\Api\PhoneSharedLineGroupsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$shared_line_group_id = "shared_line_group_id_example"; // string | Unique identifier of the shared line group from which you would like to unassign a phone number.
-$phone_number_id = "phone_number_id_example"; // string | Unique identifier of the phone number which is to be unassigned. This can be retrieved from Get a Shared Line Group API.
+$shared_line_group_id = 'shared_line_group_id_example'; // string | Unique identifier of the shared line group from which you would like to unassign a phone number.
+$phone_number_id = 'phone_number_id_example'; // string | Unique identifier of the phone number which is to be unassigned. This can be retrieved from Get a Shared Line Group API.
 
 try {
     $apiInstance->deleteAPhoneNumberSLG($shared_line_group_id, $phone_number_id);
@@ -210,6 +239,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -226,12 +256,16 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **deleteASharedLineGroup**
+
+## deleteASharedLineGroup
+
 > object deleteASharedLineGroup($shared_line_group_id)
 
 Delete a Shared Line Group
@@ -239,12 +273,15 @@ Delete a Shared Line Group
 A [shared line group](https://support.zoom.us/hc/en-us/articles/360038850792) allows Zoom Phone admins to share a phone number and extension with a group of phone users or common area phones. Use this API to delete a Shared Line Group.  **Prerequisties:** <br> * Pro or higher account with Zoom Phone license. * Account owner or admin privileges   **Scopes:** `phone:write:admin`    **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\PhoneSharedLineGroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -252,7 +289,7 @@ $apiInstance = new Zoom\Api\Api\PhoneSharedLineGroupsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$shared_line_group_id = "shared_line_group_id_example"; // string | Unique Identifier of the shared line group that you would like to delete.
+$shared_line_group_id = 'shared_line_group_id_example'; // string | Unique Identifier of the shared line group that you would like to delete.
 
 try {
     $result = $apiInstance->deleteASharedLineGroup($shared_line_group_id);
@@ -264,6 +301,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -279,12 +317,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **deleteMembersOfSLG**
+
+## deleteMembersOfSLG
+
 > object deleteMembersOfSLG($shared_line_group_id)
 
 Unassign Members of a Shared Line Group
@@ -292,12 +334,15 @@ Unassign Members of a Shared Line Group
 Members of the [shared line group](https://support.zoom.us/hc/en-us/articles/360038850792) have access to the group's phone number and voicemail. Use this API to unassign **all** the existing members from a Shared Line Group. **Prerequisties:** <br> * Pro or higher account with Zoom Phone license. * A valid Shared Line Group * Account owner or admin privileges  **Scopes:** `phone:write:admin`    **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\PhoneSharedLineGroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -305,7 +350,7 @@ $apiInstance = new Zoom\Api\Api\PhoneSharedLineGroupsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$shared_line_group_id = "shared_line_group_id_example"; // string | Unique identifier of the Shared Line Group that you would like to delete.
+$shared_line_group_id = 'shared_line_group_id_example'; // string | Unique identifier of the Shared Line Group that you would like to delete.
 
 try {
     $result = $apiInstance->deleteMembersOfSLG($shared_line_group_id);
@@ -317,6 +362,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -332,12 +378,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **getASharedLineGroup**
+
+## getASharedLineGroup
+
 > \Zoom\Api\Model\InlineResponse20099 getASharedLineGroup($shared_line_group_id)
 
 Get a Shared Line Group
@@ -345,12 +395,15 @@ Get a Shared Line Group
 A [shared line group](https://support.zoom.us/hc/en-us/articles/360038850792) allows Zoom Phone admins to share a phone number and extension with a group of phone users or common area phones. This gives members of the shared line group access to the group's direct phone number and voicemail. Use this API to list all the Shared Line Groups.  **Prerequisties:** <br> * Pro or higher account with Zoom Phone license. * Account owner or admin privileges   **Scopes:** `phone:read:admin` or `phone:write:admin`    **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\PhoneSharedLineGroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -358,7 +411,7 @@ $apiInstance = new Zoom\Api\Api\PhoneSharedLineGroupsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$shared_line_group_id = "shared_line_group_id_example"; // string | Unique Identifier of the Shared Line Group.
+$shared_line_group_id = 'shared_line_group_id_example'; // string | Unique Identifier of the Shared Line Group.
 
 try {
     $result = $apiInstance->getASharedLineGroup($shared_line_group_id);
@@ -370,6 +423,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -385,12 +439,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **updateASharedLineGroup**
+
+## updateASharedLineGroup
+
 > object updateASharedLineGroup($shared_line_group_id, $body)
 
 Update a Shared Line Group
@@ -398,12 +456,15 @@ Update a Shared Line Group
 A [shared line group](https://support.zoom.us/hc/en-us/articles/360038850792) allows Zoom Phone admins to share a phone number and extension with a group of phone users or common area phones. This gives members of the shared line group access to the group's direct phone number and voicemail. Use this API to update information of a Shared Line Group.  **Prerequisties:** <br> * Pro or higher account with Zoom Phone license. * Account owner or admin privileges   **Scopes:** `phone:write:admin`   **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\PhoneSharedLineGroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -411,8 +472,8 @@ $apiInstance = new Zoom\Api\Api\PhoneSharedLineGroupsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$shared_line_group_id = "shared_line_group_id_example"; // string | Unique identifier of the shared line group that is to be updated.
-$body = new \Zoom\Api\Model\Body79(); // \Zoom\Api\Model\Body79 | 
+$shared_line_group_id = 'shared_line_group_id_example'; // string | Unique identifier of the shared line group that is to be updated.
+$body = new \Zoom\Api\Model\InlineObject79(); // \Zoom\Api\Model\InlineObject79 | 
 
 try {
     $result = $apiInstance->updateASharedLineGroup($shared_line_group_id, $body);
@@ -425,10 +486,11 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **shared_line_group_id** | **string**| Unique identifier of the shared line group that is to be updated. |
- **body** | [**\Zoom\Api\Model\Body79**](../Model/Body79.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\InlineObject79**](../Model/InlineObject79.md)|  | [optional]
 
 ### Return type
 
@@ -440,8 +502,10 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: application/json, multipart/form-data
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 

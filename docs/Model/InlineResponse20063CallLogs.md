@@ -1,6 +1,7 @@
-# InlineResponse20063CallLogs
+# # InlineResponse20063CallLogs
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **string** | Call Log ID | [optional] 
@@ -15,6 +16,6 @@ Name | Type | Description | Notes
 **result** | **string** | Result of the call. \&quot;call_connected\&quot; | \&quot;recorded\&quot; | \&quot;no_answer\&quot; | [optional] 
 **date_time** | **string** | Start time of the call | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

@@ -1,6 +1,7 @@
-# InlineResponse20087ClientSatisfaction
+# # InlineResponse20087ClientSatisfaction
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **date** | [**\DateTime**](\DateTime.md) | Date of the report. | [optional] 
@@ -9,6 +10,6 @@ Name | Type | Description | Notes
 **not_good_count** | **int** | The total number of \&quot;thumbs down\&quot; received for this meeting. | [optional] 
 **none_count** | **int** | The total number of attendees who didn&#39;t submit any response (neither thumbs up nor thumbs down). | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

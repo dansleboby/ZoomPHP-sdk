@@ -1,6 +1,7 @@
-# InlineResponse20074TrackingSources
+# # InlineResponse20074TrackingSources
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **string** | Unique Identifier for the tracking source. | [optional] 
@@ -9,6 +10,6 @@ Name | Type | Description | Notes
 **registration_count** | **int** | Number of registrations made from this source. | [optional] 
 **visitor_count** | **int** | Number of visitors who visited the registration page from this source. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

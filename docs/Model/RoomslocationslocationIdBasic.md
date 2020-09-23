@@ -1,6 +1,7 @@
-# RoomslocationslocationIdBasic
+# # RoomsLocationsLocationIdBasic
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **string** | Name of the location type. | [optional] 
@@ -12,6 +13,6 @@ Name | Type | Description | Notes
 **room_passcode** | **string** | 1-16 digit number or characters that is used to secure your Zoom Rooms application. | [optional] 
 **required_code_to_ext** | **bool** | Require code to exit out of your Zoom Rooms application to switch between other apps. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

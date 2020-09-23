@@ -1,6 +1,7 @@
-# InlineResponse200103InternalNumbers
+# # InlineResponse200103InternalNumbers
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **number** | **string** | Phone number in E164 format. | 
@@ -12,6 +13,6 @@ Name | Type | Description | Notes
 **labels** | **string** | A short description for the phone number. | 
 **languages** | **string** | Specify the language in which this phone number should be displayed. Currently, the only supported languages are &#x60;en-GB&#x60;, &#x60;en-US&#x60;, &#x60;de-DE&#x60;. | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

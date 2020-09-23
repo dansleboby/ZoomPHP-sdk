@@ -1,6 +1,7 @@
-# InlineResponse2003Sites
+# # InlineResponse2003Sites
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **string** | Site ID. Unique Identifier of the site. | [optional] 
@@ -9,6 +10,6 @@ Name | Type | Description | Notes
 **main_auto_receptionist** | [**\Zoom\Api\Model\InlineResponse2003MainAutoReceptionist**](InlineResponse2003MainAutoReceptionist.md) |  | [optional] 
 **country** | [**\Zoom\Api\Model\InlineResponse2003Country**](InlineResponse2003Country.md) |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

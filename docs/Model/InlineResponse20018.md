@@ -1,6 +1,7 @@
-# InlineResponse20018
+# # InlineResponse20018
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **members** | [**\Zoom\Api\Model\InlineResponse20018Members[]**](InlineResponse20018Members.md) |  | [optional] 
@@ -9,6 +10,6 @@ Name | Type | Description | Notes
 **page_size** | **int** | The number of records returned from a single API call. | [optional] 
 **total_records** | **int** | The total number of records available across all pages. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

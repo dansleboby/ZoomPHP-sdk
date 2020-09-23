@@ -1,6 +1,7 @@
-# InlineResponse20035
+# # InlineResponse20035
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **from** | [**\DateTime**](\DateTime.md) | Start date for this report. | [optional] 
@@ -12,6 +13,6 @@ Name | Type | Description | Notes
 **to** | [**\DateTime**](\DateTime.md) | End date for this report. | [optional] 
 **total_records** | **int** | The total number of all the records available across pages. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

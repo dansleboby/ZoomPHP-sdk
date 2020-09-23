@@ -30,7 +30,9 @@ Method | HTTP request | Description
 [**users**](UsersApi.md#users) | **GET** /users | List Users
 
 
-# **switchUserAccount**
+
+## switchUserAccount
+
 > object switchUserAccount($user_id, $account_id, $body)
 
 Switch a User's Account
@@ -38,12 +40,15 @@ Switch a User's Account
 Disassociate a user from one Account and move the user to another Account under the same Master Account.   With this API, a user under a Master Account or a Sub Account can be moved to another Sub Account within the same Master Account. To move a user from a Master Account to a Sub Account, use `me` as the value for `accountId`. In this scenario, \"me\" refers to the Account ID of the Master Account.   To move a user from one Sub Account to another Sub Account, provide the Sub Account's Account ID as the value for `accountId`.   **Prerequisites**: * The account should have Pro or a higher plan with Master Account option enabled. * The user whose account needs to be switched should not be an admin or an owner of that account. * The user should not have the same [managed domain](https://support.zoom.us/hc/en-us/articles/203395207-What-is-Managed-Domain-) as the account owner.  **Scope:** `user:master`<br>    **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -51,9 +56,9 @@ $apiInstance = new Zoom\Api\Api\UsersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = "user_id_example"; // string | 
-$account_id = "account_id_example"; // string | 
-$body = new \Zoom\Api\Model\Body55(); // \Zoom\Api\Model\Body55 | 
+$user_id = 'user_id_example'; // string | 
+$account_id = 'account_id_example'; // string | 
+$body = new \Zoom\Api\Model\InlineObject55(); // \Zoom\Api\Model\InlineObject55 | 
 
 try {
     $result = $apiInstance->switchUserAccount($user_id, $account_id, $body);
@@ -66,11 +71,12 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **string**|  |
  **account_id** | **string**|  |
- **body** | [**\Zoom\Api\Model\Body55**](../Model/Body55.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\InlineObject55**](../Model/InlineObject55.md)|  | [optional]
 
 ### Return type
 
@@ -82,12 +88,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: application/json, multipart/form-data
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **user**
+
+## user
+
 > \Zoom\Api\Model\InlineResponse20047 user($user_id, $login_type)
 
 Get a User
@@ -95,12 +105,15 @@ Get a User
 A Zoom account can have one or more users. Use this API to view information of a specific user on a Zoom account.<br><br> **Scopes:** `user:read:admin` `user:read`<br>    **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`  <p style=\"background-color:#e1f5fe; color:#01579b; padding:8px\"> <b>Note: </b>If a user's status is pending, only `id` and `created_at` fields will be returned. The value of `created_at` will be the time at which the API call was made until the user activates their account.</p>
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -108,8 +121,8 @@ $apiInstance = new Zoom\Api\Api\UsersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = "user_id_example"; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
-$login_type = "login_type_example"; // string | `0` - Facebook.<br>`1` - Google.<br>`99` - API.<br>`100` - Zoom.<br>`101` - SSO.
+$user_id = 'user_id_example'; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+$login_type = 'login_type_example'; // string | `0` - Facebook.<br>`1` - Google.<br>`99` - API.<br>`100` - Zoom.<br>`101` - SSO.
 
 try {
     $result = $apiInstance->user($user_id, $login_type);
@@ -121,6 +134,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -137,12 +151,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **userAssistantCreate**
+
+## userAssistantCreate
+
 > \Zoom\Api\Model\InlineResponse20118 userAssistantCreate($user_id, $body)
 
 Add Assistants
@@ -150,12 +168,15 @@ Add Assistants
 Assistants are the users to whom the current user has assigned [scheduling privilege](https://support.zoom.us/hc/en-us/articles/201362803-Scheduling-Privilege). These assistants can schedule meeting on behalf of the current user as well as manage and act as an alternative host for all meetings if the admin has enabled [Co-host option](https://zoom.us/account/setting) on the account.<br>Use this API to assign assistants to a user. <br> In the request body, provide either the User ID or the email address of the user.<br><br> **Prerequisite**:  * The user as well as the assistant must have Licensed or an On-prem license. * Assistants must be under the current user's account.<br> **Scopes**: `user:write:admin` `user:write`  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -163,8 +184,8 @@ $apiInstance = new Zoom\Api\Api\UsersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = "user_id_example"; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
-$body = new \Zoom\Api\Model\UserAssistantsList1(); // \Zoom\Api\Model\UserAssistantsList1 | User assistant.
+$user_id = 'user_id_example'; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+$body = new \Zoom\Api\Model\UserAssistantsList1(); // \Zoom\Api\Model\UserAssistantsList1 | 
 
 try {
     $result = $apiInstance->userAssistantCreate($user_id, $body);
@@ -177,10 +198,11 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **string**| The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. |
- **body** | [**\Zoom\Api\Model\UserAssistantsList1**](../Model/UserAssistantsList1.md)| User assistant. |
+ **body** | [**\Zoom\Api\Model\UserAssistantsList1**](../Model/UserAssistantsList1.md)|  |
 
 ### Return type
 
@@ -192,12 +214,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: application/json, multipart/form-data
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **userAssistantDelete**
+
+## userAssistantDelete
+
 > userAssistantDelete($user_id, $assistant_id)
 
 Delete a User Assistant
@@ -205,12 +231,15 @@ Delete a User Assistant
 Delete a specific assistant of a user. Assistants are the users to whom the current user has assigned [scheduling privilege](https://support.zoom.us/hc/en-us/articles/201362803-Scheduling-Privilege). These assistants can schedule meeting on behalf of the current user as well as manage and act as an alternative host for all meetings if the admin has enabled [Co-host option](https://zoom.us/account/setting) on the account.<br><br> **Prerequisites**:  * The user as well as the assistant must have Licensed or an On-prem license. * Assistants must be under the current user's account.<br> **Scopes**: `user:write:admin` `user:write`  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -218,8 +247,8 @@ $apiInstance = new Zoom\Api\Api\UsersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = "user_id_example"; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
-$assistant_id = "assistant_id_example"; // string | Assistant ID.
+$user_id = 'user_id_example'; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+$assistant_id = 'assistant_id_example'; // string | Assistant ID.
 
 try {
     $apiInstance->userAssistantDelete($user_id, $assistant_id);
@@ -230,6 +259,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -246,12 +276,16 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **userAssistants**
+
+## userAssistants
+
 > \Zoom\Api\Model\UserAssistantsList userAssistants($user_id)
 
 List User Assistants
@@ -259,12 +293,15 @@ List User Assistants
 List a user's assistants.  Assistants are the users to whom the current user has assigned [scheduling privilege](https://support.zoom.us/hc/en-us/articles/201362803-Scheduling-Privilege). These assistants can schedule meeting on behalf of the current user as well as manage and act as an alternative host for all meetings if the admin has enabled [Co-host option](https://zoom.us/account/setting) on the account.<br><br> **Prerequisites**: <br> * Current user as well as the assistant must have Licensed or an On-prem license. * Assistants must be under the current user's account.<br> **Scopes**: `user:read:admin` `user:read`<br>    **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -272,7 +309,7 @@ $apiInstance = new Zoom\Api\Api\UsersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = "user_id_example"; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+$user_id = 'user_id_example'; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
 
 try {
     $result = $apiInstance->userAssistants($user_id);
@@ -284,6 +321,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -299,12 +337,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **userAssistantsDelete**
+
+## userAssistantsDelete
+
 > userAssistantsDelete($user_id)
 
 Delete User Assistants
@@ -312,12 +354,15 @@ Delete User Assistants
 Delete all assistants of the current user.<br> Assistants are the users to whom the current user has assigned [scheduling privilege](https://support.zoom.us/hc/en-us/articles/201362803-Scheduling-Privilege). These assistants can schedule meeting on behalf of the current user as well as manage and act as an alternative host for all meetings if the admin has enabled [Co-host option](https://zoom.us/account/setting) on the account.<br> **Prerequisite**:  * The user as well as the assistant must have Licensed or an On-prem license. * Assistants must be under the current user's account.<br> **Scopes**: `user:write:admin` `user:write`  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -325,7 +370,7 @@ $apiInstance = new Zoom\Api\Api\UsersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = "user_id_example"; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+$user_id = 'user_id_example'; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
 
 try {
     $apiInstance->userAssistantsDelete($user_id);
@@ -336,6 +381,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -351,12 +397,16 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **userCreate**
+
+## userCreate
+
 > \Zoom\Api\Model\InlineResponse20117 userCreate($body)
 
 Create Users
@@ -364,12 +414,15 @@ Create Users
 A Zoom account can have one or more users. Use this API to add a new user to your account.<br><br> **Prerequisites:**<br> * Pro or higher plan<br><br> **Scopes:** `user:write:admin` `user:write`<br>    **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -377,7 +430,7 @@ $apiInstance = new Zoom\Api\Api\UsersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Zoom\Api\Model\Body32(); // \Zoom\Api\Model\Body32 | User
+$body = new \Zoom\Api\Model\InlineObject32(); // \Zoom\Api\Model\InlineObject32 | 
 
 try {
     $result = $apiInstance->userCreate($body);
@@ -390,9 +443,10 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Zoom\Api\Model\Body32**](../Model/Body32.md)| User |
+ **body** | [**\Zoom\Api\Model\InlineObject32**](../Model/InlineObject32.md)|  |
 
 ### Return type
 
@@ -404,12 +458,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: application/json, multipart/form-data
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **userDelete**
+
+## userDelete
+
 > userDelete($user_id, $action, $transfer_email, $transfer_meeting, $transfer_webinar, $transfer_recording)
 
 Delete User
@@ -417,12 +475,15 @@ Delete User
 Deleting a user permanently removes them and their data from Zoom. They will be able to create a new Zoom account with the same email address if they have access to it. An account owner or an account admin can transfer meetings, webinars and cloud recordings to another Zoom user before deleting, but if not transferred, they will be permanently deleted.<br><br>  By default, this API disassociates (unlinks) a user from the associated account. The disassociation will give them their own basic, free Zoom account. It will not be associated with your account, and they will be able to purchase their own licenses. You can transfer the user's data (meetings, webinars and cloud recordings) to another user before disassociation.<br> To permanently delete a user, specify \"delete\" as the value of the `action` query parameter. **Scopes:** `user:write:admin` `user:write`<br>    **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -430,12 +491,12 @@ $apiInstance = new Zoom\Api\Api\UsersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = "user_id_example"; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
-$action = "disassociate"; // string | Delete action options:<br>`disassociate` - Disassociate a user.<br>`delete`-  Permanently delete a user.<br>Note: To delete pending user in the account, use `disassociate`
-$transfer_email = "transfer_email_example"; // string | Transfer email.
-$transfer_meeting = true; // bool | Transfer meeting.
-$transfer_webinar = true; // bool | Transfer webinar.
-$transfer_recording = true; // bool | Transfer recording.
+$user_id = 'user_id_example'; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+$action = 'disassociate'; // string | Delete action options:<br>`disassociate` - Disassociate a user.<br>`delete`-  Permanently delete a user.<br>Note: To delete pending user in the account, use `disassociate`
+$transfer_email = 'transfer_email_example'; // string | Transfer email.
+$transfer_meeting = True; // bool | Transfer meeting.
+$transfer_webinar = True; // bool | Transfer webinar.
+$transfer_recording = True; // bool | Transfer recording.
 
 try {
     $apiInstance->userDelete($user_id, $action, $transfer_email, $transfer_meeting, $transfer_webinar, $transfer_recording);
@@ -447,10 +508,11 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **string**| The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. |
- **action** | **string**| Delete action options:&lt;br&gt;&#x60;disassociate&#x60; - Disassociate a user.&lt;br&gt;&#x60;delete&#x60;-  Permanently delete a user.&lt;br&gt;Note: To delete pending user in the account, use &#x60;disassociate&#x60; | [optional] [default to disassociate]
+ **action** | **string**| Delete action options:&lt;br&gt;&#x60;disassociate&#x60; - Disassociate a user.&lt;br&gt;&#x60;delete&#x60;-  Permanently delete a user.&lt;br&gt;Note: To delete pending user in the account, use &#x60;disassociate&#x60; | [optional] [default to &#39;disassociate&#39;]
  **transfer_email** | **string**| Transfer email. | [optional]
  **transfer_meeting** | **bool**| Transfer meeting. | [optional]
  **transfer_webinar** | **bool**| Transfer webinar. | [optional]
@@ -466,12 +528,16 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **userEmail**
+
+## userEmail
+
 > \Zoom\Api\Model\InlineResponse20052 userEmail($email)
 
 Check a User Email
@@ -479,12 +545,15 @@ Check a User Email
 Verify if a user's email is registered with Zoom.<br><br>  <b>Note: </b>You can successfully check if a user is a registered Zoom user only if the user **signed up for Zoom via email and is within your account.** If you provide an email address of a user who is not in your account, the value of \"existed_email\" parameter will be \"false\" irrespective of whether or not the user is registered with Zoom. The response of this API call will not include users who joined Zoom using options such as \"Sign in with SSO\", \"Sign in with Google\" or \"Sign in with Facebook\" even if they are in the same account as yours.  **Scopes:** `user:read:admin` `user:read`    **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -492,7 +561,7 @@ $apiInstance = new Zoom\Api\Api\UsersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$email = "email_example"; // string | The email address to be verified.
+$email = 'email_example'; // string | The email address to be verified.
 
 try {
     $result = $apiInstance->userEmail($email);
@@ -504,6 +573,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -519,12 +589,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **userEmailUpdate**
+
+## userEmailUpdate
+
 > userEmailUpdate($user_id, $body)
 
 Update a User's Email
@@ -532,12 +606,15 @@ Update a User's Email
 Change a user's [email address](https://support.zoom.us/hc/en-us/articles/201362563-How-Do-I-Change-the-Email-on-My-Account-) on a Zoom account that has managed domain set up.<br>If the Zoom Account in which the user belongs, has multiple [managed domains](https://support.zoom.us/hc/en-us/articles/203395207-What-is-Managed-Domain-), the email to be updated must match one of the managed domains.<br> **Scopes:** `user:write:admin` `user:write`<br>  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br> >  Note: A user's email address can only be changed for a maximum of 3 times in a day(24 hours). **Prerequisite:**<br> * Managed domain must be enabled in the account. * The new email address should not already exist in Zoom.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -545,8 +622,8 @@ $apiInstance = new Zoom\Api\Api\UsersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = "user_id_example"; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
-$body = new \Zoom\Api\Model\Body36(); // \Zoom\Api\Model\Body36 | User email.
+$user_id = 'user_id_example'; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+$body = new \Zoom\Api\Model\InlineObject36(); // \Zoom\Api\Model\InlineObject36 | 
 
 try {
     $apiInstance->userEmailUpdate($user_id, $body);
@@ -558,10 +635,11 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **string**| The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. |
- **body** | [**\Zoom\Api\Model\Body36**](../Model/Body36.md)| User email. |
+ **body** | [**\Zoom\Api\Model\InlineObject36**](../Model/InlineObject36.md)|  |
 
 ### Return type
 
@@ -573,12 +651,16 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: application/json, multipart/form-data
+- **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **userPassword**
+
+## userPassword
+
 > userPassword($user_id, $body)
 
 Update a User's Password
@@ -586,12 +668,15 @@ Update a User's Password
 Update the [password](https://support.zoom.us/hc/en-us/articles/206344385-Change-a-User-s-Password) of a user using which the user can login to Zoom.<br> After this request is processed successfully, an email notification will be sent to the user stating that the password was changed.<br> **Scopes:** `user:write:admin` `user:write`<br>    **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium` **Prerequisites:**<br> * Owner or admin of the Zoom account.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -599,8 +684,8 @@ $apiInstance = new Zoom\Api\Api\UsersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = "user_id_example"; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
-$body = new \Zoom\Api\Model\Body35(); // \Zoom\Api\Model\Body35 | User password.
+$user_id = 'user_id_example'; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+$body = new \Zoom\Api\Model\InlineObject35(); // \Zoom\Api\Model\InlineObject35 | 
 
 try {
     $apiInstance->userPassword($user_id, $body);
@@ -612,10 +697,11 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **string**| The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. |
- **body** | [**\Zoom\Api\Model\Body35**](../Model/Body35.md)| User password. |
+ **body** | [**\Zoom\Api\Model\InlineObject35**](../Model/InlineObject35.md)|  |
 
 ### Return type
 
@@ -627,12 +713,16 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: application/json, multipart/form-data
+- **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **userPermission**
+
+## userPermission
+
 > \Zoom\Api\Model\InlineResponse20048 userPermission($user_id)
 
 Get User Permissions
@@ -640,12 +730,15 @@ Get User Permissions
 Users can be assigned a set of permissions that allows them to access only the pages/information that a user needs to view or edit.<br>  Use this API to get permissions that have been granted to the user.<br><br> **Scopes:** `user:read:admin` `user:read`<br>   **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -653,7 +746,7 @@ $apiInstance = new Zoom\Api\Api\UsersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = "user_id_example"; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+$user_id = 'user_id_example'; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
 
 try {
     $result = $apiInstance->userPermission($user_id);
@@ -665,6 +758,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -680,12 +774,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **userPicture**
+
+## userPicture
+
 > userPicture($user_id, $pic_file)
 
 Upload a User's Profile Picture
@@ -693,12 +791,15 @@ Upload a User's Profile Picture
 Upload a user's profile picture.<br><br>  Provide `multipart/form-data` as the value of the `content-type` header for this request.   **Scopes:** `user:write:admin` `user:write`<br>   **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -706,7 +807,7 @@ $apiInstance = new Zoom\Api\Api\UsersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = "user_id_example"; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+$user_id = 'user_id_example'; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
 $pic_file = "/path/to/file.txt"; // \SplFileObject | The file's path.
 
 try {
@@ -719,10 +820,11 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **string**| The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. |
- **pic_file** | **\SplFileObject**| The file&#39;s path. |
+ **pic_file** | **\SplFileObject****\SplFileObject**| The file&#39;s path. |
 
 ### Return type
 
@@ -734,12 +836,16 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: multipart/form-data
+- **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **userSSOTokenDelete**
+
+## userSSOTokenDelete
+
 > userSSOTokenDelete($user_id)
 
 Revoke a User's SSO Token
@@ -747,12 +853,15 @@ Revoke a User's SSO Token
 Revoke a user's SSO token.<br><br> After calling this API, the SSO user will be logged out of their current Zoom session.<br> **Scopes:** `user:write:admin` `user:write`    **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -760,7 +869,7 @@ $apiInstance = new Zoom\Api\Api\UsersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = "user_id_example"; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+$user_id = 'user_id_example'; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
 
 try {
     $apiInstance->userSSOTokenDelete($user_id);
@@ -772,6 +881,7 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **string**| The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. |
@@ -786,12 +896,16 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **userSchedulerDelete**
+
+## userSchedulerDelete
+
 > userSchedulerDelete($user_id, $scheduler_id)
 
 Delete a Scheduler
@@ -799,12 +913,15 @@ Delete a Scheduler
 Delete a Scheduler.  Schedulers are users on whose behalf the current user (assistant) can schedule meetings for. By calling this API, the current user will no longer be a scheduling assistant of this scheduler.   **Prerequisite**: Current user must be under the same account as the scheduler.<br> **Scopes**: `user:write:admin` `user:write`   **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -812,8 +929,8 @@ $apiInstance = new Zoom\Api\Api\UsersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = "user_id_example"; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
-$scheduler_id = "scheduler_id_example"; // string | Scheduler's ID.
+$user_id = 'user_id_example'; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+$scheduler_id = 'scheduler_id_example'; // string | Scheduler's ID.
 
 try {
     $apiInstance->userSchedulerDelete($user_id, $scheduler_id);
@@ -824,6 +941,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -840,12 +958,16 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **userSchedulers**
+
+## userSchedulers
+
 > \Zoom\Api\Model\UserSchedulersList userSchedulers($user_id)
 
 List User Schedulers
@@ -853,12 +975,15 @@ List User Schedulers
 List all the schedulers of a user. Schedulers in this context are the users for whom the current user can schedule meetings for.  For instance, if the current user (i.e., the user whose userId was passed in the path parameter of this API call) is user A, the response of this API will contain a list of user(s), for whom user A can schedule and manage meetings. User A is the assistant of these users and thus has scheduling privilege for these user(s).   **Prerequisites**: * Current user must be under the same account as the scheduler.<br> **Scopes**: `user:read:admin` `user:read`  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -866,7 +991,7 @@ $apiInstance = new Zoom\Api\Api\UsersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = "user_id_example"; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+$user_id = 'user_id_example'; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
 
 try {
     $result = $apiInstance->userSchedulers($user_id);
@@ -878,6 +1003,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -893,12 +1019,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **userSchedulersDelete**
+
+## userSchedulersDelete
+
 > userSchedulersDelete($user_id)
 
 Delete User Schedulers
@@ -906,12 +1036,15 @@ Delete User Schedulers
 Delete all of a user's schedulers. Schedulers are users on whose behalf the current user (assistant) can schedule meetings for. By calling this API, the current user will no longer be a scheduling assistant of any user.   **Prerequisite**: Current user (assistant) must be under the same account as the scheduler.<br> **Scopes**: `user:write:admin` `user:write`   **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -919,7 +1052,7 @@ $apiInstance = new Zoom\Api\Api\UsersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = "user_id_example"; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+$user_id = 'user_id_example'; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
 
 try {
     $apiInstance->userSchedulersDelete($user_id);
@@ -930,6 +1063,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -945,12 +1079,16 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **userSettings**
+
+## userSettings
+
 > object userSettings($user_id, $login_type, $option)
 
 Get User Settings
@@ -958,12 +1096,15 @@ Get User Settings
 Retrieve a user's settings.<br><br> **Scopes:** `user:read:admin` `user:read`<br>    **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -971,9 +1112,9 @@ $apiInstance = new Zoom\Api\Api\UsersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = "user_id_example"; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
-$login_type = "login_type_example"; // string | `0` - Facebook.<br>`1` - Google.<br>`99` - API.<br>`100` - Zoom.<br>`101` - SSO.
-$option = "option_example"; // string | `meeting_authentication`: Use this query parameter to view [meeting authentication configuration](https://support.zoom.us/hc/en-us/articles/360037117472-Authentication-Profiles-for-Meetings-and-Webinars) applied on the account.<br>`recording_authentication`: Use this query parameter to view [recording authentication configuration](https://support.zoom.us/hc/en-us/articles/360037756671-Authentication-Profiles-for-Cloud-Recordings) applied on the account.
+$user_id = 'user_id_example'; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+$login_type = 'login_type_example'; // string | `0` - Facebook.<br>`1` - Google.<br>`99` - API.<br>`100` - Zoom.<br>`101` - SSO.
+$option = 'option_example'; // string | `meeting_authentication`: Use this query parameter to view [meeting authentication configuration](https://support.zoom.us/hc/en-us/articles/360037117472-Authentication-Profiles-for-Meetings-and-Webinars) applied on the account.<br>`recording_authentication`: Use this query parameter to view [recording authentication configuration](https://support.zoom.us/hc/en-us/articles/360037756671-Authentication-Profiles-for-Cloud-Recordings) applied on the account.
 
 try {
     $result = $apiInstance->userSettings($user_id, $login_type, $option);
@@ -985,6 +1126,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -1002,25 +1144,32 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **userSettingsUpdate**
-> userSettingsUpdate($body, $user_id, $option)
+
+## userSettingsUpdate
+
+> userSettingsUpdate($user_id, $body, $option)
 
 Update User Settings
 
 Update a user's settings.<br><br> **Scopes:** `user:write:admin` `user:write`<br>    **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -1028,12 +1177,12 @@ $apiInstance = new Zoom\Api\Api\UsersApi(
     new GuzzleHttp\Client(),
     $config
 );
+$user_id = 'user_id_example'; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
 $body = new \stdClass; // object | User Settings
-$user_id = "user_id_example"; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
-$option = "option_example"; // string | 
+$option = 'option_example'; // string | 
 
 try {
-    $apiInstance->userSettingsUpdate($body, $user_id, $option);
+    $apiInstance->userSettingsUpdate($user_id, $body, $option);
 } catch (Exception $e) {
     echo 'Exception when calling UsersApi->userSettingsUpdate: ', $e->getMessage(), PHP_EOL;
 }
@@ -1042,10 +1191,11 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | **object**| User Settings |
  **user_id** | **string**| The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. |
+ **body** | **object**| User Settings |
  **option** | **string**|  | [optional]
 
 ### Return type
@@ -1058,12 +1208,16 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: application/json, multipart/form-data
+- **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **userStatus**
+
+## userStatus
+
 > userStatus($user_id, $body)
 
 Update User Status
@@ -1071,12 +1225,15 @@ Update User Status
 An account owner or admins can deactivate as well as activate a user in a Zoom account. Deactivating a user will remove all licenses associated with a user. It will prevent the deactivated user from logging into their Zoom account. A deactivated user can be reactivated. Reactivating a user grants the user access to login to their Zoom account.<br> Use this API to either [deactivate](https://support.zoom.us/hc/en-us/articles/115005269946-Remove-User-from-your-Account#h_6a9bc1c3-d739-4945-b1f2-00b3b88fb5cc) an active user or to [reactivate](https://support.zoom.us/hc/en-us/articles/115005269946-Remove-User-from-your-Account#h_16319724-d120-4be6-af5d-31582d134ea0) a deactivated user .<br><br>**Scopes:** `user:write:admin` `user:write`<br>    **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -1084,8 +1241,8 @@ $apiInstance = new Zoom\Api\Api\UsersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = "user_id_example"; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
-$body = new \Zoom\Api\Model\Body34(); // \Zoom\Api\Model\Body34 | User status.
+$user_id = 'user_id_example'; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+$body = new \Zoom\Api\Model\InlineObject34(); // \Zoom\Api\Model\InlineObject34 | 
 
 try {
     $apiInstance->userStatus($user_id, $body);
@@ -1097,10 +1254,11 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **string**| The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. |
- **body** | [**\Zoom\Api\Model\Body34**](../Model/Body34.md)| User status. |
+ **body** | [**\Zoom\Api\Model\InlineObject34**](../Model/InlineObject34.md)|  |
 
 ### Return type
 
@@ -1112,12 +1270,16 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: application/json, multipart/form-data
+- **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **userToken**
+
+## userToken
+
 > \Zoom\Api\Model\InlineResponse20051 userToken($user_id, $type, $ttl)
 
 Get a User Token
@@ -1125,12 +1287,15 @@ Get a User Token
 Retrieve a user's token.<br><br> This token is used for starting meetings with the Client SDK.<br> **Scopes:** `user:read:admin` `user:read`<br>    **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light` If a user signed into Zoom using Google or Facebook, a null value will be returned for the token. To get the token with this API, ask the user to sign into Zoom using their email and password instead.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -1138,8 +1303,8 @@ $apiInstance = new Zoom\Api\Api\UsersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = "user_id_example"; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
-$type = "type_example"; // string | User token types:<br>`token` - Used for starting meetings with the client SDK. This token expires in 14 days and a new token will be returned after the expiry.<br>`zak` - Used for generating the start meeting URL. The token expiration time is two hours. For API users, the expiration time is 90 days.
+$user_id = 'user_id_example'; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+$type = 'type_example'; // string | User token types:<br>`token` - Used for starting meetings with the client SDK. This token expires in 14 days and a new token will be returned after the expiry.<br>`zak` - Used for generating the start meeting URL. The token expiration time is two hours. For API users, the expiration time is 90 days.
 $ttl = 56; // int | Use this field in conjunction with the `type` field where the value of `type` field is `zak`. The value of this field denotes the expiry time of the `zak` token in seconds. For example, if you would like the zak token to be expired after one hour of the token generation, the value of this field should be `3600`.
 
 try {
@@ -1152,6 +1317,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -1169,12 +1335,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **userUpdate**
+
+## userUpdate
+
 > userUpdate($user_id, $body, $login_type)
 
 Update a User
@@ -1182,12 +1352,15 @@ Update a User
 Update information on a user's Zoom [profile](https://support.zoom.us/hc/en-us/articles/201363203-My-Profile).<br><br> **Scopes:** `user:write:admin` `user:write`<br>    **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -1195,9 +1368,9 @@ $apiInstance = new Zoom\Api\Api\UsersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = "user_id_example"; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
-$body = new \Zoom\Api\Model\Body33(); // \Zoom\Api\Model\Body33 | User
-$login_type = "login_type_example"; // string | `0` - Facebook.<br>`1` - Google.<br>`99` - API.<br>`100` - Zoom.<br>`101` - SSO.
+$user_id = 'user_id_example'; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+$body = new \Zoom\Api\Model\InlineObject33(); // \Zoom\Api\Model\InlineObject33 | 
+$login_type = 'login_type_example'; // string | `0` - Facebook.<br>`1` - Google.<br>`99` - API.<br>`100` - Zoom.<br>`101` - SSO.
 
 try {
     $apiInstance->userUpdate($user_id, $body, $login_type);
@@ -1209,10 +1382,11 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **string**| The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. |
- **body** | [**\Zoom\Api\Model\Body33**](../Model/Body33.md)| User |
+ **body** | [**\Zoom\Api\Model\InlineObject33**](../Model/InlineObject33.md)|  |
  **login_type** | **string**| &#x60;0&#x60; - Facebook.&lt;br&gt;&#x60;1&#x60; - Google.&lt;br&gt;&#x60;99&#x60; - API.&lt;br&gt;&#x60;100&#x60; - Zoom.&lt;br&gt;&#x60;101&#x60; - SSO. | [optional]
 
 ### Return type
@@ -1225,12 +1399,16 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: application/json, multipart/form-data
+- **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **userVanityName**
+
+## userVanityName
+
 > \Zoom\Api\Model\InlineResponse20053 userVanityName($vanity_name)
 
 Check a User's PM Room Name
@@ -1238,12 +1416,15 @@ Check a User's PM Room Name
 A personal meeting room is a virtual meeting room that can be permanently assigned to a user. Use this API to check if a personal meeting room with the given name exists or not.<br><br> **Scopes:** `user:read:admin` `user:read`<br>    **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -1251,7 +1432,7 @@ $apiInstance = new Zoom\Api\Api\UsersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$vanity_name = "vanity_name_example"; // string | Personal meeting room name.
+$vanity_name = 'vanity_name_example'; // string | Personal meeting room name.
 
 try {
     $result = $apiInstance->userVanityName($vanity_name);
@@ -1263,6 +1444,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -1278,12 +1460,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **users**
+
+## users
+
 > \Zoom\Api\Model\InlineResponse20046 users($status, $page_size, $role_id, $page_number, $include_fields)
 
 List Users
@@ -1291,12 +1477,15 @@ List Users
 A Zoom account can have one or more users. Use this API to list users on your account.<br><br> **Scopes:** `user:read:admin`<br>    **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -1304,11 +1493,11 @@ $apiInstance = new Zoom\Api\Api\UsersApi(
     new GuzzleHttp\Client(),
     $config
 );
-$status = "active"; // string | User statuses:<br>`active` - Users with an active status.<br>`inactive` - Users who are deactivated.<br>`pending` - Users with a pending status.
+$status = 'active'; // string | User statuses:<br>`active` - Users with an active status.<br>`inactive` - Users who are deactivated.<br>`pending` - Users with a pending status.
 $page_size = 30; // int | The number of records returned within a single API call.
-$role_id = "role_id_example"; // string | Unique identifier for the role. Provide this parameter if you would like to filter the response by a specific role. You can retrieve Role IDs from [List Roles](https://marketplace.zoom.us/docs/api-reference/zoom-api/roles/roles) API.
-$page_number = "page_number_example"; // string | The page number of the current page in the returned records.
-$include_fields = "include_fields_example"; // string | Provide a value for this field if you would like to see the following attribute in the response of this API call:<br>  `custom_attributes`: Returns custom attributes that are associated with the user.
+$role_id = 'role_id_example'; // string | Unique identifier for the role. Provide this parameter if you would like to filter the response by a specific role. You can retrieve Role IDs from [List Roles](https://marketplace.zoom.us/docs/api-reference/zoom-api/roles/roles) API.
+$page_number = 'page_number_example'; // string | The page number of the current page in the returned records.
+$include_fields = 'include_fields_example'; // string | Provide a value for this field if you would like to see the following attribute in the response of this API call:<br>  `custom_attributes`: Returns custom attributes that are associated with the user.
 
 try {
     $result = $apiInstance->users($status, $page_size, $role_id, $page_number, $include_fields);
@@ -1321,9 +1510,10 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **status** | **string**| User statuses:&lt;br&gt;&#x60;active&#x60; - Users with an active status.&lt;br&gt;&#x60;inactive&#x60; - Users who are deactivated.&lt;br&gt;&#x60;pending&#x60; - Users with a pending status. | [optional] [default to active]
+ **status** | **string**| User statuses:&lt;br&gt;&#x60;active&#x60; - Users with an active status.&lt;br&gt;&#x60;inactive&#x60; - Users who are deactivated.&lt;br&gt;&#x60;pending&#x60; - Users with a pending status. | [optional] [default to &#39;active&#39;]
  **page_size** | **int**| The number of records returned within a single API call. | [optional] [default to 30]
  **role_id** | **string**| Unique identifier for the role. Provide this parameter if you would like to filter the response by a specific role. You can retrieve Role IDs from [List Roles](https://marketplace.zoom.us/docs/api-reference/zoom-api/roles/roles) API. | [optional]
  **page_number** | **string**| The page number of the current page in the returned records. | [optional]
@@ -1339,8 +1529,10 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 

@@ -1,6 +1,7 @@
-# InlineResponse20069ScheduleMeeting
+# # InlineResponse20069ScheduleMeeting
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **host_video** | **bool** | Start meetings with host video on. | [optional] 
@@ -17,6 +18,6 @@ Name | Type | Description | Notes
 **meeting_authentication** | **bool** | Only authenticated users can join meetings | [optional] 
 **embed_password_in_join_link** | **bool** | If the value is set to &#x60;true&#x60;, the meeting password will be encrypted and included in the join meeting link to allow participants to join with just one click without having to enter the password. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

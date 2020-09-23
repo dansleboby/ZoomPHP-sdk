@@ -1,6 +1,7 @@
-# InlineResponse20068ActivityLogs
+# # InlineResponse20068ActivityLogs
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **email** | **string** | Email address of the user used for the activity. | [optional] 
@@ -10,6 +11,6 @@ Name | Type | Description | Notes
 **client_type** | **string** | The client interface type using which the activity was performed. | [optional] 
 **version** | **string** | Zoom client version of the user. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

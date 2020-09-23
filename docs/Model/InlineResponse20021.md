@@ -1,6 +1,7 @@
-# InlineResponse20021
+# # InlineResponse20021
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **from** | [**\DateTime**](\DateTime.md) | Start date. | [optional] 
@@ -10,6 +11,6 @@ Name | Type | Description | Notes
 **session_id** | **string** | IM chat session ID. | [optional] 
 **to** | [**\DateTime**](\DateTime.md) | End date. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

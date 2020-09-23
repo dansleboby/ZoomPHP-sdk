@@ -1,6 +1,7 @@
-# WebianrRegistrant
+# # WebianrRegistrant
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **address** | **string** | Registrant&#39;s address. | [optional] 
@@ -21,6 +22,6 @@ Name | Type | Description | Notes
 **state** | **string** | Registrant&#39;s State/Province. | [optional] 
 **zip** | **string** | Registrant&#39;s Zip/Postal Code. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

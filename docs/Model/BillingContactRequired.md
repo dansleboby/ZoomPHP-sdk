@@ -1,6 +1,7 @@
-# BillingContactRequired
+# # BillingContactRequired
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **first_name** | **string** | Billing Contact&#39;s first name. | 
@@ -14,6 +15,6 @@ Name | Type | Description | Notes
 **zip** | **string** | Billing Contact&#39;s zip/postal code. | 
 **country** | **string** | Billing Contact&#39;s Country [ID](https://marketplace.zoom.us/docs/api-reference/other-references/abbreviation-lists#countries) in abbreviated format. | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

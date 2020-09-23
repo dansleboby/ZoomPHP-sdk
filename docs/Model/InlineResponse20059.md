@@ -1,6 +1,7 @@
-# InlineResponse20059
+# # InlineResponse20059
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **client_feedback_details** | [**\Zoom\Api\Model\InlineResponse20059ClientFeedbackDetails[]**](InlineResponse20059ClientFeedbackDetails.md) |  | [optional] 
@@ -9,6 +10,6 @@ Name | Type | Description | Notes
 **page_size** | **int** | The amount of records returns within a single API call. | [optional] 
 **to** | [**\DateTime**](\DateTime.md) | End date for this report | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

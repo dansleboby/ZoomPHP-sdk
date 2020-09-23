@@ -1,6 +1,7 @@
-# UserSettingsMeetingSettingsMeetingPasswordRequirement
+# # UserSettingsMeetingSettingsMeetingPasswordRequirement
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **length** | **int** | The minimum length that the meeting/webinar passcode needs to have. | [optional] 
@@ -12,6 +13,6 @@ Name | Type | Description | Notes
 **consecutive_characters_length** | **int** |  | [optional] 
 **weak_enhance_detection** | **bool** | If set to &#x60;true&#x60;, users will be informed if the provided passcode is weak. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

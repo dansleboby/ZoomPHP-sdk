@@ -1,6 +1,7 @@
-# InlineResponse20027Participants
+# # InlineResponse20027Participants
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **string** | Universally unique identifier of the Participant. It is the same as the User ID of the participant if the participant joins the meeting by logging into Zoom. If the participant joins the meeting without logging in, the value of this field will be blank. | [optional] 
@@ -30,6 +31,6 @@ Name | Type | Description | Notes
 **leave_reason** | **string** | Possible reasons for why participant left the meeting. | [optional] 
 **email** | **string** | Email address of the participant. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

@@ -1,6 +1,7 @@
-# RecurrenceWebinar
+# # RecurrenceWebinar
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **type** | **int** | Recurrence webinar types:&lt;br&gt;&#x60;1&#x60; - Daily.&lt;br&gt;&#x60;2&#x60; - Weekly.&lt;br&gt;&#x60;3&#x60; - Monthly. | 
@@ -12,6 +13,6 @@ Name | Type | Description | Notes
 **end_times** | **int** | Select how many times the webinar will recur before it is canceled. (Cannot be used with \&quot;end_date_time\&quot;.) | [optional] 
 **end_date_time** | [**\DateTime**](\DateTime.md) | Select a date when the webinar will recur before it is canceled. Should be in UTC time, such as 2017-11-25T12:00:00Z. (Cannot be used with \&quot;end_times\&quot;.) | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

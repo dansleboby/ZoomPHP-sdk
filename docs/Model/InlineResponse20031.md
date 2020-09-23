@@ -1,6 +1,7 @@
-# InlineResponse20031
+# # InlineResponse20031
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **from** | [**\DateTime**](\DateTime.md) | Start date for this report. | [optional] 
@@ -11,6 +12,6 @@ Name | Type | Description | Notes
 **total_records** | **int** | The number of all records available across pages. | [optional] 
 **users** | [**\Zoom\Api\Model\InlineResponse20031Users[]**](InlineResponse20031Users.md) |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

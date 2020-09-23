@@ -1,6 +1,7 @@
-# InlineResponse20020
+# # InlineResponse20020
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **from** | [**\DateTime**](\DateTime.md) | Start date. | [optional] 
@@ -9,6 +10,6 @@ Name | Type | Description | Notes
 **sessions** | [**\Zoom\Api\Model\InlineResponse20020Sessions[]**](InlineResponse20020Sessions.md) | Array of session objects. | [optional] 
 **to** | [**\DateTime**](\DateTime.md) | End date. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

@@ -1,6 +1,7 @@
-# InlineResponse20122
+# # InlineResponse20122
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **string** | Webinar Poll ID | [optional] 
@@ -8,6 +9,6 @@ Name | Type | Description | Notes
 **status** | **string** | Status of the Webinar Poll:&lt;br&gt;&#x60;notstart&#x60; - Poll not started&lt;br&gt;&#x60;started&#x60; - Poll started&lt;br&gt;&#x60;ended&#x60; - Poll ended&lt;br&gt;&#x60;sharing&#x60; - Sharing poll results | [optional] 
 **title** | **string** | Title for the poll. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

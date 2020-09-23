@@ -11,7 +11,9 @@ Method | HTTP request | Description
 [**trackingfieldUpdate**](TrackingFieldApi.md#trackingfieldUpdate) | **PATCH** /tracking_fields/{fieldId} | Update a Tracking Field
 
 
-# **trackingfieldCreate**
+
+## trackingfieldCreate
+
 > \Zoom\Api\Model\InlineResponse2019 trackingfieldCreate($body)
 
 Create a Tracking Field
@@ -19,12 +21,15 @@ Create a Tracking Field
 [Tracking fields](https://support.zoom.us/hc/en-us/articles/115000293426-Scheduling-Tracking-Fields) allow you to analyze usage by various fields within an organization.<br> Use this API to create a new tracking field.<br><br> **Scope:** `trackingfield:write:admin`<br>    **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br> **Prerequisites:** * Business, Education, API or higher plan
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\TrackingFieldApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -32,7 +37,7 @@ $apiInstance = new Zoom\Api\Api\TrackingFieldApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Zoom\Api\Model\TrackingField(); // \Zoom\Api\Model\TrackingField | Tracking Field
+$body = new \Zoom\Api\Model\TrackingField(); // \Zoom\Api\Model\TrackingField | 
 
 try {
     $result = $apiInstance->trackingfieldCreate($body);
@@ -45,9 +50,10 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Zoom\Api\Model\TrackingField**](../Model/TrackingField.md)| Tracking Field |
+ **body** | [**\Zoom\Api\Model\TrackingField**](../Model/TrackingField.md)|  |
 
 ### Return type
 
@@ -59,12 +65,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: application/json, multipart/form-data
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **trackingfieldDelete**
+
+## trackingfieldDelete
+
 > trackingfieldDelete($field_id)
 
 Delete a Tracking Field
@@ -72,12 +82,15 @@ Delete a Tracking Field
 [Tracking fields](https://support.zoom.us/hc/en-us/articles/115000293426-Scheduling-Tracking-Fields) allow you to analyze usage by various fields within an organization.<br> Use this API to delete a tracking field.<br><br> **Scope:** `trackingfield:write:admin`<br>    **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br> **Prerequisites:** * Business, Education, API or higher plan
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\TrackingFieldApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -85,7 +98,7 @@ $apiInstance = new Zoom\Api\Api\TrackingFieldApi(
     new GuzzleHttp\Client(),
     $config
 );
-$field_id = "field_id_example"; // string | The Tracking Field ID
+$field_id = 'field_id_example'; // string | The Tracking Field ID
 
 try {
     $apiInstance->trackingfieldDelete($field_id);
@@ -96,6 +109,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -111,12 +125,16 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **trackingfieldGet**
+
+## trackingfieldGet
+
 > \Zoom\Api\Model\InlineResponse2019 trackingfieldGet($field_id)
 
 Get a Tracking Field
@@ -124,12 +142,15 @@ Get a Tracking Field
 [Tracking fields](https://support.zoom.us/hc/en-us/articles/115000293426-Scheduling-Tracking-Fields) allow you to analyze usage by various fields within an organization.<br><br> When scheduling a meeting, the tracking field will be included in the meeting options.<br>Use this API to get information on a tracking field.<br><br> **Scopes:** `trackingfield:read:admin`<br>    **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br> **Prerequisites:** * Business, Education, API or higher plan
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\TrackingFieldApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -137,7 +158,7 @@ $apiInstance = new Zoom\Api\Api\TrackingFieldApi(
     new GuzzleHttp\Client(),
     $config
 );
-$field_id = "field_id_example"; // string | The Tracking Field ID
+$field_id = 'field_id_example'; // string | The Tracking Field ID
 
 try {
     $result = $apiInstance->trackingfieldGet($field_id);
@@ -149,6 +170,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -164,12 +186,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **trackingfieldList**
+
+## trackingfieldList
+
 > object trackingfieldList()
 
 List Tracking Fields
@@ -177,12 +203,15 @@ List Tracking Fields
 [Tracking fields](https://support.zoom.us/hc/en-us/articles/115000293426-Scheduling-Tracking-Fields) allow you to analyze usage by various fields within an organization.<br> Use this API to list all the tracking fields on your Zoom account.<br><br> **Scopes:** `trackingfield:read:admin`<br>    **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`<br> **Prerequisites:** * Business, Education, API or higher plan
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\TrackingFieldApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -201,6 +230,7 @@ try {
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -213,12 +243,16 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **trackingfieldUpdate**
+
+## trackingfieldUpdate
+
 > trackingfieldUpdate($field_id, $body)
 
 Update a Tracking Field
@@ -226,12 +260,15 @@ Update a Tracking Field
 [Tracking fields](https://support.zoom.us/hc/en-us/articles/115000293426-Scheduling-Tracking-Fields) allow you to analyze usage by various fields within an organization.<br> Use this API to update a tracking field.<br><br> **Scope:** `trackingfield:write:admin`<br>    **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br> **Prerequisites:** * Business, Education, API or higher plan
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\TrackingFieldApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -239,7 +276,7 @@ $apiInstance = new Zoom\Api\Api\TrackingFieldApi(
     new GuzzleHttp\Client(),
     $config
 );
-$field_id = "field_id_example"; // string | The Tracking Field ID
+$field_id = 'field_id_example'; // string | The Tracking Field ID
 $body = new \Zoom\Api\Model\TrackingField1(); // \Zoom\Api\Model\TrackingField1 | 
 
 try {
@@ -251,6 +288,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -267,8 +305,10 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: application/json, multipart/form-data
+- **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 

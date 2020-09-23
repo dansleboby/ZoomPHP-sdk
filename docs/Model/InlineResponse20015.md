@@ -1,6 +1,7 @@
-# InlineResponse20015
+# # InlineResponse20015
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **plan_base** | [**\Zoom\Api\Model\InlineResponse20015PlanBase**](InlineResponse20015PlanBase.md) |  | [optional] 
@@ -15,6 +16,6 @@ Name | Type | Description | Notes
 **plan_audio** | [**\Zoom\Api\Model\InlineResponse20015PlanAudio**](InlineResponse20015PlanAudio.md) |  | [optional] 
 **plan_phone** | [**\Zoom\Api\Model\PhonePlan1**](PhonePlan1.md) |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

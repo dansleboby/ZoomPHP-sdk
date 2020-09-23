@@ -7,7 +7,9 @@ Method | HTTP request | Description
 [**userPACs**](PACApi.md#userPACs) | **GET** /users/{userId}/pac | List a User&#39;s PAC Accounts
 
 
-# **userPACs**
+
+## userPACs
+
 > \Zoom\Api\Model\InlineResponse20049 userPACs($user_id)
 
 List a User's PAC Accounts
@@ -15,12 +17,15 @@ List a User's PAC Accounts
 [Personal Audio Conference](https://support.zoom.us/hc/en-us/articles/204517069-Getting-Started-with-Personal-Audio-Conference) (PAC) allows Pro or higher account holders to host meetings through PSTN (phone dial-in) only.<br>Use this API to list a user's PAC accounts.<br><br> **Scopes:** `user:read:admin` `user:read`<br> <br>  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br> **Prerequisites:**<br> * A Pro or higher plan with [Premium Audio Conferencing](https://support.zoom.us/hc/en-us/articles/204517069-Getting-Started-with-Personal-Audio-Conference) add-on. * Personal Audio Conference must be enabled in the user's profile.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\PACApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -28,7 +33,7 @@ $apiInstance = new Zoom\Api\Api\PACApi(
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = "user_id_example"; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+$user_id = 'user_id_example'; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
 
 try {
     $result = $apiInstance->userPACs($user_id);
@@ -40,6 +45,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -55,8 +61,10 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 

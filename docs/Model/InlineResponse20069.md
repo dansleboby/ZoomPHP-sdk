@@ -1,6 +1,7 @@
-# InlineResponse20069
+# # InlineResponse20069
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **schedule_meeting** | [**\Zoom\Api\Model\InlineResponse20069ScheduleMeeting**](InlineResponse20069ScheduleMeeting.md) |  | [optional] 
@@ -9,6 +10,6 @@ Name | Type | Description | Notes
 **recording** | [**\Zoom\Api\Model\InlineResponse20069Recording**](InlineResponse20069Recording.md) |  | [optional] 
 **telephony** | [**\Zoom\Api\Model\InlineResponse20069Telephony**](InlineResponse20069Telephony.md) |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

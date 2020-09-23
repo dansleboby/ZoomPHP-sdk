@@ -1,6 +1,7 @@
-# InlineResponse200PhoneNumbers
+# # InlineResponse200PhoneNumbers
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **string** | Unique Identifier of the Phone Number. | [optional] 
@@ -12,6 +13,6 @@ Name | Type | Description | Notes
 **assignee** | [**\Zoom\Api\Model\InlineResponse200Assignee**](InlineResponse200Assignee.md) |  | [optional] 
 **site** | [**\Zoom\Api\Model\InlineResponse200Site**](InlineResponse200Site.md) |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

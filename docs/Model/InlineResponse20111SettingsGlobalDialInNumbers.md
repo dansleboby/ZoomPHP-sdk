@@ -1,6 +1,7 @@
-# InlineResponse20111SettingsGlobalDialInNumbers
+# # InlineResponse20111SettingsGlobalDialInNumbers
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **country** | **string** | Country code. For example, BR. | [optional] 
@@ -9,6 +10,6 @@ Name | Type | Description | Notes
 **number** | **string** | Phone number. For example, +1 2332357613. | [optional] 
 **type** | **string** | Type of number. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

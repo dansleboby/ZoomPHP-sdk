@@ -1,6 +1,7 @@
-# InlineResponse20060Messages
+# # InlineResponse20060Messages
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **string** | IM message UUID. | [optional] 
@@ -9,6 +10,6 @@ Name | Type | Description | Notes
 **date_time** | [**\DateTime**](\DateTime.md) | IM message send time. | [optional] 
 **timstamp** | **int** | IM message send timestamp. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

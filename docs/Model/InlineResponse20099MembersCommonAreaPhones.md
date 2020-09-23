@@ -1,11 +1,12 @@
-# InlineResponse20099MembersCommonAreaPhones
+# # InlineResponse20099MembersCommonAreaPhones
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **string** | Unique identifier of the [Common Area Phone](https://support.zoom.us/hc/en-us/articles/360028516231-Managing-Common-Area-Phones). | [optional] 
 **name** | **string** | Name of the [Common Area Phone](https://support.zoom.us/hc/en-us/articles/360028516231-Managing-Common-Area-Phones). | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

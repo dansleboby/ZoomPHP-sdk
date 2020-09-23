@@ -1,6 +1,7 @@
-# InlineResponse20070
+# # InlineResponse20070
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **schedule_meeting** | [**\Zoom\Api\Model\InlineResponse20070ScheduleMeeting**](InlineResponse20070ScheduleMeeting.md) |  | [optional] 
@@ -10,6 +11,6 @@ Name | Type | Description | Notes
 **telephony** | [**\Zoom\Api\Model\InlineResponse20069Telephony**](InlineResponse20069Telephony.md) |  | [optional] 
 **tsp** | [**\Zoom\Api\Model\InlineResponse20070Tsp**](InlineResponse20070Tsp.md) |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

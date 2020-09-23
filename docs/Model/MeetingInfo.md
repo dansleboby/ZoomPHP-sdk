@@ -1,6 +1,7 @@
-# MeetingInfo
+# # MeetingInfo
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **topic** | **string** | Meeting topic | [optional] 
@@ -18,8 +19,8 @@ Name | Type | Description | Notes
 **tracking_fields** | [**\Zoom\Api\Model\InlineResponse20111TrackingFields[]**](InlineResponse20111TrackingFields.md) | Tracking fields | [optional] 
 **occurrences** | [**\Zoom\Api\Model\InlineResponse20111Occurrences[]**](InlineResponse20111Occurrences.md) | Array of occurrence objects. | [optional] 
 **settings** | [**\Zoom\Api\Model\InlineResponse20111Settings**](InlineResponse20111Settings.md) |  | [optional] 
-**recurrence** | [**\Zoom\Api\Model\UsersuserIdmeetingsRecurrence**](UsersuserIdmeetingsRecurrence.md) |  | [optional] 
+**recurrence** | [**\Zoom\Api\Model\UsersUserIdMeetingsRecurrence**](UsersUserIdMeetingsRecurrence.md) |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

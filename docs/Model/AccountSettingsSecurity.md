@@ -1,6 +1,7 @@
-# AccountSettingsSecurity
+# # AccountSettingsSecurity
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **admin_change_name_pic** | **bool** | Only account administrators can change a user&#39;s username and picture. | [optional] 
@@ -13,6 +14,6 @@ Name | Type | Description | Notes
 **sign_in_with_two_factor_auth_groups** | **string[]** | This field contains group IDs of groups that have 2FA enabled. This field is only returned if the value of &#x60;sign_in_with_two_factor_auth&#x60; is &#x60;group&#x60; | [optional] 
 **sign_in_with_two_factor_auth_roles** | **string[]** | This field contains role IDs of roles that have 2FA enabled. This field is only returned if the value of &#x60;sign_in_with_two_factor_auth&#x60; is &#x60;role&#x60;. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

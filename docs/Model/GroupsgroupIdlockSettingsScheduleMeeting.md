@@ -1,6 +1,7 @@
-# GroupsgroupIdlockSettingsScheduleMeeting
+# # GroupsGroupIdLockSettingsScheduleMeeting
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **host_video** | **bool** | Start meetings with host video on. | [optional] 
@@ -18,6 +19,6 @@ Name | Type | Description | Notes
 **embed_password_in_join_link** | **bool** | If the value is set to &#x60;true&#x60;, the meeting password will be encrypted and included in the join meeting link to allow participants to join with just one click without having to enter the password. | [optional] 
 **personal_meeting** | **bool** | Turn the lock setting on or off for the **Enable Personal Meeting ID** setting for a group.&lt;br&gt;&lt;br&gt; &#x60;true&#x60;: Turn the **\&quot;Enable Personal Meeting ID\&quot;** setting **on** for all users in the group. Users can choose to use personal meeting ID for their meetings. &lt;br&gt;&lt;br&gt; &#x60;false&#x60;: Turn **off** the **\&quot;Enable Personal Meeting ID\&quot;** setting. **If this setting is [disabled](https://support.zoom.us/hc/en-us/articles/201362843-Personal-meeting-ID-PMI-and-personal-link?flash_digest&#x3D;eb7ac62d8c7fb4daf285916e3e15d87537806133#h_aa0335c8-3b06-41bc-bc1f-a8b84ef17f2a), meetings that were scheduled with PMI by this group members will be invalid. Users will have to update previously scheduled PMI meetings.**&lt;br&gt;&lt;br&gt; For Zoom Phone only:If a user has been assigned a desk phone, **\&quot;Elevate to Zoom Meeting\&quot;** on desk phone will be disabled. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

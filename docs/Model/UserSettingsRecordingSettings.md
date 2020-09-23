@@ -1,6 +1,7 @@
-# UserSettingsRecordingSettings
+# # UserSettingsRecordingSettings
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **local_recording** | **bool** | Local recording. | [optional] 
@@ -20,6 +21,6 @@ Name | Type | Description | Notes
 **ask_host_to_confirm_disclaimer** | **bool** | Ask host to confirm the disclaimer. | [optional] 
 **recording_password_requirement** | [**\Zoom\Api\Model\UserSettingsRecordingSettingsRecordingPasswordRequirement**](UserSettingsRecordingSettingsRecordingPasswordRequirement.md) |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

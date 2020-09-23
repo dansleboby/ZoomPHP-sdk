@@ -11,7 +11,9 @@ Method | HTTP request | Description
 [**updateCommonAreaPhone**](CommonAreaPhonesApi.md#updateCommonAreaPhone) | **PATCH** /phone/common_area_phones/{commonAreaPhoneId} | Update Common Area Phone
 
 
-# **addCommonAreaPhone**
+
+## addCommonAreaPhone
+
 > \Zoom\Api\Model\InlineResponse20125 addCommonAreaPhone($body)
 
 Add a Common Area Phone
@@ -19,12 +21,15 @@ Add a Common Area Phone
 A common area phone can be provisioned by a Zoom account owner or a Zoom admin so that anyone in an organization can use it. For example, if your office has shared desks that don't belong to a specific employees, you could add a common area phone so that any person can use it.<br> Use this API to [add a common area phone](https://support.zoom.us/hc/en-us/articles/360028516231-Managing-Common-Area-Phones#h_2d0da347-c35a-4993-9771-e21aaa568deb).<br><br> **Prerequisites:**<br> * Pro or a higher account with Zoom Phone license. * Account owner or admin permissions. * [Supported device](https://support.zoom.us/hc/en-us/articles/360001299063-Zoom-Voice-Supported-Devices)<br> **Scope:** `phone:write:admin`<br>     **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\CommonAreaPhonesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -32,7 +37,7 @@ $apiInstance = new Zoom\Api\Api\CommonAreaPhonesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Zoom\Api\Model\Body75(); // \Zoom\Api\Model\Body75 | 
+$body = new \Zoom\Api\Model\InlineObject75(); // \Zoom\Api\Model\InlineObject75 | 
 
 try {
     $result = $apiInstance->addCommonAreaPhone($body);
@@ -45,9 +50,10 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Zoom\Api\Model\Body75**](../Model/Body75.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\InlineObject75**](../Model/InlineObject75.md)|  | [optional]
 
 ### Return type
 
@@ -59,12 +65,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json, application/xml
+- **Content-Type**: application/json
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **deleteCommonAreaPhone**
+
+## deleteCommonAreaPhone
+
 > object deleteCommonAreaPhone($common_area_phone_id)
 
 Delete a Common Area Phone
@@ -72,12 +82,15 @@ Delete a Common Area Phone
 A common area phone can be provisioned by a Zoom account owner or a Zoom admin so that anyone in an organization can use it. For example, if your office has shared desks that don't belong to a specific employees, you could add a common area phone so that any person can use it.<br> Use this API to remove the [common area phone](https://support.zoom.us/hc/en-us/articles/360028516231-Managing-Common-Area-Phones) from Zoom Phone System in an account.<br><br>**Prerequisites:**<br> * Pro or a higher account with Zoom Phone license. * Account owner or admin permissions. * [Supported device](https://support.zoom.us/hc/en-us/articles/360001299063-Zoom-Voice-Supported-Devices)<br> **Scopes:** `phone:write:admin`<br>     **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\CommonAreaPhonesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -85,7 +98,7 @@ $apiInstance = new Zoom\Api\Api\CommonAreaPhonesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$common_area_phone_id = "common_area_phone_id_example"; // string | Unique Identifier of the common area phone.
+$common_area_phone_id = 'common_area_phone_id_example'; // string | Unique Identifier of the common area phone.
 
 try {
     $result = $apiInstance->deleteCommonAreaPhone($common_area_phone_id);
@@ -97,6 +110,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -112,12 +126,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **getACommonAreaPhone**
+
+## getACommonAreaPhone
+
 > \Zoom\Api\Model\InlineResponse20096 getACommonAreaPhone($common_area_phone_id)
 
 Get Common Area Phone Details
@@ -125,12 +143,15 @@ Get Common Area Phone Details
 A common area phone can be provisioned by a Zoom account owner or a Zoom admin so that anyone in an organization can use it. For example, if your office has shared desks that don't belong to a specific employees, you could add a common area phone so that any person can use it.<br> Use this API to get details on a specific [common area phone](https://support.zoom.us/hc/en-us/articles/360028516231-Managing-Common-Area-Phones) in an account.<br><br>**Prerequisites:**<br> * Pro or a higher account with Zoom Phone license. * Account owner or admin permissions. * [Supported device](https://support.zoom.us/hc/en-us/articles/360001299063-Zoom-Voice-Supported-Devices)<br> **Scopes:** `phone:read:admin`<br>     **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\CommonAreaPhonesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -138,7 +159,7 @@ $apiInstance = new Zoom\Api\Api\CommonAreaPhonesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$common_area_phone_id = "common_area_phone_id_example"; // string | Unique Identifier of the Common Area Phone. This can be retrieved from List Common Area Phones API.
+$common_area_phone_id = 'common_area_phone_id_example'; // string | Unique Identifier of the Common Area Phone. This can be retrieved from List Common Area Phones API.
 
 try {
     $result = $apiInstance->getACommonAreaPhone($common_area_phone_id);
@@ -150,6 +171,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -165,12 +187,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **listCommonAreaPhones**
+
+## listCommonAreaPhones
+
 > \Zoom\Api\Model\InlineResponse20095 listCommonAreaPhones($page_size, $next_page_token)
 
 List Common Area Phones
@@ -178,12 +204,15 @@ List Common Area Phones
 A common area phone can be provisioned by a Zoom account owner or a Zoom admin so that anyone in an organization can use it. For example, if your office has shared desks that don't belong to a specific employees, you could add a common area phone so that any person can use it.<br> Use this API to [list all common area phone](https://support.zoom.us/hc/en-us/articles/360028516231-Managing-Common-Area-Phones) in an account.<br><br>**Prerequisites:**<br> * Pro or a higher account with Zoom Phone license. * Account owner or admin permissions. * [Supported device](https://support.zoom.us/hc/en-us/articles/360001299063-Zoom-Voice-Supported-Devices)<br><br> **Scope:** `phone:read:admin`<br>    **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\CommonAreaPhonesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -192,7 +221,7 @@ $apiInstance = new Zoom\Api\Api\CommonAreaPhonesApi(
     $config
 );
 $page_size = 30; // int | The total number of records returned from a single API call.
-$next_page_token = "next_page_token_example"; // string | The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
+$next_page_token = 'next_page_token_example'; // string | The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
 
 try {
     $result = $apiInstance->listCommonAreaPhones($page_size, $next_page_token);
@@ -204,6 +233,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -220,12 +250,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **updateCommonAreaPhone**
+
+## updateCommonAreaPhone
+
 > object updateCommonAreaPhone($common_area_phone_id, $body)
 
 Update Common Area Phone
@@ -233,12 +267,15 @@ Update Common Area Phone
 A common area phone can be provisioned by a Zoom account owner or a Zoom admin so that anyone in an organization can use it. For example, if your office has shared desks that don't belong to a specific employees, you could add a common area phone so that any person can use it.<br> Use this API to update details on a specific [common area phone](https://support.zoom.us/hc/en-us/articles/360028516231-Managing-Common-Area-Phones) in an account.<br><br>**Prerequisites:**<br> * Pro or a higher account with Zoom Phone license. * Account owner or admin permissions. * [Supported device](https://support.zoom.us/hc/en-us/articles/360001299063-Zoom-Voice-Supported-Devices)<br> **Scopes:** `phone:write:admin`<br>     **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\CommonAreaPhonesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -246,8 +283,8 @@ $apiInstance = new Zoom\Api\Api\CommonAreaPhonesApi(
     new GuzzleHttp\Client(),
     $config
 );
-$common_area_phone_id = "common_area_phone_id_example"; // string | 
-$body = new \Zoom\Api\Model\Body76(); // \Zoom\Api\Model\Body76 | 
+$common_area_phone_id = 'common_area_phone_id_example'; // string | 
+$body = new \Zoom\Api\Model\InlineObject76(); // \Zoom\Api\Model\InlineObject76 | 
 
 try {
     $result = $apiInstance->updateCommonAreaPhone($common_area_phone_id, $body);
@@ -260,10 +297,11 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **common_area_phone_id** | **string**|  |
- **body** | [**\Zoom\Api\Model\Body76**](../Model/Body76.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\InlineObject76**](../Model/InlineObject76.md)|  | [optional]
 
 ### Return type
 
@@ -275,8 +313,10 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: application/json, multipart/form-data
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 

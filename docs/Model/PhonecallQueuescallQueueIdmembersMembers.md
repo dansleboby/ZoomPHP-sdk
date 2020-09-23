@@ -1,11 +1,12 @@
-# PhonecallQueuescallQueueIdmembersMembers
+# # PhoneCallQueuesCallQueueIdMembersMembers
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**users** | [**\Zoom\Api\Model\PhonecallQueuescallQueueIdmembersMembersUsers[]**](PhonecallQueuescallQueueIdmembersMembersUsers.md) |  | [optional] 
+**users** | [**\Zoom\Api\Model\PhoneCallQueuesCallQueueIdMembersMembersUsers[]**](PhoneCallQueuesCallQueueIdMembersMembersUsers.md) |  | [optional] 
 **common_area_phone_ids** | **string[]** | Array of one or more Common Area Phone Ids of the Common Area Phone(s) that you would like to add to the Call Queue. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

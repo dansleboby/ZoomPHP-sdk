@@ -1,6 +1,7 @@
-# InlineResponse2001Phones
+# # InlineResponse2001Phones
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **string** | Unique Identifier of the SIP Phone. | [optional] 
@@ -21,6 +22,6 @@ Name | Type | Description | Notes
 **authorization_name** | **string** | Authorization name of the user  registered for SIP Phone. | [optional] 
 **voice_mail** | **string** | The number to dial for checking voicemail. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

@@ -14,7 +14,9 @@ Method | HTTP request | Description
 [**userTSPs**](TSPApi.md#userTSPs) | **GET** /users/{userId}/tsp | List User&#39;s TSP accounts
 
 
-# **tsp**
+
+## tsp
+
 > \Zoom\Api\Model\InlineResponse20045 tsp()
 
 Get Account's TSP Information
@@ -22,12 +24,15 @@ Get Account's TSP Information
 Get information on Telephony Service Provider on an account level.<br><br> **Scopes:** `tsp:read:admin` <br>    **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`  **Prerequisites:**<br> * A Pro or a higher plan.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\TSPApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -46,6 +51,7 @@ try {
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -58,12 +64,16 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **tspUpdate**
+
+## tspUpdate
+
 > tspUpdate($body)
 
 Update account's TSP information
@@ -71,12 +81,15 @@ Update account's TSP information
 Update information of the Telephony Service Provider set up on an account.<br> **Prerequisites**:<br> TSP account option should be enabled.<br> **Scopes:** `tsp:write:admin`<br>    **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\TSPApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -84,7 +97,7 @@ $apiInstance = new Zoom\Api\Api\TSPApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Zoom\Api\Model\Body31(); // \Zoom\Api\Model\Body31 | TSP Account
+$body = new \Zoom\Api\Model\InlineObject31(); // \Zoom\Api\Model\InlineObject31 | 
 
 try {
     $apiInstance->tspUpdate($body);
@@ -96,9 +109,10 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Zoom\Api\Model\Body31**](../Model/Body31.md)| TSP Account |
+ **body** | [**\Zoom\Api\Model\InlineObject31**](../Model/InlineObject31.md)|  |
 
 ### Return type
 
@@ -110,12 +124,16 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: application/json, multipart/form-data
+- **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **tspUrlUpdate**
+
+## tspUrlUpdate
+
 > tspUrlUpdate($user_id, $body)
 
 Set Global Dial-in URL for a TSP User
@@ -123,12 +141,15 @@ Set Global Dial-in URL for a TSP User
 A global dial-in page can provide a list of global access numbers using which audio conferencing can be conducted. By calling this API, you can set the url for the global dial-in page of a user whose Zoom account has TSP and special TSP with third-party audio conferencing options enabled. <p></p> **Scopes:**`tsp:write:admin` `tsp:write`<br>    **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\TSPApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -136,8 +157,8 @@ $apiInstance = new Zoom\Api\Api\TSPApi(
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = "user_id_example"; // string | The userId or email address of the user.
-$body = new \Zoom\Api\Model\TSPGlobalDialInURLSetting(); // \Zoom\Api\Model\TSPGlobalDialInURLSetting | Global dial-in URL of the user.
+$user_id = 'user_id_example'; // string | The userId or email address of the user.
+$body = new \Zoom\Api\Model\TSPGlobalDialInURLSetting(); // \Zoom\Api\Model\TSPGlobalDialInURLSetting | 
 
 try {
     $apiInstance->tspUrlUpdate($user_id, $body);
@@ -149,10 +170,11 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **string**| The userId or email address of the user. |
- **body** | [**\Zoom\Api\Model\TSPGlobalDialInURLSetting**](../Model/TSPGlobalDialInURLSetting.md)| Global dial-in URL of the user. | [optional]
+ **body** | [**\Zoom\Api\Model\TSPGlobalDialInURLSetting**](../Model/TSPGlobalDialInURLSetting.md)|  | [optional]
 
 ### Return type
 
@@ -164,12 +186,16 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: application/json, multipart/form-data
+- **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **userTSP**
+
+## userTSP
+
 > \Zoom\Api\Model\TSPAccount userTSP($user_id, $tsp_id)
 
 Get a User's TSP Account
@@ -177,12 +203,15 @@ Get a User's TSP Account
 Each user can have a maximum of two TSP accounts. Use this API to retrieve details of a specific TSP account enabled for a specific user.<br><br> **Scopes:** `tsp:read:admin` `tsp:read`<br>    **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\TSPApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -190,8 +219,8 @@ $apiInstance = new Zoom\Api\Api\TSPApi(
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = "user_id_example"; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
-$tsp_id = "tsp_id_example"; // string | TSP account ID.
+$user_id = 'user_id_example'; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+$tsp_id = 'tsp_id_example'; // string | TSP account ID.
 
 try {
     $result = $apiInstance->userTSP($user_id, $tsp_id);
@@ -203,6 +232,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -219,12 +249,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **userTSPCreate**
+
+## userTSPCreate
+
 > \Zoom\Api\Model\TSPAccountsList2 userTSPCreate($user_id, $body)
 
 Add a User's TSP Account
@@ -232,12 +266,15 @@ Add a User's TSP Account
 Add a user's TSP account.<br><br> **Scopes:** `tsp:write:admin` `tsp:write`<br>    **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\TSPApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -245,8 +282,8 @@ $apiInstance = new Zoom\Api\Api\TSPApi(
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = "user_id_example"; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
-$body = new \Zoom\Api\Model\TSPAccountsList1(); // \Zoom\Api\Model\TSPAccountsList1 | TSP account.
+$user_id = 'user_id_example'; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+$body = new \Zoom\Api\Model\TSPAccountsList1(); // \Zoom\Api\Model\TSPAccountsList1 | 
 
 try {
     $result = $apiInstance->userTSPCreate($user_id, $body);
@@ -259,10 +296,11 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **string**| The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. |
- **body** | [**\Zoom\Api\Model\TSPAccountsList1**](../Model/TSPAccountsList1.md)| TSP account. |
+ **body** | [**\Zoom\Api\Model\TSPAccountsList1**](../Model/TSPAccountsList1.md)|  |
 
 ### Return type
 
@@ -274,12 +312,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: application/json, multipart/form-data
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **userTSPDelete**
+
+## userTSPDelete
+
 > userTSPDelete($user_id, $tsp_id)
 
 Delete a User's TSP Account
@@ -287,12 +329,15 @@ Delete a User's TSP Account
 Delete a user's TSP account.<br><br> **Scopes:** `tsp:write:admin` `tsp:write`<br>    **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\TSPApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -300,8 +345,8 @@ $apiInstance = new Zoom\Api\Api\TSPApi(
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = "user_id_example"; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
-$tsp_id = "tsp_id_example"; // string | TSP account ID.
+$user_id = 'user_id_example'; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+$tsp_id = 'tsp_id_example'; // string | TSP account ID.
 
 try {
     $apiInstance->userTSPDelete($user_id, $tsp_id);
@@ -313,6 +358,7 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **string**| The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. |
@@ -328,12 +374,16 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **userTSPUpdate**
+
+## userTSPUpdate
+
 > userTSPUpdate($user_id, $tsp_id, $body)
 
 Update a TSP Account
@@ -341,12 +391,15 @@ Update a TSP Account
 Update a user's TSP account.<br><br> **Scopes:** `tsp:write:admin` `tsp:write`<br>    **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\TSPApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -354,9 +407,9 @@ $apiInstance = new Zoom\Api\Api\TSPApi(
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = "user_id_example"; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
-$tsp_id = "tsp_id_example"; // string | TSP account ID.
-$body = new \Zoom\Api\Model\TSPAccount1(); // \Zoom\Api\Model\TSPAccount1 | TSP account.
+$user_id = 'user_id_example'; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+$tsp_id = 'tsp_id_example'; // string | TSP account ID.
+$body = new \Zoom\Api\Model\TSPAccount1(); // \Zoom\Api\Model\TSPAccount1 | 
 
 try {
     $apiInstance->userTSPUpdate($user_id, $tsp_id, $body);
@@ -368,11 +421,12 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **string**| The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. |
  **tsp_id** | **string**| TSP account ID. |
- **body** | [**\Zoom\Api\Model\TSPAccount1**](../Model/TSPAccount1.md)| TSP account. |
+ **body** | [**\Zoom\Api\Model\TSPAccount1**](../Model/TSPAccount1.md)|  |
 
 ### Return type
 
@@ -384,12 +438,16 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: application/json, multipart/form-data
+- **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **userTSPs**
+
+## userTSPs
+
 > \Zoom\Api\Model\InlineResponse20050 userTSPs($user_id)
 
 List User's TSP accounts
@@ -397,12 +455,15 @@ List User's TSP accounts
 A user can have a maximum of two TSP accounts. Use this API to list all TSP accounts of a user.<br><br> **Scopes:** `tsp:read:admin` `tsp:read`<br>    **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\TSPApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -410,7 +471,7 @@ $apiInstance = new Zoom\Api\Api\TSPApi(
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = "user_id_example"; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+$user_id = 'user_id_example'; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
 
 try {
     $result = $apiInstance->userTSPs($user_id);
@@ -422,6 +483,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -437,8 +499,10 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 

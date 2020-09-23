@@ -1,6 +1,7 @@
-# InlineResponse20110
+# # InlineResponse20110
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **string** | Group ID. | [optional] 
@@ -10,6 +11,6 @@ Name | Type | Description | Notes
 **search_by_account** | **bool** | Members can search for others under same account. | [optional] 
 **search_by_ma_account** | **bool** | Members can search for others under same master account, including all sub accounts. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

@@ -1,6 +1,7 @@
-# User
+# # User
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **first_name** | **string** | User&#39;s first name. | [optional] 
@@ -16,6 +17,6 @@ Name | Type | Description | Notes
 **last_login_time** | [**\DateTime**](\DateTime.md) | User last login time. | [optional] 
 **last_client_version** | **string** | User last login client version. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

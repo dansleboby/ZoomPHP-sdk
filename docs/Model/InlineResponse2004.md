@@ -1,6 +1,7 @@
-# InlineResponse2004
+# # InlineResponse2004
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **string** | Site ID. Unique Identifier of the site. | [optional] 
@@ -10,6 +11,6 @@ Name | Type | Description | Notes
 **main_auto_receptionist** | [**\Zoom\Api\Model\InlineResponse2004MainAutoReceptionist**](InlineResponse2004MainAutoReceptionist.md) |  | [optional] 
 **short_extension** | [**\Zoom\Api\Model\InlineResponse2004ShortExtension**](InlineResponse2004ShortExtension.md) |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

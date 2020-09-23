@@ -1,6 +1,7 @@
-# UserSettingsFeatureSettings
+# # UserSettingsFeatureSettings
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **meeting_capacity** | **int** | User’s meeting capacity. | [optional] 
@@ -12,6 +13,6 @@ Name | Type | Description | Notes
 **in_meeting** | **bool** | IN meeting feature. | [optional] 
 **zoom_phone** | **bool** | Zoom phone feature. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

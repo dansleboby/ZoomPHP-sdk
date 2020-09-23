@@ -1,6 +1,7 @@
-# AccountSettings
+# # AccountSettings
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **schedule_meeting** | [**\Zoom\Api\Model\AccountSettingsScheduleMeeting**](AccountSettingsScheduleMeeting.md) |  | [optional] 
@@ -14,6 +15,6 @@ Name | Type | Description | Notes
 **feature** | [**\Zoom\Api\Model\AccountSettingsFeature**](AccountSettingsFeature.md) |  | [optional] 
 **tsp** | [**\Zoom\Api\Model\AccountSettingsTsp**](AccountSettingsTsp.md) |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

@@ -1,6 +1,7 @@
-# InlineResponse20080Basic
+# # InlineResponse20080Basic
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **string** | Name of the Zoom Room. | [optional] 
@@ -11,6 +12,6 @@ Name | Type | Description | Notes
 **required_code_to_ext** | **bool** | Require code to exit out of Zoom Rooms application to switch between other apps. | [optional] 
 **hide_room_in_contacts** | **bool** | Hide this Zoom Room from your Contact List. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

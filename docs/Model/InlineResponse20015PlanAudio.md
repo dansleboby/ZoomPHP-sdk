@@ -1,6 +1,7 @@
-# InlineResponse20015PlanAudio
+# # InlineResponse20015PlanAudio
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **type** | **string** | Additional audio conferencing &lt;a href&#x3D;\&quot;/api-reference/other-references/plans\&quot;&gt;plan type.&lt;/a&gt; | [optional] 
@@ -12,6 +13,6 @@ Name | Type | Description | Notes
 **next_invoice_date** | **string** | Next invoice date for the plan. | [optional] 
 **status** | **string** | Status of the plan. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

@@ -1,6 +1,7 @@
-# TSPAccount
+# # TSPAccount
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** | The ID of the TSP account. | [optional] 
@@ -9,6 +10,6 @@ Name | Type | Description | Notes
 **dial_in_numbers** | [**\Zoom\Api\Model\TSPAccountDialInNumbers[]**](TSPAccountDialInNumbers.md) | List of dial in numbers. | [optional] 
 **tsp_bridge** | **string** | Telephony bridge | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

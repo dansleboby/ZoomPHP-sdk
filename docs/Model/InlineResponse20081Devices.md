@@ -1,6 +1,7 @@
-# InlineResponse20081Devices
+# # InlineResponse20081Devices
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **string** | Unique identifier of the device. | [optional] 
@@ -10,6 +11,6 @@ Name | Type | Description | Notes
 **device_system** | **string** | Operating system of the device. | [optional] 
 **status** | **string** | Status of the device. The value can be either &#x60;Online&#x60; or &#x60;Offline&#x60;. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

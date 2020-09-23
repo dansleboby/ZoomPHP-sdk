@@ -1,6 +1,7 @@
-# AccountListAccounts
+# # AccountListAccounts
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **string** | Account ID. | [optional] 
@@ -13,6 +14,6 @@ Name | Type | Description | Notes
 **created_at** | [**\DateTime**](\DateTime.md) | Account creation date and time. | [optional] 
 **account_number** | **string** | Account Number of the account. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

@@ -1,6 +1,7 @@
-# InlineResponse20069Recording
+# # InlineResponse20069Recording
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **local_recording** | **bool** | Allow hosts and participants to record the meeting to a local file. | [optional] 
@@ -12,6 +13,6 @@ Name | Type | Description | Notes
 **auto_delete_cmr** | **bool** | Allow Zoom to automatically delete recordings permanently after a specified number of days. | [optional] 
 **recording_authentication** | **bool** | Only authenticated users can view cloud recordings | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

@@ -19,7 +19,9 @@ Method | HTTP request | Description
 [**listSipTrunkNumbers**](SIPConnectedAudioApi.md#listSipTrunkNumbers) | **GET** /sip_trunk/numbers | List SIP Trunk Numbers
 
 
-# **addCalloutCountries**
+
+## addCalloutCountries
+
 > \Zoom\Api\Model\InlineResponse20129 addCalloutCountries($account_id, $body)
 
 Add Internal Call-out Countries
@@ -27,12 +29,15 @@ Add Internal Call-out Countries
 Specify the list of [call-out](https://support.zoom.us/hc/en-us/articles/200942859-How-To-Use-Telephone-Call-Out-) countries for a Master Account or a Sub Account. To add Call-out enabled countries to a Sub Account, provide the account ID of the Sub Account in the `accountId` path parameter. To add Call-out enabled countries to a Master Account, provide `me` as the value of the `accountId` path parameter. <br><b>Prerequisites:</b><br> * The account making this API request must be a Master Account with [API Partner Plan](https://zoom.us/plan/api) and SIP Connected Audio Plan.<br><br> **Scope:** `sip_trunk:master`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\SIPConnectedAudioApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -40,8 +45,8 @@ $apiInstance = new Zoom\Api\Api\SIPConnectedAudioApi(
     new GuzzleHttp\Client(),
     $config
 );
-$account_id = "account_id_example"; // string | Unique identifier of the account. To add Call-out enabled countries to a Sub Account, provide the account ID of the Sub Account in the `accountId` path parameter. To add Call-out enabled countries to a Master Account, provide `me` as the value of the `accountId` path parameter.
-$body = new \Zoom\Api\Model\Body86(); // \Zoom\Api\Model\Body86 | 
+$account_id = 'account_id_example'; // string | Unique identifier of the account. To add Call-out enabled countries to a Sub Account, provide the account ID of the Sub Account in the `accountId` path parameter. To add Call-out enabled countries to a Master Account, provide `me` as the value of the `accountId` path parameter.
+$body = new \Zoom\Api\Model\InlineObject86(); // \Zoom\Api\Model\InlineObject86 | 
 
 try {
     $result = $apiInstance->addCalloutCountries($account_id, $body);
@@ -54,10 +59,11 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **account_id** | **string**| Unique identifier of the account. To add Call-out enabled countries to a Sub Account, provide the account ID of the Sub Account in the &#x60;accountId&#x60; path parameter. To add Call-out enabled countries to a Master Account, provide &#x60;me&#x60; as the value of the &#x60;accountId&#x60; path parameter. |
- **body** | [**\Zoom\Api\Model\Body86**](../Model/Body86.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\InlineObject86**](../Model/InlineObject86.md)|  | [optional]
 
 ### Return type
 
@@ -69,12 +75,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: application/json, multipart/form-data
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **addInternalNumbers**
+
+## addInternalNumbers
+
 > \Zoom\Api\Model\InlineResponse20130 addInternalNumbers($account_id, $body)
 
 Add Internal Numbers
@@ -82,12 +92,15 @@ Add Internal Numbers
 This API allows a Master Account with SIP Connected Audio plan to assign internal phone numbers (i.e., numbers that are not provided by Zoom but are owned by the organization consuming the API) to a Master Account or a Sub Account.<br><br>To add internal numbers to a Sub Account, provide the account ID of the Sub Account in the `accountId` path parameter. To add internal numbers to a Master Account, provide `me` as the value of the `accountId` path parameter. <br><b>Prerequisites:</b><br> * The account making this API request must be a Master Account with [API Partner Plan](https://zoom.us/plan/api) and SIP Connected Audio Plan.<br><br> **Scope:** `sip_trunk:master`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\SIPConnectedAudioApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -95,8 +108,8 @@ $apiInstance = new Zoom\Api\Api\SIPConnectedAudioApi(
     new GuzzleHttp\Client(),
     $config
 );
-$account_id = "account_id_example"; // string | Unique identifier of the account.<br>To add internal numbers to a Sub Account, provide the account ID of the Sub Account in the `accountId` path parameter. To add internal numbers to a Master Account, provide `me` as the value of the `accountId` path parameter.
-$body = new \Zoom\Api\Model\Body87(); // \Zoom\Api\Model\Body87 | 
+$account_id = 'account_id_example'; // string | Unique identifier of the account.<br>To add internal numbers to a Sub Account, provide the account ID of the Sub Account in the `accountId` path parameter. To add internal numbers to a Master Account, provide `me` as the value of the `accountId` path parameter.
+$body = new \Zoom\Api\Model\InlineObject87(); // \Zoom\Api\Model\InlineObject87 | 
 
 try {
     $result = $apiInstance->addInternalNumbers($account_id, $body);
@@ -109,10 +122,11 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **account_id** | **string**| Unique identifier of the account.&lt;br&gt;To add internal numbers to a Sub Account, provide the account ID of the Sub Account in the &#x60;accountId&#x60; path parameter. To add internal numbers to a Master Account, provide &#x60;me&#x60; as the value of the &#x60;accountId&#x60; path parameter. |
- **body** | [**\Zoom\Api\Model\Body87**](../Model/Body87.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\InlineObject87**](../Model/InlineObject87.md)|  | [optional]
 
 ### Return type
 
@@ -124,12 +138,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: application/json, multipart/form-data
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **assignSIPConfig**
+
+## assignSIPConfig
+
 > object assignSIPConfig($account_id, $body)
 
 Assign SIP Trunk Configuration
@@ -137,12 +155,15 @@ Assign SIP Trunk Configuration
 With SIP-connected audio, Zoom establishes a SIP trunk (a network connection specifically designed to make and deliver phone calls) over a direct and private connection between the customer’s network and the Zoom cloud. Meeting participants that dial into a meeting or have the meeting call them, and are On-Net from the perspective of the customers' IP telephony network, will be connected over this trunk rather than over the PSTN. <br><br> Using this API, a Master Account owner can copy the SIP Connected Audio configurations applied on the Master Account and enable those configurations on a Sub Account. The owner can also disable the configuration in the Sub Account where it was previously enabled.  **Prerequisites:**<br> * Pro or a higher account with SIP Connected Audio plan enabled. * Master Account Owner<br> **Scopes:** `sip_trunk:master`<br>    **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\SIPConnectedAudioApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -150,8 +171,8 @@ $apiInstance = new Zoom\Api\Api\SIPConnectedAudioApi(
     new GuzzleHttp\Client(),
     $config
 );
-$account_id = "account_id_example"; // string | 
-$body = new \Zoom\Api\Model\Body61(); // \Zoom\Api\Model\Body61 | 
+$account_id = 'account_id_example'; // string | 
+$body = new \Zoom\Api\Model\InlineObject61(); // \Zoom\Api\Model\InlineObject61 | 
 
 try {
     $result = $apiInstance->assignSIPConfig($account_id, $body);
@@ -164,10 +185,11 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **account_id** | **string**|  |
- **body** | [**\Zoom\Api\Model\Body61**](../Model/Body61.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\InlineObject61**](../Model/InlineObject61.md)|  | [optional]
 
 ### Return type
 
@@ -179,12 +201,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: application/json, multipart/form-data
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **assignSIPTrunks**
+
+## assignSIPTrunks
+
 > \Zoom\Api\Model\InlineResponse20128 assignSIPTrunks($account_id, $body)
 
 Assign SIP Trunks
@@ -192,12 +218,15 @@ Assign SIP Trunks
 With SIP-connected audio, Zoom establishes a SIP trunk (a network connection specifically designed to make and deliver phone calls) over a direct and private connection between the customer’s network and the Zoom cloud. Meeting participants that dial into a meeting or have the meeting call them, and are On-Net from the perspective of the customers’ IP telephony network, will be connected over this trunk rather than over the PSTN.<br><br>Use this API to assign SIP trunk(s) that are available on a Master Account to a Sub Account. <br><b>Prerequisites:</b><br> * The account making this API request must be a Master Account with [API Partner Plan](https://zoom.us/plan/api) and SIP Connected Audio Plan.<br><br> **Scope:** `sip_trunk:master`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\SIPConnectedAudioApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -205,8 +234,8 @@ $apiInstance = new Zoom\Api\Api\SIPConnectedAudioApi(
     new GuzzleHttp\Client(),
     $config
 );
-$account_id = "account_id_example"; // string | Unique Identifier of the Sub Account.
-$body = new \Zoom\Api\Model\Body85(); // \Zoom\Api\Model\Body85 | 
+$account_id = 'account_id_example'; // string | Unique Identifier of the Sub Account.
+$body = new \Zoom\Api\Model\InlineObject85(); // \Zoom\Api\Model\InlineObject85 | 
 
 try {
     $result = $apiInstance->assignSIPTrunks($account_id, $body);
@@ -219,10 +248,11 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **account_id** | **string**| Unique Identifier of the Sub Account. |
- **body** | [**\Zoom\Api\Model\Body85**](../Model/Body85.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\InlineObject85**](../Model/InlineObject85.md)|  | [optional]
 
 ### Return type
 
@@ -234,12 +264,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: application/json, multipart/form-data
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **assignSipTrunkNumbers**
+
+## assignSipTrunkNumbers
+
 > object assignSipTrunkNumbers($account_id, $body)
 
 Assign Numbers
@@ -247,12 +281,15 @@ Assign Numbers
 With SIP-connected audio, Zoom establishes a SIP trunk (a network connection specifically designed to make and deliver phone calls) over a direct and private connection between the customer’s network and the Zoom cloud. Meeting participants that dial into a meeting or have the meeting call them, and are On-Net from the perspective of the customers' IP telephony network, will be connected over this trunk rather than over the PSTN. <br><br>Use this API to assign internal numbers to a Sub Account.  **Prerequisites:**<br> * Pro or a higher account with SIP Connected Audio plan enabled. * The account must be a Master Account<br> **Scopes:** `sip_trunk:master`<br>   **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\SIPConnectedAudioApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -260,8 +297,8 @@ $apiInstance = new Zoom\Api\Api\SIPConnectedAudioApi(
     new GuzzleHttp\Client(),
     $config
 );
-$account_id = "account_id_example"; // string | Unique Identifier of the Sub Account.
-$body = new \Zoom\Api\Model\Body62(); // \Zoom\Api\Model\Body62 | 
+$account_id = 'account_id_example'; // string | Unique Identifier of the Sub Account.
+$body = new \Zoom\Api\Model\InlineObject62(); // \Zoom\Api\Model\InlineObject62 | 
 
 try {
     $result = $apiInstance->assignSipTrunkNumbers($account_id, $body);
@@ -274,10 +311,11 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **account_id** | **string**| Unique Identifier of the Sub Account. |
- **body** | [**\Zoom\Api\Model\Body62**](../Model/Body62.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\InlineObject62**](../Model/InlineObject62.md)|  | [optional]
 
 ### Return type
 
@@ -289,12 +327,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: application/json, multipart/form-data
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **deleteAllSipNumbers**
+
+## deleteAllSipNumbers
+
 > object deleteAllSipNumbers($account_id)
 
 Delete All Numbers
@@ -302,12 +344,15 @@ Delete All Numbers
 With SIP-connected audio, Zoom establishes a SIP trunk (a network connection specifically designed to make and deliver phone calls) over a direct and private connection between the customer’s network and the Zoom cloud. Meeting participants that dial into a meeting or have the meeting call them, and are On-Net from the perspective of the customers' IP telephony network, will be connected over this trunk rather than over the PSTN. <br><br>Use this API to delete all internal numbers assigned to a Sub Account. **Prerequisites:**<br>  * Pro or a higher account with SIP Connected Audio plan enabled. * The account must be a Master Account<br> **Scopes:** `sip_trunk:master`<br>  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\SIPConnectedAudioApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -315,7 +360,7 @@ $apiInstance = new Zoom\Api\Api\SIPConnectedAudioApi(
     new GuzzleHttp\Client(),
     $config
 );
-$account_id = "account_id_example"; // string | Account ID of the Sub Account from which the numbers are to be deleted. This can be retrieved from [List Sub Accounts](https://marketplace.zoom.us/docs/api-reference/zoom-api/accounts/account) API.
+$account_id = 'account_id_example'; // string | Account ID of the Sub Account from which the numbers are to be deleted. This can be retrieved from [List Sub Accounts](https://marketplace.zoom.us/docs/api-reference/zoom-api/accounts/account) API.
 
 try {
     $result = $apiInstance->deleteAllSipNumbers($account_id);
@@ -327,6 +372,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -342,12 +388,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **deleteInternalCallOutCountry**
+
+## deleteInternalCallOutCountry
+
 > object deleteInternalCallOutCountry($account_id, $country_id)
 
 Delete Internal Call-out Country
@@ -355,12 +405,15 @@ Delete Internal Call-out Country
 Delete a previously assigned [call-out](https://support.zoom.us/hc/en-us/articles/200942859-How-To-Use-Telephone-Call-Out-) country from a Master Account or a Sub Account. To remove Call-out country from a Sub Account, provide the account ID of the Sub Account in the `accountId` path parameter. To remove Call-out country from a Master Account, provide `me` as the value of the `accountId` path parameter. <br><b>Prerequisites:</b><br> * The account making this API request must be a Master Account with [API Partner Plan](https://zoom.us/plan/api) and SIP Connected Audio Plan.<br><br> **Scope:** `sip_trunk:master`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\SIPConnectedAudioApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -368,8 +421,8 @@ $apiInstance = new Zoom\Api\Api\SIPConnectedAudioApi(
     new GuzzleHttp\Client(),
     $config
 );
-$account_id = "account_id_example"; // string | Unique Identifier of the Account.<br> To remove Call-out country from a Sub Account, provide the account ID of the Sub Account in the `accountId` path parameter. To remove Call-out country from a Master Account, provide `me` as the value of the `accountId` path parameter.
-$country_id = "country_id_example"; // string | Two lettered Id of the country.
+$account_id = 'account_id_example'; // string | Unique Identifier of the Account.<br> To remove Call-out country from a Sub Account, provide the account ID of the Sub Account in the `accountId` path parameter. To remove Call-out country from a Master Account, provide `me` as the value of the `accountId` path parameter.
+$country_id = 'country_id_example'; // string | Two lettered Id of the country.
 
 try {
     $result = $apiInstance->deleteInternalCallOutCountry($account_id, $country_id);
@@ -381,6 +434,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -397,12 +451,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **deleteInternalNumber**
+
+## deleteInternalNumber
+
 > object deleteInternalNumber($account_id, $number_id)
 
 Delete an Internal Number
@@ -410,12 +468,15 @@ Delete an Internal Number
 This API allows a Master Account with SIP Connected Audio plan to delete a previously assigned internal phone number from a Master Account or a Sub Account.<br><br>To delete an internal number from a Sub Account, provide the account ID of the Sub Account in the `accountId` path parameter. To delete an internal number from a Master Account, provide `me` as the value of the `accountId` path parameter. <br><b>Prerequisites:</b><br> * The account making this API request must be a Master Account with [API Partner Plan](https://zoom.us/plan/api) and SIP Connected Audio Plan.<br><br> **Scope:** `sip_trunk:master`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\SIPConnectedAudioApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -423,8 +484,8 @@ $apiInstance = new Zoom\Api\Api\SIPConnectedAudioApi(
     new GuzzleHttp\Client(),
     $config
 );
-$account_id = "account_id_example"; // string | Unique Identifier of the account. To delete an internal number from a Sub Account, provide the account ID of the Sub Account in the `accountId` path parameter. To delete an internal number from a Master Account, provide `me` as the value of the `accountId` path parameter.
-$number_id = "number_id_example"; // string | Unique identifier of the phone number. This value can be retrieved by calling the List Internal Numbers API.
+$account_id = 'account_id_example'; // string | Unique Identifier of the account. To delete an internal number from a Sub Account, provide the account ID of the Sub Account in the `accountId` path parameter. To delete an internal number from a Master Account, provide `me` as the value of the `accountId` path parameter.
+$number_id = 'number_id_example'; // string | Unique identifier of the phone number. This value can be retrieved by calling the List Internal Numbers API.
 
 try {
     $result = $apiInstance->deleteInternalNumber($account_id, $number_id);
@@ -436,6 +497,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -452,12 +514,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **deleteSIPTrunk**
+
+## deleteSIPTrunk
+
 > object deleteSIPTrunk($account_id, $trunk_id)
 
 Delete a SIP Trunk
@@ -465,12 +531,15 @@ Delete a SIP Trunk
 Use this API to remove existing SIP Trunk of a Sub Account.<br> <br><b>Prerequisites:</b><br> * The account making this API request must be a Master Account with [API Partner Plan](https://zoom.us/plan/api) and SIP Connected Audio Plan.<br><br> **Scope:** `sip_trunk:master`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\SIPConnectedAudioApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -478,8 +547,8 @@ $apiInstance = new Zoom\Api\Api\SIPConnectedAudioApi(
     new GuzzleHttp\Client(),
     $config
 );
-$account_id = "account_id_example"; // string | Unique identifier of the Sub Account.
-$trunk_id = "trunk_id_example"; // string | Unique identifier of the SIP Trunk that was previously assigned to a Sub Account. To retrieve the value of this field, use the List SIP Trunks API.
+$account_id = 'account_id_example'; // string | Unique identifier of the Sub Account.
+$trunk_id = 'trunk_id_example'; // string | Unique identifier of the SIP Trunk that was previously assigned to a Sub Account. To retrieve the value of this field, use the List SIP Trunks API.
 
 try {
     $result = $apiInstance->deleteSIPTrunk($account_id, $trunk_id);
@@ -491,6 +560,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -507,12 +577,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **listInternalCalloutCountries**
+
+## listInternalCalloutCountries
+
 > \Zoom\Api\Model\InlineResponse200102 listInternalCalloutCountries($account_id)
 
 List Internal Call-out Countries
@@ -520,12 +594,15 @@ List Internal Call-out Countries
 Retrieve the list of internal [call-out](https://support.zoom.us/hc/en-us/articles/200942859-How-To-Use-Telephone-Call-Out-) countries of a Master Account or a Sub Account. To list Call-out enabled countries of a Sub Account, provide the account ID of the Sub Account in the `accountId` path parameter. To list Call-out enabled countries of a Master Account, provide `me` as the value of the `accountId` path parameter. <br><b>Prerequisites:</b><br> * The account making this API request must be a Master Account with [API Partner Plan](https://zoom.us/plan/api) and SIP Connected Audio Plan.<br><br> **Scope:** `sip_trunk:master`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\SIPConnectedAudioApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -533,7 +610,7 @@ $apiInstance = new Zoom\Api\Api\SIPConnectedAudioApi(
     new GuzzleHttp\Client(),
     $config
 );
-$account_id = "account_id_example"; // string | Unique identifier of the account. To list Call-out enabled countries to a Sub Account, provide the account ID of the Sub Account in the `accountId` path parameter. To list Call-out enabled countries of a Sub Account, provide the account ID of the Sub Account in the `accountId` path parameter. To list Call-out enabled countries of a Master Account, provide `me` as the value of the `accountId` path parameter.
+$account_id = 'account_id_example'; // string | Unique identifier of the account. To list Call-out enabled countries to a Sub Account, provide the account ID of the Sub Account in the `accountId` path parameter. To list Call-out enabled countries of a Sub Account, provide the account ID of the Sub Account in the `accountId` path parameter. To list Call-out enabled countries of a Master Account, provide `me` as the value of the `accountId` path parameter.
 
 try {
     $result = $apiInstance->listInternalCalloutCountries($account_id);
@@ -545,6 +622,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -560,12 +638,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **listInternalNumbers**
+
+## listInternalNumbers
+
 > \Zoom\Api\Model\InlineResponse200103 listInternalNumbers($account_id, $page_size, $next_page_token)
 
 List Internal Numbers
@@ -573,12 +655,15 @@ List Internal Numbers
 This API allows a Master Account with SIP Connected Audio plan to list internal phone numbers (i.e., numbers that are not provided by Zoom but are owned by the organization consuming the API) assigned to a Master Account or a Sub Account.<br><br>To list internal numbers of a Sub Account, provide the account ID of the Sub Account in the `accountId` path parameter. To list internal numbers of a  Master Account, provide `me` as the value of the `accountId` path parameter. <br><b>Prerequisites:</b><br> * The account making this API request must be a Master Account with [API Partner Plan](https://zoom.us/plan/api) and SIP Connected Audio Plan.<br><br> **Scope:** `sip_trunk:master`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\SIPConnectedAudioApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -586,9 +671,9 @@ $apiInstance = new Zoom\Api\Api\SIPConnectedAudioApi(
     new GuzzleHttp\Client(),
     $config
 );
-$account_id = "account_id_example"; // string | Unique identifier of the account. To list internal numbers of a Sub Account, provide the account ID of the Sub Account in the `accountId` path parameter. To list internal numbers of a  Master Account, provide `me` as the value of the `accountId` path parameter.
+$account_id = 'account_id_example'; // string | Unique identifier of the account. To list internal numbers of a Sub Account, provide the account ID of the Sub Account in the `accountId` path parameter. To list internal numbers of a  Master Account, provide `me` as the value of the `accountId` path parameter.
 $page_size = 30; // int | The number of records returned within a single API call.
-$next_page_token = "next_page_token_example"; // string | The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
+$next_page_token = 'next_page_token_example'; // string | The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
 
 try {
     $result = $apiInstance->listInternalNumbers($account_id, $page_size, $next_page_token);
@@ -600,6 +685,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -617,12 +703,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **listSIPTrunks**
+
+## listSIPTrunks
+
 > \Zoom\Api\Model\InlineResponse200101 listSIPTrunks($account_id)
 
 List SIP Trunks
@@ -630,12 +720,15 @@ List SIP Trunks
 With SIP-connected audio, Zoom establishes a SIP trunk (a network connection specifically designed to make and deliver phone calls) over a direct and private connection between the customer’s network and the Zoom cloud. Meeting participants that dial into a meeting or have the meeting call them, and are On-Net from the perspective of the customers’ IP telephony network, will be connected over this trunk rather than over the PSTN.<br><br> Use this API to list all the SIP trunks assigned to a Master Account or a Sub Account of the Master Account. To retrieve SIP trunks assigned to a Sub Account, provide the account ID of the Sub Account in the `accountId` path parameter. To retrieve SIP trunks of a Master Account, provide `me` as the value of the `accountId` path parameter. <br><br> **Scope:** `sip_trunk:read:admin` <br><b>Prerequisites:</b><br> * The account must either be a Master Account or a Sub Account with [API Partner Plan](https://zoom.us/plan/api) and SIP Connected Audio Plan.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\SIPConnectedAudioApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -643,7 +736,7 @@ $apiInstance = new Zoom\Api\Api\SIPConnectedAudioApi(
     new GuzzleHttp\Client(),
     $config
 );
-$account_id = "account_id_example"; // string | Unique Identifier of the Account. To retrieve SIP trunks assigned to a Sub Account, provide the account ID of the Sub Account in the as the value of this field. To retrieve SIP trunks of a Master Account, provide `me` as the value of this field.
+$account_id = 'account_id_example'; // string | Unique Identifier of the Account. To retrieve SIP trunks assigned to a Sub Account, provide the account ID of the Sub Account in the as the value of this field. To retrieve SIP trunks of a Master Account, provide `me` as the value of this field.
 
 try {
     $result = $apiInstance->listSIPTrunks($account_id);
@@ -655,6 +748,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -670,12 +764,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **listSipTrunkNumbers**
+
+## listSipTrunkNumbers
+
 > \Zoom\Api\Model\InlineResponse20082 listSipTrunkNumbers()
 
 List SIP Trunk Numbers
@@ -683,12 +781,15 @@ List SIP Trunk Numbers
 With SIP-connected audio, Zoom establishes a SIP trunk (a network connection specifically designed to make and deliver phone calls) over a direct and private connection between the customer’s network and the Zoom cloud. Meeting participants that dial into a meeting or have the meeting call them, and are On-Net from the perspective of the customers' IP telephony network, will be connected over this trunk rather than over the PSTN. <br><br>Use this API to list all the internal numbers that are configured for SIP Connected Audio in a Zoom Account.  **Prerequisites:**<br> * Pro or a higher account with SIP Connected Audio plan enabled. * The account must be a Master Account<br> **Scopes:** `sip_trunk:master`    **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\SIPConnectedAudioApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -707,6 +808,7 @@ try {
 ```
 
 ### Parameters
+
 This endpoint does not need any parameter.
 
 ### Return type
@@ -719,8 +821,10 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 

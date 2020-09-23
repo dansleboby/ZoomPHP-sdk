@@ -1,6 +1,7 @@
-# MeetingMetrics
+# # MeetingMetrics
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **uuid** | **string** | Meeting UUID. Please double encode your UUID when using it for API calls if the UUID begins with a &#39;/&#39;or contains &#39;//&#39; in it. | [optional] 
@@ -23,6 +24,6 @@ Name | Type | Description | Notes
 **in_room_participants** | **int** | The number of Zoom Room participants in the meeting. | [optional] 
 **dept** | **string** | Department of the host. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

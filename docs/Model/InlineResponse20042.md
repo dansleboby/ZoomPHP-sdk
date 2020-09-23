@@ -1,6 +1,7 @@
-# InlineResponse20042
+# # InlineResponse20042
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** | Webinar ID in \&quot;**long**\&quot; format(represented as int64 data type in JSON), also known as the webinar number. | [optional] 
@@ -8,6 +9,6 @@ Name | Type | Description | Notes
 **start_time** | [**\DateTime**](\DateTime.md) | Webinar start time. | [optional] 
 **questions** | [**\Zoom\Api\Model\InlineResponse20042Questions[]**](InlineResponse20042Questions.md) | Array of webinar question objects. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

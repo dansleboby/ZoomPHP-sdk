@@ -1,6 +1,7 @@
-# InlineResponse20023
+# # InlineResponse20023
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **uuid** | **string** | Meeting UUID. | [optional] 
@@ -16,6 +17,6 @@ Name | Type | Description | Notes
 **total_minutes** | **int** | Sum of meeting minutes from all participants in the meeting. | [optional] 
 **participants_count** | **int** | Number of meeting participants. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

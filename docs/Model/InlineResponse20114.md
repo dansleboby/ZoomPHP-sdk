@@ -1,6 +1,7 @@
-# InlineResponse20114
+# # InlineResponse20114
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **registrant_id** | **string** | Registrant ID | [optional] 
@@ -8,6 +9,6 @@ Name | Type | Description | Notes
 **topic** | **string** | Meeting Topic | [optional] 
 **share_url** | **string** | Share Url for the On-demand recording. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

@@ -1,6 +1,7 @@
-# AccountSettingsZoomRooms
+# # AccountSettingsZoomRooms
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **upcoming_meeting_alert** | **bool** | Upcoming meeting alert. | [optional] 
@@ -14,6 +15,6 @@ Name | Type | Description | Notes
 **cmr_for_instant_meeting** | **bool** | Cloud recording for instant meetings. | [optional] 
 **auto_start_stop_scheduled_meetings** | **bool** | Automatic start and stop for scheduled meetings. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

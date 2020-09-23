@@ -1,6 +1,7 @@
-# InlineResponse20058
+# # InlineResponse20058
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **message_id** | **string** | Unique identifier of the message that was deleted. | [optional] 
@@ -9,6 +10,6 @@ Name | Type | Description | Notes
 **to_jid** | **string** | The JID of the Channel or User to whom the message was sent. | [optional] 
 **user_jid** | **string** | The UserJID of the user on whose behalf the message was sent. Used to prevent members of a channel from getting notifications that were set up by a user who has left the channel. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

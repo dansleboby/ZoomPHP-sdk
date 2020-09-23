@@ -1,6 +1,7 @@
-# InlineResponse20061
+# # InlineResponse20061
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **string** | Zoom User Id. | [optional] 
@@ -13,6 +14,6 @@ Name | Type | Description | Notes
 **site_id** | **string** | Unique Identifier for a [site](https://support.zoom.us/hc/en-us/articles/360020809672). | [optional] 
 **site_admin** | **bool** | Indicates whether the user is a [site admin](https://support.zoom.us/hc/en-us/articles/360042099012) or not. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

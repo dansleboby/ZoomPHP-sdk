@@ -1,36 +1,39 @@
 {
     "name": "dansleboby/zoomphp-sdk",
-    "description": "",
+    "description": "The Zoom API allows developers to safely and securely access information from Zoom. You can use this API to build private services or public applicatixons on the [Zoom App Marketplace](http://marketplace.zoom.us). To learn how to get your credentials and create private/public applications, read our [Authorization Guide](https://marketplace.zoom.us/docs/guides/authorization/credentials). All endpoints are available via `https` and are located at `api.zoom.us/v2/`.  For instance you can list all users on an account via `https://api.zoom.us/v2/users/`.",
     "keywords": [
-        "swagger",
+        "openapitools",
+        "openapi-generator",
+        "openapi",
         "php",
         "sdk",
+        "rest",
         "api"
     ],
-    "homepage": "http://swagger.io",
-    "license": "proprietary",
+    "homepage": "https://openapi-generator.tech",
+    "license": "unlicense",
     "authors": [
         {
-            "name": "Swagger and contributors",
-            "homepage": "https://github.com/swagger-api/swagger-codegen"
+            "name": "OpenAPI-Generator contributors",
+            "homepage": "https://openapi-generator.tech"
         }
     ],
     "require": {
-        "php": ">=5.5",
+        "php": ">=7.1",
         "ext-curl": "*",
         "ext-json": "*",
         "ext-mbstring": "*",
         "guzzlehttp/guzzle": "^6.2"
     },
     "require-dev": {
-        "phpunit/phpunit": "^4.8",
+        "phpunit/phpunit": "^7.4",
         "squizlabs/php_codesniffer": "~2.6",
         "friendsofphp/php-cs-fixer": "~2.12"
     },
     "autoload": {
-        "psr-4": { "Swagger\\Client\\" : "lib/" }
+        "psr-4": { "Zoom\\Api\\" : "lib/" }
     },
     "autoload-dev": {
-        "psr-4": { "Swagger\\Client\\" : "test/" }
+        "psr-4": { "Zoom\\Api\\" : "test/" }
     }
 }

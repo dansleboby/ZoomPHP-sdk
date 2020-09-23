@@ -1,6 +1,7 @@
-# InlineResponse20064Recordings
+# # InlineResponse20064Recordings
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **string** | ID of recording | [optional] 
@@ -15,6 +16,6 @@ Name | Type | Description | Notes
 **download_url** | **string** | Download url for the recording. For security purposes, you must provide an OAuth access token in the auth header to download the recording file using this url. &lt;br&gt;  Example request:&lt;br&gt; &#x60;&#x60;&#x60; curl --request GET \\   --url {download_url} \\   --header &#39;authorization: Bearer {access_token} \\   --header &#39;content-type: application/json&#39; &#x60;&#x60;&#x60; | [optional] 
 **date_time** | **string** | Date and time at which the record is received | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

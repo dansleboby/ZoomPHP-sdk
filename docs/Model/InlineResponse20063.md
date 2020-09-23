@@ -1,6 +1,7 @@
-# InlineResponse20063
+# # InlineResponse20063
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **from** | **string** | Date from which you would like to view the logs. | [optional] 
@@ -11,6 +12,6 @@ Name | Type | Description | Notes
 **total_records** | **string** | The total number of records returned. | [optional] 
 **call_logs** | [**\Zoom\Api\Model\InlineResponse20063CallLogs[]**](InlineResponse20063CallLogs.md) | Call Log | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

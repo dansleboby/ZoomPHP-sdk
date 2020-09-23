@@ -1,6 +1,7 @@
-# UserSettingsUpdate
+# # UserSettingsUpdate
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **schedule_meeting** | [**\Zoom\Api\Model\UserSettingsMeetingSettings**](UserSettingsMeetingSettings.md) |  | [optional] 
@@ -11,6 +12,6 @@ Name | Type | Description | Notes
 **feature** | [**\Zoom\Api\Model\UserSettingsFeatureSettings1**](UserSettingsFeatureSettings1.md) |  | [optional] 
 **tsp** | [**\Zoom\Api\Model\UserSettingsTSPSettings**](UserSettingsTSPSettings.md) |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

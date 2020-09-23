@@ -1,6 +1,7 @@
-# UsersuserIdmeetingsSettings
+# # UsersUserIdMeetingsSettings
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **host_video** | **bool** | Start video when the host joins the meeting. | [optional] 
@@ -27,6 +28,6 @@ Name | Type | Description | Notes
 **authentication_domains** | **string** | Meeting authentication domains. This option, allows you to specify the rule so that Zoom users, whose email address contains a certain domain, can join the meeting. You can either provide multiple domains, using a comma in between and/or use a wildcard for listing domains. | [optional] 
 **additional_data_center_regions** | **string[]** | Enable additional [data center regions](https://support.zoom.us/hc/en-us/articles/360042411451-Selecting-data-center-regions-for-hosted-meetings-and-webinars) for this meeting. Provide the value in the form of array of country code(s) for the countries which are available as data center regions in the [account settings](https://zoom.us/account/setting) but have been opt out of in the user settings. For instance, let&#39;s say that in your account settings, the data center regions that have been selected are Europe, Honkong, Australia, India, Latin America, Japan, China, United States,and Canada. The complete list of available data center regions for your account is: [\&quot;EU\&quot;, \&quot;HK\&quot;, \&quot;AU\&quot;, \&quot;IN\&quot;, \&quot;LA\&quot;, \&quot;TY\&quot;, \&quot;CN\&quot;, \&quot;US\&quot;, \&quot;CA\&quot;]. In [user settings](https://zoom.us/profile/setting), you have opted out of India(IN) and Japan(TY) for meeting and webinar traffic routing. If you would like, you can still include India and Japan as additional data centers for this meeting using this field. To include India and Japan as additional data center regions, you would provide [\&quot;IN\&quot;, \&quot;TY\&quot;] as the value. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

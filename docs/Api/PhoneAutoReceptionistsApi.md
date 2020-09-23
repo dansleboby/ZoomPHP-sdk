@@ -11,7 +11,9 @@ Method | HTTP request | Description
 [**updateAutoReceptionist**](PhoneAutoReceptionistsApi.md#updateAutoReceptionist) | **PATCH** /phone/auto_receptionists/{autoReceptionistId} | Update Auto Receptionist Details
 
 
-# **addAutoReceptionist**
+
+## addAutoReceptionist
+
 > \Zoom\Api\Model\InlineResponse20127 addAutoReceptionist($body)
 
 Add an Auto Receptionist
@@ -19,12 +21,15 @@ Add an Auto Receptionist
 Auto receptionists answer calls with a personalized recording and routes calls to a phone user, call queue, common area phone, voicemail or an IVR system. Use this API to add an [auto receptionist](https://support.zoom.us/hc/en-us/articles/360021121312-Managing-Auto-Receptionists-and-Interactive-Voice-Response-IVR-) to a Zoom Phone.<br>  **Prerequisites:**<br> * Pro or higher account with Zoom Phone license.<br> **Scopes:** `phone:write:admin` <br>   **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\PhoneAutoReceptionistsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -32,7 +37,7 @@ $apiInstance = new Zoom\Api\Api\PhoneAutoReceptionistsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Zoom\Api\Model\Body82(); // \Zoom\Api\Model\Body82 | 
+$body = new \Zoom\Api\Model\InlineObject82(); // \Zoom\Api\Model\InlineObject82 | 
 
 try {
     $result = $apiInstance->addAutoReceptionist($body);
@@ -45,9 +50,10 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Zoom\Api\Model\Body82**](../Model/Body82.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\InlineObject82**](../Model/InlineObject82.md)|  | [optional]
 
 ### Return type
 
@@ -59,12 +65,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: application/json, multipart/form-data
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **assignPhoneNumbersAutoReceptionist**
+
+## assignPhoneNumbersAutoReceptionist
+
 > object assignPhoneNumbersAutoReceptionist($auto_receptionist_id, $body)
 
 Assign Phone Numbers
@@ -72,12 +82,15 @@ Assign Phone Numbers
 Assign available phone numbers to an [auto receptionist](https://support.zoom.us/hc/en-us/articles/360021121312-Managing-Auto-Receptionists-and-Interactive-Voice-Response-IVR-). The available numbers can be retrieved using the List Phone Numbers API with `type` query parameter set to \"unassigned\".  **Prerequisites:** * Pro or higher account plan with Zoom Phone License * Account owner or admin permissions<br> **Scopes:** `phone:write:admin`<br>     **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\PhoneAutoReceptionistsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -85,8 +98,8 @@ $apiInstance = new Zoom\Api\Api\PhoneAutoReceptionistsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$auto_receptionist_id = "auto_receptionist_id_example"; // string | Unique Identifier of the Auto Receptionist. It can be retrieved from the [List Sites API](https://marketplace.zoom.us/docs/api-reference/zoom-api/phone-site/listphonesites).
-$body = new \Zoom\Api\Model\Body74(); // \Zoom\Api\Model\Body74 | 
+$auto_receptionist_id = 'auto_receptionist_id_example'; // string | Unique Identifier of the Auto Receptionist. It can be retrieved from the [List Sites API](https://marketplace.zoom.us/docs/api-reference/zoom-api/phone-site/listphonesites).
+$body = new \Zoom\Api\Model\InlineObject74(); // \Zoom\Api\Model\InlineObject74 | 
 
 try {
     $result = $apiInstance->assignPhoneNumbersAutoReceptionist($auto_receptionist_id, $body);
@@ -99,10 +112,11 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **auto_receptionist_id** | **string**| Unique Identifier of the Auto Receptionist. It can be retrieved from the [List Sites API](https://marketplace.zoom.us/docs/api-reference/zoom-api/phone-site/listphonesites). |
- **body** | [**\Zoom\Api\Model\Body74**](../Model/Body74.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\InlineObject74**](../Model/InlineObject74.md)|  | [optional]
 
 ### Return type
 
@@ -114,12 +128,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: application/json, multipart/form-data
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **unassignAPhoneNumAutoReceptionist**
+
+## unassignAPhoneNumAutoReceptionist
+
 > object unassignAPhoneNumAutoReceptionist($auto_receptionist_id, $phone_number_id)
 
 Unassign a Phone Number
@@ -127,12 +145,15 @@ Unassign a Phone Number
 Unassign a specific phone number that was previously assigned to an [auto receptionist](https://support.zoom.us/hc/en-us/articles/360021121312-Managing-Auto-Receptionists-and-Interactive-Voice-Response-IVR-).   **Prerequisites:** * Pro or higher account plan with Zoom Phone License * Account owner or admin permissions<br> **Scopes:** `phone:write:admin`<br>     **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\PhoneAutoReceptionistsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -140,8 +161,8 @@ $apiInstance = new Zoom\Api\Api\PhoneAutoReceptionistsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$auto_receptionist_id = "auto_receptionist_id_example"; // string | Unique identifier of the auto receptionist. This can be retrieved from the List Phone Sites API.
-$phone_number_id = "phone_number_id_example"; // string | Unique Identifier of the phone number or provide the actual phone number in e164 format (example: +19995550123).
+$auto_receptionist_id = 'auto_receptionist_id_example'; // string | Unique identifier of the auto receptionist. This can be retrieved from the List Phone Sites API.
+$phone_number_id = 'phone_number_id_example'; // string | Unique Identifier of the phone number or provide the actual phone number in e164 format (example: +19995550123).
 
 try {
     $result = $apiInstance->unassignAPhoneNumAutoReceptionist($auto_receptionist_id, $phone_number_id);
@@ -153,6 +174,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -169,12 +191,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **unassignAllPhoneNumsAutoReceptionist**
+
+## unassignAllPhoneNumsAutoReceptionist
+
 > object unassignAllPhoneNumsAutoReceptionist($auto_receptionist_id)
 
 Unassign all Phone Numbers
@@ -182,12 +208,15 @@ Unassign all Phone Numbers
 Unassign all phone numbers that were previously assigned to an [auto receptionist](https://support.zoom.us/hc/en-us/articles/360021121312-Managing-Auto-Receptionists-and-Interactive-Voice-Response-IVR-).   **Prerequisites:** * Pro or higher account plan with Zoom Phone License * Account owner or admin permissions<br> **Scopes:** `phone:write:admin`<br>    **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\PhoneAutoReceptionistsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -195,7 +224,7 @@ $apiInstance = new Zoom\Api\Api\PhoneAutoReceptionistsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$auto_receptionist_id = "auto_receptionist_id_example"; // string | 
+$auto_receptionist_id = 'auto_receptionist_id_example'; // string | 
 
 try {
     $result = $apiInstance->unassignAllPhoneNumsAutoReceptionist($auto_receptionist_id);
@@ -207,6 +236,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -222,12 +252,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **updateAutoReceptionist**
+
+## updateAutoReceptionist
+
 > object updateAutoReceptionist($auto_receptionist_id, $body)
 
 Update Auto Receptionist Details
@@ -235,12 +269,15 @@ Update Auto Receptionist Details
 An auto receptionist answers calls with a personalized recording and routes calls to a phone user, call queue, common area phone, or voicemail. An auto receptionist can also be set up so that it routes calls to an interactive voice response (IVR) system to allow callers to select the routing options.<br> Use this API to [change information](https://support.zoom.us/hc/en-us/articles/360021121312-Managing-Auto-Receptionists-and-Interactive-Voice-Response-IVR-#h_1d5ffc56-6ba3-4ce5-9d86-4a1a1ee743f3) such as display name and extension number assigned to the main auto receptionist.<br><br> **Prerequisites:**<br> * Pro or higher account with Zoom Phone license.<br> **Scopes:** `phone:write:admin` <br>     **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\PhoneAutoReceptionistsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -248,8 +285,8 @@ $apiInstance = new Zoom\Api\Api\PhoneAutoReceptionistsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$auto_receptionist_id = "auto_receptionist_id_example"; // string | Unique Identifier of the Auto Receptionist. It can be retrieved from the [List Sites API](https://marketplace.zoom.us/docs/api-reference/zoom-api/phone-site/listphonesites).
-$body = new \Zoom\Api\Model\Body73(); // \Zoom\Api\Model\Body73 | 
+$auto_receptionist_id = 'auto_receptionist_id_example'; // string | Unique Identifier of the Auto Receptionist. It can be retrieved from the [List Sites API](https://marketplace.zoom.us/docs/api-reference/zoom-api/phone-site/listphonesites).
+$body = new \Zoom\Api\Model\InlineObject73(); // \Zoom\Api\Model\InlineObject73 | 
 
 try {
     $result = $apiInstance->updateAutoReceptionist($auto_receptionist_id, $body);
@@ -262,10 +299,11 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **auto_receptionist_id** | **string**| Unique Identifier of the Auto Receptionist. It can be retrieved from the [List Sites API](https://marketplace.zoom.us/docs/api-reference/zoom-api/phone-site/listphonesites). |
- **body** | [**\Zoom\Api\Model\Body73**](../Model/Body73.md)|  | [optional]
+ **body** | [**\Zoom\Api\Model\InlineObject73**](../Model/InlineObject73.md)|  | [optional]
 
 ### Return type
 
@@ -277,8 +315,10 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: application/json, multipart/form-data
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 

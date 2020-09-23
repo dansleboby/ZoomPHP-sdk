@@ -28,7 +28,9 @@ Method | HTTP request | Description
 [**listMeetingSatisfaction**](DashboardsApi.md#listMeetingSatisfaction) | **GET** /metrics/client/satisfaction | List Client Meeting Satisfaction
 
 
-# **dashboardCRC**
+
+## dashboardCRC
+
 > object dashboardCRC($from, $to)
 
 Get CRC Port Usage
@@ -36,12 +38,15 @@ Get CRC Port Usage
 A Cloud Room Connector allows H.323/SIP endpoints to connect to a Zoom meeting.   Use this API to get the hour by hour CRC Port usage for a specified period of time. <aside class='notice'>We will provide the report for a maximum of one month. For example, if \"from\" is set to \"2017-08-05\" and \"to\" is set to \"2017-10-10\", we will adjust \"from\" to \"2017-09-10\".</aside><br><br> **Prerequisites:**<br> * Business, Education or API Plan. * Room Connector must be enabled on the account.<br><br> **Scopes:** `dashboard_crc:read:admin`<br>  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\DashboardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -49,8 +54,8 @@ $apiInstance = new Zoom\Api\Api\DashboardsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$from = new \DateTime("2013-10-20"); // \DateTime | Start date in 'yyyy-mm-dd' format. The date range defined by the \"from\" and \"to\" parameters should only be one month as the report includes only one month worth of data at once.
-$to = new \DateTime("2013-10-20"); // \DateTime | End date.
+$from = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Start date in 'yyyy-mm-dd' format. The date range defined by the \"from\" and \"to\" parameters should only be one month as the report includes only one month worth of data at once.
+$to = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | End date.
 
 try {
     $result = $apiInstance->dashboardCRC($from, $to);
@@ -62,6 +67,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -78,12 +84,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **dashboardClientFeedback**
+
+## dashboardClientFeedback
+
 > \Zoom\Api\Model\InlineResponse20032 dashboardClientFeedback($from, $to)
 
 List Zoom Meetings Client Feedbacks
@@ -91,12 +101,15 @@ List Zoom Meetings Client Feedbacks
 Retrieve survey results from [Zoom meetings client feedback](https://support.zoom.us/hc/en-us/articles/115005855266-End-of-Meeting-Feedback-Survey#h_e30d552b-6d8e-4e0a-a588-9ca8180c4dbf). <br> You can specify a monthly date range for the dashboard data using the `from` and `to` query parameters. The month should fall within the last six months.  **Prerequisites:** * Business or higher account * [Feedback to Zoom](https://support.zoom.us/hc/en-us/articles/115005838023) enabled.  **Scope:** `account:read:admin`<br>   **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\DashboardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -104,8 +117,8 @@ $apiInstance = new Zoom\Api\Api\DashboardsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$from = new \DateTime("2013-10-20"); // \DateTime | Start date in 'yyyy-mm-dd' format. The date range defined by the \"from\" and \"to\" parameters should only be one month as the report includes only one month worth of data at once.
-$to = new \DateTime("2013-10-20"); // \DateTime | End date.
+$from = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Start date in 'yyyy-mm-dd' format. The date range defined by the \"from\" and \"to\" parameters should only be one month as the report includes only one month worth of data at once.
+$to = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | End date.
 
 try {
     $result = $apiInstance->dashboardClientFeedback($from, $to);
@@ -117,6 +130,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -133,12 +147,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **dashboardClientFeedbackDetail**
+
+## dashboardClientFeedbackDetail
+
 > \Zoom\Api\Model\InlineResponse20059 dashboardClientFeedbackDetail($feedback_id, $from, $to, $page_size, $next_page_token)
 
 Get Zoom Meetings Client Feedback
@@ -146,12 +164,15 @@ Get Zoom Meetings Client Feedback
 Retrieve detailed information on a [Zoom meetings client feedback](https://support.zoom.us/hc/en-us/articles/115005855266-End-of-Meeting-Feedback-Survey#h_e30d552b-6d8e-4e0a-a588-9ca8180c4dbf). <br> You can specify a monthly date range for the dashboard data using the `from` and `to` query parameters. The month should fall within the last six months.  **Prerequisites:** * Business or higher account * [Feedback to Zoom](https://support.zoom.us/hc/en-us/articles/115005838023) enabled.  **Scope:** `dashboard_home:read:admin`<br>  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`  `
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\DashboardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -159,11 +180,11 @@ $apiInstance = new Zoom\Api\Api\DashboardsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$feedback_id = "feedback_id_example"; // string | Feedback Detail Id
-$from = new \DateTime("2013-10-20"); // \DateTime | 
-$to = new \DateTime("2013-10-20"); // \DateTime | 
+$feedback_id = 'feedback_id_example'; // string | Feedback Detail Id
+$from = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$to = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
 $page_size = 30; // int | 
-$next_page_token = "next_page_token_example"; // string | 
+$next_page_token = 'next_page_token_example'; // string | 
 
 try {
     $result = $apiInstance->dashboardClientFeedbackDetail($feedback_id, $from, $to, $page_size, $next_page_token);
@@ -175,6 +196,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -194,12 +216,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **dashboardIM**
+
+## dashboardIM
+
 > \Zoom\Api\Model\InlineResponse20031 dashboardIM($from, $to, $page_size, $next_page_token)
 
 Get IM Metrics
@@ -207,12 +233,15 @@ Get IM Metrics
 Get [metrics](https://support.zoom.us/hc/en-us/articles/204654719-Dashboard#h_cc7e9749-1c70-4afb-a9a2-9680654821e4) on how users are utilizing the Zoom Chat Client.<br><br> <br> You can specify a monthly date range for the dashboard data using the `from` and `to` query parameters. The month should fall within the last six months. **Scope:** `dashboard_im:read:admin`<br>  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Resource-intensive`<br> **Prerequisites:**<br> * Business or a higher plan.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\DashboardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -220,10 +249,10 @@ $apiInstance = new Zoom\Api\Api\DashboardsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$from = new \DateTime("2013-10-20"); // \DateTime | Start date in 'yyyy-mm-dd' format. The date range defined by the \"from\" and \"to\" parameters should only be one month as the report includes only one month worth of data at once.
-$to = new \DateTime("2013-10-20"); // \DateTime | End date.
+$from = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Start date in 'yyyy-mm-dd' format. The date range defined by the \"from\" and \"to\" parameters should only be one month as the report includes only one month worth of data at once.
+$to = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | End date.
 $page_size = 30; // int | The number of records returned within a single API call.
-$next_page_token = "next_page_token_example"; // string | The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
+$next_page_token = 'next_page_token_example'; // string | The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
 
 try {
     $result = $apiInstance->dashboardIM($from, $to, $page_size, $next_page_token);
@@ -235,6 +264,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -253,12 +283,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **dashboardIssueDetailZoomRoom**
+
+## dashboardIssueDetailZoomRoom
+
 > \Zoom\Api\Model\InlineResponse20033 dashboardIssueDetailZoomRoom($zoomroom_id, $from, $to, $page_size, $next_page_token)
 
 Get Issues of Zoom Rooms
@@ -266,12 +300,15 @@ Get Issues of Zoom Rooms
 Get information about the issues that occured on the Top 25 **Zoom Rooms with issues** in an acount. <br> You can specify a monthly date range for the dashboard data using the `from` and `to` query parameters. The month should fall within the last six months.  **Scope:** `dashboard_home:read:admin`<br>  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`<br> **Prerequisites:** <br> * Business or a higher plan. * Zoom Room must be enabled in the account.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\DashboardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -279,11 +316,11 @@ $apiInstance = new Zoom\Api\Api\DashboardsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$zoomroom_id = "zoomroom_id_example"; // string | The Zoom room ID.
-$from = new \DateTime("2013-10-20"); // \DateTime | Start date in 'yyyy-mm-dd' format. The date range defined by the \"from\" and \"to\" parameters should only be one month as the report includes only one month worth of data at once.
-$to = new \DateTime("2013-10-20"); // \DateTime | End date.
+$zoomroom_id = 'zoomroom_id_example'; // string | The Zoom room ID.
+$from = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Start date in 'yyyy-mm-dd' format. The date range defined by the \"from\" and \"to\" parameters should only be one month as the report includes only one month worth of data at once.
+$to = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | End date.
 $page_size = 30; // int | The number of records returned within a single API call.
-$next_page_token = "next_page_token_example"; // string | The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
+$next_page_token = 'next_page_token_example'; // string | The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
 
 try {
     $result = $apiInstance->dashboardIssueDetailZoomRoom($zoomroom_id, $from, $to, $page_size, $next_page_token);
@@ -295,6 +332,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -314,12 +352,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **dashboardIssueZoomRoom**
+
+## dashboardIssueZoomRoom
+
 > object dashboardIssueZoomRoom($from, $to)
 
 Get Top 25 Zoom Rooms with Issues
@@ -327,12 +369,15 @@ Get Top 25 Zoom Rooms with Issues
 Get information on top 25 Zoom Rooms with issues in a month. The month specified with the \"from\" and \"to\" range should fall within the last six months.<br> **Scope:** `dashboard_home:read:admin`<br>  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`<br> **Prerequisites:**<br> * Business or a higher plan. * Zoom Room must be enabled in the account.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\DashboardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -340,8 +385,8 @@ $apiInstance = new Zoom\Api\Api\DashboardsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$from = new \DateTime("2013-10-20"); // \DateTime | Start date in 'yyyy-mm-dd' format. The date range defined by the \"from\" and \"to\" parameters should only be one month as the report includes only one month worth of data at once.
-$to = new \DateTime("2013-10-20"); // \DateTime | End date.
+$from = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Start date in 'yyyy-mm-dd' format. The date range defined by the \"from\" and \"to\" parameters should only be one month as the report includes only one month worth of data at once.
+$to = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | End date.
 
 try {
     $result = $apiInstance->dashboardIssueZoomRoom($from, $to);
@@ -353,6 +398,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -369,12 +415,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **dashboardMeetingDetail**
+
+## dashboardMeetingDetail
+
 > \Zoom\Api\Model\MeetingMetrics dashboardMeetingDetail($meeting_id, $type)
 
 Get Meeting Details
@@ -382,12 +432,15 @@ Get Meeting Details
 Get details on live or past meetings. This overview will show if features such as audio, video, screen sharing, and recording were being used in the meeting. You can also see the license types of each user on your account.<br> You can specify a monthly date range for the dashboard data using the `from` and `to` query parameters. The month should fall within the last six months.  <br> **Scopes:** `dashboard_meetings:read:admin`<br>  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`<br> **Prerequisites:** <br> * Business or a higher plan.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\DashboardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -395,8 +448,8 @@ $apiInstance = new Zoom\Api\Api\DashboardsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$meeting_id = "meeting_id_example"; // string | The meeting ID or meeting UUID. If given the meeting ID it will take the last meeting instance.
-$type = "live"; // string | The meeting types: <br>`past` - Past meetings.<br>`pastOne` - Past one user meetings.<br>`live` - Live meetings.
+$meeting_id = 'meeting_id_example'; // string | The meeting ID or meeting UUID. If given the meeting ID it will take the last meeting instance.
+$type = 'live'; // string | The meeting types: <br>`past` - Past meetings.<br>`pastOne` - Past one user meetings.<br>`live` - Live meetings.
 
 try {
     $result = $apiInstance->dashboardMeetingDetail($meeting_id, $type);
@@ -409,10 +462,11 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **meeting_id** | **string**| The meeting ID or meeting UUID. If given the meeting ID it will take the last meeting instance. |
- **type** | **string**| The meeting types: &lt;br&gt;&#x60;past&#x60; - Past meetings.&lt;br&gt;&#x60;pastOne&#x60; - Past one user meetings.&lt;br&gt;&#x60;live&#x60; - Live meetings. | [optional] [default to live]
+ **type** | **string**| The meeting types: &lt;br&gt;&#x60;past&#x60; - Past meetings.&lt;br&gt;&#x60;pastOne&#x60; - Past one user meetings.&lt;br&gt;&#x60;live&#x60; - Live meetings. | [optional] [default to &#39;live&#39;]
 
 ### Return type
 
@@ -424,12 +478,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **dashboardMeetingParticipantQOS**
+
+## dashboardMeetingParticipantQOS
+
 > \Zoom\Api\Model\ParticipantQOS dashboardMeetingParticipantQOS($meeting_id, $participant_id, $type)
 
 Get Meeting Participant QOS
@@ -437,12 +495,15 @@ Get Meeting Participant QOS
 Retrieve the quality of service for participants from live or past meetings. This data indicates the connection quality for sending/receiving video, audio, and shared content. If nothing is being sent or received at that time, no information will be shown in the fields. <br><br> **Scopes:** `dashboard:read:admin`<br>  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\DashboardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -450,9 +511,9 @@ $apiInstance = new Zoom\Api\Api\DashboardsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$meeting_id = "meeting_id_example"; // string | The meeting ID or meeting UUID. If given the meeting ID it will take the last meeting instance.
-$participant_id = "participant_id_example"; // string | Participant ID.
-$type = "live"; // string | The meeting types: <br>`past` - Past meetings.<br>`live` - Live Meetings.
+$meeting_id = 'meeting_id_example'; // string | The meeting ID or meeting UUID. If given the meeting ID it will take the last meeting instance.
+$participant_id = 'participant_id_example'; // string | Participant ID.
+$type = 'live'; // string | The meeting types: <br>`past` - Past meetings.<br>`live` - Live Meetings.
 
 try {
     $result = $apiInstance->dashboardMeetingParticipantQOS($meeting_id, $participant_id, $type);
@@ -465,11 +526,12 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **meeting_id** | **string**| The meeting ID or meeting UUID. If given the meeting ID it will take the last meeting instance. |
  **participant_id** | **string**| Participant ID. |
- **type** | **string**| The meeting types: &lt;br&gt;&#x60;past&#x60; - Past meetings.&lt;br&gt;&#x60;live&#x60; - Live Meetings. | [optional] [default to live]
+ **type** | **string**| The meeting types: &lt;br&gt;&#x60;past&#x60; - Past meetings.&lt;br&gt;&#x60;live&#x60; - Live Meetings. | [optional] [default to &#39;live&#39;]
 
 ### Return type
 
@@ -481,12 +543,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **dashboardMeetingParticipantShare**
+
+## dashboardMeetingParticipantShare
+
 > \Zoom\Api\Model\InlineResponse20028 dashboardMeetingParticipantShare($meeting_id, $type, $page_size, $next_page_token)
 
 Get Sharing/Recording Details of Meeting Participants
@@ -494,12 +560,15 @@ Get Sharing/Recording Details of Meeting Participants
 Retrieve the sharing and recording details of participants from live or past meetings.<br> **Scopes:** `dashboard:read:admin`<br>  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`<br> **Prerequisites:** <br> * Business or a higher plan.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\DashboardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -507,10 +576,10 @@ $apiInstance = new Zoom\Api\Api\DashboardsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$meeting_id = "meeting_id_example"; // string | The meeting ID or meeting UUID. If given the meeting ID it will take the last meeting instance.
-$type = "live"; // string | The meeting types: <br>`past` - Past meetings.<br>`live` - Live Meetings.
+$meeting_id = 'meeting_id_example'; // string | The meeting ID or meeting UUID. If given the meeting ID it will take the last meeting instance.
+$type = 'live'; // string | The meeting types: <br>`past` - Past meetings.<br>`live` - Live Meetings.
 $page_size = 30; // int | The number of records returned within a single API call.
-$next_page_token = "next_page_token_example"; // string | The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceed the current page size. The expiration period for this token is 15 minutes.
+$next_page_token = 'next_page_token_example'; // string | The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceed the current page size. The expiration period for this token is 15 minutes.
 
 try {
     $result = $apiInstance->dashboardMeetingParticipantShare($meeting_id, $type, $page_size, $next_page_token);
@@ -523,10 +592,11 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **meeting_id** | **string**| The meeting ID or meeting UUID. If given the meeting ID it will take the last meeting instance. |
- **type** | **string**| The meeting types: &lt;br&gt;&#x60;past&#x60; - Past meetings.&lt;br&gt;&#x60;live&#x60; - Live Meetings. | [optional] [default to live]
+ **type** | **string**| The meeting types: &lt;br&gt;&#x60;past&#x60; - Past meetings.&lt;br&gt;&#x60;live&#x60; - Live Meetings. | [optional] [default to &#39;live&#39;]
  **page_size** | **int**| The number of records returned within a single API call. | [optional] [default to 30]
  **next_page_token** | **string**| The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceed the current page size. The expiration period for this token is 15 minutes. | [optional]
 
@@ -540,12 +610,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **dashboardMeetingParticipants**
+
+## dashboardMeetingParticipants
+
 > \Zoom\Api\Model\InlineResponse20027 dashboardMeetingParticipants($meeting_id, $type, $page_size, $next_page_token)
 
 List Meeting Participants
@@ -553,12 +627,15 @@ List Meeting Participants
 Get a list of participants from live or past meetings.<br><br> If you do not provide the `type` query parameter, the default value will be set to `live` and thus, you will only see metrics for participants in a live meeting, if any meeting is currently being conducted. To view metrics on past meeting participants, provide the appropriate value for `type`. <br> You can specify a monthly date range for the dashboard data using the `from` and `to` query parameters. The month should fall within the last six months.  **Scopes:** `dashboard_meetings:read:admin`<br>  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`<br> **Prerequisites:** Business or a higher plan.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\DashboardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -566,10 +643,10 @@ $apiInstance = new Zoom\Api\Api\DashboardsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$meeting_id = "meeting_id_example"; // string | The meeting ID or meeting UUID. If given the meeting ID it will take the last meeting instance.
-$type = "live"; // string | The meeting types: <br>`past` - Past meetings.<br>`pastOne` - Past one user meetings.<br>`live` - Live meetings.
+$meeting_id = 'meeting_id_example'; // string | The meeting ID or meeting UUID. If given the meeting ID it will take the last meeting instance.
+$type = 'live'; // string | The meeting types: <br>`past` - Past meetings.<br>`pastOne` - Past one user meetings.<br>`live` - Live meetings.
 $page_size = 30; // int | The number of records returned within a single API call.
-$next_page_token = "next_page_token_example"; // string | The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
+$next_page_token = 'next_page_token_example'; // string | The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
 
 try {
     $result = $apiInstance->dashboardMeetingParticipants($meeting_id, $type, $page_size, $next_page_token);
@@ -582,10 +659,11 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **meeting_id** | **string**| The meeting ID or meeting UUID. If given the meeting ID it will take the last meeting instance. |
- **type** | **string**| The meeting types: &lt;br&gt;&#x60;past&#x60; - Past meetings.&lt;br&gt;&#x60;pastOne&#x60; - Past one user meetings.&lt;br&gt;&#x60;live&#x60; - Live meetings. | [optional] [default to live]
+ **type** | **string**| The meeting types: &lt;br&gt;&#x60;past&#x60; - Past meetings.&lt;br&gt;&#x60;pastOne&#x60; - Past one user meetings.&lt;br&gt;&#x60;live&#x60; - Live meetings. | [optional] [default to &#39;live&#39;]
  **page_size** | **int**| The number of records returned within a single API call. | [optional] [default to 30]
  **next_page_token** | **string**| The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. | [optional]
 
@@ -599,12 +677,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **dashboardMeetingParticipantsQOS**
+
+## dashboardMeetingParticipantsQOS
+
 > \Zoom\Api\Model\ParticipantQOSList dashboardMeetingParticipantsQOS($meeting_id, $type, $page_size, $next_page_token)
 
 List Meeting Participants QOS
@@ -612,12 +694,15 @@ List Meeting Participants QOS
 Get a list of meeting participants from live or past meetings along with the quality of service they recieve during the meeting such as connection quality for sending/receiving video, audio, and shared content.<br>If you do not provide the `type` query parameter, the default value will be set to `live` and thus, you will only see metrics for participants in a live meeting, if any meeting is currently being conducted. To view metrics on past meeting participants, provide the appropriate value for `type`.<br> <br> You can specify a monthly date range for the dashboard data using the `from` and `to` query parameters. The month should fall within the last six months.<br><br> **Scopes:** `dashboard_meetings:read:admin`<br>  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`<br> **Prerequisites:** <br> * Business or a higher plan.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\DashboardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -625,10 +710,10 @@ $apiInstance = new Zoom\Api\Api\DashboardsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$meeting_id = "meeting_id_example"; // string | The meeting ID or meeting UUID. If given the meeting ID it will take the last meeting instance.
-$type = "live"; // string | The meeting types: <br>`past` - Past meetings.<br>`live` - Live Meetings.
+$meeting_id = 'meeting_id_example'; // string | The meeting ID or meeting UUID. If given the meeting ID it will take the last meeting instance.
+$type = 'live'; // string | The meeting types: <br>`past` - Past meetings.<br>`live` - Live Meetings.
 $page_size = 1; // int | The number of items returned per page.
-$next_page_token = "next_page_token_example"; // string | The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
+$next_page_token = 'next_page_token_example'; // string | The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
 
 try {
     $result = $apiInstance->dashboardMeetingParticipantsQOS($meeting_id, $type, $page_size, $next_page_token);
@@ -641,10 +726,11 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **meeting_id** | **string**| The meeting ID or meeting UUID. If given the meeting ID it will take the last meeting instance. |
- **type** | **string**| The meeting types: &lt;br&gt;&#x60;past&#x60; - Past meetings.&lt;br&gt;&#x60;live&#x60; - Live Meetings. | [optional] [default to live]
+ **type** | **string**| The meeting types: &lt;br&gt;&#x60;past&#x60; - Past meetings.&lt;br&gt;&#x60;live&#x60; - Live Meetings. | [optional] [default to &#39;live&#39;]
  **page_size** | **int**| The number of items returned per page. | [optional] [default to 1]
  **next_page_token** | **string**| The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. | [optional]
 
@@ -658,12 +744,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **dashboardMeetings**
+
+## dashboardMeetings
+
 > \Zoom\Api\Model\InlineResponse20026 dashboardMeetings($from, $to, $type, $page_size, $next_page_token)
 
 List Meetings
@@ -671,12 +761,15 @@ List Meetings
 List total live or past meetings that occurred during a specified period of time. This overview will show if features such as audio, video, screen sharing, and recording were being used in the meeting. You can also see the license types of each user on your account.<br> You can specify a monthly date range for the dashboard data using the `from` and `to` query parameters. The month should fall within the last six months.<br> **Scopes:** `dashboard_meetings:read:admin`<br>  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Resource-intensive`<br><br> **Prerequisites:** <br> * Business or a higher plan.<br><br>
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\DashboardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -684,11 +777,11 @@ $apiInstance = new Zoom\Api\Api\DashboardsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$from = new \DateTime("2013-10-20"); // \DateTime | Start date in 'yyyy-mm-dd' format. The date range defined by the \"from\" and \"to\" parameters should only be one month as the report includes only one month worth of data at once.
-$to = new \DateTime("2013-10-20"); // \DateTime | End date.
-$type = "live"; // string | Specify a value to get the response for the corresponding meeting type. The value of this field can be one of the following:<br> <br>`past` - Meeting that already occurred in the specified date range.<br>`pastOne` - Past meetings that were attended by only one user. <br>`live` - Live meetings.<br><br>  If you do not provide this field, the default value will be `live` and thus, the API will only query responses for live meetings.
+$from = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Start date in 'yyyy-mm-dd' format. The date range defined by the \"from\" and \"to\" parameters should only be one month as the report includes only one month worth of data at once.
+$to = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | End date.
+$type = 'live'; // string | Specify a value to get the response for the corresponding meeting type. The value of this field can be one of the following:<br> <br>`past` - Meeting that already occurred in the specified date range.<br>`pastOne` - Past meetings that were attended by only one user. <br>`live` - Live meetings.<br><br>  If you do not provide this field, the default value will be `live` and thus, the API will only query responses for live meetings.
 $page_size = 30; // int | The number of records returned within a single API call.
-$next_page_token = "next_page_token_example"; // string | The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
+$next_page_token = 'next_page_token_example'; // string | The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
 
 try {
     $result = $apiInstance->dashboardMeetings($from, $to, $type, $page_size, $next_page_token);
@@ -701,11 +794,12 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **from** | **\DateTime**| Start date in &#39;yyyy-mm-dd&#39; format. The date range defined by the \&quot;from\&quot; and \&quot;to\&quot; parameters should only be one month as the report includes only one month worth of data at once. |
  **to** | **\DateTime**| End date. |
- **type** | **string**| Specify a value to get the response for the corresponding meeting type. The value of this field can be one of the following:&lt;br&gt; &lt;br&gt;&#x60;past&#x60; - Meeting that already occurred in the specified date range.&lt;br&gt;&#x60;pastOne&#x60; - Past meetings that were attended by only one user. &lt;br&gt;&#x60;live&#x60; - Live meetings.&lt;br&gt;&lt;br&gt;  If you do not provide this field, the default value will be &#x60;live&#x60; and thus, the API will only query responses for live meetings. | [optional] [default to live]
+ **type** | **string**| Specify a value to get the response for the corresponding meeting type. The value of this field can be one of the following:&lt;br&gt; &lt;br&gt;&#x60;past&#x60; - Meeting that already occurred in the specified date range.&lt;br&gt;&#x60;pastOne&#x60; - Past meetings that were attended by only one user. &lt;br&gt;&#x60;live&#x60; - Live meetings.&lt;br&gt;&lt;br&gt;  If you do not provide this field, the default value will be &#x60;live&#x60; and thus, the API will only query responses for live meetings. | [optional] [default to &#39;live&#39;]
  **page_size** | **int**| The number of records returned within a single API call. | [optional] [default to 30]
  **next_page_token** | **string**| The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. | [optional]
 
@@ -719,12 +813,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **dashboardWebinarDetail**
+
+## dashboardWebinarDetail
+
 > \Zoom\Api\Model\WebinarMetrics dashboardWebinarDetail($webinar_id, $type)
 
 Get Webinar Details
@@ -732,12 +830,15 @@ Get Webinar Details
 Retrieve details from live or past webinars.<br><br> **Scopes:** `dashboard:read:admin`<br>  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`<br> **Prerequisites:**<br> * Business, Education or API Plan with Webinar add-on.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\DashboardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -745,8 +846,8 @@ $apiInstance = new Zoom\Api\Api\DashboardsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$webinar_id = "webinar_id_example"; // string | The webinar ID or webinar UUID. If given the webinar ID it will take the last webinar instance.
-$type = "live"; // string | The webinar type.
+$webinar_id = 'webinar_id_example'; // string | The webinar ID or webinar UUID. If given the webinar ID it will take the last webinar instance.
+$type = 'live'; // string | The webinar type.
 
 try {
     $result = $apiInstance->dashboardWebinarDetail($webinar_id, $type);
@@ -759,10 +860,11 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **webinar_id** | **string**| The webinar ID or webinar UUID. If given the webinar ID it will take the last webinar instance. |
- **type** | **string**| The webinar type. | [optional] [default to live]
+ **type** | **string**| The webinar type. | [optional] [default to &#39;live&#39;]
 
 ### Return type
 
@@ -774,12 +876,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **dashboardWebinarParticipantQOS**
+
+## dashboardWebinarParticipantQOS
+
 > \Zoom\Api\Model\ParticipantQOS dashboardWebinarParticipantQOS($webinar_id, $participant_id, $type)
 
 Get Webinar Participant QOS
@@ -787,12 +893,15 @@ Get Webinar Participant QOS
 Retrieve details on the quality of service that participants from live or past webinars recieved.<br>This data indicates the connection quality for sending/receiving video, audio, and shared content. If nothing is being sent or received at that time, no information will be shown in the fields.<br> **Scopes:** `dashboard:read:admin`<br>  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy` <br> **Prerequisites:** <br> * Business, Education or API Plan with Zoom Rooms set up.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\DashboardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -800,9 +909,9 @@ $apiInstance = new Zoom\Api\Api\DashboardsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$webinar_id = "webinar_id_example"; // string | The webinar ID or webinar UUID. If given the webinar ID it will take the last webinar instance.
-$participant_id = "participant_id_example"; // string | Participant ID.
-$type = "live"; // string | The webinar type.
+$webinar_id = 'webinar_id_example'; // string | The webinar ID or webinar UUID. If given the webinar ID it will take the last webinar instance.
+$participant_id = 'participant_id_example'; // string | Participant ID.
+$type = 'live'; // string | The webinar type.
 
 try {
     $result = $apiInstance->dashboardWebinarParticipantQOS($webinar_id, $participant_id, $type);
@@ -815,11 +924,12 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **webinar_id** | **string**| The webinar ID or webinar UUID. If given the webinar ID it will take the last webinar instance. |
  **participant_id** | **string**| Participant ID. |
- **type** | **string**| The webinar type. | [optional] [default to live]
+ **type** | **string**| The webinar type. | [optional] [default to &#39;live&#39;]
 
 ### Return type
 
@@ -831,12 +941,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **dashboardWebinarParticipantShare**
+
+## dashboardWebinarParticipantShare
+
 > \Zoom\Api\Model\InlineResponse20028 dashboardWebinarParticipantShare($webinar_id, $type, $page_size, $next_page_token)
 
 Get Sharing/Recording Details of Webinar Participants
@@ -844,12 +958,15 @@ Get Sharing/Recording Details of Webinar Participants
 Retrieve the sharing and recording details of participants from live or past webinars. <br><br> **Scopes:** `dashboard:read:admin`<br>  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy` <br> **Prerequisites:**<br> * Business, Education or API Plan with Webinar add-on.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\DashboardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -857,10 +974,10 @@ $apiInstance = new Zoom\Api\Api\DashboardsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$webinar_id = "webinar_id_example"; // string | The webinar ID or webinar UUID. If given the webinar ID it will take the last webinar instance.
-$type = "live"; // string | The webinar type.
+$webinar_id = 'webinar_id_example'; // string | The webinar ID or webinar UUID. If given the webinar ID it will take the last webinar instance.
+$type = 'live'; // string | The webinar type.
 $page_size = 30; // int | The number of records returned within a single API call.
-$next_page_token = "next_page_token_example"; // string | The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceed the current page size. The expiration period for this token is 15 minutes.
+$next_page_token = 'next_page_token_example'; // string | The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceed the current page size. The expiration period for this token is 15 minutes.
 
 try {
     $result = $apiInstance->dashboardWebinarParticipantShare($webinar_id, $type, $page_size, $next_page_token);
@@ -873,10 +990,11 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **webinar_id** | **string**| The webinar ID or webinar UUID. If given the webinar ID it will take the last webinar instance. |
- **type** | **string**| The webinar type. | [optional] [default to live]
+ **type** | **string**| The webinar type. | [optional] [default to &#39;live&#39;]
  **page_size** | **int**| The number of records returned within a single API call. | [optional] [default to 30]
  **next_page_token** | **string**| The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceed the current page size. The expiration period for this token is 15 minutes. | [optional]
 
@@ -890,12 +1008,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **dashboardWebinarParticipants**
+
+## dashboardWebinarParticipants
+
 > \Zoom\Api\Model\InlineResponse20030 dashboardWebinarParticipants($webinar_id, $type, $page_size, $next_page_token)
 
 Get Webinar Participants
@@ -903,12 +1025,15 @@ Get Webinar Participants
 Retrieve details on participants from live or past webinars.<br><br> **Scopes:** `dashboard:read:admin`<br>  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`<br> **Prerequisites:**<br> * Business, Education or API Plan with Webinar add-on.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\DashboardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -916,10 +1041,10 @@ $apiInstance = new Zoom\Api\Api\DashboardsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$webinar_id = "webinar_id_example"; // string | The webinar ID or webinar UUID. If given the webinar ID it will take the last webinar instance.
-$type = "live"; // string | The webinar type.
+$webinar_id = 'webinar_id_example'; // string | The webinar ID or webinar UUID. If given the webinar ID it will take the last webinar instance.
+$type = 'live'; // string | The webinar type.
 $page_size = 30; // int | The number of records returned within a single API call.
-$next_page_token = "next_page_token_example"; // string | The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
+$next_page_token = 'next_page_token_example'; // string | The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
 
 try {
     $result = $apiInstance->dashboardWebinarParticipants($webinar_id, $type, $page_size, $next_page_token);
@@ -932,10 +1057,11 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **webinar_id** | **string**| The webinar ID or webinar UUID. If given the webinar ID it will take the last webinar instance. |
- **type** | **string**| The webinar type. | [optional] [default to live]
+ **type** | **string**| The webinar type. | [optional] [default to &#39;live&#39;]
  **page_size** | **int**| The number of records returned within a single API call. | [optional] [default to 30]
  **next_page_token** | **string**| The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. | [optional]
 
@@ -949,12 +1075,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **dashboardWebinarParticipantsQOS**
+
+## dashboardWebinarParticipantsQOS
+
 > \Zoom\Api\Model\ParticipantQOSList dashboardWebinarParticipantsQOS($webinar_id, $type, $page_size, $next_page_token)
 
 List Webinar Participant QOS
@@ -962,12 +1092,15 @@ List Webinar Participant QOS
 Retrieve a list of participants from live or past webinars and the quality of service they received.<br>This data indicates the connection quality for sending/receiving video, audio, and shared content. If nothing is being sent or received at that time, no information will be shown in the fields.<br> **Scopes:** `dashboard:read:admin`<br>   **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`<br> **Prerequisites:** * Business, Education or API Plan with Webinar add-on.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\DashboardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -975,10 +1108,10 @@ $apiInstance = new Zoom\Api\Api\DashboardsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$webinar_id = "webinar_id_example"; // string | The webinar ID or webinar UUID. If given the webinar ID it will take the last webinar instance.
-$type = "live"; // string | The webinar type.
+$webinar_id = 'webinar_id_example'; // string | The webinar ID or webinar UUID. If given the webinar ID it will take the last webinar instance.
+$type = 'live'; // string | The webinar type.
 $page_size = 1; // int | The number of items returned per page.
-$next_page_token = "next_page_token_example"; // string | The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
+$next_page_token = 'next_page_token_example'; // string | The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
 
 try {
     $result = $apiInstance->dashboardWebinarParticipantsQOS($webinar_id, $type, $page_size, $next_page_token);
@@ -991,10 +1124,11 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **webinar_id** | **string**| The webinar ID or webinar UUID. If given the webinar ID it will take the last webinar instance. |
- **type** | **string**| The webinar type. | [optional] [default to live]
+ **type** | **string**| The webinar type. | [optional] [default to &#39;live&#39;]
  **page_size** | **int**| The number of items returned per page. | [optional] [default to 1]
  **next_page_token** | **string**| The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. | [optional]
 
@@ -1008,12 +1142,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **dashboardWebinars**
+
+## dashboardWebinars
+
 > \Zoom\Api\Model\InlineResponse20029 dashboardWebinars($from, $to, $type, $page_size, $next_page_token)
 
 List Webinars
@@ -1021,12 +1159,15 @@ List Webinars
 List all the live or past webinars from a specified period of time. <br><br> **Scopes:** `dashboard:read:admin`<br> **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Resource-intensive`<br> **Prerequisites:**<br> * Business, Education or API Plan with Webinar add-on.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\DashboardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -1034,11 +1175,11 @@ $apiInstance = new Zoom\Api\Api\DashboardsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$from = new \DateTime("2013-10-20"); // \DateTime | Start date in 'yyyy-mm-dd' format. The date range defined by the \"from\" and \"to\" parameters should only be one month as the report includes only one month worth of data at once.
-$to = new \DateTime("2013-10-20"); // \DateTime | End date.
-$type = "live"; // string | The webinar type.
+$from = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Start date in 'yyyy-mm-dd' format. The date range defined by the \"from\" and \"to\" parameters should only be one month as the report includes only one month worth of data at once.
+$to = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | End date.
+$type = 'live'; // string | The webinar type.
 $page_size = 30; // int | The number of records returned within a single API call.
-$next_page_token = "next_page_token_example"; // string | The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
+$next_page_token = 'next_page_token_example'; // string | The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
 
 try {
     $result = $apiInstance->dashboardWebinars($from, $to, $type, $page_size, $next_page_token);
@@ -1051,11 +1192,12 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **from** | **\DateTime**| Start date in &#39;yyyy-mm-dd&#39; format. The date range defined by the \&quot;from\&quot; and \&quot;to\&quot; parameters should only be one month as the report includes only one month worth of data at once. |
  **to** | **\DateTime**| End date. |
- **type** | **string**| The webinar type. | [optional] [default to live]
+ **type** | **string**| The webinar type. | [optional] [default to &#39;live&#39;]
  **page_size** | **int**| The number of records returned within a single API call. | [optional] [default to 30]
  **next_page_token** | **string**| The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. | [optional]
 
@@ -1069,12 +1211,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **dashboardZoomRoom**
+
+## dashboardZoomRoom
+
 > object dashboardZoomRoom($zoomroom_id, $from, $to, $page_size, $next_page_token)
 
 Get Zoom Rooms Details
@@ -1082,12 +1228,15 @@ Get Zoom Rooms Details
 The Zoom Rooms dashboard metrics lets you know the type of configuration a Zoom room has and details on the meetings held in that room.   Use this API to retrieve information on a specific room.<br><br> **Scopes:** `dashboard_zr:read:admin`<br> <br>   **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`**Prerequisites:**<br> * Business, Education or API Plan with Zoom Rooms set up.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\DashboardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -1095,11 +1244,11 @@ $apiInstance = new Zoom\Api\Api\DashboardsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$zoomroom_id = "zoomroom_id_example"; // string | The Zoom room ID.
-$from = new \DateTime("2013-10-20"); // \DateTime | Start date in 'yyyy-mm-dd' format. The date range defined by the \"from\" and \"to\" parameters should only be one month as the report includes only one month worth of data at once.
-$to = new \DateTime("2013-10-20"); // \DateTime | End date.
+$zoomroom_id = 'zoomroom_id_example'; // string | The Zoom room ID.
+$from = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Start date in 'yyyy-mm-dd' format. The date range defined by the \"from\" and \"to\" parameters should only be one month as the report includes only one month worth of data at once.
+$to = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | End date.
 $page_size = 30; // int | The number of records returned within a single API call.
-$next_page_token = "next_page_token_example"; // string | The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
+$next_page_token = 'next_page_token_example'; // string | The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
 
 try {
     $result = $apiInstance->dashboardZoomRoom($zoomroom_id, $from, $to, $page_size, $next_page_token);
@@ -1111,6 +1260,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -1130,12 +1280,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **dashboardZoomRoomIssue**
+
+## dashboardZoomRoomIssue
+
 > object dashboardZoomRoomIssue($from, $to)
 
 Get Top 25 issues of Zoom Rooms
@@ -1143,12 +1297,15 @@ Get Top 25 issues of Zoom Rooms
 Get Top 25 issues of Zoom Rooms.<br> **Scopes:** `dashboard_zr:read:admin`<br>   **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`<br>  **Prerequisites:**<br> * Business, Education or API Plan with Zoom Rooms set up.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\DashboardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -1156,8 +1313,8 @@ $apiInstance = new Zoom\Api\Api\DashboardsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$from = new \DateTime("2013-10-20"); // \DateTime | Start date in 'yyyy-mm-dd' format. The date range defined by the \"from\" and \"to\" parameters should only be one month as the report includes only one month worth of data at once.
-$to = new \DateTime("2013-10-20"); // \DateTime | End date.
+$from = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Start date in 'yyyy-mm-dd' format. The date range defined by the \"from\" and \"to\" parameters should only be one month as the report includes only one month worth of data at once.
+$to = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | End date.
 
 try {
     $result = $apiInstance->dashboardZoomRoomIssue($from, $to);
@@ -1169,6 +1326,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -1185,12 +1343,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **dashboardZoomRooms**
+
+## dashboardZoomRooms
+
 > \Zoom\Api\Model\ZoomRoomList dashboardZoomRooms($page_size, $page_number)
 
 List Zoom Rooms
@@ -1198,12 +1360,15 @@ List Zoom Rooms
 List information on all Zoom Rooms in an account.<br><br> **Scopes:** `dashboard_zr:read:admin`   **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Resource-intensive`<br>  **Prerequisites:**<br> * Business, Education or API Plan with Zoom Rooms set up.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\DashboardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -1225,6 +1390,7 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page_size** | **int**| The number of records returned within a single API call. | [optional] [default to 30]
@@ -1240,12 +1406,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **listMeetingSatisfaction**
+
+## listMeetingSatisfaction
+
 > \Zoom\Api\Model\InlineResponse20087 listMeetingSatisfaction($from, $to)
 
 List Client Meeting Satisfaction
@@ -1253,12 +1423,15 @@ List Client Meeting Satisfaction
 If the [End of Meeting Feedback Survey](https://support.zoom.us/hc/en-us/articles/115005855266) option is enabled, attendees will be prompted with a survey window where they can tap either the **Thumbs Up** or **Thumbs Down** button that indicates their Zoom meeting experience. With this API, you can get information on the attendees' meeting satisfaction. Specify a monthly date range for the query using the from and to query parameters. The month should fall within the last six months.  To get information on the survey results with negative experiences (indicated by **Thumbs Down**), use the [Get Zoom Meetings Client Feedback API](https://marketplace.zoom.us/docs/api-reference/zoom-api/dashboards/dashboardclientfeedbackdetail).<br> **Scopes:** `dashboard:read:admin`<br>  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\DashboardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -1266,8 +1439,8 @@ $apiInstance = new Zoom\Api\Api\DashboardsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$from = new \DateTime("2013-10-20"); // \DateTime | The start date for the query in “yyyy-mm-dd” format.
-$to = new \DateTime("2013-10-20"); // \DateTime | The end date for the query in “yyyy-mm-dd” format.
+$from = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The start date for the query in “yyyy-mm-dd” format.
+$to = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The end date for the query in “yyyy-mm-dd” format.
 
 try {
     $result = $apiInstance->listMeetingSatisfaction($from, $to);
@@ -1279,6 +1452,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -1295,8 +1469,10 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 

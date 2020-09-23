@@ -34,7 +34,9 @@ Method | HTTP request | Description
 [**webinars**](WebinarsApi.md#webinars) | **GET** /users/{userId}/webinars | List Webinars
 
 
-# **getTrackingSources**
+
+## getTrackingSources
+
 > \Zoom\Api\Model\InlineResponse20074 getTrackingSources($webinar_id)
 
 Get Webinar Tracking Sources
@@ -42,12 +44,15 @@ Get Webinar Tracking Sources
 [Webinar Registration Tracking Sources](https://support.zoom.us/hc/en-us/articles/360000315683-Webinar-Registration-Source-Tracking) allow you to see where your registrants are coming from if you share the webinar registration page in multiple platforms. You can then use the source tracking to see the number of registrants generated from each platform.<br> Use this API to list information on all the tracking sources of a Webinar.<br> **Scopes:** `webinar:read:admin`, `webinar:read`<br>    **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`<br> **Prerequisites**:<br> * [Webinar license](https://zoom.us/webinar). * Registration must be required for the Webinar.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -55,7 +60,7 @@ $apiInstance = new Zoom\Api\Api\WebinarsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$webinar_id = 789; // int | The webinar ID in \"**long**\" format(represented as int64 data type in JSON).
+$webinar_id = 56; // int | The webinar ID in \"**long**\" format(represented as int64 data type in JSON).
 
 try {
     $result = $apiInstance->getTrackingSources($webinar_id);
@@ -67,6 +72,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -82,12 +88,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **listPastWebinarFiles**
+
+## listPastWebinarFiles
+
 > \Zoom\Api\Model\InlineResponse20084 listPastWebinarFiles($webinar_id)
 
 List Past Webinar Files
@@ -95,12 +105,15 @@ List Past Webinar Files
 List files sent via in-meeting chat during a meeting. The in-meeting files are deleted after 24 hours of the meeting completion time.  <br><br> **Scope:** `webinar:read`, `webinar:read:admin`<br>   **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`<br>
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -108,7 +121,7 @@ $apiInstance = new Zoom\Api\Api\WebinarsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$webinar_id = "webinar_id_example"; // string | 
+$webinar_id = 'webinar_id_example'; // string | 
 
 try {
     $result = $apiInstance->listPastWebinarFiles($webinar_id);
@@ -120,6 +133,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -135,12 +149,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **listPastWebinarPollResults**
+
+## listPastWebinarPollResults
+
 > \Zoom\Api\Model\InlineResponse20085 listPastWebinarPollResults($webinar_id)
 
 List Past Webinar Poll Results
@@ -148,12 +166,15 @@ List Past Webinar Poll Results
 The polling feature for webinar allows you to create single choice or multiple choice polling questions for your webinars. Use this API to retrieve the results for Webinar Polls of a specific Webinar.  **Prerequisites:**<br> * [Webinar license](https://zoom.us/webinar)<br> **Scopes**: `webinar:read:admin`, `webinar:read`<br> **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -161,7 +182,7 @@ $apiInstance = new Zoom\Api\Api\WebinarsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$webinar_id = "webinar_id_example"; // string | The Webinar ID or Webinar UUID. If the webinar ID is passed, it will take the last webinar instance.
+$webinar_id = 'webinar_id_example'; // string | The Webinar ID or Webinar UUID. If the webinar ID is passed, it will take the last webinar instance.
 
 try {
     $result = $apiInstance->listPastWebinarPollResults($webinar_id);
@@ -173,6 +194,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -188,12 +210,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **listPastWebinarQA**
+
+## listPastWebinarQA
+
 > \Zoom\Api\Model\InlineResponse20086 listPastWebinarQA($webinar_id)
 
 List Q&A of Past Webinar
@@ -201,12 +227,15 @@ List Q&A of Past Webinar
 The [Question & Answer (Q&A)](https://support.zoom.us/hc/en-us/articles/203686015-Getting-Started-with-Question-Answer) feature for Webinars allows attendees to ask questions during the Webinar and for the panelists, co-hosts and host to answer their questions.<br> Use this API to list Q&A of a specific Webinar.  **Prerequisites:**<br> * [Webinar license](https://zoom.us/webinar)<br> **Scopes**: `webinar:read:admin`, `webinar:read`<br>  <br>    **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -214,7 +243,7 @@ $apiInstance = new Zoom\Api\Api\WebinarsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$webinar_id = "webinar_id_example"; // string | The Webinar ID or Webinar UUID. If the webinar ID is passed, it will take the last webinar instance.
+$webinar_id = 'webinar_id_example'; // string | The Webinar ID or Webinar UUID. If the webinar ID is passed, it will take the last webinar instance.
 
 try {
     $result = $apiInstance->listPastWebinarQA($webinar_id);
@@ -226,6 +255,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -241,12 +271,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **listWebinarTemplates**
+
+## listWebinarTemplates
+
 > \Zoom\Api\Model\InlineResponse200105 listWebinarTemplates($user_id)
 
 List Webinar Templates
@@ -254,12 +288,15 @@ List Webinar Templates
 When you schedule a webinar, you can save the settings for that webinar as a template for scheduling future webinars. <br><br>Use this API to list a user's existing [Webinar templates'](https://support.zoom.us/hc/en-us/articles/115001079746-Webinar-Templates) information.  **Prerequisites:** * Pro or a higher account with Webinar plan enabled.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -267,7 +304,7 @@ $apiInstance = new Zoom\Api\Api\WebinarsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = "user_id_example"; // string | 
+$user_id = 'user_id_example'; // string | 
 
 try {
     $result = $apiInstance->listWebinarTemplates($user_id);
@@ -279,6 +316,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -294,12 +332,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **pastWebinars**
+
+## pastWebinars
+
 > object pastWebinars($webinar_id)
 
 List Past Webinar Instances
@@ -307,12 +349,15 @@ List Past Webinar Instances
 List past webinar instances.<br><br> **Scopes:** `webinar:read:admin` `webinar:read`<br>   **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -320,7 +365,7 @@ $apiInstance = new Zoom\Api\Api\WebinarsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$webinar_id = 789; // int | The webinar ID in \"**long**\" format(represented as int64 data type in JSON).
+$webinar_id = 56; // int | The webinar ID in \"**long**\" format(represented as int64 data type in JSON).
 
 try {
     $result = $apiInstance->pastWebinars($webinar_id);
@@ -332,6 +377,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -347,12 +393,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **webinar**
+
+## webinar
+
 > \Zoom\Api\Model\InlineResponse20054 webinar($webinar_id, $occurrence_id, $show_previous_occurrences)
 
 Get a Webinar
@@ -360,12 +410,15 @@ Get a Webinar
 Zoom users with a [Webinar Plan](https://zoom.us/webinar) have access to creating and managing Webinars. Webinar allows a host to broadcast a Zoom meeting to up to 10,000 attendees.<br>Use this API to get details of a scheduled webinar.<br><br> **Scopes:** `webinar:read:admin` `webinar:read`<br>   **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>**Prerequisites:** * Pro or higher plan with a Webinar Add-on.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -373,9 +426,9 @@ $apiInstance = new Zoom\Api\Api\WebinarsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$webinar_id = 789; // int | The webinar ID in \"**long**\" format(represented as int64 data type in JSON).
-$occurrence_id = "occurrence_id_example"; // string | Unique Identifier that identifies an occurrence of a recurring webinar. [Recurring webinars](https://support.zoom.us/hc/en-us/articles/216354763-How-to-Schedule-A-Recurring-Webinar) can have a maximum of 50 occurrences. When you create a recurring Webinar using [Create a Webinar API](https://marketplace.zoom.us/docs/api-reference/zoom-api/webinars/webinarcreate), you can retrieve the Occurrence ID from the response of the API call.
-$show_previous_occurrences = true; // bool | Set the value of this field to `true` if you would like to view Webinar details of all previous occurrences of a recurring Webinar.
+$webinar_id = 56; // int | The webinar ID in \"**long**\" format(represented as int64 data type in JSON).
+$occurrence_id = 'occurrence_id_example'; // string | Unique Identifier that identifies an occurrence of a recurring webinar. [Recurring webinars](https://support.zoom.us/hc/en-us/articles/216354763-How-to-Schedule-A-Recurring-Webinar) can have a maximum of 50 occurrences. When you create a recurring Webinar using [Create a Webinar API](https://marketplace.zoom.us/docs/api-reference/zoom-api/webinars/webinarcreate), you can retrieve the Occurrence ID from the response of the API call.
+$show_previous_occurrences = True; // bool | Set the value of this field to `true` if you would like to view Webinar details of all previous occurrences of a recurring Webinar.
 
 try {
     $result = $apiInstance->webinar($webinar_id, $occurrence_id, $show_previous_occurrences);
@@ -387,6 +440,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -404,12 +458,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **webinarAbsentees**
+
+## webinarAbsentees
+
 > \Zoom\Api\Model\RegistrationList webinarAbsentees($webinar_uuid, $occurrence_id, $page_size, $next_page_token)
 
 Get Webinar Absentees
@@ -417,12 +475,15 @@ Get Webinar Absentees
 List absentees of a webinar.<br><br> **Scopes:** `webinar:read:admin` `webinar:read`<br>  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -430,10 +491,10 @@ $apiInstance = new Zoom\Api\Api\WebinarsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$webinar_uuid = "webinar_uuid_example"; // string | The Webinar UUID. Each Webinar instance will generate its own Webinar UUID (i.e., after a Webinar ends, a new UUID will be generated for the next instance of the Webinar). Please double encode your UUID when using it for API calls if the UUID begins with a '/' or contains '//' in it.
-$occurrence_id = "occurrence_id_example"; // string | The meeting occurrence ID.
+$webinar_uuid = 'webinar_uuid_example'; // string | The Webinar UUID. Each Webinar instance will generate its own Webinar UUID (i.e., after a Webinar ends, a new UUID will be generated for the next instance of the Webinar). Please double encode your UUID when using it for API calls if the UUID begins with a '/' or contains '//' in it.
+$occurrence_id = 'occurrence_id_example'; // string | The meeting occurrence ID.
 $page_size = 30; // int | The number of records returned within a single API call.
-$next_page_token = "next_page_token_example"; // string | The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
+$next_page_token = 'next_page_token_example'; // string | The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
 
 try {
     $result = $apiInstance->webinarAbsentees($webinar_uuid, $occurrence_id, $page_size, $next_page_token);
@@ -445,6 +506,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -463,12 +525,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **webinarCreate**
+
+## webinarCreate
+
 > \Zoom\Api\Model\InlineResponse20119 webinarCreate($user_id, $body)
 
 Create a Webinar
@@ -476,12 +542,15 @@ Create a Webinar
 Zoom users with a [Webinar Plan](https://zoom.us/webinar) have access to creating and managing Webinars. Webinar allows a host to broadcast a Zoom meeting to up to 10,000 attendees.<br>Use this API to schedule a Webinar for a user (host).<br><br>  **Scopes:** `webinar:write:admin` `webinar:write`<br>    **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br> **Prerequisites:** * Pro or higher plan with a Webinar Add-on.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -489,8 +558,8 @@ $apiInstance = new Zoom\Api\Api\WebinarsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = "user_id_example"; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
-$body = new \stdClass; // object | 
+$user_id = 'user_id_example'; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+$body = new \Zoom\Api\Model\UNKNOWN_BASE_TYPE(); // \Zoom\Api\Model\UNKNOWN_BASE_TYPE | 
 
 try {
     $result = $apiInstance->webinarCreate($user_id, $body);
@@ -503,10 +572,11 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **string**| The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. |
- **body** | [**object**](../Model/.md)|  |
+ **body** | [**\Zoom\Api\Model\UNKNOWN_BASE_TYPE**](../Model/UNKNOWN_BASE_TYPE.md)|  |
 
 ### Return type
 
@@ -518,12 +588,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: application/json, multipart/form-data
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **webinarDelete**
+
+## webinarDelete
+
 > webinarDelete($webinar_id, $occurrence_id)
 
 Delete a Webinar
@@ -531,12 +605,15 @@ Delete a Webinar
 Delete a Webinar.<br><br> **Scopes:** `webinar:write:admin` `webinar:write`<br>    **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br> **Prerequisites:**<br> * Pro or higher plan with a Webinar Add-on.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -544,8 +621,8 @@ $apiInstance = new Zoom\Api\Api\WebinarsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$webinar_id = 789; // int | The webinar ID in \"**long**\" format(represented as int64 data type in JSON).
-$occurrence_id = "occurrence_id_example"; // string | The meeting occurrence ID.
+$webinar_id = 56; // int | The webinar ID in \"**long**\" format(represented as int64 data type in JSON).
+$occurrence_id = 'occurrence_id_example'; // string | The meeting occurrence ID.
 
 try {
     $apiInstance->webinarDelete($webinar_id, $occurrence_id);
@@ -556,6 +633,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -572,12 +650,16 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **webinarPanelistCreate**
+
+## webinarPanelistCreate
+
 > webinarPanelistCreate($webinar_id, $body)
 
 Add Panelists
@@ -585,12 +667,15 @@ Add Panelists
 Panelists in a Webinar can view and send video, screen share, annotate, etc and do much more compared to attendees in a webinar.<br>Use this API to [add panelists](https://support.zoom.us/hc/en-us/articles/115005657826-Inviting-Panelists-to-a-Webinar#h_7550d59e-23f5-4703-9e22-e76bded1ed70) to a scheduled webinar.<br><br> **Scopes:** `webinar:write:admin` `webinar:write`<br>   **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`<br>   **Prerequisites:** * Pro or a higher plan with [Webinar Add-on](https://zoom.us/webinar).<br>
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -598,8 +683,8 @@ $apiInstance = new Zoom\Api\Api\WebinarsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$webinar_id = 789; // int | The webinar ID in \"**long**\" format(represented as int64 data type in JSON).
-$body = new \Zoom\Api\Model\Body38(); // \Zoom\Api\Model\Body38 | 
+$webinar_id = 56; // int | The webinar ID in \"**long**\" format(represented as int64 data type in JSON).
+$body = new \Zoom\Api\Model\InlineObject38(); // \Zoom\Api\Model\InlineObject38 | 
 
 try {
     $apiInstance->webinarPanelistCreate($webinar_id, $body);
@@ -611,10 +696,11 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **webinar_id** | **int**| The webinar ID in \&quot;**long**\&quot; format(represented as int64 data type in JSON). |
- **body** | [**\Zoom\Api\Model\Body38**](../Model/Body38.md)|  |
+ **body** | [**\Zoom\Api\Model\InlineObject38**](../Model/InlineObject38.md)|  |
 
 ### Return type
 
@@ -626,12 +712,16 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: application/json, multipart/form-data
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **webinarPanelistDelete**
+
+## webinarPanelistDelete
+
 > webinarPanelistDelete($webinar_id, $panelist_id)
 
 Remove a Panelist
@@ -639,12 +729,15 @@ Remove a Panelist
 [Remove](https://support.zoom.us/hc/en-us/articles/115005657826-Inviting-Panelists-to-a-Webinar#h_de31f237-a91c-4fb2-912b-ecfba8ec5ffb) a single panelist from a webinar.<br> You can retrieve the `panelistId` by calling **List Panelists API**.<br><br> **Scopes:** `webinar:write:admin` `webinar:write`<br>    **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>   **Prerequisites:**<br> * Pro or a higher plan with [Webinar Add-on](https://zoom.us/webinar).<br>
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -652,7 +745,7 @@ $apiInstance = new Zoom\Api\Api\WebinarsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$webinar_id = 789; // int | The webinar ID in \"**long**\" format(represented as int64 data type in JSON).
+$webinar_id = 56; // int | The webinar ID in \"**long**\" format(represented as int64 data type in JSON).
 $panelist_id = 56; // int | The panelist ID or panelist email.
 
 try {
@@ -664,6 +757,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -680,12 +774,16 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **webinarPanelists**
+
+## webinarPanelists
+
 > \Zoom\Api\Model\InlineResponse20055 webinarPanelists($webinar_id)
 
 List Panelists
@@ -693,12 +791,15 @@ List Panelists
 Panelists in a Webinar can view and send video, screen share, annotate, etc and do much more compared to attendees in a Webinar.   Use this API to list all the panelists of a Webinar.<br><br> **Scopes:** `webinar:read:admin` `webinar:read`<br>    **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`<br> **Prerequisites:**<br> * Pro or a higher plan with [Webinar Add-on](https://zoom.us/webinar).<br>
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -706,7 +807,7 @@ $apiInstance = new Zoom\Api\Api\WebinarsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$webinar_id = 789; // int | The webinar ID in \"**long**\" format(represented as int64 data type in JSON).
+$webinar_id = 56; // int | The webinar ID in \"**long**\" format(represented as int64 data type in JSON).
 
 try {
     $result = $apiInstance->webinarPanelists($webinar_id);
@@ -718,6 +819,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -733,12 +835,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **webinarPanelistsDelete**
+
+## webinarPanelistsDelete
+
 > webinarPanelistsDelete($webinar_id)
 
 Remove Panelists
@@ -746,12 +852,15 @@ Remove Panelists
 Remove all the panelists from a Webinar.<br> **Scopes:** `webinar:write:admin` `webinar:write`<br>    **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br> **Prerequisites:**<br> * Pro or a higher plan with [Webinar Add-on](https://zoom.us/webinar).<br>
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -759,7 +868,7 @@ $apiInstance = new Zoom\Api\Api\WebinarsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$webinar_id = 789; // int | The webinar ID in \"**long**\" format(represented as int64 data type in JSON).
+$webinar_id = 56; // int | The webinar ID in \"**long**\" format(represented as int64 data type in JSON).
 
 try {
     $apiInstance->webinarPanelistsDelete($webinar_id);
@@ -770,6 +879,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -785,12 +895,16 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **webinarPollCreate**
+
+## webinarPollCreate
+
 > \Zoom\Api\Model\InlineResponse20122 webinarPollCreate($webinar_id, $body)
 
 Create a Webinar's Poll
@@ -798,12 +912,15 @@ Create a Webinar's Poll
 Create a [poll](https://support.zoom.us/hc/en-us/articles/203749865-Polling-for-Webinars) for a webinar.<br><br> **Scopes:** `webinar:write:admin` `webinar:write`<br>    **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -811,8 +928,8 @@ $apiInstance = new Zoom\Api\Api\WebinarsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$webinar_id = 789; // int | The webinar ID in \"**long**\" format(represented as int64 data type in JSON).
-$body = new \stdClass; // object | Webinar poll object
+$webinar_id = 56; // int | The webinar ID in \"**long**\" format(represented as int64 data type in JSON).
+$body = new \Zoom\Api\Model\UNKNOWN_BASE_TYPE(); // \Zoom\Api\Model\UNKNOWN_BASE_TYPE | Webinar poll object
 
 try {
     $result = $apiInstance->webinarPollCreate($webinar_id, $body);
@@ -825,10 +942,11 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **webinar_id** | **int**| The webinar ID in \&quot;**long**\&quot; format(represented as int64 data type in JSON). |
- **body** | [**object**](../Model/.md)| Webinar poll object |
+ **body** | [**\Zoom\Api\Model\UNKNOWN_BASE_TYPE**](../Model/UNKNOWN_BASE_TYPE.md)| Webinar poll object |
 
 ### Return type
 
@@ -840,12 +958,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: application/json, multipart/form-data
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **webinarPollDelete**
+
+## webinarPollDelete
+
 > webinarPollDelete($webinar_id, $poll_id)
 
 Delete a Webinar Poll
@@ -853,12 +975,15 @@ Delete a Webinar Poll
 Delete a webinar's [poll](https://support.zoom.us/hc/en-us/articles/203749865-Polling-for-Webinars).<br><br> **Scopes:** `webinar:write:admin` `webinar:write`<br>    **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -866,8 +991,8 @@ $apiInstance = new Zoom\Api\Api\WebinarsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$webinar_id = 789; // int | The webinar ID in \"**long**\" format(represented as int64 data type in JSON).
-$poll_id = "poll_id_example"; // string | The poll ID
+$webinar_id = 56; // int | The webinar ID in \"**long**\" format(represented as int64 data type in JSON).
+$poll_id = 'poll_id_example'; // string | The poll ID
 
 try {
     $apiInstance->webinarPollDelete($webinar_id, $poll_id);
@@ -878,6 +1003,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -894,12 +1020,16 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **webinarPollGet**
+
+## webinarPollGet
+
 > \Zoom\Api\Model\InlineResponse20122 webinarPollGet($webinar_id, $poll_id)
 
 Get a Webinar Poll
@@ -907,12 +1037,15 @@ Get a Webinar Poll
 Get a webinar's [poll](https://support.zoom.us/hc/en-us/articles/203749865-Polling-for-Webinars) details.<br><br> **Scopes:** `webinar:read:admin` `webinar:read`<br>    **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -920,8 +1053,8 @@ $apiInstance = new Zoom\Api\Api\WebinarsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$webinar_id = 789; // int | The webinar ID in \"**long**\" format(represented as int64 data type in JSON).
-$poll_id = "poll_id_example"; // string | The poll ID
+$webinar_id = 56; // int | The webinar ID in \"**long**\" format(represented as int64 data type in JSON).
+$poll_id = 'poll_id_example'; // string | The poll ID
 
 try {
     $result = $apiInstance->webinarPollGet($webinar_id, $poll_id);
@@ -934,6 +1067,7 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **webinar_id** | **int**| The webinar ID in \&quot;**long**\&quot; format(represented as int64 data type in JSON). |
@@ -949,12 +1083,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **webinarPollUpdate**
+
+## webinarPollUpdate
+
 > webinarPollUpdate($webinar_id, $poll_id, $body)
 
 Update a Webinar Poll
@@ -962,12 +1100,15 @@ Update a Webinar Poll
 Update a webinar's [poll](https://support.zoom.us/hc/en-us/articles/203749865-Polling-for-Webinars).<br><br> **Scopes:** `webinar:write:admin` `webinar:write`<br>    **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -975,9 +1116,9 @@ $apiInstance = new Zoom\Api\Api\WebinarsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$webinar_id = 789; // int | The webinar ID in \"**long**\" format(represented as int64 data type in JSON).
-$poll_id = "poll_id_example"; // string | The poll ID
-$body = new \stdClass; // object | Webinar Poll
+$webinar_id = 56; // int | The webinar ID in \"**long**\" format(represented as int64 data type in JSON).
+$poll_id = 'poll_id_example'; // string | The poll ID
+$body = new \Zoom\Api\Model\UNKNOWN_BASE_TYPE(); // \Zoom\Api\Model\UNKNOWN_BASE_TYPE | Webinar Poll
 
 try {
     $apiInstance->webinarPollUpdate($webinar_id, $poll_id, $body);
@@ -989,11 +1130,12 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **webinar_id** | **int**| The webinar ID in \&quot;**long**\&quot; format(represented as int64 data type in JSON). |
  **poll_id** | **string**| The poll ID |
- **body** | [**object**](../Model/.md)| Webinar Poll |
+ **body** | [**\Zoom\Api\Model\UNKNOWN_BASE_TYPE**](../Model/UNKNOWN_BASE_TYPE.md)| Webinar Poll |
 
 ### Return type
 
@@ -1005,12 +1147,16 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: application/json, multipart/form-data
+- **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **webinarPolls**
+
+## webinarPolls
+
 > object webinarPolls($webinar_id)
 
 List a Webinar's Polls
@@ -1018,12 +1164,15 @@ List a Webinar's Polls
 List all the [polls](https://support.zoom.us/hc/en-us/articles/203749865-Polling-for-Webinars) of a Webinar.<br><br> **Scopes:** `webinar:read:admin` `webinar:read`<br>    **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -1031,7 +1180,7 @@ $apiInstance = new Zoom\Api\Api\WebinarsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$webinar_id = 789; // int | The webinar ID in \"**long**\" format(represented as int64 data type in JSON).
+$webinar_id = 56; // int | The webinar ID in \"**long**\" format(represented as int64 data type in JSON).
 
 try {
     $result = $apiInstance->webinarPolls($webinar_id);
@@ -1043,6 +1192,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -1058,12 +1208,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **webinarRegistrantCreate**
+
+## webinarRegistrantCreate
+
 > \Zoom\Api\Model\InlineResponse20121 webinarRegistrantCreate($webinar_id, $body, $occurrence_ids)
 
 Add a Webinar Registrant
@@ -1071,12 +1225,15 @@ Add a Webinar Registrant
 Zoom users with a [Webinar Plan](https://zoom.us/webinar) have access to creating and managing Webinars. Webinar allows a host to broadcast a Zoom meeting to up to 10,000 attendees. Scheduling a [Webinar with registration](https://support.zoom.us/hc/en-us/articles/204619915-Scheduling-a-Webinar-with-Registration) requires your registrants to complete a brief form before receiving the link to join the Webinar.<br>Use this API to create and submit the registration of a user for a webinar.<br><br> **Scopes:** `webinar:write:admin` `webinar:write`<br>    **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br> **Prerequisites:** * Pro or higher plan with a Webinar Add-on.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -1084,9 +1241,9 @@ $apiInstance = new Zoom\Api\Api\WebinarsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$webinar_id = 789; // int | The webinar ID in \"**long**\" format(represented as int64 data type in JSON).
-$body = new \stdClass; // object | 
-$occurrence_ids = "occurrence_ids_example"; // string | Occurrence ID. Get this value from the webinar get API. Multiple values separated by a comma.
+$webinar_id = 56; // int | The webinar ID in \"**long**\" format(represented as int64 data type in JSON).
+$body = new \Zoom\Api\Model\UNKNOWN_BASE_TYPE(); // \Zoom\Api\Model\UNKNOWN_BASE_TYPE | 
+$occurrence_ids = 'occurrence_ids_example'; // string | Occurrence ID. Get this value from the webinar get API. Multiple values separated by a comma.
 
 try {
     $result = $apiInstance->webinarRegistrantCreate($webinar_id, $body, $occurrence_ids);
@@ -1099,10 +1256,11 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **webinar_id** | **int**| The webinar ID in \&quot;**long**\&quot; format(represented as int64 data type in JSON). |
- **body** | [**object**](../Model/.md)|  |
+ **body** | [**\Zoom\Api\Model\UNKNOWN_BASE_TYPE**](../Model/UNKNOWN_BASE_TYPE.md)|  |
  **occurrence_ids** | **string**| Occurrence ID. Get this value from the webinar get API. Multiple values separated by a comma. | [optional]
 
 ### Return type
@@ -1115,12 +1273,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: application/json, multipart/form-data
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **webinarRegistrantGet**
+
+## webinarRegistrantGet
+
 > \Zoom\Api\Model\WebianrRegistrant webinarRegistrantGet($webinar_id, $registrant_id, $occurrence_id)
 
 Get a Webinar Registrant
@@ -1128,12 +1290,15 @@ Get a Webinar Registrant
 Zoom users with a [Webinar Plan](https://zoom.us/webinar) have access to creating and managing Webinars. Webinar allows a host to broadcast a Zoom meeting to up to 10,000 attendees. Scheduling a [Webinar with registration](https://support.zoom.us/hc/en-us/articles/204619915-Scheduling-a-Webinar-with-Registration) requires your registrants to complete a brief form before receiving the link to join the Webinar.<br>Use this API to get details on a specific user who has registered for the Webinar.<br><br> **Scopes:** `webinar:read:admin` `webinar:read`<br>    **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br> **Prerequisites:**<br> * The account must have a Webinar plan.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -1141,9 +1306,9 @@ $apiInstance = new Zoom\Api\Api\WebinarsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$webinar_id = 789; // int | The webinar ID in \"**long**\" format(represented as int64 data type in JSON).
-$registrant_id = "registrant_id_example"; // string | The registrant ID.
-$occurrence_id = "occurrence_id_example"; // string | The meeting occurrence ID.
+$webinar_id = 56; // int | The webinar ID in \"**long**\" format(represented as int64 data type in JSON).
+$registrant_id = 'registrant_id_example'; // string | The registrant ID.
+$occurrence_id = 'occurrence_id_example'; // string | The meeting occurrence ID.
 
 try {
     $result = $apiInstance->webinarRegistrantGet($webinar_id, $registrant_id, $occurrence_id);
@@ -1155,6 +1320,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -1172,12 +1338,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **webinarRegistrantQuestionUpdate**
+
+## webinarRegistrantQuestionUpdate
+
 > webinarRegistrantQuestionUpdate($webinar_id, $body)
 
 Update Registration Questions
@@ -1185,12 +1355,15 @@ Update Registration Questions
 Scheduling a [Webinar with registration](https://support.zoom.us/hc/en-us/articles/204619915-Scheduling-a-Webinar-with-Registration) requires your registrants to complete a brief form with fields and questions before they can receive the link to join the Webinar.<br>Use this API to update registration questions and fields of a scheduled Webinar that are to be answered by users while registering for a Webinar.<br><br> **Prerequisites:**<br>   * Pro or higher plan with a Webinar Add-on. * Registration option for Webinar should be set as required to use this API.  **Scopes:** `webinar:write:admin` `webinar:write`<br>    **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -1198,8 +1371,8 @@ $apiInstance = new Zoom\Api\Api\WebinarsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$webinar_id = 789; // int | The webinar ID in \"**long**\" format(represented as int64 data type in JSON).
-$body = new \stdClass; // object | Webinar Registrant Questions
+$webinar_id = 56; // int | The webinar ID in \"**long**\" format(represented as int64 data type in JSON).
+$body = new \Zoom\Api\Model\UNKNOWN_BASE_TYPE(); // \Zoom\Api\Model\UNKNOWN_BASE_TYPE | Webinar Registrant Questions
 
 try {
     $apiInstance->webinarRegistrantQuestionUpdate($webinar_id, $body);
@@ -1211,10 +1384,11 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **webinar_id** | **int**| The webinar ID in \&quot;**long**\&quot; format(represented as int64 data type in JSON). |
- **body** | [**object**](../Model/.md)| Webinar Registrant Questions |
+ **body** | [**\Zoom\Api\Model\UNKNOWN_BASE_TYPE**](../Model/UNKNOWN_BASE_TYPE.md)| Webinar Registrant Questions |
 
 ### Return type
 
@@ -1226,12 +1400,16 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: application/json, multipart/form-data
+- **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **webinarRegistrantStatus**
+
+## webinarRegistrantStatus
+
 > webinarRegistrantStatus($webinar_id, $body, $occurrence_id)
 
 Update Webinar Registrant Status
@@ -1239,12 +1417,15 @@ Update Webinar Registrant Status
 Update a webinar registrant's status. Using this API, you can specify whether you want to approve a registration, deny a registration or cancel a previously approved registration.<br><br> **Scopes:** `webinar:write:admin` `webinar:write`<br>    **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`<br>
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -1252,9 +1433,9 @@ $apiInstance = new Zoom\Api\Api\WebinarsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$webinar_id = 789; // int | The webinar ID in \"**long**\" format(represented as int64 data type in JSON).
-$body = new \Zoom\Api\Model\Body39(); // \Zoom\Api\Model\Body39 | 
-$occurrence_id = "occurrence_id_example"; // string | The meeting occurrence ID.
+$webinar_id = 56; // int | The webinar ID in \"**long**\" format(represented as int64 data type in JSON).
+$body = new \Zoom\Api\Model\InlineObject39(); // \Zoom\Api\Model\InlineObject39 | 
+$occurrence_id = 'occurrence_id_example'; // string | The meeting occurrence ID.
 
 try {
     $apiInstance->webinarRegistrantStatus($webinar_id, $body, $occurrence_id);
@@ -1266,10 +1447,11 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **webinar_id** | **int**| The webinar ID in \&quot;**long**\&quot; format(represented as int64 data type in JSON). |
- **body** | [**\Zoom\Api\Model\Body39**](../Model/Body39.md)|  |
+ **body** | [**\Zoom\Api\Model\InlineObject39**](../Model/InlineObject39.md)|  |
  **occurrence_id** | **string**| The meeting occurrence ID. | [optional]
 
 ### Return type
@@ -1282,12 +1464,16 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: application/json, multipart/form-data
+- **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **webinarRegistrants**
+
+## webinarRegistrants
+
 > \Zoom\Api\Model\RegistrationList webinarRegistrants($webinar_id, $occurrence_id, $status, $page_size, $page_number, $next_page_token)
 
 List Webinar Registrants
@@ -1295,12 +1481,15 @@ List Webinar Registrants
 Zoom users with a [Webinar Plan](https://zoom.us/webinar) have access to creating and managing Webinars. Webinar allows a host to broadcast a Zoom meeting to up to 10,000 attendees. Scheduling a [Webinar with registration](https://support.zoom.us/hc/en-us/articles/204619915-Scheduling-a-Webinar-with-Registration) requires your registrants to complete a brief form before receiving the link to join the Webinar.<br> Use this API to list all the users that have registered for a webinar.<br><br> **Prerequisites:** * Pro or higher plan with a Webinar Add-on.<br> **Scopes:** `webinar:read:admin` `webinar:read`<br>   **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`<br>
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -1308,12 +1497,12 @@ $apiInstance = new Zoom\Api\Api\WebinarsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$webinar_id = 789; // int | The webinar ID in \"**long**\" format(represented as int64 data type in JSON).
-$occurrence_id = "occurrence_id_example"; // string | The meeting occurrence ID.
-$status = "approved"; // string | The registrant status:<br>`pending` - Registrant's status is pending.<br>`approved` - Registrant's status is approved.<br>`denied` - Registrant's status is denied.
+$webinar_id = 56; // int | The webinar ID in \"**long**\" format(represented as int64 data type in JSON).
+$occurrence_id = 'occurrence_id_example'; // string | The meeting occurrence ID.
+$status = 'approved'; // string | The registrant status:<br>`pending` - Registrant's status is pending.<br>`approved` - Registrant's status is approved.<br>`denied` - Registrant's status is denied.
 $page_size = 30; // int | The number of records returned within a single API call.
 $page_number = 1; // int | **Deprecated** - This field has been deprecated and we will stop supporting it completely in a future release. Please use \"next_page_token\" for pagination instead of this field.  The page number of the current page in the returned records.
-$next_page_token = "next_page_token_example"; // string | The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
+$next_page_token = 'next_page_token_example'; // string | The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
 
 try {
     $result = $apiInstance->webinarRegistrants($webinar_id, $occurrence_id, $status, $page_size, $page_number, $next_page_token);
@@ -1326,11 +1515,12 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **webinar_id** | **int**| The webinar ID in \&quot;**long**\&quot; format(represented as int64 data type in JSON). |
  **occurrence_id** | **string**| The meeting occurrence ID. | [optional]
- **status** | **string**| The registrant status:&lt;br&gt;&#x60;pending&#x60; - Registrant&#39;s status is pending.&lt;br&gt;&#x60;approved&#x60; - Registrant&#39;s status is approved.&lt;br&gt;&#x60;denied&#x60; - Registrant&#39;s status is denied. | [optional] [default to approved]
+ **status** | **string**| The registrant status:&lt;br&gt;&#x60;pending&#x60; - Registrant&#39;s status is pending.&lt;br&gt;&#x60;approved&#x60; - Registrant&#39;s status is approved.&lt;br&gt;&#x60;denied&#x60; - Registrant&#39;s status is denied. | [optional] [default to &#39;approved&#39;]
  **page_size** | **int**| The number of records returned within a single API call. | [optional] [default to 30]
  **page_number** | **int**| **Deprecated** - This field has been deprecated and we will stop supporting it completely in a future release. Please use \&quot;next_page_token\&quot; for pagination instead of this field.  The page number of the current page in the returned records. | [optional] [default to 1]
  **next_page_token** | **string**| The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. | [optional]
@@ -1345,12 +1535,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **webinarRegistrantsQuestionsGet**
+
+## webinarRegistrantsQuestionsGet
+
 > \Zoom\Api\Model\InlineResponse20056 webinarRegistrantsQuestionsGet($webinar_id)
 
 List Registration Questions
@@ -1358,12 +1552,15 @@ List Registration Questions
 Scheduling a [Webinar with registration](https://support.zoom.us/hc/en-us/articles/204619915-Scheduling-a-Webinar-with-Registration) requires your registrants to complete a brief form with fields and questions before they can receive the link to join the Webinar.<br>Use this API to list registration questions and fields that are to be answered by users while registering for a Webinar.<br> **Prerequisites:**<br>   * Pro or higher plan with a Webinar Add-on. **Scopes:** `webinar:read:admin` `webinar:read`<br>    **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br>
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -1371,7 +1568,7 @@ $apiInstance = new Zoom\Api\Api\WebinarsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$webinar_id = 789; // int | The webinar ID in \"**long**\" format(represented as int64 data type in JSON).
+$webinar_id = 56; // int | The webinar ID in \"**long**\" format(represented as int64 data type in JSON).
 
 try {
     $result = $apiInstance->webinarRegistrantsQuestionsGet($webinar_id);
@@ -1383,6 +1580,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -1398,12 +1596,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **webinarStatus**
+
+## webinarStatus
+
 > webinarStatus($webinar_id, $body)
 
 Update Webinar Status
@@ -1411,12 +1613,15 @@ Update Webinar Status
 Update a webinar's status. Use this API to end an ongoing webinar.<br><br> **Scopes:** `webinar:write:admin` `webinar:write`<br>    **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br> **Prerequisites:**<br> * The account must hold a valid [Webinar plan](https://zoom.us/webinar).
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -1424,8 +1629,8 @@ $apiInstance = new Zoom\Api\Api\WebinarsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$webinar_id = 789; // int | The webinar ID in \"**long**\" format(represented as int64 data type in JSON).
-$body = new \Zoom\Api\Model\Body37(); // \Zoom\Api\Model\Body37 | 
+$webinar_id = 56; // int | The webinar ID in \"**long**\" format(represented as int64 data type in JSON).
+$body = new \Zoom\Api\Model\InlineObject37(); // \Zoom\Api\Model\InlineObject37 | 
 
 try {
     $apiInstance->webinarStatus($webinar_id, $body);
@@ -1437,10 +1642,11 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **webinar_id** | **int**| The webinar ID in \&quot;**long**\&quot; format(represented as int64 data type in JSON). |
- **body** | [**\Zoom\Api\Model\Body37**](../Model/Body37.md)|  |
+ **body** | [**\Zoom\Api\Model\InlineObject37**](../Model/InlineObject37.md)|  |
 
 ### Return type
 
@@ -1452,12 +1658,16 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: application/json, multipart/form-data
+- **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **webinarUpdate**
+
+## webinarUpdate
+
 > webinarUpdate($webinar_id, $body, $occurrence_id)
 
 Update a Webinar
@@ -1465,12 +1675,15 @@ Update a Webinar
 Zoom users with a [Webinar Plan](https://zoom.us/webinar) have access to creating and managing Webinars. Webinar allows a host to broadcast a Zoom meeting to up to 10,000 attendees.<br> Use this API to make updates to a scheduled Webinar.<br><br> **Scopes:** `webinar:write:admin` `webinar:write`<br>    **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br> **Prerequisites:**<br> * Pro or higher plan with a Webinar Add-on.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -1478,9 +1691,9 @@ $apiInstance = new Zoom\Api\Api\WebinarsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$webinar_id = 789; // int | The webinar ID in \"**long**\" format(represented as int64 data type in JSON).
-$body = new \stdClass; // object | Webinar.
-$occurrence_id = "occurrence_id_example"; // string | Webinar occurrence id. Support change of agenda, start_time, duration, settings: {host_video, panelist_video, hd_video, watermark, auto_recording}
+$webinar_id = 56; // int | The webinar ID in \"**long**\" format(represented as int64 data type in JSON).
+$body = new \Zoom\Api\Model\UNKNOWN_BASE_TYPE(); // \Zoom\Api\Model\UNKNOWN_BASE_TYPE | Webinar.
+$occurrence_id = 'occurrence_id_example'; // string | Webinar occurrence id. Support change of agenda, start_time, duration, settings: {host_video, panelist_video, hd_video, watermark, auto_recording}
 
 try {
     $apiInstance->webinarUpdate($webinar_id, $body, $occurrence_id);
@@ -1492,10 +1705,11 @@ try {
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **webinar_id** | **int**| The webinar ID in \&quot;**long**\&quot; format(represented as int64 data type in JSON). |
- **body** | [**object**](../Model/.md)| Webinar. |
+ **body** | [**\Zoom\Api\Model\UNKNOWN_BASE_TYPE**](../Model/UNKNOWN_BASE_TYPE.md)| Webinar. |
  **occurrence_id** | **string**| Webinar occurrence id. Support change of agenda, start_time, duration, settings: {host_video, panelist_video, hd_video, watermark, auto_recording} | [optional]
 
 ### Return type
@@ -1508,12 +1722,16 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: application/json, multipart/form-data
+- **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 
-# **webinars**
+
+## webinars
+
 > \Zoom\Api\Model\UserList webinars($user_id, $page_size, $page_number)
 
 List Webinars
@@ -1521,12 +1739,15 @@ List Webinars
 Zoom users with a [Webinar Plan](https://zoom.us/webinar) have access to creating and managing Webinars. Webinar allows a host to broadcast a Zoom meeting to up to 10,000 attendees.<br> Use this API to list all the webinars that are scheduled by or on-behalf a user (Webinar host).<br><br> **Scopes:** `webinar:read:admin` `webinar:read`<br> <br>    **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium` **Prerequisites:** * Pro or higher plan with a Webinar Add-on.
 
 ### Example
+
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
 // Configure OAuth2 access token for authorization: OAuth
 $config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -1534,7 +1755,7 @@ $apiInstance = new Zoom\Api\Api\WebinarsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = "user_id_example"; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+$user_id = 'user_id_example'; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
 $page_size = 30; // int | The number of records returned within a single API call.
 $page_number = 1; // int | **Deprecated** - This field has been deprecated and we will stop supporting it completely in a future release. Please use \"next_page_token\" for pagination instead of this field.  The page number of the current page in the returned records.
 
@@ -1548,6 +1769,7 @@ try {
 ```
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -1565,8 +1787,10 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, multipart/form-data
- - **Accept**: application/json, application/xml
+- **Content-Type**: Not defined
+- **Accept**: application/json, application/xml
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to README]](../../README.md)
 

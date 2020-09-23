@@ -1,6 +1,7 @@
-# InlineResponse20035Meetings
+# # InlineResponse20035Meetings
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **uuid** | **string** | Meeting UUID. Each meeting instance will generate its own UUID(i.e., after a meeting ends, a new UUID will be generated for the next instance of the meeting). Please double encode your UUID when using it for API calls if the UUID begins with a &#39;/&#39; or contains &#39;//&#39; in it. | [optional] 
@@ -15,6 +16,6 @@ Name | Type | Description | Notes
 **total_minutes** | **int** | Sum of meeting minutes from all participants in the meeting. | [optional] 
 **participants_count** | **int** | Number of meeting participants. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

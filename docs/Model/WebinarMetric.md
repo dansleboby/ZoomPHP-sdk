@@ -1,6 +1,7 @@
-# WebinarMetric
+# # WebinarMetric
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **uuid** | **string** | Webinar UUID. | [optional] 
@@ -22,6 +23,6 @@ Name | Type | Description | Notes
 **has_sip** | **bool** | Indicates whether or not SIP was used for the Webinar. | [optional] 
 **dept** | **string** | Department of the host. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

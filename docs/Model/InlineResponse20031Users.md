@@ -1,6 +1,7 @@
-# InlineResponse20031Users
+# # InlineResponse20031Users
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **user_id** | **string** | User ID. | [optional] 
@@ -23,6 +24,6 @@ Name | Type | Description | Notes
 **emoji_send** | **int** | Total number of emojis sent by the user. | [optional] 
 **emoji_receive** | **int** | Total number of emojis received by the user. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

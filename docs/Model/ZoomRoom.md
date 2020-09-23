@@ -1,6 +1,7 @@
-# ZoomRoom
+# # ZoomRoom
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **string** | Zoom room ID. | [optional] 
@@ -18,6 +19,6 @@ Name | Type | Description | Notes
 **health** | **string** |  | [optional] 
 **issues** | **string[]** | Zoom Room issues. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

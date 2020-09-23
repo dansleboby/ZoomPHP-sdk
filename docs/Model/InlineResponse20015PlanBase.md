@@ -1,6 +1,7 @@
-# InlineResponse20015PlanBase
+# # InlineResponse20015PlanBase
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **type** | **string** | Account base &lt;a href&#x3D;\&quot;https://marketplace.zoom.us/docs/api-reference/other-references/plans\&quot;&gt;plan type.&lt;/a&gt; | [optional] 
@@ -9,6 +10,6 @@ Name | Type | Description | Notes
 **next_invoice_date** | **string** | Next invoice date for the plan. | [optional] 
 **status** | **string** | Status of the plan. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

@@ -1,6 +1,7 @@
-# InlineResponse20034Users
+# # InlineResponse20034Users
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **string** | User ID. | [optional] 
@@ -13,6 +14,6 @@ Name | Type | Description | Notes
 **meeting_minutes** | **int** | Number of meeting minutes for user. | [optional] 
 **custom_attributes** | [**\Zoom\Api\Model\InlineResponse20034CustomAttributes**](InlineResponse20034CustomAttributes.md) |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

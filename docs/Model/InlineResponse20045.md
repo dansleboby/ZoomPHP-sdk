@@ -1,6 +1,7 @@
-# InlineResponse20045
+# # InlineResponse20045
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **tsp_provider** | **string** | Telephony Service Provider. | [optional] 
@@ -12,6 +13,6 @@ Name | Type | Description | Notes
 **dial_in_number_unrestricted** | **bool** | Control restriction on account users adding a TSP number outside of account&#39;s dial in numbers. | [optional] 
 **tsp_bridge** | **string** | Telephony bridge zone | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

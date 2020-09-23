@@ -1,6 +1,7 @@
-# Session
+# # Session
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **topic** | **string** | Meeting topic. | [optional] 
@@ -11,9 +12,9 @@ Name | Type | Description | Notes
 **password** | **string** | Password to join the meeting. Password may only contain the following characters: [a-z A-Z 0-9 @ - _ *]. Max of 10 characters. | [optional] 
 **agenda** | **string** | Meeting description. | [optional] 
 **tracking_fields** | [**\Zoom\Api\Model\InlineResponse20119TrackingFields[]**](InlineResponse20119TrackingFields.md) | Tracking fields | [optional] 
-**recurrence** | [**\Zoom\Api\Model\UsersuserIdmeetingsRecurrence**](UsersuserIdmeetingsRecurrence.md) |  | [optional] 
+**recurrence** | [**\Zoom\Api\Model\UsersUserIdMeetingsRecurrence**](UsersUserIdMeetingsRecurrence.md) |  | [optional] 
 **settings** | [**\Zoom\Api\Model\InlineResponse20111Settings**](InlineResponse20111Settings.md) |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 

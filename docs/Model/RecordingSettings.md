@@ -1,6 +1,7 @@
-# RecordingSettings
+# # RecordingSettings
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **share_recording** | **string** | Determine how the meeting recording is shared. | [optional] 
@@ -14,6 +15,6 @@ Name | Type | Description | Notes
 **send_email_to_host** | **bool** | Send an email to host when someone registers to view the recording. This applies for On-demand recordings only. | [optional] 
 **show_social_share_buttons** | **bool** | Show social share buttons on registration page. This applies for On-demand recordings only. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
 
