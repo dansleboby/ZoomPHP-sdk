@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * SessionUpdate Class Doc Comment
  *
  * @category Class
  * @description Base object for sessions.
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -62,13 +62,13 @@ class SessionUpdate implements ModelInterface, ArrayAccess, \JsonSerializable
         'duration' => 'int',
         'password' => 'string',
         'pre_schedule' => 'bool',
-        'recurrence' => '\OpenAPI\Client\Model\Recurrence',
-        'settings' => '\OpenAPI\Client\Model\SessionUpdateSettings',
+        'recurrence' => '\Zoom\Api\Model\Recurrence',
+        'settings' => '\Zoom\Api\Model\SessionUpdateSettings',
         'start_time' => '\DateTime',
         'template_id' => 'string',
         'timezone' => 'string',
         'topic' => 'string',
-        'tracking_fields' => '\OpenAPI\Client\Model\SessionUpdateTrackingFieldsInner[]',
+        'tracking_fields' => '\Zoom\Api\Model\SessionUpdateTrackingFieldsInner[]',
         'type' => 'int'
     ];
 
@@ -413,7 +413,7 @@ class SessionUpdate implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets recurrence
      *
-     * @return \OpenAPI\Client\Model\Recurrence|null
+     * @return \Zoom\Api\Model\Recurrence|null
      */
     public function getRecurrence()
     {
@@ -423,7 +423,7 @@ class SessionUpdate implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets recurrence
      *
-     * @param \OpenAPI\Client\Model\Recurrence|null $recurrence recurrence
+     * @param \Zoom\Api\Model\Recurrence|null $recurrence recurrence
      *
      * @return self
      */
@@ -437,7 +437,7 @@ class SessionUpdate implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets settings
      *
-     * @return \OpenAPI\Client\Model\SessionUpdateSettings|null
+     * @return \Zoom\Api\Model\SessionUpdateSettings|null
      */
     public function getSettings()
     {
@@ -447,7 +447,7 @@ class SessionUpdate implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets settings
      *
-     * @param \OpenAPI\Client\Model\SessionUpdateSettings|null $settings settings
+     * @param \Zoom\Api\Model\SessionUpdateSettings|null $settings settings
      *
      * @return self
      */
@@ -557,7 +557,7 @@ class SessionUpdate implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets tracking_fields
      *
-     * @return \OpenAPI\Client\Model\SessionUpdateTrackingFieldsInner[]|null
+     * @return \Zoom\Api\Model\SessionUpdateTrackingFieldsInner[]|null
      */
     public function getTrackingFields()
     {
@@ -567,7 +567,7 @@ class SessionUpdate implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets tracking_fields
      *
-     * @param \OpenAPI\Client\Model\SessionUpdateTrackingFieldsInner[]|null $tracking_fields Tracking fields
+     * @param \Zoom\Api\Model\SessionUpdateTrackingFieldsInner[]|null $tracking_fields Tracking fields
      *
      * @return self
      */

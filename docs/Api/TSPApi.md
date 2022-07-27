@@ -1,4 +1,4 @@
-# OpenAPI\Client\TSPApi
+# Zoom\Api\TSPApi
 
 All URIs are relative to https://api.zoom.us/v2.
 
@@ -17,7 +17,7 @@ Method | HTTP request | Description
 ## `tsp()`
 
 ```php
-tsp(): \OpenAPI\Client\Model\Tsp200Response
+tsp(): \Zoom\Api\Model\Tsp200Response
 ```
 
 Get account's TSP information
@@ -32,10 +32,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\TSPApi(
+$apiInstance = new Zoom\Api\Api\TSPApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -56,7 +56,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Tsp200Response**](../Model/Tsp200Response.md)
+[**\Zoom\Api\Model\Tsp200Response**](../Model/Tsp200Response.md)
 
 ### Authorization
 
@@ -89,16 +89,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\TSPApi(
+$apiInstance = new Zoom\Api\Api\TSPApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$tsp_update_request = new \OpenAPI\Client\Model\TspUpdateRequest(); // \OpenAPI\Client\Model\TspUpdateRequest | TSP Account
+$tsp_update_request = new \Zoom\Api\Model\TspUpdateRequest(); // \Zoom\Api\Model\TspUpdateRequest | TSP Account
 
 try {
     $apiInstance->tspUpdate($tsp_update_request);
@@ -111,7 +111,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **tsp_update_request** | [**\OpenAPI\Client\Model\TspUpdateRequest**](../Model/TspUpdateRequest.md)| TSP Account |
+ **tsp_update_request** | [**\Zoom\Api\Model\TspUpdateRequest**](../Model/TspUpdateRequest.md)| TSP Account |
 
 ### Return type
 
@@ -148,17 +148,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\TSPApi(
+$apiInstance = new Zoom\Api\Api\TSPApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $user_id = 6dfgdfgdg444447b0egga; // string | The userId or email address of the user.
-$tsp_global_dial_in = new \OpenAPI\Client\Model\TspGlobalDialIn(); // \OpenAPI\Client\Model\TspGlobalDialIn | Global dial-in URL of the user.
+$tsp_global_dial_in = new \Zoom\Api\Model\TspGlobalDialIn(); // \Zoom\Api\Model\TspGlobalDialIn | Global dial-in URL of the user.
 
 try {
     $apiInstance->tspUrlUpdate($user_id, $tsp_global_dial_in);
@@ -172,7 +172,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **string**| The userId or email address of the user. |
- **tsp_global_dial_in** | [**\OpenAPI\Client\Model\TspGlobalDialIn**](../Model/TspGlobalDialIn.md)| Global dial-in URL of the user. | [optional]
+ **tsp_global_dial_in** | [**\Zoom\Api\Model\TspGlobalDialIn**](../Model/TspGlobalDialIn.md)| Global dial-in URL of the user. | [optional]
 
 ### Return type
 
@@ -194,7 +194,7 @@ void (empty response body)
 ## `userTSP()`
 
 ```php
-userTSP($user_id, $tsp_id): \OpenAPI\Client\Model\TSPAccount
+userTSP($user_id, $tsp_id): \Zoom\Api\Model\TSPAccount
 ```
 
 Get a user's TSP account
@@ -209,16 +209,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\TSPApi(
+$apiInstance = new Zoom\Api\Api\TSPApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = new \OpenAPI\Client\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
+$user_id = new \Zoom\Api\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
 $tsp_id = 1; // string | TSP account ID.
 
 try {
@@ -238,7 +238,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TSPAccount**](../Model/TSPAccount.md)
+[**\Zoom\Api\Model\TSPAccount**](../Model/TSPAccount.md)
 
 ### Authorization
 
@@ -256,7 +256,7 @@ Name | Type | Description  | Notes
 ## `userTSPCreate()`
 
 ```php
-userTSPCreate($user_id, $tsp): \OpenAPI\Client\Model\TSP
+userTSPCreate($user_id, $tsp): \Zoom\Api\Model\TSP
 ```
 
 Add a user's TSP account
@@ -271,17 +271,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\TSPApi(
+$apiInstance = new Zoom\Api\Api\TSPApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = new \OpenAPI\Client\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
-$tsp = new \OpenAPI\Client\Model\TSP(); // \OpenAPI\Client\Model\TSP | TSP account.
+$user_id = new \Zoom\Api\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
+$tsp = new \Zoom\Api\Model\TSP(); // \Zoom\Api\Model\TSP | TSP account.
 
 try {
     $result = $apiInstance->userTSPCreate($user_id, $tsp);
@@ -296,11 +296,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | [**GroupAdminsDeleteUserIdParameter**](../Model/.md)| The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. |
- **tsp** | [**\OpenAPI\Client\Model\TSP**](../Model/TSP.md)| TSP account. |
+ **tsp** | [**\Zoom\Api\Model\TSP**](../Model/TSP.md)| TSP account. |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TSP**](../Model/TSP.md)
+[**\Zoom\Api\Model\TSP**](../Model/TSP.md)
 
 ### Authorization
 
@@ -333,16 +333,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\TSPApi(
+$apiInstance = new Zoom\Api\Api\TSPApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = new \OpenAPI\Client\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
+$user_id = new \Zoom\Api\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
 $tsp_id = 1; // string | TSP account ID.
 
 try {
@@ -394,18 +394,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\TSPApi(
+$apiInstance = new Zoom\Api\Api\TSPApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = new \OpenAPI\Client\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
+$user_id = new \Zoom\Api\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
 $tsp_id = 1; // string | TSP account ID.
-$tsp_account1 = new \OpenAPI\Client\Model\TSPAccount1(); // \OpenAPI\Client\Model\TSPAccount1 | TSP account.
+$tsp_account1 = new \Zoom\Api\Model\TSPAccount1(); // \Zoom\Api\Model\TSPAccount1 | TSP account.
 
 try {
     $apiInstance->userTSPUpdate($user_id, $tsp_id, $tsp_account1);
@@ -420,7 +420,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | [**GroupAdminsDeleteUserIdParameter**](../Model/.md)| The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. |
  **tsp_id** | **string**| TSP account ID. |
- **tsp_account1** | [**\OpenAPI\Client\Model\TSPAccount1**](../Model/TSPAccount1.md)| TSP account. |
+ **tsp_account1** | [**\Zoom\Api\Model\TSPAccount1**](../Model/TSPAccount1.md)| TSP account. |
 
 ### Return type
 
@@ -442,7 +442,7 @@ void (empty response body)
 ## `userTSPs()`
 
 ```php
-userTSPs($user_id): \OpenAPI\Client\Model\UserTSPs200Response
+userTSPs($user_id): \Zoom\Api\Model\UserTSPs200Response
 ```
 
 List user's TSP accounts
@@ -457,16 +457,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\TSPApi(
+$apiInstance = new Zoom\Api\Api\TSPApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = new \OpenAPI\Client\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
+$user_id = new \Zoom\Api\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
 
 try {
     $result = $apiInstance->userTSPs($user_id);
@@ -484,7 +484,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\UserTSPs200Response**](../Model/UserTSPs200Response.md)
+[**\Zoom\Api\Model\UserTSPs200Response**](../Model/UserTSPs200Response.md)
 
 ### Authorization
 

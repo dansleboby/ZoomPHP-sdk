@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * RecordingRegistrantStatus Class Doc Comment
  *
  * @category Class
  * @description Registrant Status
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class RecordingRegistrantStatus implements ModelInterface, ArrayAccess, \JsonSer
       */
     protected static $openAPITypes = [
         'action' => 'string',
-        'registrants' => '\OpenAPI\Client\Model\RecordingRegistrantStatusRegistrantsInner[]'
+        'registrants' => '\Zoom\Api\Model\RecordingRegistrantStatusRegistrantsInner[]'
     ];
 
     /**
@@ -274,7 +274,7 @@ class RecordingRegistrantStatus implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Gets registrants
      *
-     * @return \OpenAPI\Client\Model\RecordingRegistrantStatusRegistrantsInner[]|null
+     * @return \Zoom\Api\Model\RecordingRegistrantStatusRegistrantsInner[]|null
      */
     public function getRegistrants()
     {
@@ -284,7 +284,7 @@ class RecordingRegistrantStatus implements ModelInterface, ArrayAccess, \JsonSer
     /**
      * Sets registrants
      *
-     * @param \OpenAPI\Client\Model\RecordingRegistrantStatusRegistrantsInner[]|null $registrants List of registrants
+     * @param \Zoom\Api\Model\RecordingRegistrantStatusRegistrantsInner[]|null $registrants List of registrants
      *
      * @return self
      */

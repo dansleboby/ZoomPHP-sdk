@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Zoom\Api\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Zoom\Api\ApiException;
+use Zoom\Api\Configuration;
+use Zoom\Api\HeaderSelector;
+use Zoom\Api\ObjectSerializer;
 
 /**
  * SIPPhoneApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -120,9 +120,9 @@ class SIPPhoneApi
      *
      * Enable SIP phone
      *
-     * @param  \OpenAPI\Client\Model\CreateSIPPhoneRequest $create_sip_phone_request create_sip_phone_request (optional)
+     * @param  \Zoom\Api\Model\CreateSIPPhoneRequest $create_sip_phone_request create_sip_phone_request (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -136,9 +136,9 @@ class SIPPhoneApi
      *
      * Enable SIP phone
      *
-     * @param  \OpenAPI\Client\Model\CreateSIPPhoneRequest $create_sip_phone_request (optional)
+     * @param  \Zoom\Api\Model\CreateSIPPhoneRequest $create_sip_phone_request (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -195,7 +195,7 @@ class SIPPhoneApi
      *
      * Enable SIP phone
      *
-     * @param  \OpenAPI\Client\Model\CreateSIPPhoneRequest $create_sip_phone_request (optional)
+     * @param  \Zoom\Api\Model\CreateSIPPhoneRequest $create_sip_phone_request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -215,7 +215,7 @@ class SIPPhoneApi
      *
      * Enable SIP phone
      *
-     * @param  \OpenAPI\Client\Model\CreateSIPPhoneRequest $create_sip_phone_request (optional)
+     * @param  \Zoom\Api\Model\CreateSIPPhoneRequest $create_sip_phone_request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -251,7 +251,7 @@ class SIPPhoneApi
     /**
      * Create request for operation 'createSIPPhone'
      *
-     * @param  \OpenAPI\Client\Model\CreateSIPPhoneRequest $create_sip_phone_request (optional)
+     * @param  \Zoom\Api\Model\CreateSIPPhoneRequest $create_sip_phone_request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -344,7 +344,7 @@ class SIPPhoneApi
      *
      * @param  string $phone_id Unique Identifier of the SIP Phone. It can be retrieved from the List SIP Phones API. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -360,7 +360,7 @@ class SIPPhoneApi
      *
      * @param  string $phone_id Unique Identifier of the SIP Phone. It can be retrieved from the List SIP Phones API. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -577,9 +577,9 @@ class SIPPhoneApi
      * @param  int $page_size The number of records returned within a single API call. (optional)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ListSipPhones200Response
+     * @return \Zoom\Api\Model\ListSipPhones200Response
      */
     public function listSipPhones($page_number = 1, $search_key = null, $page_size = null, $next_page_token = null)
     {
@@ -597,9 +597,9 @@ class SIPPhoneApi
      * @param  int $page_size The number of records returned within a single API call. (optional)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ListSipPhones200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\ListSipPhones200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function listSipPhonesWithHttpInfo($page_number = 1, $search_key = null, $page_size = null, $next_page_token = null)
     {
@@ -642,23 +642,23 @@ class SIPPhoneApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ListSipPhones200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\ListSipPhones200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ListSipPhones200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\ListSipPhones200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ListSipPhones200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\ListSipPhones200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ListSipPhones200Response';
+            $returnType = '\Zoom\Api\Model\ListSipPhones200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -679,7 +679,7 @@ class SIPPhoneApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ListSipPhones200Response',
+                        '\Zoom\Api\Model\ListSipPhones200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -727,7 +727,7 @@ class SIPPhoneApi
      */
     public function listSipPhonesAsyncWithHttpInfo($page_number = 1, $search_key = null, $page_size = null, $next_page_token = null)
     {
-        $returnType = '\OpenAPI\Client\Model\ListSipPhones200Response';
+        $returnType = '\Zoom\Api\Model\ListSipPhones200Response';
         $request = $this->listSipPhonesRequest($page_number, $search_key, $page_size, $next_page_token);
 
         return $this->client
@@ -894,9 +894,9 @@ class SIPPhoneApi
      * Update SIP phone
      *
      * @param  string $phone_id Unique Identifier of the SIP Phone. This can be retrieved from the List SIP Phones API. (required)
-     * @param  \OpenAPI\Client\Model\UpdateSIPPhoneRequest $update_sip_phone_request update_sip_phone_request (optional)
+     * @param  \Zoom\Api\Model\UpdateSIPPhoneRequest $update_sip_phone_request update_sip_phone_request (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -911,9 +911,9 @@ class SIPPhoneApi
      * Update SIP phone
      *
      * @param  string $phone_id Unique Identifier of the SIP Phone. This can be retrieved from the List SIP Phones API. (required)
-     * @param  \OpenAPI\Client\Model\UpdateSIPPhoneRequest $update_sip_phone_request (optional)
+     * @param  \Zoom\Api\Model\UpdateSIPPhoneRequest $update_sip_phone_request (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -971,7 +971,7 @@ class SIPPhoneApi
      * Update SIP phone
      *
      * @param  string $phone_id Unique Identifier of the SIP Phone. This can be retrieved from the List SIP Phones API. (required)
-     * @param  \OpenAPI\Client\Model\UpdateSIPPhoneRequest $update_sip_phone_request (optional)
+     * @param  \Zoom\Api\Model\UpdateSIPPhoneRequest $update_sip_phone_request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -992,7 +992,7 @@ class SIPPhoneApi
      * Update SIP phone
      *
      * @param  string $phone_id Unique Identifier of the SIP Phone. This can be retrieved from the List SIP Phones API. (required)
-     * @param  \OpenAPI\Client\Model\UpdateSIPPhoneRequest $update_sip_phone_request (optional)
+     * @param  \Zoom\Api\Model\UpdateSIPPhoneRequest $update_sip_phone_request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1029,7 +1029,7 @@ class SIPPhoneApi
      * Create request for operation 'updateSIPPhone'
      *
      * @param  string $phone_id Unique Identifier of the SIP Phone. This can be retrieved from the List SIP Phones API. (required)
-     * @param  \OpenAPI\Client\Model\UpdateSIPPhoneRequest $update_sip_phone_request (optional)
+     * @param  \Zoom\Api\Model\UpdateSIPPhoneRequest $update_sip_phone_request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * GroupMemberList Class Doc Comment
  *
  * @category Class
  * @description List of Group Members.
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -63,7 +63,7 @@ class GroupMemberList implements ModelInterface, ArrayAccess, \JsonSerializable
         'page_number' => 'int',
         'page_size' => 'int',
         'total_records' => 'int',
-        'members' => '\OpenAPI\Client\Model\GroupMember[]'
+        'members' => '\Zoom\Api\Model\GroupMember[]'
     ];
 
     /**
@@ -368,7 +368,7 @@ class GroupMemberList implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets members
      *
-     * @return \OpenAPI\Client\Model\GroupMember[]|null
+     * @return \Zoom\Api\Model\GroupMember[]|null
      */
     public function getMembers()
     {
@@ -378,7 +378,7 @@ class GroupMemberList implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets members
      *
-     * @param \OpenAPI\Client\Model\GroupMember[]|null $members List of Group member objects.
+     * @param \Zoom\Api\Model\GroupMember[]|null $members List of Group member objects.
      *
      * @return self
      */

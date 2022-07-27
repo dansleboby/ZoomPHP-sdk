@@ -1,4 +1,4 @@
-# OpenAPI\Client\TrackingFieldApi
+# Zoom\Api\TrackingFieldApi
 
 All URIs are relative to https://api.zoom.us/v2.
 
@@ -14,7 +14,7 @@ Method | HTTP request | Description
 ## `trackingfieldCreate()`
 
 ```php
-trackingfieldCreate($tracking_field): \OpenAPI\Client\Model\TrackingfieldCreate201Response
+trackingfieldCreate($tracking_field): \Zoom\Api\Model\TrackingfieldCreate201Response
 ```
 
 Create a tracking field
@@ -29,16 +29,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\TrackingFieldApi(
+$apiInstance = new Zoom\Api\Api\TrackingFieldApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$tracking_field = new \OpenAPI\Client\Model\TrackingField(); // \OpenAPI\Client\Model\TrackingField | Tracking Field
+$tracking_field = new \Zoom\Api\Model\TrackingField(); // \Zoom\Api\Model\TrackingField | Tracking Field
 
 try {
     $result = $apiInstance->trackingfieldCreate($tracking_field);
@@ -52,11 +52,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **tracking_field** | [**\OpenAPI\Client\Model\TrackingField**](../Model/TrackingField.md)| Tracking Field |
+ **tracking_field** | [**\Zoom\Api\Model\TrackingField**](../Model/TrackingField.md)| Tracking Field |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TrackingfieldCreate201Response**](../Model/TrackingfieldCreate201Response.md)
+[**\Zoom\Api\Model\TrackingfieldCreate201Response**](../Model/TrackingfieldCreate201Response.md)
 
 ### Authorization
 
@@ -89,10 +89,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\TrackingFieldApi(
+$apiInstance = new Zoom\Api\Api\TrackingFieldApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -133,7 +133,7 @@ void (empty response body)
 ## `trackingfieldGet()`
 
 ```php
-trackingfieldGet($field_id): \OpenAPI\Client\Model\TrackingfieldCreate201Response
+trackingfieldGet($field_id): \Zoom\Api\Model\TrackingfieldCreate201Response
 ```
 
 Get a tracking field
@@ -148,10 +148,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\TrackingFieldApi(
+$apiInstance = new Zoom\Api\Api\TrackingFieldApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -175,7 +175,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TrackingfieldCreate201Response**](../Model/TrackingfieldCreate201Response.md)
+[**\Zoom\Api\Model\TrackingfieldCreate201Response**](../Model/TrackingfieldCreate201Response.md)
 
 ### Authorization
 
@@ -193,7 +193,7 @@ Name | Type | Description  | Notes
 ## `trackingfieldList()`
 
 ```php
-trackingfieldList(): \OpenAPI\Client\Model\TrackingFieldList
+trackingfieldList(): \Zoom\Api\Model\TrackingFieldList
 ```
 
 List tracking fields
@@ -208,10 +208,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\TrackingFieldApi(
+$apiInstance = new Zoom\Api\Api\TrackingFieldApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -232,7 +232,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\TrackingFieldList**](../Model/TrackingFieldList.md)
+[**\Zoom\Api\Model\TrackingFieldList**](../Model/TrackingFieldList.md)
 
 ### Authorization
 
@@ -265,17 +265,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\TrackingFieldApi(
+$apiInstance = new Zoom\Api\Api\TrackingFieldApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $field_id = a32CJji-weJ92; // string | The Tracking Field ID
-$tracking_field = new \OpenAPI\Client\Model\TrackingField(); // \OpenAPI\Client\Model\TrackingField
+$tracking_field = new \Zoom\Api\Model\TrackingField(); // \Zoom\Api\Model\TrackingField
 
 try {
     $apiInstance->trackingfieldUpdate($field_id, $tracking_field);
@@ -289,7 +289,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **field_id** | **string**| The Tracking Field ID |
- **tracking_field** | [**\OpenAPI\Client\Model\TrackingField**](../Model/TrackingField.md)|  |
+ **tracking_field** | [**\Zoom\Api\Model\TrackingField**](../Model/TrackingField.md)|  |
 
 ### Return type
 

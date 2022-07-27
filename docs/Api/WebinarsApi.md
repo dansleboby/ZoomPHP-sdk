@@ -1,4 +1,4 @@
-# OpenAPI\Client\WebinarsApi
+# Zoom\Api\WebinarsApi
 
 All URIs are relative to https://api.zoom.us/v2.
 
@@ -58,7 +58,7 @@ Method | HTTP request | Description
 ## `addBatchWebinarRegistrants()`
 
 ```php
-addBatchWebinarRegistrants($webinar_id, $add_batch_registrants_request): \OpenAPI\Client\Model\AddBatchWebinarRegistrants200Response
+addBatchWebinarRegistrants($webinar_id, $add_batch_registrants_request): \Zoom\Api\Model\AddBatchWebinarRegistrants200Response
 ```
 
 Perform batch registration
@@ -73,22 +73,22 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Zoom\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $webinar_id = 97871060099; // string | Unique identifier of the webinar.
-$add_batch_registrants_request = new \OpenAPI\Client\Model\AddBatchRegistrantsRequest(); // \OpenAPI\Client\Model\AddBatchRegistrantsRequest
+$add_batch_registrants_request = new \Zoom\Api\Model\AddBatchRegistrantsRequest(); // \Zoom\Api\Model\AddBatchRegistrantsRequest
 
 try {
     $result = $apiInstance->addBatchWebinarRegistrants($webinar_id, $add_batch_registrants_request);
@@ -103,11 +103,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **webinar_id** | **string**| Unique identifier of the webinar. |
- **add_batch_registrants_request** | [**\OpenAPI\Client\Model\AddBatchRegistrantsRequest**](../Model/AddBatchRegistrantsRequest.md)|  | [optional]
+ **add_batch_registrants_request** | [**\Zoom\Api\Model\AddBatchRegistrantsRequest**](../Model/AddBatchRegistrantsRequest.md)|  | [optional]
 
 ### Return type
 
-[**\OpenAPI\Client\Model\AddBatchWebinarRegistrants200Response**](../Model/AddBatchWebinarRegistrants200Response.md)
+[**\Zoom\Api\Model\AddBatchWebinarRegistrants200Response**](../Model/AddBatchWebinarRegistrants200Response.md)
 
 ### Authorization
 
@@ -125,7 +125,7 @@ Name | Type | Description  | Notes
 ## `createWebinarBrandingNameTag()`
 
 ```php
-createWebinarBrandingNameTag($webinar_id, $create_webinar_branding_name_tag_request): \OpenAPI\Client\Model\CreateWebinarBrandingNameTag201Response
+createWebinarBrandingNameTag($webinar_id, $create_webinar_branding_name_tag_request): \Zoom\Api\Model\CreateWebinarBrandingNameTag201Response
 ```
 
 Create a webinar's branding name tag
@@ -140,17 +140,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $webinar_id = 99289110036; // int | The webinar's ID.
-$create_webinar_branding_name_tag_request = new \OpenAPI\Client\Model\CreateWebinarBrandingNameTagRequest(); // \OpenAPI\Client\Model\CreateWebinarBrandingNameTagRequest
+$create_webinar_branding_name_tag_request = new \Zoom\Api\Model\CreateWebinarBrandingNameTagRequest(); // \Zoom\Api\Model\CreateWebinarBrandingNameTagRequest
 
 try {
     $result = $apiInstance->createWebinarBrandingNameTag($webinar_id, $create_webinar_branding_name_tag_request);
@@ -165,11 +165,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **webinar_id** | **int**| The webinar&#39;s ID. |
- **create_webinar_branding_name_tag_request** | [**\OpenAPI\Client\Model\CreateWebinarBrandingNameTagRequest**](../Model/CreateWebinarBrandingNameTagRequest.md)|  |
+ **create_webinar_branding_name_tag_request** | [**\Zoom\Api\Model\CreateWebinarBrandingNameTagRequest**](../Model/CreateWebinarBrandingNameTagRequest.md)|  |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CreateWebinarBrandingNameTag201Response**](../Model/CreateWebinarBrandingNameTag201Response.md)
+[**\Zoom\Api\Model\CreateWebinarBrandingNameTag201Response**](../Model/CreateWebinarBrandingNameTag201Response.md)
 
 ### Authorization
 
@@ -202,10 +202,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -263,10 +263,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -324,10 +324,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -383,10 +383,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -444,10 +444,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -492,7 +492,7 @@ void (empty response body)
 ## `getTrackingSources()`
 
 ```php
-getTrackingSources($webinar_id): \OpenAPI\Client\Model\GetTrackingSources200Response
+getTrackingSources($webinar_id): \Zoom\Api\Model\GetTrackingSources200Response
 ```
 
 Get webinar tracking sources
@@ -507,10 +507,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -534,7 +534,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GetTrackingSources200Response**](../Model/GetTrackingSources200Response.md)
+[**\Zoom\Api\Model\GetTrackingSources200Response**](../Model/GetTrackingSources200Response.md)
 
 ### Authorization
 
@@ -552,7 +552,7 @@ Name | Type | Description  | Notes
 ## `getWebinarBranding()`
 
 ```php
-getWebinarBranding($webinar_id): \OpenAPI\Client\Model\GetWebinarBranding200Response
+getWebinarBranding($webinar_id): \Zoom\Api\Model\GetWebinarBranding200Response
 ```
 
 Get webinar's session branding
@@ -567,10 +567,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -594,7 +594,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GetWebinarBranding200Response**](../Model/GetWebinarBranding200Response.md)
+[**\Zoom\Api\Model\GetWebinarBranding200Response**](../Model/GetWebinarBranding200Response.md)
 
 ### Authorization
 
@@ -612,7 +612,7 @@ Name | Type | Description  | Notes
 ## `getWebinarLiveStreamDetails()`
 
 ```php
-getWebinarLiveStreamDetails($webinar_id): \OpenAPI\Client\Model\GetWebinarLiveStreamDetails200Response
+getWebinarLiveStreamDetails($webinar_id): \Zoom\Api\Model\GetWebinarLiveStreamDetails200Response
 ```
 
 Get live stream details
@@ -627,10 +627,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -654,7 +654,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GetWebinarLiveStreamDetails200Response**](../Model/GetWebinarLiveStreamDetails200Response.md)
+[**\Zoom\Api\Model\GetWebinarLiveStreamDetails200Response**](../Model/GetWebinarLiveStreamDetails200Response.md)
 
 ### Authorization
 
@@ -672,7 +672,7 @@ Name | Type | Description  | Notes
 ## `listPastWebinarPollResults()`
 
 ```php
-listPastWebinarPollResults($webinar_id): \OpenAPI\Client\Model\ListPastWebinarPollResults200Response
+listPastWebinarPollResults($webinar_id): \Zoom\Api\Model\ListPastWebinarPollResults200Response
 ```
 
 List past webinar poll results
@@ -687,10 +687,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -714,7 +714,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ListPastWebinarPollResults200Response**](../Model/ListPastWebinarPollResults200Response.md)
+[**\Zoom\Api\Model\ListPastWebinarPollResults200Response**](../Model/ListPastWebinarPollResults200Response.md)
 
 ### Authorization
 
@@ -732,7 +732,7 @@ Name | Type | Description  | Notes
 ## `listPastWebinarQA()`
 
 ```php
-listPastWebinarQA($webinar_id): \OpenAPI\Client\Model\ListPastWebinarQA200Response
+listPastWebinarQA($webinar_id): \Zoom\Api\Model\ListPastWebinarQA200Response
 ```
 
 List Q&A of past webinar
@@ -747,10 +747,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -774,7 +774,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ListPastWebinarQA200Response**](../Model/ListPastWebinarQA200Response.md)
+[**\Zoom\Api\Model\ListPastWebinarQA200Response**](../Model/ListPastWebinarQA200Response.md)
 
 ### Authorization
 
@@ -792,7 +792,7 @@ Name | Type | Description  | Notes
 ## `listWebinarParticipants()`
 
 ```php
-listWebinarParticipants($webinar_id, $page_size, $next_page_token): \OpenAPI\Client\Model\ListWebinarParticipants200Response
+listWebinarParticipants($webinar_id, $page_size, $next_page_token): \Zoom\Api\Model\ListWebinarParticipants200Response
 ```
 
 List webinar participants
@@ -807,10 +807,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -838,7 +838,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ListWebinarParticipants200Response**](../Model/ListWebinarParticipants200Response.md)
+[**\Zoom\Api\Model\ListWebinarParticipants200Response**](../Model/ListWebinarParticipants200Response.md)
 
 ### Authorization
 
@@ -856,7 +856,7 @@ Name | Type | Description  | Notes
 ## `listWebinarTemplates()`
 
 ```php
-listWebinarTemplates($user_id): \OpenAPI\Client\Model\ListWebinarTemplates200Response
+listWebinarTemplates($user_id): \Zoom\Api\Model\ListWebinarTemplates200Response
 ```
 
 List webinar templates
@@ -871,10 +871,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -898,7 +898,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ListWebinarTemplates200Response**](../Model/ListWebinarTemplates200Response.md)
+[**\Zoom\Api\Model\ListWebinarTemplates200Response**](../Model/ListWebinarTemplates200Response.md)
 
 ### Authorization
 
@@ -916,7 +916,7 @@ Name | Type | Description  | Notes
 ## `pastWebinars()`
 
 ```php
-pastWebinars($webinar_id): \OpenAPI\Client\Model\WebinarInstances
+pastWebinars($webinar_id): \Zoom\Api\Model\WebinarInstances
 ```
 
 List past webinar instances
@@ -931,10 +931,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -958,7 +958,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\WebinarInstances**](../Model/WebinarInstances.md)
+[**\Zoom\Api\Model\WebinarInstances**](../Model/WebinarInstances.md)
 
 ### Authorization
 
@@ -991,10 +991,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1054,10 +1054,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1065,7 +1065,7 @@ $apiInstance = new OpenAPI\Client\Api\WebinarsApi(
 );
 $webinar_id = 99289110036; // int | The webinar's ID.
 $name_tag_id = J0sFXN2PSOCGrqTqLRwgAQ; // string | The name tag's ID.
-$update_webinar_branding_name_tag_request = new \OpenAPI\Client\Model\UpdateWebinarBrandingNameTagRequest(); // \OpenAPI\Client\Model\UpdateWebinarBrandingNameTagRequest
+$update_webinar_branding_name_tag_request = new \Zoom\Api\Model\UpdateWebinarBrandingNameTagRequest(); // \Zoom\Api\Model\UpdateWebinarBrandingNameTagRequest
 
 try {
     $apiInstance->updateWebinarBrandingNameTag($webinar_id, $name_tag_id, $update_webinar_branding_name_tag_request);
@@ -1080,7 +1080,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **webinar_id** | **int**| The webinar&#39;s ID. |
  **name_tag_id** | **string**| The name tag&#39;s ID. |
- **update_webinar_branding_name_tag_request** | [**\OpenAPI\Client\Model\UpdateWebinarBrandingNameTagRequest**](../Model/UpdateWebinarBrandingNameTagRequest.md)|  |
+ **update_webinar_branding_name_tag_request** | [**\Zoom\Api\Model\UpdateWebinarBrandingNameTagRequest**](../Model/UpdateWebinarBrandingNameTagRequest.md)|  |
 
 ### Return type
 
@@ -1102,7 +1102,7 @@ void (empty response body)
 ## `uploadWebinarBrandingVB()`
 
 ```php
-uploadWebinarBrandingVB($webinar_id, $file, $default, $set_default_for_all_panelists): \OpenAPI\Client\Model\UploadWebinarBrandingVB201Response
+uploadWebinarBrandingVB($webinar_id, $file, $default, $set_default_for_all_panelists): \Zoom\Api\Model\UploadWebinarBrandingVB201Response
 ```
 
 Upload a webinar's branding Virtual Background
@@ -1117,10 +1117,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1150,7 +1150,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\UploadWebinarBrandingVB201Response**](../Model/UploadWebinarBrandingVB201Response.md)
+[**\Zoom\Api\Model\UploadWebinarBrandingVB201Response**](../Model/UploadWebinarBrandingVB201Response.md)
 
 ### Authorization
 
@@ -1168,7 +1168,7 @@ Name | Type | Description  | Notes
 ## `uploadWebinarBrandingWallpaper()`
 
 ```php
-uploadWebinarBrandingWallpaper($webinar_id, $file): \OpenAPI\Client\Model\UploadWebinarBrandingWallpaper201Response
+uploadWebinarBrandingWallpaper($webinar_id, $file): \Zoom\Api\Model\UploadWebinarBrandingWallpaper201Response
 ```
 
 Upload a webinar's branding wallpaper
@@ -1183,10 +1183,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1212,7 +1212,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\UploadWebinarBrandingWallpaper201Response**](../Model/UploadWebinarBrandingWallpaper201Response.md)
+[**\Zoom\Api\Model\UploadWebinarBrandingWallpaper201Response**](../Model/UploadWebinarBrandingWallpaper201Response.md)
 
 ### Authorization
 
@@ -1230,7 +1230,7 @@ Name | Type | Description  | Notes
 ## `webinar()`
 
 ```php
-webinar($webinar_id, $occurrence_id, $show_previous_occurrences): \OpenAPI\Client\Model\Webinar200Response
+webinar($webinar_id, $occurrence_id, $show_previous_occurrences): \Zoom\Api\Model\Webinar200Response
 ```
 
 Get a webinar
@@ -1245,10 +1245,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1276,7 +1276,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Webinar200Response**](../Model/Webinar200Response.md)
+[**\Zoom\Api\Model\Webinar200Response**](../Model/Webinar200Response.md)
 
 ### Authorization
 
@@ -1294,7 +1294,7 @@ Name | Type | Description  | Notes
 ## `webinarAbsentees()`
 
 ```php
-webinarAbsentees($webinar_uuid, $occurrence_id, $page_size, $next_page_token): \OpenAPI\Client\Model\WebinarRegistrantList
+webinarAbsentees($webinar_uuid, $occurrence_id, $page_size, $next_page_token): \Zoom\Api\Model\WebinarRegistrantList
 ```
 
 Get webinar absentees
@@ -1309,10 +1309,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1342,7 +1342,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\WebinarRegistrantList**](../Model/WebinarRegistrantList.md)
+[**\Zoom\Api\Model\WebinarRegistrantList**](../Model/WebinarRegistrantList.md)
 
 ### Authorization
 
@@ -1360,7 +1360,7 @@ Name | Type | Description  | Notes
 ## `webinarCreate()`
 
 ```php
-webinarCreate($user_id, $webinar_create_request): \OpenAPI\Client\Model\WebinarCreate201Response
+webinarCreate($user_id, $webinar_create_request): \Zoom\Api\Model\WebinarCreate201Response
 ```
 
 Create a webinar
@@ -1375,17 +1375,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = new \OpenAPI\Client\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
-$webinar_create_request = new \OpenAPI\Client\Model\WebinarCreateRequest(); // \OpenAPI\Client\Model\WebinarCreateRequest
+$user_id = new \Zoom\Api\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
+$webinar_create_request = new \Zoom\Api\Model\WebinarCreateRequest(); // \Zoom\Api\Model\WebinarCreateRequest
 
 try {
     $result = $apiInstance->webinarCreate($user_id, $webinar_create_request);
@@ -1400,11 +1400,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | [**GroupAdminsDeleteUserIdParameter**](../Model/.md)| The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. |
- **webinar_create_request** | [**\OpenAPI\Client\Model\WebinarCreateRequest**](../Model/WebinarCreateRequest.md)|  |
+ **webinar_create_request** | [**\Zoom\Api\Model\WebinarCreateRequest**](../Model/WebinarCreateRequest.md)|  |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\WebinarCreate201Response**](../Model/WebinarCreate201Response.md)
+[**\Zoom\Api\Model\WebinarCreate201Response**](../Model/WebinarCreate201Response.md)
 
 ### Authorization
 
@@ -1437,10 +1437,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1485,7 +1485,7 @@ void (empty response body)
 ## `webinarInviteLinksCreate()`
 
 ```php
-webinarInviteLinksCreate($webinar_id, $meeting_invite_links_create_request): \OpenAPI\Client\Model\MeetingInviteLinksCreate201Response
+webinarInviteLinksCreate($webinar_id, $meeting_invite_links_create_request): \Zoom\Api\Model\MeetingInviteLinksCreate201Response
 ```
 
 Create webinar's invite links
@@ -1500,17 +1500,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $webinar_id = 99289110036; // int | The webinar's ID.
-$meeting_invite_links_create_request = new \OpenAPI\Client\Model\MeetingInviteLinksCreateRequest(); // \OpenAPI\Client\Model\MeetingInviteLinksCreateRequest | Webinar invite link object
+$meeting_invite_links_create_request = new \Zoom\Api\Model\MeetingInviteLinksCreateRequest(); // \Zoom\Api\Model\MeetingInviteLinksCreateRequest | Webinar invite link object
 
 try {
     $result = $apiInstance->webinarInviteLinksCreate($webinar_id, $meeting_invite_links_create_request);
@@ -1525,11 +1525,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **webinar_id** | **int**| The webinar&#39;s ID. |
- **meeting_invite_links_create_request** | [**\OpenAPI\Client\Model\MeetingInviteLinksCreateRequest**](../Model/MeetingInviteLinksCreateRequest.md)| Webinar invite link object |
+ **meeting_invite_links_create_request** | [**\Zoom\Api\Model\MeetingInviteLinksCreateRequest**](../Model/MeetingInviteLinksCreateRequest.md)| Webinar invite link object |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\MeetingInviteLinksCreate201Response**](../Model/MeetingInviteLinksCreate201Response.md)
+[**\Zoom\Api\Model\MeetingInviteLinksCreate201Response**](../Model/MeetingInviteLinksCreate201Response.md)
 
 ### Authorization
 
@@ -1562,17 +1562,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $webinar_id = 99289110036; // int | The webinar's ID.
-$webinar_live_stream_status = new \OpenAPI\Client\Model\WebinarLiveStreamStatus(); // \OpenAPI\Client\Model\WebinarLiveStreamStatus | Webinar
+$webinar_live_stream_status = new \Zoom\Api\Model\WebinarLiveStreamStatus(); // \Zoom\Api\Model\WebinarLiveStreamStatus | Webinar
 
 try {
     $apiInstance->webinarLiveStreamStatusUpdate($webinar_id, $webinar_live_stream_status);
@@ -1586,7 +1586,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **webinar_id** | **int**| The webinar&#39;s ID. |
- **webinar_live_stream_status** | [**\OpenAPI\Client\Model\WebinarLiveStreamStatus**](../Model/WebinarLiveStreamStatus.md)| Webinar |
+ **webinar_live_stream_status** | [**\Zoom\Api\Model\WebinarLiveStreamStatus**](../Model/WebinarLiveStreamStatus.md)| Webinar |
 
 ### Return type
 
@@ -1623,17 +1623,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $webinar_id = 99289110036; // int | The webinar's ID.
-$webinar_live_stream = new \OpenAPI\Client\Model\WebinarLiveStream(); // \OpenAPI\Client\Model\WebinarLiveStream | Webinar
+$webinar_live_stream = new \Zoom\Api\Model\WebinarLiveStream(); // \Zoom\Api\Model\WebinarLiveStream | Webinar
 
 try {
     $apiInstance->webinarLiveStreamUpdate($webinar_id, $webinar_live_stream);
@@ -1647,7 +1647,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **webinar_id** | **int**| The webinar&#39;s ID. |
- **webinar_live_stream** | [**\OpenAPI\Client\Model\WebinarLiveStream**](../Model/WebinarLiveStream.md)| Webinar |
+ **webinar_live_stream** | [**\Zoom\Api\Model\WebinarLiveStream**](../Model/WebinarLiveStream.md)| Webinar |
 
 ### Return type
 
@@ -1669,7 +1669,7 @@ void (empty response body)
 ## `webinarLocalRecordingJoinToken()`
 
 ```php
-webinarLocalRecordingJoinToken($webinar_id): \OpenAPI\Client\Model\WebinarLocalRecordingJoinToken200Response
+webinarLocalRecordingJoinToken($webinar_id): \Zoom\Api\Model\WebinarLocalRecordingJoinToken200Response
 ```
 
 Get a webinar's join token for local recording
@@ -1684,10 +1684,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1711,7 +1711,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\WebinarLocalRecordingJoinToken200Response**](../Model/WebinarLocalRecordingJoinToken200Response.md)
+[**\Zoom\Api\Model\WebinarLocalRecordingJoinToken200Response**](../Model/WebinarLocalRecordingJoinToken200Response.md)
 
 ### Authorization
 
@@ -1744,17 +1744,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $webinar_id = 99289110036; // int | The webinar's ID.
-$webinar_panelist = new \OpenAPI\Client\Model\WebinarPanelist(); // \OpenAPI\Client\Model\WebinarPanelist
+$webinar_panelist = new \Zoom\Api\Model\WebinarPanelist(); // \Zoom\Api\Model\WebinarPanelist
 
 try {
     $apiInstance->webinarPanelistCreate($webinar_id, $webinar_panelist);
@@ -1768,7 +1768,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **webinar_id** | **int**| The webinar&#39;s ID. |
- **webinar_panelist** | [**\OpenAPI\Client\Model\WebinarPanelist**](../Model/WebinarPanelist.md)|  |
+ **webinar_panelist** | [**\Zoom\Api\Model\WebinarPanelist**](../Model/WebinarPanelist.md)|  |
 
 ### Return type
 
@@ -1805,10 +1805,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1851,7 +1851,7 @@ void (empty response body)
 ## `webinarPanelists()`
 
 ```php
-webinarPanelists($webinar_id): \OpenAPI\Client\Model\WebinarPanelistList
+webinarPanelists($webinar_id): \Zoom\Api\Model\WebinarPanelistList
 ```
 
 List panelists
@@ -1866,10 +1866,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1893,7 +1893,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\WebinarPanelistList**](../Model/WebinarPanelistList.md)
+[**\Zoom\Api\Model\WebinarPanelistList**](../Model/WebinarPanelistList.md)
 
 ### Authorization
 
@@ -1926,10 +1926,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1970,7 +1970,7 @@ void (empty response body)
 ## `webinarPollCreate()`
 
 ```php
-webinarPollCreate($webinar_id, $meeting_poll_create_request): \OpenAPI\Client\Model\WebinarPollCreate201Response
+webinarPollCreate($webinar_id, $meeting_poll_create_request): \Zoom\Api\Model\WebinarPollCreate201Response
 ```
 
 Create a webinar's poll
@@ -1985,17 +1985,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $webinar_id = 99289110036; // int | The webinar's ID.
-$meeting_poll_create_request = new \OpenAPI\Client\Model\MeetingPollCreateRequest(); // \OpenAPI\Client\Model\MeetingPollCreateRequest | Webinar poll object
+$meeting_poll_create_request = new \Zoom\Api\Model\MeetingPollCreateRequest(); // \Zoom\Api\Model\MeetingPollCreateRequest | Webinar poll object
 
 try {
     $result = $apiInstance->webinarPollCreate($webinar_id, $meeting_poll_create_request);
@@ -2010,11 +2010,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **webinar_id** | **int**| The webinar&#39;s ID. |
- **meeting_poll_create_request** | [**\OpenAPI\Client\Model\MeetingPollCreateRequest**](../Model/MeetingPollCreateRequest.md)| Webinar poll object |
+ **meeting_poll_create_request** | [**\Zoom\Api\Model\MeetingPollCreateRequest**](../Model/MeetingPollCreateRequest.md)| Webinar poll object |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\WebinarPollCreate201Response**](../Model/WebinarPollCreate201Response.md)
+[**\Zoom\Api\Model\WebinarPollCreate201Response**](../Model/WebinarPollCreate201Response.md)
 
 ### Authorization
 
@@ -2047,10 +2047,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2093,7 +2093,7 @@ void (empty response body)
 ## `webinarPollGet()`
 
 ```php
-webinarPollGet($webinar_id, $poll_id): \OpenAPI\Client\Model\WebinarPollCreate201Response
+webinarPollGet($webinar_id, $poll_id): \Zoom\Api\Model\WebinarPollCreate201Response
 ```
 
 Get a webinar poll
@@ -2108,10 +2108,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2137,7 +2137,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\WebinarPollCreate201Response**](../Model/WebinarPollCreate201Response.md)
+[**\Zoom\Api\Model\WebinarPollCreate201Response**](../Model/WebinarPollCreate201Response.md)
 
 ### Authorization
 
@@ -2170,10 +2170,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2181,7 +2181,7 @@ $apiInstance = new OpenAPI\Client\Api\WebinarsApi(
 );
 $webinar_id = 99289110036; // int | The webinar's ID.
 $poll_id = QalIoKWLTJehBJ8e1xRrbQ; // string | The poll ID
-$meeting_poll_create_request = new \OpenAPI\Client\Model\MeetingPollCreateRequest(); // \OpenAPI\Client\Model\MeetingPollCreateRequest | Webinar Poll
+$meeting_poll_create_request = new \Zoom\Api\Model\MeetingPollCreateRequest(); // \Zoom\Api\Model\MeetingPollCreateRequest | Webinar Poll
 
 try {
     $apiInstance->webinarPollUpdate($webinar_id, $poll_id, $meeting_poll_create_request);
@@ -2196,7 +2196,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **webinar_id** | **int**| The webinar&#39;s ID. |
  **poll_id** | **string**| The poll ID |
- **meeting_poll_create_request** | [**\OpenAPI\Client\Model\MeetingPollCreateRequest**](../Model/MeetingPollCreateRequest.md)| Webinar Poll |
+ **meeting_poll_create_request** | [**\Zoom\Api\Model\MeetingPollCreateRequest**](../Model/MeetingPollCreateRequest.md)| Webinar Poll |
 
 ### Return type
 
@@ -2218,7 +2218,7 @@ void (empty response body)
 ## `webinarPolls()`
 
 ```php
-webinarPolls($webinar_id, $anonymous): \OpenAPI\Client\Model\PollList
+webinarPolls($webinar_id, $anonymous): \Zoom\Api\Model\PollList
 ```
 
 List a webinar's polls
@@ -2233,10 +2233,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2262,7 +2262,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PollList**](../Model/PollList.md)
+[**\Zoom\Api\Model\PollList**](../Model/PollList.md)
 
 ### Authorization
 
@@ -2280,7 +2280,7 @@ Name | Type | Description  | Notes
 ## `webinarRegistrantCreate()`
 
 ```php
-webinarRegistrantCreate($webinar_id, $webinar_registrant_create_request, $occurrence_ids): \OpenAPI\Client\Model\WebinarRegistrantCreate201Response
+webinarRegistrantCreate($webinar_id, $webinar_registrant_create_request, $occurrence_ids): \Zoom\Api\Model\WebinarRegistrantCreate201Response
 ```
 
 Add a webinar registrant
@@ -2295,17 +2295,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $webinar_id = 99289110036; // int | The webinar's ID.
-$webinar_registrant_create_request = new \OpenAPI\Client\Model\WebinarRegistrantCreateRequest(); // \OpenAPI\Client\Model\WebinarRegistrantCreateRequest
+$webinar_registrant_create_request = new \Zoom\Api\Model\WebinarRegistrantCreateRequest(); // \Zoom\Api\Model\WebinarRegistrantCreateRequest
 $occurrence_ids = 1648538280000; // string | A comma-separated list of webinar occurrence IDs. You can get this value with the [Get a webinar](/docs/api-reference/zoom-api/methods/#operation/webinarUpdate) API.
 
 try {
@@ -2321,12 +2321,12 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **webinar_id** | **int**| The webinar&#39;s ID. |
- **webinar_registrant_create_request** | [**\OpenAPI\Client\Model\WebinarRegistrantCreateRequest**](../Model/WebinarRegistrantCreateRequest.md)|  |
+ **webinar_registrant_create_request** | [**\Zoom\Api\Model\WebinarRegistrantCreateRequest**](../Model/WebinarRegistrantCreateRequest.md)|  |
  **occurrence_ids** | **string**| A comma-separated list of webinar occurrence IDs. You can get this value with the [Get a webinar](/docs/api-reference/zoom-api/methods/#operation/webinarUpdate) API. | [optional]
 
 ### Return type
 
-[**\OpenAPI\Client\Model\WebinarRegistrantCreate201Response**](../Model/WebinarRegistrantCreate201Response.md)
+[**\Zoom\Api\Model\WebinarRegistrantCreate201Response**](../Model/WebinarRegistrantCreate201Response.md)
 
 ### Authorization
 
@@ -2344,7 +2344,7 @@ Name | Type | Description  | Notes
 ## `webinarRegistrantGet()`
 
 ```php
-webinarRegistrantGet($webinar_id, $registrant_id, $occurrence_id): \OpenAPI\Client\Model\WebinarRegistrant
+webinarRegistrantGet($webinar_id, $registrant_id, $occurrence_id): \Zoom\Api\Model\WebinarRegistrant
 ```
 
 Get a webinar registrant
@@ -2359,10 +2359,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2390,7 +2390,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\WebinarRegistrant**](../Model/WebinarRegistrant.md)
+[**\Zoom\Api\Model\WebinarRegistrant**](../Model/WebinarRegistrant.md)
 
 ### Authorization
 
@@ -2423,17 +2423,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $webinar_id = 99289110036; // int | The webinar's ID.
-$webinar_registrants_questions_get200_response = new \OpenAPI\Client\Model\WebinarRegistrantsQuestionsGet200Response(); // \OpenAPI\Client\Model\WebinarRegistrantsQuestionsGet200Response | Webinar Registrant Questions
+$webinar_registrants_questions_get200_response = new \Zoom\Api\Model\WebinarRegistrantsQuestionsGet200Response(); // \Zoom\Api\Model\WebinarRegistrantsQuestionsGet200Response | Webinar Registrant Questions
 
 try {
     $apiInstance->webinarRegistrantQuestionUpdate($webinar_id, $webinar_registrants_questions_get200_response);
@@ -2447,7 +2447,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **webinar_id** | **int**| The webinar&#39;s ID. |
- **webinar_registrants_questions_get200_response** | [**\OpenAPI\Client\Model\WebinarRegistrantsQuestionsGet200Response**](../Model/WebinarRegistrantsQuestionsGet200Response.md)| Webinar Registrant Questions |
+ **webinar_registrants_questions_get200_response** | [**\Zoom\Api\Model\WebinarRegistrantsQuestionsGet200Response**](../Model/WebinarRegistrantsQuestionsGet200Response.md)| Webinar Registrant Questions |
 
 ### Return type
 
@@ -2484,17 +2484,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $webinar_id = 99289110036; // int | The webinar's ID.
-$webinar_registrant_status_request = new \OpenAPI\Client\Model\WebinarRegistrantStatusRequest(); // \OpenAPI\Client\Model\WebinarRegistrantStatusRequest
+$webinar_registrant_status_request = new \Zoom\Api\Model\WebinarRegistrantStatusRequest(); // \Zoom\Api\Model\WebinarRegistrantStatusRequest
 $occurrence_id = 1648194360000; // string | The meeting or webinar occurrence ID.
 
 try {
@@ -2509,7 +2509,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **webinar_id** | **int**| The webinar&#39;s ID. |
- **webinar_registrant_status_request** | [**\OpenAPI\Client\Model\WebinarRegistrantStatusRequest**](../Model/WebinarRegistrantStatusRequest.md)|  |
+ **webinar_registrant_status_request** | [**\Zoom\Api\Model\WebinarRegistrantStatusRequest**](../Model/WebinarRegistrantStatusRequest.md)|  |
  **occurrence_id** | **string**| The meeting or webinar occurrence ID. | [optional]
 
 ### Return type
@@ -2532,7 +2532,7 @@ void (empty response body)
 ## `webinarRegistrants()`
 
 ```php
-webinarRegistrants($webinar_id, $occurrence_id, $status, $tracking_source_id, $page_size, $page_number, $next_page_token): \OpenAPI\Client\Model\WebinarRegistrantList
+webinarRegistrants($webinar_id, $occurrence_id, $status, $tracking_source_id, $page_size, $page_number, $next_page_token): \Zoom\Api\Model\WebinarRegistrantList
 ```
 
 List webinar registrants
@@ -2547,10 +2547,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2586,7 +2586,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\WebinarRegistrantList**](../Model/WebinarRegistrantList.md)
+[**\Zoom\Api\Model\WebinarRegistrantList**](../Model/WebinarRegistrantList.md)
 
 ### Authorization
 
@@ -2604,7 +2604,7 @@ Name | Type | Description  | Notes
 ## `webinarRegistrantsQuestionsGet()`
 
 ```php
-webinarRegistrantsQuestionsGet($webinar_id): \OpenAPI\Client\Model\WebinarRegistrantsQuestionsGet200Response
+webinarRegistrantsQuestionsGet($webinar_id): \Zoom\Api\Model\WebinarRegistrantsQuestionsGet200Response
 ```
 
 List registration questions
@@ -2619,10 +2619,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2646,7 +2646,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\WebinarRegistrantsQuestionsGet200Response**](../Model/WebinarRegistrantsQuestionsGet200Response.md)
+[**\Zoom\Api\Model\WebinarRegistrantsQuestionsGet200Response**](../Model/WebinarRegistrantsQuestionsGet200Response.md)
 
 ### Authorization
 
@@ -2679,17 +2679,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $webinar_id = 99289110036; // int | The webinar's ID.
-$webinar_status_request = new \OpenAPI\Client\Model\WebinarStatusRequest(); // \OpenAPI\Client\Model\WebinarStatusRequest
+$webinar_status_request = new \Zoom\Api\Model\WebinarStatusRequest(); // \Zoom\Api\Model\WebinarStatusRequest
 
 try {
     $apiInstance->webinarStatus($webinar_id, $webinar_status_request);
@@ -2703,7 +2703,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **webinar_id** | **int**| The webinar&#39;s ID. |
- **webinar_status_request** | [**\OpenAPI\Client\Model\WebinarStatusRequest**](../Model/WebinarStatusRequest.md)|  |
+ **webinar_status_request** | [**\Zoom\Api\Model\WebinarStatusRequest**](../Model/WebinarStatusRequest.md)|  |
 
 ### Return type
 
@@ -2740,10 +2740,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2784,7 +2784,7 @@ void (empty response body)
 ## `webinarSurveyGet()`
 
 ```php
-webinarSurveyGet($webinar_id): \OpenAPI\Client\Model\WebinarSurveyGet200Response
+webinarSurveyGet($webinar_id): \Zoom\Api\Model\WebinarSurveyGet200Response
 ```
 
 Get a webinar survey
@@ -2799,10 +2799,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2826,7 +2826,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\WebinarSurveyGet200Response**](../Model/WebinarSurveyGet200Response.md)
+[**\Zoom\Api\Model\WebinarSurveyGet200Response**](../Model/WebinarSurveyGet200Response.md)
 
 ### Authorization
 
@@ -2859,17 +2859,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $webinar_id = 99289110036; // int | The webinar's ID.
-$webinar_survey_get200_response = new \OpenAPI\Client\Model\WebinarSurveyGet200Response(); // \OpenAPI\Client\Model\WebinarSurveyGet200Response
+$webinar_survey_get200_response = new \Zoom\Api\Model\WebinarSurveyGet200Response(); // \Zoom\Api\Model\WebinarSurveyGet200Response
 
 try {
     $apiInstance->webinarSurveyUpdate($webinar_id, $webinar_survey_get200_response);
@@ -2883,7 +2883,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **webinar_id** | **int**| The webinar&#39;s ID. |
- **webinar_survey_get200_response** | [**\OpenAPI\Client\Model\WebinarSurveyGet200Response**](../Model/WebinarSurveyGet200Response.md)|  |
+ **webinar_survey_get200_response** | [**\Zoom\Api\Model\WebinarSurveyGet200Response**](../Model/WebinarSurveyGet200Response.md)|  |
 
 ### Return type
 
@@ -2905,7 +2905,7 @@ void (empty response body)
 ## `webinarToken()`
 
 ```php
-webinarToken($webinar_id, $type): \OpenAPI\Client\Model\WebinarToken200Response
+webinarToken($webinar_id, $type): \Zoom\Api\Model\WebinarToken200Response
 ```
 
 Get webinar's token
@@ -2920,10 +2920,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2949,7 +2949,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\WebinarToken200Response**](../Model/WebinarToken200Response.md)
+[**\Zoom\Api\Model\WebinarToken200Response**](../Model/WebinarToken200Response.md)
 
 ### Authorization
 
@@ -2982,17 +2982,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $webinar_id = 99289110036; // int | The webinar's ID.
-$webinar_update = new \OpenAPI\Client\Model\WebinarUpdate(); // \OpenAPI\Client\Model\WebinarUpdate | Webinar.
+$webinar_update = new \Zoom\Api\Model\WebinarUpdate(); // \Zoom\Api\Model\WebinarUpdate | Webinar.
 $occurrence_id = 1648538280000; // string | Webinar occurrence id. Support change of agenda, start_time, duration, settings: {host_video, panelist_video, hd_video, watermark, auto_recording}
 
 try {
@@ -3007,7 +3007,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **webinar_id** | **int**| The webinar&#39;s ID. |
- **webinar_update** | [**\OpenAPI\Client\Model\WebinarUpdate**](../Model/WebinarUpdate.md)| Webinar. |
+ **webinar_update** | [**\Zoom\Api\Model\WebinarUpdate**](../Model/WebinarUpdate.md)| Webinar. |
  **occurrence_id** | **string**| Webinar occurrence id. Support change of agenda, start_time, duration, settings: {host_video, panelist_video, hd_video, watermark, auto_recording} | [optional]
 
 ### Return type
@@ -3030,7 +3030,7 @@ void (empty response body)
 ## `webinars()`
 
 ```php
-webinars($user_id, $page_size, $page_number): \OpenAPI\Client\Model\WebinarList
+webinars($user_id, $page_size, $page_number): \Zoom\Api\Model\WebinarList
 ```
 
 List webinars
@@ -3045,16 +3045,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\WebinarsApi(
+$apiInstance = new Zoom\Api\Api\WebinarsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = new \OpenAPI\Client\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
+$user_id = new \Zoom\Api\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
 $page_size = 30; // int | The number of records returned within a single API call.
 $page_number = 1; // int | **Deprecated.** We will no longer support this field in a future release. Instead, use the `next_page_token` for pagination.
 
@@ -3076,7 +3076,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\WebinarList**](../Model/WebinarList.md)
+[**\Zoom\Api\Model\WebinarList**](../Model/WebinarList.md)
 
 ### Authorization
 

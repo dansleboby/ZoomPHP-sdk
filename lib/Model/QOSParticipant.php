@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * QOSParticipant Class Doc Comment
  *
  * @category Class
  * @description Information about the participant and their quality of service (QoS).
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -70,7 +70,7 @@ class QOSParticipant implements ModelInterface, ArrayAccess, \JsonSerializable
         'pc_name' => 'string',
         'user_id' => 'string',
         'user_name' => 'string',
-        'user_qos' => '\OpenAPI\Client\Model\QOSParticipantUserQosInner[]',
+        'user_qos' => '\Zoom\Api\Model\QOSParticipantUserQosInner[]',
         'version' => 'string'
     ];
 
@@ -615,7 +615,7 @@ class QOSParticipant implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets user_qos
      *
-     * @return \OpenAPI\Client\Model\QOSParticipantUserQosInner[]|null
+     * @return \Zoom\Api\Model\QOSParticipantUserQosInner[]|null
      */
     public function getUserQos()
     {
@@ -625,7 +625,7 @@ class QOSParticipant implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets user_qos
      *
-     * @param \OpenAPI\Client\Model\QOSParticipantUserQosInner[]|null $user_qos The participant's quality of service information.
+     * @param \Zoom\Api\Model\QOSParticipantUserQosInner[]|null $user_qos The participant's quality of service information.
      *
      * @return self
      */

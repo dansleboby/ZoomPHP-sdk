@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Zoom\Api\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Zoom\Api\ApiException;
+use Zoom\Api\Configuration;
+use Zoom\Api\HeaderSelector;
+use Zoom\Api\ObjectSerializer;
 
 /**
  * RolesApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -121,11 +121,11 @@ class RolesApi
      * Assign a role
      *
      * @param  string $role_id The role ID (required)
-     * @param  \OpenAPI\Client\Model\AddRoleMembersRequest $add_role_members_request Role members (required)
+     * @param  \Zoom\Api\Model\AddRoleMembersRequest $add_role_members_request Role members (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\AddRoleMembers201Response
+     * @return \Zoom\Api\Model\AddRoleMembers201Response
      */
     public function addRoleMembers($role_id, $add_role_members_request)
     {
@@ -139,11 +139,11 @@ class RolesApi
      * Assign a role
      *
      * @param  string $role_id The role ID (required)
-     * @param  \OpenAPI\Client\Model\AddRoleMembersRequest $add_role_members_request Role members (required)
+     * @param  \Zoom\Api\Model\AddRoleMembersRequest $add_role_members_request Role members (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\AddRoleMembers201Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\AddRoleMembers201Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function addRoleMembersWithHttpInfo($role_id, $add_role_members_request)
     {
@@ -186,23 +186,23 @@ class RolesApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\OpenAPI\Client\Model\AddRoleMembers201Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\AddRoleMembers201Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\AddRoleMembers201Response' !== 'string') {
+                        if ('\Zoom\Api\Model\AddRoleMembers201Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\AddRoleMembers201Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\AddRoleMembers201Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\AddRoleMembers201Response';
+            $returnType = '\Zoom\Api\Model\AddRoleMembers201Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -223,7 +223,7 @@ class RolesApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\AddRoleMembers201Response',
+                        '\Zoom\Api\Model\AddRoleMembers201Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -239,7 +239,7 @@ class RolesApi
      * Assign a role
      *
      * @param  string $role_id The role ID (required)
-     * @param  \OpenAPI\Client\Model\AddRoleMembersRequest $add_role_members_request Role members (required)
+     * @param  \Zoom\Api\Model\AddRoleMembersRequest $add_role_members_request Role members (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -260,14 +260,14 @@ class RolesApi
      * Assign a role
      *
      * @param  string $role_id The role ID (required)
-     * @param  \OpenAPI\Client\Model\AddRoleMembersRequest $add_role_members_request Role members (required)
+     * @param  \Zoom\Api\Model\AddRoleMembersRequest $add_role_members_request Role members (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function addRoleMembersAsyncWithHttpInfo($role_id, $add_role_members_request)
     {
-        $returnType = '\OpenAPI\Client\Model\AddRoleMembers201Response';
+        $returnType = '\Zoom\Api\Model\AddRoleMembers201Response';
         $request = $this->addRoleMembersRequest($role_id, $add_role_members_request);
 
         return $this->client
@@ -310,7 +310,7 @@ class RolesApi
      * Create request for operation 'addRoleMembers'
      *
      * @param  string $role_id The role ID (required)
-     * @param  \OpenAPI\Client\Model\AddRoleMembersRequest $add_role_members_request Role members (required)
+     * @param  \Zoom\Api\Model\AddRoleMembersRequest $add_role_members_request Role members (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -421,11 +421,11 @@ class RolesApi
      *
      * Create a role
      *
-     * @param  \OpenAPI\Client\Model\CreateRoleRequest $create_role_request create_role_request (optional)
+     * @param  \Zoom\Api\Model\CreateRoleRequest $create_role_request create_role_request (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return mixed|\OpenAPI\Client\Model\CreateRole201Response
+     * @return mixed|\Zoom\Api\Model\CreateRole201Response
      */
     public function createRole($create_role_request = null)
     {
@@ -438,11 +438,11 @@ class RolesApi
      *
      * Create a role
      *
-     * @param  \OpenAPI\Client\Model\CreateRoleRequest $create_role_request (optional)
+     * @param  \Zoom\Api\Model\CreateRoleRequest $create_role_request (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of mixed|\OpenAPI\Client\Model\CreateRole201Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of mixed|\Zoom\Api\Model\CreateRole201Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function createRoleWithHttpInfo($create_role_request = null)
     {
@@ -500,17 +500,17 @@ class RolesApi
                         $response->getHeaders()
                     ];
                 case 201:
-                    if ('\OpenAPI\Client\Model\CreateRole201Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\CreateRole201Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\CreateRole201Response' !== 'string') {
+                        if ('\Zoom\Api\Model\CreateRole201Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CreateRole201Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\CreateRole201Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -545,7 +545,7 @@ class RolesApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\CreateRole201Response',
+                        '\Zoom\Api\Model\CreateRole201Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -560,7 +560,7 @@ class RolesApi
      *
      * Create a role
      *
-     * @param  \OpenAPI\Client\Model\CreateRoleRequest $create_role_request (optional)
+     * @param  \Zoom\Api\Model\CreateRoleRequest $create_role_request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -580,7 +580,7 @@ class RolesApi
      *
      * Create a role
      *
-     * @param  \OpenAPI\Client\Model\CreateRoleRequest $create_role_request (optional)
+     * @param  \Zoom\Api\Model\CreateRoleRequest $create_role_request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -629,7 +629,7 @@ class RolesApi
     /**
      * Create request for operation 'createRole'
      *
-     * @param  \OpenAPI\Client\Model\CreateRoleRequest $create_role_request (optional)
+     * @param  \Zoom\Api\Model\CreateRoleRequest $create_role_request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -722,7 +722,7 @@ class RolesApi
      *
      * @param  string $role_id role_id (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -738,7 +738,7 @@ class RolesApi
      *
      * @param  string $role_id (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -952,9 +952,9 @@ class RolesApi
      *
      * @param  string $role_id Role Id. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\GetRoleInformation200Response
+     * @return \Zoom\Api\Model\GetRoleInformation200Response
      */
     public function getRoleInformation($role_id)
     {
@@ -969,9 +969,9 @@ class RolesApi
      *
      * @param  string $role_id Role Id. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\GetRoleInformation200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\GetRoleInformation200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function getRoleInformationWithHttpInfo($role_id)
     {
@@ -1014,23 +1014,23 @@ class RolesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\GetRoleInformation200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\GetRoleInformation200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\GetRoleInformation200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\GetRoleInformation200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\GetRoleInformation200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\GetRoleInformation200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\GetRoleInformation200Response';
+            $returnType = '\Zoom\Api\Model\GetRoleInformation200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1051,7 +1051,7 @@ class RolesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\GetRoleInformation200Response',
+                        '\Zoom\Api\Model\GetRoleInformation200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1093,7 +1093,7 @@ class RolesApi
      */
     public function getRoleInformationAsyncWithHttpInfo($role_id)
     {
-        $returnType = '\OpenAPI\Client\Model\GetRoleInformation200Response';
+        $returnType = '\Zoom\Api\Model\GetRoleInformation200Response';
         $request = $this->getRoleInformationRequest($role_id);
 
         return $this->client
@@ -1237,7 +1237,7 @@ class RolesApi
      * @param  string $role_id The role ID (required)
      * @param  string $member_id Member&#39;s ID (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1254,7 +1254,7 @@ class RolesApi
      * @param  string $role_id The role ID (required)
      * @param  string $member_id Member&#39;s ID (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1489,9 +1489,9 @@ class RolesApi
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      * @param  int $page_size The number of records returned within a single API call. (optional, default to 30)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\RoleMembersList
+     * @return \Zoom\Api\Model\RoleMembersList
      */
     public function roleMembers($role_id, $page_count = null, $page_number = 1, $next_page_token = null, $page_size = 30)
     {
@@ -1510,9 +1510,9 @@ class RolesApi
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      * @param  int $page_size The number of records returned within a single API call. (optional, default to 30)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\RoleMembersList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\RoleMembersList, HTTP status code, HTTP response headers (array of strings)
      */
     public function roleMembersWithHttpInfo($role_id, $page_count = null, $page_number = 1, $next_page_token = null, $page_size = 30)
     {
@@ -1555,23 +1555,23 @@ class RolesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\RoleMembersList' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\RoleMembersList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\RoleMembersList' !== 'string') {
+                        if ('\Zoom\Api\Model\RoleMembersList' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\RoleMembersList', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\RoleMembersList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\RoleMembersList';
+            $returnType = '\Zoom\Api\Model\RoleMembersList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1592,7 +1592,7 @@ class RolesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\RoleMembersList',
+                        '\Zoom\Api\Model\RoleMembersList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1642,7 +1642,7 @@ class RolesApi
      */
     public function roleMembersAsyncWithHttpInfo($role_id, $page_count = null, $page_number = 1, $next_page_token = null, $page_size = 30)
     {
-        $returnType = '\OpenAPI\Client\Model\RoleMembersList';
+        $returnType = '\Zoom\Api\Model\RoleMembersList';
         $request = $this->roleMembersRequest($role_id, $page_count, $page_number, $next_page_token, $page_size);
 
         return $this->client
@@ -1828,9 +1828,9 @@ class RolesApi
      * List roles
      *
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\RoleList
+     * @return \Zoom\Api\Model\RoleList
      */
     public function roles()
     {
@@ -1844,9 +1844,9 @@ class RolesApi
      * List roles
      *
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\RoleList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\RoleList, HTTP status code, HTTP response headers (array of strings)
      */
     public function rolesWithHttpInfo()
     {
@@ -1889,23 +1889,23 @@ class RolesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\RoleList' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\RoleList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\RoleList' !== 'string') {
+                        if ('\Zoom\Api\Model\RoleList' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\RoleList', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\RoleList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\RoleList';
+            $returnType = '\Zoom\Api\Model\RoleList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1926,7 +1926,7 @@ class RolesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\RoleList',
+                        '\Zoom\Api\Model\RoleList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1966,7 +1966,7 @@ class RolesApi
      */
     public function rolesAsyncWithHttpInfo()
     {
-        $returnType = '\OpenAPI\Client\Model\RoleList';
+        $returnType = '\Zoom\Api\Model\RoleList';
         $request = $this->rolesRequest();
 
         return $this->client
@@ -2093,9 +2093,9 @@ class RolesApi
      * Update role information
      *
      * @param  string $role_id role_id (required)
-     * @param  \OpenAPI\Client\Model\UpdateRoleRequest $update_role_request update_role_request (optional)
+     * @param  \Zoom\Api\Model\UpdateRoleRequest $update_role_request update_role_request (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return mixed
      */
@@ -2111,9 +2111,9 @@ class RolesApi
      * Update role information
      *
      * @param  string $role_id (required)
-     * @param  \OpenAPI\Client\Model\UpdateRoleRequest $update_role_request (optional)
+     * @param  \Zoom\Api\Model\UpdateRoleRequest $update_role_request (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of mixed, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2211,7 +2211,7 @@ class RolesApi
      * Update role information
      *
      * @param  string $role_id (required)
-     * @param  \OpenAPI\Client\Model\UpdateRoleRequest $update_role_request (optional)
+     * @param  \Zoom\Api\Model\UpdateRoleRequest $update_role_request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2232,7 +2232,7 @@ class RolesApi
      * Update role information
      *
      * @param  string $role_id (required)
-     * @param  \OpenAPI\Client\Model\UpdateRoleRequest $update_role_request (optional)
+     * @param  \Zoom\Api\Model\UpdateRoleRequest $update_role_request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2282,7 +2282,7 @@ class RolesApi
      * Create request for operation 'updateRole'
      *
      * @param  string $role_id (required)
-     * @param  \OpenAPI\Client\Model\UpdateRoleRequest $update_role_request (optional)
+     * @param  \Zoom\Api\Model\UpdateRoleRequest $update_role_request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

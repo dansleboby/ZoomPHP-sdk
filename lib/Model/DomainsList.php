@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * DomainsList Class Doc Comment
  *
  * @category Class
  * @description Information about the account&#39;s managed domains.
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class DomainsList implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'domains' => '\OpenAPI\Client\Model\DomainsListDomainsInner[]',
+        'domains' => '\Zoom\Api\Model\DomainsListDomainsInner[]',
         'total_records' => 'int'
     ];
 
@@ -213,7 +213,7 @@ class DomainsList implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets domains
      *
-     * @return \OpenAPI\Client\Model\DomainsListDomainsInner[]|null
+     * @return \Zoom\Api\Model\DomainsListDomainsInner[]|null
      */
     public function getDomains()
     {
@@ -223,7 +223,7 @@ class DomainsList implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets domains
      *
-     * @param \OpenAPI\Client\Model\DomainsListDomainsInner[]|null $domains Information about the managed domains.
+     * @param \Zoom\Api\Model\DomainsListDomainsInner[]|null $domains Information about the managed domains.
      *
      * @return self
      */

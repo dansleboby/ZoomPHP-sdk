@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Zoom\Api\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Zoom\Api\ApiException;
+use Zoom\Api\Configuration;
+use Zoom\Api\HeaderSelector;
+use Zoom\Api\ObjectSerializer;
 
 /**
  * CloudRecordingApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -121,11 +121,11 @@ class CloudRecordingApi
      * Create a recording registrant
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
-     * @param  \OpenAPI\Client\Model\MeetingRegistrant $meeting_registrant meeting_registrant (required)
+     * @param  \Zoom\Api\Model\MeetingRegistrant $meeting_registrant meeting_registrant (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\MeetingRecordingRegistrantCreate201Response
+     * @return \Zoom\Api\Model\MeetingRecordingRegistrantCreate201Response
      */
     public function meetingRecordingRegistrantCreate($meeting_id, $meeting_registrant)
     {
@@ -139,11 +139,11 @@ class CloudRecordingApi
      * Create a recording registrant
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
-     * @param  \OpenAPI\Client\Model\MeetingRegistrant $meeting_registrant (required)
+     * @param  \Zoom\Api\Model\MeetingRegistrant $meeting_registrant (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\MeetingRecordingRegistrantCreate201Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\MeetingRecordingRegistrantCreate201Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function meetingRecordingRegistrantCreateWithHttpInfo($meeting_id, $meeting_registrant)
     {
@@ -186,23 +186,23 @@ class CloudRecordingApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\OpenAPI\Client\Model\MeetingRecordingRegistrantCreate201Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\MeetingRecordingRegistrantCreate201Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\MeetingRecordingRegistrantCreate201Response' !== 'string') {
+                        if ('\Zoom\Api\Model\MeetingRecordingRegistrantCreate201Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\MeetingRecordingRegistrantCreate201Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\MeetingRecordingRegistrantCreate201Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\MeetingRecordingRegistrantCreate201Response';
+            $returnType = '\Zoom\Api\Model\MeetingRecordingRegistrantCreate201Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -223,7 +223,7 @@ class CloudRecordingApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\MeetingRecordingRegistrantCreate201Response',
+                        '\Zoom\Api\Model\MeetingRecordingRegistrantCreate201Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -239,7 +239,7 @@ class CloudRecordingApi
      * Create a recording registrant
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
-     * @param  \OpenAPI\Client\Model\MeetingRegistrant $meeting_registrant (required)
+     * @param  \Zoom\Api\Model\MeetingRegistrant $meeting_registrant (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -260,14 +260,14 @@ class CloudRecordingApi
      * Create a recording registrant
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
-     * @param  \OpenAPI\Client\Model\MeetingRegistrant $meeting_registrant (required)
+     * @param  \Zoom\Api\Model\MeetingRegistrant $meeting_registrant (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function meetingRecordingRegistrantCreateAsyncWithHttpInfo($meeting_id, $meeting_registrant)
     {
-        $returnType = '\OpenAPI\Client\Model\MeetingRecordingRegistrantCreate201Response';
+        $returnType = '\Zoom\Api\Model\MeetingRecordingRegistrantCreate201Response';
         $request = $this->meetingRecordingRegistrantCreateRequest($meeting_id, $meeting_registrant);
 
         return $this->client
@@ -310,7 +310,7 @@ class CloudRecordingApi
      * Create request for operation 'meetingRecordingRegistrantCreate'
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
-     * @param  \OpenAPI\Client\Model\MeetingRegistrant $meeting_registrant (required)
+     * @param  \Zoom\Api\Model\MeetingRegistrant $meeting_registrant (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -422,9 +422,9 @@ class CloudRecordingApi
      * Update registrant&#39;s status
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
-     * @param  \OpenAPI\Client\Model\RecordingRegistrantStatus $recording_registrant_status recording_registrant_status (required)
+     * @param  \Zoom\Api\Model\RecordingRegistrantStatus $recording_registrant_status recording_registrant_status (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -439,9 +439,9 @@ class CloudRecordingApi
      * Update registrant&#39;s status
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
-     * @param  \OpenAPI\Client\Model\RecordingRegistrantStatus $recording_registrant_status (required)
+     * @param  \Zoom\Api\Model\RecordingRegistrantStatus $recording_registrant_status (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -499,7 +499,7 @@ class CloudRecordingApi
      * Update registrant&#39;s status
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
-     * @param  \OpenAPI\Client\Model\RecordingRegistrantStatus $recording_registrant_status (required)
+     * @param  \Zoom\Api\Model\RecordingRegistrantStatus $recording_registrant_status (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -520,7 +520,7 @@ class CloudRecordingApi
      * Update registrant&#39;s status
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
-     * @param  \OpenAPI\Client\Model\RecordingRegistrantStatus $recording_registrant_status (required)
+     * @param  \Zoom\Api\Model\RecordingRegistrantStatus $recording_registrant_status (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -557,7 +557,7 @@ class CloudRecordingApi
      * Create request for operation 'meetingRecordingRegistrantStatus'
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
-     * @param  \OpenAPI\Client\Model\RecordingRegistrantStatus $recording_registrant_status (required)
+     * @param  \Zoom\Api\Model\RecordingRegistrantStatus $recording_registrant_status (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -674,9 +674,9 @@ class CloudRecordingApi
      * @param  int $page_number **Deprecated.** We will no longer support this field in a future release. Instead, use the &#x60;next_page_token&#x60; for pagination. (optional, default to 1) (deprecated)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\MeetingRecordingRegistrantList
+     * @return \Zoom\Api\Model\MeetingRecordingRegistrantList
      */
     public function meetingRecordingRegistrants($meeting_id, $status = 'approved', $page_size = 30, $page_number = 1, $next_page_token = null)
     {
@@ -695,9 +695,9 @@ class CloudRecordingApi
      * @param  int $page_number **Deprecated.** We will no longer support this field in a future release. Instead, use the &#x60;next_page_token&#x60; for pagination. (optional, default to 1) (deprecated)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\MeetingRecordingRegistrantList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\MeetingRecordingRegistrantList, HTTP status code, HTTP response headers (array of strings)
      */
     public function meetingRecordingRegistrantsWithHttpInfo($meeting_id, $status = 'approved', $page_size = 30, $page_number = 1, $next_page_token = null)
     {
@@ -740,23 +740,23 @@ class CloudRecordingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\MeetingRecordingRegistrantList' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\MeetingRecordingRegistrantList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\MeetingRecordingRegistrantList' !== 'string') {
+                        if ('\Zoom\Api\Model\MeetingRecordingRegistrantList' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\MeetingRecordingRegistrantList', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\MeetingRecordingRegistrantList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\MeetingRecordingRegistrantList';
+            $returnType = '\Zoom\Api\Model\MeetingRecordingRegistrantList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -777,7 +777,7 @@ class CloudRecordingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\MeetingRecordingRegistrantList',
+                        '\Zoom\Api\Model\MeetingRecordingRegistrantList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -827,7 +827,7 @@ class CloudRecordingApi
      */
     public function meetingRecordingRegistrantsAsyncWithHttpInfo($meeting_id, $status = 'approved', $page_size = 30, $page_number = 1, $next_page_token = null)
     {
-        $returnType = '\OpenAPI\Client\Model\MeetingRecordingRegistrantList';
+        $returnType = '\Zoom\Api\Model\MeetingRecordingRegistrantList';
         $request = $this->meetingRecordingRegistrantsRequest($meeting_id, $status, $page_size, $page_number, $next_page_token);
 
         return $this->client
@@ -1015,7 +1015,7 @@ class CloudRecordingApi
      * @param  string $meeting_id To get Cloud Recordings of a meeting, provide the meeting ID or meeting UUID. If the meeting ID is provided instead of UUID,the response will be for the latest meeting instance.   To get Cloud Recordings of a webinar, provide the webinar ID or the webinar UUID. If the webinar ID is provided instead of UUID,the response will be for the latest webinar instance.   If a UUID starts with \&quot;/\&quot; or contains \&quot;//\&quot; (example: \&quot;/ajXp112QmuoKj4854875&#x3D;&#x3D;\&quot;), you must **double encode** the UUID before making an API request. (required)
      * @param  string $action The recording delete actions:&lt;br&gt;&#x60;trash&#x60; - Move recording to trash.&lt;br&gt;&#x60;delete&#x60; - Delete recording permanently. (optional, default to 'trash')
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1032,7 +1032,7 @@ class CloudRecordingApi
      * @param  string $meeting_id To get Cloud Recordings of a meeting, provide the meeting ID or meeting UUID. If the meeting ID is provided instead of UUID,the response will be for the latest meeting instance.   To get Cloud Recordings of a webinar, provide the webinar ID or the webinar UUID. If the webinar ID is provided instead of UUID,the response will be for the latest webinar instance.   If a UUID starts with \&quot;/\&quot; or contains \&quot;//\&quot; (example: \&quot;/ajXp112QmuoKj4854875&#x3D;&#x3D;\&quot;), you must **double encode** the UUID before making an API request. (required)
      * @param  string $action The recording delete actions:&lt;br&gt;&#x60;trash&#x60; - Move recording to trash.&lt;br&gt;&#x60;delete&#x60; - Delete recording permanently. (optional, default to 'trash')
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1260,7 +1260,7 @@ class CloudRecordingApi
      * @param  string $recording_id The recording ID. (required)
      * @param  string $action The recording delete actions:&lt;br&gt;&#x60;trash&#x60; - Move recording to trash.&lt;br&gt;&#x60;delete&#x60; - Delete recording permanently. (optional, default to 'trash')
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1278,7 +1278,7 @@ class CloudRecordingApi
      * @param  string $recording_id The recording ID. (required)
      * @param  string $action The recording delete actions:&lt;br&gt;&#x60;trash&#x60; - Move recording to trash.&lt;br&gt;&#x60;delete&#x60; - Delete recording permanently. (optional, default to 'trash')
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1523,9 +1523,9 @@ class CloudRecordingApi
      * @param  string $include_fields The &#x60;download_access_token&#x60; value for downloading the meeting&#39;s recordings. (optional)
      * @param  int $ttl The &#x60;download_access_token&#x60; Time to Live (TTL) value. This parameter is only valid if the &#x60;include_fields&#x60; query parameter contains the &#x60;download_access_token&#x60; value. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\RecordingGet200Response
+     * @return \Zoom\Api\Model\RecordingGet200Response
      */
     public function recordingGet($meeting_id, $include_fields = null, $ttl = null)
     {
@@ -1542,9 +1542,9 @@ class CloudRecordingApi
      * @param  string $include_fields The &#x60;download_access_token&#x60; value for downloading the meeting&#39;s recordings. (optional)
      * @param  int $ttl The &#x60;download_access_token&#x60; Time to Live (TTL) value. This parameter is only valid if the &#x60;include_fields&#x60; query parameter contains the &#x60;download_access_token&#x60; value. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\RecordingGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\RecordingGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function recordingGetWithHttpInfo($meeting_id, $include_fields = null, $ttl = null)
     {
@@ -1587,23 +1587,23 @@ class CloudRecordingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\RecordingGet200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\RecordingGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\RecordingGet200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\RecordingGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\RecordingGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\RecordingGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\RecordingGet200Response';
+            $returnType = '\Zoom\Api\Model\RecordingGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1624,7 +1624,7 @@ class CloudRecordingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\RecordingGet200Response',
+                        '\Zoom\Api\Model\RecordingGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1670,7 +1670,7 @@ class CloudRecordingApi
      */
     public function recordingGetAsyncWithHttpInfo($meeting_id, $include_fields = null, $ttl = null)
     {
-        $returnType = '\OpenAPI\Client\Model\RecordingGet200Response';
+        $returnType = '\Zoom\Api\Model\RecordingGet200Response';
         $request = $this->recordingGetRequest($meeting_id, $include_fields, $ttl);
 
         return $this->client
@@ -1839,9 +1839,9 @@ class CloudRecordingApi
      * Update registration questions
      *
      * @param  string $meeting_id To get Cloud Recordings of a meeting, provide the meeting ID or meeting UUID. If the meeting ID is provided instead of UUID,the response will be for the latest meeting instance.   To get Cloud Recordings of a webinar, provide the webinar ID or the webinar UUID. If the webinar ID is provided instead of UUID,the response will be for the latest webinar instance.   If a UUID starts with \&quot;/\&quot; or contains \&quot;//\&quot; (example: \&quot;/ajXp112QmuoKj4854875&#x3D;&#x3D;\&quot;), you must **double encode** the UUID before making an API request. (required)
-     * @param  \OpenAPI\Client\Model\RecordingRegistrantQuestionUpdateRequest $recording_registrant_question_update_request Recording Registrant Questions (required)
+     * @param  \Zoom\Api\Model\RecordingRegistrantQuestionUpdateRequest $recording_registrant_question_update_request Recording Registrant Questions (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1856,9 +1856,9 @@ class CloudRecordingApi
      * Update registration questions
      *
      * @param  string $meeting_id To get Cloud Recordings of a meeting, provide the meeting ID or meeting UUID. If the meeting ID is provided instead of UUID,the response will be for the latest meeting instance.   To get Cloud Recordings of a webinar, provide the webinar ID or the webinar UUID. If the webinar ID is provided instead of UUID,the response will be for the latest webinar instance.   If a UUID starts with \&quot;/\&quot; or contains \&quot;//\&quot; (example: \&quot;/ajXp112QmuoKj4854875&#x3D;&#x3D;\&quot;), you must **double encode** the UUID before making an API request. (required)
-     * @param  \OpenAPI\Client\Model\RecordingRegistrantQuestionUpdateRequest $recording_registrant_question_update_request Recording Registrant Questions (required)
+     * @param  \Zoom\Api\Model\RecordingRegistrantQuestionUpdateRequest $recording_registrant_question_update_request Recording Registrant Questions (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1916,7 +1916,7 @@ class CloudRecordingApi
      * Update registration questions
      *
      * @param  string $meeting_id To get Cloud Recordings of a meeting, provide the meeting ID or meeting UUID. If the meeting ID is provided instead of UUID,the response will be for the latest meeting instance.   To get Cloud Recordings of a webinar, provide the webinar ID or the webinar UUID. If the webinar ID is provided instead of UUID,the response will be for the latest webinar instance.   If a UUID starts with \&quot;/\&quot; or contains \&quot;//\&quot; (example: \&quot;/ajXp112QmuoKj4854875&#x3D;&#x3D;\&quot;), you must **double encode** the UUID before making an API request. (required)
-     * @param  \OpenAPI\Client\Model\RecordingRegistrantQuestionUpdateRequest $recording_registrant_question_update_request Recording Registrant Questions (required)
+     * @param  \Zoom\Api\Model\RecordingRegistrantQuestionUpdateRequest $recording_registrant_question_update_request Recording Registrant Questions (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1937,7 +1937,7 @@ class CloudRecordingApi
      * Update registration questions
      *
      * @param  string $meeting_id To get Cloud Recordings of a meeting, provide the meeting ID or meeting UUID. If the meeting ID is provided instead of UUID,the response will be for the latest meeting instance.   To get Cloud Recordings of a webinar, provide the webinar ID or the webinar UUID. If the webinar ID is provided instead of UUID,the response will be for the latest webinar instance.   If a UUID starts with \&quot;/\&quot; or contains \&quot;//\&quot; (example: \&quot;/ajXp112QmuoKj4854875&#x3D;&#x3D;\&quot;), you must **double encode** the UUID before making an API request. (required)
-     * @param  \OpenAPI\Client\Model\RecordingRegistrantQuestionUpdateRequest $recording_registrant_question_update_request Recording Registrant Questions (required)
+     * @param  \Zoom\Api\Model\RecordingRegistrantQuestionUpdateRequest $recording_registrant_question_update_request Recording Registrant Questions (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1974,7 +1974,7 @@ class CloudRecordingApi
      * Create request for operation 'recordingRegistrantQuestionUpdate'
      *
      * @param  string $meeting_id To get Cloud Recordings of a meeting, provide the meeting ID or meeting UUID. If the meeting ID is provided instead of UUID,the response will be for the latest meeting instance.   To get Cloud Recordings of a webinar, provide the webinar ID or the webinar UUID. If the webinar ID is provided instead of UUID,the response will be for the latest webinar instance.   If a UUID starts with \&quot;/\&quot; or contains \&quot;//\&quot; (example: \&quot;/ajXp112QmuoKj4854875&#x3D;&#x3D;\&quot;), you must **double encode** the UUID before making an API request. (required)
-     * @param  \OpenAPI\Client\Model\RecordingRegistrantQuestionUpdateRequest $recording_registrant_question_update_request Recording Registrant Questions (required)
+     * @param  \Zoom\Api\Model\RecordingRegistrantQuestionUpdateRequest $recording_registrant_question_update_request Recording Registrant Questions (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2087,9 +2087,9 @@ class CloudRecordingApi
      *
      * @param  string $meeting_id To get Cloud Recordings of a meeting, provide the meeting ID or meeting UUID. If the meeting ID is provided instead of UUID,the response will be for the latest meeting instance.   To get Cloud Recordings of a webinar, provide the webinar ID or the webinar UUID. If the webinar ID is provided instead of UUID,the response will be for the latest webinar instance.   If a UUID starts with \&quot;/\&quot; or contains \&quot;//\&quot; (example: \&quot;/ajXp112QmuoKj4854875&#x3D;&#x3D;\&quot;), you must **double encode** the UUID before making an API request. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\RecordingRegistrantQuestions
+     * @return \Zoom\Api\Model\RecordingRegistrantQuestions
      */
     public function recordingRegistrantsQuestionsGet($meeting_id)
     {
@@ -2104,9 +2104,9 @@ class CloudRecordingApi
      *
      * @param  string $meeting_id To get Cloud Recordings of a meeting, provide the meeting ID or meeting UUID. If the meeting ID is provided instead of UUID,the response will be for the latest meeting instance.   To get Cloud Recordings of a webinar, provide the webinar ID or the webinar UUID. If the webinar ID is provided instead of UUID,the response will be for the latest webinar instance.   If a UUID starts with \&quot;/\&quot; or contains \&quot;//\&quot; (example: \&quot;/ajXp112QmuoKj4854875&#x3D;&#x3D;\&quot;), you must **double encode** the UUID before making an API request. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\RecordingRegistrantQuestions, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\RecordingRegistrantQuestions, HTTP status code, HTTP response headers (array of strings)
      */
     public function recordingRegistrantsQuestionsGetWithHttpInfo($meeting_id)
     {
@@ -2149,23 +2149,23 @@ class CloudRecordingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\RecordingRegistrantQuestions' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\RecordingRegistrantQuestions' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\RecordingRegistrantQuestions' !== 'string') {
+                        if ('\Zoom\Api\Model\RecordingRegistrantQuestions' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\RecordingRegistrantQuestions', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\RecordingRegistrantQuestions', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\RecordingRegistrantQuestions';
+            $returnType = '\Zoom\Api\Model\RecordingRegistrantQuestions';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2186,7 +2186,7 @@ class CloudRecordingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\RecordingRegistrantQuestions',
+                        '\Zoom\Api\Model\RecordingRegistrantQuestions',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2228,7 +2228,7 @@ class CloudRecordingApi
      */
     public function recordingRegistrantsQuestionsGetAsyncWithHttpInfo($meeting_id)
     {
-        $returnType = '\OpenAPI\Client\Model\RecordingRegistrantQuestions';
+        $returnType = '\Zoom\Api\Model\RecordingRegistrantQuestions';
         $request = $this->recordingRegistrantsQuestionsGetRequest($meeting_id);
 
         return $this->client
@@ -2371,9 +2371,9 @@ class CloudRecordingApi
      *
      * @param  string $meeting_id To get Cloud Recordings of a meeting, provide the meeting ID or meeting UUID. If the meeting ID is provided instead of UUID,the response will be for the latest meeting instance.   To get Cloud Recordings of a webinar, provide the webinar ID or the webinar UUID. If the webinar ID is provided instead of UUID,the response will be for the latest webinar instance.   If a UUID starts with \&quot;/\&quot; or contains \&quot;//\&quot; (example: \&quot;/ajXp112QmuoKj4854875&#x3D;&#x3D;\&quot;), you must **double encode** the UUID before making an API request. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\RecordingSettings
+     * @return \Zoom\Api\Model\RecordingSettings
      */
     public function recordingSettingUpdate($meeting_id)
     {
@@ -2388,9 +2388,9 @@ class CloudRecordingApi
      *
      * @param  string $meeting_id To get Cloud Recordings of a meeting, provide the meeting ID or meeting UUID. If the meeting ID is provided instead of UUID,the response will be for the latest meeting instance.   To get Cloud Recordings of a webinar, provide the webinar ID or the webinar UUID. If the webinar ID is provided instead of UUID,the response will be for the latest webinar instance.   If a UUID starts with \&quot;/\&quot; or contains \&quot;//\&quot; (example: \&quot;/ajXp112QmuoKj4854875&#x3D;&#x3D;\&quot;), you must **double encode** the UUID before making an API request. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\RecordingSettings, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\RecordingSettings, HTTP status code, HTTP response headers (array of strings)
      */
     public function recordingSettingUpdateWithHttpInfo($meeting_id)
     {
@@ -2433,23 +2433,23 @@ class CloudRecordingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\RecordingSettings' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\RecordingSettings' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\RecordingSettings' !== 'string') {
+                        if ('\Zoom\Api\Model\RecordingSettings' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\RecordingSettings', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\RecordingSettings', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\RecordingSettings';
+            $returnType = '\Zoom\Api\Model\RecordingSettings';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2470,7 +2470,7 @@ class CloudRecordingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\RecordingSettings',
+                        '\Zoom\Api\Model\RecordingSettings',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2512,7 +2512,7 @@ class CloudRecordingApi
      */
     public function recordingSettingUpdateAsyncWithHttpInfo($meeting_id)
     {
-        $returnType = '\OpenAPI\Client\Model\RecordingSettings';
+        $returnType = '\Zoom\Api\Model\RecordingSettings';
         $request = $this->recordingSettingUpdateRequest($meeting_id);
 
         return $this->client
@@ -2654,9 +2654,9 @@ class CloudRecordingApi
      * Update meeting recording settings
      *
      * @param  string $meeting_id To get Cloud Recordings of a meeting, provide the meeting ID or meeting UUID. If the meeting ID is provided instead of UUID,the response will be for the latest meeting instance.   To get Cloud Recordings of a webinar, provide the webinar ID or the webinar UUID. If the webinar ID is provided instead of UUID,the response will be for the latest webinar instance.   If a UUID starts with \&quot;/\&quot; or contains \&quot;//\&quot; (example: \&quot;/ajXp112QmuoKj4854875&#x3D;&#x3D;\&quot;), you must **double encode** the UUID before making an API request. (required)
-     * @param  \OpenAPI\Client\Model\RecordingSettings $recording_settings recording_settings (required)
+     * @param  \Zoom\Api\Model\RecordingSettings $recording_settings recording_settings (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2671,9 +2671,9 @@ class CloudRecordingApi
      * Update meeting recording settings
      *
      * @param  string $meeting_id To get Cloud Recordings of a meeting, provide the meeting ID or meeting UUID. If the meeting ID is provided instead of UUID,the response will be for the latest meeting instance.   To get Cloud Recordings of a webinar, provide the webinar ID or the webinar UUID. If the webinar ID is provided instead of UUID,the response will be for the latest webinar instance.   If a UUID starts with \&quot;/\&quot; or contains \&quot;//\&quot; (example: \&quot;/ajXp112QmuoKj4854875&#x3D;&#x3D;\&quot;), you must **double encode** the UUID before making an API request. (required)
-     * @param  \OpenAPI\Client\Model\RecordingSettings $recording_settings (required)
+     * @param  \Zoom\Api\Model\RecordingSettings $recording_settings (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2731,7 +2731,7 @@ class CloudRecordingApi
      * Update meeting recording settings
      *
      * @param  string $meeting_id To get Cloud Recordings of a meeting, provide the meeting ID or meeting UUID. If the meeting ID is provided instead of UUID,the response will be for the latest meeting instance.   To get Cloud Recordings of a webinar, provide the webinar ID or the webinar UUID. If the webinar ID is provided instead of UUID,the response will be for the latest webinar instance.   If a UUID starts with \&quot;/\&quot; or contains \&quot;//\&quot; (example: \&quot;/ajXp112QmuoKj4854875&#x3D;&#x3D;\&quot;), you must **double encode** the UUID before making an API request. (required)
-     * @param  \OpenAPI\Client\Model\RecordingSettings $recording_settings (required)
+     * @param  \Zoom\Api\Model\RecordingSettings $recording_settings (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2752,7 +2752,7 @@ class CloudRecordingApi
      * Update meeting recording settings
      *
      * @param  string $meeting_id To get Cloud Recordings of a meeting, provide the meeting ID or meeting UUID. If the meeting ID is provided instead of UUID,the response will be for the latest meeting instance.   To get Cloud Recordings of a webinar, provide the webinar ID or the webinar UUID. If the webinar ID is provided instead of UUID,the response will be for the latest webinar instance.   If a UUID starts with \&quot;/\&quot; or contains \&quot;//\&quot; (example: \&quot;/ajXp112QmuoKj4854875&#x3D;&#x3D;\&quot;), you must **double encode** the UUID before making an API request. (required)
-     * @param  \OpenAPI\Client\Model\RecordingSettings $recording_settings (required)
+     * @param  \Zoom\Api\Model\RecordingSettings $recording_settings (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2789,7 +2789,7 @@ class CloudRecordingApi
      * Create request for operation 'recordingSettingsUpdate'
      *
      * @param  string $meeting_id To get Cloud Recordings of a meeting, provide the meeting ID or meeting UUID. If the meeting ID is provided instead of UUID,the response will be for the latest meeting instance.   To get Cloud Recordings of a webinar, provide the webinar ID or the webinar UUID. If the webinar ID is provided instead of UUID,the response will be for the latest webinar instance.   If a UUID starts with \&quot;/\&quot; or contains \&quot;//\&quot; (example: \&quot;/ajXp112QmuoKj4854875&#x3D;&#x3D;\&quot;), you must **double encode** the UUID before making an API request. (required)
-     * @param  \OpenAPI\Client\Model\RecordingSettings $recording_settings (required)
+     * @param  \Zoom\Api\Model\RecordingSettings $recording_settings (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2901,9 +2901,9 @@ class CloudRecordingApi
      * Recover meeting recordings
      *
      * @param  string $meeting_uuid The meeting&#39;s universally unique identifier (UUID). Each meeting instance generates a UUID. For example, after a meeting ends, a new UUID is generated for the next meeting instance.  If the meeting UUID begins with a &#x60;/&#x60; character or contains a &#x60;//&#x60; character, you **must** double-encode the meeting UUID when using the meeting UUID for other API calls. (required)
-     * @param  \OpenAPI\Client\Model\RecordingStatusUpdateRequest $recording_status_update_request recording_status_update_request (required)
+     * @param  \Zoom\Api\Model\RecordingStatusUpdateRequest $recording_status_update_request recording_status_update_request (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2918,9 +2918,9 @@ class CloudRecordingApi
      * Recover meeting recordings
      *
      * @param  string $meeting_uuid The meeting&#39;s universally unique identifier (UUID). Each meeting instance generates a UUID. For example, after a meeting ends, a new UUID is generated for the next meeting instance.  If the meeting UUID begins with a &#x60;/&#x60; character or contains a &#x60;//&#x60; character, you **must** double-encode the meeting UUID when using the meeting UUID for other API calls. (required)
-     * @param  \OpenAPI\Client\Model\RecordingStatusUpdateRequest $recording_status_update_request (required)
+     * @param  \Zoom\Api\Model\RecordingStatusUpdateRequest $recording_status_update_request (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2978,7 +2978,7 @@ class CloudRecordingApi
      * Recover meeting recordings
      *
      * @param  string $meeting_uuid The meeting&#39;s universally unique identifier (UUID). Each meeting instance generates a UUID. For example, after a meeting ends, a new UUID is generated for the next meeting instance.  If the meeting UUID begins with a &#x60;/&#x60; character or contains a &#x60;//&#x60; character, you **must** double-encode the meeting UUID when using the meeting UUID for other API calls. (required)
-     * @param  \OpenAPI\Client\Model\RecordingStatusUpdateRequest $recording_status_update_request (required)
+     * @param  \Zoom\Api\Model\RecordingStatusUpdateRequest $recording_status_update_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2999,7 +2999,7 @@ class CloudRecordingApi
      * Recover meeting recordings
      *
      * @param  string $meeting_uuid The meeting&#39;s universally unique identifier (UUID). Each meeting instance generates a UUID. For example, after a meeting ends, a new UUID is generated for the next meeting instance.  If the meeting UUID begins with a &#x60;/&#x60; character or contains a &#x60;//&#x60; character, you **must** double-encode the meeting UUID when using the meeting UUID for other API calls. (required)
-     * @param  \OpenAPI\Client\Model\RecordingStatusUpdateRequest $recording_status_update_request (required)
+     * @param  \Zoom\Api\Model\RecordingStatusUpdateRequest $recording_status_update_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3036,7 +3036,7 @@ class CloudRecordingApi
      * Create request for operation 'recordingStatusUpdate'
      *
      * @param  string $meeting_uuid The meeting&#39;s universally unique identifier (UUID). Each meeting instance generates a UUID. For example, after a meeting ends, a new UUID is generated for the next meeting instance.  If the meeting UUID begins with a &#x60;/&#x60; character or contains a &#x60;//&#x60; character, you **must** double-encode the meeting UUID when using the meeting UUID for other API calls. (required)
-     * @param  \OpenAPI\Client\Model\RecordingStatusUpdateRequest $recording_status_update_request (required)
+     * @param  \Zoom\Api\Model\RecordingStatusUpdateRequest $recording_status_update_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -3149,9 +3149,9 @@ class CloudRecordingApi
      *
      * @param  string $meeting_id To get Cloud Recordings of a meeting, provide the meeting ID or meeting UUID. If the meeting ID is provided instead of UUID,the response will be for the latest meeting instance.   To get Cloud Recordings of a webinar, provide the webinar ID or the webinar UUID. If the webinar ID is provided instead of UUID,the response will be for the latest webinar instance.   If a UUID starts with \&quot;/\&quot; or contains \&quot;//\&quot; (example: \&quot;/ajXp112QmuoKj4854875&#x3D;&#x3D;\&quot;), you must **double encode** the UUID before making an API request. (required)
      * @param  string $recording_id The recording ID. (required)
-     * @param  \OpenAPI\Client\Model\RecordingStatusUpdateRequest $recording_status_update_request recording_status_update_request (required)
+     * @param  \Zoom\Api\Model\RecordingStatusUpdateRequest $recording_status_update_request recording_status_update_request (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -3167,9 +3167,9 @@ class CloudRecordingApi
      *
      * @param  string $meeting_id To get Cloud Recordings of a meeting, provide the meeting ID or meeting UUID. If the meeting ID is provided instead of UUID,the response will be for the latest meeting instance.   To get Cloud Recordings of a webinar, provide the webinar ID or the webinar UUID. If the webinar ID is provided instead of UUID,the response will be for the latest webinar instance.   If a UUID starts with \&quot;/\&quot; or contains \&quot;//\&quot; (example: \&quot;/ajXp112QmuoKj4854875&#x3D;&#x3D;\&quot;), you must **double encode** the UUID before making an API request. (required)
      * @param  string $recording_id The recording ID. (required)
-     * @param  \OpenAPI\Client\Model\RecordingStatusUpdateRequest $recording_status_update_request (required)
+     * @param  \Zoom\Api\Model\RecordingStatusUpdateRequest $recording_status_update_request (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3228,7 +3228,7 @@ class CloudRecordingApi
      *
      * @param  string $meeting_id To get Cloud Recordings of a meeting, provide the meeting ID or meeting UUID. If the meeting ID is provided instead of UUID,the response will be for the latest meeting instance.   To get Cloud Recordings of a webinar, provide the webinar ID or the webinar UUID. If the webinar ID is provided instead of UUID,the response will be for the latest webinar instance.   If a UUID starts with \&quot;/\&quot; or contains \&quot;//\&quot; (example: \&quot;/ajXp112QmuoKj4854875&#x3D;&#x3D;\&quot;), you must **double encode** the UUID before making an API request. (required)
      * @param  string $recording_id The recording ID. (required)
-     * @param  \OpenAPI\Client\Model\RecordingStatusUpdateRequest $recording_status_update_request (required)
+     * @param  \Zoom\Api\Model\RecordingStatusUpdateRequest $recording_status_update_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3250,7 +3250,7 @@ class CloudRecordingApi
      *
      * @param  string $meeting_id To get Cloud Recordings of a meeting, provide the meeting ID or meeting UUID. If the meeting ID is provided instead of UUID,the response will be for the latest meeting instance.   To get Cloud Recordings of a webinar, provide the webinar ID or the webinar UUID. If the webinar ID is provided instead of UUID,the response will be for the latest webinar instance.   If a UUID starts with \&quot;/\&quot; or contains \&quot;//\&quot; (example: \&quot;/ajXp112QmuoKj4854875&#x3D;&#x3D;\&quot;), you must **double encode** the UUID before making an API request. (required)
      * @param  string $recording_id The recording ID. (required)
-     * @param  \OpenAPI\Client\Model\RecordingStatusUpdateRequest $recording_status_update_request (required)
+     * @param  \Zoom\Api\Model\RecordingStatusUpdateRequest $recording_status_update_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3288,7 +3288,7 @@ class CloudRecordingApi
      *
      * @param  string $meeting_id To get Cloud Recordings of a meeting, provide the meeting ID or meeting UUID. If the meeting ID is provided instead of UUID,the response will be for the latest meeting instance.   To get Cloud Recordings of a webinar, provide the webinar ID or the webinar UUID. If the webinar ID is provided instead of UUID,the response will be for the latest webinar instance.   If a UUID starts with \&quot;/\&quot; or contains \&quot;//\&quot; (example: \&quot;/ajXp112QmuoKj4854875&#x3D;&#x3D;\&quot;), you must **double encode** the UUID before making an API request. (required)
      * @param  string $recording_id The recording ID. (required)
-     * @param  \OpenAPI\Client\Model\RecordingStatusUpdateRequest $recording_status_update_request (required)
+     * @param  \Zoom\Api\Model\RecordingStatusUpdateRequest $recording_status_update_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -3423,9 +3423,9 @@ class CloudRecordingApi
      * @param  string $trash_type The type of Cloud recording that you would like to retrieve from the trash. The value can be one of the following:&lt;br&gt;     &#x60;meeting_recordings&#x60;: List all meeting recordings from the trash.&lt;br&gt;     &#x60;recording_file&#x60;: List all individual recording files from the trash. (optional, default to 'meeting_recordings')
      * @param  int $meeting_id The meeting ID. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\RecordingMeetingList
+     * @return \Zoom\Api\Model\RecordingMeetingList
      */
     public function recordingsList($user_id, $page_size = 30, $next_page_token = null, $mc = 'false', $trash = false, $from = null, $to = null, $trash_type = 'meeting_recordings', $meeting_id = null)
     {
@@ -3448,9 +3448,9 @@ class CloudRecordingApi
      * @param  string $trash_type The type of Cloud recording that you would like to retrieve from the trash. The value can be one of the following:&lt;br&gt;     &#x60;meeting_recordings&#x60;: List all meeting recordings from the trash.&lt;br&gt;     &#x60;recording_file&#x60;: List all individual recording files from the trash. (optional, default to 'meeting_recordings')
      * @param  int $meeting_id The meeting ID. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\RecordingMeetingList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\RecordingMeetingList, HTTP status code, HTTP response headers (array of strings)
      */
     public function recordingsListWithHttpInfo($user_id, $page_size = 30, $next_page_token = null, $mc = 'false', $trash = false, $from = null, $to = null, $trash_type = 'meeting_recordings', $meeting_id = null)
     {
@@ -3493,23 +3493,23 @@ class CloudRecordingApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\RecordingMeetingList' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\RecordingMeetingList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\RecordingMeetingList' !== 'string') {
+                        if ('\Zoom\Api\Model\RecordingMeetingList' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\RecordingMeetingList', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\RecordingMeetingList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\RecordingMeetingList';
+            $returnType = '\Zoom\Api\Model\RecordingMeetingList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3530,7 +3530,7 @@ class CloudRecordingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\RecordingMeetingList',
+                        '\Zoom\Api\Model\RecordingMeetingList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3588,7 +3588,7 @@ class CloudRecordingApi
      */
     public function recordingsListAsyncWithHttpInfo($user_id, $page_size = 30, $next_page_token = null, $mc = 'false', $trash = false, $from = null, $to = null, $trash_type = 'meeting_recordings', $meeting_id = null)
     {
-        $returnType = '\OpenAPI\Client\Model\RecordingMeetingList';
+        $returnType = '\Zoom\Api\Model\RecordingMeetingList';
         $request = $this->recordingsListRequest($user_id, $page_size, $next_page_token, $mc, $trash, $from, $to, $trash_type, $meeting_id);
 
         return $this->client

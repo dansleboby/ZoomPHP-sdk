@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Zoom\Api\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Zoom\Api\ApiException;
+use Zoom\Api\Configuration;
+use Zoom\Api\HeaderSelector;
+use Zoom\Api\ObjectSerializer;
 
 /**
  * IMGroupsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -122,9 +122,9 @@ class IMGroupsApi
      *
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling the [**List groups**](/docs/api-reference/zoom-api/methods#operation/groups) API. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ImGroup200Response
+     * @return \Zoom\Api\Model\ImGroup200Response
      */
     public function imGroup($group_id)
     {
@@ -139,9 +139,9 @@ class IMGroupsApi
      *
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling the [**List groups**](/docs/api-reference/zoom-api/methods#operation/groups) API. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ImGroup200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\ImGroup200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function imGroupWithHttpInfo($group_id)
     {
@@ -184,23 +184,23 @@ class IMGroupsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ImGroup200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\ImGroup200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ImGroup200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\ImGroup200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ImGroup200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\ImGroup200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ImGroup200Response';
+            $returnType = '\Zoom\Api\Model\ImGroup200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -221,7 +221,7 @@ class IMGroupsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ImGroup200Response',
+                        '\Zoom\Api\Model\ImGroup200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -263,7 +263,7 @@ class IMGroupsApi
      */
     public function imGroupAsyncWithHttpInfo($group_id)
     {
-        $returnType = '\OpenAPI\Client\Model\ImGroup200Response';
+        $returnType = '\Zoom\Api\Model\ImGroup200Response';
         $request = $this->imGroupRequest($group_id);
 
         return $this->client
@@ -404,9 +404,9 @@ class IMGroupsApi
      *
      * Create an IM directory group
      *
-     * @param  \OpenAPI\Client\Model\ImGroupCreateRequest $im_group_create_request im_group_create_request (required)
+     * @param  \Zoom\Api\Model\ImGroupCreateRequest $im_group_create_request im_group_create_request (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -420,9 +420,9 @@ class IMGroupsApi
      *
      * Create an IM directory group
      *
-     * @param  \OpenAPI\Client\Model\ImGroupCreateRequest $im_group_create_request (required)
+     * @param  \Zoom\Api\Model\ImGroupCreateRequest $im_group_create_request (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -472,7 +472,7 @@ class IMGroupsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ImGroupCreate201Response',
+                        '\Zoom\Api\Model\ImGroupCreate201Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -487,7 +487,7 @@ class IMGroupsApi
      *
      * Create an IM directory group
      *
-     * @param  \OpenAPI\Client\Model\ImGroupCreateRequest $im_group_create_request (required)
+     * @param  \Zoom\Api\Model\ImGroupCreateRequest $im_group_create_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -507,7 +507,7 @@ class IMGroupsApi
      *
      * Create an IM directory group
      *
-     * @param  \OpenAPI\Client\Model\ImGroupCreateRequest $im_group_create_request (required)
+     * @param  \Zoom\Api\Model\ImGroupCreateRequest $im_group_create_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -543,7 +543,7 @@ class IMGroupsApi
     /**
      * Create request for operation 'imGroupCreate'
      *
-     * @param  \OpenAPI\Client\Model\ImGroupCreateRequest $im_group_create_request (required)
+     * @param  \Zoom\Api\Model\ImGroupCreateRequest $im_group_create_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -642,7 +642,7 @@ class IMGroupsApi
      *
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling the [**List groups**](/docs/api-reference/zoom-api/methods#operation/groups) API. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -658,7 +658,7 @@ class IMGroupsApi
      *
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling the [**List groups**](/docs/api-reference/zoom-api/methods#operation/groups) API. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -875,9 +875,9 @@ class IMGroupsApi
      * @param  int $page_number **Deprecated.** We will no longer support this field in a future release. Instead, use the &#x60;next_page_token&#x60; for pagination. (optional, default to 1) (deprecated)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\GroupMemberList
+     * @return \Zoom\Api\Model\GroupMemberList
      */
     public function imGroupMembers($group_id, $page_size = 30, $page_number = 1, $next_page_token = null)
     {
@@ -895,9 +895,9 @@ class IMGroupsApi
      * @param  int $page_number **Deprecated.** We will no longer support this field in a future release. Instead, use the &#x60;next_page_token&#x60; for pagination. (optional, default to 1) (deprecated)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\GroupMemberList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\GroupMemberList, HTTP status code, HTTP response headers (array of strings)
      */
     public function imGroupMembersWithHttpInfo($group_id, $page_size = 30, $page_number = 1, $next_page_token = null)
     {
@@ -940,23 +940,23 @@ class IMGroupsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\GroupMemberList' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\GroupMemberList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\GroupMemberList' !== 'string') {
+                        if ('\Zoom\Api\Model\GroupMemberList' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\GroupMemberList', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\GroupMemberList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\GroupMemberList';
+            $returnType = '\Zoom\Api\Model\GroupMemberList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -977,7 +977,7 @@ class IMGroupsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\GroupMemberList',
+                        '\Zoom\Api\Model\GroupMemberList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1025,7 +1025,7 @@ class IMGroupsApi
      */
     public function imGroupMembersAsyncWithHttpInfo($group_id, $page_size = 30, $page_number = 1, $next_page_token = null)
     {
-        $returnType = '\OpenAPI\Client\Model\GroupMemberList';
+        $returnType = '\Zoom\Api\Model\GroupMemberList';
         $request = $this->imGroupMembersRequest($group_id, $page_size, $page_number, $next_page_token);
 
         return $this->client
@@ -1201,9 +1201,9 @@ class IMGroupsApi
      * Add IM directory group members
      *
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling the [**List groups**](/docs/api-reference/zoom-api/methods#operation/groups) API. (required)
-     * @param  \OpenAPI\Client\Model\ImGroupMembersCreateRequest $im_group_members_create_request im_group_members_create_request (required)
+     * @param  \Zoom\Api\Model\ImGroupMembersCreateRequest $im_group_members_create_request im_group_members_create_request (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1218,9 +1218,9 @@ class IMGroupsApi
      * Add IM directory group members
      *
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling the [**List groups**](/docs/api-reference/zoom-api/methods#operation/groups) API. (required)
-     * @param  \OpenAPI\Client\Model\ImGroupMembersCreateRequest $im_group_members_create_request (required)
+     * @param  \Zoom\Api\Model\ImGroupMembersCreateRequest $im_group_members_create_request (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1270,7 +1270,7 @@ class IMGroupsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\GroupMembersCreate201Response',
+                        '\Zoom\Api\Model\GroupMembersCreate201Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1286,7 +1286,7 @@ class IMGroupsApi
      * Add IM directory group members
      *
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling the [**List groups**](/docs/api-reference/zoom-api/methods#operation/groups) API. (required)
-     * @param  \OpenAPI\Client\Model\ImGroupMembersCreateRequest $im_group_members_create_request (required)
+     * @param  \Zoom\Api\Model\ImGroupMembersCreateRequest $im_group_members_create_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1307,7 +1307,7 @@ class IMGroupsApi
      * Add IM directory group members
      *
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling the [**List groups**](/docs/api-reference/zoom-api/methods#operation/groups) API. (required)
-     * @param  \OpenAPI\Client\Model\ImGroupMembersCreateRequest $im_group_members_create_request (required)
+     * @param  \Zoom\Api\Model\ImGroupMembersCreateRequest $im_group_members_create_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1344,7 +1344,7 @@ class IMGroupsApi
      * Create request for operation 'imGroupMembersCreate'
      *
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling the [**List groups**](/docs/api-reference/zoom-api/methods#operation/groups) API. (required)
-     * @param  \OpenAPI\Client\Model\ImGroupMembersCreateRequest $im_group_members_create_request (required)
+     * @param  \Zoom\Api\Model\ImGroupMembersCreateRequest $im_group_members_create_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1458,7 +1458,7 @@ class IMGroupsApi
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling the [**List groups**](/docs/api-reference/zoom-api/methods#operation/groups) API. (required)
      * @param  string $member_id The member ID. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1475,7 +1475,7 @@ class IMGroupsApi
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling the [**List groups**](/docs/api-reference/zoom-api/methods#operation/groups) API. (required)
      * @param  string $member_id The member ID. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1705,9 +1705,9 @@ class IMGroupsApi
      * Update an IM directory group
      *
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling the [**List groups**](/docs/api-reference/zoom-api/methods#operation/groups) API. (required)
-     * @param  \OpenAPI\Client\Model\ImGroupUpdateRequest $im_group_update_request im_group_update_request (required)
+     * @param  \Zoom\Api\Model\ImGroupUpdateRequest $im_group_update_request im_group_update_request (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1722,9 +1722,9 @@ class IMGroupsApi
      * Update an IM directory group
      *
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling the [**List groups**](/docs/api-reference/zoom-api/methods#operation/groups) API. (required)
-     * @param  \OpenAPI\Client\Model\ImGroupUpdateRequest $im_group_update_request (required)
+     * @param  \Zoom\Api\Model\ImGroupUpdateRequest $im_group_update_request (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1782,7 +1782,7 @@ class IMGroupsApi
      * Update an IM directory group
      *
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling the [**List groups**](/docs/api-reference/zoom-api/methods#operation/groups) API. (required)
-     * @param  \OpenAPI\Client\Model\ImGroupUpdateRequest $im_group_update_request (required)
+     * @param  \Zoom\Api\Model\ImGroupUpdateRequest $im_group_update_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1803,7 +1803,7 @@ class IMGroupsApi
      * Update an IM directory group
      *
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling the [**List groups**](/docs/api-reference/zoom-api/methods#operation/groups) API. (required)
-     * @param  \OpenAPI\Client\Model\ImGroupUpdateRequest $im_group_update_request (required)
+     * @param  \Zoom\Api\Model\ImGroupUpdateRequest $im_group_update_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1840,7 +1840,7 @@ class IMGroupsApi
      * Create request for operation 'imGroupUpdate'
      *
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling the [**List groups**](/docs/api-reference/zoom-api/methods#operation/groups) API. (required)
-     * @param  \OpenAPI\Client\Model\ImGroupUpdateRequest $im_group_update_request (required)
+     * @param  \Zoom\Api\Model\ImGroupUpdateRequest $im_group_update_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1952,9 +1952,9 @@ class IMGroupsApi
      * List IM directory groups
      *
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\IMGroupList
+     * @return \Zoom\Api\Model\IMGroupList
      */
     public function imGroups()
     {
@@ -1968,9 +1968,9 @@ class IMGroupsApi
      * List IM directory groups
      *
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\IMGroupList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\IMGroupList, HTTP status code, HTTP response headers (array of strings)
      */
     public function imGroupsWithHttpInfo()
     {
@@ -2013,23 +2013,23 @@ class IMGroupsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\IMGroupList' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\IMGroupList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\IMGroupList' !== 'string') {
+                        if ('\Zoom\Api\Model\IMGroupList' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\IMGroupList', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\IMGroupList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\IMGroupList';
+            $returnType = '\Zoom\Api\Model\IMGroupList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2050,7 +2050,7 @@ class IMGroupsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\IMGroupList',
+                        '\Zoom\Api\Model\IMGroupList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2090,7 +2090,7 @@ class IMGroupsApi
      */
     public function imGroupsAsyncWithHttpInfo()
     {
-        $returnType = '\OpenAPI\Client\Model\IMGroupList';
+        $returnType = '\Zoom\Api\Model\IMGroupList';
         $request = $this->imGroupsRequest();
 
         return $this->client

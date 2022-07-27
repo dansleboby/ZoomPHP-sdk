@@ -1,4 +1,4 @@
-# OpenAPI\Client\PACApi
+# Zoom\Api\PACApi
 
 All URIs are relative to https://api.zoom.us/v2.
 
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 ## `userPACs()`
 
 ```php
-userPACs($user_id): \OpenAPI\Client\Model\UserPACs200Response
+userPACs($user_id): \Zoom\Api\Model\UserPACs200Response
 ```
 
 List a user's PAC accounts
@@ -25,16 +25,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\PACApi(
+$apiInstance = new Zoom\Api\Api\PACApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = new \OpenAPI\Client\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
+$user_id = new \Zoom\Api\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
 
 try {
     $result = $apiInstance->userPACs($user_id);
@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\UserPACs200Response**](../Model/UserPACs200Response.md)
+[**\Zoom\Api\Model\UserPACs200Response**](../Model/UserPACs200Response.md)
 
 ### Authorization
 

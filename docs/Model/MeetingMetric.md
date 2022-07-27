@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **host** | **string** | Host display name. | [optional]
-**custom_keys** | [**\OpenAPI\Client\Model\MeetingMetricCustomKeysInner[]**](MeetingMetricCustomKeysInner.md) | Custom keys and values assigned to the meeting. | [optional]
+**custom_keys** | [**\Zoom\Api\Model\MeetingMetricCustomKeysInner[]**](MeetingMetricCustomKeysInner.md) | Custom keys and values assigned to the meeting. | [optional]
 **dept** | **string** | Department of the host. | [optional]
 **duration** | **string** | Meeting duration. | [optional]
 **email** | **string** | Email address of the host. | [optional]

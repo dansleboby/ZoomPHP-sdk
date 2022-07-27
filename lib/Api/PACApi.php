@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Zoom\Api\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Zoom\Api\ApiException;
+use Zoom\Api\Configuration;
+use Zoom\Api\HeaderSelector;
+use Zoom\Api\ObjectSerializer;
 
 /**
  * PACApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -122,9 +122,9 @@ class PACApi
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\UserPACs200Response
+     * @return \Zoom\Api\Model\UserPACs200Response
      */
     public function userPACs($user_id)
     {
@@ -139,9 +139,9 @@ class PACApi
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\UserPACs200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\UserPACs200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function userPACsWithHttpInfo($user_id)
     {
@@ -184,23 +184,23 @@ class PACApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\UserPACs200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\UserPACs200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\UserPACs200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\UserPACs200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UserPACs200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\UserPACs200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\UserPACs200Response';
+            $returnType = '\Zoom\Api\Model\UserPACs200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -221,7 +221,7 @@ class PACApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\UserPACs200Response',
+                        '\Zoom\Api\Model\UserPACs200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -263,7 +263,7 @@ class PACApi
      */
     public function userPACsAsyncWithHttpInfo($user_id)
     {
-        $returnType = '\OpenAPI\Client\Model\UserPACs200Response';
+        $returnType = '\Zoom\Api\Model\UserPACs200Response';
         $request = $this->userPACsRequest($user_id);
 
         return $this->client

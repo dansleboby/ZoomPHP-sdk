@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * Channel Class Doc Comment
  *
  * @category Class
  * @description The channel object represents a Zoom chat [channel](https://support.zoom.us/hc/en-us/articles/200912909-Getting-Started-With-Channels-Group-Messaging-).
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class Channel implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'properties' => '\OpenAPI\Client\Model\ChannelProperties'
+        'properties' => '\Zoom\Api\Model\ChannelProperties'
     ];
 
     /**
@@ -207,7 +207,7 @@ class Channel implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets properties
      *
-     * @return \OpenAPI\Client\Model\ChannelProperties|null
+     * @return \Zoom\Api\Model\ChannelProperties|null
      */
     public function getProperties()
     {
@@ -217,7 +217,7 @@ class Channel implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets properties
      *
-     * @param \OpenAPI\Client\Model\ChannelProperties|null $properties properties
+     * @param \Zoom\Api\Model\ChannelProperties|null $properties properties
      *
      * @return self
      */

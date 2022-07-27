@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Zoom\Api\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Zoom\Api\ApiException;
+use Zoom\Api\Configuration;
+use Zoom\Api\HeaderSelector;
+use Zoom\Api\ObjectSerializer;
 
 /**
  * DashboardsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -123,9 +123,9 @@ class DashboardsApi
      * @param  \DateTime $from Start date in &#39;yyyy-mm-dd&#39; format. The date range defined by the \&quot;from\&quot; and \&quot;to\&quot; parameters should only be one month as the report includes only one month worth of data at once. (required)
      * @param  \DateTime $to End date. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\DashboardCRC200Response
+     * @return \Zoom\Api\Model\DashboardCRC200Response
      */
     public function dashboardCRC($from, $to)
     {
@@ -141,9 +141,9 @@ class DashboardsApi
      * @param  \DateTime $from Start date in &#39;yyyy-mm-dd&#39; format. The date range defined by the \&quot;from\&quot; and \&quot;to\&quot; parameters should only be one month as the report includes only one month worth of data at once. (required)
      * @param  \DateTime $to End date. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\DashboardCRC200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\DashboardCRC200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function dashboardCRCWithHttpInfo($from, $to)
     {
@@ -186,23 +186,23 @@ class DashboardsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\DashboardCRC200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\DashboardCRC200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\DashboardCRC200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\DashboardCRC200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\DashboardCRC200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\DashboardCRC200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\DashboardCRC200Response';
+            $returnType = '\Zoom\Api\Model\DashboardCRC200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -223,7 +223,7 @@ class DashboardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\DashboardCRC200Response',
+                        '\Zoom\Api\Model\DashboardCRC200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -267,7 +267,7 @@ class DashboardsApi
      */
     public function dashboardCRCAsyncWithHttpInfo($from, $to)
     {
-        $returnType = '\OpenAPI\Client\Model\DashboardCRC200Response';
+        $returnType = '\Zoom\Api\Model\DashboardCRC200Response';
         $request = $this->dashboardCRCRequest($from, $to);
 
         return $this->client
@@ -430,9 +430,9 @@ class DashboardsApi
      * @param  int $page_size The number of records returned within a single API call. (optional, default to 30)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\DashboardChat200Response
+     * @return \Zoom\Api\Model\DashboardChat200Response
      */
     public function dashboardChat($from, $to, $page_size = 30, $next_page_token = null)
     {
@@ -450,9 +450,9 @@ class DashboardsApi
      * @param  int $page_size The number of records returned within a single API call. (optional, default to 30)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\DashboardChat200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\DashboardChat200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function dashboardChatWithHttpInfo($from, $to, $page_size = 30, $next_page_token = null)
     {
@@ -495,23 +495,23 @@ class DashboardsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\DashboardChat200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\DashboardChat200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\DashboardChat200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\DashboardChat200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\DashboardChat200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\DashboardChat200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\DashboardChat200Response';
+            $returnType = '\Zoom\Api\Model\DashboardChat200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -532,7 +532,7 @@ class DashboardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\DashboardChat200Response',
+                        '\Zoom\Api\Model\DashboardChat200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -580,7 +580,7 @@ class DashboardsApi
      */
     public function dashboardChatAsyncWithHttpInfo($from, $to, $page_size = 30, $next_page_token = null)
     {
-        $returnType = '\OpenAPI\Client\Model\DashboardChat200Response';
+        $returnType = '\Zoom\Api\Model\DashboardChat200Response';
         $request = $this->dashboardChatRequest($from, $to, $page_size, $next_page_token);
 
         return $this->client
@@ -765,9 +765,9 @@ class DashboardsApi
      * @param  \DateTime $from Start date in &#39;yyyy-mm-dd&#39; format. The date range defined by the \&quot;from\&quot; and \&quot;to\&quot; parameters should only be one month as the report includes only one month worth of data at once. (required)
      * @param  \DateTime $to End date. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\DashboardClientFeedback200Response
+     * @return \Zoom\Api\Model\DashboardClientFeedback200Response
      */
     public function dashboardClientFeedback($from, $to)
     {
@@ -783,9 +783,9 @@ class DashboardsApi
      * @param  \DateTime $from Start date in &#39;yyyy-mm-dd&#39; format. The date range defined by the \&quot;from\&quot; and \&quot;to\&quot; parameters should only be one month as the report includes only one month worth of data at once. (required)
      * @param  \DateTime $to End date. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\DashboardClientFeedback200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\DashboardClientFeedback200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function dashboardClientFeedbackWithHttpInfo($from, $to)
     {
@@ -828,23 +828,23 @@ class DashboardsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\DashboardClientFeedback200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\DashboardClientFeedback200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\DashboardClientFeedback200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\DashboardClientFeedback200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\DashboardClientFeedback200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\DashboardClientFeedback200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\DashboardClientFeedback200Response';
+            $returnType = '\Zoom\Api\Model\DashboardClientFeedback200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -865,7 +865,7 @@ class DashboardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\DashboardClientFeedback200Response',
+                        '\Zoom\Api\Model\DashboardClientFeedback200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -909,7 +909,7 @@ class DashboardsApi
      */
     public function dashboardClientFeedbackAsyncWithHttpInfo($from, $to)
     {
-        $returnType = '\OpenAPI\Client\Model\DashboardClientFeedback200Response';
+        $returnType = '\Zoom\Api\Model\DashboardClientFeedback200Response';
         $request = $this->dashboardClientFeedbackRequest($from, $to);
 
         return $this->client
@@ -1073,9 +1073,9 @@ class DashboardsApi
      * @param  int $page_size page_size (optional, default to 30)
      * @param  string $next_page_token next_page_token (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\DashboardClientFeedbackDetail200Response
+     * @return \Zoom\Api\Model\DashboardClientFeedbackDetail200Response
      */
     public function dashboardClientFeedbackDetail($feedback_id, $from = null, $to = null, $page_size = 30, $next_page_token = null)
     {
@@ -1094,9 +1094,9 @@ class DashboardsApi
      * @param  int $page_size (optional, default to 30)
      * @param  string $next_page_token (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\DashboardClientFeedbackDetail200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\DashboardClientFeedbackDetail200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function dashboardClientFeedbackDetailWithHttpInfo($feedback_id, $from = null, $to = null, $page_size = 30, $next_page_token = null)
     {
@@ -1139,23 +1139,23 @@ class DashboardsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\DashboardClientFeedbackDetail200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\DashboardClientFeedbackDetail200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\DashboardClientFeedbackDetail200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\DashboardClientFeedbackDetail200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\DashboardClientFeedbackDetail200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\DashboardClientFeedbackDetail200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\DashboardClientFeedbackDetail200Response';
+            $returnType = '\Zoom\Api\Model\DashboardClientFeedbackDetail200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1176,7 +1176,7 @@ class DashboardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\DashboardClientFeedbackDetail200Response',
+                        '\Zoom\Api\Model\DashboardClientFeedbackDetail200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1226,7 +1226,7 @@ class DashboardsApi
      */
     public function dashboardClientFeedbackDetailAsyncWithHttpInfo($feedback_id, $from = null, $to = null, $page_size = 30, $next_page_token = null)
     {
-        $returnType = '\OpenAPI\Client\Model\DashboardClientFeedbackDetail200Response';
+        $returnType = '\Zoom\Api\Model\DashboardClientFeedbackDetail200Response';
         $request = $this->dashboardClientFeedbackDetailRequest($feedback_id, $from, $to, $page_size, $next_page_token);
 
         return $this->client
@@ -1412,9 +1412,9 @@ class DashboardsApi
      * @param  int $page_size The number of records returned within a single API call. (optional, default to 30)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\DashboardIM200Response
+     * @return \Zoom\Api\Model\DashboardIM200Response
      * @deprecated
      */
     public function dashboardIM($from, $to, $page_size = 30, $next_page_token = null)
@@ -1433,9 +1433,9 @@ class DashboardsApi
      * @param  int $page_size The number of records returned within a single API call. (optional, default to 30)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\DashboardIM200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\DashboardIM200Response, HTTP status code, HTTP response headers (array of strings)
      * @deprecated
      */
     public function dashboardIMWithHttpInfo($from, $to, $page_size = 30, $next_page_token = null)
@@ -1479,23 +1479,23 @@ class DashboardsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\DashboardIM200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\DashboardIM200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\DashboardIM200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\DashboardIM200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\DashboardIM200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\DashboardIM200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\DashboardIM200Response';
+            $returnType = '\Zoom\Api\Model\DashboardIM200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1516,7 +1516,7 @@ class DashboardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\DashboardIM200Response',
+                        '\Zoom\Api\Model\DashboardIM200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1566,7 +1566,7 @@ class DashboardsApi
      */
     public function dashboardIMAsyncWithHttpInfo($from, $to, $page_size = 30, $next_page_token = null)
     {
-        $returnType = '\OpenAPI\Client\Model\DashboardIM200Response';
+        $returnType = '\Zoom\Api\Model\DashboardIM200Response';
         $request = $this->dashboardIMRequest($from, $to, $page_size, $next_page_token);
 
         return $this->client
@@ -1755,9 +1755,9 @@ class DashboardsApi
      * @param  int $page_size The number of records returned within a single API call. (optional, default to 30)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\DashboardIssueDetailZoomRoom200Response
+     * @return \Zoom\Api\Model\DashboardIssueDetailZoomRoom200Response
      */
     public function dashboardIssueDetailZoomRoom($zoomroom_id, $from, $to, $page_size = 30, $next_page_token = null)
     {
@@ -1776,9 +1776,9 @@ class DashboardsApi
      * @param  int $page_size The number of records returned within a single API call. (optional, default to 30)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\DashboardIssueDetailZoomRoom200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\DashboardIssueDetailZoomRoom200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function dashboardIssueDetailZoomRoomWithHttpInfo($zoomroom_id, $from, $to, $page_size = 30, $next_page_token = null)
     {
@@ -1821,23 +1821,23 @@ class DashboardsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\DashboardIssueDetailZoomRoom200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\DashboardIssueDetailZoomRoom200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\DashboardIssueDetailZoomRoom200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\DashboardIssueDetailZoomRoom200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\DashboardIssueDetailZoomRoom200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\DashboardIssueDetailZoomRoom200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\DashboardIssueDetailZoomRoom200Response';
+            $returnType = '\Zoom\Api\Model\DashboardIssueDetailZoomRoom200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1858,7 +1858,7 @@ class DashboardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\DashboardIssueDetailZoomRoom200Response',
+                        '\Zoom\Api\Model\DashboardIssueDetailZoomRoom200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1908,7 +1908,7 @@ class DashboardsApi
      */
     public function dashboardIssueDetailZoomRoomAsyncWithHttpInfo($zoomroom_id, $from, $to, $page_size = 30, $next_page_token = null)
     {
-        $returnType = '\OpenAPI\Client\Model\DashboardIssueDetailZoomRoom200Response';
+        $returnType = '\Zoom\Api\Model\DashboardIssueDetailZoomRoom200Response';
         $request = $this->dashboardIssueDetailZoomRoomRequest($zoomroom_id, $from, $to, $page_size, $next_page_token);
 
         return $this->client
@@ -2108,9 +2108,9 @@ class DashboardsApi
      * @param  \DateTime $from Start date in &#39;yyyy-mm-dd&#39; format. The date range defined by the \&quot;from\&quot; and \&quot;to\&quot; parameters should only be one month as the report includes only one month worth of data at once. (required)
      * @param  \DateTime $to End date. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\DashboardIssueZoomRoom200Response
+     * @return \Zoom\Api\Model\DashboardIssueZoomRoom200Response
      */
     public function dashboardIssueZoomRoom($from, $to)
     {
@@ -2126,9 +2126,9 @@ class DashboardsApi
      * @param  \DateTime $from Start date in &#39;yyyy-mm-dd&#39; format. The date range defined by the \&quot;from\&quot; and \&quot;to\&quot; parameters should only be one month as the report includes only one month worth of data at once. (required)
      * @param  \DateTime $to End date. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\DashboardIssueZoomRoom200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\DashboardIssueZoomRoom200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function dashboardIssueZoomRoomWithHttpInfo($from, $to)
     {
@@ -2171,23 +2171,23 @@ class DashboardsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\DashboardIssueZoomRoom200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\DashboardIssueZoomRoom200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\DashboardIssueZoomRoom200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\DashboardIssueZoomRoom200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\DashboardIssueZoomRoom200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\DashboardIssueZoomRoom200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\DashboardIssueZoomRoom200Response';
+            $returnType = '\Zoom\Api\Model\DashboardIssueZoomRoom200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2208,7 +2208,7 @@ class DashboardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\DashboardIssueZoomRoom200Response',
+                        '\Zoom\Api\Model\DashboardIssueZoomRoom200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2252,7 +2252,7 @@ class DashboardsApi
      */
     public function dashboardIssueZoomRoomAsyncWithHttpInfo($from, $to)
     {
-        $returnType = '\OpenAPI\Client\Model\DashboardIssueZoomRoom200Response';
+        $returnType = '\Zoom\Api\Model\DashboardIssueZoomRoom200Response';
         $request = $this->dashboardIssueZoomRoomRequest($from, $to);
 
         return $this->client
@@ -2413,9 +2413,9 @@ class DashboardsApi
      * @param  ListPastMeetingPollsMeetingIdParameter $meeting_id The meeting&#39;s ID or universally unique ID (UUID).  * If you provide a meeting ID, the API will return a response for the latest meeting instance.  * If you provide a meeting UUID that begins with a &#x60;/&#x60; character or contains the &#x60;//&#x60; characters, you **must** double-encode the meeting UUID before making an API request. (required)
      * @param  string $type The type of meeting to query:  * &#x60;past&#x60; — All past meetings.  * &#x60;pastOne&#x60; — All past one-user meetings.  * &#x60;live&#x60; - All live meetings.   This value defaults to &#x60;live&#x60;. (optional, default to 'live')
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\MeetingMetric
+     * @return \Zoom\Api\Model\MeetingMetric
      */
     public function dashboardMeetingDetail($meeting_id, $type = 'live')
     {
@@ -2431,9 +2431,9 @@ class DashboardsApi
      * @param  ListPastMeetingPollsMeetingIdParameter $meeting_id The meeting&#39;s ID or universally unique ID (UUID).  * If you provide a meeting ID, the API will return a response for the latest meeting instance.  * If you provide a meeting UUID that begins with a &#x60;/&#x60; character or contains the &#x60;//&#x60; characters, you **must** double-encode the meeting UUID before making an API request. (required)
      * @param  string $type The type of meeting to query:  * &#x60;past&#x60; — All past meetings.  * &#x60;pastOne&#x60; — All past one-user meetings.  * &#x60;live&#x60; - All live meetings.   This value defaults to &#x60;live&#x60;. (optional, default to 'live')
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\MeetingMetric, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\MeetingMetric, HTTP status code, HTTP response headers (array of strings)
      */
     public function dashboardMeetingDetailWithHttpInfo($meeting_id, $type = 'live')
     {
@@ -2476,23 +2476,23 @@ class DashboardsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\MeetingMetric' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\MeetingMetric' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\MeetingMetric' !== 'string') {
+                        if ('\Zoom\Api\Model\MeetingMetric' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\MeetingMetric', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\MeetingMetric', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\MeetingMetric';
+            $returnType = '\Zoom\Api\Model\MeetingMetric';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2513,7 +2513,7 @@ class DashboardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\MeetingMetric',
+                        '\Zoom\Api\Model\MeetingMetric',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2557,7 +2557,7 @@ class DashboardsApi
      */
     public function dashboardMeetingDetailAsyncWithHttpInfo($meeting_id, $type = 'live')
     {
-        $returnType = '\OpenAPI\Client\Model\MeetingMetric';
+        $returnType = '\Zoom\Api\Model\MeetingMetric';
         $request = $this->dashboardMeetingDetailRequest($meeting_id, $type);
 
         return $this->client
@@ -2712,9 +2712,9 @@ class DashboardsApi
      * @param  string $participant_id The participant&#39;s ID. (required)
      * @param  string $type The type of meeting to query:  * &#x60;past&#x60; — All past meetings.  * &#x60;live&#x60; - All live meetings.   This value defaults to &#x60;live&#x60;. (optional, default to 'live')
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\QOSParticipant
+     * @return \Zoom\Api\Model\QOSParticipant
      */
     public function dashboardMeetingParticipantQOS($meeting_id, $participant_id, $type = 'live')
     {
@@ -2731,9 +2731,9 @@ class DashboardsApi
      * @param  string $participant_id The participant&#39;s ID. (required)
      * @param  string $type The type of meeting to query:  * &#x60;past&#x60; — All past meetings.  * &#x60;live&#x60; - All live meetings.   This value defaults to &#x60;live&#x60;. (optional, default to 'live')
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\QOSParticipant, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\QOSParticipant, HTTP status code, HTTP response headers (array of strings)
      */
     public function dashboardMeetingParticipantQOSWithHttpInfo($meeting_id, $participant_id, $type = 'live')
     {
@@ -2776,23 +2776,23 @@ class DashboardsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\QOSParticipant' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\QOSParticipant' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\QOSParticipant' !== 'string') {
+                        if ('\Zoom\Api\Model\QOSParticipant' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\QOSParticipant', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\QOSParticipant', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\QOSParticipant';
+            $returnType = '\Zoom\Api\Model\QOSParticipant';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2813,7 +2813,7 @@ class DashboardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\QOSParticipant',
+                        '\Zoom\Api\Model\QOSParticipant',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2859,7 +2859,7 @@ class DashboardsApi
      */
     public function dashboardMeetingParticipantQOSAsyncWithHttpInfo($meeting_id, $participant_id, $type = 'live')
     {
-        $returnType = '\OpenAPI\Client\Model\QOSParticipant';
+        $returnType = '\Zoom\Api\Model\QOSParticipant';
         $request = $this->dashboardMeetingParticipantQOSRequest($meeting_id, $participant_id, $type);
 
         return $this->client
@@ -3030,9 +3030,9 @@ class DashboardsApi
      * @param  int $page_size The number of records returned within a single API call. (optional, default to 30)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceed the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\DashboardMeetingParticipantShare200Response
+     * @return \Zoom\Api\Model\DashboardMeetingParticipantShare200Response
      */
     public function dashboardMeetingParticipantShare($meeting_id, $type = 'live', $page_size = 30, $next_page_token = null)
     {
@@ -3050,9 +3050,9 @@ class DashboardsApi
      * @param  int $page_size The number of records returned within a single API call. (optional, default to 30)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceed the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\DashboardMeetingParticipantShare200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\DashboardMeetingParticipantShare200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function dashboardMeetingParticipantShareWithHttpInfo($meeting_id, $type = 'live', $page_size = 30, $next_page_token = null)
     {
@@ -3095,23 +3095,23 @@ class DashboardsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\DashboardMeetingParticipantShare200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\DashboardMeetingParticipantShare200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\DashboardMeetingParticipantShare200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\DashboardMeetingParticipantShare200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\DashboardMeetingParticipantShare200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\DashboardMeetingParticipantShare200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\DashboardMeetingParticipantShare200Response';
+            $returnType = '\Zoom\Api\Model\DashboardMeetingParticipantShare200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3132,7 +3132,7 @@ class DashboardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\DashboardMeetingParticipantShare200Response',
+                        '\Zoom\Api\Model\DashboardMeetingParticipantShare200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3180,7 +3180,7 @@ class DashboardsApi
      */
     public function dashboardMeetingParticipantShareAsyncWithHttpInfo($meeting_id, $type = 'live', $page_size = 30, $next_page_token = null)
     {
-        $returnType = '\OpenAPI\Client\Model\DashboardMeetingParticipantShare200Response';
+        $returnType = '\Zoom\Api\Model\DashboardMeetingParticipantShare200Response';
         $request = $this->dashboardMeetingParticipantShareRequest($meeting_id, $type, $page_size, $next_page_token);
 
         return $this->client
@@ -3361,9 +3361,9 @@ class DashboardsApi
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      * @param  string $include_fields Provide &#x60;registrant_id&#x60; as the value for this field if you would like to see the registrant ID attribute in the response of this API call. A registrant ID is a unique identifier of a [meeting registrant](/docs/api-reference/zoom-api/methods#operation/meetingRegistrants). This is not supported for &#x60;live&#x60; meeting types. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\DashboardMeetingParticipants200Response
+     * @return \Zoom\Api\Model\DashboardMeetingParticipants200Response
      */
     public function dashboardMeetingParticipants($meeting_id, $type = 'live', $page_size = 30, $next_page_token = null, $include_fields = null)
     {
@@ -3382,9 +3382,9 @@ class DashboardsApi
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      * @param  string $include_fields Provide &#x60;registrant_id&#x60; as the value for this field if you would like to see the registrant ID attribute in the response of this API call. A registrant ID is a unique identifier of a [meeting registrant](/docs/api-reference/zoom-api/methods#operation/meetingRegistrants). This is not supported for &#x60;live&#x60; meeting types. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\DashboardMeetingParticipants200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\DashboardMeetingParticipants200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function dashboardMeetingParticipantsWithHttpInfo($meeting_id, $type = 'live', $page_size = 30, $next_page_token = null, $include_fields = null)
     {
@@ -3427,23 +3427,23 @@ class DashboardsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\DashboardMeetingParticipants200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\DashboardMeetingParticipants200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\DashboardMeetingParticipants200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\DashboardMeetingParticipants200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\DashboardMeetingParticipants200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\DashboardMeetingParticipants200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\DashboardMeetingParticipants200Response';
+            $returnType = '\Zoom\Api\Model\DashboardMeetingParticipants200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3464,7 +3464,7 @@ class DashboardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\DashboardMeetingParticipants200Response',
+                        '\Zoom\Api\Model\DashboardMeetingParticipants200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3514,7 +3514,7 @@ class DashboardsApi
      */
     public function dashboardMeetingParticipantsAsyncWithHttpInfo($meeting_id, $type = 'live', $page_size = 30, $next_page_token = null, $include_fields = null)
     {
-        $returnType = '\OpenAPI\Client\Model\DashboardMeetingParticipants200Response';
+        $returnType = '\Zoom\Api\Model\DashboardMeetingParticipants200Response';
         $request = $this->dashboardMeetingParticipantsRequest($meeting_id, $type, $page_size, $next_page_token, $include_fields);
 
         return $this->client
@@ -3704,9 +3704,9 @@ class DashboardsApi
      * @param  int $page_size The number of items returned per page. (optional, default to 1)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\QOSParticipantList
+     * @return \Zoom\Api\Model\QOSParticipantList
      */
     public function dashboardMeetingParticipantsQOS($meeting_id, $type = 'live', $page_size = 1, $next_page_token = null)
     {
@@ -3724,9 +3724,9 @@ class DashboardsApi
      * @param  int $page_size The number of items returned per page. (optional, default to 1)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\QOSParticipantList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\QOSParticipantList, HTTP status code, HTTP response headers (array of strings)
      */
     public function dashboardMeetingParticipantsQOSWithHttpInfo($meeting_id, $type = 'live', $page_size = 1, $next_page_token = null)
     {
@@ -3769,23 +3769,23 @@ class DashboardsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\QOSParticipantList' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\QOSParticipantList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\QOSParticipantList' !== 'string') {
+                        if ('\Zoom\Api\Model\QOSParticipantList' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\QOSParticipantList', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\QOSParticipantList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\QOSParticipantList';
+            $returnType = '\Zoom\Api\Model\QOSParticipantList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3806,7 +3806,7 @@ class DashboardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\QOSParticipantList',
+                        '\Zoom\Api\Model\QOSParticipantList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3854,7 +3854,7 @@ class DashboardsApi
      */
     public function dashboardMeetingParticipantsQOSAsyncWithHttpInfo($meeting_id, $type = 'live', $page_size = 1, $next_page_token = null)
     {
-        $returnType = '\OpenAPI\Client\Model\QOSParticipantList';
+        $returnType = '\Zoom\Api\Model\QOSParticipantList';
         $request = $this->dashboardMeetingParticipantsQOSRequest($meeting_id, $type, $page_size, $next_page_token);
 
         return $this->client
@@ -4033,9 +4033,9 @@ class DashboardsApi
      * @param  int $page_size The number of items returned per page. (optional, default to 1)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ParticipantQOSSummaryList
+     * @return \Zoom\Api\Model\ParticipantQOSSummaryList
      */
     public function dashboardMeetingParticipantsQOSSummary($meeting_id, $page_size = 1, $next_page_token = null)
     {
@@ -4052,9 +4052,9 @@ class DashboardsApi
      * @param  int $page_size The number of items returned per page. (optional, default to 1)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ParticipantQOSSummaryList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\ParticipantQOSSummaryList, HTTP status code, HTTP response headers (array of strings)
      */
     public function dashboardMeetingParticipantsQOSSummaryWithHttpInfo($meeting_id, $page_size = 1, $next_page_token = null)
     {
@@ -4097,23 +4097,23 @@ class DashboardsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ParticipantQOSSummaryList' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\ParticipantQOSSummaryList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ParticipantQOSSummaryList' !== 'string') {
+                        if ('\Zoom\Api\Model\ParticipantQOSSummaryList' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ParticipantQOSSummaryList', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\ParticipantQOSSummaryList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ParticipantQOSSummaryList';
+            $returnType = '\Zoom\Api\Model\ParticipantQOSSummaryList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4134,7 +4134,7 @@ class DashboardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ParticipantQOSSummaryList',
+                        '\Zoom\Api\Model\ParticipantQOSSummaryList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4180,7 +4180,7 @@ class DashboardsApi
      */
     public function dashboardMeetingParticipantsQOSSummaryAsyncWithHttpInfo($meeting_id, $page_size = 1, $next_page_token = null)
     {
-        $returnType = '\OpenAPI\Client\Model\ParticipantQOSSummaryList';
+        $returnType = '\Zoom\Api\Model\ParticipantQOSSummaryList';
         $request = $this->dashboardMeetingParticipantsQOSSummaryRequest($meeting_id, $page_size, $next_page_token);
 
         return $this->client
@@ -4353,9 +4353,9 @@ class DashboardsApi
      * @param  string $group_id The group ID. To get a group ID, use the [**List groups**](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups) API.    **Note:** The API response will only contain meetings where the host is a member of the queried group ID. (optional)
      * @param  string $include_fields Set the value of this field to \&quot;tracking_fields\&quot; if you would like to include tracking fields of each meeting in the response. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\DashboardMeetings200Response
+     * @return \Zoom\Api\Model\DashboardMeetings200Response
      */
     public function dashboardMeetings($from, $to, $type = 'live', $page_size = 30, $next_page_token = null, $group_id = null, $include_fields = null)
     {
@@ -4376,9 +4376,9 @@ class DashboardsApi
      * @param  string $group_id The group ID. To get a group ID, use the [**List groups**](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups) API.    **Note:** The API response will only contain meetings where the host is a member of the queried group ID. (optional)
      * @param  string $include_fields Set the value of this field to \&quot;tracking_fields\&quot; if you would like to include tracking fields of each meeting in the response. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\DashboardMeetings200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\DashboardMeetings200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function dashboardMeetingsWithHttpInfo($from, $to, $type = 'live', $page_size = 30, $next_page_token = null, $group_id = null, $include_fields = null)
     {
@@ -4421,23 +4421,23 @@ class DashboardsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\DashboardMeetings200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\DashboardMeetings200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\DashboardMeetings200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\DashboardMeetings200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\DashboardMeetings200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\DashboardMeetings200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\DashboardMeetings200Response';
+            $returnType = '\Zoom\Api\Model\DashboardMeetings200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4458,7 +4458,7 @@ class DashboardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\DashboardMeetings200Response',
+                        '\Zoom\Api\Model\DashboardMeetings200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4512,7 +4512,7 @@ class DashboardsApi
      */
     public function dashboardMeetingsAsyncWithHttpInfo($from, $to, $type = 'live', $page_size = 30, $next_page_token = null, $group_id = null, $include_fields = null)
     {
-        $returnType = '\OpenAPI\Client\Model\DashboardMeetings200Response';
+        $returnType = '\Zoom\Api\Model\DashboardMeetings200Response';
         $request = $this->dashboardMeetingsRequest($from, $to, $type, $page_size, $next_page_token, $group_id, $include_fields);
 
         return $this->client
@@ -4728,9 +4728,9 @@ class DashboardsApi
      * @param  \DateTime $to End date. (required)
      * @param  string $type The type of meeting quality score to query:  * &#x60;meeting&#x60; — Query by meetings.  * &#x60;participants&#x60; — Query by meeting participants. (optional, default to 'meeting')
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\DashboardQuality200Response
+     * @return \Zoom\Api\Model\DashboardQuality200Response
      */
     public function dashboardQuality($from, $to, $type = 'meeting')
     {
@@ -4747,9 +4747,9 @@ class DashboardsApi
      * @param  \DateTime $to End date. (required)
      * @param  string $type The type of meeting quality score to query:  * &#x60;meeting&#x60; — Query by meetings.  * &#x60;participants&#x60; — Query by meeting participants. (optional, default to 'meeting')
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\DashboardQuality200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\DashboardQuality200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function dashboardQualityWithHttpInfo($from, $to, $type = 'meeting')
     {
@@ -4792,23 +4792,23 @@ class DashboardsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\DashboardQuality200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\DashboardQuality200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\DashboardQuality200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\DashboardQuality200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\DashboardQuality200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\DashboardQuality200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\DashboardQuality200Response';
+            $returnType = '\Zoom\Api\Model\DashboardQuality200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4829,7 +4829,7 @@ class DashboardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\DashboardQuality200Response',
+                        '\Zoom\Api\Model\DashboardQuality200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4875,7 +4875,7 @@ class DashboardsApi
      */
     public function dashboardQualityAsyncWithHttpInfo($from, $to, $type = 'meeting')
     {
-        $returnType = '\OpenAPI\Client\Model\DashboardQuality200Response';
+        $returnType = '\Zoom\Api\Model\DashboardQuality200Response';
         $request = $this->dashboardQualityRequest($from, $to, $type);
 
         return $this->client
@@ -5046,9 +5046,9 @@ class DashboardsApi
      * @param  string $webinar_id The webinar&#39;s ID or universally unique ID (UUID).  * If you provide a webinar ID, the API will return a response for the latest webinar instance.  * If you provide a webinar UUID that begins with a &#x60;/&#x60; character or contains the &#x60;//&#x60; characters, you **must** double-encode the webinar UUID before making an API request. (required)
      * @param  string $type The type of webinar to query:  * &#x60;past&#x60; — All past webinars.  * &#x60;live&#x60; - All live webinars.   This value defaults to &#x60;live&#x60;. (optional, default to 'live')
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\WebinarMetric
+     * @return \Zoom\Api\Model\WebinarMetric
      */
     public function dashboardWebinarDetail($webinar_id, $type = 'live')
     {
@@ -5064,9 +5064,9 @@ class DashboardsApi
      * @param  string $webinar_id The webinar&#39;s ID or universally unique ID (UUID).  * If you provide a webinar ID, the API will return a response for the latest webinar instance.  * If you provide a webinar UUID that begins with a &#x60;/&#x60; character or contains the &#x60;//&#x60; characters, you **must** double-encode the webinar UUID before making an API request. (required)
      * @param  string $type The type of webinar to query:  * &#x60;past&#x60; — All past webinars.  * &#x60;live&#x60; - All live webinars.   This value defaults to &#x60;live&#x60;. (optional, default to 'live')
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\WebinarMetric, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\WebinarMetric, HTTP status code, HTTP response headers (array of strings)
      */
     public function dashboardWebinarDetailWithHttpInfo($webinar_id, $type = 'live')
     {
@@ -5109,23 +5109,23 @@ class DashboardsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\WebinarMetric' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\WebinarMetric' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\WebinarMetric' !== 'string') {
+                        if ('\Zoom\Api\Model\WebinarMetric' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\WebinarMetric', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\WebinarMetric', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\WebinarMetric';
+            $returnType = '\Zoom\Api\Model\WebinarMetric';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5146,7 +5146,7 @@ class DashboardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\WebinarMetric',
+                        '\Zoom\Api\Model\WebinarMetric',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5190,7 +5190,7 @@ class DashboardsApi
      */
     public function dashboardWebinarDetailAsyncWithHttpInfo($webinar_id, $type = 'live')
     {
-        $returnType = '\OpenAPI\Client\Model\WebinarMetric';
+        $returnType = '\Zoom\Api\Model\WebinarMetric';
         $request = $this->dashboardWebinarDetailRequest($webinar_id, $type);
 
         return $this->client
@@ -5345,9 +5345,9 @@ class DashboardsApi
      * @param  string $participant_id The participant&#39;s ID. (required)
      * @param  string $type The type of webinar to query:  * &#x60;past&#x60; — All past webinars.  * &#x60;live&#x60; - All live webinars.   This value defaults to &#x60;live&#x60;. (optional, default to 'live')
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\QOSParticipant
+     * @return \Zoom\Api\Model\QOSParticipant
      */
     public function dashboardWebinarParticipantQOS($webinar_id, $participant_id, $type = 'live')
     {
@@ -5364,9 +5364,9 @@ class DashboardsApi
      * @param  string $participant_id The participant&#39;s ID. (required)
      * @param  string $type The type of webinar to query:  * &#x60;past&#x60; — All past webinars.  * &#x60;live&#x60; - All live webinars.   This value defaults to &#x60;live&#x60;. (optional, default to 'live')
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\QOSParticipant, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\QOSParticipant, HTTP status code, HTTP response headers (array of strings)
      */
     public function dashboardWebinarParticipantQOSWithHttpInfo($webinar_id, $participant_id, $type = 'live')
     {
@@ -5409,23 +5409,23 @@ class DashboardsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\QOSParticipant' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\QOSParticipant' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\QOSParticipant' !== 'string') {
+                        if ('\Zoom\Api\Model\QOSParticipant' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\QOSParticipant', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\QOSParticipant', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\QOSParticipant';
+            $returnType = '\Zoom\Api\Model\QOSParticipant';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5446,7 +5446,7 @@ class DashboardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\QOSParticipant',
+                        '\Zoom\Api\Model\QOSParticipant',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5492,7 +5492,7 @@ class DashboardsApi
      */
     public function dashboardWebinarParticipantQOSAsyncWithHttpInfo($webinar_id, $participant_id, $type = 'live')
     {
-        $returnType = '\OpenAPI\Client\Model\QOSParticipant';
+        $returnType = '\Zoom\Api\Model\QOSParticipant';
         $request = $this->dashboardWebinarParticipantQOSRequest($webinar_id, $participant_id, $type);
 
         return $this->client
@@ -5663,9 +5663,9 @@ class DashboardsApi
      * @param  int $page_size The number of records returned within a single API call. (optional, default to 30)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceed the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\DashboardWebinarParticipantShare200Response
+     * @return \Zoom\Api\Model\DashboardWebinarParticipantShare200Response
      */
     public function dashboardWebinarParticipantShare($webinar_id, $type = 'live', $page_size = 30, $next_page_token = null)
     {
@@ -5683,9 +5683,9 @@ class DashboardsApi
      * @param  int $page_size The number of records returned within a single API call. (optional, default to 30)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceed the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\DashboardWebinarParticipantShare200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\DashboardWebinarParticipantShare200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function dashboardWebinarParticipantShareWithHttpInfo($webinar_id, $type = 'live', $page_size = 30, $next_page_token = null)
     {
@@ -5728,23 +5728,23 @@ class DashboardsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\DashboardWebinarParticipantShare200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\DashboardWebinarParticipantShare200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\DashboardWebinarParticipantShare200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\DashboardWebinarParticipantShare200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\DashboardWebinarParticipantShare200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\DashboardWebinarParticipantShare200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\DashboardWebinarParticipantShare200Response';
+            $returnType = '\Zoom\Api\Model\DashboardWebinarParticipantShare200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5765,7 +5765,7 @@ class DashboardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\DashboardWebinarParticipantShare200Response',
+                        '\Zoom\Api\Model\DashboardWebinarParticipantShare200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5813,7 +5813,7 @@ class DashboardsApi
      */
     public function dashboardWebinarParticipantShareAsyncWithHttpInfo($webinar_id, $type = 'live', $page_size = 30, $next_page_token = null)
     {
-        $returnType = '\OpenAPI\Client\Model\DashboardWebinarParticipantShare200Response';
+        $returnType = '\Zoom\Api\Model\DashboardWebinarParticipantShare200Response';
         $request = $this->dashboardWebinarParticipantShareRequest($webinar_id, $type, $page_size, $next_page_token);
 
         return $this->client
@@ -5994,9 +5994,9 @@ class DashboardsApi
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      * @param  string $include_fields Additional fields to include in the query:  * &#x60;registrant_id&#x60; — Include the webinar registrant&#39;s ID. The registrant ID is the [webinar registrant&#39;s unique ID](/docs/api-reference/zoom-api/methods#operation/webinarRegistrants). (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\DashboardWebinarParticipants200Response
+     * @return \Zoom\Api\Model\DashboardWebinarParticipants200Response
      */
     public function dashboardWebinarParticipants($webinar_id, $type = 'live', $page_size = 30, $next_page_token = null, $include_fields = null)
     {
@@ -6015,9 +6015,9 @@ class DashboardsApi
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      * @param  string $include_fields Additional fields to include in the query:  * &#x60;registrant_id&#x60; — Include the webinar registrant&#39;s ID. The registrant ID is the [webinar registrant&#39;s unique ID](/docs/api-reference/zoom-api/methods#operation/webinarRegistrants). (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\DashboardWebinarParticipants200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\DashboardWebinarParticipants200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function dashboardWebinarParticipantsWithHttpInfo($webinar_id, $type = 'live', $page_size = 30, $next_page_token = null, $include_fields = null)
     {
@@ -6060,23 +6060,23 @@ class DashboardsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\DashboardWebinarParticipants200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\DashboardWebinarParticipants200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\DashboardWebinarParticipants200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\DashboardWebinarParticipants200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\DashboardWebinarParticipants200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\DashboardWebinarParticipants200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\DashboardWebinarParticipants200Response';
+            $returnType = '\Zoom\Api\Model\DashboardWebinarParticipants200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -6097,7 +6097,7 @@ class DashboardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\DashboardWebinarParticipants200Response',
+                        '\Zoom\Api\Model\DashboardWebinarParticipants200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6147,7 +6147,7 @@ class DashboardsApi
      */
     public function dashboardWebinarParticipantsAsyncWithHttpInfo($webinar_id, $type = 'live', $page_size = 30, $next_page_token = null, $include_fields = null)
     {
-        $returnType = '\OpenAPI\Client\Model\DashboardWebinarParticipants200Response';
+        $returnType = '\Zoom\Api\Model\DashboardWebinarParticipants200Response';
         $request = $this->dashboardWebinarParticipantsRequest($webinar_id, $type, $page_size, $next_page_token, $include_fields);
 
         return $this->client
@@ -6337,9 +6337,9 @@ class DashboardsApi
      * @param  int $page_size The number of items returned per page. (optional, default to 1)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\QOSParticipantList
+     * @return \Zoom\Api\Model\QOSParticipantList
      */
     public function dashboardWebinarParticipantsQOS($webinar_id, $type = 'live', $page_size = 1, $next_page_token = null)
     {
@@ -6357,9 +6357,9 @@ class DashboardsApi
      * @param  int $page_size The number of items returned per page. (optional, default to 1)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\QOSParticipantList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\QOSParticipantList, HTTP status code, HTTP response headers (array of strings)
      */
     public function dashboardWebinarParticipantsQOSWithHttpInfo($webinar_id, $type = 'live', $page_size = 1, $next_page_token = null)
     {
@@ -6402,23 +6402,23 @@ class DashboardsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\QOSParticipantList' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\QOSParticipantList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\QOSParticipantList' !== 'string') {
+                        if ('\Zoom\Api\Model\QOSParticipantList' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\QOSParticipantList', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\QOSParticipantList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\QOSParticipantList';
+            $returnType = '\Zoom\Api\Model\QOSParticipantList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -6439,7 +6439,7 @@ class DashboardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\QOSParticipantList',
+                        '\Zoom\Api\Model\QOSParticipantList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6487,7 +6487,7 @@ class DashboardsApi
      */
     public function dashboardWebinarParticipantsQOSAsyncWithHttpInfo($webinar_id, $type = 'live', $page_size = 1, $next_page_token = null)
     {
-        $returnType = '\OpenAPI\Client\Model\QOSParticipantList';
+        $returnType = '\Zoom\Api\Model\QOSParticipantList';
         $request = $this->dashboardWebinarParticipantsQOSRequest($webinar_id, $type, $page_size, $next_page_token);
 
         return $this->client
@@ -6666,7 +6666,7 @@ class DashboardsApi
      * @param  int $page_size The number of items returned per page. (optional, default to 1)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return object
      */
@@ -6685,7 +6685,7 @@ class DashboardsApi
      * @param  int $page_size The number of items returned per page. (optional, default to 1)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of object, HTTP status code, HTTP response headers (array of strings)
      */
@@ -6985,9 +6985,9 @@ class DashboardsApi
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      * @param  string $group_id The group ID. To get a group ID, use the [**List groups**](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups) API.    **Note:** The API response will only contain meetings where the host is a member of the queried group ID. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\DashboardWebinars200Response
+     * @return \Zoom\Api\Model\DashboardWebinars200Response
      */
     public function dashboardWebinars($from, $to, $type = 'live', $page_size = 30, $next_page_token = null, $group_id = null)
     {
@@ -7007,9 +7007,9 @@ class DashboardsApi
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      * @param  string $group_id The group ID. To get a group ID, use the [**List groups**](https://marketplace.zoom.us/docs/api-reference/zoom-api/groups/groups) API.    **Note:** The API response will only contain meetings where the host is a member of the queried group ID. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\DashboardWebinars200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\DashboardWebinars200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function dashboardWebinarsWithHttpInfo($from, $to, $type = 'live', $page_size = 30, $next_page_token = null, $group_id = null)
     {
@@ -7052,23 +7052,23 @@ class DashboardsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\DashboardWebinars200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\DashboardWebinars200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\DashboardWebinars200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\DashboardWebinars200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\DashboardWebinars200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\DashboardWebinars200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\DashboardWebinars200Response';
+            $returnType = '\Zoom\Api\Model\DashboardWebinars200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -7089,7 +7089,7 @@ class DashboardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\DashboardWebinars200Response',
+                        '\Zoom\Api\Model\DashboardWebinars200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7141,7 +7141,7 @@ class DashboardsApi
      */
     public function dashboardWebinarsAsyncWithHttpInfo($from, $to, $type = 'live', $page_size = 30, $next_page_token = null, $group_id = null)
     {
-        $returnType = '\OpenAPI\Client\Model\DashboardWebinars200Response';
+        $returnType = '\Zoom\Api\Model\DashboardWebinars200Response';
         $request = $this->dashboardWebinarsRequest($from, $to, $type, $page_size, $next_page_token, $group_id);
 
         return $this->client
@@ -7349,9 +7349,9 @@ class DashboardsApi
      * @param  int $page_size The number of records returned within a single API call. (optional, default to 30)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\DashboardZoomRoom200Response
+     * @return \Zoom\Api\Model\DashboardZoomRoom200Response
      */
     public function dashboardZoomRoom($zoomroom_id, $from, $to, $page_size = 30, $next_page_token = null)
     {
@@ -7370,9 +7370,9 @@ class DashboardsApi
      * @param  int $page_size The number of records returned within a single API call. (optional, default to 30)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\DashboardZoomRoom200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\DashboardZoomRoom200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function dashboardZoomRoomWithHttpInfo($zoomroom_id, $from, $to, $page_size = 30, $next_page_token = null)
     {
@@ -7415,23 +7415,23 @@ class DashboardsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\DashboardZoomRoom200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\DashboardZoomRoom200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\DashboardZoomRoom200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\DashboardZoomRoom200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\DashboardZoomRoom200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\DashboardZoomRoom200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\DashboardZoomRoom200Response';
+            $returnType = '\Zoom\Api\Model\DashboardZoomRoom200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -7452,7 +7452,7 @@ class DashboardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\DashboardZoomRoom200Response',
+                        '\Zoom\Api\Model\DashboardZoomRoom200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7502,7 +7502,7 @@ class DashboardsApi
      */
     public function dashboardZoomRoomAsyncWithHttpInfo($zoomroom_id, $from, $to, $page_size = 30, $next_page_token = null)
     {
-        $returnType = '\OpenAPI\Client\Model\DashboardZoomRoom200Response';
+        $returnType = '\Zoom\Api\Model\DashboardZoomRoom200Response';
         $request = $this->dashboardZoomRoomRequest($zoomroom_id, $from, $to, $page_size, $next_page_token);
 
         return $this->client
@@ -7702,9 +7702,9 @@ class DashboardsApi
      * @param  \DateTime $from Start date in &#39;yyyy-mm-dd&#39; format. The date range defined by the \&quot;from\&quot; and \&quot;to\&quot; parameters should only be one month as the report includes only one month worth of data at once. (required)
      * @param  \DateTime $to End date. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\DashboardZoomRoomIssue200Response
+     * @return \Zoom\Api\Model\DashboardZoomRoomIssue200Response
      */
     public function dashboardZoomRoomIssue($from, $to)
     {
@@ -7720,9 +7720,9 @@ class DashboardsApi
      * @param  \DateTime $from Start date in &#39;yyyy-mm-dd&#39; format. The date range defined by the \&quot;from\&quot; and \&quot;to\&quot; parameters should only be one month as the report includes only one month worth of data at once. (required)
      * @param  \DateTime $to End date. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\DashboardZoomRoomIssue200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\DashboardZoomRoomIssue200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function dashboardZoomRoomIssueWithHttpInfo($from, $to)
     {
@@ -7765,23 +7765,23 @@ class DashboardsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\DashboardZoomRoomIssue200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\DashboardZoomRoomIssue200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\DashboardZoomRoomIssue200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\DashboardZoomRoomIssue200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\DashboardZoomRoomIssue200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\DashboardZoomRoomIssue200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\DashboardZoomRoomIssue200Response';
+            $returnType = '\Zoom\Api\Model\DashboardZoomRoomIssue200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -7802,7 +7802,7 @@ class DashboardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\DashboardZoomRoomIssue200Response',
+                        '\Zoom\Api\Model\DashboardZoomRoomIssue200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7846,7 +7846,7 @@ class DashboardsApi
      */
     public function dashboardZoomRoomIssueAsyncWithHttpInfo($from, $to)
     {
-        $returnType = '\OpenAPI\Client\Model\DashboardZoomRoomIssue200Response';
+        $returnType = '\Zoom\Api\Model\DashboardZoomRoomIssue200Response';
         $request = $this->dashboardZoomRoomIssueRequest($from, $to);
 
         return $this->client
@@ -8008,9 +8008,9 @@ class DashboardsApi
      * @param  int $page_number The page number of the current page in the returned records. (optional, default to 1)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ZoomRoomList
+     * @return \Zoom\Api\Model\ZoomRoomList
      */
     public function dashboardZoomRooms($page_size = 30, $page_number = 1, $next_page_token = null)
     {
@@ -8027,9 +8027,9 @@ class DashboardsApi
      * @param  int $page_number The page number of the current page in the returned records. (optional, default to 1)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ZoomRoomList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\ZoomRoomList, HTTP status code, HTTP response headers (array of strings)
      */
     public function dashboardZoomRoomsWithHttpInfo($page_size = 30, $page_number = 1, $next_page_token = null)
     {
@@ -8072,23 +8072,23 @@ class DashboardsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ZoomRoomList' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\ZoomRoomList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ZoomRoomList' !== 'string') {
+                        if ('\Zoom\Api\Model\ZoomRoomList' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ZoomRoomList', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\ZoomRoomList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ZoomRoomList';
+            $returnType = '\Zoom\Api\Model\ZoomRoomList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -8109,7 +8109,7 @@ class DashboardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ZoomRoomList',
+                        '\Zoom\Api\Model\ZoomRoomList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8155,7 +8155,7 @@ class DashboardsApi
      */
     public function dashboardZoomRoomsAsyncWithHttpInfo($page_size = 30, $page_number = 1, $next_page_token = null)
     {
-        $returnType = '\OpenAPI\Client\Model\ZoomRoomList';
+        $returnType = '\Zoom\Api\Model\ZoomRoomList';
         $request = $this->dashboardZoomRoomsRequest($page_size, $page_number, $next_page_token);
 
         return $this->client
@@ -8316,9 +8316,9 @@ class DashboardsApi
      * List the client versions
      *
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\GetClientVersions200Response
+     * @return \Zoom\Api\Model\GetClientVersions200Response
      */
     public function getClientVersions()
     {
@@ -8332,9 +8332,9 @@ class DashboardsApi
      * List the client versions
      *
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\GetClientVersions200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\GetClientVersions200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function getClientVersionsWithHttpInfo()
     {
@@ -8377,23 +8377,23 @@ class DashboardsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\GetClientVersions200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\GetClientVersions200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\GetClientVersions200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\GetClientVersions200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\GetClientVersions200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\GetClientVersions200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\GetClientVersions200Response';
+            $returnType = '\Zoom\Api\Model\GetClientVersions200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -8414,7 +8414,7 @@ class DashboardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\GetClientVersions200Response',
+                        '\Zoom\Api\Model\GetClientVersions200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8454,7 +8454,7 @@ class DashboardsApi
      */
     public function getClientVersionsAsyncWithHttpInfo()
     {
-        $returnType = '\OpenAPI\Client\Model\GetClientVersions200Response';
+        $returnType = '\Zoom\Api\Model\GetClientVersions200Response';
         $request = $this->getClientVersionsRequest();
 
         return $this->client
@@ -8583,9 +8583,9 @@ class DashboardsApi
      * @param  \DateTime $from The start date for the query in “yyyy-mm-dd” format. (optional)
      * @param  \DateTime $to The end date for the query in “yyyy-mm-dd” format. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ListMeetingSatisfaction200Response
+     * @return \Zoom\Api\Model\ListMeetingSatisfaction200Response
      */
     public function listMeetingSatisfaction($from = null, $to = null)
     {
@@ -8601,9 +8601,9 @@ class DashboardsApi
      * @param  \DateTime $from The start date for the query in “yyyy-mm-dd” format. (optional)
      * @param  \DateTime $to The end date for the query in “yyyy-mm-dd” format. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ListMeetingSatisfaction200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\ListMeetingSatisfaction200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function listMeetingSatisfactionWithHttpInfo($from = null, $to = null)
     {
@@ -8646,23 +8646,23 @@ class DashboardsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ListMeetingSatisfaction200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\ListMeetingSatisfaction200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ListMeetingSatisfaction200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\ListMeetingSatisfaction200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ListMeetingSatisfaction200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\ListMeetingSatisfaction200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ListMeetingSatisfaction200Response';
+            $returnType = '\Zoom\Api\Model\ListMeetingSatisfaction200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -8683,7 +8683,7 @@ class DashboardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ListMeetingSatisfaction200Response',
+                        '\Zoom\Api\Model\ListMeetingSatisfaction200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8727,7 +8727,7 @@ class DashboardsApi
      */
     public function listMeetingSatisfactionAsyncWithHttpInfo($from = null, $to = null)
     {
-        $returnType = '\OpenAPI\Client\Model\ListMeetingSatisfaction200Response';
+        $returnType = '\Zoom\Api\Model\ListMeetingSatisfaction200Response';
         $request = $this->listMeetingSatisfactionRequest($from, $to);
 
         return $this->client
@@ -8878,9 +8878,9 @@ class DashboardsApi
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      * @param  int $page_size The number of records returned within a single API call. (optional, default to 30)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ParticipantFeedback200Response
+     * @return \Zoom\Api\Model\ParticipantFeedback200Response
      */
     public function participantFeedback($meeting_id, $type = 'live', $next_page_token = null, $page_size = 30)
     {
@@ -8898,9 +8898,9 @@ class DashboardsApi
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      * @param  int $page_size The number of records returned within a single API call. (optional, default to 30)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ParticipantFeedback200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\ParticipantFeedback200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function participantFeedbackWithHttpInfo($meeting_id, $type = 'live', $next_page_token = null, $page_size = 30)
     {
@@ -8943,23 +8943,23 @@ class DashboardsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ParticipantFeedback200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\ParticipantFeedback200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ParticipantFeedback200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\ParticipantFeedback200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ParticipantFeedback200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\ParticipantFeedback200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ParticipantFeedback200Response';
+            $returnType = '\Zoom\Api\Model\ParticipantFeedback200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -8980,7 +8980,7 @@ class DashboardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ParticipantFeedback200Response',
+                        '\Zoom\Api\Model\ParticipantFeedback200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9028,7 +9028,7 @@ class DashboardsApi
      */
     public function participantFeedbackAsyncWithHttpInfo($meeting_id, $type = 'live', $next_page_token = null, $page_size = 30)
     {
-        $returnType = '\OpenAPI\Client\Model\ParticipantFeedback200Response';
+        $returnType = '\Zoom\Api\Model\ParticipantFeedback200Response';
         $request = $this->participantFeedbackRequest($meeting_id, $type, $next_page_token, $page_size);
 
         return $this->client
@@ -9208,9 +9208,9 @@ class DashboardsApi
      * @param  int $page_size The number of records returned within a single API call. (optional, default to 30)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ParticipantWebinarFeedback200Response
+     * @return \Zoom\Api\Model\ParticipantWebinarFeedback200Response
      */
     public function participantWebinarFeedback($webinar_id, $type = 'live', $page_size = 30, $next_page_token = null)
     {
@@ -9228,9 +9228,9 @@ class DashboardsApi
      * @param  int $page_size The number of records returned within a single API call. (optional, default to 30)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ParticipantWebinarFeedback200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\ParticipantWebinarFeedback200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function participantWebinarFeedbackWithHttpInfo($webinar_id, $type = 'live', $page_size = 30, $next_page_token = null)
     {
@@ -9273,23 +9273,23 @@ class DashboardsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ParticipantWebinarFeedback200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\ParticipantWebinarFeedback200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ParticipantWebinarFeedback200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\ParticipantWebinarFeedback200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ParticipantWebinarFeedback200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\ParticipantWebinarFeedback200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ParticipantWebinarFeedback200Response';
+            $returnType = '\Zoom\Api\Model\ParticipantWebinarFeedback200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -9310,7 +9310,7 @@ class DashboardsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ParticipantWebinarFeedback200Response',
+                        '\Zoom\Api\Model\ParticipantWebinarFeedback200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9358,7 +9358,7 @@ class DashboardsApi
      */
     public function participantWebinarFeedbackAsyncWithHttpInfo($webinar_id, $type = 'live', $page_size = 30, $next_page_token = null)
     {
-        $returnType = '\OpenAPI\Client\Model\ParticipantWebinarFeedback200Response';
+        $returnType = '\Zoom\Api\Model\ParticipantWebinarFeedback200Response';
         $request = $this->participantWebinarFeedbackRequest($webinar_id, $type, $page_size, $next_page_token);
 
         return $this->client

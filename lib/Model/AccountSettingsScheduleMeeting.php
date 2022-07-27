@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * AccountSettingsScheduleMeeting Class Doc Comment
  *
  * @category Class
  * @description Account Settings: Schedule Meeting.
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -66,7 +66,7 @@ class AccountSettingsScheduleMeeting implements ModelInterface, ArrayAccess, \Js
         'host_video' => 'bool',
         'jbh_time' => 'int',
         'join_before_host' => 'bool',
-        'meeting_password_requirement' => '\OpenAPI\Client\Model\AccountSettingsScheduleMeetingMeetingPasswordRequirement',
+        'meeting_password_requirement' => '\Zoom\Api\Model\AccountSettingsScheduleMeetingMeetingPasswordRequirement',
         'not_store_meeting_topic' => 'bool',
         'participant_video' => 'bool',
         'personal_meeting' => 'bool',
@@ -76,10 +76,10 @@ class AccountSettingsScheduleMeeting implements ModelInterface, ArrayAccess, \Js
         'require_password_for_scheduling_new_meetings' => 'bool',
         'use_pmi_for_instant_meetings' => 'bool',
         'use_pmi_for_scheduled_meetings' => 'bool',
-        'always_display_zoom_meeting_as_topic' => '\OpenAPI\Client\Model\AccountSettingsScheduleMeetingAlwaysDisplayZoomMeetingAsTopic',
-        'hide_meeting_description' => '\OpenAPI\Client\Model\AccountSettingsScheduleMeetingHideMeetingDescription',
-        'always_display_zoom_webinar_as_topic' => '\OpenAPI\Client\Model\AccountSettingsScheduleMeetingAlwaysDisplayZoomWebinarAsTopic',
-        'hide_webinar_description' => '\OpenAPI\Client\Model\AccountSettingsScheduleMeetingHideWebinarDescription'
+        'always_display_zoom_meeting_as_topic' => '\Zoom\Api\Model\AccountSettingsScheduleMeetingAlwaysDisplayZoomMeetingAsTopic',
+        'hide_meeting_description' => '\Zoom\Api\Model\AccountSettingsScheduleMeetingHideMeetingDescription',
+        'always_display_zoom_webinar_as_topic' => '\Zoom\Api\Model\AccountSettingsScheduleMeetingAlwaysDisplayZoomWebinarAsTopic',
+        'hide_webinar_description' => '\Zoom\Api\Model\AccountSettingsScheduleMeetingHideWebinarDescription'
     ];
 
     /**
@@ -627,7 +627,7 @@ class AccountSettingsScheduleMeeting implements ModelInterface, ArrayAccess, \Js
     /**
      * Gets meeting_password_requirement
      *
-     * @return \OpenAPI\Client\Model\AccountSettingsScheduleMeetingMeetingPasswordRequirement|null
+     * @return \Zoom\Api\Model\AccountSettingsScheduleMeetingMeetingPasswordRequirement|null
      */
     public function getMeetingPasswordRequirement()
     {
@@ -637,7 +637,7 @@ class AccountSettingsScheduleMeeting implements ModelInterface, ArrayAccess, \Js
     /**
      * Sets meeting_password_requirement
      *
-     * @param \OpenAPI\Client\Model\AccountSettingsScheduleMeetingMeetingPasswordRequirement|null $meeting_password_requirement meeting_password_requirement
+     * @param \Zoom\Api\Model\AccountSettingsScheduleMeetingMeetingPasswordRequirement|null $meeting_password_requirement meeting_password_requirement
      *
      * @return self
      */
@@ -877,7 +877,7 @@ class AccountSettingsScheduleMeeting implements ModelInterface, ArrayAccess, \Js
     /**
      * Gets always_display_zoom_meeting_as_topic
      *
-     * @return \OpenAPI\Client\Model\AccountSettingsScheduleMeetingAlwaysDisplayZoomMeetingAsTopic|null
+     * @return \Zoom\Api\Model\AccountSettingsScheduleMeetingAlwaysDisplayZoomMeetingAsTopic|null
      */
     public function getAlwaysDisplayZoomMeetingAsTopic()
     {
@@ -887,7 +887,7 @@ class AccountSettingsScheduleMeeting implements ModelInterface, ArrayAccess, \Js
     /**
      * Sets always_display_zoom_meeting_as_topic
      *
-     * @param \OpenAPI\Client\Model\AccountSettingsScheduleMeetingAlwaysDisplayZoomMeetingAsTopic|null $always_display_zoom_meeting_as_topic always_display_zoom_meeting_as_topic
+     * @param \Zoom\Api\Model\AccountSettingsScheduleMeetingAlwaysDisplayZoomMeetingAsTopic|null $always_display_zoom_meeting_as_topic always_display_zoom_meeting_as_topic
      *
      * @return self
      */
@@ -901,7 +901,7 @@ class AccountSettingsScheduleMeeting implements ModelInterface, ArrayAccess, \Js
     /**
      * Gets hide_meeting_description
      *
-     * @return \OpenAPI\Client\Model\AccountSettingsScheduleMeetingHideMeetingDescription|null
+     * @return \Zoom\Api\Model\AccountSettingsScheduleMeetingHideMeetingDescription|null
      */
     public function getHideMeetingDescription()
     {
@@ -911,7 +911,7 @@ class AccountSettingsScheduleMeeting implements ModelInterface, ArrayAccess, \Js
     /**
      * Sets hide_meeting_description
      *
-     * @param \OpenAPI\Client\Model\AccountSettingsScheduleMeetingHideMeetingDescription|null $hide_meeting_description hide_meeting_description
+     * @param \Zoom\Api\Model\AccountSettingsScheduleMeetingHideMeetingDescription|null $hide_meeting_description hide_meeting_description
      *
      * @return self
      */
@@ -925,7 +925,7 @@ class AccountSettingsScheduleMeeting implements ModelInterface, ArrayAccess, \Js
     /**
      * Gets always_display_zoom_webinar_as_topic
      *
-     * @return \OpenAPI\Client\Model\AccountSettingsScheduleMeetingAlwaysDisplayZoomWebinarAsTopic|null
+     * @return \Zoom\Api\Model\AccountSettingsScheduleMeetingAlwaysDisplayZoomWebinarAsTopic|null
      */
     public function getAlwaysDisplayZoomWebinarAsTopic()
     {
@@ -935,7 +935,7 @@ class AccountSettingsScheduleMeeting implements ModelInterface, ArrayAccess, \Js
     /**
      * Sets always_display_zoom_webinar_as_topic
      *
-     * @param \OpenAPI\Client\Model\AccountSettingsScheduleMeetingAlwaysDisplayZoomWebinarAsTopic|null $always_display_zoom_webinar_as_topic always_display_zoom_webinar_as_topic
+     * @param \Zoom\Api\Model\AccountSettingsScheduleMeetingAlwaysDisplayZoomWebinarAsTopic|null $always_display_zoom_webinar_as_topic always_display_zoom_webinar_as_topic
      *
      * @return self
      */
@@ -949,7 +949,7 @@ class AccountSettingsScheduleMeeting implements ModelInterface, ArrayAccess, \Js
     /**
      * Gets hide_webinar_description
      *
-     * @return \OpenAPI\Client\Model\AccountSettingsScheduleMeetingHideWebinarDescription|null
+     * @return \Zoom\Api\Model\AccountSettingsScheduleMeetingHideWebinarDescription|null
      */
     public function getHideWebinarDescription()
     {
@@ -959,7 +959,7 @@ class AccountSettingsScheduleMeeting implements ModelInterface, ArrayAccess, \Js
     /**
      * Sets hide_webinar_description
      *
-     * @param \OpenAPI\Client\Model\AccountSettingsScheduleMeetingHideWebinarDescription|null $hide_webinar_description hide_webinar_description
+     * @param \Zoom\Api\Model\AccountSettingsScheduleMeetingHideWebinarDescription|null $hide_webinar_description hide_webinar_description
      *
      * @return self
      */

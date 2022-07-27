@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * UserSettings Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -57,15 +57,15 @@ class UserSettings implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'audio_conferencing' => '\OpenAPI\Client\Model\UserSettingsAudioConference',
-        'email_notification' => '\OpenAPI\Client\Model\UserSettingsEmailNotification',
-        'feature' => '\OpenAPI\Client\Model\UserSettingsFeature',
-        'in_meeting' => '\OpenAPI\Client\Model\UserSettingsInMeeting',
-        'profile' => '\OpenAPI\Client\Model\Profile',
-        'recording' => '\OpenAPI\Client\Model\UserSettingsRecording',
-        'schedule_meeting' => '\OpenAPI\Client\Model\UserSettingsScheduleMeeting',
-        'telephony' => '\OpenAPI\Client\Model\UserSettingsTelephony',
-        'tsp' => '\OpenAPI\Client\Model\UserSettingsTSP'
+        'audio_conferencing' => '\Zoom\Api\Model\UserSettingsAudioConference',
+        'email_notification' => '\Zoom\Api\Model\UserSettingsEmailNotification',
+        'feature' => '\Zoom\Api\Model\UserSettingsFeature',
+        'in_meeting' => '\Zoom\Api\Model\UserSettingsInMeeting',
+        'profile' => '\Zoom\Api\Model\Profile',
+        'recording' => '\Zoom\Api\Model\UserSettingsRecording',
+        'schedule_meeting' => '\Zoom\Api\Model\UserSettingsScheduleMeeting',
+        'telephony' => '\Zoom\Api\Model\UserSettingsTelephony',
+        'tsp' => '\Zoom\Api\Model\UserSettingsTSP'
     ];
 
     /**
@@ -254,7 +254,7 @@ class UserSettings implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets audio_conferencing
      *
-     * @return \OpenAPI\Client\Model\UserSettingsAudioConference|null
+     * @return \Zoom\Api\Model\UserSettingsAudioConference|null
      */
     public function getAudioConferencing()
     {
@@ -264,7 +264,7 @@ class UserSettings implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets audio_conferencing
      *
-     * @param \OpenAPI\Client\Model\UserSettingsAudioConference|null $audio_conferencing audio_conferencing
+     * @param \Zoom\Api\Model\UserSettingsAudioConference|null $audio_conferencing audio_conferencing
      *
      * @return self
      */
@@ -278,7 +278,7 @@ class UserSettings implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets email_notification
      *
-     * @return \OpenAPI\Client\Model\UserSettingsEmailNotification|null
+     * @return \Zoom\Api\Model\UserSettingsEmailNotification|null
      */
     public function getEmailNotification()
     {
@@ -288,7 +288,7 @@ class UserSettings implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets email_notification
      *
-     * @param \OpenAPI\Client\Model\UserSettingsEmailNotification|null $email_notification email_notification
+     * @param \Zoom\Api\Model\UserSettingsEmailNotification|null $email_notification email_notification
      *
      * @return self
      */
@@ -302,7 +302,7 @@ class UserSettings implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets feature
      *
-     * @return \OpenAPI\Client\Model\UserSettingsFeature|null
+     * @return \Zoom\Api\Model\UserSettingsFeature|null
      */
     public function getFeature()
     {
@@ -312,7 +312,7 @@ class UserSettings implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets feature
      *
-     * @param \OpenAPI\Client\Model\UserSettingsFeature|null $feature feature
+     * @param \Zoom\Api\Model\UserSettingsFeature|null $feature feature
      *
      * @return self
      */
@@ -326,7 +326,7 @@ class UserSettings implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets in_meeting
      *
-     * @return \OpenAPI\Client\Model\UserSettingsInMeeting|null
+     * @return \Zoom\Api\Model\UserSettingsInMeeting|null
      */
     public function getInMeeting()
     {
@@ -336,7 +336,7 @@ class UserSettings implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets in_meeting
      *
-     * @param \OpenAPI\Client\Model\UserSettingsInMeeting|null $in_meeting in_meeting
+     * @param \Zoom\Api\Model\UserSettingsInMeeting|null $in_meeting in_meeting
      *
      * @return self
      */
@@ -350,7 +350,7 @@ class UserSettings implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets profile
      *
-     * @return \OpenAPI\Client\Model\Profile|null
+     * @return \Zoom\Api\Model\Profile|null
      */
     public function getProfile()
     {
@@ -360,7 +360,7 @@ class UserSettings implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets profile
      *
-     * @param \OpenAPI\Client\Model\Profile|null $profile profile
+     * @param \Zoom\Api\Model\Profile|null $profile profile
      *
      * @return self
      */
@@ -374,7 +374,7 @@ class UserSettings implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets recording
      *
-     * @return \OpenAPI\Client\Model\UserSettingsRecording|null
+     * @return \Zoom\Api\Model\UserSettingsRecording|null
      */
     public function getRecording()
     {
@@ -384,7 +384,7 @@ class UserSettings implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets recording
      *
-     * @param \OpenAPI\Client\Model\UserSettingsRecording|null $recording recording
+     * @param \Zoom\Api\Model\UserSettingsRecording|null $recording recording
      *
      * @return self
      */
@@ -398,7 +398,7 @@ class UserSettings implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets schedule_meeting
      *
-     * @return \OpenAPI\Client\Model\UserSettingsScheduleMeeting|null
+     * @return \Zoom\Api\Model\UserSettingsScheduleMeeting|null
      */
     public function getScheduleMeeting()
     {
@@ -408,7 +408,7 @@ class UserSettings implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets schedule_meeting
      *
-     * @param \OpenAPI\Client\Model\UserSettingsScheduleMeeting|null $schedule_meeting schedule_meeting
+     * @param \Zoom\Api\Model\UserSettingsScheduleMeeting|null $schedule_meeting schedule_meeting
      *
      * @return self
      */
@@ -422,7 +422,7 @@ class UserSettings implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets telephony
      *
-     * @return \OpenAPI\Client\Model\UserSettingsTelephony|null
+     * @return \Zoom\Api\Model\UserSettingsTelephony|null
      */
     public function getTelephony()
     {
@@ -432,7 +432,7 @@ class UserSettings implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets telephony
      *
-     * @param \OpenAPI\Client\Model\UserSettingsTelephony|null $telephony telephony
+     * @param \Zoom\Api\Model\UserSettingsTelephony|null $telephony telephony
      *
      * @return self
      */
@@ -446,7 +446,7 @@ class UserSettings implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets tsp
      *
-     * @return \OpenAPI\Client\Model\UserSettingsTSP|null
+     * @return \Zoom\Api\Model\UserSettingsTSP|null
      */
     public function getTsp()
     {
@@ -456,7 +456,7 @@ class UserSettings implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets tsp
      *
-     * @param \OpenAPI\Client\Model\UserSettingsTSP|null $tsp tsp
+     * @param \Zoom\Api\Model\UserSettingsTSP|null $tsp tsp
      *
      * @return self
      */

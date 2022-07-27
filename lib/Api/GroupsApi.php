@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Zoom\Api\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Zoom\Api\ApiException;
+use Zoom\Api\Configuration;
+use Zoom\Api\HeaderSelector;
+use Zoom\Api\ObjectSerializer;
 
 /**
  * GroupsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -123,7 +123,7 @@ class GroupsApi
      * @param  string $group_id The group ID. To get a group&#39;s ID, use the [**List groups**](/docs/api-reference/zoom-api/methods#operation/groups) API. (required)
      * @param  string $file_ids A comma-separated list of the file IDs to delete. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -140,7 +140,7 @@ class GroupsApi
      * @param  string $group_id The group ID. To get a group&#39;s ID, use the [**List groups**](/docs/api-reference/zoom-api/methods#operation/groups) API. (required)
      * @param  string $file_ids A comma-separated list of the file IDs to delete. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -367,9 +367,9 @@ class GroupsApi
      * @param  string $group_id Id of the group. (required)
      * @param  string $option Optional query parameters:  * &#x60;meeting_security&#x60; — Use this query parameter to view the meeting security settings applied to the user&#39;s account. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\GetGroupLockSettings200Response
+     * @return \Zoom\Api\Model\GetGroupLockSettings200Response
      */
     public function getGroupLockSettings($group_id, $option = null)
     {
@@ -385,9 +385,9 @@ class GroupsApi
      * @param  string $group_id Id of the group. (required)
      * @param  string $option Optional query parameters:  * &#x60;meeting_security&#x60; — Use this query parameter to view the meeting security settings applied to the user&#39;s account. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\GetGroupLockSettings200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\GetGroupLockSettings200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function getGroupLockSettingsWithHttpInfo($group_id, $option = null)
     {
@@ -430,23 +430,23 @@ class GroupsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\GetGroupLockSettings200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\GetGroupLockSettings200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\GetGroupLockSettings200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\GetGroupLockSettings200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\GetGroupLockSettings200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\GetGroupLockSettings200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\GetGroupLockSettings200Response';
+            $returnType = '\Zoom\Api\Model\GetGroupLockSettings200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -467,7 +467,7 @@ class GroupsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\GetGroupLockSettings200Response',
+                        '\Zoom\Api\Model\GetGroupLockSettings200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -511,7 +511,7 @@ class GroupsApi
      */
     public function getGroupLockSettingsAsyncWithHttpInfo($group_id, $option = null)
     {
-        $returnType = '\OpenAPI\Client\Model\GetGroupLockSettings200Response';
+        $returnType = '\Zoom\Api\Model\GetGroupLockSettings200Response';
         $request = $this->getGroupLockSettingsRequest($group_id, $option);
 
         return $this->client
@@ -666,9 +666,9 @@ class GroupsApi
      * @param  string $option Optional query parameters:  * &#x60;meeting_authentication&#x60; — Use this query parameter to view the [meeting authentication settings](https://support.zoom.us/hc/en-us/articles/360037117472-Authentication-Profiles-for-Meetings-and-Webinars) applied to the user&#39;s account.  * &#x60;recording_authentication&#x60; — Use this query parameter to view the [recording authentication settings](https://support.zoom.us/hc/en-us/articles/360037756671-Authentication-Profiles-for-Cloud-Recordings) applied to the user&#39;s account.  * &#x60;meeting_security&#x60; — Use this query parameter to view the meeting security settings applied to the user&#39;s account. (optional)
      * @param  string $custom_query_fields Provide the name of the field by which you would like to filter the response. For example, if you provide \&quot;host_video\&quot; as the value of this field, you will get a response similar to the following:   {  \&quot;schedule_meeting\&quot;: {  \&quot;host_video\&quot;: false  } }   You can provide multiple values by separating them with commas(example: \&quot;host_video,participant_video\&quot;). (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\GetGroupSettings200Response
+     * @return \Zoom\Api\Model\GetGroupSettings200Response
      */
     public function getGroupSettings($group_id, $option = null, $custom_query_fields = null)
     {
@@ -685,9 +685,9 @@ class GroupsApi
      * @param  string $option Optional query parameters:  * &#x60;meeting_authentication&#x60; — Use this query parameter to view the [meeting authentication settings](https://support.zoom.us/hc/en-us/articles/360037117472-Authentication-Profiles-for-Meetings-and-Webinars) applied to the user&#39;s account.  * &#x60;recording_authentication&#x60; — Use this query parameter to view the [recording authentication settings](https://support.zoom.us/hc/en-us/articles/360037756671-Authentication-Profiles-for-Cloud-Recordings) applied to the user&#39;s account.  * &#x60;meeting_security&#x60; — Use this query parameter to view the meeting security settings applied to the user&#39;s account. (optional)
      * @param  string $custom_query_fields Provide the name of the field by which you would like to filter the response. For example, if you provide \&quot;host_video\&quot; as the value of this field, you will get a response similar to the following:   {  \&quot;schedule_meeting\&quot;: {  \&quot;host_video\&quot;: false  } }   You can provide multiple values by separating them with commas(example: \&quot;host_video,participant_video\&quot;). (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\GetGroupSettings200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\GetGroupSettings200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function getGroupSettingsWithHttpInfo($group_id, $option = null, $custom_query_fields = null)
     {
@@ -730,23 +730,23 @@ class GroupsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\GetGroupSettings200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\GetGroupSettings200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\GetGroupSettings200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\GetGroupSettings200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\GetGroupSettings200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\GetGroupSettings200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\GetGroupSettings200Response';
+            $returnType = '\Zoom\Api\Model\GetGroupSettings200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -767,7 +767,7 @@ class GroupsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\GetGroupSettings200Response',
+                        '\Zoom\Api\Model\GetGroupSettings200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -813,7 +813,7 @@ class GroupsApi
      */
     public function getGroupSettingsAsyncWithHttpInfo($group_id, $option = null, $custom_query_fields = null)
     {
-        $returnType = '\OpenAPI\Client\Model\GetGroupSettings200Response';
+        $returnType = '\Zoom\Api\Model\GetGroupSettings200Response';
         $request = $this->getGroupSettingsRequest($group_id, $option, $custom_query_fields);
 
         return $this->client
@@ -976,9 +976,9 @@ class GroupsApi
      *
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling the [**List groups**](/docs/api-reference/zoom-api/methods#operation/groups) API. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Group200Response
+     * @return \Zoom\Api\Model\Group200Response
      */
     public function group($group_id)
     {
@@ -993,9 +993,9 @@ class GroupsApi
      *
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling the [**List groups**](/docs/api-reference/zoom-api/methods#operation/groups) API. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Group200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\Group200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function groupWithHttpInfo($group_id)
     {
@@ -1038,23 +1038,23 @@ class GroupsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Group200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\Group200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Group200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\Group200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Group200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\Group200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\Group200Response';
+            $returnType = '\Zoom\Api\Model\Group200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1075,7 +1075,7 @@ class GroupsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Group200Response',
+                        '\Zoom\Api\Model\Group200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1117,7 +1117,7 @@ class GroupsApi
      */
     public function groupAsyncWithHttpInfo($group_id)
     {
-        $returnType = '\OpenAPI\Client\Model\Group200Response';
+        $returnType = '\Zoom\Api\Model\Group200Response';
         $request = $this->groupRequest($group_id);
 
         return $this->client
@@ -1262,9 +1262,9 @@ class GroupsApi
      * @param  int $page_size The number of records returned within a single API call. (optional, default to 30)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\GroupAdmins200Response
+     * @return \Zoom\Api\Model\GroupAdmins200Response
      */
     public function groupAdmins($group_id, $page_size = 30, $next_page_token = null)
     {
@@ -1281,9 +1281,9 @@ class GroupsApi
      * @param  int $page_size The number of records returned within a single API call. (optional, default to 30)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\GroupAdmins200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\GroupAdmins200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function groupAdminsWithHttpInfo($group_id, $page_size = 30, $next_page_token = null)
     {
@@ -1326,23 +1326,23 @@ class GroupsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\GroupAdmins200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\GroupAdmins200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\GroupAdmins200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\GroupAdmins200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\GroupAdmins200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\GroupAdmins200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\GroupAdmins200Response';
+            $returnType = '\Zoom\Api\Model\GroupAdmins200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1363,7 +1363,7 @@ class GroupsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\GroupAdmins200Response',
+                        '\Zoom\Api\Model\GroupAdmins200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1409,7 +1409,7 @@ class GroupsApi
      */
     public function groupAdminsAsyncWithHttpInfo($group_id, $page_size = 30, $next_page_token = null)
     {
-        $returnType = '\OpenAPI\Client\Model\GroupAdmins200Response';
+        $returnType = '\Zoom\Api\Model\GroupAdmins200Response';
         $request = $this->groupAdminsRequest($group_id, $page_size, $next_page_token);
 
         return $this->client
@@ -1575,9 +1575,9 @@ class GroupsApi
      * Add group admins
      *
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling the [**List groups**](/docs/api-reference/zoom-api/methods#operation/groups) API. (required)
-     * @param  \OpenAPI\Client\Model\GroupAdminsCreateRequest $group_admins_create_request group_admins_create_request (required)
+     * @param  \Zoom\Api\Model\GroupAdminsCreateRequest $group_admins_create_request group_admins_create_request (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1592,9 +1592,9 @@ class GroupsApi
      * Add group admins
      *
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling the [**List groups**](/docs/api-reference/zoom-api/methods#operation/groups) API. (required)
-     * @param  \OpenAPI\Client\Model\GroupAdminsCreateRequest $group_admins_create_request (required)
+     * @param  \Zoom\Api\Model\GroupAdminsCreateRequest $group_admins_create_request (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1644,7 +1644,7 @@ class GroupsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\GroupAdminsCreate201Response',
+                        '\Zoom\Api\Model\GroupAdminsCreate201Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1660,7 +1660,7 @@ class GroupsApi
      * Add group admins
      *
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling the [**List groups**](/docs/api-reference/zoom-api/methods#operation/groups) API. (required)
-     * @param  \OpenAPI\Client\Model\GroupAdminsCreateRequest $group_admins_create_request (required)
+     * @param  \Zoom\Api\Model\GroupAdminsCreateRequest $group_admins_create_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1681,7 +1681,7 @@ class GroupsApi
      * Add group admins
      *
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling the [**List groups**](/docs/api-reference/zoom-api/methods#operation/groups) API. (required)
-     * @param  \OpenAPI\Client\Model\GroupAdminsCreateRequest $group_admins_create_request (required)
+     * @param  \Zoom\Api\Model\GroupAdminsCreateRequest $group_admins_create_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1718,7 +1718,7 @@ class GroupsApi
      * Create request for operation 'groupAdminsCreate'
      *
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling the [**List groups**](/docs/api-reference/zoom-api/methods#operation/groups) API. (required)
-     * @param  \OpenAPI\Client\Model\GroupAdminsCreateRequest $group_admins_create_request (required)
+     * @param  \Zoom\Api\Model\GroupAdminsCreateRequest $group_admins_create_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1832,7 +1832,7 @@ class GroupsApi
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling the [**List groups**](/docs/api-reference/zoom-api/methods#operation/groups) API. (required)
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1849,7 +1849,7 @@ class GroupsApi
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling the [**List groups**](/docs/api-reference/zoom-api/methods#operation/groups) API. (required)
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2078,9 +2078,9 @@ class GroupsApi
      *
      * Create a group
      *
-     * @param  \OpenAPI\Client\Model\GroupCreateRequest $group_create_request group_create_request (required)
+     * @param  \Zoom\Api\Model\GroupCreateRequest $group_create_request group_create_request (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2094,9 +2094,9 @@ class GroupsApi
      *
      * Create a group
      *
-     * @param  \OpenAPI\Client\Model\GroupCreateRequest $group_create_request (required)
+     * @param  \Zoom\Api\Model\GroupCreateRequest $group_create_request (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2146,7 +2146,7 @@ class GroupsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\GroupCreate201Response',
+                        '\Zoom\Api\Model\GroupCreate201Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2161,7 +2161,7 @@ class GroupsApi
      *
      * Create a group
      *
-     * @param  \OpenAPI\Client\Model\GroupCreateRequest $group_create_request (required)
+     * @param  \Zoom\Api\Model\GroupCreateRequest $group_create_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2181,7 +2181,7 @@ class GroupsApi
      *
      * Create a group
      *
-     * @param  \OpenAPI\Client\Model\GroupCreateRequest $group_create_request (required)
+     * @param  \Zoom\Api\Model\GroupCreateRequest $group_create_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2217,7 +2217,7 @@ class GroupsApi
     /**
      * Create request for operation 'groupCreate'
      *
-     * @param  \OpenAPI\Client\Model\GroupCreateRequest $group_create_request (required)
+     * @param  \Zoom\Api\Model\GroupCreateRequest $group_create_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2316,7 +2316,7 @@ class GroupsApi
      *
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling the [**List groups**](/docs/api-reference/zoom-api/methods#operation/groups) API. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2332,7 +2332,7 @@ class GroupsApi
      *
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling the [**List groups**](/docs/api-reference/zoom-api/methods#operation/groups) API. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2546,9 +2546,9 @@ class GroupsApi
      *
      * @param  string $group_id The Id of the group. (required)
      * @param  string $option Optional query parameters:  * &#x60;meeting_security&#x60; — Use this query parameter to view the meeting security settings applied to the user&#39;s account. (optional)
-     * @param  \OpenAPI\Client\Model\GroupLockedSettingsRequest $group_locked_settings_request group_locked_settings_request (optional)
+     * @param  \Zoom\Api\Model\GroupLockedSettingsRequest $group_locked_settings_request group_locked_settings_request (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2564,9 +2564,9 @@ class GroupsApi
      *
      * @param  string $group_id The Id of the group. (required)
      * @param  string $option Optional query parameters:  * &#x60;meeting_security&#x60; — Use this query parameter to view the meeting security settings applied to the user&#39;s account. (optional)
-     * @param  \OpenAPI\Client\Model\GroupLockedSettingsRequest $group_locked_settings_request (optional)
+     * @param  \Zoom\Api\Model\GroupLockedSettingsRequest $group_locked_settings_request (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2625,7 +2625,7 @@ class GroupsApi
      *
      * @param  string $group_id The Id of the group. (required)
      * @param  string $option Optional query parameters:  * &#x60;meeting_security&#x60; — Use this query parameter to view the meeting security settings applied to the user&#39;s account. (optional)
-     * @param  \OpenAPI\Client\Model\GroupLockedSettingsRequest $group_locked_settings_request (optional)
+     * @param  \Zoom\Api\Model\GroupLockedSettingsRequest $group_locked_settings_request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2647,7 +2647,7 @@ class GroupsApi
      *
      * @param  string $group_id The Id of the group. (required)
      * @param  string $option Optional query parameters:  * &#x60;meeting_security&#x60; — Use this query parameter to view the meeting security settings applied to the user&#39;s account. (optional)
-     * @param  \OpenAPI\Client\Model\GroupLockedSettingsRequest $group_locked_settings_request (optional)
+     * @param  \Zoom\Api\Model\GroupLockedSettingsRequest $group_locked_settings_request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2685,7 +2685,7 @@ class GroupsApi
      *
      * @param  string $group_id The Id of the group. (required)
      * @param  string $option Optional query parameters:  * &#x60;meeting_security&#x60; — Use this query parameter to view the meeting security settings applied to the user&#39;s account. (optional)
-     * @param  \OpenAPI\Client\Model\GroupLockedSettingsRequest $group_locked_settings_request (optional)
+     * @param  \Zoom\Api\Model\GroupLockedSettingsRequest $group_locked_settings_request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2804,9 +2804,9 @@ class GroupsApi
      * @param  int $page_number **Deprecated.** We will no longer support this field in a future release. Instead, use the &#x60;next_page_token&#x60; for pagination. (optional, default to 1) (deprecated)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\GroupMembers200Response
+     * @return \Zoom\Api\Model\GroupMembers200Response
      */
     public function groupMembers($group_id, $page_size = 30, $page_number = 1, $next_page_token = null)
     {
@@ -2824,9 +2824,9 @@ class GroupsApi
      * @param  int $page_number **Deprecated.** We will no longer support this field in a future release. Instead, use the &#x60;next_page_token&#x60; for pagination. (optional, default to 1) (deprecated)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\GroupMembers200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\GroupMembers200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function groupMembersWithHttpInfo($group_id, $page_size = 30, $page_number = 1, $next_page_token = null)
     {
@@ -2869,23 +2869,23 @@ class GroupsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\GroupMembers200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\GroupMembers200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\GroupMembers200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\GroupMembers200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\GroupMembers200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\GroupMembers200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\GroupMembers200Response';
+            $returnType = '\Zoom\Api\Model\GroupMembers200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2906,7 +2906,7 @@ class GroupsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\GroupMembers200Response',
+                        '\Zoom\Api\Model\GroupMembers200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2954,7 +2954,7 @@ class GroupsApi
      */
     public function groupMembersAsyncWithHttpInfo($group_id, $page_size = 30, $page_number = 1, $next_page_token = null)
     {
-        $returnType = '\OpenAPI\Client\Model\GroupMembers200Response';
+        $returnType = '\Zoom\Api\Model\GroupMembers200Response';
         $request = $this->groupMembersRequest($group_id, $page_size, $page_number, $next_page_token);
 
         return $this->client
@@ -3130,9 +3130,9 @@ class GroupsApi
      * Add group members
      *
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling the [**List groups**](/docs/api-reference/zoom-api/methods#operation/groups) API. (required)
-     * @param  \OpenAPI\Client\Model\GroupMembersCreateRequest $group_members_create_request group_members_create_request (required)
+     * @param  \Zoom\Api\Model\GroupMembersCreateRequest $group_members_create_request group_members_create_request (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -3147,9 +3147,9 @@ class GroupsApi
      * Add group members
      *
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling the [**List groups**](/docs/api-reference/zoom-api/methods#operation/groups) API. (required)
-     * @param  \OpenAPI\Client\Model\GroupMembersCreateRequest $group_members_create_request (required)
+     * @param  \Zoom\Api\Model\GroupMembersCreateRequest $group_members_create_request (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3199,7 +3199,7 @@ class GroupsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\GroupMembersCreate201Response',
+                        '\Zoom\Api\Model\GroupMembersCreate201Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3215,7 +3215,7 @@ class GroupsApi
      * Add group members
      *
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling the [**List groups**](/docs/api-reference/zoom-api/methods#operation/groups) API. (required)
-     * @param  \OpenAPI\Client\Model\GroupMembersCreateRequest $group_members_create_request (required)
+     * @param  \Zoom\Api\Model\GroupMembersCreateRequest $group_members_create_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3236,7 +3236,7 @@ class GroupsApi
      * Add group members
      *
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling the [**List groups**](/docs/api-reference/zoom-api/methods#operation/groups) API. (required)
-     * @param  \OpenAPI\Client\Model\GroupMembersCreateRequest $group_members_create_request (required)
+     * @param  \Zoom\Api\Model\GroupMembersCreateRequest $group_members_create_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3273,7 +3273,7 @@ class GroupsApi
      * Create request for operation 'groupMembersCreate'
      *
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling the [**List groups**](/docs/api-reference/zoom-api/methods#operation/groups) API. (required)
-     * @param  \OpenAPI\Client\Model\GroupMembersCreateRequest $group_members_create_request (required)
+     * @param  \Zoom\Api\Model\GroupMembersCreateRequest $group_members_create_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -3387,7 +3387,7 @@ class GroupsApi
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling the [**List groups**](/docs/api-reference/zoom-api/methods#operation/groups) API. (required)
      * @param  string $member_id The member ID or email address. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -3404,7 +3404,7 @@ class GroupsApi
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling the [**List groups**](/docs/api-reference/zoom-api/methods#operation/groups) API. (required)
      * @param  string $member_id The member ID or email address. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3634,9 +3634,9 @@ class GroupsApi
      * Update a group
      *
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling the [**List groups**](/docs/api-reference/zoom-api/methods#operation/groups) API. (required)
-     * @param  \OpenAPI\Client\Model\GroupUpdateRequest $group_update_request group_update_request (required)
+     * @param  \Zoom\Api\Model\GroupUpdateRequest $group_update_request group_update_request (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -3651,9 +3651,9 @@ class GroupsApi
      * Update a group
      *
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling the [**List groups**](/docs/api-reference/zoom-api/methods#operation/groups) API. (required)
-     * @param  \OpenAPI\Client\Model\GroupUpdateRequest $group_update_request (required)
+     * @param  \Zoom\Api\Model\GroupUpdateRequest $group_update_request (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3711,7 +3711,7 @@ class GroupsApi
      * Update a group
      *
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling the [**List groups**](/docs/api-reference/zoom-api/methods#operation/groups) API. (required)
-     * @param  \OpenAPI\Client\Model\GroupUpdateRequest $group_update_request (required)
+     * @param  \Zoom\Api\Model\GroupUpdateRequest $group_update_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3732,7 +3732,7 @@ class GroupsApi
      * Update a group
      *
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling the [**List groups**](/docs/api-reference/zoom-api/methods#operation/groups) API. (required)
-     * @param  \OpenAPI\Client\Model\GroupUpdateRequest $group_update_request (required)
+     * @param  \Zoom\Api\Model\GroupUpdateRequest $group_update_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3769,7 +3769,7 @@ class GroupsApi
      * Create request for operation 'groupUpdate'
      *
      * @param  string $group_id The group ID.&lt;br&gt; Can be retrieved by calling the [**List groups**](/docs/api-reference/zoom-api/methods#operation/groups) API. (required)
-     * @param  \OpenAPI\Client\Model\GroupUpdateRequest $group_update_request (required)
+     * @param  \Zoom\Api\Model\GroupUpdateRequest $group_update_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -3881,9 +3881,9 @@ class GroupsApi
      * List groups
      *
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\GroupList
+     * @return \Zoom\Api\Model\GroupList
      */
     public function groups()
     {
@@ -3897,9 +3897,9 @@ class GroupsApi
      * List groups
      *
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\GroupList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\GroupList, HTTP status code, HTTP response headers (array of strings)
      */
     public function groupsWithHttpInfo()
     {
@@ -3942,23 +3942,23 @@ class GroupsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\GroupList' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\GroupList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\GroupList' !== 'string') {
+                        if ('\Zoom\Api\Model\GroupList' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\GroupList', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\GroupList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\GroupList';
+            $returnType = '\Zoom\Api\Model\GroupList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3979,7 +3979,7 @@ class GroupsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\GroupList',
+                        '\Zoom\Api\Model\GroupList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4019,7 +4019,7 @@ class GroupsApi
      */
     public function groupsAsyncWithHttpInfo()
     {
-        $returnType = '\OpenAPI\Client\Model\GroupList';
+        $returnType = '\Zoom\Api\Model\GroupList';
         $request = $this->groupsRequest();
 
         return $this->client
@@ -4147,9 +4147,9 @@ class GroupsApi
      *
      * @param  string $group_id The group&#39;s unique ID. To get this value, use the [**List groups**](/docs/api-reference/zoom-api/methods#operation/groups) API. * To set a user&#39;s primary group, use the &#x60;target_group_id&#x60; value for this parameter&#39;s value.  * To move a group member from one group to another, use the &#x60;groupId&#x60; of the designated group. (required)
      * @param  string $member_id The group member&#39;s unique ID. To get this value, use the [**List group members**](/docs/api-reference/zoom-api/methods#operation/groupMembers) API. (required)
-     * @param  \OpenAPI\Client\Model\UpdateAGroupMemberRequest $update_a_group_member_request update_a_group_member_request (optional)
+     * @param  \Zoom\Api\Model\UpdateAGroupMemberRequest $update_a_group_member_request update_a_group_member_request (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -4165,9 +4165,9 @@ class GroupsApi
      *
      * @param  string $group_id The group&#39;s unique ID. To get this value, use the [**List groups**](/docs/api-reference/zoom-api/methods#operation/groups) API. * To set a user&#39;s primary group, use the &#x60;target_group_id&#x60; value for this parameter&#39;s value.  * To move a group member from one group to another, use the &#x60;groupId&#x60; of the designated group. (required)
      * @param  string $member_id The group member&#39;s unique ID. To get this value, use the [**List group members**](/docs/api-reference/zoom-api/methods#operation/groupMembers) API. (required)
-     * @param  \OpenAPI\Client\Model\UpdateAGroupMemberRequest $update_a_group_member_request (optional)
+     * @param  \Zoom\Api\Model\UpdateAGroupMemberRequest $update_a_group_member_request (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4226,7 +4226,7 @@ class GroupsApi
      *
      * @param  string $group_id The group&#39;s unique ID. To get this value, use the [**List groups**](/docs/api-reference/zoom-api/methods#operation/groups) API. * To set a user&#39;s primary group, use the &#x60;target_group_id&#x60; value for this parameter&#39;s value.  * To move a group member from one group to another, use the &#x60;groupId&#x60; of the designated group. (required)
      * @param  string $member_id The group member&#39;s unique ID. To get this value, use the [**List group members**](/docs/api-reference/zoom-api/methods#operation/groupMembers) API. (required)
-     * @param  \OpenAPI\Client\Model\UpdateAGroupMemberRequest $update_a_group_member_request (optional)
+     * @param  \Zoom\Api\Model\UpdateAGroupMemberRequest $update_a_group_member_request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -4248,7 +4248,7 @@ class GroupsApi
      *
      * @param  string $group_id The group&#39;s unique ID. To get this value, use the [**List groups**](/docs/api-reference/zoom-api/methods#operation/groups) API. * To set a user&#39;s primary group, use the &#x60;target_group_id&#x60; value for this parameter&#39;s value.  * To move a group member from one group to another, use the &#x60;groupId&#x60; of the designated group. (required)
      * @param  string $member_id The group member&#39;s unique ID. To get this value, use the [**List group members**](/docs/api-reference/zoom-api/methods#operation/groupMembers) API. (required)
-     * @param  \OpenAPI\Client\Model\UpdateAGroupMemberRequest $update_a_group_member_request (optional)
+     * @param  \Zoom\Api\Model\UpdateAGroupMemberRequest $update_a_group_member_request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -4286,7 +4286,7 @@ class GroupsApi
      *
      * @param  string $group_id The group&#39;s unique ID. To get this value, use the [**List groups**](/docs/api-reference/zoom-api/methods#operation/groups) API. * To set a user&#39;s primary group, use the &#x60;target_group_id&#x60; value for this parameter&#39;s value.  * To move a group member from one group to another, use the &#x60;groupId&#x60; of the designated group. (required)
      * @param  string $member_id The group member&#39;s unique ID. To get this value, use the [**List group members**](/docs/api-reference/zoom-api/methods#operation/groupMembers) API. (required)
-     * @param  \OpenAPI\Client\Model\UpdateAGroupMemberRequest $update_a_group_member_request (optional)
+     * @param  \Zoom\Api\Model\UpdateAGroupMemberRequest $update_a_group_member_request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -4407,9 +4407,9 @@ class GroupsApi
      *
      * @param  string $group_id Id of the group. (required)
      * @param  string $option Optional query parameters:  * &#x60;meeting_authentication&#x60; — [Meeting authentication settings](https://support.zoom.us/hc/en-us/articles/360037117472-Authentication-Profiles-for-Meetings-and-Webinars).  * &#x60;recording_authentication&#x60; — [Recording authentication settings](https://support.zoom.us/hc/en-us/articles/360037756671-Authentication-Profiles-for-Cloud-Recordings).  * &#x60;meeting_security&#x60; — Meeting security settings. (optional)
-     * @param  \OpenAPI\Client\Model\UpdateGroupSettingsRequest $update_group_settings_request update_group_settings_request (optional)
+     * @param  \Zoom\Api\Model\UpdateGroupSettingsRequest $update_group_settings_request update_group_settings_request (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -4425,9 +4425,9 @@ class GroupsApi
      *
      * @param  string $group_id Id of the group. (required)
      * @param  string $option Optional query parameters:  * &#x60;meeting_authentication&#x60; — [Meeting authentication settings](https://support.zoom.us/hc/en-us/articles/360037117472-Authentication-Profiles-for-Meetings-and-Webinars).  * &#x60;recording_authentication&#x60; — [Recording authentication settings](https://support.zoom.us/hc/en-us/articles/360037756671-Authentication-Profiles-for-Cloud-Recordings).  * &#x60;meeting_security&#x60; — Meeting security settings. (optional)
-     * @param  \OpenAPI\Client\Model\UpdateGroupSettingsRequest $update_group_settings_request (optional)
+     * @param  \Zoom\Api\Model\UpdateGroupSettingsRequest $update_group_settings_request (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4486,7 +4486,7 @@ class GroupsApi
      *
      * @param  string $group_id Id of the group. (required)
      * @param  string $option Optional query parameters:  * &#x60;meeting_authentication&#x60; — [Meeting authentication settings](https://support.zoom.us/hc/en-us/articles/360037117472-Authentication-Profiles-for-Meetings-and-Webinars).  * &#x60;recording_authentication&#x60; — [Recording authentication settings](https://support.zoom.us/hc/en-us/articles/360037756671-Authentication-Profiles-for-Cloud-Recordings).  * &#x60;meeting_security&#x60; — Meeting security settings. (optional)
-     * @param  \OpenAPI\Client\Model\UpdateGroupSettingsRequest $update_group_settings_request (optional)
+     * @param  \Zoom\Api\Model\UpdateGroupSettingsRequest $update_group_settings_request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -4508,7 +4508,7 @@ class GroupsApi
      *
      * @param  string $group_id Id of the group. (required)
      * @param  string $option Optional query parameters:  * &#x60;meeting_authentication&#x60; — [Meeting authentication settings](https://support.zoom.us/hc/en-us/articles/360037117472-Authentication-Profiles-for-Meetings-and-Webinars).  * &#x60;recording_authentication&#x60; — [Recording authentication settings](https://support.zoom.us/hc/en-us/articles/360037756671-Authentication-Profiles-for-Cloud-Recordings).  * &#x60;meeting_security&#x60; — Meeting security settings. (optional)
-     * @param  \OpenAPI\Client\Model\UpdateGroupSettingsRequest $update_group_settings_request (optional)
+     * @param  \Zoom\Api\Model\UpdateGroupSettingsRequest $update_group_settings_request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -4546,7 +4546,7 @@ class GroupsApi
      *
      * @param  string $group_id Id of the group. (required)
      * @param  string $option Optional query parameters:  * &#x60;meeting_authentication&#x60; — [Meeting authentication settings](https://support.zoom.us/hc/en-us/articles/360037117472-Authentication-Profiles-for-Meetings-and-Webinars).  * &#x60;recording_authentication&#x60; — [Recording authentication settings](https://support.zoom.us/hc/en-us/articles/360037756671-Authentication-Profiles-for-Cloud-Recordings).  * &#x60;meeting_security&#x60; — Meeting security settings. (optional)
-     * @param  \OpenAPI\Client\Model\UpdateGroupSettingsRequest $update_group_settings_request (optional)
+     * @param  \Zoom\Api\Model\UpdateGroupSettingsRequest $update_group_settings_request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -4663,9 +4663,9 @@ class GroupsApi
      * @param  string $group_id The group ID. To get a group&#39;s ID, use the [**List groups**](/docs/api-reference/zoom-api/methods#operation/groups) API. (required)
      * @param  string $file The Virtual Background file&#39;s path. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\UploadGroupVB201Response
+     * @return \Zoom\Api\Model\UploadGroupVB201Response
      */
     public function uploadGroupVB($group_id, $file = null)
     {
@@ -4681,9 +4681,9 @@ class GroupsApi
      * @param  string $group_id The group ID. To get a group&#39;s ID, use the [**List groups**](/docs/api-reference/zoom-api/methods#operation/groups) API. (required)
      * @param  string $file The Virtual Background file&#39;s path. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\UploadGroupVB201Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\UploadGroupVB201Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function uploadGroupVBWithHttpInfo($group_id, $file = null)
     {
@@ -4726,23 +4726,23 @@ class GroupsApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\OpenAPI\Client\Model\UploadGroupVB201Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\UploadGroupVB201Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\UploadGroupVB201Response' !== 'string') {
+                        if ('\Zoom\Api\Model\UploadGroupVB201Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UploadGroupVB201Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\UploadGroupVB201Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\UploadGroupVB201Response';
+            $returnType = '\Zoom\Api\Model\UploadGroupVB201Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4763,7 +4763,7 @@ class GroupsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\UploadGroupVB201Response',
+                        '\Zoom\Api\Model\UploadGroupVB201Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4807,7 +4807,7 @@ class GroupsApi
      */
     public function uploadGroupVBAsyncWithHttpInfo($group_id, $file = null)
     {
-        $returnType = '\OpenAPI\Client\Model\UploadGroupVB201Response';
+        $returnType = '\Zoom\Api\Model\UploadGroupVB201Response';
         $request = $this->uploadGroupVBRequest($group_id, $file);
 
         return $this->client

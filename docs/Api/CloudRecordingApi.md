@@ -1,4 +1,4 @@
-# OpenAPI\Client\CloudRecordingApi
+# Zoom\Api\CloudRecordingApi
 
 All URIs are relative to https://api.zoom.us/v2.
 
@@ -22,7 +22,7 @@ Method | HTTP request | Description
 ## `meetingRecordingRegistrantCreate()`
 
 ```php
-meetingRecordingRegistrantCreate($meeting_id, $meeting_registrant): \OpenAPI\Client\Model\MeetingRecordingRegistrantCreate201Response
+meetingRecordingRegistrantCreate($meeting_id, $meeting_registrant): \Zoom\Api\Model\MeetingRecordingRegistrantCreate201Response
 ```
 
 Create a recording registrant
@@ -37,17 +37,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\CloudRecordingApi(
+$apiInstance = new Zoom\Api\Api\CloudRecordingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $meeting_id = 85746065; // int | The meeting's ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits.
-$meeting_registrant = new \OpenAPI\Client\Model\MeetingRegistrant(); // \OpenAPI\Client\Model\MeetingRegistrant
+$meeting_registrant = new \Zoom\Api\Model\MeetingRegistrant(); // \Zoom\Api\Model\MeetingRegistrant
 
 try {
     $result = $apiInstance->meetingRecordingRegistrantCreate($meeting_id, $meeting_registrant);
@@ -62,11 +62,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **meeting_id** | **int**| The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. |
- **meeting_registrant** | [**\OpenAPI\Client\Model\MeetingRegistrant**](../Model/MeetingRegistrant.md)|  |
+ **meeting_registrant** | [**\Zoom\Api\Model\MeetingRegistrant**](../Model/MeetingRegistrant.md)|  |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\MeetingRecordingRegistrantCreate201Response**](../Model/MeetingRecordingRegistrantCreate201Response.md)
+[**\Zoom\Api\Model\MeetingRecordingRegistrantCreate201Response**](../Model/MeetingRecordingRegistrantCreate201Response.md)
 
 ### Authorization
 
@@ -99,17 +99,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\CloudRecordingApi(
+$apiInstance = new Zoom\Api\Api\CloudRecordingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $meeting_id = 85746065; // int | The meeting's ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits.
-$recording_registrant_status = new \OpenAPI\Client\Model\RecordingRegistrantStatus(); // \OpenAPI\Client\Model\RecordingRegistrantStatus
+$recording_registrant_status = new \Zoom\Api\Model\RecordingRegistrantStatus(); // \Zoom\Api\Model\RecordingRegistrantStatus
 
 try {
     $apiInstance->meetingRecordingRegistrantStatus($meeting_id, $recording_registrant_status);
@@ -123,7 +123,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **meeting_id** | **int**| The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. |
- **recording_registrant_status** | [**\OpenAPI\Client\Model\RecordingRegistrantStatus**](../Model/RecordingRegistrantStatus.md)|  |
+ **recording_registrant_status** | [**\Zoom\Api\Model\RecordingRegistrantStatus**](../Model/RecordingRegistrantStatus.md)|  |
 
 ### Return type
 
@@ -145,7 +145,7 @@ void (empty response body)
 ## `meetingRecordingRegistrants()`
 
 ```php
-meetingRecordingRegistrants($meeting_id, $status, $page_size, $page_number, $next_page_token): \OpenAPI\Client\Model\MeetingRecordingRegistrantList
+meetingRecordingRegistrants($meeting_id, $status, $page_size, $page_number, $next_page_token): \Zoom\Api\Model\MeetingRecordingRegistrantList
 ```
 
 List recording registrants
@@ -160,10 +160,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\CloudRecordingApi(
+$apiInstance = new Zoom\Api\Api\CloudRecordingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -195,7 +195,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\MeetingRecordingRegistrantList**](../Model/MeetingRecordingRegistrantList.md)
+[**\Zoom\Api\Model\MeetingRecordingRegistrantList**](../Model/MeetingRecordingRegistrantList.md)
 
 ### Authorization
 
@@ -228,10 +228,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\CloudRecordingApi(
+$apiInstance = new Zoom\Api\Api\CloudRecordingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -289,10 +289,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\CloudRecordingApi(
+$apiInstance = new Zoom\Api\Api\CloudRecordingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -337,7 +337,7 @@ void (empty response body)
 ## `recordingGet()`
 
 ```php
-recordingGet($meeting_id, $include_fields, $ttl): \OpenAPI\Client\Model\RecordingGet200Response
+recordingGet($meeting_id, $include_fields, $ttl): \Zoom\Api\Model\RecordingGet200Response
 ```
 
 Get meeting recordings
@@ -352,10 +352,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\CloudRecordingApi(
+$apiInstance = new Zoom\Api\Api\CloudRecordingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -383,7 +383,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\RecordingGet200Response**](../Model/RecordingGet200Response.md)
+[**\Zoom\Api\Model\RecordingGet200Response**](../Model/RecordingGet200Response.md)
 
 ### Authorization
 
@@ -416,17 +416,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\CloudRecordingApi(
+$apiInstance = new Zoom\Api\Api\CloudRecordingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $meeting_id = atsXxhSEQWit9t+U02HXNQ==; // string | To get Cloud Recordings of a meeting, provide the meeting ID or meeting UUID. If the meeting ID is provided instead of UUID,the response will be for the latest meeting instance.   To get Cloud Recordings of a webinar, provide the webinar ID or the webinar UUID. If the webinar ID is provided instead of UUID,the response will be for the latest webinar instance.   If a UUID starts with \"/\" or contains \"//\" (example: \"/ajXp112QmuoKj4854875==\"), you must **double encode** the UUID before making an API request.
-$recording_registrant_question_update_request = new \OpenAPI\Client\Model\RecordingRegistrantQuestionUpdateRequest(); // \OpenAPI\Client\Model\RecordingRegistrantQuestionUpdateRequest | Recording Registrant Questions
+$recording_registrant_question_update_request = new \Zoom\Api\Model\RecordingRegistrantQuestionUpdateRequest(); // \Zoom\Api\Model\RecordingRegistrantQuestionUpdateRequest | Recording Registrant Questions
 
 try {
     $apiInstance->recordingRegistrantQuestionUpdate($meeting_id, $recording_registrant_question_update_request);
@@ -440,7 +440,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **meeting_id** | **string**| To get Cloud Recordings of a meeting, provide the meeting ID or meeting UUID. If the meeting ID is provided instead of UUID,the response will be for the latest meeting instance.   To get Cloud Recordings of a webinar, provide the webinar ID or the webinar UUID. If the webinar ID is provided instead of UUID,the response will be for the latest webinar instance.   If a UUID starts with \&quot;/\&quot; or contains \&quot;//\&quot; (example: \&quot;/ajXp112QmuoKj4854875&#x3D;&#x3D;\&quot;), you must **double encode** the UUID before making an API request. |
- **recording_registrant_question_update_request** | [**\OpenAPI\Client\Model\RecordingRegistrantQuestionUpdateRequest**](../Model/RecordingRegistrantQuestionUpdateRequest.md)| Recording Registrant Questions |
+ **recording_registrant_question_update_request** | [**\Zoom\Api\Model\RecordingRegistrantQuestionUpdateRequest**](../Model/RecordingRegistrantQuestionUpdateRequest.md)| Recording Registrant Questions |
 
 ### Return type
 
@@ -462,7 +462,7 @@ void (empty response body)
 ## `recordingRegistrantsQuestionsGet()`
 
 ```php
-recordingRegistrantsQuestionsGet($meeting_id): \OpenAPI\Client\Model\RecordingRegistrantQuestions
+recordingRegistrantsQuestionsGet($meeting_id): \Zoom\Api\Model\RecordingRegistrantQuestions
 ```
 
 Get registration questions
@@ -477,10 +477,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\CloudRecordingApi(
+$apiInstance = new Zoom\Api\Api\CloudRecordingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -504,7 +504,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\RecordingRegistrantQuestions**](../Model/RecordingRegistrantQuestions.md)
+[**\Zoom\Api\Model\RecordingRegistrantQuestions**](../Model/RecordingRegistrantQuestions.md)
 
 ### Authorization
 
@@ -522,7 +522,7 @@ Name | Type | Description  | Notes
 ## `recordingSettingUpdate()`
 
 ```php
-recordingSettingUpdate($meeting_id): \OpenAPI\Client\Model\RecordingSettings
+recordingSettingUpdate($meeting_id): \Zoom\Api\Model\RecordingSettings
 ```
 
 Get meeting recording settings
@@ -537,10 +537,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\CloudRecordingApi(
+$apiInstance = new Zoom\Api\Api\CloudRecordingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -564,7 +564,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\RecordingSettings**](../Model/RecordingSettings.md)
+[**\Zoom\Api\Model\RecordingSettings**](../Model/RecordingSettings.md)
 
 ### Authorization
 
@@ -597,17 +597,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\CloudRecordingApi(
+$apiInstance = new Zoom\Api\Api\CloudRecordingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $meeting_id = atsXxhSEQWit9t+U02HXNQ==; // string | To get Cloud Recordings of a meeting, provide the meeting ID or meeting UUID. If the meeting ID is provided instead of UUID,the response will be for the latest meeting instance.   To get Cloud Recordings of a webinar, provide the webinar ID or the webinar UUID. If the webinar ID is provided instead of UUID,the response will be for the latest webinar instance.   If a UUID starts with \"/\" or contains \"//\" (example: \"/ajXp112QmuoKj4854875==\"), you must **double encode** the UUID before making an API request.
-$recording_settings = new \OpenAPI\Client\Model\RecordingSettings(); // \OpenAPI\Client\Model\RecordingSettings
+$recording_settings = new \Zoom\Api\Model\RecordingSettings(); // \Zoom\Api\Model\RecordingSettings
 
 try {
     $apiInstance->recordingSettingsUpdate($meeting_id, $recording_settings);
@@ -621,7 +621,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **meeting_id** | **string**| To get Cloud Recordings of a meeting, provide the meeting ID or meeting UUID. If the meeting ID is provided instead of UUID,the response will be for the latest meeting instance.   To get Cloud Recordings of a webinar, provide the webinar ID or the webinar UUID. If the webinar ID is provided instead of UUID,the response will be for the latest webinar instance.   If a UUID starts with \&quot;/\&quot; or contains \&quot;//\&quot; (example: \&quot;/ajXp112QmuoKj4854875&#x3D;&#x3D;\&quot;), you must **double encode** the UUID before making an API request. |
- **recording_settings** | [**\OpenAPI\Client\Model\RecordingSettings**](../Model/RecordingSettings.md)|  |
+ **recording_settings** | [**\Zoom\Api\Model\RecordingSettings**](../Model/RecordingSettings.md)|  |
 
 ### Return type
 
@@ -658,17 +658,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\CloudRecordingApi(
+$apiInstance = new Zoom\Api\Api\CloudRecordingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $meeting_uuid = 4444AAAiAAAAAiAiAiiAii==; // string | The meeting's universally unique identifier (UUID). Each meeting instance generates a UUID. For example, after a meeting ends, a new UUID is generated for the next meeting instance.  If the meeting UUID begins with a `/` character or contains a `//` character, you **must** double-encode the meeting UUID when using the meeting UUID for other API calls.
-$recording_status_update_request = new \OpenAPI\Client\Model\RecordingStatusUpdateRequest(); // \OpenAPI\Client\Model\RecordingStatusUpdateRequest
+$recording_status_update_request = new \Zoom\Api\Model\RecordingStatusUpdateRequest(); // \Zoom\Api\Model\RecordingStatusUpdateRequest
 
 try {
     $apiInstance->recordingStatusUpdate($meeting_uuid, $recording_status_update_request);
@@ -682,7 +682,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **meeting_uuid** | **string**| The meeting&#39;s universally unique identifier (UUID). Each meeting instance generates a UUID. For example, after a meeting ends, a new UUID is generated for the next meeting instance.  If the meeting UUID begins with a &#x60;/&#x60; character or contains a &#x60;//&#x60; character, you **must** double-encode the meeting UUID when using the meeting UUID for other API calls. |
- **recording_status_update_request** | [**\OpenAPI\Client\Model\RecordingStatusUpdateRequest**](../Model/RecordingStatusUpdateRequest.md)|  |
+ **recording_status_update_request** | [**\Zoom\Api\Model\RecordingStatusUpdateRequest**](../Model/RecordingStatusUpdateRequest.md)|  |
 
 ### Return type
 
@@ -719,10 +719,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\CloudRecordingApi(
+$apiInstance = new Zoom\Api\Api\CloudRecordingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -730,7 +730,7 @@ $apiInstance = new OpenAPI\Client\Api\CloudRecordingApi(
 );
 $meeting_id = atsXxhSEQWit9t+U02HXNQ==; // string | To get Cloud Recordings of a meeting, provide the meeting ID or meeting UUID. If the meeting ID is provided instead of UUID,the response will be for the latest meeting instance.   To get Cloud Recordings of a webinar, provide the webinar ID or the webinar UUID. If the webinar ID is provided instead of UUID,the response will be for the latest webinar instance.   If a UUID starts with \"/\" or contains \"//\" (example: \"/ajXp112QmuoKj4854875==\"), you must **double encode** the UUID before making an API request.
 $recording_id = a2f19f96-9294-4f51-8134-6f0eea108eb2; // string | The recording ID.
-$recording_status_update_request = new \OpenAPI\Client\Model\RecordingStatusUpdateRequest(); // \OpenAPI\Client\Model\RecordingStatusUpdateRequest
+$recording_status_update_request = new \Zoom\Api\Model\RecordingStatusUpdateRequest(); // \Zoom\Api\Model\RecordingStatusUpdateRequest
 
 try {
     $apiInstance->recordingStatusUpdateOne($meeting_id, $recording_id, $recording_status_update_request);
@@ -745,7 +745,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **meeting_id** | **string**| To get Cloud Recordings of a meeting, provide the meeting ID or meeting UUID. If the meeting ID is provided instead of UUID,the response will be for the latest meeting instance.   To get Cloud Recordings of a webinar, provide the webinar ID or the webinar UUID. If the webinar ID is provided instead of UUID,the response will be for the latest webinar instance.   If a UUID starts with \&quot;/\&quot; or contains \&quot;//\&quot; (example: \&quot;/ajXp112QmuoKj4854875&#x3D;&#x3D;\&quot;), you must **double encode** the UUID before making an API request. |
  **recording_id** | **string**| The recording ID. |
- **recording_status_update_request** | [**\OpenAPI\Client\Model\RecordingStatusUpdateRequest**](../Model/RecordingStatusUpdateRequest.md)|  |
+ **recording_status_update_request** | [**\Zoom\Api\Model\RecordingStatusUpdateRequest**](../Model/RecordingStatusUpdateRequest.md)|  |
 
 ### Return type
 
@@ -767,7 +767,7 @@ void (empty response body)
 ## `recordingsList()`
 
 ```php
-recordingsList($user_id, $page_size, $next_page_token, $mc, $trash, $from, $to, $trash_type, $meeting_id): \OpenAPI\Client\Model\RecordingMeetingList
+recordingsList($user_id, $page_size, $next_page_token, $mc, $trash, $from, $to, $trash_type, $meeting_id): \Zoom\Api\Model\RecordingMeetingList
 ```
 
 List all recordings
@@ -782,16 +782,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\CloudRecordingApi(
+$apiInstance = new Zoom\Api\Api\CloudRecordingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = new \OpenAPI\Client\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
+$user_id = new \Zoom\Api\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
 $page_size = 30; // int | The number of records returned within a single API call.
 $next_page_token = IAfJX3jsOLW7w3dokmFl84zOa0MAVGyMEB2; // string | The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
 $mc = false; // string | Query Metadata of Recording if an On-Premise Meeting Connector was used for the meeting.
@@ -825,7 +825,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\RecordingMeetingList**](../Model/RecordingMeetingList.md)
+[**\Zoom\Api\Model\RecordingMeetingList**](../Model/RecordingMeetingList.md)
 
 ### Authorization
 

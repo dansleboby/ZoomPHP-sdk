@@ -1,4 +1,4 @@
-# OpenAPI\Client\SIPPhoneApi
+# Zoom\Api\SIPPhoneApi
 
 All URIs are relative to https://api.zoom.us/v2.
 
@@ -28,16 +28,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\SIPPhoneApi(
+$apiInstance = new Zoom\Api\Api\SIPPhoneApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$create_sip_phone_request = new \OpenAPI\Client\Model\CreateSIPPhoneRequest(); // \OpenAPI\Client\Model\CreateSIPPhoneRequest
+$create_sip_phone_request = new \Zoom\Api\Model\CreateSIPPhoneRequest(); // \Zoom\Api\Model\CreateSIPPhoneRequest
 
 try {
     $apiInstance->createSIPPhone($create_sip_phone_request);
@@ -50,7 +50,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **create_sip_phone_request** | [**\OpenAPI\Client\Model\CreateSIPPhoneRequest**](../Model/CreateSIPPhoneRequest.md)|  | [optional]
+ **create_sip_phone_request** | [**\Zoom\Api\Model\CreateSIPPhoneRequest**](../Model/CreateSIPPhoneRequest.md)|  | [optional]
 
 ### Return type
 
@@ -87,10 +87,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\SIPPhoneApi(
+$apiInstance = new Zoom\Api\Api\SIPPhoneApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -131,7 +131,7 @@ void (empty response body)
 ## `listSipPhones()`
 
 ```php
-listSipPhones($page_number, $search_key, $page_size, $next_page_token): \OpenAPI\Client\Model\ListSipPhones200Response
+listSipPhones($page_number, $search_key, $page_size, $next_page_token): \Zoom\Api\Model\ListSipPhones200Response
 ```
 
 List SIP phones
@@ -146,10 +146,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\SIPPhoneApi(
+$apiInstance = new Zoom\Api\Api\SIPPhoneApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -179,7 +179,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ListSipPhones200Response**](../Model/ListSipPhones200Response.md)
+[**\Zoom\Api\Model\ListSipPhones200Response**](../Model/ListSipPhones200Response.md)
 
 ### Authorization
 
@@ -212,17 +212,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\SIPPhoneApi(
+$apiInstance = new Zoom\Api\Api\SIPPhoneApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $phone_id = 123456; // string | Unique Identifier of the SIP Phone. This can be retrieved from the List SIP Phones API.
-$update_sip_phone_request = new \OpenAPI\Client\Model\UpdateSIPPhoneRequest(); // \OpenAPI\Client\Model\UpdateSIPPhoneRequest
+$update_sip_phone_request = new \Zoom\Api\Model\UpdateSIPPhoneRequest(); // \Zoom\Api\Model\UpdateSIPPhoneRequest
 
 try {
     $apiInstance->updateSIPPhone($phone_id, $update_sip_phone_request);
@@ -236,7 +236,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **phone_id** | **string**| Unique Identifier of the SIP Phone. This can be retrieved from the List SIP Phones API. |
- **update_sip_phone_request** | [**\OpenAPI\Client\Model\UpdateSIPPhoneRequest**](../Model/UpdateSIPPhoneRequest.md)|  | [optional]
+ **update_sip_phone_request** | [**\Zoom\Api\Model\UpdateSIPPhoneRequest**](../Model/UpdateSIPPhoneRequest.md)|  | [optional]
 
 ### Return type
 

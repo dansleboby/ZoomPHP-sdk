@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * CreateWebinar Class Doc Comment
  *
  * @category Class
  * @description Base webinar object for sessions.
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -61,13 +61,13 @@ class CreateWebinar implements ModelInterface, ArrayAccess, \JsonSerializable
         'agenda' => 'string',
         'duration' => 'int',
         'password' => 'string',
-        'recurrence' => '\OpenAPI\Client\Model\RecurrenceWebinar',
-        'settings' => '\OpenAPI\Client\Model\CreateWebinarSettings',
+        'recurrence' => '\Zoom\Api\Model\RecurrenceWebinar',
+        'settings' => '\Zoom\Api\Model\CreateWebinarSettings',
         'start_time' => '\DateTime',
         'template_id' => 'string',
         'timezone' => 'string',
         'topic' => 'string',
-        'tracking_fields' => '\OpenAPI\Client\Model\CreateWebinarTrackingFieldsInner[]',
+        'tracking_fields' => '\Zoom\Api\Model\CreateWebinarTrackingFieldsInner[]',
         'type' => 'int'
     ];
 
@@ -365,7 +365,7 @@ class CreateWebinar implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets recurrence
      *
-     * @return \OpenAPI\Client\Model\RecurrenceWebinar|null
+     * @return \Zoom\Api\Model\RecurrenceWebinar|null
      */
     public function getRecurrence()
     {
@@ -375,7 +375,7 @@ class CreateWebinar implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets recurrence
      *
-     * @param \OpenAPI\Client\Model\RecurrenceWebinar|null $recurrence recurrence
+     * @param \Zoom\Api\Model\RecurrenceWebinar|null $recurrence recurrence
      *
      * @return self
      */
@@ -389,7 +389,7 @@ class CreateWebinar implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets settings
      *
-     * @return \OpenAPI\Client\Model\CreateWebinarSettings|null
+     * @return \Zoom\Api\Model\CreateWebinarSettings|null
      */
     public function getSettings()
     {
@@ -399,7 +399,7 @@ class CreateWebinar implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets settings
      *
-     * @param \OpenAPI\Client\Model\CreateWebinarSettings|null $settings settings
+     * @param \Zoom\Api\Model\CreateWebinarSettings|null $settings settings
      *
      * @return self
      */
@@ -509,7 +509,7 @@ class CreateWebinar implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets tracking_fields
      *
-     * @return \OpenAPI\Client\Model\CreateWebinarTrackingFieldsInner[]|null
+     * @return \Zoom\Api\Model\CreateWebinarTrackingFieldsInner[]|null
      */
     public function getTrackingFields()
     {
@@ -519,7 +519,7 @@ class CreateWebinar implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets tracking_fields
      *
-     * @param \OpenAPI\Client\Model\CreateWebinarTrackingFieldsInner[]|null $tracking_fields Tracking fields
+     * @param \Zoom\Api\Model\CreateWebinarTrackingFieldsInner[]|null $tracking_fields Tracking fields
      *
      * @return self
      */

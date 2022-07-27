@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * AccountPlans Class Doc Comment
  *
  * @category Class
  * @description Information about the account&#39;s plan.
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,18 +58,18 @@ class AccountPlans implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'plan_audio' => '\OpenAPI\Client\Model\AccountPlansPlanAudio',
-        'plan_base' => '\OpenAPI\Client\Model\AccountPlanBaseRequired',
-        'plan_large_meeting' => '\OpenAPI\Client\Model\AccountPlansPlanLargeMeetingInner[]',
-        'plan_phone' => '\OpenAPI\Client\Model\PhonePlan',
+        'plan_audio' => '\Zoom\Api\Model\AccountPlansPlanAudio',
+        'plan_base' => '\Zoom\Api\Model\AccountPlanBaseRequired',
+        'plan_large_meeting' => '\Zoom\Api\Model\AccountPlansPlanLargeMeetingInner[]',
+        'plan_phone' => '\Zoom\Api\Model\PhonePlan',
         'plan_recording' => 'string',
-        'plan_room_connector' => '\OpenAPI\Client\Model\AccountPlansPlanRoomConnectorInner[]',
-        'plan_webinar' => '\OpenAPI\Client\Model\AccountPlansPlanWebinarInner[]',
-        'plan_zoom_events' => '\OpenAPI\Client\Model\AccountPlansPlanZoomEventsInner[]',
-        'plan_zoom_rooms' => '\OpenAPI\Client\Model\AccountPlansPlanZoomRooms',
-        'plan_sdk_cmr' => '\OpenAPI\Client\Model\AccountPlansPlanSdkCmrInner[]',
-        'plan_whiteboard' => '\OpenAPI\Client\Model\AccountPlansPlanWhiteboard',
-        'plan_bundle' => '\OpenAPI\Client\Model\AccountPlansPlanBundleInner[]'
+        'plan_room_connector' => '\Zoom\Api\Model\AccountPlansPlanRoomConnectorInner[]',
+        'plan_webinar' => '\Zoom\Api\Model\AccountPlansPlanWebinarInner[]',
+        'plan_zoom_events' => '\Zoom\Api\Model\AccountPlansPlanZoomEventsInner[]',
+        'plan_zoom_rooms' => '\Zoom\Api\Model\AccountPlansPlanZoomRooms',
+        'plan_sdk_cmr' => '\Zoom\Api\Model\AccountPlansPlanSdkCmrInner[]',
+        'plan_whiteboard' => '\Zoom\Api\Model\AccountPlansPlanWhiteboard',
+        'plan_bundle' => '\Zoom\Api\Model\AccountPlansPlanBundleInner[]'
     ];
 
     /**
@@ -276,7 +276,7 @@ class AccountPlans implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets plan_audio
      *
-     * @return \OpenAPI\Client\Model\AccountPlansPlanAudio|null
+     * @return \Zoom\Api\Model\AccountPlansPlanAudio|null
      */
     public function getPlanAudio()
     {
@@ -286,7 +286,7 @@ class AccountPlans implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets plan_audio
      *
-     * @param \OpenAPI\Client\Model\AccountPlansPlanAudio|null $plan_audio plan_audio
+     * @param \Zoom\Api\Model\AccountPlansPlanAudio|null $plan_audio plan_audio
      *
      * @return self
      */
@@ -300,7 +300,7 @@ class AccountPlans implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets plan_base
      *
-     * @return \OpenAPI\Client\Model\AccountPlanBaseRequired
+     * @return \Zoom\Api\Model\AccountPlanBaseRequired
      */
     public function getPlanBase()
     {
@@ -310,7 +310,7 @@ class AccountPlans implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets plan_base
      *
-     * @param \OpenAPI\Client\Model\AccountPlanBaseRequired $plan_base plan_base
+     * @param \Zoom\Api\Model\AccountPlanBaseRequired $plan_base plan_base
      *
      * @return self
      */
@@ -324,7 +324,7 @@ class AccountPlans implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets plan_large_meeting
      *
-     * @return \OpenAPI\Client\Model\AccountPlansPlanLargeMeetingInner[]|null
+     * @return \Zoom\Api\Model\AccountPlansPlanLargeMeetingInner[]|null
      */
     public function getPlanLargeMeeting()
     {
@@ -334,7 +334,7 @@ class AccountPlans implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets plan_large_meeting
      *
-     * @param \OpenAPI\Client\Model\AccountPlansPlanLargeMeetingInner[]|null $plan_large_meeting Information about the account's Large Meeting plan.
+     * @param \Zoom\Api\Model\AccountPlansPlanLargeMeetingInner[]|null $plan_large_meeting Information about the account's Large Meeting plan.
      *
      * @return self
      */
@@ -348,7 +348,7 @@ class AccountPlans implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets plan_phone
      *
-     * @return \OpenAPI\Client\Model\PhonePlan|null
+     * @return \Zoom\Api\Model\PhonePlan|null
      */
     public function getPlanPhone()
     {
@@ -358,7 +358,7 @@ class AccountPlans implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets plan_phone
      *
-     * @param \OpenAPI\Client\Model\PhonePlan|null $plan_phone plan_phone
+     * @param \Zoom\Api\Model\PhonePlan|null $plan_phone plan_phone
      *
      * @return self
      */
@@ -396,7 +396,7 @@ class AccountPlans implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets plan_room_connector
      *
-     * @return \OpenAPI\Client\Model\AccountPlansPlanRoomConnectorInner[]|null
+     * @return \Zoom\Api\Model\AccountPlansPlanRoomConnectorInner[]|null
      */
     public function getPlanRoomConnector()
     {
@@ -406,7 +406,7 @@ class AccountPlans implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets plan_room_connector
      *
-     * @param \OpenAPI\Client\Model\AccountPlansPlanRoomConnectorInner[]|null $plan_room_connector plan_room_connector
+     * @param \Zoom\Api\Model\AccountPlansPlanRoomConnectorInner[]|null $plan_room_connector plan_room_connector
      *
      * @return self
      */
@@ -420,7 +420,7 @@ class AccountPlans implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets plan_webinar
      *
-     * @return \OpenAPI\Client\Model\AccountPlansPlanWebinarInner[]|null
+     * @return \Zoom\Api\Model\AccountPlansPlanWebinarInner[]|null
      */
     public function getPlanWebinar()
     {
@@ -430,7 +430,7 @@ class AccountPlans implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets plan_webinar
      *
-     * @param \OpenAPI\Client\Model\AccountPlansPlanWebinarInner[]|null $plan_webinar Information about the account's Webinar plan.
+     * @param \Zoom\Api\Model\AccountPlansPlanWebinarInner[]|null $plan_webinar Information about the account's Webinar plan.
      *
      * @return self
      */
@@ -444,7 +444,7 @@ class AccountPlans implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets plan_zoom_events
      *
-     * @return \OpenAPI\Client\Model\AccountPlansPlanZoomEventsInner[]|null
+     * @return \Zoom\Api\Model\AccountPlansPlanZoomEventsInner[]|null
      */
     public function getPlanZoomEvents()
     {
@@ -454,7 +454,7 @@ class AccountPlans implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets plan_zoom_events
      *
-     * @param \OpenAPI\Client\Model\AccountPlansPlanZoomEventsInner[]|null $plan_zoom_events Information about the account's Zoom Events plan.
+     * @param \Zoom\Api\Model\AccountPlansPlanZoomEventsInner[]|null $plan_zoom_events Information about the account's Zoom Events plan.
      *
      * @return self
      */
@@ -468,7 +468,7 @@ class AccountPlans implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets plan_zoom_rooms
      *
-     * @return \OpenAPI\Client\Model\AccountPlansPlanZoomRooms|null
+     * @return \Zoom\Api\Model\AccountPlansPlanZoomRooms|null
      */
     public function getPlanZoomRooms()
     {
@@ -478,7 +478,7 @@ class AccountPlans implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets plan_zoom_rooms
      *
-     * @param \OpenAPI\Client\Model\AccountPlansPlanZoomRooms|null $plan_zoom_rooms plan_zoom_rooms
+     * @param \Zoom\Api\Model\AccountPlansPlanZoomRooms|null $plan_zoom_rooms plan_zoom_rooms
      *
      * @return self
      */
@@ -492,7 +492,7 @@ class AccountPlans implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets plan_sdk_cmr
      *
-     * @return \OpenAPI\Client\Model\AccountPlansPlanSdkCmrInner[]|null
+     * @return \Zoom\Api\Model\AccountPlansPlanSdkCmrInner[]|null
      */
     public function getPlanSdkCmr()
     {
@@ -502,7 +502,7 @@ class AccountPlans implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets plan_sdk_cmr
      *
-     * @param \OpenAPI\Client\Model\AccountPlansPlanSdkCmrInner[]|null $plan_sdk_cmr Information about the account's Zoom Video SDK plan.
+     * @param \Zoom\Api\Model\AccountPlansPlanSdkCmrInner[]|null $plan_sdk_cmr Information about the account's Zoom Video SDK plan.
      *
      * @return self
      */
@@ -516,7 +516,7 @@ class AccountPlans implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets plan_whiteboard
      *
-     * @return \OpenAPI\Client\Model\AccountPlansPlanWhiteboard|null
+     * @return \Zoom\Api\Model\AccountPlansPlanWhiteboard|null
      */
     public function getPlanWhiteboard()
     {
@@ -526,7 +526,7 @@ class AccountPlans implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets plan_whiteboard
      *
-     * @param \OpenAPI\Client\Model\AccountPlansPlanWhiteboard|null $plan_whiteboard plan_whiteboard
+     * @param \Zoom\Api\Model\AccountPlansPlanWhiteboard|null $plan_whiteboard plan_whiteboard
      *
      * @return self
      */
@@ -540,7 +540,7 @@ class AccountPlans implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets plan_bundle
      *
-     * @return \OpenAPI\Client\Model\AccountPlansPlanBundleInner[]|null
+     * @return \Zoom\Api\Model\AccountPlansPlanBundleInner[]|null
      */
     public function getPlanBundle()
     {
@@ -550,7 +550,7 @@ class AccountPlans implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets plan_bundle
      *
-     * @param \OpenAPI\Client\Model\AccountPlansPlanBundleInner[]|null $plan_bundle Information about the account's Zoom Bundle plan.
+     * @param \Zoom\Api\Model\AccountPlansPlanBundleInner[]|null $plan_bundle Information about the account's Zoom Bundle plan.
      *
      * @return self
      */

@@ -1,4 +1,4 @@
-# OpenAPI\Client\AccountsApi
+# Zoom\Api\AccountsApi
 
 All URIs are relative to https://api.zoom.us/v2.
 
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 ## `accountManagedDomain()`
 
 ```php
-accountManagedDomain($account_id): \OpenAPI\Client\Model\DomainsList
+accountManagedDomain($account_id): \Zoom\Api\Model\DomainsList
 ```
 
 Get account's managed domains
@@ -28,10 +28,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\AccountsApi(
+$apiInstance = new Zoom\Api\Api\AccountsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\DomainsList**](../Model/DomainsList.md)
+[**\Zoom\Api\Model\DomainsList**](../Model/DomainsList.md)
 
 ### Authorization
 
@@ -73,7 +73,7 @@ Name | Type | Description  | Notes
 ## `accountSettings()`
 
 ```php
-accountSettings($account_id, $option, $custom_query_fields): \OpenAPI\Client\Model\AccountSettings200Response
+accountSettings($account_id, $option, $custom_query_fields): \Zoom\Api\Model\AccountSettings200Response
 ```
 
 Get account settings
@@ -88,10 +88,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\AccountsApi(
+$apiInstance = new Zoom\Api\Api\AccountsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -119,7 +119,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\AccountSettings200Response**](../Model/AccountSettings200Response.md)
+[**\Zoom\Api\Model\AccountSettings200Response**](../Model/AccountSettings200Response.md)
 
 ### Authorization
 
@@ -152,17 +152,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\AccountsApi(
+$apiInstance = new Zoom\Api\Api\AccountsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $account_id = me; // string | The account's ID. For the Master account, pass the `me` value for this parameter.
-$account_settings_update_request = new \OpenAPI\Client\Model\AccountSettingsUpdateRequest(); // \OpenAPI\Client\Model\AccountSettingsUpdateRequest
+$account_settings_update_request = new \Zoom\Api\Model\AccountSettingsUpdateRequest(); // \Zoom\Api\Model\AccountSettingsUpdateRequest
 $option = meeting_security; // string | Optional query parameters:  * `meeting_authentication` — Use this query parameter to view the [meeting authentication settings](https://support.zoom.us/hc/en-us/articles/360037117472-Authentication-Profiles-for-Meetings-and-Webinars) applied to the user's account.  * `recording_authentication` — Use this query parameter to view the [recording authentication settings](https://support.zoom.us/hc/en-us/articles/360037756671-Authentication-Profiles-for-Cloud-Recordings) applied to the user's account.  * `security` — Use this query parameter to view the account's security settings. For example, password requirements for user login or two-factor authentication.  * `meeting_security` — Use this query parameter to view the meeting security settings applied to the user's account.
 
 try {
@@ -177,7 +177,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **account_id** | **string**| The account&#39;s ID. For the Master account, pass the &#x60;me&#x60; value for this parameter. |
- **account_settings_update_request** | [**\OpenAPI\Client\Model\AccountSettingsUpdateRequest**](../Model/AccountSettingsUpdateRequest.md)|  |
+ **account_settings_update_request** | [**\Zoom\Api\Model\AccountSettingsUpdateRequest**](../Model/AccountSettingsUpdateRequest.md)|  |
  **option** | **string**| Optional query parameters:  * &#x60;meeting_authentication&#x60; — Use this query parameter to view the [meeting authentication settings](https://support.zoom.us/hc/en-us/articles/360037117472-Authentication-Profiles-for-Meetings-and-Webinars) applied to the user&#39;s account.  * &#x60;recording_authentication&#x60; — Use this query parameter to view the [recording authentication settings](https://support.zoom.us/hc/en-us/articles/360037756671-Authentication-Profiles-for-Cloud-Recordings) applied to the user&#39;s account.  * &#x60;security&#x60; — Use this query parameter to view the account&#39;s security settings. For example, password requirements for user login or two-factor authentication.  * &#x60;meeting_security&#x60; — Use this query parameter to view the meeting security settings applied to the user&#39;s account. | [optional]
 
 ### Return type
@@ -200,7 +200,7 @@ void (empty response body)
 ## `accountTrustedDomain()`
 
 ```php
-accountTrustedDomain($account_id): \OpenAPI\Client\Model\AccountTrustedDomain200Response
+accountTrustedDomain($account_id): \Zoom\Api\Model\AccountTrustedDomain200Response
 ```
 
 Get account's trusted domains
@@ -215,10 +215,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\AccountsApi(
+$apiInstance = new Zoom\Api\Api\AccountsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -242,7 +242,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\AccountTrustedDomain200Response**](../Model/AccountTrustedDomain200Response.md)
+[**\Zoom\Api\Model\AccountTrustedDomain200Response**](../Model/AccountTrustedDomain200Response.md)
 
 ### Authorization
 

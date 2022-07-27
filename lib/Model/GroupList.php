@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * GroupList Class Doc Comment
  *
  * @category Class
  * @description List of meetings.
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -63,7 +63,7 @@ class GroupList implements ModelInterface, ArrayAccess, \JsonSerializable
         'page_number' => 'int',
         'page_size' => 'int',
         'total_records' => 'int',
-        'meetings' => '\OpenAPI\Client\Model\GroupListAllOf1MeetingsInner[]'
+        'meetings' => '\Zoom\Api\Model\GroupListAllOf1MeetingsInner[]'
     ];
 
     /**
@@ -366,7 +366,7 @@ class GroupList implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets meetings
      *
-     * @return \OpenAPI\Client\Model\GroupListAllOf1MeetingsInner[]|null
+     * @return \Zoom\Api\Model\GroupListAllOf1MeetingsInner[]|null
      */
     public function getMeetings()
     {
@@ -376,7 +376,7 @@ class GroupList implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets meetings
      *
-     * @param \OpenAPI\Client\Model\GroupListAllOf1MeetingsInner[]|null $meetings List of Meeting objects.
+     * @param \Zoom\Api\Model\GroupListAllOf1MeetingsInner[]|null $meetings List of Meeting objects.
      *
      * @return self
      */

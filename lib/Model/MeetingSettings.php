@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * MeetingSettings Class Doc Comment
  *
  * @category Class
  * @description Meeting settings.
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -63,32 +63,32 @@ class MeetingSettings implements ModelInterface, ArrayAccess, \JsonSerializable
         'alternative_hosts_email_notification' => 'bool',
         'alternative_host_update_polls' => 'bool',
         'approval_type' => 'int',
-        'approved_or_denied_countries_or_regions' => '\OpenAPI\Client\Model\MeetingSettingsApprovedOrDeniedCountriesOrRegions',
+        'approved_or_denied_countries_or_regions' => '\Zoom\Api\Model\MeetingSettingsApprovedOrDeniedCountriesOrRegions',
         'audio' => 'string',
         'authentication_domains' => 'string',
-        'authentication_exception' => '\OpenAPI\Client\Model\MeetingSettingsAuthenticationExceptionInner[]',
+        'authentication_exception' => '\Zoom\Api\Model\MeetingSettingsAuthenticationExceptionInner[]',
         'authentication_name' => 'string',
         'authentication_option' => 'string',
         'auto_recording' => 'string',
-        'breakout_room' => '\OpenAPI\Client\Model\MeetingSettingsBreakoutRoom',
+        'breakout_room' => '\Zoom\Api\Model\MeetingSettingsBreakoutRoom',
         'calendar_type' => 'int',
         'close_registration' => 'bool',
         'cn_meeting' => 'bool',
         'contact_email' => 'string',
         'contact_name' => 'string',
-        'custom_keys' => '\OpenAPI\Client\Model\MeetingSettingsCustomKeysInner[]',
+        'custom_keys' => '\Zoom\Api\Model\MeetingSettingsCustomKeysInner[]',
         'email_notification' => 'bool',
         'encryption_type' => 'string',
         'enforce_login' => 'bool',
         'enforce_login_domains' => 'string',
         'focus_mode' => 'bool',
         'global_dial_in_countries' => 'string[]',
-        'global_dial_in_numbers' => '\OpenAPI\Client\Model\MeetingSettingsGlobalDialInNumbersInner[]',
+        'global_dial_in_numbers' => '\Zoom\Api\Model\MeetingSettingsGlobalDialInNumbersInner[]',
         'host_video' => 'bool',
         'in_meeting' => 'bool',
         'jbh_time' => 'int',
         'join_before_host' => 'bool',
-        'language_interpretation' => '\OpenAPI\Client\Model\MeetingCreateSettingsLanguageInterpretation',
+        'language_interpretation' => '\Zoom\Api\Model\MeetingCreateSettingsLanguageInterpretation',
         'meeting_authentication' => 'bool',
         'mute_upon_entry' => 'bool',
         'participant_video' => 'bool',
@@ -771,7 +771,7 @@ class MeetingSettings implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets approved_or_denied_countries_or_regions
      *
-     * @return \OpenAPI\Client\Model\MeetingSettingsApprovedOrDeniedCountriesOrRegions|null
+     * @return \Zoom\Api\Model\MeetingSettingsApprovedOrDeniedCountriesOrRegions|null
      */
     public function getApprovedOrDeniedCountriesOrRegions()
     {
@@ -781,7 +781,7 @@ class MeetingSettings implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets approved_or_denied_countries_or_regions
      *
-     * @param \OpenAPI\Client\Model\MeetingSettingsApprovedOrDeniedCountriesOrRegions|null $approved_or_denied_countries_or_regions approved_or_denied_countries_or_regions
+     * @param \Zoom\Api\Model\MeetingSettingsApprovedOrDeniedCountriesOrRegions|null $approved_or_denied_countries_or_regions approved_or_denied_countries_or_regions
      *
      * @return self
      */
@@ -853,7 +853,7 @@ class MeetingSettings implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets authentication_exception
      *
-     * @return \OpenAPI\Client\Model\MeetingSettingsAuthenticationExceptionInner[]|null
+     * @return \Zoom\Api\Model\MeetingSettingsAuthenticationExceptionInner[]|null
      */
     public function getAuthenticationException()
     {
@@ -863,7 +863,7 @@ class MeetingSettings implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets authentication_exception
      *
-     * @param \OpenAPI\Client\Model\MeetingSettingsAuthenticationExceptionInner[]|null $authentication_exception The participants added here will receive unique meeting invite links and bypass authentication.
+     * @param \Zoom\Api\Model\MeetingSettingsAuthenticationExceptionInner[]|null $authentication_exception The participants added here will receive unique meeting invite links and bypass authentication.
      *
      * @return self
      */
@@ -959,7 +959,7 @@ class MeetingSettings implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets breakout_room
      *
-     * @return \OpenAPI\Client\Model\MeetingSettingsBreakoutRoom|null
+     * @return \Zoom\Api\Model\MeetingSettingsBreakoutRoom|null
      */
     public function getBreakoutRoom()
     {
@@ -969,7 +969,7 @@ class MeetingSettings implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets breakout_room
      *
-     * @param \OpenAPI\Client\Model\MeetingSettingsBreakoutRoom|null $breakout_room breakout_room
+     * @param \Zoom\Api\Model\MeetingSettingsBreakoutRoom|null $breakout_room breakout_room
      *
      * @return self
      */
@@ -1115,7 +1115,7 @@ class MeetingSettings implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets custom_keys
      *
-     * @return \OpenAPI\Client\Model\MeetingSettingsCustomKeysInner[]|null
+     * @return \Zoom\Api\Model\MeetingSettingsCustomKeysInner[]|null
      */
     public function getCustomKeys()
     {
@@ -1125,7 +1125,7 @@ class MeetingSettings implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets custom_keys
      *
-     * @param \OpenAPI\Client\Model\MeetingSettingsCustomKeysInner[]|null $custom_keys Custom keys and values assigned to the meeting.
+     * @param \Zoom\Api\Model\MeetingSettingsCustomKeysInner[]|null $custom_keys Custom keys and values assigned to the meeting.
      *
      * @return self
      */
@@ -1301,7 +1301,7 @@ class MeetingSettings implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets global_dial_in_numbers
      *
-     * @return \OpenAPI\Client\Model\MeetingSettingsGlobalDialInNumbersInner[]|null
+     * @return \Zoom\Api\Model\MeetingSettingsGlobalDialInNumbersInner[]|null
      */
     public function getGlobalDialInNumbers()
     {
@@ -1311,7 +1311,7 @@ class MeetingSettings implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets global_dial_in_numbers
      *
-     * @param \OpenAPI\Client\Model\MeetingSettingsGlobalDialInNumbersInner[]|null $global_dial_in_numbers Global Dial-in Countries/Regions
+     * @param \Zoom\Api\Model\MeetingSettingsGlobalDialInNumbersInner[]|null $global_dial_in_numbers Global Dial-in Countries/Regions
      *
      * @return self
      */
@@ -1433,7 +1433,7 @@ class MeetingSettings implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets language_interpretation
      *
-     * @return \OpenAPI\Client\Model\MeetingCreateSettingsLanguageInterpretation|null
+     * @return \Zoom\Api\Model\MeetingCreateSettingsLanguageInterpretation|null
      */
     public function getLanguageInterpretation()
     {
@@ -1443,7 +1443,7 @@ class MeetingSettings implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets language_interpretation
      *
-     * @param \OpenAPI\Client\Model\MeetingCreateSettingsLanguageInterpretation|null $language_interpretation language_interpretation
+     * @param \Zoom\Api\Model\MeetingCreateSettingsLanguageInterpretation|null $language_interpretation language_interpretation
      *
      * @return self
      */

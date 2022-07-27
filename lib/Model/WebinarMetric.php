@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * WebinarMetric Class Doc Comment
  *
  * @category Class
  * @description Webinar metric details.
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class WebinarMetric implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'host' => 'string',
-        'custom_keys' => '\OpenAPI\Client\Model\WebinarMetricCustomKeysInner[]',
+        'custom_keys' => '\Zoom\Api\Model\WebinarMetricCustomKeysInner[]',
         'dept' => 'string',
         'duration' => 'string',
         'email' => 'string',
@@ -451,7 +451,7 @@ class WebinarMetric implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets custom_keys
      *
-     * @return \OpenAPI\Client\Model\WebinarMetricCustomKeysInner[]|null
+     * @return \Zoom\Api\Model\WebinarMetricCustomKeysInner[]|null
      */
     public function getCustomKeys()
     {
@@ -461,7 +461,7 @@ class WebinarMetric implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets custom_keys
      *
-     * @param \OpenAPI\Client\Model\WebinarMetricCustomKeysInner[]|null $custom_keys Custom keys and values assigned to the Webinar.
+     * @param \Zoom\Api\Model\WebinarMetricCustomKeysInner[]|null $custom_keys Custom keys and values assigned to the Webinar.
      *
      * @return self
      */

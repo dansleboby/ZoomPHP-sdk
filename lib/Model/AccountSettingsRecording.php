@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * AccountSettingsRecording Class Doc Comment
  *
  * @category Class
  * @description Account Settings: Recording.
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,10 +60,10 @@ class AccountSettingsRecording implements ModelInterface, ArrayAccess, \JsonSeri
     protected static $openAPITypes = [
         'account_user_access_recording' => 'bool',
         'allow_recovery_deleted_cloud_recordings' => 'bool',
-        'archive' => '\OpenAPI\Client\Model\AccountSettingsRecordingArchive',
+        'archive' => '\Zoom\Api\Model\AccountSettingsRecordingArchive',
         'auto_delete_cmr' => 'bool',
         'auto_delete_cmr_days' => 'int',
-        'record_files_separately' => '\OpenAPI\Client\Model\AccountSettingsRecordingRecordFilesSeparately',
+        'record_files_separately' => '\Zoom\Api\Model\AccountSettingsRecordingRecordFilesSeparately',
         'display_participant_name' => 'bool',
         'recording_thumbnails' => 'bool',
         'optimize_recording_for_3rd_party_video_editor' => 'bool',
@@ -76,7 +76,7 @@ class AccountSettingsRecording implements ModelInterface, ArrayAccess, \JsonSeri
         'cloud_recording_download' => 'bool',
         'cloud_recording_download_host' => 'bool',
         'host_delete_cloud_recording' => 'bool',
-        'ip_address_access_control' => '\OpenAPI\Client\Model\AccountSettingsRecordingIpAddressAccessControl',
+        'ip_address_access_control' => '\Zoom\Api\Model\AccountSettingsRecordingIpAddressAccessControl',
         'local_recording' => 'bool',
         'prevent_host_access_recording' => 'bool',
         'record_audio_file' => 'bool',
@@ -84,7 +84,7 @@ class AccountSettingsRecording implements ModelInterface, ArrayAccess, \JsonSeri
         'record_speaker_view' => 'bool',
         'recording_audio_transcript' => 'bool',
         'recording_disclaimer' => 'bool',
-        'recording_password_requirement' => '\OpenAPI\Client\Model\AccountSettingsRecordingRecordingPasswordRequirement',
+        'recording_password_requirement' => '\Zoom\Api\Model\AccountSettingsRecordingRecordingPasswordRequirement',
         'required_password_for_existing_cloud_recordings' => 'bool',
         'required_password_for_shared_cloud_recordings' => 'bool',
         'save_chat_text' => 'bool',
@@ -489,7 +489,7 @@ class AccountSettingsRecording implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets archive
      *
-     * @return \OpenAPI\Client\Model\AccountSettingsRecordingArchive|null
+     * @return \Zoom\Api\Model\AccountSettingsRecordingArchive|null
      */
     public function getArchive()
     {
@@ -499,7 +499,7 @@ class AccountSettingsRecording implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets archive
      *
-     * @param \OpenAPI\Client\Model\AccountSettingsRecordingArchive|null $archive archive
+     * @param \Zoom\Api\Model\AccountSettingsRecordingArchive|null $archive archive
      *
      * @return self
      */
@@ -571,7 +571,7 @@ class AccountSettingsRecording implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets record_files_separately
      *
-     * @return \OpenAPI\Client\Model\AccountSettingsRecordingRecordFilesSeparately|null
+     * @return \Zoom\Api\Model\AccountSettingsRecordingRecordFilesSeparately|null
      */
     public function getRecordFilesSeparately()
     {
@@ -581,7 +581,7 @@ class AccountSettingsRecording implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets record_files_separately
      *
-     * @param \OpenAPI\Client\Model\AccountSettingsRecordingRecordFilesSeparately|null $record_files_separately record_files_separately
+     * @param \Zoom\Api\Model\AccountSettingsRecordingRecordFilesSeparately|null $record_files_separately record_files_separately
      *
      * @return self
      */
@@ -893,7 +893,7 @@ class AccountSettingsRecording implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets ip_address_access_control
      *
-     * @return \OpenAPI\Client\Model\AccountSettingsRecordingIpAddressAccessControl|null
+     * @return \Zoom\Api\Model\AccountSettingsRecordingIpAddressAccessControl|null
      */
     public function getIpAddressAccessControl()
     {
@@ -903,7 +903,7 @@ class AccountSettingsRecording implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets ip_address_access_control
      *
-     * @param \OpenAPI\Client\Model\AccountSettingsRecordingIpAddressAccessControl|null $ip_address_access_control ip_address_access_control
+     * @param \Zoom\Api\Model\AccountSettingsRecordingIpAddressAccessControl|null $ip_address_access_control ip_address_access_control
      *
      * @return self
      */
@@ -1085,7 +1085,7 @@ class AccountSettingsRecording implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets recording_password_requirement
      *
-     * @return \OpenAPI\Client\Model\AccountSettingsRecordingRecordingPasswordRequirement|null
+     * @return \Zoom\Api\Model\AccountSettingsRecordingRecordingPasswordRequirement|null
      */
     public function getRecordingPasswordRequirement()
     {
@@ -1095,7 +1095,7 @@ class AccountSettingsRecording implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets recording_password_requirement
      *
-     * @param \OpenAPI\Client\Model\AccountSettingsRecordingRecordingPasswordRequirement|null $recording_password_requirement recording_password_requirement
+     * @param \Zoom\Api\Model\AccountSettingsRecordingRecordingPasswordRequirement|null $recording_password_requirement recording_password_requirement
      *
      * @return self
      */

@@ -1,4 +1,4 @@
-# OpenAPI\Client\DeprecatedAPIEndpointsApi
+# Zoom\Api\DeprecatedAPIEndpointsApi
 
 All URIs are relative to https://api.zoom.us/v2.
 
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 ## `listPastMeetingFiles()`
 
 ```php
-listPastMeetingFiles($meeting_id): \OpenAPI\Client\Model\ListPastMeetingFiles200Response
+listPastMeetingFiles($meeting_id): \Zoom\Api\Model\ListPastMeetingFiles200Response
 ```
 
 List past meeting's files
@@ -26,10 +26,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\DeprecatedAPIEndpointsApi(
+$apiInstance = new Zoom\Api\Api\DeprecatedAPIEndpointsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -53,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ListPastMeetingFiles200Response**](../Model/ListPastMeetingFiles200Response.md)
+[**\Zoom\Api\Model\ListPastMeetingFiles200Response**](../Model/ListPastMeetingFiles200Response.md)
 
 ### Authorization
 
@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 ## `listPastWebinarFiles()`
 
 ```php
-listPastWebinarFiles($webinar_id): \OpenAPI\Client\Model\ListPastWebinarFiles200Response
+listPastWebinarFiles($webinar_id): \Zoom\Api\Model\ListPastWebinarFiles200Response
 ```
 
 List past webinar files
@@ -86,10 +86,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\DeprecatedAPIEndpointsApi(
+$apiInstance = new Zoom\Api\Api\DeprecatedAPIEndpointsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -113,7 +113,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ListPastWebinarFiles200Response**](../Model/ListPastWebinarFiles200Response.md)
+[**\Zoom\Api\Model\ListPastWebinarFiles200Response**](../Model/ListPastWebinarFiles200Response.md)
 
 ### Authorization
 

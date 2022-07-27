@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Zoom\Api\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Zoom\Api\ApiException;
+use Zoom\Api\Configuration;
+use Zoom\Api\HeaderSelector;
+use Zoom\Api\ObjectSerializer;
 
 /**
  * MeetingsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -121,11 +121,11 @@ class MeetingsApi
      * Perform batch registration
      *
      * @param  string $meeting_id Unique identifier of the meeting (Meeting Number). (required)
-     * @param  \OpenAPI\Client\Model\AddBatchRegistrantsRequest $add_batch_registrants_request add_batch_registrants_request (optional)
+     * @param  \Zoom\Api\Model\AddBatchRegistrantsRequest $add_batch_registrants_request add_batch_registrants_request (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\AddBatchRegistrants200Response
+     * @return \Zoom\Api\Model\AddBatchRegistrants200Response
      */
     public function addBatchRegistrants($meeting_id, $add_batch_registrants_request = null)
     {
@@ -139,11 +139,11 @@ class MeetingsApi
      * Perform batch registration
      *
      * @param  string $meeting_id Unique identifier of the meeting (Meeting Number). (required)
-     * @param  \OpenAPI\Client\Model\AddBatchRegistrantsRequest $add_batch_registrants_request (optional)
+     * @param  \Zoom\Api\Model\AddBatchRegistrantsRequest $add_batch_registrants_request (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\AddBatchRegistrants200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\AddBatchRegistrants200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function addBatchRegistrantsWithHttpInfo($meeting_id, $add_batch_registrants_request = null)
     {
@@ -186,23 +186,23 @@ class MeetingsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\AddBatchRegistrants200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\AddBatchRegistrants200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\AddBatchRegistrants200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\AddBatchRegistrants200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\AddBatchRegistrants200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\AddBatchRegistrants200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\AddBatchRegistrants200Response';
+            $returnType = '\Zoom\Api\Model\AddBatchRegistrants200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -223,7 +223,7 @@ class MeetingsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\AddBatchRegistrants200Response',
+                        '\Zoom\Api\Model\AddBatchRegistrants200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -239,7 +239,7 @@ class MeetingsApi
      * Perform batch registration
      *
      * @param  string $meeting_id Unique identifier of the meeting (Meeting Number). (required)
-     * @param  \OpenAPI\Client\Model\AddBatchRegistrantsRequest $add_batch_registrants_request (optional)
+     * @param  \Zoom\Api\Model\AddBatchRegistrantsRequest $add_batch_registrants_request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -260,14 +260,14 @@ class MeetingsApi
      * Perform batch registration
      *
      * @param  string $meeting_id Unique identifier of the meeting (Meeting Number). (required)
-     * @param  \OpenAPI\Client\Model\AddBatchRegistrantsRequest $add_batch_registrants_request (optional)
+     * @param  \Zoom\Api\Model\AddBatchRegistrantsRequest $add_batch_registrants_request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function addBatchRegistrantsAsyncWithHttpInfo($meeting_id, $add_batch_registrants_request = null)
     {
-        $returnType = '\OpenAPI\Client\Model\AddBatchRegistrants200Response';
+        $returnType = '\Zoom\Api\Model\AddBatchRegistrants200Response';
         $request = $this->addBatchRegistrantsRequest($meeting_id, $add_batch_registrants_request);
 
         return $this->client
@@ -310,7 +310,7 @@ class MeetingsApi
      * Create request for operation 'addBatchRegistrants'
      *
      * @param  string $meeting_id Unique identifier of the meeting (Meeting Number). (required)
-     * @param  \OpenAPI\Client\Model\AddBatchRegistrantsRequest $add_batch_registrants_request (optional)
+     * @param  \Zoom\Api\Model\AddBatchRegistrantsRequest $add_batch_registrants_request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -421,11 +421,11 @@ class MeetingsApi
      * Perform batch poll creation
      *
      * @param  string $meeting_id meeting_id (required)
-     * @param  \OpenAPI\Client\Model\CreateBatchPollsRequest $create_batch_polls_request Batch Meeting poll object (optional)
+     * @param  \Zoom\Api\Model\CreateBatchPollsRequest $create_batch_polls_request Batch Meeting poll object (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\CreateBatchPolls201Response
+     * @return \Zoom\Api\Model\CreateBatchPolls201Response
      */
     public function createBatchPolls($meeting_id, $create_batch_polls_request = null)
     {
@@ -439,11 +439,11 @@ class MeetingsApi
      * Perform batch poll creation
      *
      * @param  string $meeting_id (required)
-     * @param  \OpenAPI\Client\Model\CreateBatchPollsRequest $create_batch_polls_request Batch Meeting poll object (optional)
+     * @param  \Zoom\Api\Model\CreateBatchPollsRequest $create_batch_polls_request Batch Meeting poll object (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\CreateBatchPolls201Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\CreateBatchPolls201Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function createBatchPollsWithHttpInfo($meeting_id, $create_batch_polls_request = null)
     {
@@ -486,23 +486,23 @@ class MeetingsApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\OpenAPI\Client\Model\CreateBatchPolls201Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\CreateBatchPolls201Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\CreateBatchPolls201Response' !== 'string') {
+                        if ('\Zoom\Api\Model\CreateBatchPolls201Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CreateBatchPolls201Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\CreateBatchPolls201Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\CreateBatchPolls201Response';
+            $returnType = '\Zoom\Api\Model\CreateBatchPolls201Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -523,7 +523,7 @@ class MeetingsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\CreateBatchPolls201Response',
+                        '\Zoom\Api\Model\CreateBatchPolls201Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -539,7 +539,7 @@ class MeetingsApi
      * Perform batch poll creation
      *
      * @param  string $meeting_id (required)
-     * @param  \OpenAPI\Client\Model\CreateBatchPollsRequest $create_batch_polls_request Batch Meeting poll object (optional)
+     * @param  \Zoom\Api\Model\CreateBatchPollsRequest $create_batch_polls_request Batch Meeting poll object (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -560,14 +560,14 @@ class MeetingsApi
      * Perform batch poll creation
      *
      * @param  string $meeting_id (required)
-     * @param  \OpenAPI\Client\Model\CreateBatchPollsRequest $create_batch_polls_request Batch Meeting poll object (optional)
+     * @param  \Zoom\Api\Model\CreateBatchPollsRequest $create_batch_polls_request Batch Meeting poll object (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createBatchPollsAsyncWithHttpInfo($meeting_id, $create_batch_polls_request = null)
     {
-        $returnType = '\OpenAPI\Client\Model\CreateBatchPolls201Response';
+        $returnType = '\Zoom\Api\Model\CreateBatchPolls201Response';
         $request = $this->createBatchPollsRequest($meeting_id, $create_batch_polls_request);
 
         return $this->client
@@ -610,7 +610,7 @@ class MeetingsApi
      * Create request for operation 'createBatchPolls'
      *
      * @param  string $meeting_id (required)
-     * @param  \OpenAPI\Client\Model\CreateBatchPollsRequest $create_batch_polls_request Batch Meeting poll object (optional)
+     * @param  \Zoom\Api\Model\CreateBatchPollsRequest $create_batch_polls_request Batch Meeting poll object (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -718,7 +718,7 @@ class MeetingsApi
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
      * @param  string $message_id The live meeting chat message&#39;s unique identifier (UUID), in base64-encoded format. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -735,7 +735,7 @@ class MeetingsApi
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
      * @param  string $message_id The live meeting chat message&#39;s unique identifier (UUID), in base64-encoded format. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -966,9 +966,9 @@ class MeetingsApi
      *
      * @param  string $meeting_id Unique identifier of the meeting. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\GetMeetingLiveStreamDetails200Response
+     * @return \Zoom\Api\Model\GetMeetingLiveStreamDetails200Response
      */
     public function getMeetingLiveStreamDetails($meeting_id)
     {
@@ -983,9 +983,9 @@ class MeetingsApi
      *
      * @param  string $meeting_id Unique identifier of the meeting. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\GetMeetingLiveStreamDetails200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\GetMeetingLiveStreamDetails200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function getMeetingLiveStreamDetailsWithHttpInfo($meeting_id)
     {
@@ -1028,23 +1028,23 @@ class MeetingsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\GetMeetingLiveStreamDetails200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\GetMeetingLiveStreamDetails200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\GetMeetingLiveStreamDetails200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\GetMeetingLiveStreamDetails200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\GetMeetingLiveStreamDetails200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\GetMeetingLiveStreamDetails200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\GetMeetingLiveStreamDetails200Response';
+            $returnType = '\Zoom\Api\Model\GetMeetingLiveStreamDetails200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1065,7 +1065,7 @@ class MeetingsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\GetMeetingLiveStreamDetails200Response',
+                        '\Zoom\Api\Model\GetMeetingLiveStreamDetails200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1107,7 +1107,7 @@ class MeetingsApi
      */
     public function getMeetingLiveStreamDetailsAsyncWithHttpInfo($meeting_id)
     {
-        $returnType = '\OpenAPI\Client\Model\GetMeetingLiveStreamDetails200Response';
+        $returnType = '\Zoom\Api\Model\GetMeetingLiveStreamDetails200Response';
         $request = $this->getMeetingLiveStreamDetailsRequest($meeting_id);
 
         return $this->client
@@ -1249,9 +1249,9 @@ class MeetingsApi
      * Use in-meeting controls
      *
      * @param  string $meeting_id The live meeting&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\InMeetingControlRequest $in_meeting_control_request in_meeting_control_request (optional)
+     * @param  \Zoom\Api\Model\InMeetingControlRequest $in_meeting_control_request in_meeting_control_request (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1266,9 +1266,9 @@ class MeetingsApi
      * Use in-meeting controls
      *
      * @param  string $meeting_id The live meeting&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\InMeetingControlRequest $in_meeting_control_request (optional)
+     * @param  \Zoom\Api\Model\InMeetingControlRequest $in_meeting_control_request (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1326,7 +1326,7 @@ class MeetingsApi
      * Use in-meeting controls
      *
      * @param  string $meeting_id The live meeting&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\InMeetingControlRequest $in_meeting_control_request (optional)
+     * @param  \Zoom\Api\Model\InMeetingControlRequest $in_meeting_control_request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1347,7 +1347,7 @@ class MeetingsApi
      * Use in-meeting controls
      *
      * @param  string $meeting_id The live meeting&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\InMeetingControlRequest $in_meeting_control_request (optional)
+     * @param  \Zoom\Api\Model\InMeetingControlRequest $in_meeting_control_request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1384,7 +1384,7 @@ class MeetingsApi
      * Create request for operation 'inMeetingControl'
      *
      * @param  string $meeting_id The live meeting&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\InMeetingControlRequest $in_meeting_control_request (optional)
+     * @param  \Zoom\Api\Model\InMeetingControlRequest $in_meeting_control_request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1491,9 +1491,9 @@ class MeetingsApi
      *
      * @param  string $user_id Unique identifier of the user. Retrieve the value of this field by calling the [**List users**](/docs/api-reference/zoom-api/methods#operation/users) API. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ListMeetingTemplates200Response
+     * @return \Zoom\Api\Model\ListMeetingTemplates200Response
      */
     public function listMeetingTemplates($user_id)
     {
@@ -1508,9 +1508,9 @@ class MeetingsApi
      *
      * @param  string $user_id Unique identifier of the user. Retrieve the value of this field by calling the [**List users**](/docs/api-reference/zoom-api/methods#operation/users) API. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ListMeetingTemplates200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\ListMeetingTemplates200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function listMeetingTemplatesWithHttpInfo($user_id)
     {
@@ -1553,23 +1553,23 @@ class MeetingsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ListMeetingTemplates200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\ListMeetingTemplates200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ListMeetingTemplates200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\ListMeetingTemplates200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ListMeetingTemplates200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\ListMeetingTemplates200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ListMeetingTemplates200Response';
+            $returnType = '\Zoom\Api\Model\ListMeetingTemplates200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1590,7 +1590,7 @@ class MeetingsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ListMeetingTemplates200Response',
+                        '\Zoom\Api\Model\ListMeetingTemplates200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1632,7 +1632,7 @@ class MeetingsApi
      */
     public function listMeetingTemplatesAsyncWithHttpInfo($user_id)
     {
-        $returnType = '\OpenAPI\Client\Model\ListMeetingTemplates200Response';
+        $returnType = '\Zoom\Api\Model\ListMeetingTemplates200Response';
         $request = $this->listMeetingTemplatesRequest($user_id);
 
         return $this->client
@@ -1775,9 +1775,9 @@ class MeetingsApi
      *
      * @param  ListPastMeetingPollsMeetingIdParameter $meeting_id The meeting&#39;s ID or universally unique ID (UUID).  * If you provide a meeting ID, the API will return a response for the latest meeting instance.  * If you provide a meeting UUID that begins with a &#x60;/&#x60; character or contains the &#x60;//&#x60; characters, you **must** double-encode the meeting UUID before making an API request. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ListPastMeetingPolls200Response
+     * @return \Zoom\Api\Model\ListPastMeetingPolls200Response
      */
     public function listPastMeetingPolls($meeting_id)
     {
@@ -1792,9 +1792,9 @@ class MeetingsApi
      *
      * @param  ListPastMeetingPollsMeetingIdParameter $meeting_id The meeting&#39;s ID or universally unique ID (UUID).  * If you provide a meeting ID, the API will return a response for the latest meeting instance.  * If you provide a meeting UUID that begins with a &#x60;/&#x60; character or contains the &#x60;//&#x60; characters, you **must** double-encode the meeting UUID before making an API request. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ListPastMeetingPolls200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\ListPastMeetingPolls200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function listPastMeetingPollsWithHttpInfo($meeting_id)
     {
@@ -1837,23 +1837,23 @@ class MeetingsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ListPastMeetingPolls200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\ListPastMeetingPolls200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ListPastMeetingPolls200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\ListPastMeetingPolls200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ListPastMeetingPolls200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\ListPastMeetingPolls200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ListPastMeetingPolls200Response';
+            $returnType = '\Zoom\Api\Model\ListPastMeetingPolls200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1874,7 +1874,7 @@ class MeetingsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ListPastMeetingPolls200Response',
+                        '\Zoom\Api\Model\ListPastMeetingPolls200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1916,7 +1916,7 @@ class MeetingsApi
      */
     public function listPastMeetingPollsAsyncWithHttpInfo($meeting_id)
     {
-        $returnType = '\OpenAPI\Client\Model\ListPastMeetingPolls200Response';
+        $returnType = '\Zoom\Api\Model\ListPastMeetingPolls200Response';
         $request = $this->listPastMeetingPollsRequest($meeting_id);
 
         return $this->client
@@ -2061,9 +2061,9 @@ class MeetingsApi
      * @param  string $occurrence_id Meeting Occurrence ID. Provide this field to view meeting details of a particular occurrence of the [recurring meeting](https://support.zoom.us/hc/en-us/articles/214973206-Scheduling-Recurring-Meetings). (optional)
      * @param  bool $show_previous_occurrences Set the value of this field to &#x60;true&#x60; if you would like to view meeting details of all previous occurrences of a [recurring meeting](https://support.zoom.us/hc/en-us/articles/214973206-Scheduling-Recurring-Meetings). (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Meeting200Response
+     * @return \Zoom\Api\Model\Meeting200Response
      */
     public function meeting($meeting_id, $occurrence_id = null, $show_previous_occurrences = null)
     {
@@ -2080,9 +2080,9 @@ class MeetingsApi
      * @param  string $occurrence_id Meeting Occurrence ID. Provide this field to view meeting details of a particular occurrence of the [recurring meeting](https://support.zoom.us/hc/en-us/articles/214973206-Scheduling-Recurring-Meetings). (optional)
      * @param  bool $show_previous_occurrences Set the value of this field to &#x60;true&#x60; if you would like to view meeting details of all previous occurrences of a [recurring meeting](https://support.zoom.us/hc/en-us/articles/214973206-Scheduling-Recurring-Meetings). (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Meeting200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\Meeting200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function meetingWithHttpInfo($meeting_id, $occurrence_id = null, $show_previous_occurrences = null)
     {
@@ -2125,23 +2125,23 @@ class MeetingsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Meeting200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\Meeting200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Meeting200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\Meeting200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Meeting200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\Meeting200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\Meeting200Response';
+            $returnType = '\Zoom\Api\Model\Meeting200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2162,7 +2162,7 @@ class MeetingsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Meeting200Response',
+                        '\Zoom\Api\Model\Meeting200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2208,7 +2208,7 @@ class MeetingsApi
      */
     public function meetingAsyncWithHttpInfo($meeting_id, $occurrence_id = null, $show_previous_occurrences = null)
     {
-        $returnType = '\OpenAPI\Client\Model\Meeting200Response';
+        $returnType = '\Zoom\Api\Model\Meeting200Response';
         $request = $this->meetingRequest($meeting_id, $occurrence_id, $show_previous_occurrences);
 
         return $this->client
@@ -2370,11 +2370,11 @@ class MeetingsApi
      * Create a meeting
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
-     * @param  \OpenAPI\Client\Model\MeetingCreate $meeting_create Meeting object. (required)
+     * @param  \Zoom\Api\Model\MeetingCreate $meeting_create Meeting object. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\MeetingCreate201Response
+     * @return \Zoom\Api\Model\MeetingCreate201Response
      */
     public function meetingCreate($user_id, $meeting_create)
     {
@@ -2388,11 +2388,11 @@ class MeetingsApi
      * Create a meeting
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
-     * @param  \OpenAPI\Client\Model\MeetingCreate $meeting_create Meeting object. (required)
+     * @param  \Zoom\Api\Model\MeetingCreate $meeting_create Meeting object. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\MeetingCreate201Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\MeetingCreate201Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function meetingCreateWithHttpInfo($user_id, $meeting_create)
     {
@@ -2435,23 +2435,23 @@ class MeetingsApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\OpenAPI\Client\Model\MeetingCreate201Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\MeetingCreate201Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\MeetingCreate201Response' !== 'string') {
+                        if ('\Zoom\Api\Model\MeetingCreate201Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\MeetingCreate201Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\MeetingCreate201Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\MeetingCreate201Response';
+            $returnType = '\Zoom\Api\Model\MeetingCreate201Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2472,7 +2472,7 @@ class MeetingsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\MeetingCreate201Response',
+                        '\Zoom\Api\Model\MeetingCreate201Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2488,7 +2488,7 @@ class MeetingsApi
      * Create a meeting
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
-     * @param  \OpenAPI\Client\Model\MeetingCreate $meeting_create Meeting object. (required)
+     * @param  \Zoom\Api\Model\MeetingCreate $meeting_create Meeting object. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2509,14 +2509,14 @@ class MeetingsApi
      * Create a meeting
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
-     * @param  \OpenAPI\Client\Model\MeetingCreate $meeting_create Meeting object. (required)
+     * @param  \Zoom\Api\Model\MeetingCreate $meeting_create Meeting object. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function meetingCreateAsyncWithHttpInfo($user_id, $meeting_create)
     {
-        $returnType = '\OpenAPI\Client\Model\MeetingCreate201Response';
+        $returnType = '\Zoom\Api\Model\MeetingCreate201Response';
         $request = $this->meetingCreateRequest($user_id, $meeting_create);
 
         return $this->client
@@ -2559,7 +2559,7 @@ class MeetingsApi
      * Create request for operation 'meetingCreate'
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
-     * @param  \OpenAPI\Client\Model\MeetingCreate $meeting_create Meeting object. (required)
+     * @param  \Zoom\Api\Model\MeetingCreate $meeting_create Meeting object. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2675,7 +2675,7 @@ class MeetingsApi
      * @param  bool $schedule_for_reminder &#x60;true&#x60;: Notify host and alternative host about the meeting cancellation via email. &#x60;false&#x60;: Do not send any email notification. (optional)
      * @param  bool $cancel_meeting_reminder &#x60;true&#x60;: Notify registrants about the meeting cancellation via email.   &#x60;false&#x60;: Do not send any email notification to meeting registrants.   The default value of this field is &#x60;false&#x60;. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2694,7 +2694,7 @@ class MeetingsApi
      * @param  bool $schedule_for_reminder &#x60;true&#x60;: Notify host and alternative host about the meeting cancellation via email. &#x60;false&#x60;: Do not send any email notification. (optional)
      * @param  bool $cancel_meeting_reminder &#x60;true&#x60;: Notify registrants about the meeting cancellation via email.   &#x60;false&#x60;: Do not send any email notification to meeting registrants.   The default value of this field is &#x60;false&#x60;. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2944,9 +2944,9 @@ class MeetingsApi
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\MeetingInvitation
+     * @return \Zoom\Api\Model\MeetingInvitation
      */
     public function meetingInvitation($meeting_id)
     {
@@ -2961,9 +2961,9 @@ class MeetingsApi
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\MeetingInvitation, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\MeetingInvitation, HTTP status code, HTTP response headers (array of strings)
      */
     public function meetingInvitationWithHttpInfo($meeting_id)
     {
@@ -3006,23 +3006,23 @@ class MeetingsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\MeetingInvitation' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\MeetingInvitation' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\MeetingInvitation' !== 'string') {
+                        if ('\Zoom\Api\Model\MeetingInvitation' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\MeetingInvitation', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\MeetingInvitation', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\MeetingInvitation';
+            $returnType = '\Zoom\Api\Model\MeetingInvitation';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3043,7 +3043,7 @@ class MeetingsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\MeetingInvitation',
+                        '\Zoom\Api\Model\MeetingInvitation',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3085,7 +3085,7 @@ class MeetingsApi
      */
     public function meetingInvitationAsyncWithHttpInfo($meeting_id)
     {
-        $returnType = '\OpenAPI\Client\Model\MeetingInvitation';
+        $returnType = '\Zoom\Api\Model\MeetingInvitation';
         $request = $this->meetingInvitationRequest($meeting_id);
 
         return $this->client
@@ -3227,11 +3227,11 @@ class MeetingsApi
      * Create meeting&#39;s invite links
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
-     * @param  \OpenAPI\Client\Model\MeetingInviteLinksCreateRequest $meeting_invite_links_create_request meeting_invite_links_create_request (required)
+     * @param  \Zoom\Api\Model\MeetingInviteLinksCreateRequest $meeting_invite_links_create_request meeting_invite_links_create_request (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\MeetingInviteLinksCreate201Response
+     * @return \Zoom\Api\Model\MeetingInviteLinksCreate201Response
      */
     public function meetingInviteLinksCreate($meeting_id, $meeting_invite_links_create_request)
     {
@@ -3245,11 +3245,11 @@ class MeetingsApi
      * Create meeting&#39;s invite links
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
-     * @param  \OpenAPI\Client\Model\MeetingInviteLinksCreateRequest $meeting_invite_links_create_request (required)
+     * @param  \Zoom\Api\Model\MeetingInviteLinksCreateRequest $meeting_invite_links_create_request (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\MeetingInviteLinksCreate201Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\MeetingInviteLinksCreate201Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function meetingInviteLinksCreateWithHttpInfo($meeting_id, $meeting_invite_links_create_request)
     {
@@ -3292,23 +3292,23 @@ class MeetingsApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\OpenAPI\Client\Model\MeetingInviteLinksCreate201Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\MeetingInviteLinksCreate201Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\MeetingInviteLinksCreate201Response' !== 'string') {
+                        if ('\Zoom\Api\Model\MeetingInviteLinksCreate201Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\MeetingInviteLinksCreate201Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\MeetingInviteLinksCreate201Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\MeetingInviteLinksCreate201Response';
+            $returnType = '\Zoom\Api\Model\MeetingInviteLinksCreate201Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3329,7 +3329,7 @@ class MeetingsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\MeetingInviteLinksCreate201Response',
+                        '\Zoom\Api\Model\MeetingInviteLinksCreate201Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3345,7 +3345,7 @@ class MeetingsApi
      * Create meeting&#39;s invite links
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
-     * @param  \OpenAPI\Client\Model\MeetingInviteLinksCreateRequest $meeting_invite_links_create_request (required)
+     * @param  \Zoom\Api\Model\MeetingInviteLinksCreateRequest $meeting_invite_links_create_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3366,14 +3366,14 @@ class MeetingsApi
      * Create meeting&#39;s invite links
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
-     * @param  \OpenAPI\Client\Model\MeetingInviteLinksCreateRequest $meeting_invite_links_create_request (required)
+     * @param  \Zoom\Api\Model\MeetingInviteLinksCreateRequest $meeting_invite_links_create_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function meetingInviteLinksCreateAsyncWithHttpInfo($meeting_id, $meeting_invite_links_create_request)
     {
-        $returnType = '\OpenAPI\Client\Model\MeetingInviteLinksCreate201Response';
+        $returnType = '\Zoom\Api\Model\MeetingInviteLinksCreate201Response';
         $request = $this->meetingInviteLinksCreateRequest($meeting_id, $meeting_invite_links_create_request);
 
         return $this->client
@@ -3416,7 +3416,7 @@ class MeetingsApi
      * Create request for operation 'meetingInviteLinksCreate'
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
-     * @param  \OpenAPI\Client\Model\MeetingInviteLinksCreateRequest $meeting_invite_links_create_request (required)
+     * @param  \Zoom\Api\Model\MeetingInviteLinksCreateRequest $meeting_invite_links_create_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -3528,9 +3528,9 @@ class MeetingsApi
      * Update Live Stream Status
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
-     * @param  \OpenAPI\Client\Model\MeetingLiveStreamStatus $meeting_live_stream_status Meeting (required)
+     * @param  \Zoom\Api\Model\MeetingLiveStreamStatus $meeting_live_stream_status Meeting (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -3545,9 +3545,9 @@ class MeetingsApi
      * Update Live Stream Status
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
-     * @param  \OpenAPI\Client\Model\MeetingLiveStreamStatus $meeting_live_stream_status Meeting (required)
+     * @param  \Zoom\Api\Model\MeetingLiveStreamStatus $meeting_live_stream_status Meeting (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3605,7 +3605,7 @@ class MeetingsApi
      * Update Live Stream Status
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
-     * @param  \OpenAPI\Client\Model\MeetingLiveStreamStatus $meeting_live_stream_status Meeting (required)
+     * @param  \Zoom\Api\Model\MeetingLiveStreamStatus $meeting_live_stream_status Meeting (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3626,7 +3626,7 @@ class MeetingsApi
      * Update Live Stream Status
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
-     * @param  \OpenAPI\Client\Model\MeetingLiveStreamStatus $meeting_live_stream_status Meeting (required)
+     * @param  \Zoom\Api\Model\MeetingLiveStreamStatus $meeting_live_stream_status Meeting (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3663,7 +3663,7 @@ class MeetingsApi
      * Create request for operation 'meetingLiveStreamStatusUpdate'
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
-     * @param  \OpenAPI\Client\Model\MeetingLiveStreamStatus $meeting_live_stream_status Meeting (required)
+     * @param  \Zoom\Api\Model\MeetingLiveStreamStatus $meeting_live_stream_status Meeting (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -3775,9 +3775,9 @@ class MeetingsApi
      * Update a livestream
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
-     * @param  \OpenAPI\Client\Model\MeetingLiveStream $meeting_live_stream Meeting (required)
+     * @param  \Zoom\Api\Model\MeetingLiveStream $meeting_live_stream Meeting (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -3792,9 +3792,9 @@ class MeetingsApi
      * Update a livestream
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
-     * @param  \OpenAPI\Client\Model\MeetingLiveStream $meeting_live_stream Meeting (required)
+     * @param  \Zoom\Api\Model\MeetingLiveStream $meeting_live_stream Meeting (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3852,7 +3852,7 @@ class MeetingsApi
      * Update a livestream
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
-     * @param  \OpenAPI\Client\Model\MeetingLiveStream $meeting_live_stream Meeting (required)
+     * @param  \Zoom\Api\Model\MeetingLiveStream $meeting_live_stream Meeting (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3873,7 +3873,7 @@ class MeetingsApi
      * Update a livestream
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
-     * @param  \OpenAPI\Client\Model\MeetingLiveStream $meeting_live_stream Meeting (required)
+     * @param  \Zoom\Api\Model\MeetingLiveStream $meeting_live_stream Meeting (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3910,7 +3910,7 @@ class MeetingsApi
      * Create request for operation 'meetingLiveStreamUpdate'
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
-     * @param  \OpenAPI\Client\Model\MeetingLiveStream $meeting_live_stream Meeting (required)
+     * @param  \Zoom\Api\Model\MeetingLiveStream $meeting_live_stream Meeting (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -4023,9 +4023,9 @@ class MeetingsApi
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\MeetingLocalRecordingJoinToken200Response
+     * @return \Zoom\Api\Model\MeetingLocalRecordingJoinToken200Response
      */
     public function meetingLocalRecordingJoinToken($meeting_id)
     {
@@ -4040,9 +4040,9 @@ class MeetingsApi
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\MeetingLocalRecordingJoinToken200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\MeetingLocalRecordingJoinToken200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function meetingLocalRecordingJoinTokenWithHttpInfo($meeting_id)
     {
@@ -4085,23 +4085,23 @@ class MeetingsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\MeetingLocalRecordingJoinToken200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\MeetingLocalRecordingJoinToken200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\MeetingLocalRecordingJoinToken200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\MeetingLocalRecordingJoinToken200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\MeetingLocalRecordingJoinToken200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\MeetingLocalRecordingJoinToken200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\MeetingLocalRecordingJoinToken200Response';
+            $returnType = '\Zoom\Api\Model\MeetingLocalRecordingJoinToken200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4122,7 +4122,7 @@ class MeetingsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\MeetingLocalRecordingJoinToken200Response',
+                        '\Zoom\Api\Model\MeetingLocalRecordingJoinToken200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4164,7 +4164,7 @@ class MeetingsApi
      */
     public function meetingLocalRecordingJoinTokenAsyncWithHttpInfo($meeting_id)
     {
-        $returnType = '\OpenAPI\Client\Model\MeetingLocalRecordingJoinToken200Response';
+        $returnType = '\Zoom\Api\Model\MeetingLocalRecordingJoinToken200Response';
         $request = $this->meetingLocalRecordingJoinTokenRequest($meeting_id);
 
         return $this->client
@@ -4306,11 +4306,11 @@ class MeetingsApi
      * Create a meeting poll
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
-     * @param  \OpenAPI\Client\Model\MeetingPollCreateRequest $meeting_poll_create_request Meeting poll object (required)
+     * @param  \Zoom\Api\Model\MeetingPollCreateRequest $meeting_poll_create_request Meeting poll object (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\MeetingPollCreate201Response
+     * @return \Zoom\Api\Model\MeetingPollCreate201Response
      */
     public function meetingPollCreate($meeting_id, $meeting_poll_create_request)
     {
@@ -4324,11 +4324,11 @@ class MeetingsApi
      * Create a meeting poll
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
-     * @param  \OpenAPI\Client\Model\MeetingPollCreateRequest $meeting_poll_create_request Meeting poll object (required)
+     * @param  \Zoom\Api\Model\MeetingPollCreateRequest $meeting_poll_create_request Meeting poll object (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\MeetingPollCreate201Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\MeetingPollCreate201Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function meetingPollCreateWithHttpInfo($meeting_id, $meeting_poll_create_request)
     {
@@ -4371,23 +4371,23 @@ class MeetingsApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\OpenAPI\Client\Model\MeetingPollCreate201Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\MeetingPollCreate201Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\MeetingPollCreate201Response' !== 'string') {
+                        if ('\Zoom\Api\Model\MeetingPollCreate201Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\MeetingPollCreate201Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\MeetingPollCreate201Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\MeetingPollCreate201Response';
+            $returnType = '\Zoom\Api\Model\MeetingPollCreate201Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4408,7 +4408,7 @@ class MeetingsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\MeetingPollCreate201Response',
+                        '\Zoom\Api\Model\MeetingPollCreate201Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4424,7 +4424,7 @@ class MeetingsApi
      * Create a meeting poll
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
-     * @param  \OpenAPI\Client\Model\MeetingPollCreateRequest $meeting_poll_create_request Meeting poll object (required)
+     * @param  \Zoom\Api\Model\MeetingPollCreateRequest $meeting_poll_create_request Meeting poll object (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -4445,14 +4445,14 @@ class MeetingsApi
      * Create a meeting poll
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
-     * @param  \OpenAPI\Client\Model\MeetingPollCreateRequest $meeting_poll_create_request Meeting poll object (required)
+     * @param  \Zoom\Api\Model\MeetingPollCreateRequest $meeting_poll_create_request Meeting poll object (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function meetingPollCreateAsyncWithHttpInfo($meeting_id, $meeting_poll_create_request)
     {
-        $returnType = '\OpenAPI\Client\Model\MeetingPollCreate201Response';
+        $returnType = '\Zoom\Api\Model\MeetingPollCreate201Response';
         $request = $this->meetingPollCreateRequest($meeting_id, $meeting_poll_create_request);
 
         return $this->client
@@ -4495,7 +4495,7 @@ class MeetingsApi
      * Create request for operation 'meetingPollCreate'
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
-     * @param  \OpenAPI\Client\Model\MeetingPollCreateRequest $meeting_poll_create_request Meeting poll object (required)
+     * @param  \Zoom\Api\Model\MeetingPollCreateRequest $meeting_poll_create_request Meeting poll object (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -4609,7 +4609,7 @@ class MeetingsApi
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
      * @param  string $poll_id The poll ID (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -4626,7 +4626,7 @@ class MeetingsApi
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
      * @param  string $poll_id The poll ID (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4858,9 +4858,9 @@ class MeetingsApi
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
      * @param  string $poll_id The poll ID (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\MeetingPollCreate201Response
+     * @return \Zoom\Api\Model\MeetingPollCreate201Response
      */
     public function meetingPollGet($meeting_id, $poll_id)
     {
@@ -4876,9 +4876,9 @@ class MeetingsApi
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
      * @param  string $poll_id The poll ID (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\MeetingPollCreate201Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\MeetingPollCreate201Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function meetingPollGetWithHttpInfo($meeting_id, $poll_id)
     {
@@ -4921,23 +4921,23 @@ class MeetingsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\MeetingPollCreate201Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\MeetingPollCreate201Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\MeetingPollCreate201Response' !== 'string') {
+                        if ('\Zoom\Api\Model\MeetingPollCreate201Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\MeetingPollCreate201Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\MeetingPollCreate201Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\MeetingPollCreate201Response';
+            $returnType = '\Zoom\Api\Model\MeetingPollCreate201Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4958,7 +4958,7 @@ class MeetingsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\MeetingPollCreate201Response',
+                        '\Zoom\Api\Model\MeetingPollCreate201Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5002,7 +5002,7 @@ class MeetingsApi
      */
     public function meetingPollGetAsyncWithHttpInfo($meeting_id, $poll_id)
     {
-        $returnType = '\OpenAPI\Client\Model\MeetingPollCreate201Response';
+        $returnType = '\Zoom\Api\Model\MeetingPollCreate201Response';
         $request = $this->meetingPollGetRequest($meeting_id, $poll_id);
 
         return $this->client
@@ -5160,9 +5160,9 @@ class MeetingsApi
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
      * @param  string $poll_id The poll ID (required)
-     * @param  \OpenAPI\Client\Model\MeetingPollCreateRequest $meeting_poll_create_request Meeting Poll (required)
+     * @param  \Zoom\Api\Model\MeetingPollCreateRequest $meeting_poll_create_request Meeting Poll (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -5178,9 +5178,9 @@ class MeetingsApi
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
      * @param  string $poll_id The poll ID (required)
-     * @param  \OpenAPI\Client\Model\MeetingPollCreateRequest $meeting_poll_create_request Meeting Poll (required)
+     * @param  \Zoom\Api\Model\MeetingPollCreateRequest $meeting_poll_create_request Meeting Poll (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -5239,7 +5239,7 @@ class MeetingsApi
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
      * @param  string $poll_id The poll ID (required)
-     * @param  \OpenAPI\Client\Model\MeetingPollCreateRequest $meeting_poll_create_request Meeting Poll (required)
+     * @param  \Zoom\Api\Model\MeetingPollCreateRequest $meeting_poll_create_request Meeting Poll (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -5261,7 +5261,7 @@ class MeetingsApi
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
      * @param  string $poll_id The poll ID (required)
-     * @param  \OpenAPI\Client\Model\MeetingPollCreateRequest $meeting_poll_create_request Meeting Poll (required)
+     * @param  \Zoom\Api\Model\MeetingPollCreateRequest $meeting_poll_create_request Meeting Poll (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -5299,7 +5299,7 @@ class MeetingsApi
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
      * @param  string $poll_id The poll ID (required)
-     * @param  \OpenAPI\Client\Model\MeetingPollCreateRequest $meeting_poll_create_request Meeting Poll (required)
+     * @param  \Zoom\Api\Model\MeetingPollCreateRequest $meeting_poll_create_request Meeting Poll (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -5427,9 +5427,9 @@ class MeetingsApi
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
      * @param  bool $anonymous Whether to query for polls with the **Anonymous** option enabled:  * &#x60;true&#x60; — Query for polls with the **Anonymous** option enabled.  * &#x60;false&#x60; — Do not query for polls with the **Anonymous** option enabled. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PollList
+     * @return \Zoom\Api\Model\PollList
      */
     public function meetingPolls($meeting_id, $anonymous = null)
     {
@@ -5445,9 +5445,9 @@ class MeetingsApi
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
      * @param  bool $anonymous Whether to query for polls with the **Anonymous** option enabled:  * &#x60;true&#x60; — Query for polls with the **Anonymous** option enabled.  * &#x60;false&#x60; — Do not query for polls with the **Anonymous** option enabled. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PollList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\PollList, HTTP status code, HTTP response headers (array of strings)
      */
     public function meetingPollsWithHttpInfo($meeting_id, $anonymous = null)
     {
@@ -5490,23 +5490,23 @@ class MeetingsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\PollList' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\PollList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\PollList' !== 'string') {
+                        if ('\Zoom\Api\Model\PollList' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PollList', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\PollList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\PollList';
+            $returnType = '\Zoom\Api\Model\PollList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5527,7 +5527,7 @@ class MeetingsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PollList',
+                        '\Zoom\Api\Model\PollList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5571,7 +5571,7 @@ class MeetingsApi
      */
     public function meetingPollsAsyncWithHttpInfo($meeting_id, $anonymous = null)
     {
-        $returnType = '\OpenAPI\Client\Model\PollList';
+        $returnType = '\Zoom\Api\Model\PollList';
         $request = $this->meetingPollsRequest($meeting_id, $anonymous);
 
         return $this->client
@@ -5723,12 +5723,12 @@ class MeetingsApi
      * Add a meeting registrant
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
-     * @param  \OpenAPI\Client\Model\MeetingRegistrantCreateRequest $meeting_registrant_create_request meeting_registrant_create_request (required)
+     * @param  \Zoom\Api\Model\MeetingRegistrantCreateRequest $meeting_registrant_create_request meeting_registrant_create_request (required)
      * @param  string $occurrence_ids A comma-separated list of meeting occurrence IDs. You can get this value with the [Get a meeting](/docs/api-reference/zoom-api/methods#operation/meeting) API. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\MeetingRegistrantCreate201Response
+     * @return \Zoom\Api\Model\MeetingRegistrantCreate201Response
      */
     public function meetingRegistrantCreate($meeting_id, $meeting_registrant_create_request, $occurrence_ids = null)
     {
@@ -5742,12 +5742,12 @@ class MeetingsApi
      * Add a meeting registrant
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
-     * @param  \OpenAPI\Client\Model\MeetingRegistrantCreateRequest $meeting_registrant_create_request (required)
+     * @param  \Zoom\Api\Model\MeetingRegistrantCreateRequest $meeting_registrant_create_request (required)
      * @param  string $occurrence_ids A comma-separated list of meeting occurrence IDs. You can get this value with the [Get a meeting](/docs/api-reference/zoom-api/methods#operation/meeting) API. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\MeetingRegistrantCreate201Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\MeetingRegistrantCreate201Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function meetingRegistrantCreateWithHttpInfo($meeting_id, $meeting_registrant_create_request, $occurrence_ids = null)
     {
@@ -5790,23 +5790,23 @@ class MeetingsApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\OpenAPI\Client\Model\MeetingRegistrantCreate201Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\MeetingRegistrantCreate201Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\MeetingRegistrantCreate201Response' !== 'string') {
+                        if ('\Zoom\Api\Model\MeetingRegistrantCreate201Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\MeetingRegistrantCreate201Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\MeetingRegistrantCreate201Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\MeetingRegistrantCreate201Response';
+            $returnType = '\Zoom\Api\Model\MeetingRegistrantCreate201Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5827,7 +5827,7 @@ class MeetingsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\MeetingRegistrantCreate201Response',
+                        '\Zoom\Api\Model\MeetingRegistrantCreate201Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5843,7 +5843,7 @@ class MeetingsApi
      * Add a meeting registrant
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
-     * @param  \OpenAPI\Client\Model\MeetingRegistrantCreateRequest $meeting_registrant_create_request (required)
+     * @param  \Zoom\Api\Model\MeetingRegistrantCreateRequest $meeting_registrant_create_request (required)
      * @param  string $occurrence_ids A comma-separated list of meeting occurrence IDs. You can get this value with the [Get a meeting](/docs/api-reference/zoom-api/methods#operation/meeting) API. (optional)
      *
      * @throws \InvalidArgumentException
@@ -5865,7 +5865,7 @@ class MeetingsApi
      * Add a meeting registrant
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
-     * @param  \OpenAPI\Client\Model\MeetingRegistrantCreateRequest $meeting_registrant_create_request (required)
+     * @param  \Zoom\Api\Model\MeetingRegistrantCreateRequest $meeting_registrant_create_request (required)
      * @param  string $occurrence_ids A comma-separated list of meeting occurrence IDs. You can get this value with the [Get a meeting](/docs/api-reference/zoom-api/methods#operation/meeting) API. (optional)
      *
      * @throws \InvalidArgumentException
@@ -5873,7 +5873,7 @@ class MeetingsApi
      */
     public function meetingRegistrantCreateAsyncWithHttpInfo($meeting_id, $meeting_registrant_create_request, $occurrence_ids = null)
     {
-        $returnType = '\OpenAPI\Client\Model\MeetingRegistrantCreate201Response';
+        $returnType = '\Zoom\Api\Model\MeetingRegistrantCreate201Response';
         $request = $this->meetingRegistrantCreateRequest($meeting_id, $meeting_registrant_create_request, $occurrence_ids);
 
         return $this->client
@@ -5916,7 +5916,7 @@ class MeetingsApi
      * Create request for operation 'meetingRegistrantCreate'
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
-     * @param  \OpenAPI\Client\Model\MeetingRegistrantCreateRequest $meeting_registrant_create_request (required)
+     * @param  \Zoom\Api\Model\MeetingRegistrantCreateRequest $meeting_registrant_create_request (required)
      * @param  string $occurrence_ids A comma-separated list of meeting occurrence IDs. You can get this value with the [Get a meeting](/docs/api-reference/zoom-api/methods#operation/meeting) API. (optional)
      *
      * @throws \InvalidArgumentException
@@ -6040,9 +6040,9 @@ class MeetingsApi
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
      * @param  string $registrant_id The registrant ID. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\MeetingRegistrant
+     * @return \Zoom\Api\Model\MeetingRegistrant
      */
     public function meetingRegistrantGet($meeting_id, $registrant_id)
     {
@@ -6058,9 +6058,9 @@ class MeetingsApi
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
      * @param  string $registrant_id The registrant ID. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\MeetingRegistrant, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\MeetingRegistrant, HTTP status code, HTTP response headers (array of strings)
      */
     public function meetingRegistrantGetWithHttpInfo($meeting_id, $registrant_id)
     {
@@ -6103,23 +6103,23 @@ class MeetingsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\MeetingRegistrant' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\MeetingRegistrant' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\MeetingRegistrant' !== 'string') {
+                        if ('\Zoom\Api\Model\MeetingRegistrant' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\MeetingRegistrant', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\MeetingRegistrant', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\MeetingRegistrant';
+            $returnType = '\Zoom\Api\Model\MeetingRegistrant';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -6140,7 +6140,7 @@ class MeetingsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\MeetingRegistrant',
+                        '\Zoom\Api\Model\MeetingRegistrant',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6184,7 +6184,7 @@ class MeetingsApi
      */
     public function meetingRegistrantGetAsyncWithHttpInfo($meeting_id, $registrant_id)
     {
-        $returnType = '\OpenAPI\Client\Model\MeetingRegistrant';
+        $returnType = '\Zoom\Api\Model\MeetingRegistrant';
         $request = $this->meetingRegistrantGetRequest($meeting_id, $registrant_id);
 
         return $this->client
@@ -6341,9 +6341,9 @@ class MeetingsApi
      * Update registration questions
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
-     * @param  \OpenAPI\Client\Model\MeetingRegistrantsQuestionsGet200Response $meeting_registrants_questions_get200_response Meeting Registrant Questions (required)
+     * @param  \Zoom\Api\Model\MeetingRegistrantsQuestionsGet200Response $meeting_registrants_questions_get200_response Meeting Registrant Questions (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -6358,9 +6358,9 @@ class MeetingsApi
      * Update registration questions
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
-     * @param  \OpenAPI\Client\Model\MeetingRegistrantsQuestionsGet200Response $meeting_registrants_questions_get200_response Meeting Registrant Questions (required)
+     * @param  \Zoom\Api\Model\MeetingRegistrantsQuestionsGet200Response $meeting_registrants_questions_get200_response Meeting Registrant Questions (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -6418,7 +6418,7 @@ class MeetingsApi
      * Update registration questions
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
-     * @param  \OpenAPI\Client\Model\MeetingRegistrantsQuestionsGet200Response $meeting_registrants_questions_get200_response Meeting Registrant Questions (required)
+     * @param  \Zoom\Api\Model\MeetingRegistrantsQuestionsGet200Response $meeting_registrants_questions_get200_response Meeting Registrant Questions (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -6439,7 +6439,7 @@ class MeetingsApi
      * Update registration questions
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
-     * @param  \OpenAPI\Client\Model\MeetingRegistrantsQuestionsGet200Response $meeting_registrants_questions_get200_response Meeting Registrant Questions (required)
+     * @param  \Zoom\Api\Model\MeetingRegistrantsQuestionsGet200Response $meeting_registrants_questions_get200_response Meeting Registrant Questions (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -6476,7 +6476,7 @@ class MeetingsApi
      * Create request for operation 'meetingRegistrantQuestionUpdate'
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
-     * @param  \OpenAPI\Client\Model\MeetingRegistrantsQuestionsGet200Response $meeting_registrants_questions_get200_response Meeting Registrant Questions (required)
+     * @param  \Zoom\Api\Model\MeetingRegistrantsQuestionsGet200Response $meeting_registrants_questions_get200_response Meeting Registrant Questions (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -6588,10 +6588,10 @@ class MeetingsApi
      * Update registrant&#39;s status
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
-     * @param  \OpenAPI\Client\Model\RegistrantStatus $registrant_status registrant_status (required)
+     * @param  \Zoom\Api\Model\RegistrantStatus $registrant_status registrant_status (required)
      * @param  string $occurrence_id The meeting or webinar occurrence ID. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -6606,10 +6606,10 @@ class MeetingsApi
      * Update registrant&#39;s status
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
-     * @param  \OpenAPI\Client\Model\RegistrantStatus $registrant_status (required)
+     * @param  \Zoom\Api\Model\RegistrantStatus $registrant_status (required)
      * @param  string $occurrence_id The meeting or webinar occurrence ID. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -6667,7 +6667,7 @@ class MeetingsApi
      * Update registrant&#39;s status
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
-     * @param  \OpenAPI\Client\Model\RegistrantStatus $registrant_status (required)
+     * @param  \Zoom\Api\Model\RegistrantStatus $registrant_status (required)
      * @param  string $occurrence_id The meeting or webinar occurrence ID. (optional)
      *
      * @throws \InvalidArgumentException
@@ -6689,7 +6689,7 @@ class MeetingsApi
      * Update registrant&#39;s status
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
-     * @param  \OpenAPI\Client\Model\RegistrantStatus $registrant_status (required)
+     * @param  \Zoom\Api\Model\RegistrantStatus $registrant_status (required)
      * @param  string $occurrence_id The meeting or webinar occurrence ID. (optional)
      *
      * @throws \InvalidArgumentException
@@ -6727,7 +6727,7 @@ class MeetingsApi
      * Create request for operation 'meetingRegistrantStatus'
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
-     * @param  \OpenAPI\Client\Model\RegistrantStatus $registrant_status (required)
+     * @param  \Zoom\Api\Model\RegistrantStatus $registrant_status (required)
      * @param  string $occurrence_id The meeting or webinar occurrence ID. (optional)
      *
      * @throws \InvalidArgumentException
@@ -6855,9 +6855,9 @@ class MeetingsApi
      * @param  int $page_number **Deprecated.** We will no longer support this field in a future release. Instead, use the &#x60;next_page_token&#x60; for pagination. (optional, default to 1) (deprecated)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\MeetingRegistrantList
+     * @return \Zoom\Api\Model\MeetingRegistrantList
      */
     public function meetingRegistrants($meeting_id, $occurrence_id = null, $status = 'approved', $page_size = 30, $page_number = 1, $next_page_token = null)
     {
@@ -6877,9 +6877,9 @@ class MeetingsApi
      * @param  int $page_number **Deprecated.** We will no longer support this field in a future release. Instead, use the &#x60;next_page_token&#x60; for pagination. (optional, default to 1) (deprecated)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\MeetingRegistrantList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\MeetingRegistrantList, HTTP status code, HTTP response headers (array of strings)
      */
     public function meetingRegistrantsWithHttpInfo($meeting_id, $occurrence_id = null, $status = 'approved', $page_size = 30, $page_number = 1, $next_page_token = null)
     {
@@ -6922,23 +6922,23 @@ class MeetingsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\MeetingRegistrantList' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\MeetingRegistrantList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\MeetingRegistrantList' !== 'string') {
+                        if ('\Zoom\Api\Model\MeetingRegistrantList' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\MeetingRegistrantList', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\MeetingRegistrantList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\MeetingRegistrantList';
+            $returnType = '\Zoom\Api\Model\MeetingRegistrantList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -6959,7 +6959,7 @@ class MeetingsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\MeetingRegistrantList',
+                        '\Zoom\Api\Model\MeetingRegistrantList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7011,7 +7011,7 @@ class MeetingsApi
      */
     public function meetingRegistrantsAsyncWithHttpInfo($meeting_id, $occurrence_id = null, $status = 'approved', $page_size = 30, $page_number = 1, $next_page_token = null)
     {
-        $returnType = '\OpenAPI\Client\Model\MeetingRegistrantList';
+        $returnType = '\Zoom\Api\Model\MeetingRegistrantList';
         $request = $this->meetingRegistrantsRequest($meeting_id, $occurrence_id, $status, $page_size, $page_number, $next_page_token);
 
         return $this->client
@@ -7208,9 +7208,9 @@ class MeetingsApi
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\MeetingRegistrantsQuestionsGet200Response
+     * @return \Zoom\Api\Model\MeetingRegistrantsQuestionsGet200Response
      */
     public function meetingRegistrantsQuestionsGet($meeting_id)
     {
@@ -7225,9 +7225,9 @@ class MeetingsApi
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\MeetingRegistrantsQuestionsGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\MeetingRegistrantsQuestionsGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function meetingRegistrantsQuestionsGetWithHttpInfo($meeting_id)
     {
@@ -7270,23 +7270,23 @@ class MeetingsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\MeetingRegistrantsQuestionsGet200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\MeetingRegistrantsQuestionsGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\MeetingRegistrantsQuestionsGet200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\MeetingRegistrantsQuestionsGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\MeetingRegistrantsQuestionsGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\MeetingRegistrantsQuestionsGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\MeetingRegistrantsQuestionsGet200Response';
+            $returnType = '\Zoom\Api\Model\MeetingRegistrantsQuestionsGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -7307,7 +7307,7 @@ class MeetingsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\MeetingRegistrantsQuestionsGet200Response',
+                        '\Zoom\Api\Model\MeetingRegistrantsQuestionsGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7349,7 +7349,7 @@ class MeetingsApi
      */
     public function meetingRegistrantsQuestionsGetAsyncWithHttpInfo($meeting_id)
     {
-        $returnType = '\OpenAPI\Client\Model\MeetingRegistrantsQuestionsGet200Response';
+        $returnType = '\Zoom\Api\Model\MeetingRegistrantsQuestionsGet200Response';
         $request = $this->meetingRegistrantsQuestionsGetRequest($meeting_id);
 
         return $this->client
@@ -7491,9 +7491,9 @@ class MeetingsApi
      * Update meeting status
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
-     * @param  \OpenAPI\Client\Model\MeetingStatusRequest $meeting_status_request meeting_status_request (required)
+     * @param  \Zoom\Api\Model\MeetingStatusRequest $meeting_status_request meeting_status_request (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -7508,9 +7508,9 @@ class MeetingsApi
      * Update meeting status
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
-     * @param  \OpenAPI\Client\Model\MeetingStatusRequest $meeting_status_request (required)
+     * @param  \Zoom\Api\Model\MeetingStatusRequest $meeting_status_request (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -7568,7 +7568,7 @@ class MeetingsApi
      * Update meeting status
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
-     * @param  \OpenAPI\Client\Model\MeetingStatusRequest $meeting_status_request (required)
+     * @param  \Zoom\Api\Model\MeetingStatusRequest $meeting_status_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -7589,7 +7589,7 @@ class MeetingsApi
      * Update meeting status
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
-     * @param  \OpenAPI\Client\Model\MeetingStatusRequest $meeting_status_request (required)
+     * @param  \Zoom\Api\Model\MeetingStatusRequest $meeting_status_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -7626,7 +7626,7 @@ class MeetingsApi
      * Create request for operation 'meetingStatus'
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
-     * @param  \OpenAPI\Client\Model\MeetingStatusRequest $meeting_status_request (required)
+     * @param  \Zoom\Api\Model\MeetingStatusRequest $meeting_status_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -7739,7 +7739,7 @@ class MeetingsApi
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -7755,7 +7755,7 @@ class MeetingsApi
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -7969,9 +7969,9 @@ class MeetingsApi
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\MeetingSurveyGet200Response
+     * @return \Zoom\Api\Model\MeetingSurveyGet200Response
      */
     public function meetingSurveyGet($meeting_id)
     {
@@ -7986,9 +7986,9 @@ class MeetingsApi
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\MeetingSurveyGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\MeetingSurveyGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function meetingSurveyGetWithHttpInfo($meeting_id)
     {
@@ -8031,23 +8031,23 @@ class MeetingsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\MeetingSurveyGet200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\MeetingSurveyGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\MeetingSurveyGet200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\MeetingSurveyGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\MeetingSurveyGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\MeetingSurveyGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\MeetingSurveyGet200Response';
+            $returnType = '\Zoom\Api\Model\MeetingSurveyGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -8068,7 +8068,7 @@ class MeetingsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\MeetingSurveyGet200Response',
+                        '\Zoom\Api\Model\MeetingSurveyGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8110,7 +8110,7 @@ class MeetingsApi
      */
     public function meetingSurveyGetAsyncWithHttpInfo($meeting_id)
     {
-        $returnType = '\OpenAPI\Client\Model\MeetingSurveyGet200Response';
+        $returnType = '\Zoom\Api\Model\MeetingSurveyGet200Response';
         $request = $this->meetingSurveyGetRequest($meeting_id);
 
         return $this->client
@@ -8252,9 +8252,9 @@ class MeetingsApi
      * Update a meeting survey
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
-     * @param  \OpenAPI\Client\Model\MeetingSurveyGet200Response $meeting_survey_get200_response meeting_survey_get200_response (required)
+     * @param  \Zoom\Api\Model\MeetingSurveyGet200Response $meeting_survey_get200_response meeting_survey_get200_response (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -8269,9 +8269,9 @@ class MeetingsApi
      * Update a meeting survey
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
-     * @param  \OpenAPI\Client\Model\MeetingSurveyGet200Response $meeting_survey_get200_response (required)
+     * @param  \Zoom\Api\Model\MeetingSurveyGet200Response $meeting_survey_get200_response (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -8329,7 +8329,7 @@ class MeetingsApi
      * Update a meeting survey
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
-     * @param  \OpenAPI\Client\Model\MeetingSurveyGet200Response $meeting_survey_get200_response (required)
+     * @param  \Zoom\Api\Model\MeetingSurveyGet200Response $meeting_survey_get200_response (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -8350,7 +8350,7 @@ class MeetingsApi
      * Update a meeting survey
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
-     * @param  \OpenAPI\Client\Model\MeetingSurveyGet200Response $meeting_survey_get200_response (required)
+     * @param  \Zoom\Api\Model\MeetingSurveyGet200Response $meeting_survey_get200_response (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -8387,7 +8387,7 @@ class MeetingsApi
      * Create request for operation 'meetingSurveyUpdate'
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
-     * @param  \OpenAPI\Client\Model\MeetingSurveyGet200Response $meeting_survey_get200_response (required)
+     * @param  \Zoom\Api\Model\MeetingSurveyGet200Response $meeting_survey_get200_response (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -8501,9 +8501,9 @@ class MeetingsApi
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
      * @param  string $type The meeting token type:  * &#x60;closed_caption_token&#x60; — The third-party closed caption API token.   This defaults to &#x60;closed_caption_token&#x60;. (optional, default to 'closed_caption_token')
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\MeetingToken200Response
+     * @return \Zoom\Api\Model\MeetingToken200Response
      */
     public function meetingToken($meeting_id, $type = 'closed_caption_token')
     {
@@ -8519,9 +8519,9 @@ class MeetingsApi
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
      * @param  string $type The meeting token type:  * &#x60;closed_caption_token&#x60; — The third-party closed caption API token.   This defaults to &#x60;closed_caption_token&#x60;. (optional, default to 'closed_caption_token')
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\MeetingToken200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\MeetingToken200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function meetingTokenWithHttpInfo($meeting_id, $type = 'closed_caption_token')
     {
@@ -8564,23 +8564,23 @@ class MeetingsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\MeetingToken200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\MeetingToken200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\MeetingToken200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\MeetingToken200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\MeetingToken200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\MeetingToken200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\MeetingToken200Response';
+            $returnType = '\Zoom\Api\Model\MeetingToken200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -8601,7 +8601,7 @@ class MeetingsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\MeetingToken200Response',
+                        '\Zoom\Api\Model\MeetingToken200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8645,7 +8645,7 @@ class MeetingsApi
      */
     public function meetingTokenAsyncWithHttpInfo($meeting_id, $type = 'closed_caption_token')
     {
-        $returnType = '\OpenAPI\Client\Model\MeetingToken200Response';
+        $returnType = '\Zoom\Api\Model\MeetingToken200Response';
         $request = $this->meetingTokenRequest($meeting_id, $type);
 
         return $this->client
@@ -8797,10 +8797,10 @@ class MeetingsApi
      * Update a meeting
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
-     * @param  \OpenAPI\Client\Model\MeetingUpdateRequest $meeting_update_request Meeting (required)
+     * @param  \Zoom\Api\Model\MeetingUpdateRequest $meeting_update_request Meeting (required)
      * @param  string $occurrence_id Meeting occurrence id. Support change of agenda, start_time, duration, settings: {host_video, participant_video, join_before_host, mute_upon_entry, waiting_room, watermark, auto_recording} (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -8815,10 +8815,10 @@ class MeetingsApi
      * Update a meeting
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
-     * @param  \OpenAPI\Client\Model\MeetingUpdateRequest $meeting_update_request Meeting (required)
+     * @param  \Zoom\Api\Model\MeetingUpdateRequest $meeting_update_request Meeting (required)
      * @param  string $occurrence_id Meeting occurrence id. Support change of agenda, start_time, duration, settings: {host_video, participant_video, join_before_host, mute_upon_entry, waiting_room, watermark, auto_recording} (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -8876,7 +8876,7 @@ class MeetingsApi
      * Update a meeting
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
-     * @param  \OpenAPI\Client\Model\MeetingUpdateRequest $meeting_update_request Meeting (required)
+     * @param  \Zoom\Api\Model\MeetingUpdateRequest $meeting_update_request Meeting (required)
      * @param  string $occurrence_id Meeting occurrence id. Support change of agenda, start_time, duration, settings: {host_video, participant_video, join_before_host, mute_upon_entry, waiting_room, watermark, auto_recording} (optional)
      *
      * @throws \InvalidArgumentException
@@ -8898,7 +8898,7 @@ class MeetingsApi
      * Update a meeting
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
-     * @param  \OpenAPI\Client\Model\MeetingUpdateRequest $meeting_update_request Meeting (required)
+     * @param  \Zoom\Api\Model\MeetingUpdateRequest $meeting_update_request Meeting (required)
      * @param  string $occurrence_id Meeting occurrence id. Support change of agenda, start_time, duration, settings: {host_video, participant_video, join_before_host, mute_upon_entry, waiting_room, watermark, auto_recording} (optional)
      *
      * @throws \InvalidArgumentException
@@ -8936,7 +8936,7 @@ class MeetingsApi
      * Create request for operation 'meetingUpdate'
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
-     * @param  \OpenAPI\Client\Model\MeetingUpdateRequest $meeting_update_request Meeting (required)
+     * @param  \Zoom\Api\Model\MeetingUpdateRequest $meeting_update_request Meeting (required)
      * @param  string $occurrence_id Meeting occurrence id. Support change of agenda, start_time, duration, settings: {host_video, participant_video, join_before_host, mute_upon_entry, waiting_room, watermark, auto_recording} (optional)
      *
      * @throws \InvalidArgumentException
@@ -9061,7 +9061,7 @@ class MeetingsApi
      * @param  string $registrant_id The meeting registrant ID. (required)
      * @param  string $occurrence_id The meeting occurrence ID. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -9079,7 +9079,7 @@ class MeetingsApi
      * @param  string $registrant_id The meeting registrant ID. (required)
      * @param  string $occurrence_id The meeting occurrence ID. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -9326,9 +9326,9 @@ class MeetingsApi
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      * @param  int $page_number The page number of the current page in the returned records. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\GroupList
+     * @return \Zoom\Api\Model\GroupList
      */
     public function meetings($user_id, $type = 'live', $page_size = 30, $next_page_token = null, $page_number = null)
     {
@@ -9347,9 +9347,9 @@ class MeetingsApi
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      * @param  int $page_number The page number of the current page in the returned records. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\GroupList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\GroupList, HTTP status code, HTTP response headers (array of strings)
      */
     public function meetingsWithHttpInfo($user_id, $type = 'live', $page_size = 30, $next_page_token = null, $page_number = null)
     {
@@ -9392,23 +9392,23 @@ class MeetingsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\GroupList' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\GroupList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\GroupList' !== 'string') {
+                        if ('\Zoom\Api\Model\GroupList' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\GroupList', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\GroupList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\GroupList';
+            $returnType = '\Zoom\Api\Model\GroupList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -9429,7 +9429,7 @@ class MeetingsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\GroupList',
+                        '\Zoom\Api\Model\GroupList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9479,7 +9479,7 @@ class MeetingsApi
      */
     public function meetingsAsyncWithHttpInfo($user_id, $type = 'live', $page_size = 30, $next_page_token = null, $page_number = null)
     {
-        $returnType = '\OpenAPI\Client\Model\GroupList';
+        $returnType = '\Zoom\Api\Model\GroupList';
         $request = $this->meetingsRequest($user_id, $type, $page_size, $next_page_token, $page_number);
 
         return $this->client
@@ -9666,9 +9666,9 @@ class MeetingsApi
      *
      * @param  ListPastMeetingPollsMeetingIdParameter $meeting_id The meeting&#39;s ID or universally unique ID (UUID).  * If you provide a meeting ID, the API will return a response for the latest meeting instance.  * If you provide a meeting UUID that begins with a &#x60;/&#x60; character or contains the &#x60;//&#x60; characters, you **must** double-encode the meeting UUID before making an API request. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PastMeetingDetails200Response
+     * @return \Zoom\Api\Model\PastMeetingDetails200Response
      */
     public function pastMeetingDetails($meeting_id)
     {
@@ -9683,9 +9683,9 @@ class MeetingsApi
      *
      * @param  ListPastMeetingPollsMeetingIdParameter $meeting_id The meeting&#39;s ID or universally unique ID (UUID).  * If you provide a meeting ID, the API will return a response for the latest meeting instance.  * If you provide a meeting UUID that begins with a &#x60;/&#x60; character or contains the &#x60;//&#x60; characters, you **must** double-encode the meeting UUID before making an API request. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PastMeetingDetails200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\PastMeetingDetails200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function pastMeetingDetailsWithHttpInfo($meeting_id)
     {
@@ -9728,23 +9728,23 @@ class MeetingsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\PastMeetingDetails200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\PastMeetingDetails200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\PastMeetingDetails200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\PastMeetingDetails200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PastMeetingDetails200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\PastMeetingDetails200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\PastMeetingDetails200Response';
+            $returnType = '\Zoom\Api\Model\PastMeetingDetails200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -9765,7 +9765,7 @@ class MeetingsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PastMeetingDetails200Response',
+                        '\Zoom\Api\Model\PastMeetingDetails200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9807,7 +9807,7 @@ class MeetingsApi
      */
     public function pastMeetingDetailsAsyncWithHttpInfo($meeting_id)
     {
-        $returnType = '\OpenAPI\Client\Model\PastMeetingDetails200Response';
+        $returnType = '\Zoom\Api\Model\PastMeetingDetails200Response';
         $request = $this->pastMeetingDetailsRequest($meeting_id);
 
         return $this->client
@@ -9952,9 +9952,9 @@ class MeetingsApi
      * @param  int $page_size The number of records returned within a single API call. (optional, default to 30)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PastMeetingParticipants200Response
+     * @return \Zoom\Api\Model\PastMeetingParticipants200Response
      */
     public function pastMeetingParticipants($meeting_id, $page_size = 30, $next_page_token = null)
     {
@@ -9971,9 +9971,9 @@ class MeetingsApi
      * @param  int $page_size The number of records returned within a single API call. (optional, default to 30)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PastMeetingParticipants200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\PastMeetingParticipants200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function pastMeetingParticipantsWithHttpInfo($meeting_id, $page_size = 30, $next_page_token = null)
     {
@@ -10016,23 +10016,23 @@ class MeetingsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\PastMeetingParticipants200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\PastMeetingParticipants200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\PastMeetingParticipants200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\PastMeetingParticipants200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PastMeetingParticipants200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\PastMeetingParticipants200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\PastMeetingParticipants200Response';
+            $returnType = '\Zoom\Api\Model\PastMeetingParticipants200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -10053,7 +10053,7 @@ class MeetingsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PastMeetingParticipants200Response',
+                        '\Zoom\Api\Model\PastMeetingParticipants200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10099,7 +10099,7 @@ class MeetingsApi
      */
     public function pastMeetingParticipantsAsyncWithHttpInfo($meeting_id, $page_size = 30, $next_page_token = null)
     {
-        $returnType = '\OpenAPI\Client\Model\PastMeetingParticipants200Response';
+        $returnType = '\Zoom\Api\Model\PastMeetingParticipants200Response';
         $request = $this->pastMeetingParticipantsRequest($meeting_id, $page_size, $next_page_token);
 
         return $this->client
@@ -10266,9 +10266,9 @@ class MeetingsApi
      *
      * @param  int $meeting_id The past meeting&#39;s ID. The meeting ID must be from within the last 30 days. Past meeting IDs expire after 30 days. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\MeetingInstances
+     * @return \Zoom\Api\Model\MeetingInstances
      */
     public function pastMeetings($meeting_id)
     {
@@ -10283,9 +10283,9 @@ class MeetingsApi
      *
      * @param  int $meeting_id The past meeting&#39;s ID. The meeting ID must be from within the last 30 days. Past meeting IDs expire after 30 days. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\MeetingInstances, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\MeetingInstances, HTTP status code, HTTP response headers (array of strings)
      */
     public function pastMeetingsWithHttpInfo($meeting_id)
     {
@@ -10328,23 +10328,23 @@ class MeetingsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\MeetingInstances' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\MeetingInstances' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\MeetingInstances' !== 'string') {
+                        if ('\Zoom\Api\Model\MeetingInstances' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\MeetingInstances', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\MeetingInstances', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\MeetingInstances';
+            $returnType = '\Zoom\Api\Model\MeetingInstances';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -10365,7 +10365,7 @@ class MeetingsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\MeetingInstances',
+                        '\Zoom\Api\Model\MeetingInstances',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10407,7 +10407,7 @@ class MeetingsApi
      */
     public function pastMeetingsAsyncWithHttpInfo($meeting_id)
     {
-        $returnType = '\OpenAPI\Client\Model\MeetingInstances';
+        $returnType = '\Zoom\Api\Model\MeetingInstances';
         $request = $this->pastMeetingsRequest($meeting_id);
 
         return $this->client

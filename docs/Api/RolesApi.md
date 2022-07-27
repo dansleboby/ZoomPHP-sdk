@@ -1,4 +1,4 @@
-# OpenAPI\Client\RolesApi
+# Zoom\Api\RolesApi
 
 All URIs are relative to https://api.zoom.us/v2.
 
@@ -17,7 +17,7 @@ Method | HTTP request | Description
 ## `addRoleMembers()`
 
 ```php
-addRoleMembers($role_id, $add_role_members_request): \OpenAPI\Client\Model\AddRoleMembers201Response
+addRoleMembers($role_id, $add_role_members_request): \Zoom\Api\Model\AddRoleMembers201Response
 ```
 
 Assign a role
@@ -32,17 +32,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\RolesApi(
+$apiInstance = new Zoom\Api\Api\RolesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $role_id = 2; // string | The role ID
-$add_role_members_request = new \OpenAPI\Client\Model\AddRoleMembersRequest(); // \OpenAPI\Client\Model\AddRoleMembersRequest | Role members
+$add_role_members_request = new \Zoom\Api\Model\AddRoleMembersRequest(); // \Zoom\Api\Model\AddRoleMembersRequest | Role members
 
 try {
     $result = $apiInstance->addRoleMembers($role_id, $add_role_members_request);
@@ -57,11 +57,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **role_id** | **string**| The role ID |
- **add_role_members_request** | [**\OpenAPI\Client\Model\AddRoleMembersRequest**](../Model/AddRoleMembersRequest.md)| Role members |
+ **add_role_members_request** | [**\Zoom\Api\Model\AddRoleMembersRequest**](../Model/AddRoleMembersRequest.md)| Role members |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\AddRoleMembers201Response**](../Model/AddRoleMembers201Response.md)
+[**\Zoom\Api\Model\AddRoleMembers201Response**](../Model/AddRoleMembers201Response.md)
 
 ### Authorization
 
@@ -94,16 +94,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\RolesApi(
+$apiInstance = new Zoom\Api\Api\RolesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$create_role_request = new \OpenAPI\Client\Model\CreateRoleRequest(); // \OpenAPI\Client\Model\CreateRoleRequest
+$create_role_request = new \Zoom\Api\Model\CreateRoleRequest(); // \Zoom\Api\Model\CreateRoleRequest
 
 try {
     $result = $apiInstance->createRole($create_role_request);
@@ -117,7 +117,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **create_role_request** | [**\OpenAPI\Client\Model\CreateRoleRequest**](../Model/CreateRoleRequest.md)|  | [optional]
+ **create_role_request** | [**\Zoom\Api\Model\CreateRoleRequest**](../Model/CreateRoleRequest.md)|  | [optional]
 
 ### Return type
 
@@ -154,10 +154,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\RolesApi(
+$apiInstance = new Zoom\Api\Api\RolesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -198,7 +198,7 @@ void (empty response body)
 ## `getRoleInformation()`
 
 ```php
-getRoleInformation($role_id): \OpenAPI\Client\Model\GetRoleInformation200Response
+getRoleInformation($role_id): \Zoom\Api\Model\GetRoleInformation200Response
 ```
 
 Get role information
@@ -213,10 +213,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\RolesApi(
+$apiInstance = new Zoom\Api\Api\RolesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -240,7 +240,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GetRoleInformation200Response**](../Model/GetRoleInformation200Response.md)
+[**\Zoom\Api\Model\GetRoleInformation200Response**](../Model/GetRoleInformation200Response.md)
 
 ### Authorization
 
@@ -273,10 +273,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\RolesApi(
+$apiInstance = new Zoom\Api\Api\RolesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -319,7 +319,7 @@ void (empty response body)
 ## `roleMembers()`
 
 ```php
-roleMembers($role_id, $page_count, $page_number, $next_page_token, $page_size): \OpenAPI\Client\Model\RoleMembersList
+roleMembers($role_id, $page_count, $page_number, $next_page_token, $page_size): \Zoom\Api\Model\RoleMembersList
 ```
 
 List members in a role
@@ -334,10 +334,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\RolesApi(
+$apiInstance = new Zoom\Api\Api\RolesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -369,7 +369,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\RoleMembersList**](../Model/RoleMembersList.md)
+[**\Zoom\Api\Model\RoleMembersList**](../Model/RoleMembersList.md)
 
 ### Authorization
 
@@ -387,7 +387,7 @@ Name | Type | Description  | Notes
 ## `roles()`
 
 ```php
-roles(): \OpenAPI\Client\Model\RoleList
+roles(): \Zoom\Api\Model\RoleList
 ```
 
 List roles
@@ -402,10 +402,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\RolesApi(
+$apiInstance = new Zoom\Api\Api\RolesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -426,7 +426,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\RoleList**](../Model/RoleList.md)
+[**\Zoom\Api\Model\RoleList**](../Model/RoleList.md)
 
 ### Authorization
 
@@ -459,17 +459,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\RolesApi(
+$apiInstance = new Zoom\Api\Api\RolesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $role_id = 2; // string
-$update_role_request = new \OpenAPI\Client\Model\UpdateRoleRequest(); // \OpenAPI\Client\Model\UpdateRoleRequest
+$update_role_request = new \Zoom\Api\Model\UpdateRoleRequest(); // \Zoom\Api\Model\UpdateRoleRequest
 
 try {
     $result = $apiInstance->updateRole($role_id, $update_role_request);
@@ -484,7 +484,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **role_id** | **string**|  |
- **update_role_request** | [**\OpenAPI\Client\Model\UpdateRoleRequest**](../Model/UpdateRoleRequest.md)|  | [optional]
+ **update_role_request** | [**\Zoom\Api\Model\UpdateRoleRequest**](../Model/UpdateRoleRequest.md)|  | [optional]
 
 ### Return type
 

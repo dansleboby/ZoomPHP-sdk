@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * QOSParticipantList Class Doc Comment
  *
  * @category Class
  * @description Participant QOS list.
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -62,7 +62,7 @@ class QOSParticipantList implements ModelInterface, ArrayAccess, \JsonSerializab
         'page_count' => 'int',
         'page_size' => 'int',
         'total_records' => 'int',
-        'participants' => '\OpenAPI\Client\Model\QOSParticipant[]'
+        'participants' => '\Zoom\Api\Model\QOSParticipant[]'
     ];
 
     /**
@@ -336,7 +336,7 @@ class QOSParticipantList implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets participants
      *
-     * @return \OpenAPI\Client\Model\QOSParticipant[]|null
+     * @return \Zoom\Api\Model\QOSParticipant[]|null
      */
     public function getParticipants()
     {
@@ -346,7 +346,7 @@ class QOSParticipantList implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets participants
      *
-     * @param \OpenAPI\Client\Model\QOSParticipant[]|null $participants Information about the participant.
+     * @param \Zoom\Api\Model\QOSParticipant[]|null $participants Information about the participant.
      *
      * @return self
      */

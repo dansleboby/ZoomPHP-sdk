@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Zoom\Api\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Zoom\Api\ApiException;
+use Zoom\Api\Configuration;
+use Zoom\Api\HeaderSelector;
+use Zoom\Api\ObjectSerializer;
 
 /**
  * UsersApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -123,7 +123,7 @@ class UsersApi
      * @param  string $user_id The user&#39;s ID. To get a user&#39;s ID, use the [**List users**](/docs/api-reference/zoom-api/ma#operation/users) API. For user-level apps, pass the &#x60;me&#x60; value instead of the user ID value. (required)
      * @param  string $file_ids A comma-separated list of the Virtual Background file IDs to delete. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -140,7 +140,7 @@ class UsersApi
      * @param  string $user_id The user&#39;s ID. To get a user&#39;s ID, use the [**List users**](/docs/api-reference/zoom-api/ma#operation/users) API. For user-level apps, pass the &#x60;me&#x60; value instead of the user ID value. (required)
      * @param  string $file_ids A comma-separated list of the Virtual Background file IDs to delete. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -365,9 +365,9 @@ class UsersApi
      * Update a user&#39;s presence status
      *
      * @param  string $user_id user_id (required)
-     * @param  \OpenAPI\Client\Model\UpdatePresenceStatusRequest $update_presence_status_request update_presence_status_request (optional)
+     * @param  \Zoom\Api\Model\UpdatePresenceStatusRequest $update_presence_status_request update_presence_status_request (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -382,9 +382,9 @@ class UsersApi
      * Update a user&#39;s presence status
      *
      * @param  string $user_id (required)
-     * @param  \OpenAPI\Client\Model\UpdatePresenceStatusRequest $update_presence_status_request (optional)
+     * @param  \Zoom\Api\Model\UpdatePresenceStatusRequest $update_presence_status_request (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -442,7 +442,7 @@ class UsersApi
      * Update a user&#39;s presence status
      *
      * @param  string $user_id (required)
-     * @param  \OpenAPI\Client\Model\UpdatePresenceStatusRequest $update_presence_status_request (optional)
+     * @param  \Zoom\Api\Model\UpdatePresenceStatusRequest $update_presence_status_request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -463,7 +463,7 @@ class UsersApi
      * Update a user&#39;s presence status
      *
      * @param  string $user_id (required)
-     * @param  \OpenAPI\Client\Model\UpdatePresenceStatusRequest $update_presence_status_request (optional)
+     * @param  \Zoom\Api\Model\UpdatePresenceStatusRequest $update_presence_status_request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -500,7 +500,7 @@ class UsersApi
      * Create request for operation 'updatePresenceStatus'
      *
      * @param  string $user_id (required)
-     * @param  \OpenAPI\Client\Model\UpdatePresenceStatusRequest $update_presence_status_request (optional)
+     * @param  \Zoom\Api\Model\UpdatePresenceStatusRequest $update_presence_status_request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -608,9 +608,9 @@ class UsersApi
      * @param  string $user_id The user&#39;s ID. To get a user&#39;s ID, use the [**List users**](/docs/api-reference/zoom-api/ma#operation/users) API. For user-level apps, pass the &#x60;me&#x60; value instead of the user ID value. (required)
      * @param  string $file The Virtual Background&#39;s file path. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\UploadVBuser201Response
+     * @return \Zoom\Api\Model\UploadVBuser201Response
      */
     public function uploadVBuser($user_id, $file = null)
     {
@@ -626,9 +626,9 @@ class UsersApi
      * @param  string $user_id The user&#39;s ID. To get a user&#39;s ID, use the [**List users**](/docs/api-reference/zoom-api/ma#operation/users) API. For user-level apps, pass the &#x60;me&#x60; value instead of the user ID value. (required)
      * @param  string $file The Virtual Background&#39;s file path. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\UploadVBuser201Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\UploadVBuser201Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function uploadVBuserWithHttpInfo($user_id, $file = null)
     {
@@ -671,23 +671,23 @@ class UsersApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\OpenAPI\Client\Model\UploadVBuser201Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\UploadVBuser201Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\UploadVBuser201Response' !== 'string') {
+                        if ('\Zoom\Api\Model\UploadVBuser201Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UploadVBuser201Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\UploadVBuser201Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\UploadVBuser201Response';
+            $returnType = '\Zoom\Api\Model\UploadVBuser201Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -708,7 +708,7 @@ class UsersApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\UploadVBuser201Response',
+                        '\Zoom\Api\Model\UploadVBuser201Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -752,7 +752,7 @@ class UsersApi
      */
     public function uploadVBuserAsyncWithHttpInfo($user_id, $file = null)
     {
-        $returnType = '\OpenAPI\Client\Model\UploadVBuser201Response';
+        $returnType = '\Zoom\Api\Model\UploadVBuser201Response';
         $request = $this->uploadVBuserRequest($user_id, $file);
 
         return $this->client
@@ -903,9 +903,9 @@ class UsersApi
      * @param  bool $encrypted_email Whether the email address passed for the &#x60;userId&#x60; value is an encrypted email address:    * &#x60;true&#x60; — The email address is encrypted.   * &#x60;false&#x60; — The email address is not encrypted.    If you do not query this parameter, this value defaults to null (&#x60;false&#x60;). (optional, default to false)
      * @param  bool $search_by_unique_id Whether the queried &#x60;userId&#x60; value is an employee unique ID:  * &#x60;true&#x60; — The queried ID is an employee&#39;s unique ID.  * &#x60;false&#x60; — The queried ID is not an employee&#39;s unique ID.   This value defaults to &#x60;false&#x60; (null). (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\User200Response
+     * @return \Zoom\Api\Model\User200Response
      */
     public function user($user_id, $login_type = null, $encrypted_email = false, $search_by_unique_id = null)
     {
@@ -923,9 +923,9 @@ class UsersApi
      * @param  bool $encrypted_email Whether the email address passed for the &#x60;userId&#x60; value is an encrypted email address:    * &#x60;true&#x60; — The email address is encrypted.   * &#x60;false&#x60; — The email address is not encrypted.    If you do not query this parameter, this value defaults to null (&#x60;false&#x60;). (optional, default to false)
      * @param  bool $search_by_unique_id Whether the queried &#x60;userId&#x60; value is an employee unique ID:  * &#x60;true&#x60; — The queried ID is an employee&#39;s unique ID.  * &#x60;false&#x60; — The queried ID is not an employee&#39;s unique ID.   This value defaults to &#x60;false&#x60; (null). (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\User200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\User200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function userWithHttpInfo($user_id, $login_type = null, $encrypted_email = false, $search_by_unique_id = null)
     {
@@ -968,23 +968,23 @@ class UsersApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\User200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\User200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\User200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\User200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\User200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\User200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\User200Response';
+            $returnType = '\Zoom\Api\Model\User200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1005,7 +1005,7 @@ class UsersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\User200Response',
+                        '\Zoom\Api\Model\User200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1053,7 +1053,7 @@ class UsersApi
      */
     public function userAsyncWithHttpInfo($user_id, $login_type = null, $encrypted_email = false, $search_by_unique_id = null)
     {
-        $returnType = '\OpenAPI\Client\Model\User200Response';
+        $returnType = '\Zoom\Api\Model\User200Response';
         $request = $this->userRequest($user_id, $login_type, $encrypted_email, $search_by_unique_id);
 
         return $this->client
@@ -1225,11 +1225,11 @@ class UsersApi
      * Add assistants
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
-     * @param  \OpenAPI\Client\Model\UserAssistantsList $user_assistants_list User assistant. (required)
+     * @param  \Zoom\Api\Model\UserAssistantsList $user_assistants_list User assistant. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\UserAssistantCreate201Response
+     * @return \Zoom\Api\Model\UserAssistantCreate201Response
      */
     public function userAssistantCreate($user_id, $user_assistants_list)
     {
@@ -1243,11 +1243,11 @@ class UsersApi
      * Add assistants
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
-     * @param  \OpenAPI\Client\Model\UserAssistantsList $user_assistants_list User assistant. (required)
+     * @param  \Zoom\Api\Model\UserAssistantsList $user_assistants_list User assistant. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\UserAssistantCreate201Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\UserAssistantCreate201Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function userAssistantCreateWithHttpInfo($user_id, $user_assistants_list)
     {
@@ -1290,23 +1290,23 @@ class UsersApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\OpenAPI\Client\Model\UserAssistantCreate201Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\UserAssistantCreate201Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\UserAssistantCreate201Response' !== 'string') {
+                        if ('\Zoom\Api\Model\UserAssistantCreate201Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UserAssistantCreate201Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\UserAssistantCreate201Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\UserAssistantCreate201Response';
+            $returnType = '\Zoom\Api\Model\UserAssistantCreate201Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1327,7 +1327,7 @@ class UsersApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\UserAssistantCreate201Response',
+                        '\Zoom\Api\Model\UserAssistantCreate201Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1343,7 +1343,7 @@ class UsersApi
      * Add assistants
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
-     * @param  \OpenAPI\Client\Model\UserAssistantsList $user_assistants_list User assistant. (required)
+     * @param  \Zoom\Api\Model\UserAssistantsList $user_assistants_list User assistant. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1364,14 +1364,14 @@ class UsersApi
      * Add assistants
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
-     * @param  \OpenAPI\Client\Model\UserAssistantsList $user_assistants_list User assistant. (required)
+     * @param  \Zoom\Api\Model\UserAssistantsList $user_assistants_list User assistant. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function userAssistantCreateAsyncWithHttpInfo($user_id, $user_assistants_list)
     {
-        $returnType = '\OpenAPI\Client\Model\UserAssistantCreate201Response';
+        $returnType = '\Zoom\Api\Model\UserAssistantCreate201Response';
         $request = $this->userAssistantCreateRequest($user_id, $user_assistants_list);
 
         return $this->client
@@ -1414,7 +1414,7 @@ class UsersApi
      * Create request for operation 'userAssistantCreate'
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
-     * @param  \OpenAPI\Client\Model\UserAssistantsList $user_assistants_list User assistant. (required)
+     * @param  \Zoom\Api\Model\UserAssistantsList $user_assistants_list User assistant. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1528,7 +1528,7 @@ class UsersApi
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
      * @param  string $assistant_id Assistant ID. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1545,7 +1545,7 @@ class UsersApi
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
      * @param  string $assistant_id Assistant ID. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1776,9 +1776,9 @@ class UsersApi
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\UserAssistantsList
+     * @return \Zoom\Api\Model\UserAssistantsList
      */
     public function userAssistants($user_id)
     {
@@ -1793,9 +1793,9 @@ class UsersApi
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\UserAssistantsList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\UserAssistantsList, HTTP status code, HTTP response headers (array of strings)
      */
     public function userAssistantsWithHttpInfo($user_id)
     {
@@ -1838,23 +1838,23 @@ class UsersApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\UserAssistantsList' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\UserAssistantsList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\UserAssistantsList' !== 'string') {
+                        if ('\Zoom\Api\Model\UserAssistantsList' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UserAssistantsList', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\UserAssistantsList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\UserAssistantsList';
+            $returnType = '\Zoom\Api\Model\UserAssistantsList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1875,7 +1875,7 @@ class UsersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\UserAssistantsList',
+                        '\Zoom\Api\Model\UserAssistantsList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1917,7 +1917,7 @@ class UsersApi
      */
     public function userAssistantsAsyncWithHttpInfo($user_id)
     {
-        $returnType = '\OpenAPI\Client\Model\UserAssistantsList';
+        $returnType = '\Zoom\Api\Model\UserAssistantsList';
         $request = $this->userAssistantsRequest($user_id);
 
         return $this->client
@@ -2060,7 +2060,7 @@ class UsersApi
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2076,7 +2076,7 @@ class UsersApi
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2288,11 +2288,11 @@ class UsersApi
      *
      * Create users
      *
-     * @param  \OpenAPI\Client\Model\UserCreateRequest $user_create_request User (required)
+     * @param  \Zoom\Api\Model\UserCreateRequest $user_create_request User (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\UserCreate201Response
+     * @return \Zoom\Api\Model\UserCreate201Response
      */
     public function userCreate($user_create_request)
     {
@@ -2305,11 +2305,11 @@ class UsersApi
      *
      * Create users
      *
-     * @param  \OpenAPI\Client\Model\UserCreateRequest $user_create_request User (required)
+     * @param  \Zoom\Api\Model\UserCreateRequest $user_create_request User (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\UserCreate201Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\UserCreate201Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function userCreateWithHttpInfo($user_create_request)
     {
@@ -2352,23 +2352,23 @@ class UsersApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\OpenAPI\Client\Model\UserCreate201Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\UserCreate201Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\UserCreate201Response' !== 'string') {
+                        if ('\Zoom\Api\Model\UserCreate201Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UserCreate201Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\UserCreate201Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\UserCreate201Response';
+            $returnType = '\Zoom\Api\Model\UserCreate201Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2389,7 +2389,7 @@ class UsersApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\UserCreate201Response',
+                        '\Zoom\Api\Model\UserCreate201Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2404,7 +2404,7 @@ class UsersApi
      *
      * Create users
      *
-     * @param  \OpenAPI\Client\Model\UserCreateRequest $user_create_request User (required)
+     * @param  \Zoom\Api\Model\UserCreateRequest $user_create_request User (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -2424,14 +2424,14 @@ class UsersApi
      *
      * Create users
      *
-     * @param  \OpenAPI\Client\Model\UserCreateRequest $user_create_request User (required)
+     * @param  \Zoom\Api\Model\UserCreateRequest $user_create_request User (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function userCreateAsyncWithHttpInfo($user_create_request)
     {
-        $returnType = '\OpenAPI\Client\Model\UserCreate201Response';
+        $returnType = '\Zoom\Api\Model\UserCreate201Response';
         $request = $this->userCreateRequest($user_create_request);
 
         return $this->client
@@ -2473,7 +2473,7 @@ class UsersApi
     /**
      * Create request for operation 'userCreate'
      *
-     * @param  \OpenAPI\Client\Model\UserCreateRequest $user_create_request User (required)
+     * @param  \Zoom\Api\Model\UserCreateRequest $user_create_request User (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -2579,7 +2579,7 @@ class UsersApi
      * @param  bool $transfer_recording Transfer recording. (optional)
      * @param  bool $transfer_whiteboard When you delete the user, whether to transfer all their [Zoom Whiteboard](https://support.zoom.us/hc/en-us/articles/4410916881421) data to another user. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -2602,7 +2602,7 @@ class UsersApi
      * @param  bool $transfer_recording Transfer recording. (optional)
      * @param  bool $transfer_whiteboard When you delete the user, whether to transfer all their [Zoom Whiteboard](https://support.zoom.us/hc/en-us/articles/4410916881421) data to another user. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -2900,9 +2900,9 @@ class UsersApi
      *
      * @param  string $email The email address to be verified. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\UserEmail200Response
+     * @return \Zoom\Api\Model\UserEmail200Response
      */
     public function userEmail($email)
     {
@@ -2917,9 +2917,9 @@ class UsersApi
      *
      * @param  string $email The email address to be verified. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\UserEmail200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\UserEmail200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function userEmailWithHttpInfo($email)
     {
@@ -2962,23 +2962,23 @@ class UsersApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\UserEmail200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\UserEmail200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\UserEmail200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\UserEmail200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UserEmail200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\UserEmail200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\UserEmail200Response';
+            $returnType = '\Zoom\Api\Model\UserEmail200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2999,7 +2999,7 @@ class UsersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\UserEmail200Response',
+                        '\Zoom\Api\Model\UserEmail200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3041,7 +3041,7 @@ class UsersApi
      */
     public function userEmailAsyncWithHttpInfo($email)
     {
-        $returnType = '\OpenAPI\Client\Model\UserEmail200Response';
+        $returnType = '\Zoom\Api\Model\UserEmail200Response';
         $request = $this->userEmailRequest($email);
 
         return $this->client
@@ -3184,9 +3184,9 @@ class UsersApi
      * Update a user&#39;s email
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
-     * @param  \OpenAPI\Client\Model\UserEmailUpdateRequest $user_email_update_request User email. (required)
+     * @param  \Zoom\Api\Model\UserEmailUpdateRequest $user_email_update_request User email. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -3201,9 +3201,9 @@ class UsersApi
      * Update a user&#39;s email
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
-     * @param  \OpenAPI\Client\Model\UserEmailUpdateRequest $user_email_update_request User email. (required)
+     * @param  \Zoom\Api\Model\UserEmailUpdateRequest $user_email_update_request User email. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3261,7 +3261,7 @@ class UsersApi
      * Update a user&#39;s email
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
-     * @param  \OpenAPI\Client\Model\UserEmailUpdateRequest $user_email_update_request User email. (required)
+     * @param  \Zoom\Api\Model\UserEmailUpdateRequest $user_email_update_request User email. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3282,7 +3282,7 @@ class UsersApi
      * Update a user&#39;s email
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
-     * @param  \OpenAPI\Client\Model\UserEmailUpdateRequest $user_email_update_request User email. (required)
+     * @param  \Zoom\Api\Model\UserEmailUpdateRequest $user_email_update_request User email. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3319,7 +3319,7 @@ class UsersApi
      * Create request for operation 'userEmailUpdate'
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
-     * @param  \OpenAPI\Client\Model\UserEmailUpdateRequest $user_email_update_request User email. (required)
+     * @param  \Zoom\Api\Model\UserEmailUpdateRequest $user_email_update_request User email. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -3431,9 +3431,9 @@ class UsersApi
      * Update a user&#39;s password
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
-     * @param  \OpenAPI\Client\Model\UserPasswordRequest $user_password_request User password. (required)
+     * @param  \Zoom\Api\Model\UserPasswordRequest $user_password_request User password. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -3448,9 +3448,9 @@ class UsersApi
      * Update a user&#39;s password
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
-     * @param  \OpenAPI\Client\Model\UserPasswordRequest $user_password_request User password. (required)
+     * @param  \Zoom\Api\Model\UserPasswordRequest $user_password_request User password. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -3508,7 +3508,7 @@ class UsersApi
      * Update a user&#39;s password
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
-     * @param  \OpenAPI\Client\Model\UserPasswordRequest $user_password_request User password. (required)
+     * @param  \Zoom\Api\Model\UserPasswordRequest $user_password_request User password. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3529,7 +3529,7 @@ class UsersApi
      * Update a user&#39;s password
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
-     * @param  \OpenAPI\Client\Model\UserPasswordRequest $user_password_request User password. (required)
+     * @param  \Zoom\Api\Model\UserPasswordRequest $user_password_request User password. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -3566,7 +3566,7 @@ class UsersApi
      * Create request for operation 'userPassword'
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
-     * @param  \OpenAPI\Client\Model\UserPasswordRequest $user_password_request User password. (required)
+     * @param  \Zoom\Api\Model\UserPasswordRequest $user_password_request User password. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -3679,9 +3679,9 @@ class UsersApi
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\UserPermissions
+     * @return \Zoom\Api\Model\UserPermissions
      */
     public function userPermission($user_id)
     {
@@ -3696,9 +3696,9 @@ class UsersApi
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\UserPermissions, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\UserPermissions, HTTP status code, HTTP response headers (array of strings)
      */
     public function userPermissionWithHttpInfo($user_id)
     {
@@ -3741,23 +3741,23 @@ class UsersApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\UserPermissions' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\UserPermissions' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\UserPermissions' !== 'string') {
+                        if ('\Zoom\Api\Model\UserPermissions' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UserPermissions', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\UserPermissions', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\UserPermissions';
+            $returnType = '\Zoom\Api\Model\UserPermissions';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3778,7 +3778,7 @@ class UsersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\UserPermissions',
+                        '\Zoom\Api\Model\UserPermissions',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3820,7 +3820,7 @@ class UsersApi
      */
     public function userPermissionAsyncWithHttpInfo($user_id)
     {
-        $returnType = '\OpenAPI\Client\Model\UserPermissions';
+        $returnType = '\Zoom\Api\Model\UserPermissions';
         $request = $this->userPermissionRequest($user_id);
 
         return $this->client
@@ -3964,7 +3964,7 @@ class UsersApi
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
      * @param  string $pic_file The file&#39;s path. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -3981,7 +3981,7 @@ class UsersApi
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
      * @param  string $pic_file The file&#39;s path. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4208,7 +4208,7 @@ class UsersApi
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -4224,7 +4224,7 @@ class UsersApi
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4438,7 +4438,7 @@ class UsersApi
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -4454,7 +4454,7 @@ class UsersApi
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4669,7 +4669,7 @@ class UsersApi
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
      * @param  string $scheduler_id Scheduler&#39;s ID. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -4686,7 +4686,7 @@ class UsersApi
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
      * @param  string $scheduler_id Scheduler&#39;s ID. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4917,9 +4917,9 @@ class UsersApi
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\UserSchedulersList
+     * @return \Zoom\Api\Model\UserSchedulersList
      */
     public function userSchedulers($user_id)
     {
@@ -4934,9 +4934,9 @@ class UsersApi
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\UserSchedulersList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\UserSchedulersList, HTTP status code, HTTP response headers (array of strings)
      */
     public function userSchedulersWithHttpInfo($user_id)
     {
@@ -4979,23 +4979,23 @@ class UsersApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\UserSchedulersList' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\UserSchedulersList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\UserSchedulersList' !== 'string') {
+                        if ('\Zoom\Api\Model\UserSchedulersList' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UserSchedulersList', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\UserSchedulersList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\UserSchedulersList';
+            $returnType = '\Zoom\Api\Model\UserSchedulersList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5016,7 +5016,7 @@ class UsersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\UserSchedulersList',
+                        '\Zoom\Api\Model\UserSchedulersList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5058,7 +5058,7 @@ class UsersApi
      */
     public function userSchedulersAsyncWithHttpInfo($user_id)
     {
-        $returnType = '\OpenAPI\Client\Model\UserSchedulersList';
+        $returnType = '\Zoom\Api\Model\UserSchedulersList';
         $request = $this->userSchedulersRequest($user_id);
 
         return $this->client
@@ -5201,7 +5201,7 @@ class UsersApi
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -5217,7 +5217,7 @@ class UsersApi
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -5434,9 +5434,9 @@ class UsersApi
      * @param  string $option Optional query parameters:  * &#x60;meeting_authentication&#x60; — Use this query parameter to view the [meeting authentication settings](https://support.zoom.us/hc/en-us/articles/360037117472-Authentication-Profiles-for-Meetings-and-Webinars) applied to the user&#39;s account.  * &#x60;recording_authentication&#x60; — Use this query parameter to view the [recording authentication settings](https://support.zoom.us/hc/en-us/articles/360037756671-Authentication-Profiles-for-Cloud-Recordings) applied to the user&#39;s account.  * &#x60;meeting_security&#x60; — Use this query parameter to view the meeting security settings applied to the user&#39;s account. (optional)
      * @param  string $custom_query_fields Provide the name of the field by which you would like to filter the response. For example, if you provide \&quot;host_video\&quot; as the value of this field, you will get a response similar to the following:&lt;br&gt; {     \&quot;schedule_meeting\&quot;: {         \&quot;host_video\&quot;: false     } } &lt;br&gt;You can provide multiple values by separating them with commas(example: \&quot;host_video,participant_video”). (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\UserSettings200Response
+     * @return \Zoom\Api\Model\UserSettings200Response
      */
     public function userSettings($user_id, $login_type = null, $option = null, $custom_query_fields = null)
     {
@@ -5454,9 +5454,9 @@ class UsersApi
      * @param  string $option Optional query parameters:  * &#x60;meeting_authentication&#x60; — Use this query parameter to view the [meeting authentication settings](https://support.zoom.us/hc/en-us/articles/360037117472-Authentication-Profiles-for-Meetings-and-Webinars) applied to the user&#39;s account.  * &#x60;recording_authentication&#x60; — Use this query parameter to view the [recording authentication settings](https://support.zoom.us/hc/en-us/articles/360037756671-Authentication-Profiles-for-Cloud-Recordings) applied to the user&#39;s account.  * &#x60;meeting_security&#x60; — Use this query parameter to view the meeting security settings applied to the user&#39;s account. (optional)
      * @param  string $custom_query_fields Provide the name of the field by which you would like to filter the response. For example, if you provide \&quot;host_video\&quot; as the value of this field, you will get a response similar to the following:&lt;br&gt; {     \&quot;schedule_meeting\&quot;: {         \&quot;host_video\&quot;: false     } } &lt;br&gt;You can provide multiple values by separating them with commas(example: \&quot;host_video,participant_video”). (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\UserSettings200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\UserSettings200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function userSettingsWithHttpInfo($user_id, $login_type = null, $option = null, $custom_query_fields = null)
     {
@@ -5499,23 +5499,23 @@ class UsersApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\UserSettings200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\UserSettings200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\UserSettings200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\UserSettings200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UserSettings200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\UserSettings200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\UserSettings200Response';
+            $returnType = '\Zoom\Api\Model\UserSettings200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5536,7 +5536,7 @@ class UsersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\UserSettings200Response',
+                        '\Zoom\Api\Model\UserSettings200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5584,7 +5584,7 @@ class UsersApi
      */
     public function userSettingsAsyncWithHttpInfo($user_id, $login_type = null, $option = null, $custom_query_fields = null)
     {
-        $returnType = '\OpenAPI\Client\Model\UserSettings200Response';
+        $returnType = '\Zoom\Api\Model\UserSettings200Response';
         $request = $this->userSettingsRequest($user_id, $login_type, $option, $custom_query_fields);
 
         return $this->client
@@ -5756,10 +5756,10 @@ class UsersApi
      * Update user settings
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
-     * @param  \OpenAPI\Client\Model\UserSettingsUpdateRequest $user_settings_update_request User Settings (required)
+     * @param  \Zoom\Api\Model\UserSettingsUpdateRequest $user_settings_update_request User Settings (required)
      * @param  string $option Optional query parameters:  * &#x60;meeting_authentication&#x60; — Use this query parameter to view the [meeting authentication settings](https://support.zoom.us/hc/en-us/articles/360037117472-Authentication-Profiles-for-Meetings-and-Webinars) applied to the user&#39;s account.  * &#x60;recording_authentication&#x60; — Use this query parameter to view the [recording authentication settings](https://support.zoom.us/hc/en-us/articles/360037756671-Authentication-Profiles-for-Cloud-Recordings) applied to the user&#39;s account.  * &#x60;meeting_security&#x60; — Use this query parameter to view the meeting security settings applied to the user&#39;s account. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -5774,10 +5774,10 @@ class UsersApi
      * Update user settings
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
-     * @param  \OpenAPI\Client\Model\UserSettingsUpdateRequest $user_settings_update_request User Settings (required)
+     * @param  \Zoom\Api\Model\UserSettingsUpdateRequest $user_settings_update_request User Settings (required)
      * @param  string $option Optional query parameters:  * &#x60;meeting_authentication&#x60; — Use this query parameter to view the [meeting authentication settings](https://support.zoom.us/hc/en-us/articles/360037117472-Authentication-Profiles-for-Meetings-and-Webinars) applied to the user&#39;s account.  * &#x60;recording_authentication&#x60; — Use this query parameter to view the [recording authentication settings](https://support.zoom.us/hc/en-us/articles/360037756671-Authentication-Profiles-for-Cloud-Recordings) applied to the user&#39;s account.  * &#x60;meeting_security&#x60; — Use this query parameter to view the meeting security settings applied to the user&#39;s account. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -5835,7 +5835,7 @@ class UsersApi
      * Update user settings
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
-     * @param  \OpenAPI\Client\Model\UserSettingsUpdateRequest $user_settings_update_request User Settings (required)
+     * @param  \Zoom\Api\Model\UserSettingsUpdateRequest $user_settings_update_request User Settings (required)
      * @param  string $option Optional query parameters:  * &#x60;meeting_authentication&#x60; — Use this query parameter to view the [meeting authentication settings](https://support.zoom.us/hc/en-us/articles/360037117472-Authentication-Profiles-for-Meetings-and-Webinars) applied to the user&#39;s account.  * &#x60;recording_authentication&#x60; — Use this query parameter to view the [recording authentication settings](https://support.zoom.us/hc/en-us/articles/360037756671-Authentication-Profiles-for-Cloud-Recordings) applied to the user&#39;s account.  * &#x60;meeting_security&#x60; — Use this query parameter to view the meeting security settings applied to the user&#39;s account. (optional)
      *
      * @throws \InvalidArgumentException
@@ -5857,7 +5857,7 @@ class UsersApi
      * Update user settings
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
-     * @param  \OpenAPI\Client\Model\UserSettingsUpdateRequest $user_settings_update_request User Settings (required)
+     * @param  \Zoom\Api\Model\UserSettingsUpdateRequest $user_settings_update_request User Settings (required)
      * @param  string $option Optional query parameters:  * &#x60;meeting_authentication&#x60; — Use this query parameter to view the [meeting authentication settings](https://support.zoom.us/hc/en-us/articles/360037117472-Authentication-Profiles-for-Meetings-and-Webinars) applied to the user&#39;s account.  * &#x60;recording_authentication&#x60; — Use this query parameter to view the [recording authentication settings](https://support.zoom.us/hc/en-us/articles/360037756671-Authentication-Profiles-for-Cloud-Recordings) applied to the user&#39;s account.  * &#x60;meeting_security&#x60; — Use this query parameter to view the meeting security settings applied to the user&#39;s account. (optional)
      *
      * @throws \InvalidArgumentException
@@ -5895,7 +5895,7 @@ class UsersApi
      * Create request for operation 'userSettingsUpdate'
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
-     * @param  \OpenAPI\Client\Model\UserSettingsUpdateRequest $user_settings_update_request User Settings (required)
+     * @param  \Zoom\Api\Model\UserSettingsUpdateRequest $user_settings_update_request User Settings (required)
      * @param  string $option Optional query parameters:  * &#x60;meeting_authentication&#x60; — Use this query parameter to view the [meeting authentication settings](https://support.zoom.us/hc/en-us/articles/360037117472-Authentication-Profiles-for-Meetings-and-Webinars) applied to the user&#39;s account.  * &#x60;recording_authentication&#x60; — Use this query parameter to view the [recording authentication settings](https://support.zoom.us/hc/en-us/articles/360037756671-Authentication-Profiles-for-Cloud-Recordings) applied to the user&#39;s account.  * &#x60;meeting_security&#x60; — Use this query parameter to view the meeting security settings applied to the user&#39;s account. (optional)
      *
      * @throws \InvalidArgumentException
@@ -6017,9 +6017,9 @@ class UsersApi
      * Update user status
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
-     * @param  \OpenAPI\Client\Model\UserStatusRequest $user_status_request User status. (required)
+     * @param  \Zoom\Api\Model\UserStatusRequest $user_status_request User status. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -6034,9 +6034,9 @@ class UsersApi
      * Update user status
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
-     * @param  \OpenAPI\Client\Model\UserStatusRequest $user_status_request User status. (required)
+     * @param  \Zoom\Api\Model\UserStatusRequest $user_status_request User status. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -6094,7 +6094,7 @@ class UsersApi
      * Update user status
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
-     * @param  \OpenAPI\Client\Model\UserStatusRequest $user_status_request User status. (required)
+     * @param  \Zoom\Api\Model\UserStatusRequest $user_status_request User status. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -6115,7 +6115,7 @@ class UsersApi
      * Update user status
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
-     * @param  \OpenAPI\Client\Model\UserStatusRequest $user_status_request User status. (required)
+     * @param  \Zoom\Api\Model\UserStatusRequest $user_status_request User status. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -6152,7 +6152,7 @@ class UsersApi
      * Create request for operation 'userStatus'
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
-     * @param  \OpenAPI\Client\Model\UserStatusRequest $user_status_request User status. (required)
+     * @param  \Zoom\Api\Model\UserStatusRequest $user_status_request User status. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -6267,9 +6267,9 @@ class UsersApi
      * @param  string $type The user token type:  * &#x60;zak&#x60; — A Zoom Access Key (ZAK) is used to generate a URL to start meetings. See [Getting a Zoom Access Key (ZAK)](https://marketplace.zoom.us/docs/sdk/native-sdks/auth#generating-zoom-access-token-zak) for details. The ZAK&#39;s expiration time is two hours. For API users, the expiration time is 90 days. An API user is a user created via the &#x60;custCreate&#x60; action in the **[Create users](https://marketplace.zoom.us/docs/api-reference/zoom-api/methods/#operation/userCreate)** API. The maximum length of this value is &#x60;512&#x60;.  * &#x60;token&#x60; — **Deprecated.** A Zoom token. This token expires in 14 days. You must make the request again after expiration to receive a new token. This query parameter returns a null value if the user signed in to Zoom via Google or Facebook. The maximum length of this value is &#x60;512&#x60;.    This value defaults to &#x60;token&#x60;. (optional, default to 'token')
      * @param  int $ttl The ZAK expiration time to live (TTL). The value of this query parameter denotes the expiry time of the ZAK, in seconds. To update the user&#39;s ZAK TTL, use this field with the &#x60;zak&#x60; value for the &#x60;type&#x60; query parameter.    This value defaults to &#x60;7200&#x60; or &#x60;7776000&#x60; (90 days) for API users. The maximum value is one year. (optional, default to 7200)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\UserToken200Response
+     * @return \Zoom\Api\Model\UserToken200Response
      */
     public function userToken($user_id, $type = 'token', $ttl = 7200)
     {
@@ -6286,9 +6286,9 @@ class UsersApi
      * @param  string $type The user token type:  * &#x60;zak&#x60; — A Zoom Access Key (ZAK) is used to generate a URL to start meetings. See [Getting a Zoom Access Key (ZAK)](https://marketplace.zoom.us/docs/sdk/native-sdks/auth#generating-zoom-access-token-zak) for details. The ZAK&#39;s expiration time is two hours. For API users, the expiration time is 90 days. An API user is a user created via the &#x60;custCreate&#x60; action in the **[Create users](https://marketplace.zoom.us/docs/api-reference/zoom-api/methods/#operation/userCreate)** API. The maximum length of this value is &#x60;512&#x60;.  * &#x60;token&#x60; — **Deprecated.** A Zoom token. This token expires in 14 days. You must make the request again after expiration to receive a new token. This query parameter returns a null value if the user signed in to Zoom via Google or Facebook. The maximum length of this value is &#x60;512&#x60;.    This value defaults to &#x60;token&#x60;. (optional, default to 'token')
      * @param  int $ttl The ZAK expiration time to live (TTL). The value of this query parameter denotes the expiry time of the ZAK, in seconds. To update the user&#39;s ZAK TTL, use this field with the &#x60;zak&#x60; value for the &#x60;type&#x60; query parameter.    This value defaults to &#x60;7200&#x60; or &#x60;7776000&#x60; (90 days) for API users. The maximum value is one year. (optional, default to 7200)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\UserToken200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\UserToken200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function userTokenWithHttpInfo($user_id, $type = 'token', $ttl = 7200)
     {
@@ -6331,23 +6331,23 @@ class UsersApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\UserToken200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\UserToken200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\UserToken200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\UserToken200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UserToken200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\UserToken200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\UserToken200Response';
+            $returnType = '\Zoom\Api\Model\UserToken200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -6368,7 +6368,7 @@ class UsersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\UserToken200Response',
+                        '\Zoom\Api\Model\UserToken200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6414,7 +6414,7 @@ class UsersApi
      */
     public function userTokenAsyncWithHttpInfo($user_id, $type = 'token', $ttl = 7200)
     {
-        $returnType = '\OpenAPI\Client\Model\UserToken200Response';
+        $returnType = '\Zoom\Api\Model\UserToken200Response';
         $request = $this->userTokenRequest($user_id, $type, $ttl);
 
         return $this->client
@@ -6580,11 +6580,11 @@ class UsersApi
      * Update a user
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
-     * @param  \OpenAPI\Client\Model\UserUpdate $user_update The user&#39;s profile information. (required)
+     * @param  \Zoom\Api\Model\UserUpdate $user_update The user&#39;s profile information. (required)
      * @param  int $login_type The user&#39;s login method:  * &#x60;0&#x60; — Facebook OAuth  * &#x60;1&#x60; — Google OAuth  * &#x60;24&#x60; — Apple OAuth  * &#x60;27&#x60; — Microsoft OAuth  * &#x60;97&#x60; — Mobile device  * &#x60;98&#x60; — RingCentral OAuth  * &#x60;99&#x60; — API user  * &#x60;100&#x60; — Zoom Work email  * &#x60;101&#x60; — Single Sign-On (SSO)   The following login methods are only available in China:  * &#x60;11&#x60; — Phone number  * &#x60;21&#x60; — WeChat  * &#x60;23&#x60; — Alipay (optional)
      * @param  bool $remove_tsp_credentials Whether to remove the user&#39;s TSP credentials:  * &#x60;true&#x60; — The queried ID is an employee&#39;s unique ID.  * &#x60;false&#x60; — The queried ID is not an employee&#39;s unique ID.    This value defaults to &#x60;false&#x60; (null). (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -6599,11 +6599,11 @@ class UsersApi
      * Update a user
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
-     * @param  \OpenAPI\Client\Model\UserUpdate $user_update The user&#39;s profile information. (required)
+     * @param  \Zoom\Api\Model\UserUpdate $user_update The user&#39;s profile information. (required)
      * @param  int $login_type The user&#39;s login method:  * &#x60;0&#x60; — Facebook OAuth  * &#x60;1&#x60; — Google OAuth  * &#x60;24&#x60; — Apple OAuth  * &#x60;27&#x60; — Microsoft OAuth  * &#x60;97&#x60; — Mobile device  * &#x60;98&#x60; — RingCentral OAuth  * &#x60;99&#x60; — API user  * &#x60;100&#x60; — Zoom Work email  * &#x60;101&#x60; — Single Sign-On (SSO)   The following login methods are only available in China:  * &#x60;11&#x60; — Phone number  * &#x60;21&#x60; — WeChat  * &#x60;23&#x60; — Alipay (optional)
      * @param  bool $remove_tsp_credentials Whether to remove the user&#39;s TSP credentials:  * &#x60;true&#x60; — The queried ID is an employee&#39;s unique ID.  * &#x60;false&#x60; — The queried ID is not an employee&#39;s unique ID.    This value defaults to &#x60;false&#x60; (null). (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -6661,7 +6661,7 @@ class UsersApi
      * Update a user
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
-     * @param  \OpenAPI\Client\Model\UserUpdate $user_update The user&#39;s profile information. (required)
+     * @param  \Zoom\Api\Model\UserUpdate $user_update The user&#39;s profile information. (required)
      * @param  int $login_type The user&#39;s login method:  * &#x60;0&#x60; — Facebook OAuth  * &#x60;1&#x60; — Google OAuth  * &#x60;24&#x60; — Apple OAuth  * &#x60;27&#x60; — Microsoft OAuth  * &#x60;97&#x60; — Mobile device  * &#x60;98&#x60; — RingCentral OAuth  * &#x60;99&#x60; — API user  * &#x60;100&#x60; — Zoom Work email  * &#x60;101&#x60; — Single Sign-On (SSO)   The following login methods are only available in China:  * &#x60;11&#x60; — Phone number  * &#x60;21&#x60; — WeChat  * &#x60;23&#x60; — Alipay (optional)
      * @param  bool $remove_tsp_credentials Whether to remove the user&#39;s TSP credentials:  * &#x60;true&#x60; — The queried ID is an employee&#39;s unique ID.  * &#x60;false&#x60; — The queried ID is not an employee&#39;s unique ID.    This value defaults to &#x60;false&#x60; (null). (optional)
      *
@@ -6684,7 +6684,7 @@ class UsersApi
      * Update a user
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
-     * @param  \OpenAPI\Client\Model\UserUpdate $user_update The user&#39;s profile information. (required)
+     * @param  \Zoom\Api\Model\UserUpdate $user_update The user&#39;s profile information. (required)
      * @param  int $login_type The user&#39;s login method:  * &#x60;0&#x60; — Facebook OAuth  * &#x60;1&#x60; — Google OAuth  * &#x60;24&#x60; — Apple OAuth  * &#x60;27&#x60; — Microsoft OAuth  * &#x60;97&#x60; — Mobile device  * &#x60;98&#x60; — RingCentral OAuth  * &#x60;99&#x60; — API user  * &#x60;100&#x60; — Zoom Work email  * &#x60;101&#x60; — Single Sign-On (SSO)   The following login methods are only available in China:  * &#x60;11&#x60; — Phone number  * &#x60;21&#x60; — WeChat  * &#x60;23&#x60; — Alipay (optional)
      * @param  bool $remove_tsp_credentials Whether to remove the user&#39;s TSP credentials:  * &#x60;true&#x60; — The queried ID is an employee&#39;s unique ID.  * &#x60;false&#x60; — The queried ID is not an employee&#39;s unique ID.    This value defaults to &#x60;false&#x60; (null). (optional)
      *
@@ -6723,7 +6723,7 @@ class UsersApi
      * Create request for operation 'userUpdate'
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
-     * @param  \OpenAPI\Client\Model\UserUpdate $user_update The user&#39;s profile information. (required)
+     * @param  \Zoom\Api\Model\UserUpdate $user_update The user&#39;s profile information. (required)
      * @param  int $login_type The user&#39;s login method:  * &#x60;0&#x60; — Facebook OAuth  * &#x60;1&#x60; — Google OAuth  * &#x60;24&#x60; — Apple OAuth  * &#x60;27&#x60; — Microsoft OAuth  * &#x60;97&#x60; — Mobile device  * &#x60;98&#x60; — RingCentral OAuth  * &#x60;99&#x60; — API user  * &#x60;100&#x60; — Zoom Work email  * &#x60;101&#x60; — Single Sign-On (SSO)   The following login methods are only available in China:  * &#x60;11&#x60; — Phone number  * &#x60;21&#x60; — WeChat  * &#x60;23&#x60; — Alipay (optional)
      * @param  bool $remove_tsp_credentials Whether to remove the user&#39;s TSP credentials:  * &#x60;true&#x60; — The queried ID is an employee&#39;s unique ID.  * &#x60;false&#x60; — The queried ID is not an employee&#39;s unique ID.    This value defaults to &#x60;false&#x60; (null). (optional)
      *
@@ -6856,9 +6856,9 @@ class UsersApi
      *
      * @param  string $vanity_name Personal meeting room name. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\UserVanityName200Response
+     * @return \Zoom\Api\Model\UserVanityName200Response
      */
     public function userVanityName($vanity_name)
     {
@@ -6873,9 +6873,9 @@ class UsersApi
      *
      * @param  string $vanity_name Personal meeting room name. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\UserVanityName200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\UserVanityName200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function userVanityNameWithHttpInfo($vanity_name)
     {
@@ -6918,23 +6918,23 @@ class UsersApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\UserVanityName200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\UserVanityName200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\UserVanityName200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\UserVanityName200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UserVanityName200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\UserVanityName200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\UserVanityName200Response';
+            $returnType = '\Zoom\Api\Model\UserVanityName200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -6955,7 +6955,7 @@ class UsersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\UserVanityName200Response',
+                        '\Zoom\Api\Model\UserVanityName200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6997,7 +6997,7 @@ class UsersApi
      */
     public function userVanityNameAsyncWithHttpInfo($vanity_name)
     {
-        $returnType = '\OpenAPI\Client\Model\UserVanityName200Response';
+        $returnType = '\Zoom\Api\Model\UserVanityName200Response';
         $request = $this->userVanityNameRequest($vanity_name);
 
         return $this->client
@@ -7140,9 +7140,9 @@ class UsersApi
      * Get user&#39;s ZAK
      *
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\UserZak200Response
+     * @return \Zoom\Api\Model\UserZak200Response
      */
     public function userZak()
     {
@@ -7156,9 +7156,9 @@ class UsersApi
      * Get user&#39;s ZAK
      *
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\UserZak200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\UserZak200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function userZakWithHttpInfo()
     {
@@ -7201,23 +7201,23 @@ class UsersApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\UserZak200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\UserZak200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\UserZak200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\UserZak200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UserZak200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\UserZak200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\UserZak200Response';
+            $returnType = '\Zoom\Api\Model\UserZak200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -7238,7 +7238,7 @@ class UsersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\UserZak200Response',
+                        '\Zoom\Api\Model\UserZak200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7278,7 +7278,7 @@ class UsersApi
      */
     public function userZakAsyncWithHttpInfo()
     {
-        $returnType = '\OpenAPI\Client\Model\UserZak200Response';
+        $returnType = '\Zoom\Api\Model\UserZak200Response';
         $request = $this->userZakRequest();
 
         return $this->client
@@ -7411,9 +7411,9 @@ class UsersApi
      * @param  string $include_fields Use this parameter to display specific attributes in the API call&#39;s response:  * &#x60;custom_attributes&#x60; — Return the user&#39;s custom attributes. (optional)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Users200Response
+     * @return \Zoom\Api\Model\Users200Response
      */
     public function users($status = 'active', $page_size = 30, $role_id = null, $page_number = null, $include_fields = null, $next_page_token = null)
     {
@@ -7433,9 +7433,9 @@ class UsersApi
      * @param  string $include_fields Use this parameter to display specific attributes in the API call&#39;s response:  * &#x60;custom_attributes&#x60; — Return the user&#39;s custom attributes. (optional)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Users200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\Users200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function usersWithHttpInfo($status = 'active', $page_size = 30, $role_id = null, $page_number = null, $include_fields = null, $next_page_token = null)
     {
@@ -7478,23 +7478,23 @@ class UsersApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Users200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\Users200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Users200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\Users200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Users200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\Users200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\Users200Response';
+            $returnType = '\Zoom\Api\Model\Users200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -7515,7 +7515,7 @@ class UsersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Users200Response',
+                        '\Zoom\Api\Model\Users200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7567,7 +7567,7 @@ class UsersApi
      */
     public function usersAsyncWithHttpInfo($status = 'active', $page_size = 30, $role_id = null, $page_number = null, $include_fields = null, $next_page_token = null)
     {
-        $returnType = '\OpenAPI\Client\Model\Users200Response';
+        $returnType = '\Zoom\Api\Model\Users200Response';
         $request = $this->usersRequest($status, $page_size, $role_id, $page_number, $include_fields, $next_page_token);
 
         return $this->client

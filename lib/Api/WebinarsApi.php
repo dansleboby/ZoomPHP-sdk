@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Zoom\Api\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Zoom\Api\ApiException;
+use Zoom\Api\Configuration;
+use Zoom\Api\HeaderSelector;
+use Zoom\Api\ObjectSerializer;
 
 /**
  * WebinarsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -121,11 +121,11 @@ class WebinarsApi
      * Perform batch registration
      *
      * @param  string $webinar_id Unique identifier of the webinar. (required)
-     * @param  \OpenAPI\Client\Model\AddBatchRegistrantsRequest $add_batch_registrants_request add_batch_registrants_request (optional)
+     * @param  \Zoom\Api\Model\AddBatchRegistrantsRequest $add_batch_registrants_request add_batch_registrants_request (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\AddBatchWebinarRegistrants200Response
+     * @return \Zoom\Api\Model\AddBatchWebinarRegistrants200Response
      */
     public function addBatchWebinarRegistrants($webinar_id, $add_batch_registrants_request = null)
     {
@@ -139,11 +139,11 @@ class WebinarsApi
      * Perform batch registration
      *
      * @param  string $webinar_id Unique identifier of the webinar. (required)
-     * @param  \OpenAPI\Client\Model\AddBatchRegistrantsRequest $add_batch_registrants_request (optional)
+     * @param  \Zoom\Api\Model\AddBatchRegistrantsRequest $add_batch_registrants_request (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\AddBatchWebinarRegistrants200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\AddBatchWebinarRegistrants200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function addBatchWebinarRegistrantsWithHttpInfo($webinar_id, $add_batch_registrants_request = null)
     {
@@ -186,23 +186,23 @@ class WebinarsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\AddBatchWebinarRegistrants200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\AddBatchWebinarRegistrants200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\AddBatchWebinarRegistrants200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\AddBatchWebinarRegistrants200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\AddBatchWebinarRegistrants200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\AddBatchWebinarRegistrants200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\AddBatchWebinarRegistrants200Response';
+            $returnType = '\Zoom\Api\Model\AddBatchWebinarRegistrants200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -223,7 +223,7 @@ class WebinarsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\AddBatchWebinarRegistrants200Response',
+                        '\Zoom\Api\Model\AddBatchWebinarRegistrants200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -239,7 +239,7 @@ class WebinarsApi
      * Perform batch registration
      *
      * @param  string $webinar_id Unique identifier of the webinar. (required)
-     * @param  \OpenAPI\Client\Model\AddBatchRegistrantsRequest $add_batch_registrants_request (optional)
+     * @param  \Zoom\Api\Model\AddBatchRegistrantsRequest $add_batch_registrants_request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -260,14 +260,14 @@ class WebinarsApi
      * Perform batch registration
      *
      * @param  string $webinar_id Unique identifier of the webinar. (required)
-     * @param  \OpenAPI\Client\Model\AddBatchRegistrantsRequest $add_batch_registrants_request (optional)
+     * @param  \Zoom\Api\Model\AddBatchRegistrantsRequest $add_batch_registrants_request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function addBatchWebinarRegistrantsAsyncWithHttpInfo($webinar_id, $add_batch_registrants_request = null)
     {
-        $returnType = '\OpenAPI\Client\Model\AddBatchWebinarRegistrants200Response';
+        $returnType = '\Zoom\Api\Model\AddBatchWebinarRegistrants200Response';
         $request = $this->addBatchWebinarRegistrantsRequest($webinar_id, $add_batch_registrants_request);
 
         return $this->client
@@ -310,7 +310,7 @@ class WebinarsApi
      * Create request for operation 'addBatchWebinarRegistrants'
      *
      * @param  string $webinar_id Unique identifier of the webinar. (required)
-     * @param  \OpenAPI\Client\Model\AddBatchRegistrantsRequest $add_batch_registrants_request (optional)
+     * @param  \Zoom\Api\Model\AddBatchRegistrantsRequest $add_batch_registrants_request (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -421,11 +421,11 @@ class WebinarsApi
      * Create a webinar&#39;s branding name tag
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\CreateWebinarBrandingNameTagRequest $create_webinar_branding_name_tag_request create_webinar_branding_name_tag_request (required)
+     * @param  \Zoom\Api\Model\CreateWebinarBrandingNameTagRequest $create_webinar_branding_name_tag_request create_webinar_branding_name_tag_request (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\CreateWebinarBrandingNameTag201Response
+     * @return \Zoom\Api\Model\CreateWebinarBrandingNameTag201Response
      */
     public function createWebinarBrandingNameTag($webinar_id, $create_webinar_branding_name_tag_request)
     {
@@ -439,11 +439,11 @@ class WebinarsApi
      * Create a webinar&#39;s branding name tag
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\CreateWebinarBrandingNameTagRequest $create_webinar_branding_name_tag_request (required)
+     * @param  \Zoom\Api\Model\CreateWebinarBrandingNameTagRequest $create_webinar_branding_name_tag_request (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\CreateWebinarBrandingNameTag201Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\CreateWebinarBrandingNameTag201Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function createWebinarBrandingNameTagWithHttpInfo($webinar_id, $create_webinar_branding_name_tag_request)
     {
@@ -486,23 +486,23 @@ class WebinarsApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\OpenAPI\Client\Model\CreateWebinarBrandingNameTag201Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\CreateWebinarBrandingNameTag201Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\CreateWebinarBrandingNameTag201Response' !== 'string') {
+                        if ('\Zoom\Api\Model\CreateWebinarBrandingNameTag201Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CreateWebinarBrandingNameTag201Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\CreateWebinarBrandingNameTag201Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\CreateWebinarBrandingNameTag201Response';
+            $returnType = '\Zoom\Api\Model\CreateWebinarBrandingNameTag201Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -523,7 +523,7 @@ class WebinarsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\CreateWebinarBrandingNameTag201Response',
+                        '\Zoom\Api\Model\CreateWebinarBrandingNameTag201Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -539,7 +539,7 @@ class WebinarsApi
      * Create a webinar&#39;s branding name tag
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\CreateWebinarBrandingNameTagRequest $create_webinar_branding_name_tag_request (required)
+     * @param  \Zoom\Api\Model\CreateWebinarBrandingNameTagRequest $create_webinar_branding_name_tag_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -560,14 +560,14 @@ class WebinarsApi
      * Create a webinar&#39;s branding name tag
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\CreateWebinarBrandingNameTagRequest $create_webinar_branding_name_tag_request (required)
+     * @param  \Zoom\Api\Model\CreateWebinarBrandingNameTagRequest $create_webinar_branding_name_tag_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createWebinarBrandingNameTagAsyncWithHttpInfo($webinar_id, $create_webinar_branding_name_tag_request)
     {
-        $returnType = '\OpenAPI\Client\Model\CreateWebinarBrandingNameTag201Response';
+        $returnType = '\Zoom\Api\Model\CreateWebinarBrandingNameTag201Response';
         $request = $this->createWebinarBrandingNameTagRequest($webinar_id, $create_webinar_branding_name_tag_request);
 
         return $this->client
@@ -610,7 +610,7 @@ class WebinarsApi
      * Create request for operation 'createWebinarBrandingNameTag'
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\CreateWebinarBrandingNameTagRequest $create_webinar_branding_name_tag_request (required)
+     * @param  \Zoom\Api\Model\CreateWebinarBrandingNameTagRequest $create_webinar_branding_name_tag_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -724,7 +724,7 @@ class WebinarsApi
      * @param  int $webinar_id The webinar&#39;s ID. (required)
      * @param  string $name_tag_ids A comma-separated list of the name tag IDs to delete. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -741,7 +741,7 @@ class WebinarsApi
      * @param  int $webinar_id The webinar&#39;s ID. (required)
      * @param  string $name_tag_ids A comma-separated list of the name tag IDs to delete. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -968,7 +968,7 @@ class WebinarsApi
      * @param  int $webinar_id The webinar&#39;s ID. (required)
      * @param  string $ids A comma-separated list of the Virtual Background file IDs to delete. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -985,7 +985,7 @@ class WebinarsApi
      * @param  int $webinar_id The webinar&#39;s ID. (required)
      * @param  string $ids A comma-separated list of the Virtual Background file IDs to delete. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1211,7 +1211,7 @@ class WebinarsApi
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1227,7 +1227,7 @@ class WebinarsApi
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1442,7 +1442,7 @@ class WebinarsApi
      * @param  int $webinar_id The webinar&#39;s ID. (required)
      * @param  string $message_id The live webinar chat message&#39;s unique identifier (UUID), in base64-encoded format. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1459,7 +1459,7 @@ class WebinarsApi
      * @param  int $webinar_id The webinar&#39;s ID. (required)
      * @param  string $message_id The live webinar chat message&#39;s unique identifier (UUID), in base64-encoded format. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1692,7 +1692,7 @@ class WebinarsApi
      * @param  string $registrant_id The registrant ID. (required)
      * @param  string $occurrence_id The webinar occurrence ID. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1710,7 +1710,7 @@ class WebinarsApi
      * @param  string $registrant_id The registrant ID. (required)
      * @param  string $occurrence_id The webinar occurrence ID. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1953,9 +1953,9 @@ class WebinarsApi
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\GetTrackingSources200Response
+     * @return \Zoom\Api\Model\GetTrackingSources200Response
      */
     public function getTrackingSources($webinar_id)
     {
@@ -1970,9 +1970,9 @@ class WebinarsApi
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\GetTrackingSources200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\GetTrackingSources200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTrackingSourcesWithHttpInfo($webinar_id)
     {
@@ -2015,23 +2015,23 @@ class WebinarsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\GetTrackingSources200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\GetTrackingSources200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\GetTrackingSources200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\GetTrackingSources200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\GetTrackingSources200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\GetTrackingSources200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\GetTrackingSources200Response';
+            $returnType = '\Zoom\Api\Model\GetTrackingSources200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2052,7 +2052,7 @@ class WebinarsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\GetTrackingSources200Response',
+                        '\Zoom\Api\Model\GetTrackingSources200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2094,7 +2094,7 @@ class WebinarsApi
      */
     public function getTrackingSourcesAsyncWithHttpInfo($webinar_id)
     {
-        $returnType = '\OpenAPI\Client\Model\GetTrackingSources200Response';
+        $returnType = '\Zoom\Api\Model\GetTrackingSources200Response';
         $request = $this->getTrackingSourcesRequest($webinar_id);
 
         return $this->client
@@ -2237,9 +2237,9 @@ class WebinarsApi
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\GetWebinarBranding200Response
+     * @return \Zoom\Api\Model\GetWebinarBranding200Response
      */
     public function getWebinarBranding($webinar_id)
     {
@@ -2254,9 +2254,9 @@ class WebinarsApi
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\GetWebinarBranding200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\GetWebinarBranding200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function getWebinarBrandingWithHttpInfo($webinar_id)
     {
@@ -2299,23 +2299,23 @@ class WebinarsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\GetWebinarBranding200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\GetWebinarBranding200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\GetWebinarBranding200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\GetWebinarBranding200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\GetWebinarBranding200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\GetWebinarBranding200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\GetWebinarBranding200Response';
+            $returnType = '\Zoom\Api\Model\GetWebinarBranding200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2336,7 +2336,7 @@ class WebinarsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\GetWebinarBranding200Response',
+                        '\Zoom\Api\Model\GetWebinarBranding200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2378,7 +2378,7 @@ class WebinarsApi
      */
     public function getWebinarBrandingAsyncWithHttpInfo($webinar_id)
     {
-        $returnType = '\OpenAPI\Client\Model\GetWebinarBranding200Response';
+        $returnType = '\Zoom\Api\Model\GetWebinarBranding200Response';
         $request = $this->getWebinarBrandingRequest($webinar_id);
 
         return $this->client
@@ -2521,9 +2521,9 @@ class WebinarsApi
      *
      * @param  string $webinar_id The webinar&#39;s unique ID. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\GetWebinarLiveStreamDetails200Response
+     * @return \Zoom\Api\Model\GetWebinarLiveStreamDetails200Response
      */
     public function getWebinarLiveStreamDetails($webinar_id)
     {
@@ -2538,9 +2538,9 @@ class WebinarsApi
      *
      * @param  string $webinar_id The webinar&#39;s unique ID. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\GetWebinarLiveStreamDetails200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\GetWebinarLiveStreamDetails200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function getWebinarLiveStreamDetailsWithHttpInfo($webinar_id)
     {
@@ -2583,23 +2583,23 @@ class WebinarsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\GetWebinarLiveStreamDetails200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\GetWebinarLiveStreamDetails200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\GetWebinarLiveStreamDetails200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\GetWebinarLiveStreamDetails200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\GetWebinarLiveStreamDetails200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\GetWebinarLiveStreamDetails200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\GetWebinarLiveStreamDetails200Response';
+            $returnType = '\Zoom\Api\Model\GetWebinarLiveStreamDetails200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2620,7 +2620,7 @@ class WebinarsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\GetWebinarLiveStreamDetails200Response',
+                        '\Zoom\Api\Model\GetWebinarLiveStreamDetails200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2662,7 +2662,7 @@ class WebinarsApi
      */
     public function getWebinarLiveStreamDetailsAsyncWithHttpInfo($webinar_id)
     {
-        $returnType = '\OpenAPI\Client\Model\GetWebinarLiveStreamDetails200Response';
+        $returnType = '\Zoom\Api\Model\GetWebinarLiveStreamDetails200Response';
         $request = $this->getWebinarLiveStreamDetailsRequest($webinar_id);
 
         return $this->client
@@ -2805,9 +2805,9 @@ class WebinarsApi
      *
      * @param  string $webinar_id The webinar&#39;s ID or universally unique ID (UUID).  * If you provide a webinar ID, the API will return a response for the latest webinar instance.  * If you provide a webinar UUID that begins with a &#x60;/&#x60; character or contains the &#x60;//&#x60; characters, you **must** double-encode the webinar UUID before making an API request. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ListPastWebinarPollResults200Response
+     * @return \Zoom\Api\Model\ListPastWebinarPollResults200Response
      */
     public function listPastWebinarPollResults($webinar_id)
     {
@@ -2822,9 +2822,9 @@ class WebinarsApi
      *
      * @param  string $webinar_id The webinar&#39;s ID or universally unique ID (UUID).  * If you provide a webinar ID, the API will return a response for the latest webinar instance.  * If you provide a webinar UUID that begins with a &#x60;/&#x60; character or contains the &#x60;//&#x60; characters, you **must** double-encode the webinar UUID before making an API request. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ListPastWebinarPollResults200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\ListPastWebinarPollResults200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function listPastWebinarPollResultsWithHttpInfo($webinar_id)
     {
@@ -2867,23 +2867,23 @@ class WebinarsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ListPastWebinarPollResults200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\ListPastWebinarPollResults200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ListPastWebinarPollResults200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\ListPastWebinarPollResults200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ListPastWebinarPollResults200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\ListPastWebinarPollResults200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ListPastWebinarPollResults200Response';
+            $returnType = '\Zoom\Api\Model\ListPastWebinarPollResults200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2904,7 +2904,7 @@ class WebinarsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ListPastWebinarPollResults200Response',
+                        '\Zoom\Api\Model\ListPastWebinarPollResults200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2946,7 +2946,7 @@ class WebinarsApi
      */
     public function listPastWebinarPollResultsAsyncWithHttpInfo($webinar_id)
     {
-        $returnType = '\OpenAPI\Client\Model\ListPastWebinarPollResults200Response';
+        $returnType = '\Zoom\Api\Model\ListPastWebinarPollResults200Response';
         $request = $this->listPastWebinarPollResultsRequest($webinar_id);
 
         return $this->client
@@ -3089,9 +3089,9 @@ class WebinarsApi
      *
      * @param  string $webinar_id The webinar&#39;s ID or universally unique ID (UUID).  * If you provide a webinar ID, the API will return a response for the latest webinar instance.  * If you provide a webinar UUID that begins with a &#x60;/&#x60; character or contains the &#x60;//&#x60; characters, you **must** double-encode the webinar UUID before making an API request. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ListPastWebinarQA200Response
+     * @return \Zoom\Api\Model\ListPastWebinarQA200Response
      */
     public function listPastWebinarQA($webinar_id)
     {
@@ -3106,9 +3106,9 @@ class WebinarsApi
      *
      * @param  string $webinar_id The webinar&#39;s ID or universally unique ID (UUID).  * If you provide a webinar ID, the API will return a response for the latest webinar instance.  * If you provide a webinar UUID that begins with a &#x60;/&#x60; character or contains the &#x60;//&#x60; characters, you **must** double-encode the webinar UUID before making an API request. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ListPastWebinarQA200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\ListPastWebinarQA200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function listPastWebinarQAWithHttpInfo($webinar_id)
     {
@@ -3151,23 +3151,23 @@ class WebinarsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ListPastWebinarQA200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\ListPastWebinarQA200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ListPastWebinarQA200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\ListPastWebinarQA200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ListPastWebinarQA200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\ListPastWebinarQA200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ListPastWebinarQA200Response';
+            $returnType = '\Zoom\Api\Model\ListPastWebinarQA200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3188,7 +3188,7 @@ class WebinarsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ListPastWebinarQA200Response',
+                        '\Zoom\Api\Model\ListPastWebinarQA200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3230,7 +3230,7 @@ class WebinarsApi
      */
     public function listPastWebinarQAAsyncWithHttpInfo($webinar_id)
     {
-        $returnType = '\OpenAPI\Client\Model\ListPastWebinarQA200Response';
+        $returnType = '\Zoom\Api\Model\ListPastWebinarQA200Response';
         $request = $this->listPastWebinarQARequest($webinar_id);
 
         return $this->client
@@ -3375,9 +3375,9 @@ class WebinarsApi
      * @param  int $page_size The number of records returned within a single API call. (optional, default to 30)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ListWebinarParticipants200Response
+     * @return \Zoom\Api\Model\ListWebinarParticipants200Response
      */
     public function listWebinarParticipants($webinar_id, $page_size = 30, $next_page_token = null)
     {
@@ -3394,9 +3394,9 @@ class WebinarsApi
      * @param  int $page_size The number of records returned within a single API call. (optional, default to 30)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ListWebinarParticipants200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\ListWebinarParticipants200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function listWebinarParticipantsWithHttpInfo($webinar_id, $page_size = 30, $next_page_token = null)
     {
@@ -3439,23 +3439,23 @@ class WebinarsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ListWebinarParticipants200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\ListWebinarParticipants200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ListWebinarParticipants200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\ListWebinarParticipants200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ListWebinarParticipants200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\ListWebinarParticipants200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ListWebinarParticipants200Response';
+            $returnType = '\Zoom\Api\Model\ListWebinarParticipants200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3476,7 +3476,7 @@ class WebinarsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ListWebinarParticipants200Response',
+                        '\Zoom\Api\Model\ListWebinarParticipants200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3522,7 +3522,7 @@ class WebinarsApi
      */
     public function listWebinarParticipantsAsyncWithHttpInfo($webinar_id, $page_size = 30, $next_page_token = null)
     {
-        $returnType = '\OpenAPI\Client\Model\ListWebinarParticipants200Response';
+        $returnType = '\Zoom\Api\Model\ListWebinarParticipants200Response';
         $request = $this->listWebinarParticipantsRequest($webinar_id, $page_size, $next_page_token);
 
         return $this->client
@@ -3689,9 +3689,9 @@ class WebinarsApi
      *
      * @param  string $user_id The user&#39;s ID. To get a user&#39;s ID, use the [**List users**](/docs/api-reference/zoom-api/ma#operation/users) API. For user-level apps, pass the &#x60;me&#x60; value instead of the user ID value. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ListWebinarTemplates200Response
+     * @return \Zoom\Api\Model\ListWebinarTemplates200Response
      */
     public function listWebinarTemplates($user_id)
     {
@@ -3706,9 +3706,9 @@ class WebinarsApi
      *
      * @param  string $user_id The user&#39;s ID. To get a user&#39;s ID, use the [**List users**](/docs/api-reference/zoom-api/ma#operation/users) API. For user-level apps, pass the &#x60;me&#x60; value instead of the user ID value. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ListWebinarTemplates200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\ListWebinarTemplates200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function listWebinarTemplatesWithHttpInfo($user_id)
     {
@@ -3751,23 +3751,23 @@ class WebinarsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ListWebinarTemplates200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\ListWebinarTemplates200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ListWebinarTemplates200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\ListWebinarTemplates200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ListWebinarTemplates200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\ListWebinarTemplates200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ListWebinarTemplates200Response';
+            $returnType = '\Zoom\Api\Model\ListWebinarTemplates200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3788,7 +3788,7 @@ class WebinarsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ListWebinarTemplates200Response',
+                        '\Zoom\Api\Model\ListWebinarTemplates200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3830,7 +3830,7 @@ class WebinarsApi
      */
     public function listWebinarTemplatesAsyncWithHttpInfo($user_id)
     {
-        $returnType = '\OpenAPI\Client\Model\ListWebinarTemplates200Response';
+        $returnType = '\Zoom\Api\Model\ListWebinarTemplates200Response';
         $request = $this->listWebinarTemplatesRequest($user_id);
 
         return $this->client
@@ -3973,9 +3973,9 @@ class WebinarsApi
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\WebinarInstances
+     * @return \Zoom\Api\Model\WebinarInstances
      */
     public function pastWebinars($webinar_id)
     {
@@ -3990,9 +3990,9 @@ class WebinarsApi
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\WebinarInstances, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\WebinarInstances, HTTP status code, HTTP response headers (array of strings)
      */
     public function pastWebinarsWithHttpInfo($webinar_id)
     {
@@ -4035,23 +4035,23 @@ class WebinarsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\WebinarInstances' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\WebinarInstances' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\WebinarInstances' !== 'string') {
+                        if ('\Zoom\Api\Model\WebinarInstances' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\WebinarInstances', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\WebinarInstances', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\WebinarInstances';
+            $returnType = '\Zoom\Api\Model\WebinarInstances';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4072,7 +4072,7 @@ class WebinarsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\WebinarInstances',
+                        '\Zoom\Api\Model\WebinarInstances',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4114,7 +4114,7 @@ class WebinarsApi
      */
     public function pastWebinarsAsyncWithHttpInfo($webinar_id)
     {
-        $returnType = '\OpenAPI\Client\Model\WebinarInstances';
+        $returnType = '\Zoom\Api\Model\WebinarInstances';
         $request = $this->pastWebinarsRequest($webinar_id);
 
         return $this->client
@@ -4259,7 +4259,7 @@ class WebinarsApi
      * @param  string $id The Virtual Background file ID to update. (optional)
      * @param  bool $set_default_for_all_panelists Whether to set the Virtual Background file as the new default for all panelists. This includes panelists not currently assigned a default Virtual Background. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -4277,7 +4277,7 @@ class WebinarsApi
      * @param  string $id The Virtual Background file ID to update. (optional)
      * @param  bool $set_default_for_all_panelists Whether to set the Virtual Background file as the new default for all panelists. This includes panelists not currently assigned a default Virtual Background. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4515,9 +4515,9 @@ class WebinarsApi
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
      * @param  string $name_tag_id The name tag&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\UpdateWebinarBrandingNameTagRequest $update_webinar_branding_name_tag_request update_webinar_branding_name_tag_request (required)
+     * @param  \Zoom\Api\Model\UpdateWebinarBrandingNameTagRequest $update_webinar_branding_name_tag_request update_webinar_branding_name_tag_request (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -4533,9 +4533,9 @@ class WebinarsApi
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
      * @param  string $name_tag_id The name tag&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\UpdateWebinarBrandingNameTagRequest $update_webinar_branding_name_tag_request (required)
+     * @param  \Zoom\Api\Model\UpdateWebinarBrandingNameTagRequest $update_webinar_branding_name_tag_request (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -4594,7 +4594,7 @@ class WebinarsApi
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
      * @param  string $name_tag_id The name tag&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\UpdateWebinarBrandingNameTagRequest $update_webinar_branding_name_tag_request (required)
+     * @param  \Zoom\Api\Model\UpdateWebinarBrandingNameTagRequest $update_webinar_branding_name_tag_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -4616,7 +4616,7 @@ class WebinarsApi
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
      * @param  string $name_tag_id The name tag&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\UpdateWebinarBrandingNameTagRequest $update_webinar_branding_name_tag_request (required)
+     * @param  \Zoom\Api\Model\UpdateWebinarBrandingNameTagRequest $update_webinar_branding_name_tag_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -4654,7 +4654,7 @@ class WebinarsApi
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
      * @param  string $name_tag_id The name tag&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\UpdateWebinarBrandingNameTagRequest $update_webinar_branding_name_tag_request (required)
+     * @param  \Zoom\Api\Model\UpdateWebinarBrandingNameTagRequest $update_webinar_branding_name_tag_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -4784,9 +4784,9 @@ class WebinarsApi
      * @param  bool $default Whether set the file as the default Virtual Background file. (optional, default to false)
      * @param  bool $set_default_for_all_panelists Whether to set the Virtual Background file as the new default for all panelists. This includes panelists not currently assigned a default Virtual Background. (optional, default to true)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\UploadWebinarBrandingVB201Response
+     * @return \Zoom\Api\Model\UploadWebinarBrandingVB201Response
      */
     public function uploadWebinarBrandingVB($webinar_id, $file, $default = false, $set_default_for_all_panelists = true)
     {
@@ -4804,9 +4804,9 @@ class WebinarsApi
      * @param  bool $default Whether set the file as the default Virtual Background file. (optional, default to false)
      * @param  bool $set_default_for_all_panelists Whether to set the Virtual Background file as the new default for all panelists. This includes panelists not currently assigned a default Virtual Background. (optional, default to true)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\UploadWebinarBrandingVB201Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\UploadWebinarBrandingVB201Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function uploadWebinarBrandingVBWithHttpInfo($webinar_id, $file, $default = false, $set_default_for_all_panelists = true)
     {
@@ -4849,23 +4849,23 @@ class WebinarsApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\OpenAPI\Client\Model\UploadWebinarBrandingVB201Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\UploadWebinarBrandingVB201Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\UploadWebinarBrandingVB201Response' !== 'string') {
+                        if ('\Zoom\Api\Model\UploadWebinarBrandingVB201Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UploadWebinarBrandingVB201Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\UploadWebinarBrandingVB201Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\UploadWebinarBrandingVB201Response';
+            $returnType = '\Zoom\Api\Model\UploadWebinarBrandingVB201Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4886,7 +4886,7 @@ class WebinarsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\UploadWebinarBrandingVB201Response',
+                        '\Zoom\Api\Model\UploadWebinarBrandingVB201Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4934,7 +4934,7 @@ class WebinarsApi
      */
     public function uploadWebinarBrandingVBAsyncWithHttpInfo($webinar_id, $file, $default = false, $set_default_for_all_panelists = true)
     {
-        $returnType = '\OpenAPI\Client\Model\UploadWebinarBrandingVB201Response';
+        $returnType = '\Zoom\Api\Model\UploadWebinarBrandingVB201Response';
         $request = $this->uploadWebinarBrandingVBRequest($webinar_id, $file, $default, $set_default_for_all_panelists);
 
         return $this->client
@@ -5107,9 +5107,9 @@ class WebinarsApi
      * @param  int $webinar_id The webinar&#39;s ID. (required)
      * @param  \SplFileObject $file The wallpaper&#39;s file path, in binary format. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\UploadWebinarBrandingWallpaper201Response
+     * @return \Zoom\Api\Model\UploadWebinarBrandingWallpaper201Response
      */
     public function uploadWebinarBrandingWallpaper($webinar_id, $file)
     {
@@ -5125,9 +5125,9 @@ class WebinarsApi
      * @param  int $webinar_id The webinar&#39;s ID. (required)
      * @param  \SplFileObject $file The wallpaper&#39;s file path, in binary format. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\UploadWebinarBrandingWallpaper201Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\UploadWebinarBrandingWallpaper201Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function uploadWebinarBrandingWallpaperWithHttpInfo($webinar_id, $file)
     {
@@ -5170,23 +5170,23 @@ class WebinarsApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\OpenAPI\Client\Model\UploadWebinarBrandingWallpaper201Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\UploadWebinarBrandingWallpaper201Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\UploadWebinarBrandingWallpaper201Response' !== 'string') {
+                        if ('\Zoom\Api\Model\UploadWebinarBrandingWallpaper201Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UploadWebinarBrandingWallpaper201Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\UploadWebinarBrandingWallpaper201Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\UploadWebinarBrandingWallpaper201Response';
+            $returnType = '\Zoom\Api\Model\UploadWebinarBrandingWallpaper201Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5207,7 +5207,7 @@ class WebinarsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\UploadWebinarBrandingWallpaper201Response',
+                        '\Zoom\Api\Model\UploadWebinarBrandingWallpaper201Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5251,7 +5251,7 @@ class WebinarsApi
      */
     public function uploadWebinarBrandingWallpaperAsyncWithHttpInfo($webinar_id, $file)
     {
-        $returnType = '\OpenAPI\Client\Model\UploadWebinarBrandingWallpaper201Response';
+        $returnType = '\Zoom\Api\Model\UploadWebinarBrandingWallpaper201Response';
         $request = $this->uploadWebinarBrandingWallpaperRequest($webinar_id, $file);
 
         return $this->client
@@ -5415,9 +5415,9 @@ class WebinarsApi
      * @param  string $occurrence_id Unique Identifier that identifies an occurrence of a recurring webinar. [Recurring webinars](https://support.zoom.us/hc/en-us/articles/216354763-How-to-Schedule-A-Recurring-Webinar) can have a maximum of 50 occurrences. When you create a recurring Webinar using [**Create a webinar**](/docs/api-reference/zoom-api/methods#operation/webinarCreate) API, you can retrieve the Occurrence ID from the response of the API call. (optional)
      * @param  bool $show_previous_occurrences Set the value of this field to &#x60;true&#x60; if you would like to view Webinar details of all previous occurrences of a recurring Webinar. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Webinar200Response
+     * @return \Zoom\Api\Model\Webinar200Response
      */
     public function webinar($webinar_id, $occurrence_id = null, $show_previous_occurrences = null)
     {
@@ -5434,9 +5434,9 @@ class WebinarsApi
      * @param  string $occurrence_id Unique Identifier that identifies an occurrence of a recurring webinar. [Recurring webinars](https://support.zoom.us/hc/en-us/articles/216354763-How-to-Schedule-A-Recurring-Webinar) can have a maximum of 50 occurrences. When you create a recurring Webinar using [**Create a webinar**](/docs/api-reference/zoom-api/methods#operation/webinarCreate) API, you can retrieve the Occurrence ID from the response of the API call. (optional)
      * @param  bool $show_previous_occurrences Set the value of this field to &#x60;true&#x60; if you would like to view Webinar details of all previous occurrences of a recurring Webinar. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Webinar200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\Webinar200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function webinarWithHttpInfo($webinar_id, $occurrence_id = null, $show_previous_occurrences = null)
     {
@@ -5479,23 +5479,23 @@ class WebinarsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Webinar200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\Webinar200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Webinar200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\Webinar200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Webinar200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\Webinar200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\Webinar200Response';
+            $returnType = '\Zoom\Api\Model\Webinar200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5516,7 +5516,7 @@ class WebinarsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Webinar200Response',
+                        '\Zoom\Api\Model\Webinar200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5562,7 +5562,7 @@ class WebinarsApi
      */
     public function webinarAsyncWithHttpInfo($webinar_id, $occurrence_id = null, $show_previous_occurrences = null)
     {
-        $returnType = '\OpenAPI\Client\Model\Webinar200Response';
+        $returnType = '\Zoom\Api\Model\Webinar200Response';
         $request = $this->webinarRequest($webinar_id, $occurrence_id, $show_previous_occurrences);
 
         return $this->client
@@ -5728,9 +5728,9 @@ class WebinarsApi
      * @param  int $page_size The number of records returned within a single API call. (optional, default to 30)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\WebinarRegistrantList
+     * @return \Zoom\Api\Model\WebinarRegistrantList
      */
     public function webinarAbsentees($webinar_uuid, $occurrence_id = null, $page_size = 30, $next_page_token = null)
     {
@@ -5748,9 +5748,9 @@ class WebinarsApi
      * @param  int $page_size The number of records returned within a single API call. (optional, default to 30)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\WebinarRegistrantList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\WebinarRegistrantList, HTTP status code, HTTP response headers (array of strings)
      */
     public function webinarAbsenteesWithHttpInfo($webinar_uuid, $occurrence_id = null, $page_size = 30, $next_page_token = null)
     {
@@ -5793,23 +5793,23 @@ class WebinarsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\WebinarRegistrantList' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\WebinarRegistrantList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\WebinarRegistrantList' !== 'string') {
+                        if ('\Zoom\Api\Model\WebinarRegistrantList' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\WebinarRegistrantList', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\WebinarRegistrantList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\WebinarRegistrantList';
+            $returnType = '\Zoom\Api\Model\WebinarRegistrantList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5830,7 +5830,7 @@ class WebinarsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\WebinarRegistrantList',
+                        '\Zoom\Api\Model\WebinarRegistrantList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5878,7 +5878,7 @@ class WebinarsApi
      */
     public function webinarAbsenteesAsyncWithHttpInfo($webinar_uuid, $occurrence_id = null, $page_size = 30, $next_page_token = null)
     {
-        $returnType = '\OpenAPI\Client\Model\WebinarRegistrantList';
+        $returnType = '\Zoom\Api\Model\WebinarRegistrantList';
         $request = $this->webinarAbsenteesRequest($webinar_uuid, $occurrence_id, $page_size, $next_page_token);
 
         return $this->client
@@ -6054,11 +6054,11 @@ class WebinarsApi
      * Create a webinar
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
-     * @param  \OpenAPI\Client\Model\WebinarCreateRequest $webinar_create_request webinar_create_request (required)
+     * @param  \Zoom\Api\Model\WebinarCreateRequest $webinar_create_request webinar_create_request (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\WebinarCreate201Response
+     * @return \Zoom\Api\Model\WebinarCreate201Response
      */
     public function webinarCreate($user_id, $webinar_create_request)
     {
@@ -6072,11 +6072,11 @@ class WebinarsApi
      * Create a webinar
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
-     * @param  \OpenAPI\Client\Model\WebinarCreateRequest $webinar_create_request (required)
+     * @param  \Zoom\Api\Model\WebinarCreateRequest $webinar_create_request (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\WebinarCreate201Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\WebinarCreate201Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function webinarCreateWithHttpInfo($user_id, $webinar_create_request)
     {
@@ -6119,23 +6119,23 @@ class WebinarsApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\OpenAPI\Client\Model\WebinarCreate201Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\WebinarCreate201Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\WebinarCreate201Response' !== 'string') {
+                        if ('\Zoom\Api\Model\WebinarCreate201Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\WebinarCreate201Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\WebinarCreate201Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\WebinarCreate201Response';
+            $returnType = '\Zoom\Api\Model\WebinarCreate201Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -6156,7 +6156,7 @@ class WebinarsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\WebinarCreate201Response',
+                        '\Zoom\Api\Model\WebinarCreate201Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6172,7 +6172,7 @@ class WebinarsApi
      * Create a webinar
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
-     * @param  \OpenAPI\Client\Model\WebinarCreateRequest $webinar_create_request (required)
+     * @param  \Zoom\Api\Model\WebinarCreateRequest $webinar_create_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -6193,14 +6193,14 @@ class WebinarsApi
      * Create a webinar
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
-     * @param  \OpenAPI\Client\Model\WebinarCreateRequest $webinar_create_request (required)
+     * @param  \Zoom\Api\Model\WebinarCreateRequest $webinar_create_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function webinarCreateAsyncWithHttpInfo($user_id, $webinar_create_request)
     {
-        $returnType = '\OpenAPI\Client\Model\WebinarCreate201Response';
+        $returnType = '\Zoom\Api\Model\WebinarCreate201Response';
         $request = $this->webinarCreateRequest($user_id, $webinar_create_request);
 
         return $this->client
@@ -6243,7 +6243,7 @@ class WebinarsApi
      * Create request for operation 'webinarCreate'
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
-     * @param  \OpenAPI\Client\Model\WebinarCreateRequest $webinar_create_request (required)
+     * @param  \Zoom\Api\Model\WebinarCreateRequest $webinar_create_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -6358,7 +6358,7 @@ class WebinarsApi
      * @param  string $occurrence_id The meeting or webinar occurrence ID. (optional)
      * @param  bool $cancel_webinar_reminder &#x60;true&#x60;: Notify panelists and registrants about the webinar cancellation via email.   &#x60;false&#x60;: Do not send any email notification to webinar registrants and panelists.   The default value of this field is &#x60;false&#x60;. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -6376,7 +6376,7 @@ class WebinarsApi
      * @param  string $occurrence_id The meeting or webinar occurrence ID. (optional)
      * @param  bool $cancel_webinar_reminder &#x60;true&#x60;: Notify panelists and registrants about the webinar cancellation via email.   &#x60;false&#x60;: Do not send any email notification to webinar registrants and panelists.   The default value of this field is &#x60;false&#x60;. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -6613,11 +6613,11 @@ class WebinarsApi
      * Create webinar&#39;s invite links
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\MeetingInviteLinksCreateRequest $meeting_invite_links_create_request Webinar invite link object (required)
+     * @param  \Zoom\Api\Model\MeetingInviteLinksCreateRequest $meeting_invite_links_create_request Webinar invite link object (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\MeetingInviteLinksCreate201Response
+     * @return \Zoom\Api\Model\MeetingInviteLinksCreate201Response
      */
     public function webinarInviteLinksCreate($webinar_id, $meeting_invite_links_create_request)
     {
@@ -6631,11 +6631,11 @@ class WebinarsApi
      * Create webinar&#39;s invite links
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\MeetingInviteLinksCreateRequest $meeting_invite_links_create_request Webinar invite link object (required)
+     * @param  \Zoom\Api\Model\MeetingInviteLinksCreateRequest $meeting_invite_links_create_request Webinar invite link object (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\MeetingInviteLinksCreate201Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\MeetingInviteLinksCreate201Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function webinarInviteLinksCreateWithHttpInfo($webinar_id, $meeting_invite_links_create_request)
     {
@@ -6678,23 +6678,23 @@ class WebinarsApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\OpenAPI\Client\Model\MeetingInviteLinksCreate201Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\MeetingInviteLinksCreate201Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\MeetingInviteLinksCreate201Response' !== 'string') {
+                        if ('\Zoom\Api\Model\MeetingInviteLinksCreate201Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\MeetingInviteLinksCreate201Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\MeetingInviteLinksCreate201Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\MeetingInviteLinksCreate201Response';
+            $returnType = '\Zoom\Api\Model\MeetingInviteLinksCreate201Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -6715,7 +6715,7 @@ class WebinarsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\MeetingInviteLinksCreate201Response',
+                        '\Zoom\Api\Model\MeetingInviteLinksCreate201Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6731,7 +6731,7 @@ class WebinarsApi
      * Create webinar&#39;s invite links
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\MeetingInviteLinksCreateRequest $meeting_invite_links_create_request Webinar invite link object (required)
+     * @param  \Zoom\Api\Model\MeetingInviteLinksCreateRequest $meeting_invite_links_create_request Webinar invite link object (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -6752,14 +6752,14 @@ class WebinarsApi
      * Create webinar&#39;s invite links
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\MeetingInviteLinksCreateRequest $meeting_invite_links_create_request Webinar invite link object (required)
+     * @param  \Zoom\Api\Model\MeetingInviteLinksCreateRequest $meeting_invite_links_create_request Webinar invite link object (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function webinarInviteLinksCreateAsyncWithHttpInfo($webinar_id, $meeting_invite_links_create_request)
     {
-        $returnType = '\OpenAPI\Client\Model\MeetingInviteLinksCreate201Response';
+        $returnType = '\Zoom\Api\Model\MeetingInviteLinksCreate201Response';
         $request = $this->webinarInviteLinksCreateRequest($webinar_id, $meeting_invite_links_create_request);
 
         return $this->client
@@ -6802,7 +6802,7 @@ class WebinarsApi
      * Create request for operation 'webinarInviteLinksCreate'
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\MeetingInviteLinksCreateRequest $meeting_invite_links_create_request Webinar invite link object (required)
+     * @param  \Zoom\Api\Model\MeetingInviteLinksCreateRequest $meeting_invite_links_create_request Webinar invite link object (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -6914,9 +6914,9 @@ class WebinarsApi
      * Update Live Stream Status
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\WebinarLiveStreamStatus $webinar_live_stream_status Webinar (required)
+     * @param  \Zoom\Api\Model\WebinarLiveStreamStatus $webinar_live_stream_status Webinar (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -6931,9 +6931,9 @@ class WebinarsApi
      * Update Live Stream Status
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\WebinarLiveStreamStatus $webinar_live_stream_status Webinar (required)
+     * @param  \Zoom\Api\Model\WebinarLiveStreamStatus $webinar_live_stream_status Webinar (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -6991,7 +6991,7 @@ class WebinarsApi
      * Update Live Stream Status
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\WebinarLiveStreamStatus $webinar_live_stream_status Webinar (required)
+     * @param  \Zoom\Api\Model\WebinarLiveStreamStatus $webinar_live_stream_status Webinar (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -7012,7 +7012,7 @@ class WebinarsApi
      * Update Live Stream Status
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\WebinarLiveStreamStatus $webinar_live_stream_status Webinar (required)
+     * @param  \Zoom\Api\Model\WebinarLiveStreamStatus $webinar_live_stream_status Webinar (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -7049,7 +7049,7 @@ class WebinarsApi
      * Create request for operation 'webinarLiveStreamStatusUpdate'
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\WebinarLiveStreamStatus $webinar_live_stream_status Webinar (required)
+     * @param  \Zoom\Api\Model\WebinarLiveStreamStatus $webinar_live_stream_status Webinar (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -7161,9 +7161,9 @@ class WebinarsApi
      * Update a live stream
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\WebinarLiveStream $webinar_live_stream Webinar (required)
+     * @param  \Zoom\Api\Model\WebinarLiveStream $webinar_live_stream Webinar (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -7178,9 +7178,9 @@ class WebinarsApi
      * Update a live stream
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\WebinarLiveStream $webinar_live_stream Webinar (required)
+     * @param  \Zoom\Api\Model\WebinarLiveStream $webinar_live_stream Webinar (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -7238,7 +7238,7 @@ class WebinarsApi
      * Update a live stream
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\WebinarLiveStream $webinar_live_stream Webinar (required)
+     * @param  \Zoom\Api\Model\WebinarLiveStream $webinar_live_stream Webinar (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -7259,7 +7259,7 @@ class WebinarsApi
      * Update a live stream
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\WebinarLiveStream $webinar_live_stream Webinar (required)
+     * @param  \Zoom\Api\Model\WebinarLiveStream $webinar_live_stream Webinar (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -7296,7 +7296,7 @@ class WebinarsApi
      * Create request for operation 'webinarLiveStreamUpdate'
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\WebinarLiveStream $webinar_live_stream Webinar (required)
+     * @param  \Zoom\Api\Model\WebinarLiveStream $webinar_live_stream Webinar (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -7409,9 +7409,9 @@ class WebinarsApi
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\WebinarLocalRecordingJoinToken200Response
+     * @return \Zoom\Api\Model\WebinarLocalRecordingJoinToken200Response
      */
     public function webinarLocalRecordingJoinToken($webinar_id)
     {
@@ -7426,9 +7426,9 @@ class WebinarsApi
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\WebinarLocalRecordingJoinToken200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\WebinarLocalRecordingJoinToken200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function webinarLocalRecordingJoinTokenWithHttpInfo($webinar_id)
     {
@@ -7471,23 +7471,23 @@ class WebinarsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\WebinarLocalRecordingJoinToken200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\WebinarLocalRecordingJoinToken200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\WebinarLocalRecordingJoinToken200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\WebinarLocalRecordingJoinToken200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\WebinarLocalRecordingJoinToken200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\WebinarLocalRecordingJoinToken200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\WebinarLocalRecordingJoinToken200Response';
+            $returnType = '\Zoom\Api\Model\WebinarLocalRecordingJoinToken200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -7508,7 +7508,7 @@ class WebinarsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\WebinarLocalRecordingJoinToken200Response',
+                        '\Zoom\Api\Model\WebinarLocalRecordingJoinToken200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7550,7 +7550,7 @@ class WebinarsApi
      */
     public function webinarLocalRecordingJoinTokenAsyncWithHttpInfo($webinar_id)
     {
-        $returnType = '\OpenAPI\Client\Model\WebinarLocalRecordingJoinToken200Response';
+        $returnType = '\Zoom\Api\Model\WebinarLocalRecordingJoinToken200Response';
         $request = $this->webinarLocalRecordingJoinTokenRequest($webinar_id);
 
         return $this->client
@@ -7692,9 +7692,9 @@ class WebinarsApi
      * Add panelists
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\WebinarPanelist $webinar_panelist webinar_panelist (required)
+     * @param  \Zoom\Api\Model\WebinarPanelist $webinar_panelist webinar_panelist (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -7709,9 +7709,9 @@ class WebinarsApi
      * Add panelists
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\WebinarPanelist $webinar_panelist (required)
+     * @param  \Zoom\Api\Model\WebinarPanelist $webinar_panelist (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -7761,7 +7761,7 @@ class WebinarsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\WebinarPanelistCreate201Response',
+                        '\Zoom\Api\Model\WebinarPanelistCreate201Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -7777,7 +7777,7 @@ class WebinarsApi
      * Add panelists
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\WebinarPanelist $webinar_panelist (required)
+     * @param  \Zoom\Api\Model\WebinarPanelist $webinar_panelist (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -7798,7 +7798,7 @@ class WebinarsApi
      * Add panelists
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\WebinarPanelist $webinar_panelist (required)
+     * @param  \Zoom\Api\Model\WebinarPanelist $webinar_panelist (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -7835,7 +7835,7 @@ class WebinarsApi
      * Create request for operation 'webinarPanelistCreate'
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\WebinarPanelist $webinar_panelist (required)
+     * @param  \Zoom\Api\Model\WebinarPanelist $webinar_panelist (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -7949,7 +7949,7 @@ class WebinarsApi
      * @param  int $webinar_id The webinar&#39;s ID. (required)
      * @param  string $panelist_id The panelist ID or panelist email. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -7966,7 +7966,7 @@ class WebinarsApi
      * @param  int $webinar_id The webinar&#39;s ID. (required)
      * @param  string $panelist_id The panelist ID or panelist email. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -8197,9 +8197,9 @@ class WebinarsApi
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\WebinarPanelistList
+     * @return \Zoom\Api\Model\WebinarPanelistList
      */
     public function webinarPanelists($webinar_id)
     {
@@ -8214,9 +8214,9 @@ class WebinarsApi
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\WebinarPanelistList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\WebinarPanelistList, HTTP status code, HTTP response headers (array of strings)
      */
     public function webinarPanelistsWithHttpInfo($webinar_id)
     {
@@ -8259,23 +8259,23 @@ class WebinarsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\WebinarPanelistList' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\WebinarPanelistList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\WebinarPanelistList' !== 'string') {
+                        if ('\Zoom\Api\Model\WebinarPanelistList' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\WebinarPanelistList', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\WebinarPanelistList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\WebinarPanelistList';
+            $returnType = '\Zoom\Api\Model\WebinarPanelistList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -8296,7 +8296,7 @@ class WebinarsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\WebinarPanelistList',
+                        '\Zoom\Api\Model\WebinarPanelistList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8338,7 +8338,7 @@ class WebinarsApi
      */
     public function webinarPanelistsAsyncWithHttpInfo($webinar_id)
     {
-        $returnType = '\OpenAPI\Client\Model\WebinarPanelistList';
+        $returnType = '\Zoom\Api\Model\WebinarPanelistList';
         $request = $this->webinarPanelistsRequest($webinar_id);
 
         return $this->client
@@ -8481,7 +8481,7 @@ class WebinarsApi
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -8497,7 +8497,7 @@ class WebinarsApi
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -8710,11 +8710,11 @@ class WebinarsApi
      * Create a webinar&#39;s poll
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\MeetingPollCreateRequest $meeting_poll_create_request Webinar poll object (required)
+     * @param  \Zoom\Api\Model\MeetingPollCreateRequest $meeting_poll_create_request Webinar poll object (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\WebinarPollCreate201Response
+     * @return \Zoom\Api\Model\WebinarPollCreate201Response
      */
     public function webinarPollCreate($webinar_id, $meeting_poll_create_request)
     {
@@ -8728,11 +8728,11 @@ class WebinarsApi
      * Create a webinar&#39;s poll
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\MeetingPollCreateRequest $meeting_poll_create_request Webinar poll object (required)
+     * @param  \Zoom\Api\Model\MeetingPollCreateRequest $meeting_poll_create_request Webinar poll object (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\WebinarPollCreate201Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\WebinarPollCreate201Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function webinarPollCreateWithHttpInfo($webinar_id, $meeting_poll_create_request)
     {
@@ -8775,23 +8775,23 @@ class WebinarsApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\OpenAPI\Client\Model\WebinarPollCreate201Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\WebinarPollCreate201Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\WebinarPollCreate201Response' !== 'string') {
+                        if ('\Zoom\Api\Model\WebinarPollCreate201Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\WebinarPollCreate201Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\WebinarPollCreate201Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\WebinarPollCreate201Response';
+            $returnType = '\Zoom\Api\Model\WebinarPollCreate201Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -8812,7 +8812,7 @@ class WebinarsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\WebinarPollCreate201Response',
+                        '\Zoom\Api\Model\WebinarPollCreate201Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -8828,7 +8828,7 @@ class WebinarsApi
      * Create a webinar&#39;s poll
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\MeetingPollCreateRequest $meeting_poll_create_request Webinar poll object (required)
+     * @param  \Zoom\Api\Model\MeetingPollCreateRequest $meeting_poll_create_request Webinar poll object (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -8849,14 +8849,14 @@ class WebinarsApi
      * Create a webinar&#39;s poll
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\MeetingPollCreateRequest $meeting_poll_create_request Webinar poll object (required)
+     * @param  \Zoom\Api\Model\MeetingPollCreateRequest $meeting_poll_create_request Webinar poll object (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function webinarPollCreateAsyncWithHttpInfo($webinar_id, $meeting_poll_create_request)
     {
-        $returnType = '\OpenAPI\Client\Model\WebinarPollCreate201Response';
+        $returnType = '\Zoom\Api\Model\WebinarPollCreate201Response';
         $request = $this->webinarPollCreateRequest($webinar_id, $meeting_poll_create_request);
 
         return $this->client
@@ -8899,7 +8899,7 @@ class WebinarsApi
      * Create request for operation 'webinarPollCreate'
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\MeetingPollCreateRequest $meeting_poll_create_request Webinar poll object (required)
+     * @param  \Zoom\Api\Model\MeetingPollCreateRequest $meeting_poll_create_request Webinar poll object (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -9013,7 +9013,7 @@ class WebinarsApi
      * @param  int $webinar_id The webinar&#39;s ID. (required)
      * @param  string $poll_id The poll ID (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -9030,7 +9030,7 @@ class WebinarsApi
      * @param  int $webinar_id The webinar&#39;s ID. (required)
      * @param  string $poll_id The poll ID (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -9262,9 +9262,9 @@ class WebinarsApi
      * @param  int $webinar_id The webinar&#39;s ID. (required)
      * @param  string $poll_id The poll ID (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\WebinarPollCreate201Response
+     * @return \Zoom\Api\Model\WebinarPollCreate201Response
      */
     public function webinarPollGet($webinar_id, $poll_id)
     {
@@ -9280,9 +9280,9 @@ class WebinarsApi
      * @param  int $webinar_id The webinar&#39;s ID. (required)
      * @param  string $poll_id The poll ID (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\WebinarPollCreate201Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\WebinarPollCreate201Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function webinarPollGetWithHttpInfo($webinar_id, $poll_id)
     {
@@ -9325,23 +9325,23 @@ class WebinarsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\WebinarPollCreate201Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\WebinarPollCreate201Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\WebinarPollCreate201Response' !== 'string') {
+                        if ('\Zoom\Api\Model\WebinarPollCreate201Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\WebinarPollCreate201Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\WebinarPollCreate201Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\WebinarPollCreate201Response';
+            $returnType = '\Zoom\Api\Model\WebinarPollCreate201Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -9362,7 +9362,7 @@ class WebinarsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\WebinarPollCreate201Response',
+                        '\Zoom\Api\Model\WebinarPollCreate201Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9406,7 +9406,7 @@ class WebinarsApi
      */
     public function webinarPollGetAsyncWithHttpInfo($webinar_id, $poll_id)
     {
-        $returnType = '\OpenAPI\Client\Model\WebinarPollCreate201Response';
+        $returnType = '\Zoom\Api\Model\WebinarPollCreate201Response';
         $request = $this->webinarPollGetRequest($webinar_id, $poll_id);
 
         return $this->client
@@ -9564,9 +9564,9 @@ class WebinarsApi
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
      * @param  string $poll_id The poll ID (required)
-     * @param  \OpenAPI\Client\Model\MeetingPollCreateRequest $meeting_poll_create_request Webinar Poll (required)
+     * @param  \Zoom\Api\Model\MeetingPollCreateRequest $meeting_poll_create_request Webinar Poll (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -9582,9 +9582,9 @@ class WebinarsApi
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
      * @param  string $poll_id The poll ID (required)
-     * @param  \OpenAPI\Client\Model\MeetingPollCreateRequest $meeting_poll_create_request Webinar Poll (required)
+     * @param  \Zoom\Api\Model\MeetingPollCreateRequest $meeting_poll_create_request Webinar Poll (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -9643,7 +9643,7 @@ class WebinarsApi
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
      * @param  string $poll_id The poll ID (required)
-     * @param  \OpenAPI\Client\Model\MeetingPollCreateRequest $meeting_poll_create_request Webinar Poll (required)
+     * @param  \Zoom\Api\Model\MeetingPollCreateRequest $meeting_poll_create_request Webinar Poll (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -9665,7 +9665,7 @@ class WebinarsApi
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
      * @param  string $poll_id The poll ID (required)
-     * @param  \OpenAPI\Client\Model\MeetingPollCreateRequest $meeting_poll_create_request Webinar Poll (required)
+     * @param  \Zoom\Api\Model\MeetingPollCreateRequest $meeting_poll_create_request Webinar Poll (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -9703,7 +9703,7 @@ class WebinarsApi
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
      * @param  string $poll_id The poll ID (required)
-     * @param  \OpenAPI\Client\Model\MeetingPollCreateRequest $meeting_poll_create_request Webinar Poll (required)
+     * @param  \Zoom\Api\Model\MeetingPollCreateRequest $meeting_poll_create_request Webinar Poll (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -9831,9 +9831,9 @@ class WebinarsApi
      * @param  int $webinar_id The webinar&#39;s ID. (required)
      * @param  bool $anonymous Whether to query for polls with the **Anonymous** option enabled:  * &#x60;true&#x60; — Query for polls with the **Anonymous** option enabled.  * &#x60;false&#x60; — Do not query for polls with the **Anonymous** option enabled. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\PollList
+     * @return \Zoom\Api\Model\PollList
      */
     public function webinarPolls($webinar_id, $anonymous = null)
     {
@@ -9849,9 +9849,9 @@ class WebinarsApi
      * @param  int $webinar_id The webinar&#39;s ID. (required)
      * @param  bool $anonymous Whether to query for polls with the **Anonymous** option enabled:  * &#x60;true&#x60; — Query for polls with the **Anonymous** option enabled.  * &#x60;false&#x60; — Do not query for polls with the **Anonymous** option enabled. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\PollList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\PollList, HTTP status code, HTTP response headers (array of strings)
      */
     public function webinarPollsWithHttpInfo($webinar_id, $anonymous = null)
     {
@@ -9894,23 +9894,23 @@ class WebinarsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\PollList' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\PollList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\PollList' !== 'string') {
+                        if ('\Zoom\Api\Model\PollList' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\PollList', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\PollList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\PollList';
+            $returnType = '\Zoom\Api\Model\PollList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -9931,7 +9931,7 @@ class WebinarsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\PollList',
+                        '\Zoom\Api\Model\PollList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -9975,7 +9975,7 @@ class WebinarsApi
      */
     public function webinarPollsAsyncWithHttpInfo($webinar_id, $anonymous = null)
     {
-        $returnType = '\OpenAPI\Client\Model\PollList';
+        $returnType = '\Zoom\Api\Model\PollList';
         $request = $this->webinarPollsRequest($webinar_id, $anonymous);
 
         return $this->client
@@ -10127,12 +10127,12 @@ class WebinarsApi
      * Add a webinar registrant
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\WebinarRegistrantCreateRequest $webinar_registrant_create_request webinar_registrant_create_request (required)
+     * @param  \Zoom\Api\Model\WebinarRegistrantCreateRequest $webinar_registrant_create_request webinar_registrant_create_request (required)
      * @param  string $occurrence_ids A comma-separated list of webinar occurrence IDs. You can get this value with the [Get a webinar](/docs/api-reference/zoom-api/methods/#operation/webinarUpdate) API. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\WebinarRegistrantCreate201Response
+     * @return \Zoom\Api\Model\WebinarRegistrantCreate201Response
      */
     public function webinarRegistrantCreate($webinar_id, $webinar_registrant_create_request, $occurrence_ids = null)
     {
@@ -10146,12 +10146,12 @@ class WebinarsApi
      * Add a webinar registrant
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\WebinarRegistrantCreateRequest $webinar_registrant_create_request (required)
+     * @param  \Zoom\Api\Model\WebinarRegistrantCreateRequest $webinar_registrant_create_request (required)
      * @param  string $occurrence_ids A comma-separated list of webinar occurrence IDs. You can get this value with the [Get a webinar](/docs/api-reference/zoom-api/methods/#operation/webinarUpdate) API. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\WebinarRegistrantCreate201Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\WebinarRegistrantCreate201Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function webinarRegistrantCreateWithHttpInfo($webinar_id, $webinar_registrant_create_request, $occurrence_ids = null)
     {
@@ -10194,23 +10194,23 @@ class WebinarsApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\OpenAPI\Client\Model\WebinarRegistrantCreate201Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\WebinarRegistrantCreate201Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\WebinarRegistrantCreate201Response' !== 'string') {
+                        if ('\Zoom\Api\Model\WebinarRegistrantCreate201Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\WebinarRegistrantCreate201Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\WebinarRegistrantCreate201Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\WebinarRegistrantCreate201Response';
+            $returnType = '\Zoom\Api\Model\WebinarRegistrantCreate201Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -10231,7 +10231,7 @@ class WebinarsApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\WebinarRegistrantCreate201Response',
+                        '\Zoom\Api\Model\WebinarRegistrantCreate201Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10247,7 +10247,7 @@ class WebinarsApi
      * Add a webinar registrant
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\WebinarRegistrantCreateRequest $webinar_registrant_create_request (required)
+     * @param  \Zoom\Api\Model\WebinarRegistrantCreateRequest $webinar_registrant_create_request (required)
      * @param  string $occurrence_ids A comma-separated list of webinar occurrence IDs. You can get this value with the [Get a webinar](/docs/api-reference/zoom-api/methods/#operation/webinarUpdate) API. (optional)
      *
      * @throws \InvalidArgumentException
@@ -10269,7 +10269,7 @@ class WebinarsApi
      * Add a webinar registrant
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\WebinarRegistrantCreateRequest $webinar_registrant_create_request (required)
+     * @param  \Zoom\Api\Model\WebinarRegistrantCreateRequest $webinar_registrant_create_request (required)
      * @param  string $occurrence_ids A comma-separated list of webinar occurrence IDs. You can get this value with the [Get a webinar](/docs/api-reference/zoom-api/methods/#operation/webinarUpdate) API. (optional)
      *
      * @throws \InvalidArgumentException
@@ -10277,7 +10277,7 @@ class WebinarsApi
      */
     public function webinarRegistrantCreateAsyncWithHttpInfo($webinar_id, $webinar_registrant_create_request, $occurrence_ids = null)
     {
-        $returnType = '\OpenAPI\Client\Model\WebinarRegistrantCreate201Response';
+        $returnType = '\Zoom\Api\Model\WebinarRegistrantCreate201Response';
         $request = $this->webinarRegistrantCreateRequest($webinar_id, $webinar_registrant_create_request, $occurrence_ids);
 
         return $this->client
@@ -10320,7 +10320,7 @@ class WebinarsApi
      * Create request for operation 'webinarRegistrantCreate'
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\WebinarRegistrantCreateRequest $webinar_registrant_create_request (required)
+     * @param  \Zoom\Api\Model\WebinarRegistrantCreateRequest $webinar_registrant_create_request (required)
      * @param  string $occurrence_ids A comma-separated list of webinar occurrence IDs. You can get this value with the [Get a webinar](/docs/api-reference/zoom-api/methods/#operation/webinarUpdate) API. (optional)
      *
      * @throws \InvalidArgumentException
@@ -10445,9 +10445,9 @@ class WebinarsApi
      * @param  string $registrant_id The registrant ID. (required)
      * @param  string $occurrence_id The meeting or webinar occurrence ID. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\WebinarRegistrant
+     * @return \Zoom\Api\Model\WebinarRegistrant
      */
     public function webinarRegistrantGet($webinar_id, $registrant_id, $occurrence_id = null)
     {
@@ -10464,9 +10464,9 @@ class WebinarsApi
      * @param  string $registrant_id The registrant ID. (required)
      * @param  string $occurrence_id The meeting or webinar occurrence ID. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\WebinarRegistrant, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\WebinarRegistrant, HTTP status code, HTTP response headers (array of strings)
      */
     public function webinarRegistrantGetWithHttpInfo($webinar_id, $registrant_id, $occurrence_id = null)
     {
@@ -10509,23 +10509,23 @@ class WebinarsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\WebinarRegistrant' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\WebinarRegistrant' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\WebinarRegistrant' !== 'string') {
+                        if ('\Zoom\Api\Model\WebinarRegistrant' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\WebinarRegistrant', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\WebinarRegistrant', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\WebinarRegistrant';
+            $returnType = '\Zoom\Api\Model\WebinarRegistrant';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -10546,7 +10546,7 @@ class WebinarsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\WebinarRegistrant',
+                        '\Zoom\Api\Model\WebinarRegistrant',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -10592,7 +10592,7 @@ class WebinarsApi
      */
     public function webinarRegistrantGetAsyncWithHttpInfo($webinar_id, $registrant_id, $occurrence_id = null)
     {
-        $returnType = '\OpenAPI\Client\Model\WebinarRegistrant';
+        $returnType = '\Zoom\Api\Model\WebinarRegistrant';
         $request = $this->webinarRegistrantGetRequest($webinar_id, $registrant_id, $occurrence_id);
 
         return $this->client
@@ -10759,9 +10759,9 @@ class WebinarsApi
      * Update registration questions
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\WebinarRegistrantsQuestionsGet200Response $webinar_registrants_questions_get200_response Webinar Registrant Questions (required)
+     * @param  \Zoom\Api\Model\WebinarRegistrantsQuestionsGet200Response $webinar_registrants_questions_get200_response Webinar Registrant Questions (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -10776,9 +10776,9 @@ class WebinarsApi
      * Update registration questions
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\WebinarRegistrantsQuestionsGet200Response $webinar_registrants_questions_get200_response Webinar Registrant Questions (required)
+     * @param  \Zoom\Api\Model\WebinarRegistrantsQuestionsGet200Response $webinar_registrants_questions_get200_response Webinar Registrant Questions (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -10836,7 +10836,7 @@ class WebinarsApi
      * Update registration questions
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\WebinarRegistrantsQuestionsGet200Response $webinar_registrants_questions_get200_response Webinar Registrant Questions (required)
+     * @param  \Zoom\Api\Model\WebinarRegistrantsQuestionsGet200Response $webinar_registrants_questions_get200_response Webinar Registrant Questions (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -10857,7 +10857,7 @@ class WebinarsApi
      * Update registration questions
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\WebinarRegistrantsQuestionsGet200Response $webinar_registrants_questions_get200_response Webinar Registrant Questions (required)
+     * @param  \Zoom\Api\Model\WebinarRegistrantsQuestionsGet200Response $webinar_registrants_questions_get200_response Webinar Registrant Questions (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -10894,7 +10894,7 @@ class WebinarsApi
      * Create request for operation 'webinarRegistrantQuestionUpdate'
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\WebinarRegistrantsQuestionsGet200Response $webinar_registrants_questions_get200_response Webinar Registrant Questions (required)
+     * @param  \Zoom\Api\Model\WebinarRegistrantsQuestionsGet200Response $webinar_registrants_questions_get200_response Webinar Registrant Questions (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -11006,10 +11006,10 @@ class WebinarsApi
      * Update registrant&#39;s status
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\WebinarRegistrantStatusRequest $webinar_registrant_status_request webinar_registrant_status_request (required)
+     * @param  \Zoom\Api\Model\WebinarRegistrantStatusRequest $webinar_registrant_status_request webinar_registrant_status_request (required)
      * @param  string $occurrence_id The meeting or webinar occurrence ID. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -11024,10 +11024,10 @@ class WebinarsApi
      * Update registrant&#39;s status
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\WebinarRegistrantStatusRequest $webinar_registrant_status_request (required)
+     * @param  \Zoom\Api\Model\WebinarRegistrantStatusRequest $webinar_registrant_status_request (required)
      * @param  string $occurrence_id The meeting or webinar occurrence ID. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -11085,7 +11085,7 @@ class WebinarsApi
      * Update registrant&#39;s status
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\WebinarRegistrantStatusRequest $webinar_registrant_status_request (required)
+     * @param  \Zoom\Api\Model\WebinarRegistrantStatusRequest $webinar_registrant_status_request (required)
      * @param  string $occurrence_id The meeting or webinar occurrence ID. (optional)
      *
      * @throws \InvalidArgumentException
@@ -11107,7 +11107,7 @@ class WebinarsApi
      * Update registrant&#39;s status
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\WebinarRegistrantStatusRequest $webinar_registrant_status_request (required)
+     * @param  \Zoom\Api\Model\WebinarRegistrantStatusRequest $webinar_registrant_status_request (required)
      * @param  string $occurrence_id The meeting or webinar occurrence ID. (optional)
      *
      * @throws \InvalidArgumentException
@@ -11145,7 +11145,7 @@ class WebinarsApi
      * Create request for operation 'webinarRegistrantStatus'
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\WebinarRegistrantStatusRequest $webinar_registrant_status_request (required)
+     * @param  \Zoom\Api\Model\WebinarRegistrantStatusRequest $webinar_registrant_status_request (required)
      * @param  string $occurrence_id The meeting or webinar occurrence ID. (optional)
      *
      * @throws \InvalidArgumentException
@@ -11274,9 +11274,9 @@ class WebinarsApi
      * @param  int $page_number **Deprecated.** We will no longer support this field in a future release. Instead, use the &#x60;next_page_token&#x60; for pagination. (optional, default to 1) (deprecated)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\WebinarRegistrantList
+     * @return \Zoom\Api\Model\WebinarRegistrantList
      */
     public function webinarRegistrants($webinar_id, $occurrence_id = null, $status = 'approved', $tracking_source_id = null, $page_size = 30, $page_number = 1, $next_page_token = null)
     {
@@ -11297,9 +11297,9 @@ class WebinarsApi
      * @param  int $page_number **Deprecated.** We will no longer support this field in a future release. Instead, use the &#x60;next_page_token&#x60; for pagination. (optional, default to 1) (deprecated)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\WebinarRegistrantList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\WebinarRegistrantList, HTTP status code, HTTP response headers (array of strings)
      */
     public function webinarRegistrantsWithHttpInfo($webinar_id, $occurrence_id = null, $status = 'approved', $tracking_source_id = null, $page_size = 30, $page_number = 1, $next_page_token = null)
     {
@@ -11342,23 +11342,23 @@ class WebinarsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\WebinarRegistrantList' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\WebinarRegistrantList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\WebinarRegistrantList' !== 'string') {
+                        if ('\Zoom\Api\Model\WebinarRegistrantList' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\WebinarRegistrantList', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\WebinarRegistrantList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\WebinarRegistrantList';
+            $returnType = '\Zoom\Api\Model\WebinarRegistrantList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -11379,7 +11379,7 @@ class WebinarsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\WebinarRegistrantList',
+                        '\Zoom\Api\Model\WebinarRegistrantList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11433,7 +11433,7 @@ class WebinarsApi
      */
     public function webinarRegistrantsAsyncWithHttpInfo($webinar_id, $occurrence_id = null, $status = 'approved', $tracking_source_id = null, $page_size = 30, $page_number = 1, $next_page_token = null)
     {
-        $returnType = '\OpenAPI\Client\Model\WebinarRegistrantList';
+        $returnType = '\Zoom\Api\Model\WebinarRegistrantList';
         $request = $this->webinarRegistrantsRequest($webinar_id, $occurrence_id, $status, $tracking_source_id, $page_size, $page_number, $next_page_token);
 
         return $this->client
@@ -11640,9 +11640,9 @@ class WebinarsApi
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\WebinarRegistrantsQuestionsGet200Response
+     * @return \Zoom\Api\Model\WebinarRegistrantsQuestionsGet200Response
      */
     public function webinarRegistrantsQuestionsGet($webinar_id)
     {
@@ -11657,9 +11657,9 @@ class WebinarsApi
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\WebinarRegistrantsQuestionsGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\WebinarRegistrantsQuestionsGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function webinarRegistrantsQuestionsGetWithHttpInfo($webinar_id)
     {
@@ -11702,23 +11702,23 @@ class WebinarsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\WebinarRegistrantsQuestionsGet200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\WebinarRegistrantsQuestionsGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\WebinarRegistrantsQuestionsGet200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\WebinarRegistrantsQuestionsGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\WebinarRegistrantsQuestionsGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\WebinarRegistrantsQuestionsGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\WebinarRegistrantsQuestionsGet200Response';
+            $returnType = '\Zoom\Api\Model\WebinarRegistrantsQuestionsGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -11739,7 +11739,7 @@ class WebinarsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\WebinarRegistrantsQuestionsGet200Response',
+                        '\Zoom\Api\Model\WebinarRegistrantsQuestionsGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -11781,7 +11781,7 @@ class WebinarsApi
      */
     public function webinarRegistrantsQuestionsGetAsyncWithHttpInfo($webinar_id)
     {
-        $returnType = '\OpenAPI\Client\Model\WebinarRegistrantsQuestionsGet200Response';
+        $returnType = '\Zoom\Api\Model\WebinarRegistrantsQuestionsGet200Response';
         $request = $this->webinarRegistrantsQuestionsGetRequest($webinar_id);
 
         return $this->client
@@ -11923,9 +11923,9 @@ class WebinarsApi
      * Update webinar status
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\WebinarStatusRequest $webinar_status_request webinar_status_request (required)
+     * @param  \Zoom\Api\Model\WebinarStatusRequest $webinar_status_request webinar_status_request (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -11940,9 +11940,9 @@ class WebinarsApi
      * Update webinar status
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\WebinarStatusRequest $webinar_status_request (required)
+     * @param  \Zoom\Api\Model\WebinarStatusRequest $webinar_status_request (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -12000,7 +12000,7 @@ class WebinarsApi
      * Update webinar status
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\WebinarStatusRequest $webinar_status_request (required)
+     * @param  \Zoom\Api\Model\WebinarStatusRequest $webinar_status_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -12021,7 +12021,7 @@ class WebinarsApi
      * Update webinar status
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\WebinarStatusRequest $webinar_status_request (required)
+     * @param  \Zoom\Api\Model\WebinarStatusRequest $webinar_status_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -12058,7 +12058,7 @@ class WebinarsApi
      * Create request for operation 'webinarStatus'
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\WebinarStatusRequest $webinar_status_request (required)
+     * @param  \Zoom\Api\Model\WebinarStatusRequest $webinar_status_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -12171,7 +12171,7 @@ class WebinarsApi
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -12187,7 +12187,7 @@ class WebinarsApi
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -12401,9 +12401,9 @@ class WebinarsApi
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\WebinarSurveyGet200Response
+     * @return \Zoom\Api\Model\WebinarSurveyGet200Response
      */
     public function webinarSurveyGet($webinar_id)
     {
@@ -12418,9 +12418,9 @@ class WebinarsApi
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\WebinarSurveyGet200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\WebinarSurveyGet200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function webinarSurveyGetWithHttpInfo($webinar_id)
     {
@@ -12463,23 +12463,23 @@ class WebinarsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\WebinarSurveyGet200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\WebinarSurveyGet200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\WebinarSurveyGet200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\WebinarSurveyGet200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\WebinarSurveyGet200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\WebinarSurveyGet200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\WebinarSurveyGet200Response';
+            $returnType = '\Zoom\Api\Model\WebinarSurveyGet200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -12500,7 +12500,7 @@ class WebinarsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\WebinarSurveyGet200Response',
+                        '\Zoom\Api\Model\WebinarSurveyGet200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -12542,7 +12542,7 @@ class WebinarsApi
      */
     public function webinarSurveyGetAsyncWithHttpInfo($webinar_id)
     {
-        $returnType = '\OpenAPI\Client\Model\WebinarSurveyGet200Response';
+        $returnType = '\Zoom\Api\Model\WebinarSurveyGet200Response';
         $request = $this->webinarSurveyGetRequest($webinar_id);
 
         return $this->client
@@ -12684,9 +12684,9 @@ class WebinarsApi
      * Update a webinar survey
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\WebinarSurveyGet200Response $webinar_survey_get200_response webinar_survey_get200_response (required)
+     * @param  \Zoom\Api\Model\WebinarSurveyGet200Response $webinar_survey_get200_response webinar_survey_get200_response (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -12701,9 +12701,9 @@ class WebinarsApi
      * Update a webinar survey
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\WebinarSurveyGet200Response $webinar_survey_get200_response (required)
+     * @param  \Zoom\Api\Model\WebinarSurveyGet200Response $webinar_survey_get200_response (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -12761,7 +12761,7 @@ class WebinarsApi
      * Update a webinar survey
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\WebinarSurveyGet200Response $webinar_survey_get200_response (required)
+     * @param  \Zoom\Api\Model\WebinarSurveyGet200Response $webinar_survey_get200_response (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -12782,7 +12782,7 @@ class WebinarsApi
      * Update a webinar survey
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\WebinarSurveyGet200Response $webinar_survey_get200_response (required)
+     * @param  \Zoom\Api\Model\WebinarSurveyGet200Response $webinar_survey_get200_response (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -12819,7 +12819,7 @@ class WebinarsApi
      * Create request for operation 'webinarSurveyUpdate'
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\WebinarSurveyGet200Response $webinar_survey_get200_response (required)
+     * @param  \Zoom\Api\Model\WebinarSurveyGet200Response $webinar_survey_get200_response (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -12933,9 +12933,9 @@ class WebinarsApi
      * @param  int $webinar_id The webinar&#39;s ID. (required)
      * @param  string $type The webinar token type:  * &#x60;closed_caption_token&#x60; — The third-party closed caption API token.   This defaults to &#x60;closed_caption_token&#x60;. (optional, default to 'closed_caption_token')
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\WebinarToken200Response
+     * @return \Zoom\Api\Model\WebinarToken200Response
      */
     public function webinarToken($webinar_id, $type = 'closed_caption_token')
     {
@@ -12951,9 +12951,9 @@ class WebinarsApi
      * @param  int $webinar_id The webinar&#39;s ID. (required)
      * @param  string $type The webinar token type:  * &#x60;closed_caption_token&#x60; — The third-party closed caption API token.   This defaults to &#x60;closed_caption_token&#x60;. (optional, default to 'closed_caption_token')
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\WebinarToken200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\WebinarToken200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function webinarTokenWithHttpInfo($webinar_id, $type = 'closed_caption_token')
     {
@@ -12996,23 +12996,23 @@ class WebinarsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\WebinarToken200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\WebinarToken200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\WebinarToken200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\WebinarToken200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\WebinarToken200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\WebinarToken200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\WebinarToken200Response';
+            $returnType = '\Zoom\Api\Model\WebinarToken200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -13033,7 +13033,7 @@ class WebinarsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\WebinarToken200Response',
+                        '\Zoom\Api\Model\WebinarToken200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13077,7 +13077,7 @@ class WebinarsApi
      */
     public function webinarTokenAsyncWithHttpInfo($webinar_id, $type = 'closed_caption_token')
     {
-        $returnType = '\OpenAPI\Client\Model\WebinarToken200Response';
+        $returnType = '\Zoom\Api\Model\WebinarToken200Response';
         $request = $this->webinarTokenRequest($webinar_id, $type);
 
         return $this->client
@@ -13229,10 +13229,10 @@ class WebinarsApi
      * Update a webinar
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\WebinarUpdate $webinar_update Webinar. (required)
+     * @param  \Zoom\Api\Model\WebinarUpdate $webinar_update Webinar. (required)
      * @param  string $occurrence_id Webinar occurrence id. Support change of agenda, start_time, duration, settings: {host_video, panelist_video, hd_video, watermark, auto_recording} (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -13247,10 +13247,10 @@ class WebinarsApi
      * Update a webinar
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\WebinarUpdate $webinar_update Webinar. (required)
+     * @param  \Zoom\Api\Model\WebinarUpdate $webinar_update Webinar. (required)
      * @param  string $occurrence_id Webinar occurrence id. Support change of agenda, start_time, duration, settings: {host_video, panelist_video, hd_video, watermark, auto_recording} (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -13308,7 +13308,7 @@ class WebinarsApi
      * Update a webinar
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\WebinarUpdate $webinar_update Webinar. (required)
+     * @param  \Zoom\Api\Model\WebinarUpdate $webinar_update Webinar. (required)
      * @param  string $occurrence_id Webinar occurrence id. Support change of agenda, start_time, duration, settings: {host_video, panelist_video, hd_video, watermark, auto_recording} (optional)
      *
      * @throws \InvalidArgumentException
@@ -13330,7 +13330,7 @@ class WebinarsApi
      * Update a webinar
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\WebinarUpdate $webinar_update Webinar. (required)
+     * @param  \Zoom\Api\Model\WebinarUpdate $webinar_update Webinar. (required)
      * @param  string $occurrence_id Webinar occurrence id. Support change of agenda, start_time, duration, settings: {host_video, panelist_video, hd_video, watermark, auto_recording} (optional)
      *
      * @throws \InvalidArgumentException
@@ -13368,7 +13368,7 @@ class WebinarsApi
      * Create request for operation 'webinarUpdate'
      *
      * @param  int $webinar_id The webinar&#39;s ID. (required)
-     * @param  \OpenAPI\Client\Model\WebinarUpdate $webinar_update Webinar. (required)
+     * @param  \Zoom\Api\Model\WebinarUpdate $webinar_update Webinar. (required)
      * @param  string $occurrence_id Webinar occurrence id. Support change of agenda, start_time, duration, settings: {host_video, panelist_video, hd_video, watermark, auto_recording} (optional)
      *
      * @throws \InvalidArgumentException
@@ -13493,9 +13493,9 @@ class WebinarsApi
      * @param  int $page_size The number of records returned within a single API call. (optional, default to 30)
      * @param  int $page_number **Deprecated.** We will no longer support this field in a future release. Instead, use the &#x60;next_page_token&#x60; for pagination. (optional, default to 1) (deprecated)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\WebinarList
+     * @return \Zoom\Api\Model\WebinarList
      */
     public function webinars($user_id, $page_size = 30, $page_number = 1)
     {
@@ -13512,9 +13512,9 @@ class WebinarsApi
      * @param  int $page_size The number of records returned within a single API call. (optional, default to 30)
      * @param  int $page_number **Deprecated.** We will no longer support this field in a future release. Instead, use the &#x60;next_page_token&#x60; for pagination. (optional, default to 1) (deprecated)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\WebinarList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\WebinarList, HTTP status code, HTTP response headers (array of strings)
      */
     public function webinarsWithHttpInfo($user_id, $page_size = 30, $page_number = 1)
     {
@@ -13557,23 +13557,23 @@ class WebinarsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\WebinarList' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\WebinarList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\WebinarList' !== 'string') {
+                        if ('\Zoom\Api\Model\WebinarList' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\WebinarList', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\WebinarList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\WebinarList';
+            $returnType = '\Zoom\Api\Model\WebinarList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -13594,7 +13594,7 @@ class WebinarsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\WebinarList',
+                        '\Zoom\Api\Model\WebinarList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -13640,7 +13640,7 @@ class WebinarsApi
      */
     public function webinarsAsyncWithHttpInfo($user_id, $page_size = 30, $page_number = 1)
     {
-        $returnType = '\OpenAPI\Client\Model\WebinarList';
+        $returnType = '\Zoom\Api\Model\WebinarList';
         $request = $this->webinarsRequest($user_id, $page_size, $page_number);
 
         return $this->client

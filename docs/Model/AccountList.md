@@ -9,6 +9,6 @@ Name | Type | Description | Notes
 **page_number** | **int** | **Deprecated.** We will no longer support this field in a future release. Instead, use the &#x60;next_page_token&#x60; for pagination. | [optional] [default to 1]
 **page_size** | **int** | The number of records returned with a single API call. | [optional] [default to 30]
 **total_records** | **int** | The total number of all the records available across pages. | [optional]
-**accounts** | [**\OpenAPI\Client\Model\AccountListItemAccountsInner[]**](AccountListItemAccountsInner.md) | List of Account objects. | [optional]
+**accounts** | [**\Zoom\Api\Model\AccountListItemAccountsInner[]**](AccountListItemAccountsInner.md) | List of Account objects. | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

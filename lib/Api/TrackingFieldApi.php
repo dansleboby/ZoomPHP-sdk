@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Zoom\Api\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Zoom\Api\ApiException;
+use Zoom\Api\Configuration;
+use Zoom\Api\HeaderSelector;
+use Zoom\Api\ObjectSerializer;
 
 /**
  * TrackingFieldApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -120,11 +120,11 @@ class TrackingFieldApi
      *
      * Create a tracking field
      *
-     * @param  \OpenAPI\Client\Model\TrackingField $tracking_field Tracking Field (required)
+     * @param  \Zoom\Api\Model\TrackingField $tracking_field Tracking Field (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackingfieldCreate201Response
+     * @return \Zoom\Api\Model\TrackingfieldCreate201Response
      */
     public function trackingfieldCreate($tracking_field)
     {
@@ -137,11 +137,11 @@ class TrackingFieldApi
      *
      * Create a tracking field
      *
-     * @param  \OpenAPI\Client\Model\TrackingField $tracking_field Tracking Field (required)
+     * @param  \Zoom\Api\Model\TrackingField $tracking_field Tracking Field (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackingfieldCreate201Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\TrackingfieldCreate201Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function trackingfieldCreateWithHttpInfo($tracking_field)
     {
@@ -184,23 +184,23 @@ class TrackingFieldApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\OpenAPI\Client\Model\TrackingfieldCreate201Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\TrackingfieldCreate201Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackingfieldCreate201Response' !== 'string') {
+                        if ('\Zoom\Api\Model\TrackingfieldCreate201Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackingfieldCreate201Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\TrackingfieldCreate201Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackingfieldCreate201Response';
+            $returnType = '\Zoom\Api\Model\TrackingfieldCreate201Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -221,7 +221,7 @@ class TrackingFieldApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackingfieldCreate201Response',
+                        '\Zoom\Api\Model\TrackingfieldCreate201Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -236,7 +236,7 @@ class TrackingFieldApi
      *
      * Create a tracking field
      *
-     * @param  \OpenAPI\Client\Model\TrackingField $tracking_field Tracking Field (required)
+     * @param  \Zoom\Api\Model\TrackingField $tracking_field Tracking Field (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -256,14 +256,14 @@ class TrackingFieldApi
      *
      * Create a tracking field
      *
-     * @param  \OpenAPI\Client\Model\TrackingField $tracking_field Tracking Field (required)
+     * @param  \Zoom\Api\Model\TrackingField $tracking_field Tracking Field (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function trackingfieldCreateAsyncWithHttpInfo($tracking_field)
     {
-        $returnType = '\OpenAPI\Client\Model\TrackingfieldCreate201Response';
+        $returnType = '\Zoom\Api\Model\TrackingfieldCreate201Response';
         $request = $this->trackingfieldCreateRequest($tracking_field);
 
         return $this->client
@@ -305,7 +305,7 @@ class TrackingFieldApi
     /**
      * Create request for operation 'trackingfieldCreate'
      *
-     * @param  \OpenAPI\Client\Model\TrackingField $tracking_field Tracking Field (required)
+     * @param  \Zoom\Api\Model\TrackingField $tracking_field Tracking Field (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -404,7 +404,7 @@ class TrackingFieldApi
      *
      * @param  string $field_id The Tracking Field ID (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -420,7 +420,7 @@ class TrackingFieldApi
      *
      * @param  string $field_id The Tracking Field ID (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -634,9 +634,9 @@ class TrackingFieldApi
      *
      * @param  string $field_id The Tracking Field ID (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackingfieldCreate201Response
+     * @return \Zoom\Api\Model\TrackingfieldCreate201Response
      */
     public function trackingfieldGet($field_id)
     {
@@ -651,9 +651,9 @@ class TrackingFieldApi
      *
      * @param  string $field_id The Tracking Field ID (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackingfieldCreate201Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\TrackingfieldCreate201Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function trackingfieldGetWithHttpInfo($field_id)
     {
@@ -696,23 +696,23 @@ class TrackingFieldApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackingfieldCreate201Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\TrackingfieldCreate201Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackingfieldCreate201Response' !== 'string') {
+                        if ('\Zoom\Api\Model\TrackingfieldCreate201Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackingfieldCreate201Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\TrackingfieldCreate201Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackingfieldCreate201Response';
+            $returnType = '\Zoom\Api\Model\TrackingfieldCreate201Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -733,7 +733,7 @@ class TrackingFieldApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackingfieldCreate201Response',
+                        '\Zoom\Api\Model\TrackingfieldCreate201Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -775,7 +775,7 @@ class TrackingFieldApi
      */
     public function trackingfieldGetAsyncWithHttpInfo($field_id)
     {
-        $returnType = '\OpenAPI\Client\Model\TrackingfieldCreate201Response';
+        $returnType = '\Zoom\Api\Model\TrackingfieldCreate201Response';
         $request = $this->trackingfieldGetRequest($field_id);
 
         return $this->client
@@ -917,9 +917,9 @@ class TrackingFieldApi
      * List tracking fields
      *
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TrackingFieldList
+     * @return \Zoom\Api\Model\TrackingFieldList
      */
     public function trackingfieldList()
     {
@@ -933,9 +933,9 @@ class TrackingFieldApi
      * List tracking fields
      *
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TrackingFieldList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\TrackingFieldList, HTTP status code, HTTP response headers (array of strings)
      */
     public function trackingfieldListWithHttpInfo()
     {
@@ -978,23 +978,23 @@ class TrackingFieldApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TrackingFieldList' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\TrackingFieldList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TrackingFieldList' !== 'string') {
+                        if ('\Zoom\Api\Model\TrackingFieldList' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TrackingFieldList', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\TrackingFieldList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\TrackingFieldList';
+            $returnType = '\Zoom\Api\Model\TrackingFieldList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1015,7 +1015,7 @@ class TrackingFieldApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TrackingFieldList',
+                        '\Zoom\Api\Model\TrackingFieldList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1055,7 +1055,7 @@ class TrackingFieldApi
      */
     public function trackingfieldListAsyncWithHttpInfo()
     {
-        $returnType = '\OpenAPI\Client\Model\TrackingFieldList';
+        $returnType = '\Zoom\Api\Model\TrackingFieldList';
         $request = $this->trackingfieldListRequest();
 
         return $this->client
@@ -1182,9 +1182,9 @@ class TrackingFieldApi
      * Update a tracking field
      *
      * @param  string $field_id The Tracking Field ID (required)
-     * @param  \OpenAPI\Client\Model\TrackingField $tracking_field tracking_field (required)
+     * @param  \Zoom\Api\Model\TrackingField $tracking_field tracking_field (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1199,9 +1199,9 @@ class TrackingFieldApi
      * Update a tracking field
      *
      * @param  string $field_id The Tracking Field ID (required)
-     * @param  \OpenAPI\Client\Model\TrackingField $tracking_field (required)
+     * @param  \Zoom\Api\Model\TrackingField $tracking_field (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1259,7 +1259,7 @@ class TrackingFieldApi
      * Update a tracking field
      *
      * @param  string $field_id The Tracking Field ID (required)
-     * @param  \OpenAPI\Client\Model\TrackingField $tracking_field (required)
+     * @param  \Zoom\Api\Model\TrackingField $tracking_field (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1280,7 +1280,7 @@ class TrackingFieldApi
      * Update a tracking field
      *
      * @param  string $field_id The Tracking Field ID (required)
-     * @param  \OpenAPI\Client\Model\TrackingField $tracking_field (required)
+     * @param  \Zoom\Api\Model\TrackingField $tracking_field (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1317,7 +1317,7 @@ class TrackingFieldApi
      * Create request for operation 'trackingfieldUpdate'
      *
      * @param  string $field_id The Tracking Field ID (required)
-     * @param  \OpenAPI\Client\Model\TrackingField $tracking_field (required)
+     * @param  \Zoom\Api\Model\TrackingField $tracking_field (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

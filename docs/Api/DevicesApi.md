@@ -1,4 +1,4 @@
-# OpenAPI\Client\DevicesApi
+# Zoom\Api\DevicesApi
 
 All URIs are relative to https://api.zoom.us/v2.
 
@@ -28,16 +28,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\DevicesApi(
+$apiInstance = new Zoom\Api\Api\DevicesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$device = new \OpenAPI\Client\Model\Device(); // \OpenAPI\Client\Model\Device | H.323/SIP device.
+$device = new \Zoom\Api\Model\Device(); // \Zoom\Api\Model\Device | H.323/SIP device.
 
 try {
     $apiInstance->deviceCreate($device);
@@ -50,7 +50,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **device** | [**\OpenAPI\Client\Model\Device**](../Model/Device.md)| H.323/SIP device. |
+ **device** | [**\Zoom\Api\Model\Device**](../Model/Device.md)| H.323/SIP device. |
 
 ### Return type
 
@@ -87,10 +87,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\DevicesApi(
+$apiInstance = new Zoom\Api\Api\DevicesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -131,7 +131,7 @@ void (empty response body)
 ## `deviceList()`
 
 ```php
-deviceList($page_size, $page_number, $next_page_token): \OpenAPI\Client\Model\DeviceList
+deviceList($page_size, $page_number, $next_page_token): \Zoom\Api\Model\DeviceList
 ```
 
 List H.323/SIP devices
@@ -146,10 +146,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\DevicesApi(
+$apiInstance = new Zoom\Api\Api\DevicesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -177,7 +177,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\DeviceList**](../Model/DeviceList.md)
+[**\Zoom\Api\Model\DeviceList**](../Model/DeviceList.md)
 
 ### Authorization
 
@@ -210,17 +210,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\DevicesApi(
+$apiInstance = new Zoom\Api\Api\DevicesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $device_id = abceHewahkrehwiK; // string | The device ID.
-$device = new \OpenAPI\Client\Model\Device(); // \OpenAPI\Client\Model\Device
+$device = new \Zoom\Api\Model\Device(); // \Zoom\Api\Model\Device
 
 try {
     $apiInstance->deviceUpdate($device_id, $device);
@@ -234,7 +234,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **device_id** | **string**| The device ID. |
- **device** | [**\OpenAPI\Client\Model\Device**](../Model/Device.md)|  |
+ **device** | [**\Zoom\Api\Model\Device**](../Model/Device.md)|  |
 
 ### Return type
 

@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Zoom\Api\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Zoom\Api\ApiException;
+use Zoom\Api\Configuration;
+use Zoom\Api\HeaderSelector;
+use Zoom\Api\ObjectSerializer;
 
 /**
  * ReportsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -122,9 +122,9 @@ class ReportsApi
      *
      * @param  string $billing_id Unique Identifier of the Billing Report. Retrieve this ID from the response of **Get Billing Reports** API request. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\GetBillingInvoicesReports200Response
+     * @return \Zoom\Api\Model\GetBillingInvoicesReports200Response
      */
     public function getBillingInvoicesReports($billing_id = null)
     {
@@ -139,9 +139,9 @@ class ReportsApi
      *
      * @param  string $billing_id Unique Identifier of the Billing Report. Retrieve this ID from the response of **Get Billing Reports** API request. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\GetBillingInvoicesReports200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\GetBillingInvoicesReports200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function getBillingInvoicesReportsWithHttpInfo($billing_id = null)
     {
@@ -184,23 +184,23 @@ class ReportsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\GetBillingInvoicesReports200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\GetBillingInvoicesReports200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\GetBillingInvoicesReports200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\GetBillingInvoicesReports200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\GetBillingInvoicesReports200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\GetBillingInvoicesReports200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\GetBillingInvoicesReports200Response';
+            $returnType = '\Zoom\Api\Model\GetBillingInvoicesReports200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -221,7 +221,7 @@ class ReportsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\GetBillingInvoicesReports200Response',
+                        '\Zoom\Api\Model\GetBillingInvoicesReports200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -263,7 +263,7 @@ class ReportsApi
      */
     public function getBillingInvoicesReportsAsyncWithHttpInfo($billing_id = null)
     {
-        $returnType = '\OpenAPI\Client\Model\GetBillingInvoicesReports200Response';
+        $returnType = '\Zoom\Api\Model\GetBillingInvoicesReports200Response';
         $request = $this->getBillingInvoicesReportsRequest($billing_id);
 
         return $this->client
@@ -400,9 +400,9 @@ class ReportsApi
      * Get billing reports
      *
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\GetBillingReport200Response
+     * @return \Zoom\Api\Model\GetBillingReport200Response
      */
     public function getBillingReport()
     {
@@ -416,9 +416,9 @@ class ReportsApi
      * Get billing reports
      *
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\GetBillingReport200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\GetBillingReport200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function getBillingReportWithHttpInfo()
     {
@@ -461,23 +461,23 @@ class ReportsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\GetBillingReport200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\GetBillingReport200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\GetBillingReport200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\GetBillingReport200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\GetBillingReport200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\GetBillingReport200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\GetBillingReport200Response';
+            $returnType = '\Zoom\Api\Model\GetBillingReport200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -498,7 +498,7 @@ class ReportsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\GetBillingReport200Response',
+                        '\Zoom\Api\Model\GetBillingReport200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -538,7 +538,7 @@ class ReportsApi
      */
     public function getBillingReportAsyncWithHttpInfo()
     {
-        $returnType = '\OpenAPI\Client\Model\GetBillingReport200Response';
+        $returnType = '\Zoom\Api\Model\GetBillingReport200Response';
         $request = $this->getBillingReportRequest();
 
         return $this->client
@@ -672,9 +672,9 @@ class ReportsApi
      * @param  string $include_fields Return all edited and deleted messages. The API only returns this value if the &#x60;include_fields&#x60; query parameter contains the &#x60;edited_messages&#x60; and/or the &#x60;deleted_messages&#x60; values.  To include both edited and deleted messages, comma-separate both values. (optional)
      * @param  bool $include_bot_message Whether to return the bot message. If false, the bot_message will not be returned in the response body. (optional, default to false)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ReportChatMessages200Response
+     * @return \Zoom\Api\Model\ReportChatMessages200Response
      */
     public function reportChatMessages($session_id, $from, $to, $next_page_token = null, $page_size = 30, $include_fields = null, $include_bot_message = false)
     {
@@ -695,9 +695,9 @@ class ReportsApi
      * @param  string $include_fields Return all edited and deleted messages. The API only returns this value if the &#x60;include_fields&#x60; query parameter contains the &#x60;edited_messages&#x60; and/or the &#x60;deleted_messages&#x60; values.  To include both edited and deleted messages, comma-separate both values. (optional)
      * @param  bool $include_bot_message Whether to return the bot message. If false, the bot_message will not be returned in the response body. (optional, default to false)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ReportChatMessages200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\ReportChatMessages200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function reportChatMessagesWithHttpInfo($session_id, $from, $to, $next_page_token = null, $page_size = 30, $include_fields = null, $include_bot_message = false)
     {
@@ -740,23 +740,23 @@ class ReportsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ReportChatMessages200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\ReportChatMessages200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ReportChatMessages200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\ReportChatMessages200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ReportChatMessages200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\ReportChatMessages200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ReportChatMessages200Response';
+            $returnType = '\Zoom\Api\Model\ReportChatMessages200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -777,7 +777,7 @@ class ReportsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ReportChatMessages200Response',
+                        '\Zoom\Api\Model\ReportChatMessages200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -831,7 +831,7 @@ class ReportsApi
      */
     public function reportChatMessagesAsyncWithHttpInfo($session_id, $from, $to, $next_page_token = null, $page_size = 30, $include_fields = null, $include_bot_message = false)
     {
-        $returnType = '\OpenAPI\Client\Model\ReportChatMessages200Response';
+        $returnType = '\Zoom\Api\Model\ReportChatMessages200Response';
         $request = $this->reportChatMessagesRequest($session_id, $from, $to, $next_page_token, $page_size, $include_fields, $include_bot_message);
 
         return $this->client
@@ -1053,9 +1053,9 @@ class ReportsApi
      * @param  int $page_size The number of records returned within a single API call. (optional, default to 30)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ReportChatSessions200Response
+     * @return \Zoom\Api\Model\ReportChatSessions200Response
      */
     public function reportChatSessions($from, $to, $page_size = 30, $next_page_token = null)
     {
@@ -1073,9 +1073,9 @@ class ReportsApi
      * @param  int $page_size The number of records returned within a single API call. (optional, default to 30)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ReportChatSessions200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\ReportChatSessions200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function reportChatSessionsWithHttpInfo($from, $to, $page_size = 30, $next_page_token = null)
     {
@@ -1118,23 +1118,23 @@ class ReportsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ReportChatSessions200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\ReportChatSessions200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ReportChatSessions200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\ReportChatSessions200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ReportChatSessions200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\ReportChatSessions200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ReportChatSessions200Response';
+            $returnType = '\Zoom\Api\Model\ReportChatSessions200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1155,7 +1155,7 @@ class ReportsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ReportChatSessions200Response',
+                        '\Zoom\Api\Model\ReportChatSessions200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1203,7 +1203,7 @@ class ReportsApi
      */
     public function reportChatSessionsAsyncWithHttpInfo($from, $to, $page_size = 30, $next_page_token = null)
     {
-        $returnType = '\OpenAPI\Client\Model\ReportChatSessions200Response';
+        $returnType = '\Zoom\Api\Model\ReportChatSessions200Response';
         $request = $this->reportChatSessionsRequest($from, $to, $page_size, $next_page_token);
 
         return $this->client
@@ -1388,9 +1388,9 @@ class ReportsApi
      * @param  \DateTime $from Start date in &#39;yyyy-mm-dd&#39; format. The date range defined by the \&quot;from\&quot; and \&quot;to\&quot; parameters should only be one month as the report includes only one month worth of data at once. (required)
      * @param  \DateTime $to End date. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ReportCloudRecording200Response
+     * @return \Zoom\Api\Model\ReportCloudRecording200Response
      */
     public function reportCloudRecording($from, $to)
     {
@@ -1406,9 +1406,9 @@ class ReportsApi
      * @param  \DateTime $from Start date in &#39;yyyy-mm-dd&#39; format. The date range defined by the \&quot;from\&quot; and \&quot;to\&quot; parameters should only be one month as the report includes only one month worth of data at once. (required)
      * @param  \DateTime $to End date. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ReportCloudRecording200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\ReportCloudRecording200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function reportCloudRecordingWithHttpInfo($from, $to)
     {
@@ -1451,23 +1451,23 @@ class ReportsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ReportCloudRecording200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\ReportCloudRecording200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ReportCloudRecording200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\ReportCloudRecording200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ReportCloudRecording200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\ReportCloudRecording200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ReportCloudRecording200Response';
+            $returnType = '\Zoom\Api\Model\ReportCloudRecording200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1488,7 +1488,7 @@ class ReportsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ReportCloudRecording200Response',
+                        '\Zoom\Api\Model\ReportCloudRecording200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1532,7 +1532,7 @@ class ReportsApi
      */
     public function reportCloudRecordingAsyncWithHttpInfo($from, $to)
     {
-        $returnType = '\OpenAPI\Client\Model\ReportCloudRecording200Response';
+        $returnType = '\Zoom\Api\Model\ReportCloudRecording200Response';
         $request = $this->reportCloudRecordingRequest($from, $to);
 
         return $this->client
@@ -1693,9 +1693,9 @@ class ReportsApi
      * @param  int $year Year for this report (optional)
      * @param  int $month Month for this report (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ReportDaily200Response
+     * @return \Zoom\Api\Model\ReportDaily200Response
      */
     public function reportDaily($year = null, $month = null)
     {
@@ -1711,9 +1711,9 @@ class ReportsApi
      * @param  int $year Year for this report (optional)
      * @param  int $month Month for this report (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ReportDaily200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\ReportDaily200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function reportDailyWithHttpInfo($year = null, $month = null)
     {
@@ -1756,23 +1756,23 @@ class ReportsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ReportDaily200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\ReportDaily200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ReportDaily200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\ReportDaily200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ReportDaily200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\ReportDaily200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ReportDaily200Response';
+            $returnType = '\Zoom\Api\Model\ReportDaily200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1793,7 +1793,7 @@ class ReportsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ReportDaily200Response',
+                        '\Zoom\Api\Model\ReportDaily200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1837,7 +1837,7 @@ class ReportsApi
      */
     public function reportDailyAsyncWithHttpInfo($year = null, $month = null)
     {
-        $returnType = '\OpenAPI\Client\Model\ReportDaily200Response';
+        $returnType = '\Zoom\Api\Model\ReportDaily200Response';
         $request = $this->reportDailyRequest($year, $month);
 
         return $this->client
@@ -1985,9 +1985,9 @@ class ReportsApi
      *
      * @param  ListPastMeetingPollsMeetingIdParameter $meeting_id The meeting&#39;s ID or universally unique ID (UUID).  * If you provide a meeting ID, the API will return a response for the latest meeting instance.  * If you provide a meeting UUID that begins with a &#x60;/&#x60; character or contains the &#x60;//&#x60; characters, you **must** double-encode the meeting UUID before making an API request. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ReportMeetingDetails200Response
+     * @return \Zoom\Api\Model\ReportMeetingDetails200Response
      */
     public function reportMeetingDetails($meeting_id)
     {
@@ -2002,9 +2002,9 @@ class ReportsApi
      *
      * @param  ListPastMeetingPollsMeetingIdParameter $meeting_id The meeting&#39;s ID or universally unique ID (UUID).  * If you provide a meeting ID, the API will return a response for the latest meeting instance.  * If you provide a meeting UUID that begins with a &#x60;/&#x60; character or contains the &#x60;//&#x60; characters, you **must** double-encode the meeting UUID before making an API request. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ReportMeetingDetails200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\ReportMeetingDetails200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function reportMeetingDetailsWithHttpInfo($meeting_id)
     {
@@ -2047,23 +2047,23 @@ class ReportsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ReportMeetingDetails200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\ReportMeetingDetails200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ReportMeetingDetails200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\ReportMeetingDetails200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ReportMeetingDetails200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\ReportMeetingDetails200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ReportMeetingDetails200Response';
+            $returnType = '\Zoom\Api\Model\ReportMeetingDetails200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2084,7 +2084,7 @@ class ReportsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ReportMeetingDetails200Response',
+                        '\Zoom\Api\Model\ReportMeetingDetails200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2126,7 +2126,7 @@ class ReportsApi
      */
     public function reportMeetingDetailsAsyncWithHttpInfo($meeting_id)
     {
-        $returnType = '\OpenAPI\Client\Model\ReportMeetingDetails200Response';
+        $returnType = '\Zoom\Api\Model\ReportMeetingDetails200Response';
         $request = $this->reportMeetingDetailsRequest($meeting_id);
 
         return $this->client
@@ -2272,9 +2272,9 @@ class ReportsApi
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      * @param  string $include_fields Provide &#x60;registrant_id&#x60; as the value for this field if you would like to see the registrant ID attribute in the response of this API call. A registrant ID is a unique identifier of a [meeting registrant](/docs/api-reference/zoom-api/methods#operation/meetingRegistrants). (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ReportMeetingParticipants200Response
+     * @return \Zoom\Api\Model\ReportMeetingParticipants200Response
      */
     public function reportMeetingParticipants($meeting_id, $page_size = 30, $next_page_token = null, $include_fields = null)
     {
@@ -2292,9 +2292,9 @@ class ReportsApi
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      * @param  string $include_fields Provide &#x60;registrant_id&#x60; as the value for this field if you would like to see the registrant ID attribute in the response of this API call. A registrant ID is a unique identifier of a [meeting registrant](/docs/api-reference/zoom-api/methods#operation/meetingRegistrants). (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ReportMeetingParticipants200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\ReportMeetingParticipants200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function reportMeetingParticipantsWithHttpInfo($meeting_id, $page_size = 30, $next_page_token = null, $include_fields = null)
     {
@@ -2337,23 +2337,23 @@ class ReportsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ReportMeetingParticipants200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\ReportMeetingParticipants200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ReportMeetingParticipants200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\ReportMeetingParticipants200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ReportMeetingParticipants200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\ReportMeetingParticipants200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ReportMeetingParticipants200Response';
+            $returnType = '\Zoom\Api\Model\ReportMeetingParticipants200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2374,7 +2374,7 @@ class ReportsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ReportMeetingParticipants200Response',
+                        '\Zoom\Api\Model\ReportMeetingParticipants200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2422,7 +2422,7 @@ class ReportsApi
      */
     public function reportMeetingParticipantsAsyncWithHttpInfo($meeting_id, $page_size = 30, $next_page_token = null, $include_fields = null)
     {
-        $returnType = '\OpenAPI\Client\Model\ReportMeetingParticipants200Response';
+        $returnType = '\Zoom\Api\Model\ReportMeetingParticipants200Response';
         $request = $this->reportMeetingParticipantsRequest($meeting_id, $page_size, $next_page_token, $include_fields);
 
         return $this->client
@@ -2599,9 +2599,9 @@ class ReportsApi
      *
      * @param  ListPastMeetingPollsMeetingIdParameter $meeting_id The meeting&#39;s ID or universally unique ID (UUID).  * If you provide a meeting ID, the API will return a response for the latest meeting instance.  * If you provide a meeting UUID that begins with a &#x60;/&#x60; character or contains the &#x60;//&#x60; characters, you **must** double-encode the meeting UUID before making an API request. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ReportMeetingPolls200Response
+     * @return \Zoom\Api\Model\ReportMeetingPolls200Response
      */
     public function reportMeetingPolls($meeting_id)
     {
@@ -2616,9 +2616,9 @@ class ReportsApi
      *
      * @param  ListPastMeetingPollsMeetingIdParameter $meeting_id The meeting&#39;s ID or universally unique ID (UUID).  * If you provide a meeting ID, the API will return a response for the latest meeting instance.  * If you provide a meeting UUID that begins with a &#x60;/&#x60; character or contains the &#x60;//&#x60; characters, you **must** double-encode the meeting UUID before making an API request. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ReportMeetingPolls200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\ReportMeetingPolls200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function reportMeetingPollsWithHttpInfo($meeting_id)
     {
@@ -2661,23 +2661,23 @@ class ReportsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ReportMeetingPolls200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\ReportMeetingPolls200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ReportMeetingPolls200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\ReportMeetingPolls200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ReportMeetingPolls200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\ReportMeetingPolls200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ReportMeetingPolls200Response';
+            $returnType = '\Zoom\Api\Model\ReportMeetingPolls200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2698,7 +2698,7 @@ class ReportsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ReportMeetingPolls200Response',
+                        '\Zoom\Api\Model\ReportMeetingPolls200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2740,7 +2740,7 @@ class ReportsApi
      */
     public function reportMeetingPollsAsyncWithHttpInfo($meeting_id)
     {
-        $returnType = '\OpenAPI\Client\Model\ReportMeetingPolls200Response';
+        $returnType = '\Zoom\Api\Model\ReportMeetingPolls200Response';
         $request = $this->reportMeetingPollsRequest($meeting_id);
 
         return $this->client
@@ -2888,9 +2888,9 @@ class ReportsApi
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      * @param  string $type The meeting type to query for:  * &#x60;past&#x60; — All past meetings.  * &#x60;pastOne&#x60; — A single past user meeting.  * &#x60;pastJoined&#x60; — All past meetings the account&#39;s users hosted or joined. (optional, default to 'past')
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ReportMeetings200Response
+     * @return \Zoom\Api\Model\ReportMeetings200Response
      */
     public function reportMeetings($user_id, $from, $to, $page_size = 30, $next_page_token = null, $type = 'past')
     {
@@ -2910,9 +2910,9 @@ class ReportsApi
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      * @param  string $type The meeting type to query for:  * &#x60;past&#x60; — All past meetings.  * &#x60;pastOne&#x60; — A single past user meeting.  * &#x60;pastJoined&#x60; — All past meetings the account&#39;s users hosted or joined. (optional, default to 'past')
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ReportMeetings200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\ReportMeetings200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function reportMeetingsWithHttpInfo($user_id, $from, $to, $page_size = 30, $next_page_token = null, $type = 'past')
     {
@@ -2955,23 +2955,23 @@ class ReportsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ReportMeetings200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\ReportMeetings200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ReportMeetings200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\ReportMeetings200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ReportMeetings200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\ReportMeetings200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ReportMeetings200Response';
+            $returnType = '\Zoom\Api\Model\ReportMeetings200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2992,7 +2992,7 @@ class ReportsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ReportMeetings200Response',
+                        '\Zoom\Api\Model\ReportMeetings200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3044,7 +3044,7 @@ class ReportsApi
      */
     public function reportMeetingsAsyncWithHttpInfo($user_id, $from, $to, $page_size = 30, $next_page_token = null, $type = 'past')
     {
-        $returnType = '\OpenAPI\Client\Model\ReportMeetings200Response';
+        $returnType = '\Zoom\Api\Model\ReportMeetings200Response';
         $request = $this->reportMeetingsRequest($user_id, $from, $to, $page_size, $next_page_token, $type);
 
         return $this->client
@@ -3257,9 +3257,9 @@ class ReportsApi
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      * @param  string $category_type **Optional**&lt;br&gt; Filter your response by a category type to see reports for a specific category. The value for this field can be one of the following:&lt;br&gt; &#x60;all&#x60;&lt;br&gt;&#x60;user&#x60;&lt;br&gt;&#x60;user_settings&#x60;&lt;br&gt;&#x60;account&#x60;&lt;br&gt;&#x60;billing&#x60;&lt;br&gt;&#x60;im&#x60;&lt;br&gt;&#x60;recording&#x60;&lt;br&gt;&#x60;phone_contacts&#x60;&lt;br&gt;&#x60;webinar&#x60;&lt;br&gt;&#x60;sub_account&#x60;&lt;br&gt;&#x60;role&#x60;&lt;br&gt;&#x60;zoom_rooms&#x60; (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ReportOperationLogs200Response
+     * @return \Zoom\Api\Model\ReportOperationLogs200Response
      */
     public function reportOperationLogs($from, $to, $page_size = 30, $next_page_token = null, $category_type = null)
     {
@@ -3278,9 +3278,9 @@ class ReportsApi
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      * @param  string $category_type **Optional**&lt;br&gt; Filter your response by a category type to see reports for a specific category. The value for this field can be one of the following:&lt;br&gt; &#x60;all&#x60;&lt;br&gt;&#x60;user&#x60;&lt;br&gt;&#x60;user_settings&#x60;&lt;br&gt;&#x60;account&#x60;&lt;br&gt;&#x60;billing&#x60;&lt;br&gt;&#x60;im&#x60;&lt;br&gt;&#x60;recording&#x60;&lt;br&gt;&#x60;phone_contacts&#x60;&lt;br&gt;&#x60;webinar&#x60;&lt;br&gt;&#x60;sub_account&#x60;&lt;br&gt;&#x60;role&#x60;&lt;br&gt;&#x60;zoom_rooms&#x60; (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ReportOperationLogs200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\ReportOperationLogs200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function reportOperationLogsWithHttpInfo($from, $to, $page_size = 30, $next_page_token = null, $category_type = null)
     {
@@ -3323,23 +3323,23 @@ class ReportsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ReportOperationLogs200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\ReportOperationLogs200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ReportOperationLogs200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\ReportOperationLogs200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ReportOperationLogs200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\ReportOperationLogs200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ReportOperationLogs200Response';
+            $returnType = '\Zoom\Api\Model\ReportOperationLogs200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3360,7 +3360,7 @@ class ReportsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ReportOperationLogs200Response',
+                        '\Zoom\Api\Model\ReportOperationLogs200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3410,7 +3410,7 @@ class ReportsApi
      */
     public function reportOperationLogsAsyncWithHttpInfo($from, $to, $page_size = 30, $next_page_token = null, $category_type = null)
     {
-        $returnType = '\OpenAPI\Client\Model\ReportOperationLogs200Response';
+        $returnType = '\Zoom\Api\Model\ReportOperationLogs200Response';
         $request = $this->reportOperationLogsRequest($from, $to, $page_size, $next_page_token, $category_type);
 
         return $this->client
@@ -3607,9 +3607,9 @@ class ReportsApi
      * @param  int $page_size The number of records to be returned within a single API call (optional)
      * @param  string $next_page_token Next page token is used to paginate through large result sets (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ReportSignInSignOutActivities200Response
+     * @return \Zoom\Api\Model\ReportSignInSignOutActivities200Response
      */
     public function reportSignInSignOutActivities($from = null, $to = null, $page_size = null, $next_page_token = null)
     {
@@ -3627,9 +3627,9 @@ class ReportsApi
      * @param  int $page_size The number of records to be returned within a single API call (optional)
      * @param  string $next_page_token Next page token is used to paginate through large result sets (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ReportSignInSignOutActivities200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\ReportSignInSignOutActivities200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function reportSignInSignOutActivitiesWithHttpInfo($from = null, $to = null, $page_size = null, $next_page_token = null)
     {
@@ -3672,23 +3672,23 @@ class ReportsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ReportSignInSignOutActivities200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\ReportSignInSignOutActivities200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ReportSignInSignOutActivities200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\ReportSignInSignOutActivities200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ReportSignInSignOutActivities200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\ReportSignInSignOutActivities200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ReportSignInSignOutActivities200Response';
+            $returnType = '\Zoom\Api\Model\ReportSignInSignOutActivities200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -3709,7 +3709,7 @@ class ReportsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ReportSignInSignOutActivities200Response',
+                        '\Zoom\Api\Model\ReportSignInSignOutActivities200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -3757,7 +3757,7 @@ class ReportsApi
      */
     public function reportSignInSignOutActivitiesAsyncWithHttpInfo($from = null, $to = null, $page_size = null, $next_page_token = null)
     {
-        $returnType = '\OpenAPI\Client\Model\ReportSignInSignOutActivities200Response';
+        $returnType = '\Zoom\Api\Model\ReportSignInSignOutActivities200Response';
         $request = $this->reportSignInSignOutActivitiesRequest($from, $to, $page_size, $next_page_token);
 
         return $this->client
@@ -3931,9 +3931,9 @@ class ReportsApi
      * @param  int $page_number The page number of the current page in the returned records. This field is **not** available if the &#x60;query_date_type&#x60; parameter is the &#x60;meeting_start_time&#x60; or &#x60;meeting_end_time&#x60; value.   This field is deprecated. Use the &#x60;next_page_token&#x60; query parameter for pagination. (optional, default to 1) (deprecated)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ReportTelephone200Response
+     * @return \Zoom\Api\Model\ReportTelephone200Response
      */
     public function reportTelephone($from, $to, $type = '1', $query_date_type = 'start_time', $page_size = 30, $page_number = 1, $next_page_token = null)
     {
@@ -3954,9 +3954,9 @@ class ReportsApi
      * @param  int $page_number The page number of the current page in the returned records. This field is **not** available if the &#x60;query_date_type&#x60; parameter is the &#x60;meeting_start_time&#x60; or &#x60;meeting_end_time&#x60; value.   This field is deprecated. Use the &#x60;next_page_token&#x60; query parameter for pagination. (optional, default to 1) (deprecated)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ReportTelephone200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\ReportTelephone200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function reportTelephoneWithHttpInfo($from, $to, $type = '1', $query_date_type = 'start_time', $page_size = 30, $page_number = 1, $next_page_token = null)
     {
@@ -3999,23 +3999,23 @@ class ReportsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ReportTelephone200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\ReportTelephone200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ReportTelephone200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\ReportTelephone200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ReportTelephone200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\ReportTelephone200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ReportTelephone200Response';
+            $returnType = '\Zoom\Api\Model\ReportTelephone200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4036,7 +4036,7 @@ class ReportsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ReportTelephone200Response',
+                        '\Zoom\Api\Model\ReportTelephone200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4090,7 +4090,7 @@ class ReportsApi
      */
     public function reportTelephoneAsyncWithHttpInfo($from, $to, $type = '1', $query_date_type = 'start_time', $page_size = 30, $page_number = 1, $next_page_token = null)
     {
-        $returnType = '\OpenAPI\Client\Model\ReportTelephone200Response';
+        $returnType = '\Zoom\Api\Model\ReportTelephone200Response';
         $request = $this->reportTelephoneRequest($from, $to, $type, $query_date_type, $page_size, $page_number, $next_page_token);
 
         return $this->client
@@ -4308,9 +4308,9 @@ class ReportsApi
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      * @param  string $type The type of event to query:  * &#x60;meeting&#x60; — A meeting event.  * &#x60;webinar&#x60; — A webinar event.  * &#x60;all&#x60; — Both meeting and webinar events.  This value defaults to &#x60;all&#x60;. (optional, default to 'all')
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ReportUpcomingEvents200Response
+     * @return \Zoom\Api\Model\ReportUpcomingEvents200Response
      */
     public function reportUpcomingEvents($from, $to, $page_size = 30, $next_page_token = null, $type = 'all')
     {
@@ -4329,9 +4329,9 @@ class ReportsApi
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      * @param  string $type The type of event to query:  * &#x60;meeting&#x60; — A meeting event.  * &#x60;webinar&#x60; — A webinar event.  * &#x60;all&#x60; — Both meeting and webinar events.  This value defaults to &#x60;all&#x60;. (optional, default to 'all')
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ReportUpcomingEvents200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\ReportUpcomingEvents200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function reportUpcomingEventsWithHttpInfo($from, $to, $page_size = 30, $next_page_token = null, $type = 'all')
     {
@@ -4374,23 +4374,23 @@ class ReportsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ReportUpcomingEvents200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\ReportUpcomingEvents200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ReportUpcomingEvents200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\ReportUpcomingEvents200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ReportUpcomingEvents200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\ReportUpcomingEvents200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ReportUpcomingEvents200Response';
+            $returnType = '\Zoom\Api\Model\ReportUpcomingEvents200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4411,7 +4411,7 @@ class ReportsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ReportUpcomingEvents200Response',
+                        '\Zoom\Api\Model\ReportUpcomingEvents200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4461,7 +4461,7 @@ class ReportsApi
      */
     public function reportUpcomingEventsAsyncWithHttpInfo($from, $to, $page_size = 30, $next_page_token = null, $type = 'all')
     {
-        $returnType = '\OpenAPI\Client\Model\ReportUpcomingEvents200Response';
+        $returnType = '\Zoom\Api\Model\ReportUpcomingEvents200Response';
         $request = $this->reportUpcomingEventsRequest($from, $to, $page_size, $next_page_token, $type);
 
         return $this->client
@@ -4660,9 +4660,9 @@ class ReportsApi
      * @param  int $page_number The page number of the current page in the returned records. (optional, default to 1)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ReportUsers200Response
+     * @return \Zoom\Api\Model\ReportUsers200Response
      */
     public function reportUsers($from, $to, $type = null, $page_size = 30, $page_number = 1, $next_page_token = null)
     {
@@ -4682,9 +4682,9 @@ class ReportsApi
      * @param  int $page_number The page number of the current page in the returned records. (optional, default to 1)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ReportUsers200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\ReportUsers200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function reportUsersWithHttpInfo($from, $to, $type = null, $page_size = 30, $page_number = 1, $next_page_token = null)
     {
@@ -4727,23 +4727,23 @@ class ReportsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ReportUsers200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\ReportUsers200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ReportUsers200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\ReportUsers200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ReportUsers200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\ReportUsers200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ReportUsers200Response';
+            $returnType = '\Zoom\Api\Model\ReportUsers200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -4764,7 +4764,7 @@ class ReportsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ReportUsers200Response',
+                        '\Zoom\Api\Model\ReportUsers200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -4816,7 +4816,7 @@ class ReportsApi
      */
     public function reportUsersAsyncWithHttpInfo($from, $to, $type = null, $page_size = 30, $page_number = 1, $next_page_token = null)
     {
-        $returnType = '\OpenAPI\Client\Model\ReportUsers200Response';
+        $returnType = '\Zoom\Api\Model\ReportUsers200Response';
         $request = $this->reportUsersRequest($from, $to, $type, $page_size, $page_number, $next_page_token);
 
         return $this->client
@@ -5020,9 +5020,9 @@ class ReportsApi
      *
      * @param  string $webinar_id The webinar&#39;s ID or universally unique ID (UUID).  * If you provide a webinar ID, the API will return a response for the latest webinar instance.  * If you provide a webinar UUID that begins with a &#x60;/&#x60; character or contains the &#x60;//&#x60; characters, you **must** double-encode the webinar UUID before making an API request. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ReportWebinarDetails200Response
+     * @return \Zoom\Api\Model\ReportWebinarDetails200Response
      */
     public function reportWebinarDetails($webinar_id)
     {
@@ -5037,9 +5037,9 @@ class ReportsApi
      *
      * @param  string $webinar_id The webinar&#39;s ID or universally unique ID (UUID).  * If you provide a webinar ID, the API will return a response for the latest webinar instance.  * If you provide a webinar UUID that begins with a &#x60;/&#x60; character or contains the &#x60;//&#x60; characters, you **must** double-encode the webinar UUID before making an API request. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ReportWebinarDetails200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\ReportWebinarDetails200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function reportWebinarDetailsWithHttpInfo($webinar_id)
     {
@@ -5082,23 +5082,23 @@ class ReportsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ReportWebinarDetails200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\ReportWebinarDetails200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ReportWebinarDetails200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\ReportWebinarDetails200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ReportWebinarDetails200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\ReportWebinarDetails200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ReportWebinarDetails200Response';
+            $returnType = '\Zoom\Api\Model\ReportWebinarDetails200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5119,7 +5119,7 @@ class ReportsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ReportWebinarDetails200Response',
+                        '\Zoom\Api\Model\ReportWebinarDetails200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5161,7 +5161,7 @@ class ReportsApi
      */
     public function reportWebinarDetailsAsyncWithHttpInfo($webinar_id)
     {
-        $returnType = '\OpenAPI\Client\Model\ReportWebinarDetails200Response';
+        $returnType = '\Zoom\Api\Model\ReportWebinarDetails200Response';
         $request = $this->reportWebinarDetailsRequest($webinar_id);
 
         return $this->client
@@ -5307,9 +5307,9 @@ class ReportsApi
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      * @param  string $include_fields The additional query parameters to include:  * &#x60;registrant_id&#x60; — Include the registrant&#39;s ID in the API response. The registrant ID is the webinar participant&#39;s unique ID. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ReportWebinarParticipants200Response
+     * @return \Zoom\Api\Model\ReportWebinarParticipants200Response
      */
     public function reportWebinarParticipants($webinar_id, $page_size = 30, $next_page_token = null, $include_fields = null)
     {
@@ -5327,9 +5327,9 @@ class ReportsApi
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      * @param  string $include_fields The additional query parameters to include:  * &#x60;registrant_id&#x60; — Include the registrant&#39;s ID in the API response. The registrant ID is the webinar participant&#39;s unique ID. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ReportWebinarParticipants200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\ReportWebinarParticipants200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function reportWebinarParticipantsWithHttpInfo($webinar_id, $page_size = 30, $next_page_token = null, $include_fields = null)
     {
@@ -5372,23 +5372,23 @@ class ReportsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ReportWebinarParticipants200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\ReportWebinarParticipants200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ReportWebinarParticipants200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\ReportWebinarParticipants200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ReportWebinarParticipants200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\ReportWebinarParticipants200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ReportWebinarParticipants200Response';
+            $returnType = '\Zoom\Api\Model\ReportWebinarParticipants200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5409,7 +5409,7 @@ class ReportsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ReportWebinarParticipants200Response',
+                        '\Zoom\Api\Model\ReportWebinarParticipants200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5457,7 +5457,7 @@ class ReportsApi
      */
     public function reportWebinarParticipantsAsyncWithHttpInfo($webinar_id, $page_size = 30, $next_page_token = null, $include_fields = null)
     {
-        $returnType = '\OpenAPI\Client\Model\ReportWebinarParticipants200Response';
+        $returnType = '\Zoom\Api\Model\ReportWebinarParticipants200Response';
         $request = $this->reportWebinarParticipantsRequest($webinar_id, $page_size, $next_page_token, $include_fields);
 
         return $this->client
@@ -5634,9 +5634,9 @@ class ReportsApi
      *
      * @param  string $webinar_id The webinar&#39;s ID or universally unique ID (UUID).  * If you provide a webinar ID, the API will return a response for the latest webinar instance.  * If you provide a webinar UUID that begins with a &#x60;/&#x60; character or contains the &#x60;//&#x60; characters, you **must** double-encode the webinar UUID before making an API request. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ReportWebinarPolls200Response
+     * @return \Zoom\Api\Model\ReportWebinarPolls200Response
      */
     public function reportWebinarPolls($webinar_id)
     {
@@ -5651,9 +5651,9 @@ class ReportsApi
      *
      * @param  string $webinar_id The webinar&#39;s ID or universally unique ID (UUID).  * If you provide a webinar ID, the API will return a response for the latest webinar instance.  * If you provide a webinar UUID that begins with a &#x60;/&#x60; character or contains the &#x60;//&#x60; characters, you **must** double-encode the webinar UUID before making an API request. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ReportWebinarPolls200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\ReportWebinarPolls200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function reportWebinarPollsWithHttpInfo($webinar_id)
     {
@@ -5696,23 +5696,23 @@ class ReportsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ReportWebinarPolls200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\ReportWebinarPolls200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ReportWebinarPolls200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\ReportWebinarPolls200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ReportWebinarPolls200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\ReportWebinarPolls200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ReportWebinarPolls200Response';
+            $returnType = '\Zoom\Api\Model\ReportWebinarPolls200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5733,7 +5733,7 @@ class ReportsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ReportWebinarPolls200Response',
+                        '\Zoom\Api\Model\ReportWebinarPolls200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5775,7 +5775,7 @@ class ReportsApi
      */
     public function reportWebinarPollsAsyncWithHttpInfo($webinar_id)
     {
-        $returnType = '\OpenAPI\Client\Model\ReportWebinarPolls200Response';
+        $returnType = '\Zoom\Api\Model\ReportWebinarPolls200Response';
         $request = $this->reportWebinarPollsRequest($webinar_id);
 
         return $this->client
@@ -5918,9 +5918,9 @@ class ReportsApi
      *
      * @param  string $webinar_id The webinar&#39;s ID or universally unique ID (UUID).  * If you provide a webinar ID, the API will return a response for the latest webinar instance.  * If you provide a webinar UUID that begins with a &#x60;/&#x60; character or contains the &#x60;//&#x60; characters, you **must** double-encode the webinar UUID before making an API request. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ReportWebinarQA200Response
+     * @return \Zoom\Api\Model\ReportWebinarQA200Response
      */
     public function reportWebinarQA($webinar_id)
     {
@@ -5935,9 +5935,9 @@ class ReportsApi
      *
      * @param  string $webinar_id The webinar&#39;s ID or universally unique ID (UUID).  * If you provide a webinar ID, the API will return a response for the latest webinar instance.  * If you provide a webinar UUID that begins with a &#x60;/&#x60; character or contains the &#x60;//&#x60; characters, you **must** double-encode the webinar UUID before making an API request. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ReportWebinarQA200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\ReportWebinarQA200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function reportWebinarQAWithHttpInfo($webinar_id)
     {
@@ -5980,23 +5980,23 @@ class ReportsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ReportWebinarQA200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\ReportWebinarQA200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ReportWebinarQA200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\ReportWebinarQA200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ReportWebinarQA200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\ReportWebinarQA200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ReportWebinarQA200Response';
+            $returnType = '\Zoom\Api\Model\ReportWebinarQA200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -6017,7 +6017,7 @@ class ReportsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ReportWebinarQA200Response',
+                        '\Zoom\Api\Model\ReportWebinarQA200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -6059,7 +6059,7 @@ class ReportsApi
      */
     public function reportWebinarQAAsyncWithHttpInfo($webinar_id)
     {
-        $returnType = '\OpenAPI\Client\Model\ReportWebinarQA200Response';
+        $returnType = '\Zoom\Api\Model\ReportWebinarQA200Response';
         $request = $this->reportWebinarQARequest($webinar_id);
 
         return $this->client

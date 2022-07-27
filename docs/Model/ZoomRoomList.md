@@ -9,6 +9,6 @@ Name | Type | Description | Notes
 **page_number** | **int** | The page number of the current results. | [optional] [default to 1]
 **page_size** | **int** | The number of records returned with a single API call. | [optional] [default to 30]
 **total_records** | **int** | The total number of all the records available across pages. | [optional]
-**zoom_rooms** | [**\OpenAPI\Client\Model\ZoomRoom[]**](ZoomRoom.md) | Array of Zoom Rooms | [optional]
+**zoom_rooms** | [**\Zoom\Api\Model\ZoomRoom[]**](ZoomRoom.md) | Array of Zoom Rooms | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

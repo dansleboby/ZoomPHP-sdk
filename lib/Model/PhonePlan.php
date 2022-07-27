@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * PhonePlan Class Doc Comment
  *
  * @category Class
  * @description Information about the account&#39;s Zoom Phone plan.
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,10 +58,10 @@ class PhonePlan implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'plan_base' => '\OpenAPI\Client\Model\PhonePlanPlanBase',
-        'plan_calling' => '\OpenAPI\Client\Model\PhonePlanPlanCallingInner[]',
-        'plan_calling_addons' => '\OpenAPI\Client\Model\PhonePlanPlanCallingAddonsInner[]',
-        'plan_number' => '\OpenAPI\Client\Model\PhonePlanPlanNumberInner[]'
+        'plan_base' => '\Zoom\Api\Model\PhonePlanPlanBase',
+        'plan_calling' => '\Zoom\Api\Model\PhonePlanPlanCallingInner[]',
+        'plan_calling_addons' => '\Zoom\Api\Model\PhonePlanPlanCallingAddonsInner[]',
+        'plan_number' => '\Zoom\Api\Model\PhonePlanPlanNumberInner[]'
     ];
 
     /**
@@ -225,7 +225,7 @@ class PhonePlan implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets plan_base
      *
-     * @return \OpenAPI\Client\Model\PhonePlanPlanBase|null
+     * @return \Zoom\Api\Model\PhonePlanPlanBase|null
      */
     public function getPlanBase()
     {
@@ -235,7 +235,7 @@ class PhonePlan implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets plan_base
      *
-     * @param \OpenAPI\Client\Model\PhonePlanPlanBase|null $plan_base plan_base
+     * @param \Zoom\Api\Model\PhonePlanPlanBase|null $plan_base plan_base
      *
      * @return self
      */
@@ -249,7 +249,7 @@ class PhonePlan implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets plan_calling
      *
-     * @return \OpenAPI\Client\Model\PhonePlanPlanCallingInner[]|null
+     * @return \Zoom\Api\Model\PhonePlanPlanCallingInner[]|null
      */
     public function getPlanCalling()
     {
@@ -259,7 +259,7 @@ class PhonePlan implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets plan_calling
      *
-     * @param \OpenAPI\Client\Model\PhonePlanPlanCallingInner[]|null $plan_calling Information about the account's additional Zoom Phone calling plans.
+     * @param \Zoom\Api\Model\PhonePlanPlanCallingInner[]|null $plan_calling Information about the account's additional Zoom Phone calling plans.
      *
      * @return self
      */
@@ -273,7 +273,7 @@ class PhonePlan implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets plan_calling_addons
      *
-     * @return \OpenAPI\Client\Model\PhonePlanPlanCallingAddonsInner[]|null
+     * @return \Zoom\Api\Model\PhonePlanPlanCallingAddonsInner[]|null
      */
     public function getPlanCallingAddons()
     {
@@ -283,7 +283,7 @@ class PhonePlan implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets plan_calling_addons
      *
-     * @param \OpenAPI\Client\Model\PhonePlanPlanCallingAddonsInner[]|null $plan_calling_addons Information about the account's additional Zoom Phone add-on calling plan. A calling plan is required when adding an add-on calling plan.
+     * @param \Zoom\Api\Model\PhonePlanPlanCallingAddonsInner[]|null $plan_calling_addons Information about the account's additional Zoom Phone add-on calling plan. A calling plan is required when adding an add-on calling plan.
      *
      * @return self
      */
@@ -297,7 +297,7 @@ class PhonePlan implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets plan_number
      *
-     * @return \OpenAPI\Client\Model\PhonePlanPlanNumberInner[]|null
+     * @return \Zoom\Api\Model\PhonePlanPlanNumberInner[]|null
      */
     public function getPlanNumber()
     {
@@ -307,7 +307,7 @@ class PhonePlan implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets plan_number
      *
-     * @param \OpenAPI\Client\Model\PhonePlanPlanNumberInner[]|null $plan_number Information about the account's additional Zoom Phone number plans.
+     * @param \Zoom\Api\Model\PhonePlanPlanNumberInner[]|null $plan_number Information about the account's additional Zoom Phone number plans.
      *
      * @return self
      */
