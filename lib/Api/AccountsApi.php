@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Zoom\Api\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Zoom\Api\ApiException;
+use Zoom\Api\Configuration;
+use Zoom\Api\HeaderSelector;
+use Zoom\Api\ObjectSerializer;
 
 /**
  * AccountsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -122,9 +122,9 @@ class AccountsApi
      *
      * @param  string $account_id The account&#39;s ID. For the Master account, pass the &#x60;me&#x60; value for this parameter. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\DomainsList
+     * @return \Zoom\Api\Model\DomainsList
      */
     public function accountManagedDomain($account_id)
     {
@@ -139,9 +139,9 @@ class AccountsApi
      *
      * @param  string $account_id The account&#39;s ID. For the Master account, pass the &#x60;me&#x60; value for this parameter. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\DomainsList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\DomainsList, HTTP status code, HTTP response headers (array of strings)
      */
     public function accountManagedDomainWithHttpInfo($account_id)
     {
@@ -184,23 +184,23 @@ class AccountsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\DomainsList' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\DomainsList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\DomainsList' !== 'string') {
+                        if ('\Zoom\Api\Model\DomainsList' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\DomainsList', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\DomainsList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\DomainsList';
+            $returnType = '\Zoom\Api\Model\DomainsList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -221,7 +221,7 @@ class AccountsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\DomainsList',
+                        '\Zoom\Api\Model\DomainsList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -263,7 +263,7 @@ class AccountsApi
      */
     public function accountManagedDomainAsyncWithHttpInfo($account_id)
     {
-        $returnType = '\OpenAPI\Client\Model\DomainsList';
+        $returnType = '\Zoom\Api\Model\DomainsList';
         $request = $this->accountManagedDomainRequest($account_id);
 
         return $this->client
@@ -408,9 +408,9 @@ class AccountsApi
      * @param  string $option Optional query parameters:  * &#x60;meeting_authentication&#x60; — Use this query parameter to view the [meeting authentication settings](https://support.zoom.us/hc/en-us/articles/360037117472-Authentication-Profiles-for-Meetings-and-Webinars) applied to the user&#39;s account.  * &#x60;recording_authentication&#x60; — Use this query parameter to view the [recording authentication settings](https://support.zoom.us/hc/en-us/articles/360037756671-Authentication-Profiles-for-Cloud-Recordings) applied to the user&#39;s account.  * &#x60;security&#x60; — Use this query parameter to view the account&#39;s security settings. For example, password requirements for user login or two-factor authentication.  * &#x60;meeting_security&#x60; — Use this query parameter to view the meeting security settings applied to the user&#39;s account. (optional)
      * @param  string $custom_query_fields The name of the field by which to filter the response. For example, if you provide the &#x60;host_video&#x60; value for this field, you will get a response similar to the following:    &#x60;{ \&quot;schedule_meeting\&quot;: { \&quot;host_video\&quot;: false } }&#x60;    To use multiple values, comma-separate each value. For example: &#x60;host_video,participant_video&#x60; (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\AccountSettings200Response
+     * @return \Zoom\Api\Model\AccountSettings200Response
      */
     public function accountSettings($account_id, $option = null, $custom_query_fields = null)
     {
@@ -427,9 +427,9 @@ class AccountsApi
      * @param  string $option Optional query parameters:  * &#x60;meeting_authentication&#x60; — Use this query parameter to view the [meeting authentication settings](https://support.zoom.us/hc/en-us/articles/360037117472-Authentication-Profiles-for-Meetings-and-Webinars) applied to the user&#39;s account.  * &#x60;recording_authentication&#x60; — Use this query parameter to view the [recording authentication settings](https://support.zoom.us/hc/en-us/articles/360037756671-Authentication-Profiles-for-Cloud-Recordings) applied to the user&#39;s account.  * &#x60;security&#x60; — Use this query parameter to view the account&#39;s security settings. For example, password requirements for user login or two-factor authentication.  * &#x60;meeting_security&#x60; — Use this query parameter to view the meeting security settings applied to the user&#39;s account. (optional)
      * @param  string $custom_query_fields The name of the field by which to filter the response. For example, if you provide the &#x60;host_video&#x60; value for this field, you will get a response similar to the following:    &#x60;{ \&quot;schedule_meeting\&quot;: { \&quot;host_video\&quot;: false } }&#x60;    To use multiple values, comma-separate each value. For example: &#x60;host_video,participant_video&#x60; (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\AccountSettings200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\AccountSettings200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function accountSettingsWithHttpInfo($account_id, $option = null, $custom_query_fields = null)
     {
@@ -472,23 +472,23 @@ class AccountsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\AccountSettings200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\AccountSettings200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\AccountSettings200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\AccountSettings200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\AccountSettings200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\AccountSettings200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\AccountSettings200Response';
+            $returnType = '\Zoom\Api\Model\AccountSettings200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -509,7 +509,7 @@ class AccountsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\AccountSettings200Response',
+                        '\Zoom\Api\Model\AccountSettings200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -555,7 +555,7 @@ class AccountsApi
      */
     public function accountSettingsAsyncWithHttpInfo($account_id, $option = null, $custom_query_fields = null)
     {
-        $returnType = '\OpenAPI\Client\Model\AccountSettings200Response';
+        $returnType = '\Zoom\Api\Model\AccountSettings200Response';
         $request = $this->accountSettingsRequest($account_id, $option, $custom_query_fields);
 
         return $this->client
@@ -717,10 +717,10 @@ class AccountsApi
      * Update account settings
      *
      * @param  string $account_id The account&#39;s ID. For the Master account, pass the &#x60;me&#x60; value for this parameter. (required)
-     * @param  \OpenAPI\Client\Model\AccountSettingsUpdateRequest $account_settings_update_request account_settings_update_request (required)
+     * @param  \Zoom\Api\Model\AccountSettingsUpdateRequest $account_settings_update_request account_settings_update_request (required)
      * @param  string $option Optional query parameters:  * &#x60;meeting_authentication&#x60; — Use this query parameter to view the [meeting authentication settings](https://support.zoom.us/hc/en-us/articles/360037117472-Authentication-Profiles-for-Meetings-and-Webinars) applied to the user&#39;s account.  * &#x60;recording_authentication&#x60; — Use this query parameter to view the [recording authentication settings](https://support.zoom.us/hc/en-us/articles/360037756671-Authentication-Profiles-for-Cloud-Recordings) applied to the user&#39;s account.  * &#x60;security&#x60; — Use this query parameter to view the account&#39;s security settings. For example, password requirements for user login or two-factor authentication.  * &#x60;meeting_security&#x60; — Use this query parameter to view the meeting security settings applied to the user&#39;s account. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -735,10 +735,10 @@ class AccountsApi
      * Update account settings
      *
      * @param  string $account_id The account&#39;s ID. For the Master account, pass the &#x60;me&#x60; value for this parameter. (required)
-     * @param  \OpenAPI\Client\Model\AccountSettingsUpdateRequest $account_settings_update_request (required)
+     * @param  \Zoom\Api\Model\AccountSettingsUpdateRequest $account_settings_update_request (required)
      * @param  string $option Optional query parameters:  * &#x60;meeting_authentication&#x60; — Use this query parameter to view the [meeting authentication settings](https://support.zoom.us/hc/en-us/articles/360037117472-Authentication-Profiles-for-Meetings-and-Webinars) applied to the user&#39;s account.  * &#x60;recording_authentication&#x60; — Use this query parameter to view the [recording authentication settings](https://support.zoom.us/hc/en-us/articles/360037756671-Authentication-Profiles-for-Cloud-Recordings) applied to the user&#39;s account.  * &#x60;security&#x60; — Use this query parameter to view the account&#39;s security settings. For example, password requirements for user login or two-factor authentication.  * &#x60;meeting_security&#x60; — Use this query parameter to view the meeting security settings applied to the user&#39;s account. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -796,7 +796,7 @@ class AccountsApi
      * Update account settings
      *
      * @param  string $account_id The account&#39;s ID. For the Master account, pass the &#x60;me&#x60; value for this parameter. (required)
-     * @param  \OpenAPI\Client\Model\AccountSettingsUpdateRequest $account_settings_update_request (required)
+     * @param  \Zoom\Api\Model\AccountSettingsUpdateRequest $account_settings_update_request (required)
      * @param  string $option Optional query parameters:  * &#x60;meeting_authentication&#x60; — Use this query parameter to view the [meeting authentication settings](https://support.zoom.us/hc/en-us/articles/360037117472-Authentication-Profiles-for-Meetings-and-Webinars) applied to the user&#39;s account.  * &#x60;recording_authentication&#x60; — Use this query parameter to view the [recording authentication settings](https://support.zoom.us/hc/en-us/articles/360037756671-Authentication-Profiles-for-Cloud-Recordings) applied to the user&#39;s account.  * &#x60;security&#x60; — Use this query parameter to view the account&#39;s security settings. For example, password requirements for user login or two-factor authentication.  * &#x60;meeting_security&#x60; — Use this query parameter to view the meeting security settings applied to the user&#39;s account. (optional)
      *
      * @throws \InvalidArgumentException
@@ -818,7 +818,7 @@ class AccountsApi
      * Update account settings
      *
      * @param  string $account_id The account&#39;s ID. For the Master account, pass the &#x60;me&#x60; value for this parameter. (required)
-     * @param  \OpenAPI\Client\Model\AccountSettingsUpdateRequest $account_settings_update_request (required)
+     * @param  \Zoom\Api\Model\AccountSettingsUpdateRequest $account_settings_update_request (required)
      * @param  string $option Optional query parameters:  * &#x60;meeting_authentication&#x60; — Use this query parameter to view the [meeting authentication settings](https://support.zoom.us/hc/en-us/articles/360037117472-Authentication-Profiles-for-Meetings-and-Webinars) applied to the user&#39;s account.  * &#x60;recording_authentication&#x60; — Use this query parameter to view the [recording authentication settings](https://support.zoom.us/hc/en-us/articles/360037756671-Authentication-Profiles-for-Cloud-Recordings) applied to the user&#39;s account.  * &#x60;security&#x60; — Use this query parameter to view the account&#39;s security settings. For example, password requirements for user login or two-factor authentication.  * &#x60;meeting_security&#x60; — Use this query parameter to view the meeting security settings applied to the user&#39;s account. (optional)
      *
      * @throws \InvalidArgumentException
@@ -856,7 +856,7 @@ class AccountsApi
      * Create request for operation 'accountSettingsUpdate'
      *
      * @param  string $account_id The account&#39;s ID. For the Master account, pass the &#x60;me&#x60; value for this parameter. (required)
-     * @param  \OpenAPI\Client\Model\AccountSettingsUpdateRequest $account_settings_update_request (required)
+     * @param  \Zoom\Api\Model\AccountSettingsUpdateRequest $account_settings_update_request (required)
      * @param  string $option Optional query parameters:  * &#x60;meeting_authentication&#x60; — Use this query parameter to view the [meeting authentication settings](https://support.zoom.us/hc/en-us/articles/360037117472-Authentication-Profiles-for-Meetings-and-Webinars) applied to the user&#39;s account.  * &#x60;recording_authentication&#x60; — Use this query parameter to view the [recording authentication settings](https://support.zoom.us/hc/en-us/articles/360037756671-Authentication-Profiles-for-Cloud-Recordings) applied to the user&#39;s account.  * &#x60;security&#x60; — Use this query parameter to view the account&#39;s security settings. For example, password requirements for user login or two-factor authentication.  * &#x60;meeting_security&#x60; — Use this query parameter to view the meeting security settings applied to the user&#39;s account. (optional)
      *
      * @throws \InvalidArgumentException
@@ -979,9 +979,9 @@ class AccountsApi
      *
      * @param  string $account_id The account&#39;s ID. For the Master account, pass the &#x60;me&#x60; value for this parameter. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\AccountTrustedDomain200Response
+     * @return \Zoom\Api\Model\AccountTrustedDomain200Response
      */
     public function accountTrustedDomain($account_id)
     {
@@ -996,9 +996,9 @@ class AccountsApi
      *
      * @param  string $account_id The account&#39;s ID. For the Master account, pass the &#x60;me&#x60; value for this parameter. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\AccountTrustedDomain200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\AccountTrustedDomain200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function accountTrustedDomainWithHttpInfo($account_id)
     {
@@ -1041,23 +1041,23 @@ class AccountsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\AccountTrustedDomain200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\AccountTrustedDomain200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\AccountTrustedDomain200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\AccountTrustedDomain200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\AccountTrustedDomain200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\AccountTrustedDomain200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\AccountTrustedDomain200Response';
+            $returnType = '\Zoom\Api\Model\AccountTrustedDomain200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1078,7 +1078,7 @@ class AccountsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\AccountTrustedDomain200Response',
+                        '\Zoom\Api\Model\AccountTrustedDomain200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1120,7 +1120,7 @@ class AccountsApi
      */
     public function accountTrustedDomainAsyncWithHttpInfo($account_id)
     {
-        $returnType = '\OpenAPI\Client\Model\AccountTrustedDomain200Response';
+        $returnType = '\Zoom\Api\Model\AccountTrustedDomain200Response';
         $request = $this->accountTrustedDomainRequest($account_id);
 
         return $this->client

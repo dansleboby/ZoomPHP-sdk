@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * CreateWebinarSettings Class Doc Comment
  *
  * @category Class
  * @description Create Webinar settings.
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -62,7 +62,7 @@ class CreateWebinarSettings implements ModelInterface, ArrayAccess, \JsonSeriali
         'alternative_hosts' => 'string',
         'alternative_host_update_polls' => 'bool',
         'approval_type' => 'int',
-        'attendees_and_panelists_reminder_email_notification' => '\OpenAPI\Client\Model\CreateWebinarSettingsAttendeesAndPanelistsReminderEmailNotification',
+        'attendees_and_panelists_reminder_email_notification' => '\Zoom\Api\Model\CreateWebinarSettingsAttendeesAndPanelistsReminderEmailNotification',
         'audio' => 'string',
         'authentication_domains' => 'string',
         'authentication_option' => 'string',
@@ -73,13 +73,13 @@ class CreateWebinarSettings implements ModelInterface, ArrayAccess, \JsonSeriali
         'email_language' => 'string',
         'enforce_login' => 'bool',
         'enforce_login_domains' => 'string',
-        'follow_up_absentees_email_notification' => '\OpenAPI\Client\Model\CreateWebinarSettingsFollowUpAbsenteesEmailNotification',
-        'follow_up_attendees_email_notification' => '\OpenAPI\Client\Model\CreateWebinarSettingsFollowUpAttendeesEmailNotification',
+        'follow_up_absentees_email_notification' => '\Zoom\Api\Model\CreateWebinarSettingsFollowUpAbsenteesEmailNotification',
+        'follow_up_attendees_email_notification' => '\Zoom\Api\Model\CreateWebinarSettingsFollowUpAttendeesEmailNotification',
         'global_dial_in_countries' => 'string[]',
         'hd_video' => 'bool',
         'hd_video_for_attendees' => 'bool',
         'host_video' => 'bool',
-        'language_interpretation' => '\OpenAPI\Client\Model\CreateWebinarSettingsLanguageInterpretation',
+        'language_interpretation' => '\Zoom\Api\Model\CreateWebinarSettingsLanguageInterpretation',
         'panelist_authentication' => 'bool',
         'meeting_authentication' => 'bool',
         'add_watermark' => 'bool',
@@ -89,7 +89,7 @@ class CreateWebinarSettings implements ModelInterface, ArrayAccess, \JsonSeriali
         'panelists_video' => 'bool',
         'post_webinar_survey' => 'bool',
         'practice_session' => 'bool',
-        'question_and_answer' => '\OpenAPI\Client\Model\CreateWebinarSettingsQuestionAndAnswer',
+        'question_and_answer' => '\Zoom\Api\Model\CreateWebinarSettingsQuestionAndAnswer',
         'registrants_email_notification' => 'bool',
         'registrants_restrict_number' => 'int',
         'registration_type' => 'int',
@@ -653,7 +653,7 @@ class CreateWebinarSettings implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets attendees_and_panelists_reminder_email_notification
      *
-     * @return \OpenAPI\Client\Model\CreateWebinarSettingsAttendeesAndPanelistsReminderEmailNotification|null
+     * @return \Zoom\Api\Model\CreateWebinarSettingsAttendeesAndPanelistsReminderEmailNotification|null
      */
     public function getAttendeesAndPanelistsReminderEmailNotification()
     {
@@ -663,7 +663,7 @@ class CreateWebinarSettings implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets attendees_and_panelists_reminder_email_notification
      *
-     * @param \OpenAPI\Client\Model\CreateWebinarSettingsAttendeesAndPanelistsReminderEmailNotification|null $attendees_and_panelists_reminder_email_notification attendees_and_panelists_reminder_email_notification
+     * @param \Zoom\Api\Model\CreateWebinarSettingsAttendeesAndPanelistsReminderEmailNotification|null $attendees_and_panelists_reminder_email_notification attendees_and_panelists_reminder_email_notification
      *
      * @return self
      */
@@ -941,7 +941,7 @@ class CreateWebinarSettings implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets follow_up_absentees_email_notification
      *
-     * @return \OpenAPI\Client\Model\CreateWebinarSettingsFollowUpAbsenteesEmailNotification|null
+     * @return \Zoom\Api\Model\CreateWebinarSettingsFollowUpAbsenteesEmailNotification|null
      */
     public function getFollowUpAbsenteesEmailNotification()
     {
@@ -951,7 +951,7 @@ class CreateWebinarSettings implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets follow_up_absentees_email_notification
      *
-     * @param \OpenAPI\Client\Model\CreateWebinarSettingsFollowUpAbsenteesEmailNotification|null $follow_up_absentees_email_notification follow_up_absentees_email_notification
+     * @param \Zoom\Api\Model\CreateWebinarSettingsFollowUpAbsenteesEmailNotification|null $follow_up_absentees_email_notification follow_up_absentees_email_notification
      *
      * @return self
      */
@@ -965,7 +965,7 @@ class CreateWebinarSettings implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets follow_up_attendees_email_notification
      *
-     * @return \OpenAPI\Client\Model\CreateWebinarSettingsFollowUpAttendeesEmailNotification|null
+     * @return \Zoom\Api\Model\CreateWebinarSettingsFollowUpAttendeesEmailNotification|null
      */
     public function getFollowUpAttendeesEmailNotification()
     {
@@ -975,7 +975,7 @@ class CreateWebinarSettings implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets follow_up_attendees_email_notification
      *
-     * @param \OpenAPI\Client\Model\CreateWebinarSettingsFollowUpAttendeesEmailNotification|null $follow_up_attendees_email_notification follow_up_attendees_email_notification
+     * @param \Zoom\Api\Model\CreateWebinarSettingsFollowUpAttendeesEmailNotification|null $follow_up_attendees_email_notification follow_up_attendees_email_notification
      *
      * @return self
      */
@@ -1085,7 +1085,7 @@ class CreateWebinarSettings implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets language_interpretation
      *
-     * @return \OpenAPI\Client\Model\CreateWebinarSettingsLanguageInterpretation|null
+     * @return \Zoom\Api\Model\CreateWebinarSettingsLanguageInterpretation|null
      */
     public function getLanguageInterpretation()
     {
@@ -1095,7 +1095,7 @@ class CreateWebinarSettings implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets language_interpretation
      *
-     * @param \OpenAPI\Client\Model\CreateWebinarSettingsLanguageInterpretation|null $language_interpretation language_interpretation
+     * @param \Zoom\Api\Model\CreateWebinarSettingsLanguageInterpretation|null $language_interpretation language_interpretation
      *
      * @return self
      */
@@ -1325,7 +1325,7 @@ class CreateWebinarSettings implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets question_and_answer
      *
-     * @return \OpenAPI\Client\Model\CreateWebinarSettingsQuestionAndAnswer|null
+     * @return \Zoom\Api\Model\CreateWebinarSettingsQuestionAndAnswer|null
      */
     public function getQuestionAndAnswer()
     {
@@ -1335,7 +1335,7 @@ class CreateWebinarSettings implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets question_and_answer
      *
-     * @param \OpenAPI\Client\Model\CreateWebinarSettingsQuestionAndAnswer|null $question_and_answer question_and_answer
+     * @param \Zoom\Api\Model\CreateWebinarSettingsQuestionAndAnswer|null $question_and_answer question_and_answer
      *
      * @return self
      */

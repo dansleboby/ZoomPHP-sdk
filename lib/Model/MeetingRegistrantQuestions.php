@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * MeetingRegistrantQuestions Class Doc Comment
  *
  * @category Class
  * @description Meeting Registrant Questions
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,8 +58,8 @@ class MeetingRegistrantQuestions implements ModelInterface, ArrayAccess, \JsonSe
       * @var string[]
       */
     protected static $openAPITypes = [
-        'custom_questions' => '\OpenAPI\Client\Model\MeetingRegistrantQuestionsCustomQuestionsInner[]',
-        'questions' => '\OpenAPI\Client\Model\MeetingRegistrantQuestionsQuestionsInner[]'
+        'custom_questions' => '\Zoom\Api\Model\MeetingRegistrantQuestionsCustomQuestionsInner[]',
+        'questions' => '\Zoom\Api\Model\MeetingRegistrantQuestionsQuestionsInner[]'
     ];
 
     /**
@@ -213,7 +213,7 @@ class MeetingRegistrantQuestions implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets custom_questions
      *
-     * @return \OpenAPI\Client\Model\MeetingRegistrantQuestionsCustomQuestionsInner[]|null
+     * @return \Zoom\Api\Model\MeetingRegistrantQuestionsCustomQuestionsInner[]|null
      */
     public function getCustomQuestions()
     {
@@ -223,7 +223,7 @@ class MeetingRegistrantQuestions implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets custom_questions
      *
-     * @param \OpenAPI\Client\Model\MeetingRegistrantQuestionsCustomQuestionsInner[]|null $custom_questions Array of Registrant Custom Questions
+     * @param \Zoom\Api\Model\MeetingRegistrantQuestionsCustomQuestionsInner[]|null $custom_questions Array of Registrant Custom Questions
      *
      * @return self
      */
@@ -237,7 +237,7 @@ class MeetingRegistrantQuestions implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets questions
      *
-     * @return \OpenAPI\Client\Model\MeetingRegistrantQuestionsQuestionsInner[]|null
+     * @return \Zoom\Api\Model\MeetingRegistrantQuestionsQuestionsInner[]|null
      */
     public function getQuestions()
     {
@@ -247,7 +247,7 @@ class MeetingRegistrantQuestions implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets questions
      *
-     * @param \OpenAPI\Client\Model\MeetingRegistrantQuestionsQuestionsInner[]|null $questions Array of Registrant Questions
+     * @param \Zoom\Api\Model\MeetingRegistrantQuestionsQuestionsInner[]|null $questions Array of Registrant Questions
      *
      * @return self
      */

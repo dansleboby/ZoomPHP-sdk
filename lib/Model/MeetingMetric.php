@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * MeetingMetric Class Doc Comment
  *
  * @category Class
  * @description Meeting metric details.
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class MeetingMetric implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'host' => 'string',
-        'custom_keys' => '\OpenAPI\Client\Model\MeetingMetricCustomKeysInner[]',
+        'custom_keys' => '\Zoom\Api\Model\MeetingMetricCustomKeysInner[]',
         'dept' => 'string',
         'duration' => 'string',
         'email' => 'string',
@@ -355,7 +355,7 @@ class MeetingMetric implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets custom_keys
      *
-     * @return \OpenAPI\Client\Model\MeetingMetricCustomKeysInner[]|null
+     * @return \Zoom\Api\Model\MeetingMetricCustomKeysInner[]|null
      */
     public function getCustomKeys()
     {
@@ -365,7 +365,7 @@ class MeetingMetric implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets custom_keys
      *
-     * @param \OpenAPI\Client\Model\MeetingMetricCustomKeysInner[]|null $custom_keys Custom keys and values assigned to the meeting.
+     * @param \Zoom\Api\Model\MeetingMetricCustomKeysInner[]|null $custom_keys Custom keys and values assigned to the meeting.
      *
      * @return self
      */

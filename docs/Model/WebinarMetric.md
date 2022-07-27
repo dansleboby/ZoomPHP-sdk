@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **host** | **string** | User display name. | [optional]
-**custom_keys** | [**\OpenAPI\Client\Model\WebinarMetricCustomKeysInner[]**](WebinarMetricCustomKeysInner.md) | Custom keys and values assigned to the Webinar. | [optional]
+**custom_keys** | [**\Zoom\Api\Model\WebinarMetricCustomKeysInner[]**](WebinarMetricCustomKeysInner.md) | Custom keys and values assigned to the Webinar. | [optional]
 **dept** | **string** | Department of the host. | [optional]
 **duration** | **string** | Webinar duration, formatted as hh:mm:ss, for example: &#x60;10:00&#x60; for ten minutes. | [optional]
 **email** | **string** | User email. | [optional]

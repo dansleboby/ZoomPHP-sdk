@@ -1,4 +1,4 @@
-# OpenAPI\Client\UsersApi
+# Zoom\Api\UsersApi
 
 All URIs are relative to https://api.zoom.us/v2.
 
@@ -52,10 +52,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\UsersApi(
+$apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -113,17 +113,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\UsersApi(
+$apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $user_id = KDcuGIm1QgePTO8WbOqwIQ; // string
-$update_presence_status_request = new \OpenAPI\Client\Model\UpdatePresenceStatusRequest(); // \OpenAPI\Client\Model\UpdatePresenceStatusRequest
+$update_presence_status_request = new \Zoom\Api\Model\UpdatePresenceStatusRequest(); // \Zoom\Api\Model\UpdatePresenceStatusRequest
 
 try {
     $apiInstance->updatePresenceStatus($user_id, $update_presence_status_request);
@@ -137,7 +137,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | **string**|  |
- **update_presence_status_request** | [**\OpenAPI\Client\Model\UpdatePresenceStatusRequest**](../Model/UpdatePresenceStatusRequest.md)|  | [optional]
+ **update_presence_status_request** | [**\Zoom\Api\Model\UpdatePresenceStatusRequest**](../Model/UpdatePresenceStatusRequest.md)|  | [optional]
 
 ### Return type
 
@@ -159,7 +159,7 @@ void (empty response body)
 ## `uploadVBuser()`
 
 ```php
-uploadVBuser($user_id, $file): \OpenAPI\Client\Model\UploadVBuser201Response
+uploadVBuser($user_id, $file): \Zoom\Api\Model\UploadVBuser201Response
 ```
 
 Upload Virtual Background files
@@ -174,10 +174,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\UsersApi(
+$apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -203,7 +203,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\UploadVBuser201Response**](../Model/UploadVBuser201Response.md)
+[**\Zoom\Api\Model\UploadVBuser201Response**](../Model/UploadVBuser201Response.md)
 
 ### Authorization
 
@@ -221,7 +221,7 @@ Name | Type | Description  | Notes
 ## `user()`
 
 ```php
-user($user_id, $login_type, $encrypted_email, $search_by_unique_id): \OpenAPI\Client\Model\User200Response
+user($user_id, $login_type, $encrypted_email, $search_by_unique_id): \Zoom\Api\Model\User200Response
 ```
 
 Get a user
@@ -236,16 +236,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\UsersApi(
+$apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = new \OpenAPI\Client\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
+$user_id = new \Zoom\Api\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
 $login_type = 101; // int | The user's login method:  * `0` — Facebook OAuth  * `1` — Google OAuth  * `24` — Apple OAuth  * `27` — Microsoft OAuth  * `97` — Mobile device  * `98` — RingCentral OAuth  * `99` — API user  * `100` — Zoom Work email  * `101` — Single Sign-On (SSO)   The following login methods are only available in China:  * `11` — Phone number  * `21` — WeChat  * `23` — Alipay
 $encrypted_email = false; // bool | Whether the email address passed for the `userId` value is an encrypted email address:    * `true` — The email address is encrypted.   * `false` — The email address is not encrypted.    If you do not query this parameter, this value defaults to null (`false`).
 $search_by_unique_id = true; // bool | Whether the queried `userId` value is an employee unique ID:  * `true` — The queried ID is an employee's unique ID.  * `false` — The queried ID is not an employee's unique ID.   This value defaults to `false` (null).
@@ -269,7 +269,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\User200Response**](../Model/User200Response.md)
+[**\Zoom\Api\Model\User200Response**](../Model/User200Response.md)
 
 ### Authorization
 
@@ -287,7 +287,7 @@ Name | Type | Description  | Notes
 ## `userAssistantCreate()`
 
 ```php
-userAssistantCreate($user_id, $user_assistants_list): \OpenAPI\Client\Model\UserAssistantCreate201Response
+userAssistantCreate($user_id, $user_assistants_list): \Zoom\Api\Model\UserAssistantCreate201Response
 ```
 
 Add assistants
@@ -302,17 +302,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\UsersApi(
+$apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = new \OpenAPI\Client\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
-$user_assistants_list = new \OpenAPI\Client\Model\UserAssistantsList(); // \OpenAPI\Client\Model\UserAssistantsList | User assistant.
+$user_id = new \Zoom\Api\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
+$user_assistants_list = new \Zoom\Api\Model\UserAssistantsList(); // \Zoom\Api\Model\UserAssistantsList | User assistant.
 
 try {
     $result = $apiInstance->userAssistantCreate($user_id, $user_assistants_list);
@@ -327,11 +327,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | [**GroupAdminsDeleteUserIdParameter**](../Model/.md)| The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. |
- **user_assistants_list** | [**\OpenAPI\Client\Model\UserAssistantsList**](../Model/UserAssistantsList.md)| User assistant. |
+ **user_assistants_list** | [**\Zoom\Api\Model\UserAssistantsList**](../Model/UserAssistantsList.md)| User assistant. |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\UserAssistantCreate201Response**](../Model/UserAssistantCreate201Response.md)
+[**\Zoom\Api\Model\UserAssistantCreate201Response**](../Model/UserAssistantCreate201Response.md)
 
 ### Authorization
 
@@ -364,16 +364,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\UsersApi(
+$apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = new \OpenAPI\Client\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
+$user_id = new \Zoom\Api\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
 $assistant_id = KDcuGIm1QgePTO8WbOqwIQ; // string | Assistant ID.
 
 try {
@@ -410,7 +410,7 @@ void (empty response body)
 ## `userAssistants()`
 
 ```php
-userAssistants($user_id): \OpenAPI\Client\Model\UserAssistantsList
+userAssistants($user_id): \Zoom\Api\Model\UserAssistantsList
 ```
 
 List user assistants
@@ -425,16 +425,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\UsersApi(
+$apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = new \OpenAPI\Client\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
+$user_id = new \Zoom\Api\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
 
 try {
     $result = $apiInstance->userAssistants($user_id);
@@ -452,7 +452,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\UserAssistantsList**](../Model/UserAssistantsList.md)
+[**\Zoom\Api\Model\UserAssistantsList**](../Model/UserAssistantsList.md)
 
 ### Authorization
 
@@ -485,16 +485,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\UsersApi(
+$apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = new \OpenAPI\Client\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
+$user_id = new \Zoom\Api\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
 
 try {
     $apiInstance->userAssistantsDelete($user_id);
@@ -529,7 +529,7 @@ void (empty response body)
 ## `userCreate()`
 
 ```php
-userCreate($user_create_request): \OpenAPI\Client\Model\UserCreate201Response
+userCreate($user_create_request): \Zoom\Api\Model\UserCreate201Response
 ```
 
 Create users
@@ -544,16 +544,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\UsersApi(
+$apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$user_create_request = new \OpenAPI\Client\Model\UserCreateRequest(); // \OpenAPI\Client\Model\UserCreateRequest | User
+$user_create_request = new \Zoom\Api\Model\UserCreateRequest(); // \Zoom\Api\Model\UserCreateRequest | User
 
 try {
     $result = $apiInstance->userCreate($user_create_request);
@@ -567,11 +567,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_create_request** | [**\OpenAPI\Client\Model\UserCreateRequest**](../Model/UserCreateRequest.md)| User |
+ **user_create_request** | [**\Zoom\Api\Model\UserCreateRequest**](../Model/UserCreateRequest.md)| User |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\UserCreate201Response**](../Model/UserCreate201Response.md)
+[**\Zoom\Api\Model\UserCreate201Response**](../Model/UserCreate201Response.md)
 
 ### Authorization
 
@@ -604,16 +604,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\UsersApi(
+$apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = new \OpenAPI\Client\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
+$user_id = new \Zoom\Api\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
 $action = delete; // string | Delete action options:<br>`disassociate` - Disassociate a user.<br>`delete`-  Permanently delete a user.<br>Note: To delete pending user in the account, use `disassociate`
 $encrypted_email = false; // bool | Whether the email address passed for the `userId` value is an encrypted email address:    * `true` — The email address is encrypted.   * `false` — The email address is not encrypted.    If you do not query this parameter, this value defaults to null (`false`).
 $transfer_email = jchill@example.com; // string | Transfer email. This field is **required** if the user has upcoming Zoom Events scheduled. After you delete or disassociate the user, the user's upcoming Zoom Events will be transferred to the target user.
@@ -662,7 +662,7 @@ void (empty response body)
 ## `userEmail()`
 
 ```php
-userEmail($email): \OpenAPI\Client\Model\UserEmail200Response
+userEmail($email): \Zoom\Api\Model\UserEmail200Response
 ```
 
 Check a user email
@@ -677,10 +677,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\UsersApi(
+$apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -704,7 +704,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\UserEmail200Response**](../Model/UserEmail200Response.md)
+[**\Zoom\Api\Model\UserEmail200Response**](../Model/UserEmail200Response.md)
 
 ### Authorization
 
@@ -737,17 +737,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\UsersApi(
+$apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = new \OpenAPI\Client\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
-$user_email_update_request = new \OpenAPI\Client\Model\UserEmailUpdateRequest(); // \OpenAPI\Client\Model\UserEmailUpdateRequest | User email.
+$user_id = new \Zoom\Api\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
+$user_email_update_request = new \Zoom\Api\Model\UserEmailUpdateRequest(); // \Zoom\Api\Model\UserEmailUpdateRequest | User email.
 
 try {
     $apiInstance->userEmailUpdate($user_id, $user_email_update_request);
@@ -761,7 +761,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | [**GroupAdminsDeleteUserIdParameter**](../Model/.md)| The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. |
- **user_email_update_request** | [**\OpenAPI\Client\Model\UserEmailUpdateRequest**](../Model/UserEmailUpdateRequest.md)| User email. |
+ **user_email_update_request** | [**\Zoom\Api\Model\UserEmailUpdateRequest**](../Model/UserEmailUpdateRequest.md)| User email. |
 
 ### Return type
 
@@ -798,17 +798,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\UsersApi(
+$apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = new \OpenAPI\Client\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
-$user_password_request = new \OpenAPI\Client\Model\UserPasswordRequest(); // \OpenAPI\Client\Model\UserPasswordRequest | User password.
+$user_id = new \Zoom\Api\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
+$user_password_request = new \Zoom\Api\Model\UserPasswordRequest(); // \Zoom\Api\Model\UserPasswordRequest | User password.
 
 try {
     $apiInstance->userPassword($user_id, $user_password_request);
@@ -822,7 +822,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | [**GroupAdminsDeleteUserIdParameter**](../Model/.md)| The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. |
- **user_password_request** | [**\OpenAPI\Client\Model\UserPasswordRequest**](../Model/UserPasswordRequest.md)| User password. |
+ **user_password_request** | [**\Zoom\Api\Model\UserPasswordRequest**](../Model/UserPasswordRequest.md)| User password. |
 
 ### Return type
 
@@ -844,7 +844,7 @@ void (empty response body)
 ## `userPermission()`
 
 ```php
-userPermission($user_id): \OpenAPI\Client\Model\UserPermissions
+userPermission($user_id): \Zoom\Api\Model\UserPermissions
 ```
 
 Get user permissions
@@ -859,16 +859,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\UsersApi(
+$apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = new \OpenAPI\Client\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
+$user_id = new \Zoom\Api\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
 
 try {
     $result = $apiInstance->userPermission($user_id);
@@ -886,7 +886,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\UserPermissions**](../Model/UserPermissions.md)
+[**\Zoom\Api\Model\UserPermissions**](../Model/UserPermissions.md)
 
 ### Authorization
 
@@ -919,16 +919,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\UsersApi(
+$apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = new \OpenAPI\Client\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
+$user_id = new \Zoom\Api\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
 $pic_file = 'pic_file_example'; // string | The file's path.
 
 try {
@@ -980,16 +980,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\UsersApi(
+$apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = new \OpenAPI\Client\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
+$user_id = new \Zoom\Api\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
 
 try {
     $apiInstance->userPictureDelete($user_id);
@@ -1039,16 +1039,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\UsersApi(
+$apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = new \OpenAPI\Client\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
+$user_id = new \Zoom\Api\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
 
 try {
     $apiInstance->userSSOTokenDelete($user_id);
@@ -1098,16 +1098,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\UsersApi(
+$apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = new \OpenAPI\Client\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
+$user_id = new \Zoom\Api\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
 $scheduler_id = KDcuGIm1QgePTO8WbOqwIQ; // string | Scheduler's ID.
 
 try {
@@ -1144,7 +1144,7 @@ void (empty response body)
 ## `userSchedulers()`
 
 ```php
-userSchedulers($user_id): \OpenAPI\Client\Model\UserSchedulersList
+userSchedulers($user_id): \Zoom\Api\Model\UserSchedulersList
 ```
 
 List user schedulers
@@ -1159,16 +1159,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\UsersApi(
+$apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = new \OpenAPI\Client\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
+$user_id = new \Zoom\Api\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
 
 try {
     $result = $apiInstance->userSchedulers($user_id);
@@ -1186,7 +1186,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\UserSchedulersList**](../Model/UserSchedulersList.md)
+[**\Zoom\Api\Model\UserSchedulersList**](../Model/UserSchedulersList.md)
 
 ### Authorization
 
@@ -1219,16 +1219,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\UsersApi(
+$apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = new \OpenAPI\Client\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
+$user_id = new \Zoom\Api\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
 
 try {
     $apiInstance->userSchedulersDelete($user_id);
@@ -1263,7 +1263,7 @@ void (empty response body)
 ## `userSettings()`
 
 ```php
-userSettings($user_id, $login_type, $option, $custom_query_fields): \OpenAPI\Client\Model\UserSettings200Response
+userSettings($user_id, $login_type, $option, $custom_query_fields): \Zoom\Api\Model\UserSettings200Response
 ```
 
 Get user settings
@@ -1278,16 +1278,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\UsersApi(
+$apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = new \OpenAPI\Client\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
+$user_id = new \Zoom\Api\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
 $login_type = 101; // int | The user's login method:  * `0` — Facebook OAuth  * `1` — Google OAuth  * `24` — Apple OAuth  * `27` — Microsoft OAuth  * `97` — Mobile device  * `98` — RingCentral OAuth  * `99` — API user  * `100` — Zoom Work email  * `101` — Single Sign-On (SSO)   The following login methods are only available in China:  * `11` — Phone number  * `21` — WeChat  * `23` — Alipay
 $option = meeting_security; // string | Optional query parameters:  * `meeting_authentication` — Use this query parameter to view the [meeting authentication settings](https://support.zoom.us/hc/en-us/articles/360037117472-Authentication-Profiles-for-Meetings-and-Webinars) applied to the user's account.  * `recording_authentication` — Use this query parameter to view the [recording authentication settings](https://support.zoom.us/hc/en-us/articles/360037756671-Authentication-Profiles-for-Cloud-Recordings) applied to the user's account.  * `meeting_security` — Use this query parameter to view the meeting security settings applied to the user's account.
 $custom_query_fields = host_video; // string | Provide the name of the field by which you would like to filter the response. For example, if you provide \"host_video\" as the value of this field, you will get a response similar to the following:<br> {     \"schedule_meeting\": {         \"host_video\": false     } } <br>You can provide multiple values by separating them with commas(example: \"host_video,participant_video”).
@@ -1311,7 +1311,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\UserSettings200Response**](../Model/UserSettings200Response.md)
+[**\Zoom\Api\Model\UserSettings200Response**](../Model/UserSettings200Response.md)
 
 ### Authorization
 
@@ -1344,17 +1344,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\UsersApi(
+$apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = new \OpenAPI\Client\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
-$user_settings_update_request = new \OpenAPI\Client\Model\UserSettingsUpdateRequest(); // \OpenAPI\Client\Model\UserSettingsUpdateRequest | User Settings
+$user_id = new \Zoom\Api\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
+$user_settings_update_request = new \Zoom\Api\Model\UserSettingsUpdateRequest(); // \Zoom\Api\Model\UserSettingsUpdateRequest | User Settings
 $option = meeting_security; // string | Optional query parameters:  * `meeting_authentication` — Use this query parameter to view the [meeting authentication settings](https://support.zoom.us/hc/en-us/articles/360037117472-Authentication-Profiles-for-Meetings-and-Webinars) applied to the user's account.  * `recording_authentication` — Use this query parameter to view the [recording authentication settings](https://support.zoom.us/hc/en-us/articles/360037756671-Authentication-Profiles-for-Cloud-Recordings) applied to the user's account.  * `meeting_security` — Use this query parameter to view the meeting security settings applied to the user's account.
 
 try {
@@ -1369,7 +1369,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | [**GroupAdminsDeleteUserIdParameter**](../Model/.md)| The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. |
- **user_settings_update_request** | [**\OpenAPI\Client\Model\UserSettingsUpdateRequest**](../Model/UserSettingsUpdateRequest.md)| User Settings |
+ **user_settings_update_request** | [**\Zoom\Api\Model\UserSettingsUpdateRequest**](../Model/UserSettingsUpdateRequest.md)| User Settings |
  **option** | **string**| Optional query parameters:  * &#x60;meeting_authentication&#x60; — Use this query parameter to view the [meeting authentication settings](https://support.zoom.us/hc/en-us/articles/360037117472-Authentication-Profiles-for-Meetings-and-Webinars) applied to the user&#39;s account.  * &#x60;recording_authentication&#x60; — Use this query parameter to view the [recording authentication settings](https://support.zoom.us/hc/en-us/articles/360037756671-Authentication-Profiles-for-Cloud-Recordings) applied to the user&#39;s account.  * &#x60;meeting_security&#x60; — Use this query parameter to view the meeting security settings applied to the user&#39;s account. | [optional]
 
 ### Return type
@@ -1407,17 +1407,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\UsersApi(
+$apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = new \OpenAPI\Client\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
-$user_status_request = new \OpenAPI\Client\Model\UserStatusRequest(); // \OpenAPI\Client\Model\UserStatusRequest | User status.
+$user_id = new \Zoom\Api\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
+$user_status_request = new \Zoom\Api\Model\UserStatusRequest(); // \Zoom\Api\Model\UserStatusRequest | User status.
 
 try {
     $apiInstance->userStatus($user_id, $user_status_request);
@@ -1431,7 +1431,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | [**GroupAdminsDeleteUserIdParameter**](../Model/.md)| The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. |
- **user_status_request** | [**\OpenAPI\Client\Model\UserStatusRequest**](../Model/UserStatusRequest.md)| User status. |
+ **user_status_request** | [**\Zoom\Api\Model\UserStatusRequest**](../Model/UserStatusRequest.md)| User status. |
 
 ### Return type
 
@@ -1453,7 +1453,7 @@ void (empty response body)
 ## `userToken()`
 
 ```php
-userToken($user_id, $type, $ttl): \OpenAPI\Client\Model\UserToken200Response
+userToken($user_id, $type, $ttl): \Zoom\Api\Model\UserToken200Response
 ```
 
 Get a user's token
@@ -1468,16 +1468,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\UsersApi(
+$apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = new \OpenAPI\Client\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
+$user_id = new \Zoom\Api\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
 $type = zak; // string | The user token type:  * `zak` — A Zoom Access Key (ZAK) is used to generate a URL to start meetings. See [Getting a Zoom Access Key (ZAK)](https://marketplace.zoom.us/docs/sdk/native-sdks/auth#generating-zoom-access-token-zak) for details. The ZAK's expiration time is two hours. For API users, the expiration time is 90 days. An API user is a user created via the `custCreate` action in the **[Create users](https://marketplace.zoom.us/docs/api-reference/zoom-api/methods/#operation/userCreate)** API. The maximum length of this value is `512`.  * `token` — **Deprecated.** A Zoom token. This token expires in 14 days. You must make the request again after expiration to receive a new token. This query parameter returns a null value if the user signed in to Zoom via Google or Facebook. The maximum length of this value is `512`.    This value defaults to `token`.
 $ttl = 7200; // int | The ZAK expiration time to live (TTL). The value of this query parameter denotes the expiry time of the ZAK, in seconds. To update the user's ZAK TTL, use this field with the `zak` value for the `type` query parameter.    This value defaults to `7200` or `7776000` (90 days) for API users. The maximum value is one year.
 
@@ -1499,7 +1499,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\UserToken200Response**](../Model/UserToken200Response.md)
+[**\Zoom\Api\Model\UserToken200Response**](../Model/UserToken200Response.md)
 
 ### Authorization
 
@@ -1532,17 +1532,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\UsersApi(
+$apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = new \OpenAPI\Client\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
-$user_update = new \OpenAPI\Client\Model\UserUpdate(); // \OpenAPI\Client\Model\UserUpdate | The user's profile information.
+$user_id = new \Zoom\Api\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
+$user_update = new \Zoom\Api\Model\UserUpdate(); // \Zoom\Api\Model\UserUpdate | The user's profile information.
 $login_type = 101; // int | The user's login method:  * `0` — Facebook OAuth  * `1` — Google OAuth  * `24` — Apple OAuth  * `27` — Microsoft OAuth  * `97` — Mobile device  * `98` — RingCentral OAuth  * `99` — API user  * `100` — Zoom Work email  * `101` — Single Sign-On (SSO)   The following login methods are only available in China:  * `11` — Phone number  * `21` — WeChat  * `23` — Alipay
 $remove_tsp_credentials = true; // bool | Whether to remove the user's TSP credentials:  * `true` — The queried ID is an employee's unique ID.  * `false` — The queried ID is not an employee's unique ID.    This value defaults to `false` (null).
 
@@ -1558,7 +1558,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | [**GroupAdminsDeleteUserIdParameter**](../Model/.md)| The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. |
- **user_update** | [**\OpenAPI\Client\Model\UserUpdate**](../Model/UserUpdate.md)| The user&#39;s profile information. |
+ **user_update** | [**\Zoom\Api\Model\UserUpdate**](../Model/UserUpdate.md)| The user&#39;s profile information. |
  **login_type** | **int**| The user&#39;s login method:  * &#x60;0&#x60; — Facebook OAuth  * &#x60;1&#x60; — Google OAuth  * &#x60;24&#x60; — Apple OAuth  * &#x60;27&#x60; — Microsoft OAuth  * &#x60;97&#x60; — Mobile device  * &#x60;98&#x60; — RingCentral OAuth  * &#x60;99&#x60; — API user  * &#x60;100&#x60; — Zoom Work email  * &#x60;101&#x60; — Single Sign-On (SSO)   The following login methods are only available in China:  * &#x60;11&#x60; — Phone number  * &#x60;21&#x60; — WeChat  * &#x60;23&#x60; — Alipay | [optional]
  **remove_tsp_credentials** | **bool**| Whether to remove the user&#39;s TSP credentials:  * &#x60;true&#x60; — The queried ID is an employee&#39;s unique ID.  * &#x60;false&#x60; — The queried ID is not an employee&#39;s unique ID.    This value defaults to &#x60;false&#x60; (null). | [optional]
 
@@ -1582,7 +1582,7 @@ void (empty response body)
 ## `userVanityName()`
 
 ```php
-userVanityName($vanity_name): \OpenAPI\Client\Model\UserVanityName200Response
+userVanityName($vanity_name): \Zoom\Api\Model\UserVanityName200Response
 ```
 
 Check a user's PM room
@@ -1597,10 +1597,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\UsersApi(
+$apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1624,7 +1624,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\UserVanityName200Response**](../Model/UserVanityName200Response.md)
+[**\Zoom\Api\Model\UserVanityName200Response**](../Model/UserVanityName200Response.md)
 
 ### Authorization
 
@@ -1642,7 +1642,7 @@ Name | Type | Description  | Notes
 ## `userZak()`
 
 ```php
-userZak(): \OpenAPI\Client\Model\UserZak200Response
+userZak(): \Zoom\Api\Model\UserZak200Response
 ```
 
 Get user's ZAK
@@ -1657,10 +1657,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\UsersApi(
+$apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1681,7 +1681,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\UserZak200Response**](../Model/UserZak200Response.md)
+[**\Zoom\Api\Model\UserZak200Response**](../Model/UserZak200Response.md)
 
 ### Authorization
 
@@ -1699,7 +1699,7 @@ This endpoint does not need any parameter.
 ## `users()`
 
 ```php
-users($status, $page_size, $role_id, $page_number, $include_fields, $next_page_token): \OpenAPI\Client\Model\Users200Response
+users($status, $page_size, $role_id, $page_number, $include_fields, $next_page_token): \Zoom\Api\Model\Users200Response
 ```
 
 List users
@@ -1714,10 +1714,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\UsersApi(
+$apiInstance = new Zoom\Api\Api\UsersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1751,7 +1751,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Users200Response**](../Model/Users200Response.md)
+[**\Zoom\Api\Model\Users200Response**](../Model/Users200Response.md)
 
 ### Authorization
 

@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,16 +26,16 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * UserUpdate Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class UserUpdate implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'cms_user_id' => 'string',
         'company' => 'string',
-        'custom_attributes' => '\OpenAPI\Client\Model\UserUpdateCustomAttributesInner[]',
+        'custom_attributes' => '\Zoom\Api\Model\UserUpdateCustomAttributesInner[]',
         'dept' => 'string',
         'first_name' => 'string',
         'group_id' => 'string',
@@ -71,7 +71,7 @@ class UserUpdate implements ModelInterface, ArrayAccess, \JsonSerializable
         'manager' => 'string',
         'phone_country' => 'string',
         'phone_number' => 'string',
-        'phone_numbers' => '\OpenAPI\Client\Model\UserUpdatePhoneNumbersInner[]',
+        'phone_numbers' => '\Zoom\Api\Model\UserUpdatePhoneNumbersInner[]',
         'pmi' => 'int',
         'pronouns' => 'string',
         'pronouns_option' => 'int',
@@ -566,7 +566,7 @@ class UserUpdate implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets custom_attributes
      *
-     * @return \OpenAPI\Client\Model\UserUpdateCustomAttributesInner[]|null
+     * @return \Zoom\Api\Model\UserUpdateCustomAttributesInner[]|null
      */
     public function getCustomAttributes()
     {
@@ -576,7 +576,7 @@ class UserUpdate implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets custom_attributes
      *
-     * @param \OpenAPI\Client\Model\UserUpdateCustomAttributesInner[]|null $custom_attributes The user's assigned custom attributes.
+     * @param \Zoom\Api\Model\UserUpdateCustomAttributesInner[]|null $custom_attributes The user's assigned custom attributes.
      *
      * @return self
      */
@@ -881,7 +881,7 @@ class UserUpdate implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets phone_numbers
      *
-     * @return \OpenAPI\Client\Model\UserUpdatePhoneNumbersInner[]|null
+     * @return \Zoom\Api\Model\UserUpdatePhoneNumbersInner[]|null
      */
     public function getPhoneNumbers()
     {
@@ -891,7 +891,7 @@ class UserUpdate implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets phone_numbers
      *
-     * @param \OpenAPI\Client\Model\UserUpdatePhoneNumbersInner[]|null $phone_numbers Information about the user's assigned phone numbers.
+     * @param \Zoom\Api\Model\UserUpdatePhoneNumbersInner[]|null $phone_numbers Information about the user's assigned phone numbers.
      *
      * @return self
      */

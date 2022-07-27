@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * UserSettingsRecording Class Doc Comment
  *
  * @category Class
  * @description 
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -62,7 +62,7 @@ class UserSettingsRecording implements ModelInterface, ArrayAccess, \JsonSeriali
         'ask_participants_to_consent_disclaimer' => 'bool',
         'auto_delete_cmr' => 'bool',
         'auto_delete_cmr_days' => 'int',
-        'record_files_separately' => '\OpenAPI\Client\Model\UserSettingsRecordingRecordFilesSeparately',
+        'record_files_separately' => '\Zoom\Api\Model\UserSettingsRecordingRecordFilesSeparately',
         'display_participant_name' => 'bool',
         'recording_thumbnails' => 'bool',
         'optimize_recording_for_3rd_party_video_editor' => 'bool',
@@ -73,14 +73,14 @@ class UserSettingsRecording implements ModelInterface, ArrayAccess, \JsonSeriali
         'auto_recording' => 'string',
         'cloud_recording' => 'bool',
         'host_pause_stop_recording' => 'bool',
-        'ip_address_access_control' => '\OpenAPI\Client\Model\AccountSettingsRecordingIpAddressAccessControl',
+        'ip_address_access_control' => '\Zoom\Api\Model\AccountSettingsRecordingIpAddressAccessControl',
         'local_recording' => 'bool',
         'record_audio_file' => 'bool',
         'record_gallery_view' => 'bool',
         'record_speaker_view' => 'bool',
         'recording_audio_transcript' => 'bool',
         'recording_disclaimer' => 'bool',
-        'recording_password_requirement' => '\OpenAPI\Client\Model\UserSettingsRecordingRecordingPasswordRequirement',
+        'recording_password_requirement' => '\Zoom\Api\Model\UserSettingsRecordingRecordingPasswordRequirement',
         'save_chat_text' => 'bool',
         'show_timestamp' => 'bool'
     ];
@@ -511,7 +511,7 @@ class UserSettingsRecording implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets record_files_separately
      *
-     * @return \OpenAPI\Client\Model\UserSettingsRecordingRecordFilesSeparately|null
+     * @return \Zoom\Api\Model\UserSettingsRecordingRecordFilesSeparately|null
      */
     public function getRecordFilesSeparately()
     {
@@ -521,7 +521,7 @@ class UserSettingsRecording implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets record_files_separately
      *
-     * @param \OpenAPI\Client\Model\UserSettingsRecordingRecordFilesSeparately|null $record_files_separately record_files_separately
+     * @param \Zoom\Api\Model\UserSettingsRecordingRecordFilesSeparately|null $record_files_separately record_files_separately
      *
      * @return self
      */
@@ -785,7 +785,7 @@ class UserSettingsRecording implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets ip_address_access_control
      *
-     * @return \OpenAPI\Client\Model\AccountSettingsRecordingIpAddressAccessControl|null
+     * @return \Zoom\Api\Model\AccountSettingsRecordingIpAddressAccessControl|null
      */
     public function getIpAddressAccessControl()
     {
@@ -795,7 +795,7 @@ class UserSettingsRecording implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets ip_address_access_control
      *
-     * @param \OpenAPI\Client\Model\AccountSettingsRecordingIpAddressAccessControl|null $ip_address_access_control ip_address_access_control
+     * @param \Zoom\Api\Model\AccountSettingsRecordingIpAddressAccessControl|null $ip_address_access_control ip_address_access_control
      *
      * @return self
      */
@@ -953,7 +953,7 @@ class UserSettingsRecording implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Gets recording_password_requirement
      *
-     * @return \OpenAPI\Client\Model\UserSettingsRecordingRecordingPasswordRequirement|null
+     * @return \Zoom\Api\Model\UserSettingsRecordingRecordingPasswordRequirement|null
      */
     public function getRecordingPasswordRequirement()
     {
@@ -963,7 +963,7 @@ class UserSettingsRecording implements ModelInterface, ArrayAccess, \JsonSeriali
     /**
      * Sets recording_password_requirement
      *
-     * @param \OpenAPI\Client\Model\UserSettingsRecordingRecordingPasswordRequirement|null $recording_password_requirement recording_password_requirement
+     * @param \Zoom\Api\Model\UserSettingsRecordingRecordingPasswordRequirement|null $recording_password_requirement recording_password_requirement
      *
      * @return self
      */

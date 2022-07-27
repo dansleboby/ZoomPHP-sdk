@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * Registrant Class Doc Comment
  *
  * @category Class
  * @description Information about the registrant.
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -62,7 +62,7 @@ class Registrant implements ModelInterface, ArrayAccess, \JsonSerializable
         'city' => 'string',
         'comments' => 'string',
         'country' => 'string',
-        'custom_questions' => '\OpenAPI\Client\Model\CustomQuestion[]',
+        'custom_questions' => '\Zoom\Api\Model\CustomQuestion[]',
         'email' => 'string',
         'first_name' => 'string',
         'industry' => 'string',
@@ -551,7 +551,7 @@ class Registrant implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets custom_questions
      *
-     * @return \OpenAPI\Client\Model\CustomQuestion[]|null
+     * @return \Zoom\Api\Model\CustomQuestion[]|null
      */
     public function getCustomQuestions()
     {
@@ -561,7 +561,7 @@ class Registrant implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets custom_questions
      *
-     * @param \OpenAPI\Client\Model\CustomQuestion[]|null $custom_questions Information about custom questions.
+     * @param \Zoom\Api\Model\CustomQuestion[]|null $custom_questions Information about custom questions.
      *
      * @return self
      */

@@ -1,0 +1,13 @@
+# # DashboardClientFeedbackDetail200Response
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**from** | **\DateTime** | Start date for this report | [optional]
+**to** | **\DateTime** | End date for this report | [optional]
+**next_page_token** | **string** | The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of the available result list exceeds the page size. The expiration period is 15 minutes. | [optional]
+**page_size** | **int** | The amount of records returns within a single API call. | [optional] [default to 30]
+**client_feedback_details** | [**\Zoom\Api\Model\DashboardClientFeedbackDetail200ResponseAllOf1ClientFeedbackDetailsInner[]**](DashboardClientFeedbackDetail200ResponseAllOf1ClientFeedbackDetailsInner.md) |  | [optional]
+
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

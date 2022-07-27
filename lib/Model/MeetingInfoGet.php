@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * MeetingInfoGet Class Doc Comment
  *
  * @category Class
  * @description Meeting object.
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -64,18 +64,18 @@ class MeetingInfoGet implements ModelInterface, ArrayAccess, \JsonSerializable
         'encrypted_password' => 'string',
         'h323_password' => 'string',
         'join_url' => 'string',
-        'occurrences' => '\OpenAPI\Client\Model\Occurrence[]',
+        'occurrences' => '\Zoom\Api\Model\Occurrence[]',
         'password' => 'string',
         'pmi' => 'string',
         'pre_schedule' => 'bool',
-        'recurrence' => '\OpenAPI\Client\Model\Recurrence',
-        'settings' => '\OpenAPI\Client\Model\MeetingSettings',
+        'recurrence' => '\Zoom\Api\Model\Recurrence',
+        'settings' => '\Zoom\Api\Model\MeetingSettings',
         'start_time' => '\DateTime',
         'start_url' => 'string',
         'status' => 'string',
         'timezone' => 'string',
         'topic' => 'string',
-        'tracking_fields' => '\OpenAPI\Client\Model\MeetingInfoGetTrackingFieldsInner[]',
+        'tracking_fields' => '\Zoom\Api\Model\MeetingInfoGetTrackingFieldsInner[]',
         'type' => 'int'
     ];
 
@@ -519,7 +519,7 @@ class MeetingInfoGet implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets occurrences
      *
-     * @return \OpenAPI\Client\Model\Occurrence[]|null
+     * @return \Zoom\Api\Model\Occurrence[]|null
      */
     public function getOccurrences()
     {
@@ -529,7 +529,7 @@ class MeetingInfoGet implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets occurrences
      *
-     * @param \OpenAPI\Client\Model\Occurrence[]|null $occurrences Array of occurrence objects.
+     * @param \Zoom\Api\Model\Occurrence[]|null $occurrences Array of occurrence objects.
      *
      * @return self
      */
@@ -617,7 +617,7 @@ class MeetingInfoGet implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets recurrence
      *
-     * @return \OpenAPI\Client\Model\Recurrence|null
+     * @return \Zoom\Api\Model\Recurrence|null
      */
     public function getRecurrence()
     {
@@ -627,7 +627,7 @@ class MeetingInfoGet implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets recurrence
      *
-     * @param \OpenAPI\Client\Model\Recurrence|null $recurrence recurrence
+     * @param \Zoom\Api\Model\Recurrence|null $recurrence recurrence
      *
      * @return self
      */
@@ -641,7 +641,7 @@ class MeetingInfoGet implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets settings
      *
-     * @return \OpenAPI\Client\Model\MeetingSettings|null
+     * @return \Zoom\Api\Model\MeetingSettings|null
      */
     public function getSettings()
     {
@@ -651,7 +651,7 @@ class MeetingInfoGet implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets settings
      *
-     * @param \OpenAPI\Client\Model\MeetingSettings|null $settings settings
+     * @param \Zoom\Api\Model\MeetingSettings|null $settings settings
      *
      * @return self
      */
@@ -795,7 +795,7 @@ class MeetingInfoGet implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets tracking_fields
      *
-     * @return \OpenAPI\Client\Model\MeetingInfoGetTrackingFieldsInner[]|null
+     * @return \Zoom\Api\Model\MeetingInfoGetTrackingFieldsInner[]|null
      */
     public function getTrackingFields()
     {
@@ -805,7 +805,7 @@ class MeetingInfoGet implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets tracking_fields
      *
-     * @param \OpenAPI\Client\Model\MeetingInfoGetTrackingFieldsInner[]|null $tracking_fields Tracking fields
+     * @param \Zoom\Api\Model\MeetingInfoGetTrackingFieldsInner[]|null $tracking_fields Tracking fields
      *
      * @return self
      */

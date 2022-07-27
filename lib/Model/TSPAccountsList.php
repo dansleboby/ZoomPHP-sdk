@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * TSPAccountsList Class Doc Comment
  *
  * @category Class
  * @description List of TSP accounts.
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class TSPAccountsList implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'conference_code' => 'string',
-        'dial_in_numbers' => '\OpenAPI\Client\Model\TSPAccountsListDialInNumbersInner[]',
+        'dial_in_numbers' => '\Zoom\Api\Model\TSPAccountsListDialInNumbersInner[]',
         'id' => 'string',
         'leader_pin' => 'string',
         'tsp_bridge' => 'string'
@@ -332,7 +332,7 @@ class TSPAccountsList implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets dial_in_numbers
      *
-     * @return \OpenAPI\Client\Model\TSPAccountsListDialInNumbersInner[]|null
+     * @return \Zoom\Api\Model\TSPAccountsListDialInNumbersInner[]|null
      */
     public function getDialInNumbers()
     {
@@ -342,7 +342,7 @@ class TSPAccountsList implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets dial_in_numbers
      *
-     * @param \OpenAPI\Client\Model\TSPAccountsListDialInNumbersInner[]|null $dial_in_numbers List of dial in numbers.
+     * @param \Zoom\Api\Model\TSPAccountsListDialInNumbersInner[]|null $dial_in_numbers List of dial in numbers.
      *
      * @return self
      */

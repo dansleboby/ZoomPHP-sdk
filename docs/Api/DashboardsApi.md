@@ -1,4 +1,4 @@
-# OpenAPI\Client\DashboardsApi
+# Zoom\Api\DashboardsApi
 
 All URIs are relative to https://api.zoom.us/v2.
 
@@ -38,7 +38,7 @@ Method | HTTP request | Description
 ## `dashboardCRC()`
 
 ```php
-dashboardCRC($from, $to): \OpenAPI\Client\Model\DashboardCRC200Response
+dashboardCRC($from, $to): \Zoom\Api\Model\DashboardCRC200Response
 ```
 
 Get CRC port usage
@@ -53,10 +53,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\DashboardsApi(
+$apiInstance = new Zoom\Api\Api\DashboardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -82,7 +82,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\DashboardCRC200Response**](../Model/DashboardCRC200Response.md)
+[**\Zoom\Api\Model\DashboardCRC200Response**](../Model/DashboardCRC200Response.md)
 
 ### Authorization
 
@@ -100,7 +100,7 @@ Name | Type | Description  | Notes
 ## `dashboardChat()`
 
 ```php
-dashboardChat($from, $to, $page_size, $next_page_token): \OpenAPI\Client\Model\DashboardChat200Response
+dashboardChat($from, $to, $page_size, $next_page_token): \Zoom\Api\Model\DashboardChat200Response
 ```
 
 Get chat metrics
@@ -115,10 +115,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\DashboardsApi(
+$apiInstance = new Zoom\Api\Api\DashboardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -148,7 +148,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\DashboardChat200Response**](../Model/DashboardChat200Response.md)
+[**\Zoom\Api\Model\DashboardChat200Response**](../Model/DashboardChat200Response.md)
 
 ### Authorization
 
@@ -166,7 +166,7 @@ Name | Type | Description  | Notes
 ## `dashboardClientFeedback()`
 
 ```php
-dashboardClientFeedback($from, $to): \OpenAPI\Client\Model\DashboardClientFeedback200Response
+dashboardClientFeedback($from, $to): \Zoom\Api\Model\DashboardClientFeedback200Response
 ```
 
 List Zoom meetings client feedback
@@ -181,10 +181,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\DashboardsApi(
+$apiInstance = new Zoom\Api\Api\DashboardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -210,7 +210,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\DashboardClientFeedback200Response**](../Model/DashboardClientFeedback200Response.md)
+[**\Zoom\Api\Model\DashboardClientFeedback200Response**](../Model/DashboardClientFeedback200Response.md)
 
 ### Authorization
 
@@ -228,7 +228,7 @@ Name | Type | Description  | Notes
 ## `dashboardClientFeedbackDetail()`
 
 ```php
-dashboardClientFeedbackDetail($feedback_id, $from, $to, $page_size, $next_page_token): \OpenAPI\Client\Model\DashboardClientFeedbackDetail200Response
+dashboardClientFeedbackDetail($feedback_id, $from, $to, $page_size, $next_page_token): \Zoom\Api\Model\DashboardClientFeedbackDetail200Response
 ```
 
 Get zoom meetings client feedback
@@ -243,10 +243,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\DashboardsApi(
+$apiInstance = new Zoom\Api\Api\DashboardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -278,7 +278,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\DashboardClientFeedbackDetail200Response**](../Model/DashboardClientFeedbackDetail200Response.md)
+[**\Zoom\Api\Model\DashboardClientFeedbackDetail200Response**](../Model/DashboardClientFeedbackDetail200Response.md)
 
 ### Authorization
 
@@ -296,7 +296,7 @@ Name | Type | Description  | Notes
 ## `dashboardIM()`
 
 ```php
-dashboardIM($from, $to, $page_size, $next_page_token): \OpenAPI\Client\Model\DashboardIM200Response
+dashboardIM($from, $to, $page_size, $next_page_token): \Zoom\Api\Model\DashboardIM200Response
 ```
 
 Get IM metrics
@@ -311,10 +311,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\DashboardsApi(
+$apiInstance = new Zoom\Api\Api\DashboardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -344,7 +344,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\DashboardIM200Response**](../Model/DashboardIM200Response.md)
+[**\Zoom\Api\Model\DashboardIM200Response**](../Model/DashboardIM200Response.md)
 
 ### Authorization
 
@@ -362,7 +362,7 @@ Name | Type | Description  | Notes
 ## `dashboardIssueDetailZoomRoom()`
 
 ```php
-dashboardIssueDetailZoomRoom($zoomroom_id, $from, $to, $page_size, $next_page_token): \OpenAPI\Client\Model\DashboardIssueDetailZoomRoom200Response
+dashboardIssueDetailZoomRoom($zoomroom_id, $from, $to, $page_size, $next_page_token): \Zoom\Api\Model\DashboardIssueDetailZoomRoom200Response
 ```
 
 Get issues of Zoom Rooms
@@ -377,10 +377,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\DashboardsApi(
+$apiInstance = new Zoom\Api\Api\DashboardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -412,7 +412,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\DashboardIssueDetailZoomRoom200Response**](../Model/DashboardIssueDetailZoomRoom200Response.md)
+[**\Zoom\Api\Model\DashboardIssueDetailZoomRoom200Response**](../Model/DashboardIssueDetailZoomRoom200Response.md)
 
 ### Authorization
 
@@ -430,7 +430,7 @@ Name | Type | Description  | Notes
 ## `dashboardIssueZoomRoom()`
 
 ```php
-dashboardIssueZoomRoom($from, $to): \OpenAPI\Client\Model\DashboardIssueZoomRoom200Response
+dashboardIssueZoomRoom($from, $to): \Zoom\Api\Model\DashboardIssueZoomRoom200Response
 ```
 
 Get top 25 Zoom Rooms with issues
@@ -445,10 +445,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\DashboardsApi(
+$apiInstance = new Zoom\Api\Api\DashboardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -474,7 +474,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\DashboardIssueZoomRoom200Response**](../Model/DashboardIssueZoomRoom200Response.md)
+[**\Zoom\Api\Model\DashboardIssueZoomRoom200Response**](../Model/DashboardIssueZoomRoom200Response.md)
 
 ### Authorization
 
@@ -492,7 +492,7 @@ Name | Type | Description  | Notes
 ## `dashboardMeetingDetail()`
 
 ```php
-dashboardMeetingDetail($meeting_id, $type): \OpenAPI\Client\Model\MeetingMetric
+dashboardMeetingDetail($meeting_id, $type): \Zoom\Api\Model\MeetingMetric
 ```
 
 Get meeting details
@@ -507,16 +507,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\DashboardsApi(
+$apiInstance = new Zoom\Api\Api\DashboardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$meeting_id = new \OpenAPI\Client\Model\ListPastMeetingPollsMeetingIdParameter(); // ListPastMeetingPollsMeetingIdParameter | The meeting's ID or universally unique ID (UUID).  * If you provide a meeting ID, the API will return a response for the latest meeting instance.  * If you provide a meeting UUID that begins with a `/` character or contains the `//` characters, you **must** double-encode the meeting UUID before making an API request.
+$meeting_id = new \Zoom\Api\Model\ListPastMeetingPollsMeetingIdParameter(); // ListPastMeetingPollsMeetingIdParameter | The meeting's ID or universally unique ID (UUID).  * If you provide a meeting ID, the API will return a response for the latest meeting instance.  * If you provide a meeting UUID that begins with a `/` character or contains the `//` characters, you **must** double-encode the meeting UUID before making an API request.
 $type = past; // string | The type of meeting to query:  * `past` — All past meetings.  * `pastOne` — All past one-user meetings.  * `live` - All live meetings.   This value defaults to `live`.
 
 try {
@@ -536,7 +536,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\MeetingMetric**](../Model/MeetingMetric.md)
+[**\Zoom\Api\Model\MeetingMetric**](../Model/MeetingMetric.md)
 
 ### Authorization
 
@@ -554,7 +554,7 @@ Name | Type | Description  | Notes
 ## `dashboardMeetingParticipantQOS()`
 
 ```php
-dashboardMeetingParticipantQOS($meeting_id, $participant_id, $type): \OpenAPI\Client\Model\QOSParticipant
+dashboardMeetingParticipantQOS($meeting_id, $participant_id, $type): \Zoom\Api\Model\QOSParticipant
 ```
 
 Get meeting participant QoS
@@ -569,16 +569,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\DashboardsApi(
+$apiInstance = new Zoom\Api\Api\DashboardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$meeting_id = new \OpenAPI\Client\Model\ListPastMeetingPollsMeetingIdParameter(); // ListPastMeetingPollsMeetingIdParameter | The meeting's ID or universally unique ID (UUID).  * If you provide a meeting ID, the API will return a response for the latest meeting instance.  * If you provide a meeting UUID that begins with a `/` character or contains the `//` characters, you **must** double-encode the meeting UUID before making an API request.
+$meeting_id = new \Zoom\Api\Model\ListPastMeetingPollsMeetingIdParameter(); // ListPastMeetingPollsMeetingIdParameter | The meeting's ID or universally unique ID (UUID).  * If you provide a meeting ID, the API will return a response for the latest meeting instance.  * If you provide a meeting UUID that begins with a `/` character or contains the `//` characters, you **must** double-encode the meeting UUID before making an API request.
 $participant_id = 32977920; // string | The participant's ID.
 $type = past; // string | The type of meeting to query:  * `past` — All past meetings.  * `live` - All live meetings.   This value defaults to `live`.
 
@@ -600,7 +600,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\QOSParticipant**](../Model/QOSParticipant.md)
+[**\Zoom\Api\Model\QOSParticipant**](../Model/QOSParticipant.md)
 
 ### Authorization
 
@@ -618,7 +618,7 @@ Name | Type | Description  | Notes
 ## `dashboardMeetingParticipantShare()`
 
 ```php
-dashboardMeetingParticipantShare($meeting_id, $type, $page_size, $next_page_token): \OpenAPI\Client\Model\DashboardMeetingParticipantShare200Response
+dashboardMeetingParticipantShare($meeting_id, $type, $page_size, $next_page_token): \Zoom\Api\Model\DashboardMeetingParticipantShare200Response
 ```
 
 Get sharing/recording details
@@ -633,16 +633,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\DashboardsApi(
+$apiInstance = new Zoom\Api\Api\DashboardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$meeting_id = new \OpenAPI\Client\Model\ListPastMeetingPollsMeetingIdParameter(); // ListPastMeetingPollsMeetingIdParameter | The meeting's ID or universally unique ID (UUID).  * If you provide a meeting ID, the API will return a response for the latest meeting instance.  * If you provide a meeting UUID that begins with a `/` character or contains the `//` characters, you **must** double-encode the meeting UUID before making an API request.
+$meeting_id = new \Zoom\Api\Model\ListPastMeetingPollsMeetingIdParameter(); // ListPastMeetingPollsMeetingIdParameter | The meeting's ID or universally unique ID (UUID).  * If you provide a meeting ID, the API will return a response for the latest meeting instance.  * If you provide a meeting UUID that begins with a `/` character or contains the `//` characters, you **must** double-encode the meeting UUID before making an API request.
 $type = past; // string | The type of meeting to query:  * `past` — All past meetings.  * `live` - All live meetings.   This value defaults to `live`.
 $page_size = 30; // int | The number of records returned within a single API call.
 $next_page_token = 0JblM1ZHFIdXjAHefkYOfTdCw1Lq9H1urw2; // string | The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceed the current page size. The expiration period for this token is 15 minutes.
@@ -666,7 +666,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\DashboardMeetingParticipantShare200Response**](../Model/DashboardMeetingParticipantShare200Response.md)
+[**\Zoom\Api\Model\DashboardMeetingParticipantShare200Response**](../Model/DashboardMeetingParticipantShare200Response.md)
 
 ### Authorization
 
@@ -684,7 +684,7 @@ Name | Type | Description  | Notes
 ## `dashboardMeetingParticipants()`
 
 ```php
-dashboardMeetingParticipants($meeting_id, $type, $page_size, $next_page_token, $include_fields): \OpenAPI\Client\Model\DashboardMeetingParticipants200Response
+dashboardMeetingParticipants($meeting_id, $type, $page_size, $next_page_token, $include_fields): \Zoom\Api\Model\DashboardMeetingParticipants200Response
 ```
 
 List meeting participants
@@ -699,16 +699,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\DashboardsApi(
+$apiInstance = new Zoom\Api\Api\DashboardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$meeting_id = new \OpenAPI\Client\Model\ListPastMeetingPollsMeetingIdParameter(); // ListPastMeetingPollsMeetingIdParameter | The meeting's ID or universally unique ID (UUID).  * If you provide a meeting ID, the API will return a response for the latest meeting instance.  * If you provide a meeting UUID that begins with a `/` character or contains the `//` characters, you **must** double-encode the meeting UUID before making an API request.
+$meeting_id = new \Zoom\Api\Model\ListPastMeetingPollsMeetingIdParameter(); // ListPastMeetingPollsMeetingIdParameter | The meeting's ID or universally unique ID (UUID).  * If you provide a meeting ID, the API will return a response for the latest meeting instance.  * If you provide a meeting UUID that begins with a `/` character or contains the `//` characters, you **must** double-encode the meeting UUID before making an API request.
 $type = past; // string | The type of meeting to query:  * `past` — All past meetings.  * `pastOne` — All past one-user meetings.  * `live` - All live meetings.   This value defaults to `live`.
 $page_size = 30; // int | The number of records returned within a single API call.
 $next_page_token = IAfJX3jsOLW7w3dokmFl84zOa0MAVGyMEB2; // string | The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
@@ -734,7 +734,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\DashboardMeetingParticipants200Response**](../Model/DashboardMeetingParticipants200Response.md)
+[**\Zoom\Api\Model\DashboardMeetingParticipants200Response**](../Model/DashboardMeetingParticipants200Response.md)
 
 ### Authorization
 
@@ -752,7 +752,7 @@ Name | Type | Description  | Notes
 ## `dashboardMeetingParticipantsQOS()`
 
 ```php
-dashboardMeetingParticipantsQOS($meeting_id, $type, $page_size, $next_page_token): \OpenAPI\Client\Model\QOSParticipantList
+dashboardMeetingParticipantsQOS($meeting_id, $type, $page_size, $next_page_token): \Zoom\Api\Model\QOSParticipantList
 ```
 
 List meeting participants QoS
@@ -767,16 +767,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\DashboardsApi(
+$apiInstance = new Zoom\Api\Api\DashboardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$meeting_id = new \OpenAPI\Client\Model\ListPastMeetingPollsMeetingIdParameter(); // ListPastMeetingPollsMeetingIdParameter | The meeting's ID or universally unique ID (UUID).  * If you provide a meeting ID, the API will return a response for the latest meeting instance.  * If you provide a meeting UUID that begins with a `/` character or contains the `//` characters, you **must** double-encode the meeting UUID before making an API request.
+$meeting_id = new \Zoom\Api\Model\ListPastMeetingPollsMeetingIdParameter(); // ListPastMeetingPollsMeetingIdParameter | The meeting's ID or universally unique ID (UUID).  * If you provide a meeting ID, the API will return a response for the latest meeting instance.  * If you provide a meeting UUID that begins with a `/` character or contains the `//` characters, you **must** double-encode the meeting UUID before making an API request.
 $type = past; // string | The type of meeting to query:  * `past` — All past meetings.  * `live` - All live meetings.   This value defaults to `live`.
 $page_size = 10; // int | The number of items returned per page.
 $next_page_token = IAfJX3jsOLW7w3dokmFl84zOa0MAVGyMEB2; // string | The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
@@ -800,7 +800,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\QOSParticipantList**](../Model/QOSParticipantList.md)
+[**\Zoom\Api\Model\QOSParticipantList**](../Model/QOSParticipantList.md)
 
 ### Authorization
 
@@ -818,7 +818,7 @@ Name | Type | Description  | Notes
 ## `dashboardMeetingParticipantsQOSSummary()`
 
 ```php
-dashboardMeetingParticipantsQOSSummary($meeting_id, $page_size, $next_page_token): \OpenAPI\Client\Model\ParticipantQOSSummaryList
+dashboardMeetingParticipantsQOSSummary($meeting_id, $page_size, $next_page_token): \Zoom\Api\Model\ParticipantQOSSummaryList
 ```
 
 List meeting participants QoS Summary
@@ -833,16 +833,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\DashboardsApi(
+$apiInstance = new Zoom\Api\Api\DashboardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$meeting_id = new \OpenAPI\Client\Model\ListPastMeetingPollsMeetingIdParameter(); // ListPastMeetingPollsMeetingIdParameter | The meeting's ID or universally unique ID (UUID).  * If you provide a meeting ID, the API will return a response for the latest meeting instance.  * If you provide a meeting UUID that begins with a `/` character or contains the `//` characters, you **must** double-encode the meeting UUID before making an API request.
+$meeting_id = new \Zoom\Api\Model\ListPastMeetingPollsMeetingIdParameter(); // ListPastMeetingPollsMeetingIdParameter | The meeting's ID or universally unique ID (UUID).  * If you provide a meeting ID, the API will return a response for the latest meeting instance.  * If you provide a meeting UUID that begins with a `/` character or contains the `//` characters, you **must** double-encode the meeting UUID before making an API request.
 $page_size = 10; // int | The number of items returned per page.
 $next_page_token = IAfJX3jsOLW7w3dokmFl84zOa0MAVGyMEB2; // string | The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
 
@@ -864,7 +864,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ParticipantQOSSummaryList**](../Model/ParticipantQOSSummaryList.md)
+[**\Zoom\Api\Model\ParticipantQOSSummaryList**](../Model/ParticipantQOSSummaryList.md)
 
 ### Authorization
 
@@ -882,7 +882,7 @@ Name | Type | Description  | Notes
 ## `dashboardMeetings()`
 
 ```php
-dashboardMeetings($from, $to, $type, $page_size, $next_page_token, $group_id, $include_fields): \OpenAPI\Client\Model\DashboardMeetings200Response
+dashboardMeetings($from, $to, $type, $page_size, $next_page_token, $group_id, $include_fields): \Zoom\Api\Model\DashboardMeetings200Response
 ```
 
 List meetings
@@ -897,10 +897,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\DashboardsApi(
+$apiInstance = new Zoom\Api\Api\DashboardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -936,7 +936,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\DashboardMeetings200Response**](../Model/DashboardMeetings200Response.md)
+[**\Zoom\Api\Model\DashboardMeetings200Response**](../Model/DashboardMeetings200Response.md)
 
 ### Authorization
 
@@ -954,7 +954,7 @@ Name | Type | Description  | Notes
 ## `dashboardQuality()`
 
 ```php
-dashboardQuality($from, $to, $type): \OpenAPI\Client\Model\DashboardQuality200Response
+dashboardQuality($from, $to, $type): \Zoom\Api\Model\DashboardQuality200Response
 ```
 
 Get meeting quality scores
@@ -969,10 +969,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\DashboardsApi(
+$apiInstance = new Zoom\Api\Api\DashboardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1000,7 +1000,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\DashboardQuality200Response**](../Model/DashboardQuality200Response.md)
+[**\Zoom\Api\Model\DashboardQuality200Response**](../Model/DashboardQuality200Response.md)
 
 ### Authorization
 
@@ -1018,7 +1018,7 @@ Name | Type | Description  | Notes
 ## `dashboardWebinarDetail()`
 
 ```php
-dashboardWebinarDetail($webinar_id, $type): \OpenAPI\Client\Model\WebinarMetric
+dashboardWebinarDetail($webinar_id, $type): \Zoom\Api\Model\WebinarMetric
 ```
 
 Get webinar details
@@ -1033,10 +1033,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\DashboardsApi(
+$apiInstance = new Zoom\Api\Api\DashboardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1062,7 +1062,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\WebinarMetric**](../Model/WebinarMetric.md)
+[**\Zoom\Api\Model\WebinarMetric**](../Model/WebinarMetric.md)
 
 ### Authorization
 
@@ -1080,7 +1080,7 @@ Name | Type | Description  | Notes
 ## `dashboardWebinarParticipantQOS()`
 
 ```php
-dashboardWebinarParticipantQOS($webinar_id, $participant_id, $type): \OpenAPI\Client\Model\QOSParticipant
+dashboardWebinarParticipantQOS($webinar_id, $participant_id, $type): \Zoom\Api\Model\QOSParticipant
 ```
 
 Get webinar participant QoS
@@ -1095,10 +1095,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\DashboardsApi(
+$apiInstance = new Zoom\Api\Api\DashboardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1126,7 +1126,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\QOSParticipant**](../Model/QOSParticipant.md)
+[**\Zoom\Api\Model\QOSParticipant**](../Model/QOSParticipant.md)
 
 ### Authorization
 
@@ -1144,7 +1144,7 @@ Name | Type | Description  | Notes
 ## `dashboardWebinarParticipantShare()`
 
 ```php
-dashboardWebinarParticipantShare($webinar_id, $type, $page_size, $next_page_token): \OpenAPI\Client\Model\DashboardWebinarParticipantShare200Response
+dashboardWebinarParticipantShare($webinar_id, $type, $page_size, $next_page_token): \Zoom\Api\Model\DashboardWebinarParticipantShare200Response
 ```
 
 Get sharing/recording details
@@ -1159,10 +1159,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\DashboardsApi(
+$apiInstance = new Zoom\Api\Api\DashboardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1192,7 +1192,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\DashboardWebinarParticipantShare200Response**](../Model/DashboardWebinarParticipantShare200Response.md)
+[**\Zoom\Api\Model\DashboardWebinarParticipantShare200Response**](../Model/DashboardWebinarParticipantShare200Response.md)
 
 ### Authorization
 
@@ -1210,7 +1210,7 @@ Name | Type | Description  | Notes
 ## `dashboardWebinarParticipants()`
 
 ```php
-dashboardWebinarParticipants($webinar_id, $type, $page_size, $next_page_token, $include_fields): \OpenAPI\Client\Model\DashboardWebinarParticipants200Response
+dashboardWebinarParticipants($webinar_id, $type, $page_size, $next_page_token, $include_fields): \Zoom\Api\Model\DashboardWebinarParticipants200Response
 ```
 
 Get webinar participants
@@ -1225,10 +1225,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\DashboardsApi(
+$apiInstance = new Zoom\Api\Api\DashboardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1260,7 +1260,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\DashboardWebinarParticipants200Response**](../Model/DashboardWebinarParticipants200Response.md)
+[**\Zoom\Api\Model\DashboardWebinarParticipants200Response**](../Model/DashboardWebinarParticipants200Response.md)
 
 ### Authorization
 
@@ -1278,7 +1278,7 @@ Name | Type | Description  | Notes
 ## `dashboardWebinarParticipantsQOS()`
 
 ```php
-dashboardWebinarParticipantsQOS($webinar_id, $type, $page_size, $next_page_token): \OpenAPI\Client\Model\QOSParticipantList
+dashboardWebinarParticipantsQOS($webinar_id, $type, $page_size, $next_page_token): \Zoom\Api\Model\QOSParticipantList
 ```
 
 List webinar participant QoS
@@ -1293,10 +1293,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\DashboardsApi(
+$apiInstance = new Zoom\Api\Api\DashboardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1326,7 +1326,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\QOSParticipantList**](../Model/QOSParticipantList.md)
+[**\Zoom\Api\Model\QOSParticipantList**](../Model/QOSParticipantList.md)
 
 ### Authorization
 
@@ -1359,10 +1359,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\DashboardsApi(
+$apiInstance = new Zoom\Api\Api\DashboardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1408,7 +1408,7 @@ Name | Type | Description  | Notes
 ## `dashboardWebinars()`
 
 ```php
-dashboardWebinars($from, $to, $type, $page_size, $next_page_token, $group_id): \OpenAPI\Client\Model\DashboardWebinars200Response
+dashboardWebinars($from, $to, $type, $page_size, $next_page_token, $group_id): \Zoom\Api\Model\DashboardWebinars200Response
 ```
 
 List webinars
@@ -1423,10 +1423,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\DashboardsApi(
+$apiInstance = new Zoom\Api\Api\DashboardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1460,7 +1460,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\DashboardWebinars200Response**](../Model/DashboardWebinars200Response.md)
+[**\Zoom\Api\Model\DashboardWebinars200Response**](../Model/DashboardWebinars200Response.md)
 
 ### Authorization
 
@@ -1478,7 +1478,7 @@ Name | Type | Description  | Notes
 ## `dashboardZoomRoom()`
 
 ```php
-dashboardZoomRoom($zoomroom_id, $from, $to, $page_size, $next_page_token): \OpenAPI\Client\Model\DashboardZoomRoom200Response
+dashboardZoomRoom($zoomroom_id, $from, $to, $page_size, $next_page_token): \Zoom\Api\Model\DashboardZoomRoom200Response
 ```
 
 Get Zoom Rooms details
@@ -1493,10 +1493,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\DashboardsApi(
+$apiInstance = new Zoom\Api\Api\DashboardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1528,7 +1528,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\DashboardZoomRoom200Response**](../Model/DashboardZoomRoom200Response.md)
+[**\Zoom\Api\Model\DashboardZoomRoom200Response**](../Model/DashboardZoomRoom200Response.md)
 
 ### Authorization
 
@@ -1546,7 +1546,7 @@ Name | Type | Description  | Notes
 ## `dashboardZoomRoomIssue()`
 
 ```php
-dashboardZoomRoomIssue($from, $to): \OpenAPI\Client\Model\DashboardZoomRoomIssue200Response
+dashboardZoomRoomIssue($from, $to): \Zoom\Api\Model\DashboardZoomRoomIssue200Response
 ```
 
 Get top 25 issues of Zoom Rooms
@@ -1561,10 +1561,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\DashboardsApi(
+$apiInstance = new Zoom\Api\Api\DashboardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1590,7 +1590,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\DashboardZoomRoomIssue200Response**](../Model/DashboardZoomRoomIssue200Response.md)
+[**\Zoom\Api\Model\DashboardZoomRoomIssue200Response**](../Model/DashboardZoomRoomIssue200Response.md)
 
 ### Authorization
 
@@ -1608,7 +1608,7 @@ Name | Type | Description  | Notes
 ## `dashboardZoomRooms()`
 
 ```php
-dashboardZoomRooms($page_size, $page_number, $next_page_token): \OpenAPI\Client\Model\ZoomRoomList
+dashboardZoomRooms($page_size, $page_number, $next_page_token): \Zoom\Api\Model\ZoomRoomList
 ```
 
 List Zoom Rooms
@@ -1623,10 +1623,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\DashboardsApi(
+$apiInstance = new Zoom\Api\Api\DashboardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1654,7 +1654,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ZoomRoomList**](../Model/ZoomRoomList.md)
+[**\Zoom\Api\Model\ZoomRoomList**](../Model/ZoomRoomList.md)
 
 ### Authorization
 
@@ -1672,7 +1672,7 @@ Name | Type | Description  | Notes
 ## `getClientVersions()`
 
 ```php
-getClientVersions(): \OpenAPI\Client\Model\GetClientVersions200Response
+getClientVersions(): \Zoom\Api\Model\GetClientVersions200Response
 ```
 
 List the client versions
@@ -1687,10 +1687,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\DashboardsApi(
+$apiInstance = new Zoom\Api\Api\DashboardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1711,7 +1711,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GetClientVersions200Response**](../Model/GetClientVersions200Response.md)
+[**\Zoom\Api\Model\GetClientVersions200Response**](../Model/GetClientVersions200Response.md)
 
 ### Authorization
 
@@ -1729,7 +1729,7 @@ This endpoint does not need any parameter.
 ## `listMeetingSatisfaction()`
 
 ```php
-listMeetingSatisfaction($from, $to): \OpenAPI\Client\Model\ListMeetingSatisfaction200Response
+listMeetingSatisfaction($from, $to): \Zoom\Api\Model\ListMeetingSatisfaction200Response
 ```
 
 List client meeting satisfaction
@@ -1744,10 +1744,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\DashboardsApi(
+$apiInstance = new Zoom\Api\Api\DashboardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1773,7 +1773,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ListMeetingSatisfaction200Response**](../Model/ListMeetingSatisfaction200Response.md)
+[**\Zoom\Api\Model\ListMeetingSatisfaction200Response**](../Model/ListMeetingSatisfaction200Response.md)
 
 ### Authorization
 
@@ -1791,7 +1791,7 @@ Name | Type | Description  | Notes
 ## `participantFeedback()`
 
 ```php
-participantFeedback($meeting_id, $type, $next_page_token, $page_size): \OpenAPI\Client\Model\ParticipantFeedback200Response
+participantFeedback($meeting_id, $type, $next_page_token, $page_size): \Zoom\Api\Model\ParticipantFeedback200Response
 ```
 
 Get post meeting feedback
@@ -1806,16 +1806,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\DashboardsApi(
+$apiInstance = new Zoom\Api\Api\DashboardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$meeting_id = new \OpenAPI\Client\Model\ListPastMeetingPollsMeetingIdParameter(); // ListPastMeetingPollsMeetingIdParameter | The meeting's ID or universally unique ID (UUID).  * If you provide a meeting ID, the API will return a response for the latest meeting instance.  * If you provide a meeting UUID that begins with a `/` character or contains the `//` characters, you **must** double-encode the meeting UUID before making an API request.
+$meeting_id = new \Zoom\Api\Model\ListPastMeetingPollsMeetingIdParameter(); // ListPastMeetingPollsMeetingIdParameter | The meeting's ID or universally unique ID (UUID).  * If you provide a meeting ID, the API will return a response for the latest meeting instance.  * If you provide a meeting UUID that begins with a `/` character or contains the `//` characters, you **must** double-encode the meeting UUID before making an API request.
 $type = past; // string | Specify a value to get the response for the corresponding meeting type. The value of this field can be one of the following:<br> <br>`past` - Meeting that already occurred in the specified date range.<br>`pastOne` - Past meetings that were attended by only one user. <br>`live` - Live meetings.<br><br>  If you do not provide this field, the default value will be `live` and thus, the API will only query responses for live meetings.
 $next_page_token = IAfJX3jsOLW7w3dokmFl84zOa0MAVGyMEB2; // string | The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
 $page_size = 30; // int | The number of records returned within a single API call.
@@ -1839,7 +1839,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ParticipantFeedback200Response**](../Model/ParticipantFeedback200Response.md)
+[**\Zoom\Api\Model\ParticipantFeedback200Response**](../Model/ParticipantFeedback200Response.md)
 
 ### Authorization
 
@@ -1857,7 +1857,7 @@ Name | Type | Description  | Notes
 ## `participantWebinarFeedback()`
 
 ```php
-participantWebinarFeedback($webinar_id, $type, $page_size, $next_page_token): \OpenAPI\Client\Model\ParticipantWebinarFeedback200Response
+participantWebinarFeedback($webinar_id, $type, $page_size, $next_page_token): \Zoom\Api\Model\ParticipantWebinarFeedback200Response
 ```
 
 Get post webinar feedback
@@ -1872,10 +1872,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\DashboardsApi(
+$apiInstance = new Zoom\Api\Api\DashboardsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1905,7 +1905,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ParticipantWebinarFeedback200Response**](../Model/ParticipantWebinarFeedback200Response.md)
+[**\Zoom\Api\Model\ParticipantWebinarFeedback200Response**](../Model/ParticipantWebinarFeedback200Response.md)
 
 ### Authorization
 

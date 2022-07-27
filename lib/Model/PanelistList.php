@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * PanelistList Class Doc Comment
  *
  * @category Class
  * @description List of panelists.
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class PanelistList implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'panelists' => '\OpenAPI\Client\Model\PanelistListPanelistsInner[]',
+        'panelists' => '\Zoom\Api\Model\PanelistListPanelistsInner[]',
         'total_records' => 'int'
     ];
 
@@ -213,7 +213,7 @@ class PanelistList implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets panelists
      *
-     * @return \OpenAPI\Client\Model\PanelistListPanelistsInner[]|null
+     * @return \Zoom\Api\Model\PanelistListPanelistsInner[]|null
      */
     public function getPanelists()
     {
@@ -223,7 +223,7 @@ class PanelistList implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets panelists
      *
-     * @param \OpenAPI\Client\Model\PanelistListPanelistsInner[]|null $panelists List of panelist objects.
+     * @param \Zoom\Api\Model\PanelistListPanelistsInner[]|null $panelists List of panelist objects.
      *
      * @return self
      */

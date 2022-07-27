@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * AccountSettingsSecurity Class Doc Comment
  *
  * @category Class
  * @description [Security settings](https://support.zoom.us/hc/en-us/articles/360034675592-Advanced-security-settings#h_bf8a25f6-9a66-447a-befd-f02ed3404f89) of an Account.
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -63,7 +63,7 @@ class AccountSettingsSecurity implements ModelInterface, ArrayAccess, \JsonSeria
         'user_modifiable_info_by_admin' => 'string[]',
         'hide_billing_info' => 'bool',
         'import_photos_from_devices' => 'bool',
-        'password_requirement' => '\OpenAPI\Client\Model\AccountSettingsSecurityPasswordRequirement',
+        'password_requirement' => '\Zoom\Api\Model\AccountSettingsSecurityPasswordRequirement',
         'sign_again_period_for_inactivity_on_client' => 'int',
         'sign_again_period_for_inactivity_on_web' => 'int',
         'sign_in_with_two_factor_auth' => 'string',
@@ -445,7 +445,7 @@ class AccountSettingsSecurity implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets password_requirement
      *
-     * @return \OpenAPI\Client\Model\AccountSettingsSecurityPasswordRequirement|null
+     * @return \Zoom\Api\Model\AccountSettingsSecurityPasswordRequirement|null
      */
     public function getPasswordRequirement()
     {
@@ -455,7 +455,7 @@ class AccountSettingsSecurity implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets password_requirement
      *
-     * @param \OpenAPI\Client\Model\AccountSettingsSecurityPasswordRequirement|null $password_requirement password_requirement
+     * @param \Zoom\Api\Model\AccountSettingsSecurityPasswordRequirement|null $password_requirement password_requirement
      *
      * @return self
      */

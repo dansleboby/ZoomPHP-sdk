@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Zoom\Api\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Zoom\Api\ApiException;
+use Zoom\Api\Configuration;
+use Zoom\Api\HeaderSelector;
+use Zoom\Api\ObjectSerializer;
 
 /**
  * TSPApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -121,9 +121,9 @@ class TSPApi
      * Get account&#39;s TSP information
      *
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Tsp200Response
+     * @return \Zoom\Api\Model\Tsp200Response
      */
     public function tsp()
     {
@@ -137,9 +137,9 @@ class TSPApi
      * Get account&#39;s TSP information
      *
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Tsp200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\Tsp200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function tspWithHttpInfo()
     {
@@ -182,23 +182,23 @@ class TSPApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Tsp200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\Tsp200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Tsp200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\Tsp200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Tsp200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\Tsp200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\Tsp200Response';
+            $returnType = '\Zoom\Api\Model\Tsp200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -219,7 +219,7 @@ class TSPApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Tsp200Response',
+                        '\Zoom\Api\Model\Tsp200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -259,7 +259,7 @@ class TSPApi
      */
     public function tspAsyncWithHttpInfo()
     {
-        $returnType = '\OpenAPI\Client\Model\Tsp200Response';
+        $returnType = '\Zoom\Api\Model\Tsp200Response';
         $request = $this->tspRequest();
 
         return $this->client
@@ -385,9 +385,9 @@ class TSPApi
      *
      * Update account&#39;s TSP information
      *
-     * @param  \OpenAPI\Client\Model\TspUpdateRequest $tsp_update_request TSP Account (required)
+     * @param  \Zoom\Api\Model\TspUpdateRequest $tsp_update_request TSP Account (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -401,9 +401,9 @@ class TSPApi
      *
      * Update account&#39;s TSP information
      *
-     * @param  \OpenAPI\Client\Model\TspUpdateRequest $tsp_update_request TSP Account (required)
+     * @param  \Zoom\Api\Model\TspUpdateRequest $tsp_update_request TSP Account (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -460,7 +460,7 @@ class TSPApi
      *
      * Update account&#39;s TSP information
      *
-     * @param  \OpenAPI\Client\Model\TspUpdateRequest $tsp_update_request TSP Account (required)
+     * @param  \Zoom\Api\Model\TspUpdateRequest $tsp_update_request TSP Account (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -480,7 +480,7 @@ class TSPApi
      *
      * Update account&#39;s TSP information
      *
-     * @param  \OpenAPI\Client\Model\TspUpdateRequest $tsp_update_request TSP Account (required)
+     * @param  \Zoom\Api\Model\TspUpdateRequest $tsp_update_request TSP Account (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -516,7 +516,7 @@ class TSPApi
     /**
      * Create request for operation 'tspUpdate'
      *
-     * @param  \OpenAPI\Client\Model\TspUpdateRequest $tsp_update_request TSP Account (required)
+     * @param  \Zoom\Api\Model\TspUpdateRequest $tsp_update_request TSP Account (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -614,9 +614,9 @@ class TSPApi
      * Set global dial-in URL for a TSP user
      *
      * @param  string $user_id The userId or email address of the user. (required)
-     * @param  \OpenAPI\Client\Model\TspGlobalDialIn $tsp_global_dial_in Global dial-in URL of the user. (optional)
+     * @param  \Zoom\Api\Model\TspGlobalDialIn $tsp_global_dial_in Global dial-in URL of the user. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -631,9 +631,9 @@ class TSPApi
      * Set global dial-in URL for a TSP user
      *
      * @param  string $user_id The userId or email address of the user. (required)
-     * @param  \OpenAPI\Client\Model\TspGlobalDialIn $tsp_global_dial_in Global dial-in URL of the user. (optional)
+     * @param  \Zoom\Api\Model\TspGlobalDialIn $tsp_global_dial_in Global dial-in URL of the user. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -691,7 +691,7 @@ class TSPApi
      * Set global dial-in URL for a TSP user
      *
      * @param  string $user_id The userId or email address of the user. (required)
-     * @param  \OpenAPI\Client\Model\TspGlobalDialIn $tsp_global_dial_in Global dial-in URL of the user. (optional)
+     * @param  \Zoom\Api\Model\TspGlobalDialIn $tsp_global_dial_in Global dial-in URL of the user. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -712,7 +712,7 @@ class TSPApi
      * Set global dial-in URL for a TSP user
      *
      * @param  string $user_id The userId or email address of the user. (required)
-     * @param  \OpenAPI\Client\Model\TspGlobalDialIn $tsp_global_dial_in Global dial-in URL of the user. (optional)
+     * @param  \Zoom\Api\Model\TspGlobalDialIn $tsp_global_dial_in Global dial-in URL of the user. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -749,7 +749,7 @@ class TSPApi
      * Create request for operation 'tspUrlUpdate'
      *
      * @param  string $user_id The userId or email address of the user. (required)
-     * @param  \OpenAPI\Client\Model\TspGlobalDialIn $tsp_global_dial_in Global dial-in URL of the user. (optional)
+     * @param  \Zoom\Api\Model\TspGlobalDialIn $tsp_global_dial_in Global dial-in URL of the user. (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -857,9 +857,9 @@ class TSPApi
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
      * @param  string $tsp_id TSP account ID. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TSPAccount
+     * @return \Zoom\Api\Model\TSPAccount
      */
     public function userTSP($user_id, $tsp_id)
     {
@@ -875,9 +875,9 @@ class TSPApi
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
      * @param  string $tsp_id TSP account ID. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TSPAccount, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\TSPAccount, HTTP status code, HTTP response headers (array of strings)
      */
     public function userTSPWithHttpInfo($user_id, $tsp_id)
     {
@@ -920,23 +920,23 @@ class TSPApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\TSPAccount' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\TSPAccount' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TSPAccount' !== 'string') {
+                        if ('\Zoom\Api\Model\TSPAccount' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TSPAccount', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\TSPAccount', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\TSPAccount';
+            $returnType = '\Zoom\Api\Model\TSPAccount';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -957,7 +957,7 @@ class TSPApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TSPAccount',
+                        '\Zoom\Api\Model\TSPAccount',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1001,7 +1001,7 @@ class TSPApi
      */
     public function userTSPAsyncWithHttpInfo($user_id, $tsp_id)
     {
-        $returnType = '\OpenAPI\Client\Model\TSPAccount';
+        $returnType = '\Zoom\Api\Model\TSPAccount';
         $request = $this->userTSPRequest($user_id, $tsp_id);
 
         return $this->client
@@ -1158,11 +1158,11 @@ class TSPApi
      * Add a user&#39;s TSP account
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
-     * @param  \OpenAPI\Client\Model\TSP $tsp TSP account. (required)
+     * @param  \Zoom\Api\Model\TSP $tsp TSP account. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\TSP
+     * @return \Zoom\Api\Model\TSP
      */
     public function userTSPCreate($user_id, $tsp)
     {
@@ -1176,11 +1176,11 @@ class TSPApi
      * Add a user&#39;s TSP account
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
-     * @param  \OpenAPI\Client\Model\TSP $tsp TSP account. (required)
+     * @param  \Zoom\Api\Model\TSP $tsp TSP account. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\TSP, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\TSP, HTTP status code, HTTP response headers (array of strings)
      */
     public function userTSPCreateWithHttpInfo($user_id, $tsp)
     {
@@ -1223,23 +1223,23 @@ class TSPApi
 
             switch($statusCode) {
                 case 201:
-                    if ('\OpenAPI\Client\Model\TSP' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\TSP' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\TSP' !== 'string') {
+                        if ('\Zoom\Api\Model\TSP' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\TSP', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\TSP', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\TSP';
+            $returnType = '\Zoom\Api\Model\TSP';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1260,7 +1260,7 @@ class TSPApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\TSP',
+                        '\Zoom\Api\Model\TSP',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1276,7 +1276,7 @@ class TSPApi
      * Add a user&#39;s TSP account
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
-     * @param  \OpenAPI\Client\Model\TSP $tsp TSP account. (required)
+     * @param  \Zoom\Api\Model\TSP $tsp TSP account. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1297,14 +1297,14 @@ class TSPApi
      * Add a user&#39;s TSP account
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
-     * @param  \OpenAPI\Client\Model\TSP $tsp TSP account. (required)
+     * @param  \Zoom\Api\Model\TSP $tsp TSP account. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function userTSPCreateAsyncWithHttpInfo($user_id, $tsp)
     {
-        $returnType = '\OpenAPI\Client\Model\TSP';
+        $returnType = '\Zoom\Api\Model\TSP';
         $request = $this->userTSPCreateRequest($user_id, $tsp);
 
         return $this->client
@@ -1347,7 +1347,7 @@ class TSPApi
      * Create request for operation 'userTSPCreate'
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
-     * @param  \OpenAPI\Client\Model\TSP $tsp TSP account. (required)
+     * @param  \Zoom\Api\Model\TSP $tsp TSP account. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1461,7 +1461,7 @@ class TSPApi
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
      * @param  string $tsp_id TSP account ID. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1478,7 +1478,7 @@ class TSPApi
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
      * @param  string $tsp_id TSP account ID. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1709,9 +1709,9 @@ class TSPApi
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
      * @param  string $tsp_id TSP account ID. (required)
-     * @param  \OpenAPI\Client\Model\TSPAccount1 $tsp_account1 TSP account. (required)
+     * @param  \Zoom\Api\Model\TSPAccount1 $tsp_account1 TSP account. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -1727,9 +1727,9 @@ class TSPApi
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
      * @param  string $tsp_id TSP account ID. (required)
-     * @param  \OpenAPI\Client\Model\TSPAccount1 $tsp_account1 TSP account. (required)
+     * @param  \Zoom\Api\Model\TSPAccount1 $tsp_account1 TSP account. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -1788,7 +1788,7 @@ class TSPApi
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
      * @param  string $tsp_id TSP account ID. (required)
-     * @param  \OpenAPI\Client\Model\TSPAccount1 $tsp_account1 TSP account. (required)
+     * @param  \Zoom\Api\Model\TSPAccount1 $tsp_account1 TSP account. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1810,7 +1810,7 @@ class TSPApi
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
      * @param  string $tsp_id TSP account ID. (required)
-     * @param  \OpenAPI\Client\Model\TSPAccount1 $tsp_account1 TSP account. (required)
+     * @param  \Zoom\Api\Model\TSPAccount1 $tsp_account1 TSP account. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1848,7 +1848,7 @@ class TSPApi
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
      * @param  string $tsp_id TSP account ID. (required)
-     * @param  \OpenAPI\Client\Model\TSPAccount1 $tsp_account1 TSP account. (required)
+     * @param  \Zoom\Api\Model\TSPAccount1 $tsp_account1 TSP account. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1975,9 +1975,9 @@ class TSPApi
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\UserTSPs200Response
+     * @return \Zoom\Api\Model\UserTSPs200Response
      */
     public function userTSPs($user_id)
     {
@@ -1992,9 +1992,9 @@ class TSPApi
      *
      * @param  GroupAdminsDeleteUserIdParameter $user_id The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\UserTSPs200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\UserTSPs200Response, HTTP status code, HTTP response headers (array of strings)
      */
     public function userTSPsWithHttpInfo($user_id)
     {
@@ -2037,23 +2037,23 @@ class TSPApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\UserTSPs200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\UserTSPs200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\UserTSPs200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\UserTSPs200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UserTSPs200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\UserTSPs200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\UserTSPs200Response';
+            $returnType = '\Zoom\Api\Model\UserTSPs200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2074,7 +2074,7 @@ class TSPApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\UserTSPs200Response',
+                        '\Zoom\Api\Model\UserTSPs200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2116,7 +2116,7 @@ class TSPApi
      */
     public function userTSPsAsyncWithHttpInfo($user_id)
     {
-        $returnType = '\OpenAPI\Client\Model\UserTSPs200Response';
+        $returnType = '\Zoom\Api\Model\UserTSPs200Response';
         $request = $this->userTSPsRequest($user_id);
 
         return $this->client

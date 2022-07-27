@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * AccountSettingsTelephony Class Doc Comment
  *
  * @category Class
  * @description Account Settings: Telephony.
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class AccountSettingsTelephony implements ModelInterface, ArrayAccess, \JsonSeri
       */
     protected static $openAPITypes = [
         'audio_conference_info' => 'string',
-        'telephony_regions' => '\OpenAPI\Client\Model\AccountSettingsTelephonyTelephonyRegions',
+        'telephony_regions' => '\Zoom\Api\Model\AccountSettingsTelephonyTelephonyRegions',
         'third_party_audio' => 'bool'
     ];
 
@@ -243,7 +243,7 @@ class AccountSettingsTelephony implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets telephony_regions
      *
-     * @return \OpenAPI\Client\Model\AccountSettingsTelephonyTelephonyRegions|null
+     * @return \Zoom\Api\Model\AccountSettingsTelephonyTelephonyRegions|null
      */
     public function getTelephonyRegions()
     {
@@ -253,7 +253,7 @@ class AccountSettingsTelephony implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets telephony_regions
      *
-     * @param \OpenAPI\Client\Model\AccountSettingsTelephonyTelephonyRegions|null $telephony_regions telephony_regions
+     * @param \Zoom\Api\Model\AccountSettingsTelephonyTelephonyRegions|null $telephony_regions telephony_regions
      *
      * @return self
      */

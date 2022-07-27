@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * UserSettingsMeetingSettings Class Doc Comment
  *
  * @category Class
  * @description 
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -64,7 +64,7 @@ class UserSettingsMeetingSettings implements ModelInterface, ArrayAccess, \JsonS
         'force_pmi_jbh_password' => 'bool',
         'host_video' => 'bool',
         'join_before_host' => 'bool',
-        'meeting_password_requirement' => '\OpenAPI\Client\Model\UserSettingsMeetingSettingsMeetingPasswordRequirement',
+        'meeting_password_requirement' => '\Zoom\Api\Model\UserSettingsMeetingSettingsMeetingPasswordRequirement',
         'participants_video' => 'bool',
         'personal_meeting' => 'bool',
         'pmi_password' => 'string',
@@ -511,7 +511,7 @@ class UserSettingsMeetingSettings implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Gets meeting_password_requirement
      *
-     * @return \OpenAPI\Client\Model\UserSettingsMeetingSettingsMeetingPasswordRequirement|null
+     * @return \Zoom\Api\Model\UserSettingsMeetingSettingsMeetingPasswordRequirement|null
      */
     public function getMeetingPasswordRequirement()
     {
@@ -521,7 +521,7 @@ class UserSettingsMeetingSettings implements ModelInterface, ArrayAccess, \JsonS
     /**
      * Sets meeting_password_requirement
      *
-     * @param \OpenAPI\Client\Model\UserSettingsMeetingSettingsMeetingPasswordRequirement|null $meeting_password_requirement meeting_password_requirement
+     * @param \Zoom\Api\Model\UserSettingsMeetingSettingsMeetingPasswordRequirement|null $meeting_password_requirement meeting_password_requirement
      *
      * @return self
      */

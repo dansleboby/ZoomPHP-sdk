@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * UserAssistantsList Class Doc Comment
  *
  * @category Class
  * @description List of user&#39;s assistants.
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class UserAssistantsList implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'assistants' => '\OpenAPI\Client\Model\UserAssistantsListAssistantsInner[]'
+        'assistants' => '\Zoom\Api\Model\UserAssistantsListAssistantsInner[]'
     ];
 
     /**
@@ -207,7 +207,7 @@ class UserAssistantsList implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets assistants
      *
-     * @return \OpenAPI\Client\Model\UserAssistantsListAssistantsInner[]|null
+     * @return \Zoom\Api\Model\UserAssistantsListAssistantsInner[]|null
      */
     public function getAssistants()
     {
@@ -217,7 +217,7 @@ class UserAssistantsList implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets assistants
      *
-     * @param \OpenAPI\Client\Model\UserAssistantsListAssistantsInner[]|null $assistants List of User's assistants.
+     * @param \Zoom\Api\Model\UserAssistantsListAssistantsInner[]|null $assistants List of User's assistants.
      *
      * @return self
      */

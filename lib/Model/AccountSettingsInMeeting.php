@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * AccountSettingsInMeeting Class Doc Comment
  *
  * @category Class
  * @description Account Settings: In Meeting.
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -75,7 +75,7 @@ class AccountSettingsInMeeting implements ModelInterface, ArrayAccess, \JsonSeri
         'breakout_room_schedule' => 'bool',
         'chat' => 'bool',
         'closed_caption' => 'bool',
-        'closed_captioning' => '\OpenAPI\Client\Model\AccountSettingsInMeetingClosedCaptioning',
+        'closed_captioning' => '\Zoom\Api\Model\AccountSettingsInMeetingClosedCaptioning',
         'co_host' => 'bool',
         'custom_data_center_regions' => 'bool',
         'custom_live_streaming_service' => 'bool',
@@ -94,17 +94,17 @@ class AccountSettingsInMeeting implements ModelInterface, ArrayAccess, \JsonSeri
         'group_hd' => 'bool',
         'join_from_desktop' => 'bool',
         'join_from_mobile' => 'bool',
-        'language_interpretation' => '\OpenAPI\Client\Model\AccountSettingsInMeetingLanguageInterpretation',
+        'language_interpretation' => '\Zoom\Api\Model\AccountSettingsInMeetingLanguageInterpretation',
         'live_streaming_facebook' => 'bool',
         'live_streaming_youtube' => 'bool',
-        'manual_captioning' => '\OpenAPI\Client\Model\GetGroupSettings200ResponseOneOfInMeetingManualCaptioning',
+        'manual_captioning' => '\Zoom\Api\Model\GetGroupSettings200ResponseOneOfInMeetingManualCaptioning',
         'meeting_reactions' => 'bool',
         'meeting_survey' => 'bool',
         'original_audio' => 'bool',
         'p2p_connetion' => 'bool',
         'p2p_ports' => 'bool',
         'polling' => 'bool',
-        'meeting_polling' => '\OpenAPI\Client\Model\AccountSettingsInMeetingMeetingPolling',
+        'meeting_polling' => '\Zoom\Api\Model\AccountSettingsInMeetingMeetingPolling',
         'ports_range' => 'string',
         'post_meeting_feedback' => 'bool',
         'private_chat' => 'bool',
@@ -122,11 +122,11 @@ class AccountSettingsInMeeting implements ModelInterface, ArrayAccess, \JsonSeri
         'unchecked_data_center_regions' => 'string[]',
         'use_html_format_email' => 'bool',
         'virtual_background' => 'bool',
-        'virtual_background_settings' => '\OpenAPI\Client\Model\AccountSettingsInMeetingVirtualBackgroundSettings',
+        'virtual_background_settings' => '\Zoom\Api\Model\AccountSettingsInMeetingVirtualBackgroundSettings',
         'watermark' => 'bool',
-        'webinar_chat' => '\OpenAPI\Client\Model\AccountSettingsInMeetingWebinarChat',
-        'webinar_live_streaming' => '\OpenAPI\Client\Model\AccountSettingsInMeetingWebinarLiveStreaming',
-        'webinar_polling' => '\OpenAPI\Client\Model\AccountSettingsInMeetingWebinarPolling',
+        'webinar_chat' => '\Zoom\Api\Model\AccountSettingsInMeetingWebinarChat',
+        'webinar_live_streaming' => '\Zoom\Api\Model\AccountSettingsInMeetingWebinarLiveStreaming',
+        'webinar_polling' => '\Zoom\Api\Model\AccountSettingsInMeetingWebinarPolling',
         'webinar_question_answer' => 'bool',
         'webinar_survey' => 'bool',
         'whiteboard' => 'bool',
@@ -1325,7 +1325,7 @@ class AccountSettingsInMeeting implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets closed_captioning
      *
-     * @return \OpenAPI\Client\Model\AccountSettingsInMeetingClosedCaptioning|null
+     * @return \Zoom\Api\Model\AccountSettingsInMeetingClosedCaptioning|null
      */
     public function getClosedCaptioning()
     {
@@ -1335,7 +1335,7 @@ class AccountSettingsInMeeting implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets closed_captioning
      *
-     * @param \OpenAPI\Client\Model\AccountSettingsInMeetingClosedCaptioning|null $closed_captioning closed_captioning
+     * @param \Zoom\Api\Model\AccountSettingsInMeetingClosedCaptioning|null $closed_captioning closed_captioning
      *
      * @return self
      */
@@ -1816,7 +1816,7 @@ class AccountSettingsInMeeting implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets language_interpretation
      *
-     * @return \OpenAPI\Client\Model\AccountSettingsInMeetingLanguageInterpretation|null
+     * @return \Zoom\Api\Model\AccountSettingsInMeetingLanguageInterpretation|null
      */
     public function getLanguageInterpretation()
     {
@@ -1826,7 +1826,7 @@ class AccountSettingsInMeeting implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets language_interpretation
      *
-     * @param \OpenAPI\Client\Model\AccountSettingsInMeetingLanguageInterpretation|null $language_interpretation language_interpretation
+     * @param \Zoom\Api\Model\AccountSettingsInMeetingLanguageInterpretation|null $language_interpretation language_interpretation
      *
      * @return self
      */
@@ -1888,7 +1888,7 @@ class AccountSettingsInMeeting implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets manual_captioning
      *
-     * @return \OpenAPI\Client\Model\GetGroupSettings200ResponseOneOfInMeetingManualCaptioning|null
+     * @return \Zoom\Api\Model\GetGroupSettings200ResponseOneOfInMeetingManualCaptioning|null
      */
     public function getManualCaptioning()
     {
@@ -1898,7 +1898,7 @@ class AccountSettingsInMeeting implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets manual_captioning
      *
-     * @param \OpenAPI\Client\Model\GetGroupSettings200ResponseOneOfInMeetingManualCaptioning|null $manual_captioning manual_captioning
+     * @param \Zoom\Api\Model\GetGroupSettings200ResponseOneOfInMeetingManualCaptioning|null $manual_captioning manual_captioning
      *
      * @return self
      */
@@ -2056,7 +2056,7 @@ class AccountSettingsInMeeting implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets meeting_polling
      *
-     * @return \OpenAPI\Client\Model\AccountSettingsInMeetingMeetingPolling|null
+     * @return \Zoom\Api\Model\AccountSettingsInMeetingMeetingPolling|null
      */
     public function getMeetingPolling()
     {
@@ -2066,7 +2066,7 @@ class AccountSettingsInMeeting implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets meeting_polling
      *
-     * @param \OpenAPI\Client\Model\AccountSettingsInMeetingMeetingPolling|null $meeting_polling meeting_polling
+     * @param \Zoom\Api\Model\AccountSettingsInMeetingMeetingPolling|null $meeting_polling meeting_polling
      *
      * @return self
      */
@@ -2497,7 +2497,7 @@ class AccountSettingsInMeeting implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets virtual_background_settings
      *
-     * @return \OpenAPI\Client\Model\AccountSettingsInMeetingVirtualBackgroundSettings|null
+     * @return \Zoom\Api\Model\AccountSettingsInMeetingVirtualBackgroundSettings|null
      */
     public function getVirtualBackgroundSettings()
     {
@@ -2507,7 +2507,7 @@ class AccountSettingsInMeeting implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets virtual_background_settings
      *
-     * @param \OpenAPI\Client\Model\AccountSettingsInMeetingVirtualBackgroundSettings|null $virtual_background_settings virtual_background_settings
+     * @param \Zoom\Api\Model\AccountSettingsInMeetingVirtualBackgroundSettings|null $virtual_background_settings virtual_background_settings
      *
      * @return self
      */
@@ -2545,7 +2545,7 @@ class AccountSettingsInMeeting implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets webinar_chat
      *
-     * @return \OpenAPI\Client\Model\AccountSettingsInMeetingWebinarChat|null
+     * @return \Zoom\Api\Model\AccountSettingsInMeetingWebinarChat|null
      */
     public function getWebinarChat()
     {
@@ -2555,7 +2555,7 @@ class AccountSettingsInMeeting implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets webinar_chat
      *
-     * @param \OpenAPI\Client\Model\AccountSettingsInMeetingWebinarChat|null $webinar_chat webinar_chat
+     * @param \Zoom\Api\Model\AccountSettingsInMeetingWebinarChat|null $webinar_chat webinar_chat
      *
      * @return self
      */
@@ -2569,7 +2569,7 @@ class AccountSettingsInMeeting implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets webinar_live_streaming
      *
-     * @return \OpenAPI\Client\Model\AccountSettingsInMeetingWebinarLiveStreaming|null
+     * @return \Zoom\Api\Model\AccountSettingsInMeetingWebinarLiveStreaming|null
      */
     public function getWebinarLiveStreaming()
     {
@@ -2579,7 +2579,7 @@ class AccountSettingsInMeeting implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets webinar_live_streaming
      *
-     * @param \OpenAPI\Client\Model\AccountSettingsInMeetingWebinarLiveStreaming|null $webinar_live_streaming webinar_live_streaming
+     * @param \Zoom\Api\Model\AccountSettingsInMeetingWebinarLiveStreaming|null $webinar_live_streaming webinar_live_streaming
      *
      * @return self
      */
@@ -2593,7 +2593,7 @@ class AccountSettingsInMeeting implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Gets webinar_polling
      *
-     * @return \OpenAPI\Client\Model\AccountSettingsInMeetingWebinarPolling|null
+     * @return \Zoom\Api\Model\AccountSettingsInMeetingWebinarPolling|null
      */
     public function getWebinarPolling()
     {
@@ -2603,7 +2603,7 @@ class AccountSettingsInMeeting implements ModelInterface, ArrayAccess, \JsonSeri
     /**
      * Sets webinar_polling
      *
-     * @param \OpenAPI\Client\Model\AccountSettingsInMeetingWebinarPolling|null $webinar_polling webinar_polling
+     * @param \Zoom\Api\Model\AccountSettingsInMeetingWebinarPolling|null $webinar_polling webinar_polling
      *
      * @return self
      */

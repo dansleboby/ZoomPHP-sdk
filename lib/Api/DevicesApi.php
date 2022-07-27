@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Zoom\Api\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Zoom\Api\ApiException;
+use Zoom\Api\Configuration;
+use Zoom\Api\HeaderSelector;
+use Zoom\Api\ObjectSerializer;
 
 /**
  * DevicesApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -120,9 +120,9 @@ class DevicesApi
      *
      * Create a H.323/SIP device
      *
-     * @param  \OpenAPI\Client\Model\Device $device H.323/SIP device. (required)
+     * @param  \Zoom\Api\Model\Device $device H.323/SIP device. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -136,9 +136,9 @@ class DevicesApi
      *
      * Create a H.323/SIP device
      *
-     * @param  \OpenAPI\Client\Model\Device $device H.323/SIP device. (required)
+     * @param  \Zoom\Api\Model\Device $device H.323/SIP device. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -188,7 +188,7 @@ class DevicesApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\DeviceCreate201Response',
+                        '\Zoom\Api\Model\DeviceCreate201Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -203,7 +203,7 @@ class DevicesApi
      *
      * Create a H.323/SIP device
      *
-     * @param  \OpenAPI\Client\Model\Device $device H.323/SIP device. (required)
+     * @param  \Zoom\Api\Model\Device $device H.323/SIP device. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -223,7 +223,7 @@ class DevicesApi
      *
      * Create a H.323/SIP device
      *
-     * @param  \OpenAPI\Client\Model\Device $device H.323/SIP device. (required)
+     * @param  \Zoom\Api\Model\Device $device H.323/SIP device. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -259,7 +259,7 @@ class DevicesApi
     /**
      * Create request for operation 'deviceCreate'
      *
-     * @param  \OpenAPI\Client\Model\Device $device H.323/SIP device. (required)
+     * @param  \Zoom\Api\Model\Device $device H.323/SIP device. (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -358,7 +358,7 @@ class DevicesApi
      *
      * @param  string $device_id The device ID. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -374,7 +374,7 @@ class DevicesApi
      *
      * @param  string $device_id The device ID. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -590,9 +590,9 @@ class DevicesApi
      * @param  int $page_number **Deprecated.** We will no longer support this field in a future release. Instead, use the &#x60;next_page_token&#x60; for pagination. (optional, default to 1) (deprecated)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\DeviceList
+     * @return \Zoom\Api\Model\DeviceList
      */
     public function deviceList($page_size = 30, $page_number = 1, $next_page_token = null)
     {
@@ -609,9 +609,9 @@ class DevicesApi
      * @param  int $page_number **Deprecated.** We will no longer support this field in a future release. Instead, use the &#x60;next_page_token&#x60; for pagination. (optional, default to 1) (deprecated)
      * @param  string $next_page_token The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. (optional)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\DeviceList, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\DeviceList, HTTP status code, HTTP response headers (array of strings)
      */
     public function deviceListWithHttpInfo($page_size = 30, $page_number = 1, $next_page_token = null)
     {
@@ -654,23 +654,23 @@ class DevicesApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\DeviceList' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\DeviceList' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\DeviceList' !== 'string') {
+                        if ('\Zoom\Api\Model\DeviceList' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\DeviceList', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\DeviceList', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\DeviceList';
+            $returnType = '\Zoom\Api\Model\DeviceList';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -691,7 +691,7 @@ class DevicesApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\DeviceList',
+                        '\Zoom\Api\Model\DeviceList',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -737,7 +737,7 @@ class DevicesApi
      */
     public function deviceListAsyncWithHttpInfo($page_size = 30, $page_number = 1, $next_page_token = null)
     {
-        $returnType = '\OpenAPI\Client\Model\DeviceList';
+        $returnType = '\Zoom\Api\Model\DeviceList';
         $request = $this->deviceListRequest($page_size, $page_number, $next_page_token);
 
         return $this->client
@@ -898,9 +898,9 @@ class DevicesApi
      * Update a H.323/SIP device
      *
      * @param  string $device_id The device ID. (required)
-     * @param  \OpenAPI\Client\Model\Device $device device (required)
+     * @param  \Zoom\Api\Model\Device $device device (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return void
      */
@@ -915,9 +915,9 @@ class DevicesApi
      * Update a H.323/SIP device
      *
      * @param  string $device_id The device ID. (required)
-     * @param  \OpenAPI\Client\Model\Device $device (required)
+     * @param  \Zoom\Api\Model\Device $device (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -975,7 +975,7 @@ class DevicesApi
      * Update a H.323/SIP device
      *
      * @param  string $device_id The device ID. (required)
-     * @param  \OpenAPI\Client\Model\Device $device (required)
+     * @param  \Zoom\Api\Model\Device $device (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -996,7 +996,7 @@ class DevicesApi
      * Update a H.323/SIP device
      *
      * @param  string $device_id The device ID. (required)
-     * @param  \OpenAPI\Client\Model\Device $device (required)
+     * @param  \Zoom\Api\Model\Device $device (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1033,7 +1033,7 @@ class DevicesApi
      * Create request for operation 'deviceUpdate'
      *
      * @param  string $device_id The device ID. (required)
-     * @param  \OpenAPI\Client\Model\Device $device (required)
+     * @param  \Zoom\Api\Model\Device $device (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

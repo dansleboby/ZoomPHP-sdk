@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * WebinarRegistrantQuestions Class Doc Comment
  *
  * @category Class
  * @description Webinar Registrant Questions
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,8 +58,8 @@ class WebinarRegistrantQuestions implements ModelInterface, ArrayAccess, \JsonSe
       * @var string[]
       */
     protected static $openAPITypes = [
-        'custom_questions' => '\OpenAPI\Client\Model\WebinarRegistrantQuestionsCustomQuestionsInner[]',
-        'questions' => '\OpenAPI\Client\Model\WebinarRegistrantQuestionsQuestionsInner[]'
+        'custom_questions' => '\Zoom\Api\Model\WebinarRegistrantQuestionsCustomQuestionsInner[]',
+        'questions' => '\Zoom\Api\Model\WebinarRegistrantQuestionsQuestionsInner[]'
     ];
 
     /**
@@ -213,7 +213,7 @@ class WebinarRegistrantQuestions implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets custom_questions
      *
-     * @return \OpenAPI\Client\Model\WebinarRegistrantQuestionsCustomQuestionsInner[]|null
+     * @return \Zoom\Api\Model\WebinarRegistrantQuestionsCustomQuestionsInner[]|null
      */
     public function getCustomQuestions()
     {
@@ -223,7 +223,7 @@ class WebinarRegistrantQuestions implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets custom_questions
      *
-     * @param \OpenAPI\Client\Model\WebinarRegistrantQuestionsCustomQuestionsInner[]|null $custom_questions Array of Registrant Custom Questions.
+     * @param \Zoom\Api\Model\WebinarRegistrantQuestionsCustomQuestionsInner[]|null $custom_questions Array of Registrant Custom Questions.
      *
      * @return self
      */
@@ -237,7 +237,7 @@ class WebinarRegistrantQuestions implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets questions
      *
-     * @return \OpenAPI\Client\Model\WebinarRegistrantQuestionsQuestionsInner[]|null
+     * @return \Zoom\Api\Model\WebinarRegistrantQuestionsQuestionsInner[]|null
      */
     public function getQuestions()
     {
@@ -247,7 +247,7 @@ class WebinarRegistrantQuestions implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets questions
      *
-     * @param \OpenAPI\Client\Model\WebinarRegistrantQuestionsQuestionsInner[]|null $questions Array of registration fields whose values should be provided by registrants during registration.
+     * @param \Zoom\Api\Model\WebinarRegistrantQuestionsQuestionsInner[]|null $questions Array of registration fields whose values should be provided by registrants during registration.
      *
      * @return self
      */

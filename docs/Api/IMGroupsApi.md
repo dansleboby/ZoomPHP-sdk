@@ -1,4 +1,4 @@
-# OpenAPI\Client\IMGroupsApi
+# Zoom\Api\IMGroupsApi
 
 All URIs are relative to https://api.zoom.us/v2.
 
@@ -17,7 +17,7 @@ Method | HTTP request | Description
 ## `imGroup()`
 
 ```php
-imGroup($group_id): \OpenAPI\Client\Model\ImGroup200Response
+imGroup($group_id): \Zoom\Api\Model\ImGroup200Response
 ```
 
 Retrieve an IM directory group
@@ -32,10 +32,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\IMGroupsApi(
+$apiInstance = new Zoom\Api\Api\IMGroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -59,7 +59,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ImGroup200Response**](../Model/ImGroup200Response.md)
+[**\Zoom\Api\Model\ImGroup200Response**](../Model/ImGroup200Response.md)
 
 ### Authorization
 
@@ -92,16 +92,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\IMGroupsApi(
+$apiInstance = new Zoom\Api\Api\IMGroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$im_group_create_request = new \OpenAPI\Client\Model\ImGroupCreateRequest(); // \OpenAPI\Client\Model\ImGroupCreateRequest
+$im_group_create_request = new \Zoom\Api\Model\ImGroupCreateRequest(); // \Zoom\Api\Model\ImGroupCreateRequest
 
 try {
     $apiInstance->imGroupCreate($im_group_create_request);
@@ -114,7 +114,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **im_group_create_request** | [**\OpenAPI\Client\Model\ImGroupCreateRequest**](../Model/ImGroupCreateRequest.md)|  |
+ **im_group_create_request** | [**\Zoom\Api\Model\ImGroupCreateRequest**](../Model/ImGroupCreateRequest.md)|  |
 
 ### Return type
 
@@ -151,10 +151,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\IMGroupsApi(
+$apiInstance = new Zoom\Api\Api\IMGroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -195,7 +195,7 @@ void (empty response body)
 ## `imGroupMembers()`
 
 ```php
-imGroupMembers($group_id, $page_size, $page_number, $next_page_token): \OpenAPI\Client\Model\GroupMemberList
+imGroupMembers($group_id, $page_size, $page_number, $next_page_token): \Zoom\Api\Model\GroupMemberList
 ```
 
 List IM directory group members
@@ -210,10 +210,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\IMGroupsApi(
+$apiInstance = new Zoom\Api\Api\IMGroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -243,7 +243,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GroupMemberList**](../Model/GroupMemberList.md)
+[**\Zoom\Api\Model\GroupMemberList**](../Model/GroupMemberList.md)
 
 ### Authorization
 
@@ -276,17 +276,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\IMGroupsApi(
+$apiInstance = new Zoom\Api\Api\IMGroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $group_id = SobVexyrQjqCkcxjpBWi6w; // string | The group ID.<br> Can be retrieved by calling the [**List groups**](/docs/api-reference/zoom-api/methods#operation/groups) API.
-$im_group_members_create_request = new \OpenAPI\Client\Model\ImGroupMembersCreateRequest(); // \OpenAPI\Client\Model\ImGroupMembersCreateRequest
+$im_group_members_create_request = new \Zoom\Api\Model\ImGroupMembersCreateRequest(); // \Zoom\Api\Model\ImGroupMembersCreateRequest
 
 try {
     $apiInstance->imGroupMembersCreate($group_id, $im_group_members_create_request);
@@ -300,7 +300,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **group_id** | **string**| The group ID.&lt;br&gt; Can be retrieved by calling the [**List groups**](/docs/api-reference/zoom-api/methods#operation/groups) API. |
- **im_group_members_create_request** | [**\OpenAPI\Client\Model\ImGroupMembersCreateRequest**](../Model/ImGroupMembersCreateRequest.md)|  |
+ **im_group_members_create_request** | [**\Zoom\Api\Model\ImGroupMembersCreateRequest**](../Model/ImGroupMembersCreateRequest.md)|  |
 
 ### Return type
 
@@ -337,10 +337,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\IMGroupsApi(
+$apiInstance = new Zoom\Api\Api\IMGroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -398,17 +398,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\IMGroupsApi(
+$apiInstance = new Zoom\Api\Api\IMGroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $group_id = SobVexyrQjqCkcxjpBWi6w; // string | The group ID.<br> Can be retrieved by calling the [**List groups**](/docs/api-reference/zoom-api/methods#operation/groups) API.
-$im_group_update_request = new \OpenAPI\Client\Model\ImGroupUpdateRequest(); // \OpenAPI\Client\Model\ImGroupUpdateRequest
+$im_group_update_request = new \Zoom\Api\Model\ImGroupUpdateRequest(); // \Zoom\Api\Model\ImGroupUpdateRequest
 
 try {
     $apiInstance->imGroupUpdate($group_id, $im_group_update_request);
@@ -422,7 +422,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **group_id** | **string**| The group ID.&lt;br&gt; Can be retrieved by calling the [**List groups**](/docs/api-reference/zoom-api/methods#operation/groups) API. |
- **im_group_update_request** | [**\OpenAPI\Client\Model\ImGroupUpdateRequest**](../Model/ImGroupUpdateRequest.md)|  |
+ **im_group_update_request** | [**\Zoom\Api\Model\ImGroupUpdateRequest**](../Model/ImGroupUpdateRequest.md)|  |
 
 ### Return type
 
@@ -444,7 +444,7 @@ void (empty response body)
 ## `imGroups()`
 
 ```php
-imGroups(): \OpenAPI\Client\Model\IMGroupList
+imGroups(): \Zoom\Api\Model\IMGroupList
 ```
 
 List IM directory groups
@@ -459,10 +459,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\IMGroupsApi(
+$apiInstance = new Zoom\Api\Api\IMGroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -483,7 +483,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\IMGroupList**](../Model/IMGroupList.md)
+[**\Zoom\Api\Model\IMGroupList**](../Model/IMGroupList.md)
 
 ### Authorization
 

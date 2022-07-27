@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * RoleMembersList Class Doc Comment
  *
  * @category Class
  * @description List of a Role Members
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class RoleMembersList implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'members' => '\OpenAPI\Client\Model\RoleMembersListMembersInner[]',
+        'members' => '\Zoom\Api\Model\RoleMembersListMembersInner[]',
         'next_page_token' => 'string',
         'page_count' => 'int',
         'page_number' => 'int',
@@ -241,7 +241,7 @@ class RoleMembersList implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets members
      *
-     * @return \OpenAPI\Client\Model\RoleMembersListMembersInner[]|null
+     * @return \Zoom\Api\Model\RoleMembersListMembersInner[]|null
      */
     public function getMembers()
     {
@@ -251,7 +251,7 @@ class RoleMembersList implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets members
      *
-     * @param \OpenAPI\Client\Model\RoleMembersListMembersInner[]|null $members List of a Role Members
+     * @param \Zoom\Api\Model\RoleMembersListMembersInner[]|null $members List of a Role Members
      *
      * @return self
      */

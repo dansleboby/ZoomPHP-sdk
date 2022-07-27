@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * WebinarInfo Class Doc Comment
  *
  * @category Class
  * @description Webinar object.
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -62,15 +62,15 @@ class WebinarInfo implements ModelInterface, ArrayAccess, \JsonSerializable
         'created_at' => '\DateTime',
         'duration' => 'int',
         'join_url' => 'string',
-        'occurrences' => '\OpenAPI\Client\Model\Occurrence[]',
+        'occurrences' => '\Zoom\Api\Model\Occurrence[]',
         'password' => 'string',
-        'recurrence' => '\OpenAPI\Client\Model\RecurrenceWebinar',
-        'settings' => '\OpenAPI\Client\Model\WebinarSettings',
+        'recurrence' => '\Zoom\Api\Model\RecurrenceWebinar',
+        'settings' => '\Zoom\Api\Model\WebinarSettings',
         'start_time' => '\DateTime',
         'start_url' => 'string',
         'timezone' => 'string',
         'topic' => 'string',
-        'tracking_fields' => '\OpenAPI\Client\Model\SessionUpdateTrackingFieldsInner[]',
+        'tracking_fields' => '\Zoom\Api\Model\SessionUpdateTrackingFieldsInner[]',
         'type' => 'int'
     ];
 
@@ -415,7 +415,7 @@ class WebinarInfo implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets occurrences
      *
-     * @return \OpenAPI\Client\Model\Occurrence[]|null
+     * @return \Zoom\Api\Model\Occurrence[]|null
      */
     public function getOccurrences()
     {
@@ -425,7 +425,7 @@ class WebinarInfo implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets occurrences
      *
-     * @param \OpenAPI\Client\Model\Occurrence[]|null $occurrences Array of occurrence objects.
+     * @param \Zoom\Api\Model\Occurrence[]|null $occurrences Array of occurrence objects.
      *
      * @return self
      */
@@ -467,7 +467,7 @@ class WebinarInfo implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets recurrence
      *
-     * @return \OpenAPI\Client\Model\RecurrenceWebinar|null
+     * @return \Zoom\Api\Model\RecurrenceWebinar|null
      */
     public function getRecurrence()
     {
@@ -477,7 +477,7 @@ class WebinarInfo implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets recurrence
      *
-     * @param \OpenAPI\Client\Model\RecurrenceWebinar|null $recurrence recurrence
+     * @param \Zoom\Api\Model\RecurrenceWebinar|null $recurrence recurrence
      *
      * @return self
      */
@@ -491,7 +491,7 @@ class WebinarInfo implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets settings
      *
-     * @return \OpenAPI\Client\Model\WebinarSettings|null
+     * @return \Zoom\Api\Model\WebinarSettings|null
      */
     public function getSettings()
     {
@@ -501,7 +501,7 @@ class WebinarInfo implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets settings
      *
-     * @param \OpenAPI\Client\Model\WebinarSettings|null $settings settings
+     * @param \Zoom\Api\Model\WebinarSettings|null $settings settings
      *
      * @return self
      */
@@ -615,7 +615,7 @@ class WebinarInfo implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets tracking_fields
      *
-     * @return \OpenAPI\Client\Model\SessionUpdateTrackingFieldsInner[]|null
+     * @return \Zoom\Api\Model\SessionUpdateTrackingFieldsInner[]|null
      */
     public function getTrackingFields()
     {
@@ -625,7 +625,7 @@ class WebinarInfo implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets tracking_fields
      *
-     * @param \OpenAPI\Client\Model\SessionUpdateTrackingFieldsInner[]|null $tracking_fields Tracking fields
+     * @param \Zoom\Api\Model\SessionUpdateTrackingFieldsInner[]|null $tracking_fields Tracking fields
      *
      * @return self
      */

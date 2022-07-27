@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **pc_name** | **string** | The participant&#39;s PC name. | [optional]
 **user_id** | **string** | The participant&#39;s ID. This value is assigned to a participant upon joining a meeting and is only valid for the meeting&#39;s duration. | [optional]
 **user_name** | **string** | The participant&#39;s display name. | [optional]
-**user_qos** | [**\OpenAPI\Client\Model\QOSParticipantUserQosInner[]**](QOSParticipantUserQosInner.md) | The participant&#39;s quality of service information. | [optional]
+**user_qos** | [**\Zoom\Api\Model\QOSParticipantUserQosInner[]**](QOSParticipantUserQosInner.md) | The participant&#39;s quality of service information. | [optional]
 **version** | **string** | The participant&#39;s Zoom client version. | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

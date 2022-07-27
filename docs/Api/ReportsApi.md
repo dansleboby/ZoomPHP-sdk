@@ -1,4 +1,4 @@
-# OpenAPI\Client\ReportsApi
+# Zoom\Api\ReportsApi
 
 All URIs are relative to https://api.zoom.us/v2.
 
@@ -28,7 +28,7 @@ Method | HTTP request | Description
 ## `getBillingInvoicesReports()`
 
 ```php
-getBillingInvoicesReports($billing_id): \OpenAPI\Client\Model\GetBillingInvoicesReports200Response
+getBillingInvoicesReports($billing_id): \Zoom\Api\Model\GetBillingInvoicesReports200Response
 ```
 
 Get billing invoice reports
@@ -43,10 +43,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ReportsApi(
+$apiInstance = new Zoom\Api\Api\ReportsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GetBillingInvoicesReports200Response**](../Model/GetBillingInvoicesReports200Response.md)
+[**\Zoom\Api\Model\GetBillingInvoicesReports200Response**](../Model/GetBillingInvoicesReports200Response.md)
 
 ### Authorization
 
@@ -88,7 +88,7 @@ Name | Type | Description  | Notes
 ## `getBillingReport()`
 
 ```php
-getBillingReport(): \OpenAPI\Client\Model\GetBillingReport200Response
+getBillingReport(): \Zoom\Api\Model\GetBillingReport200Response
 ```
 
 Get billing reports
@@ -103,10 +103,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ReportsApi(
+$apiInstance = new Zoom\Api\Api\ReportsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -127,7 +127,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GetBillingReport200Response**](../Model/GetBillingReport200Response.md)
+[**\Zoom\Api\Model\GetBillingReport200Response**](../Model/GetBillingReport200Response.md)
 
 ### Authorization
 
@@ -145,7 +145,7 @@ This endpoint does not need any parameter.
 ## `reportChatMessages()`
 
 ```php
-reportChatMessages($session_id, $from, $to, $next_page_token, $page_size, $include_fields, $include_bot_message): \OpenAPI\Client\Model\ReportChatMessages200Response
+reportChatMessages($session_id, $from, $to, $next_page_token, $page_size, $include_fields, $include_bot_message): \Zoom\Api\Model\ReportChatMessages200Response
 ```
 
 Get chat messages reports
@@ -160,10 +160,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ReportsApi(
+$apiInstance = new Zoom\Api\Api\ReportsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -199,7 +199,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ReportChatMessages200Response**](../Model/ReportChatMessages200Response.md)
+[**\Zoom\Api\Model\ReportChatMessages200Response**](../Model/ReportChatMessages200Response.md)
 
 ### Authorization
 
@@ -217,7 +217,7 @@ Name | Type | Description  | Notes
 ## `reportChatSessions()`
 
 ```php
-reportChatSessions($from, $to, $page_size, $next_page_token): \OpenAPI\Client\Model\ReportChatSessions200Response
+reportChatSessions($from, $to, $page_size, $next_page_token): \Zoom\Api\Model\ReportChatSessions200Response
 ```
 
 Get chat sessions reports
@@ -232,10 +232,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ReportsApi(
+$apiInstance = new Zoom\Api\Api\ReportsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -265,7 +265,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ReportChatSessions200Response**](../Model/ReportChatSessions200Response.md)
+[**\Zoom\Api\Model\ReportChatSessions200Response**](../Model/ReportChatSessions200Response.md)
 
 ### Authorization
 
@@ -283,7 +283,7 @@ Name | Type | Description  | Notes
 ## `reportCloudRecording()`
 
 ```php
-reportCloudRecording($from, $to): \OpenAPI\Client\Model\ReportCloudRecording200Response
+reportCloudRecording($from, $to): \Zoom\Api\Model\ReportCloudRecording200Response
 ```
 
 Get cloud recording usage report
@@ -298,10 +298,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ReportsApi(
+$apiInstance = new Zoom\Api\Api\ReportsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -327,7 +327,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ReportCloudRecording200Response**](../Model/ReportCloudRecording200Response.md)
+[**\Zoom\Api\Model\ReportCloudRecording200Response**](../Model/ReportCloudRecording200Response.md)
 
 ### Authorization
 
@@ -345,7 +345,7 @@ Name | Type | Description  | Notes
 ## `reportDaily()`
 
 ```php
-reportDaily($year, $month): \OpenAPI\Client\Model\ReportDaily200Response
+reportDaily($year, $month): \Zoom\Api\Model\ReportDaily200Response
 ```
 
 Get daily usage report
@@ -360,10 +360,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ReportsApi(
+$apiInstance = new Zoom\Api\Api\ReportsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -389,7 +389,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ReportDaily200Response**](../Model/ReportDaily200Response.md)
+[**\Zoom\Api\Model\ReportDaily200Response**](../Model/ReportDaily200Response.md)
 
 ### Authorization
 
@@ -407,7 +407,7 @@ Name | Type | Description  | Notes
 ## `reportMeetingDetails()`
 
 ```php
-reportMeetingDetails($meeting_id): \OpenAPI\Client\Model\ReportMeetingDetails200Response
+reportMeetingDetails($meeting_id): \Zoom\Api\Model\ReportMeetingDetails200Response
 ```
 
 Get meeting detail reports
@@ -422,16 +422,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ReportsApi(
+$apiInstance = new Zoom\Api\Api\ReportsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$meeting_id = new \OpenAPI\Client\Model\ListPastMeetingPollsMeetingIdParameter(); // ListPastMeetingPollsMeetingIdParameter | The meeting's ID or universally unique ID (UUID).  * If you provide a meeting ID, the API will return a response for the latest meeting instance.  * If you provide a meeting UUID that begins with a `/` character or contains the `//` characters, you **must** double-encode the meeting UUID before making an API request.
+$meeting_id = new \Zoom\Api\Model\ListPastMeetingPollsMeetingIdParameter(); // ListPastMeetingPollsMeetingIdParameter | The meeting's ID or universally unique ID (UUID).  * If you provide a meeting ID, the API will return a response for the latest meeting instance.  * If you provide a meeting UUID that begins with a `/` character or contains the `//` characters, you **must** double-encode the meeting UUID before making an API request.
 
 try {
     $result = $apiInstance->reportMeetingDetails($meeting_id);
@@ -449,7 +449,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ReportMeetingDetails200Response**](../Model/ReportMeetingDetails200Response.md)
+[**\Zoom\Api\Model\ReportMeetingDetails200Response**](../Model/ReportMeetingDetails200Response.md)
 
 ### Authorization
 
@@ -467,7 +467,7 @@ Name | Type | Description  | Notes
 ## `reportMeetingParticipants()`
 
 ```php
-reportMeetingParticipants($meeting_id, $page_size, $next_page_token, $include_fields): \OpenAPI\Client\Model\ReportMeetingParticipants200Response
+reportMeetingParticipants($meeting_id, $page_size, $next_page_token, $include_fields): \Zoom\Api\Model\ReportMeetingParticipants200Response
 ```
 
 Get meeting participant reports
@@ -482,16 +482,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ReportsApi(
+$apiInstance = new Zoom\Api\Api\ReportsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$meeting_id = new \OpenAPI\Client\Model\ListPastMeetingPollsMeetingIdParameter(); // ListPastMeetingPollsMeetingIdParameter | The meeting's ID or universally unique ID (UUID).  * If you provide a meeting ID, the API will return a response for the latest meeting instance.  * If you provide a meeting UUID that begins with a `/` character or contains the `//` characters, you **must** double-encode the meeting UUID before making an API request.
+$meeting_id = new \Zoom\Api\Model\ListPastMeetingPollsMeetingIdParameter(); // ListPastMeetingPollsMeetingIdParameter | The meeting's ID or universally unique ID (UUID).  * If you provide a meeting ID, the API will return a response for the latest meeting instance.  * If you provide a meeting UUID that begins with a `/` character or contains the `//` characters, you **must** double-encode the meeting UUID before making an API request.
 $page_size = 30; // int | The number of records returned within a single API call.
 $next_page_token = IAfJX3jsOLW7w3dokmFl84zOa0MAVGyMEB2; // string | The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
 $include_fields = registrant_id; // string | Provide `registrant_id` as the value for this field if you would like to see the registrant ID attribute in the response of this API call. A registrant ID is a unique identifier of a [meeting registrant](/docs/api-reference/zoom-api/methods#operation/meetingRegistrants).
@@ -515,7 +515,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ReportMeetingParticipants200Response**](../Model/ReportMeetingParticipants200Response.md)
+[**\Zoom\Api\Model\ReportMeetingParticipants200Response**](../Model/ReportMeetingParticipants200Response.md)
 
 ### Authorization
 
@@ -533,7 +533,7 @@ Name | Type | Description  | Notes
 ## `reportMeetingPolls()`
 
 ```php
-reportMeetingPolls($meeting_id): \OpenAPI\Client\Model\ReportMeetingPolls200Response
+reportMeetingPolls($meeting_id): \Zoom\Api\Model\ReportMeetingPolls200Response
 ```
 
 Get meeting poll reports
@@ -548,16 +548,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ReportsApi(
+$apiInstance = new Zoom\Api\Api\ReportsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$meeting_id = new \OpenAPI\Client\Model\ListPastMeetingPollsMeetingIdParameter(); // ListPastMeetingPollsMeetingIdParameter | The meeting's ID or universally unique ID (UUID).  * If you provide a meeting ID, the API will return a response for the latest meeting instance.  * If you provide a meeting UUID that begins with a `/` character or contains the `//` characters, you **must** double-encode the meeting UUID before making an API request.
+$meeting_id = new \Zoom\Api\Model\ListPastMeetingPollsMeetingIdParameter(); // ListPastMeetingPollsMeetingIdParameter | The meeting's ID or universally unique ID (UUID).  * If you provide a meeting ID, the API will return a response for the latest meeting instance.  * If you provide a meeting UUID that begins with a `/` character or contains the `//` characters, you **must** double-encode the meeting UUID before making an API request.
 
 try {
     $result = $apiInstance->reportMeetingPolls($meeting_id);
@@ -575,7 +575,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ReportMeetingPolls200Response**](../Model/ReportMeetingPolls200Response.md)
+[**\Zoom\Api\Model\ReportMeetingPolls200Response**](../Model/ReportMeetingPolls200Response.md)
 
 ### Authorization
 
@@ -593,7 +593,7 @@ Name | Type | Description  | Notes
 ## `reportMeetings()`
 
 ```php
-reportMeetings($user_id, $from, $to, $page_size, $next_page_token, $type): \OpenAPI\Client\Model\ReportMeetings200Response
+reportMeetings($user_id, $from, $to, $page_size, $next_page_token, $type): \Zoom\Api\Model\ReportMeetings200Response
 ```
 
 Get meeting reports
@@ -608,16 +608,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ReportsApi(
+$apiInstance = new Zoom\Api\Api\ReportsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = new \OpenAPI\Client\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
+$user_id = new \Zoom\Api\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
 $from = Fri Dec 31 19:00:00 EST 2021; // \DateTime | Start date in 'yyyy-mm-dd' format. The date range defined by the \"from\" and \"to\" parameters should only be one month as the report includes only one month worth of data at once.
 $to = Thu Jan 27 19:00:00 EST 2022; // \DateTime | End date.
 $page_size = 30; // int | The number of records returned within a single API call.
@@ -645,7 +645,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ReportMeetings200Response**](../Model/ReportMeetings200Response.md)
+[**\Zoom\Api\Model\ReportMeetings200Response**](../Model/ReportMeetings200Response.md)
 
 ### Authorization
 
@@ -663,7 +663,7 @@ Name | Type | Description  | Notes
 ## `reportOperationLogs()`
 
 ```php
-reportOperationLogs($from, $to, $page_size, $next_page_token, $category_type): \OpenAPI\Client\Model\ReportOperationLogs200Response
+reportOperationLogs($from, $to, $page_size, $next_page_token, $category_type): \Zoom\Api\Model\ReportOperationLogs200Response
 ```
 
 Get operation logs report
@@ -678,10 +678,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ReportsApi(
+$apiInstance = new Zoom\Api\Api\ReportsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -713,7 +713,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ReportOperationLogs200Response**](../Model/ReportOperationLogs200Response.md)
+[**\Zoom\Api\Model\ReportOperationLogs200Response**](../Model/ReportOperationLogs200Response.md)
 
 ### Authorization
 
@@ -731,7 +731,7 @@ Name | Type | Description  | Notes
 ## `reportSignInSignOutActivities()`
 
 ```php
-reportSignInSignOutActivities($from, $to, $page_size, $next_page_token): \OpenAPI\Client\Model\ReportSignInSignOutActivities200Response
+reportSignInSignOutActivities($from, $to, $page_size, $next_page_token): \Zoom\Api\Model\ReportSignInSignOutActivities200Response
 ```
 
 Get sign In / sign out activity report
@@ -746,10 +746,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ReportsApi(
+$apiInstance = new Zoom\Api\Api\ReportsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -779,7 +779,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ReportSignInSignOutActivities200Response**](../Model/ReportSignInSignOutActivities200Response.md)
+[**\Zoom\Api\Model\ReportSignInSignOutActivities200Response**](../Model/ReportSignInSignOutActivities200Response.md)
 
 ### Authorization
 
@@ -797,7 +797,7 @@ Name | Type | Description  | Notes
 ## `reportTelephone()`
 
 ```php
-reportTelephone($from, $to, $type, $query_date_type, $page_size, $page_number, $next_page_token): \OpenAPI\Client\Model\ReportTelephone200Response
+reportTelephone($from, $to, $type, $query_date_type, $page_size, $page_number, $next_page_token): \Zoom\Api\Model\ReportTelephone200Response
 ```
 
 Get telephone reports
@@ -812,10 +812,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ReportsApi(
+$apiInstance = new Zoom\Api\Api\ReportsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -851,7 +851,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ReportTelephone200Response**](../Model/ReportTelephone200Response.md)
+[**\Zoom\Api\Model\ReportTelephone200Response**](../Model/ReportTelephone200Response.md)
 
 ### Authorization
 
@@ -869,7 +869,7 @@ Name | Type | Description  | Notes
 ## `reportUpcomingEvents()`
 
 ```php
-reportUpcomingEvents($from, $to, $page_size, $next_page_token, $type): \OpenAPI\Client\Model\ReportUpcomingEvents200Response
+reportUpcomingEvents($from, $to, $page_size, $next_page_token, $type): \Zoom\Api\Model\ReportUpcomingEvents200Response
 ```
 
 Get upcoming events report
@@ -884,10 +884,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ReportsApi(
+$apiInstance = new Zoom\Api\Api\ReportsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -919,7 +919,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ReportUpcomingEvents200Response**](../Model/ReportUpcomingEvents200Response.md)
+[**\Zoom\Api\Model\ReportUpcomingEvents200Response**](../Model/ReportUpcomingEvents200Response.md)
 
 ### Authorization
 
@@ -937,7 +937,7 @@ Name | Type | Description  | Notes
 ## `reportUsers()`
 
 ```php
-reportUsers($from, $to, $type, $page_size, $page_number, $next_page_token): \OpenAPI\Client\Model\ReportUsers200Response
+reportUsers($from, $to, $type, $page_size, $page_number, $next_page_token): \Zoom\Api\Model\ReportUsers200Response
 ```
 
 Get active/inactive host reports
@@ -952,10 +952,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ReportsApi(
+$apiInstance = new Zoom\Api\Api\ReportsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -989,7 +989,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ReportUsers200Response**](../Model/ReportUsers200Response.md)
+[**\Zoom\Api\Model\ReportUsers200Response**](../Model/ReportUsers200Response.md)
 
 ### Authorization
 
@@ -1007,7 +1007,7 @@ Name | Type | Description  | Notes
 ## `reportWebinarDetails()`
 
 ```php
-reportWebinarDetails($webinar_id): \OpenAPI\Client\Model\ReportWebinarDetails200Response
+reportWebinarDetails($webinar_id): \Zoom\Api\Model\ReportWebinarDetails200Response
 ```
 
 Get webinar detail reports
@@ -1022,10 +1022,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ReportsApi(
+$apiInstance = new Zoom\Api\Api\ReportsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1049,7 +1049,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ReportWebinarDetails200Response**](../Model/ReportWebinarDetails200Response.md)
+[**\Zoom\Api\Model\ReportWebinarDetails200Response**](../Model/ReportWebinarDetails200Response.md)
 
 ### Authorization
 
@@ -1067,7 +1067,7 @@ Name | Type | Description  | Notes
 ## `reportWebinarParticipants()`
 
 ```php
-reportWebinarParticipants($webinar_id, $page_size, $next_page_token, $include_fields): \OpenAPI\Client\Model\ReportWebinarParticipants200Response
+reportWebinarParticipants($webinar_id, $page_size, $next_page_token, $include_fields): \Zoom\Api\Model\ReportWebinarParticipants200Response
 ```
 
 Get webinar participant reports
@@ -1082,10 +1082,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ReportsApi(
+$apiInstance = new Zoom\Api\Api\ReportsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1115,7 +1115,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ReportWebinarParticipants200Response**](../Model/ReportWebinarParticipants200Response.md)
+[**\Zoom\Api\Model\ReportWebinarParticipants200Response**](../Model/ReportWebinarParticipants200Response.md)
 
 ### Authorization
 
@@ -1133,7 +1133,7 @@ Name | Type | Description  | Notes
 ## `reportWebinarPolls()`
 
 ```php
-reportWebinarPolls($webinar_id): \OpenAPI\Client\Model\ReportWebinarPolls200Response
+reportWebinarPolls($webinar_id): \Zoom\Api\Model\ReportWebinarPolls200Response
 ```
 
 Get webinar poll reports
@@ -1148,10 +1148,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ReportsApi(
+$apiInstance = new Zoom\Api\Api\ReportsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1175,7 +1175,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ReportWebinarPolls200Response**](../Model/ReportWebinarPolls200Response.md)
+[**\Zoom\Api\Model\ReportWebinarPolls200Response**](../Model/ReportWebinarPolls200Response.md)
 
 ### Authorization
 
@@ -1193,7 +1193,7 @@ Name | Type | Description  | Notes
 ## `reportWebinarQA()`
 
 ```php
-reportWebinarQA($webinar_id): \OpenAPI\Client\Model\ReportWebinarQA200Response
+reportWebinarQA($webinar_id): \Zoom\Api\Model\ReportWebinarQA200Response
 ```
 
 Get webinar Q&A report
@@ -1208,10 +1208,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\ReportsApi(
+$apiInstance = new Zoom\Api\Api\ReportsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1235,7 +1235,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ReportWebinarQA200Response**](../Model/ReportWebinarQA200Response.md)
+[**\Zoom\Api\Model\ReportWebinarQA200Response**](../Model/ReportWebinarQA200Response.md)
 
 ### Authorization
 

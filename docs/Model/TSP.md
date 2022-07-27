@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **conference_code** | **string** | Conference code: numeric value, length is less than 16. |
-**dial_in_numbers** | [**\OpenAPI\Client\Model\TSPDialInNumbersInner[]**](TSPDialInNumbersInner.md) | List of dial in numbers. | [optional]
+**dial_in_numbers** | [**\Zoom\Api\Model\TSPDialInNumbersInner[]**](TSPDialInNumbersInner.md) | List of dial in numbers. | [optional]
 **leader_pin** | **string** | Leader PIN: numeric value, length is less than 16. |
 **tsp_bridge** | **string** | Telephony bridge | [optional]
 

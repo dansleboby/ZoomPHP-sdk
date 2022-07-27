@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * MeetingCreate Class Doc Comment
  *
  * @category Class
  * @description The base meeting object.
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -63,14 +63,14 @@ class MeetingCreate implements ModelInterface, ArrayAccess, \JsonSerializable
         'duration' => 'int',
         'password' => 'string',
         'pre_schedule' => 'bool',
-        'recurrence' => '\OpenAPI\Client\Model\Recurrence',
+        'recurrence' => '\Zoom\Api\Model\Recurrence',
         'schedule_for' => 'string',
-        'settings' => '\OpenAPI\Client\Model\MeetingCreateSettings',
+        'settings' => '\Zoom\Api\Model\MeetingCreateSettings',
         'start_time' => '\DateTime',
         'template_id' => 'string',
         'timezone' => 'string',
         'topic' => 'string',
-        'tracking_fields' => '\OpenAPI\Client\Model\MeetingCreateTrackingFieldsInner[]',
+        'tracking_fields' => '\Zoom\Api\Model\MeetingCreateTrackingFieldsInner[]',
         'type' => 'int'
     ];
 
@@ -449,7 +449,7 @@ class MeetingCreate implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets recurrence
      *
-     * @return \OpenAPI\Client\Model\Recurrence|null
+     * @return \Zoom\Api\Model\Recurrence|null
      */
     public function getRecurrence()
     {
@@ -459,7 +459,7 @@ class MeetingCreate implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets recurrence
      *
-     * @param \OpenAPI\Client\Model\Recurrence|null $recurrence recurrence
+     * @param \Zoom\Api\Model\Recurrence|null $recurrence recurrence
      *
      * @return self
      */
@@ -497,7 +497,7 @@ class MeetingCreate implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets settings
      *
-     * @return \OpenAPI\Client\Model\MeetingCreateSettings|null
+     * @return \Zoom\Api\Model\MeetingCreateSettings|null
      */
     public function getSettings()
     {
@@ -507,7 +507,7 @@ class MeetingCreate implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets settings
      *
-     * @param \OpenAPI\Client\Model\MeetingCreateSettings|null $settings settings
+     * @param \Zoom\Api\Model\MeetingCreateSettings|null $settings settings
      *
      * @return self
      */
@@ -617,7 +617,7 @@ class MeetingCreate implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets tracking_fields
      *
-     * @return \OpenAPI\Client\Model\MeetingCreateTrackingFieldsInner[]|null
+     * @return \Zoom\Api\Model\MeetingCreateTrackingFieldsInner[]|null
      */
     public function getTrackingFields()
     {
@@ -627,7 +627,7 @@ class MeetingCreate implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets tracking_fields
      *
-     * @param \OpenAPI\Client\Model\MeetingCreateTrackingFieldsInner[]|null $tracking_fields Information about the meeting's tracking fields.
+     * @param \Zoom\Api\Model\MeetingCreateTrackingFieldsInner[]|null $tracking_fields Information about the meeting's tracking fields.
      *
      * @return self
      */

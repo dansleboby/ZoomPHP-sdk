@@ -1,4 +1,4 @@
-# OpenAPI\Client\GroupsApi
+# Zoom\Api\GroupsApi
 
 All URIs are relative to https://api.zoom.us/v2.
 
@@ -42,10 +42,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\GroupsApi(
+$apiInstance = new Zoom\Api\Api\GroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -88,7 +88,7 @@ void (empty response body)
 ## `getGroupLockSettings()`
 
 ```php
-getGroupLockSettings($group_id, $option): \OpenAPI\Client\Model\GetGroupLockSettings200Response
+getGroupLockSettings($group_id, $option): \Zoom\Api\Model\GetGroupLockSettings200Response
 ```
 
 Get locked settings
@@ -103,10 +103,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\GroupsApi(
+$apiInstance = new Zoom\Api\Api\GroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -132,7 +132,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GetGroupLockSettings200Response**](../Model/GetGroupLockSettings200Response.md)
+[**\Zoom\Api\Model\GetGroupLockSettings200Response**](../Model/GetGroupLockSettings200Response.md)
 
 ### Authorization
 
@@ -150,7 +150,7 @@ Name | Type | Description  | Notes
 ## `getGroupSettings()`
 
 ```php
-getGroupSettings($group_id, $option, $custom_query_fields): \OpenAPI\Client\Model\GetGroupSettings200Response
+getGroupSettings($group_id, $option, $custom_query_fields): \Zoom\Api\Model\GetGroupSettings200Response
 ```
 
 Get a group's settings
@@ -165,10 +165,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\GroupsApi(
+$apiInstance = new Zoom\Api\Api\GroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -196,7 +196,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GetGroupSettings200Response**](../Model/GetGroupSettings200Response.md)
+[**\Zoom\Api\Model\GetGroupSettings200Response**](../Model/GetGroupSettings200Response.md)
 
 ### Authorization
 
@@ -214,7 +214,7 @@ Name | Type | Description  | Notes
 ## `group()`
 
 ```php
-group($group_id): \OpenAPI\Client\Model\Group200Response
+group($group_id): \Zoom\Api\Model\Group200Response
 ```
 
 Get a group
@@ -229,10 +229,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\GroupsApi(
+$apiInstance = new Zoom\Api\Api\GroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -256,7 +256,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Group200Response**](../Model/Group200Response.md)
+[**\Zoom\Api\Model\Group200Response**](../Model/Group200Response.md)
 
 ### Authorization
 
@@ -274,7 +274,7 @@ Name | Type | Description  | Notes
 ## `groupAdmins()`
 
 ```php
-groupAdmins($group_id, $page_size, $next_page_token): \OpenAPI\Client\Model\GroupAdmins200Response
+groupAdmins($group_id, $page_size, $next_page_token): \Zoom\Api\Model\GroupAdmins200Response
 ```
 
 List group admins
@@ -289,10 +289,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\GroupsApi(
+$apiInstance = new Zoom\Api\Api\GroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -320,7 +320,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GroupAdmins200Response**](../Model/GroupAdmins200Response.md)
+[**\Zoom\Api\Model\GroupAdmins200Response**](../Model/GroupAdmins200Response.md)
 
 ### Authorization
 
@@ -353,17 +353,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\GroupsApi(
+$apiInstance = new Zoom\Api\Api\GroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $group_id = SobVexyrQjqCkcxjpBWi6w; // string | The group ID.<br> Can be retrieved by calling the [**List groups**](/docs/api-reference/zoom-api/methods#operation/groups) API.
-$group_admins_create_request = new \OpenAPI\Client\Model\GroupAdminsCreateRequest(); // \OpenAPI\Client\Model\GroupAdminsCreateRequest
+$group_admins_create_request = new \Zoom\Api\Model\GroupAdminsCreateRequest(); // \Zoom\Api\Model\GroupAdminsCreateRequest
 
 try {
     $apiInstance->groupAdminsCreate($group_id, $group_admins_create_request);
@@ -377,7 +377,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **group_id** | **string**| The group ID.&lt;br&gt; Can be retrieved by calling the [**List groups**](/docs/api-reference/zoom-api/methods#operation/groups) API. |
- **group_admins_create_request** | [**\OpenAPI\Client\Model\GroupAdminsCreateRequest**](../Model/GroupAdminsCreateRequest.md)|  |
+ **group_admins_create_request** | [**\Zoom\Api\Model\GroupAdminsCreateRequest**](../Model/GroupAdminsCreateRequest.md)|  |
 
 ### Return type
 
@@ -414,17 +414,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\GroupsApi(
+$apiInstance = new Zoom\Api\Api\GroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $group_id = SobVexyrQjqCkcxjpBWi6w; // string | The group ID.<br> Can be retrieved by calling the [**List groups**](/docs/api-reference/zoom-api/methods#operation/groups) API.
-$user_id = new \OpenAPI\Client\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
+$user_id = new \Zoom\Api\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
 
 try {
     $apiInstance->groupAdminsDelete($group_id, $user_id);
@@ -475,16 +475,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\GroupsApi(
+$apiInstance = new Zoom\Api\Api\GroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$group_create_request = new \OpenAPI\Client\Model\GroupCreateRequest(); // \OpenAPI\Client\Model\GroupCreateRequest
+$group_create_request = new \Zoom\Api\Model\GroupCreateRequest(); // \Zoom\Api\Model\GroupCreateRequest
 
 try {
     $apiInstance->groupCreate($group_create_request);
@@ -497,7 +497,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **group_create_request** | [**\OpenAPI\Client\Model\GroupCreateRequest**](../Model/GroupCreateRequest.md)|  |
+ **group_create_request** | [**\Zoom\Api\Model\GroupCreateRequest**](../Model/GroupCreateRequest.md)|  |
 
 ### Return type
 
@@ -534,10 +534,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\GroupsApi(
+$apiInstance = new Zoom\Api\Api\GroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -593,10 +593,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\GroupsApi(
+$apiInstance = new Zoom\Api\Api\GroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -604,7 +604,7 @@ $apiInstance = new OpenAPI\Client\Api\GroupsApi(
 );
 $group_id = 0mgThLiRQH2bUHvIaL4t2g; // string | The Id of the group.
 $option = meeting_security; // string | Optional query parameters:  * `meeting_security` — Use this query parameter to view the meeting security settings applied to the user's account.
-$group_locked_settings_request = new \OpenAPI\Client\Model\GroupLockedSettingsRequest(); // \OpenAPI\Client\Model\GroupLockedSettingsRequest
+$group_locked_settings_request = new \Zoom\Api\Model\GroupLockedSettingsRequest(); // \Zoom\Api\Model\GroupLockedSettingsRequest
 
 try {
     $apiInstance->groupLockedSettings($group_id, $option, $group_locked_settings_request);
@@ -619,7 +619,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **group_id** | **string**| The Id of the group. |
  **option** | **string**| Optional query parameters:  * &#x60;meeting_security&#x60; — Use this query parameter to view the meeting security settings applied to the user&#39;s account. | [optional]
- **group_locked_settings_request** | [**\OpenAPI\Client\Model\GroupLockedSettingsRequest**](../Model/GroupLockedSettingsRequest.md)|  | [optional]
+ **group_locked_settings_request** | [**\Zoom\Api\Model\GroupLockedSettingsRequest**](../Model/GroupLockedSettingsRequest.md)|  | [optional]
 
 ### Return type
 
@@ -641,7 +641,7 @@ void (empty response body)
 ## `groupMembers()`
 
 ```php
-groupMembers($group_id, $page_size, $page_number, $next_page_token): \OpenAPI\Client\Model\GroupMembers200Response
+groupMembers($group_id, $page_size, $page_number, $next_page_token): \Zoom\Api\Model\GroupMembers200Response
 ```
 
 List group members
@@ -656,10 +656,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\GroupsApi(
+$apiInstance = new Zoom\Api\Api\GroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -689,7 +689,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GroupMembers200Response**](../Model/GroupMembers200Response.md)
+[**\Zoom\Api\Model\GroupMembers200Response**](../Model/GroupMembers200Response.md)
 
 ### Authorization
 
@@ -722,17 +722,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\GroupsApi(
+$apiInstance = new Zoom\Api\Api\GroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $group_id = SobVexyrQjqCkcxjpBWi6w; // string | The group ID.<br> Can be retrieved by calling the [**List groups**](/docs/api-reference/zoom-api/methods#operation/groups) API.
-$group_members_create_request = new \OpenAPI\Client\Model\GroupMembersCreateRequest(); // \OpenAPI\Client\Model\GroupMembersCreateRequest
+$group_members_create_request = new \Zoom\Api\Model\GroupMembersCreateRequest(); // \Zoom\Api\Model\GroupMembersCreateRequest
 
 try {
     $apiInstance->groupMembersCreate($group_id, $group_members_create_request);
@@ -746,7 +746,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **group_id** | **string**| The group ID.&lt;br&gt; Can be retrieved by calling the [**List groups**](/docs/api-reference/zoom-api/methods#operation/groups) API. |
- **group_members_create_request** | [**\OpenAPI\Client\Model\GroupMembersCreateRequest**](../Model/GroupMembersCreateRequest.md)|  |
+ **group_members_create_request** | [**\Zoom\Api\Model\GroupMembersCreateRequest**](../Model/GroupMembersCreateRequest.md)|  |
 
 ### Return type
 
@@ -783,10 +783,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\GroupsApi(
+$apiInstance = new Zoom\Api\Api\GroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -844,17 +844,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\GroupsApi(
+$apiInstance = new Zoom\Api\Api\GroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $group_id = SobVexyrQjqCkcxjpBWi6w; // string | The group ID.<br> Can be retrieved by calling the [**List groups**](/docs/api-reference/zoom-api/methods#operation/groups) API.
-$group_update_request = new \OpenAPI\Client\Model\GroupUpdateRequest(); // \OpenAPI\Client\Model\GroupUpdateRequest
+$group_update_request = new \Zoom\Api\Model\GroupUpdateRequest(); // \Zoom\Api\Model\GroupUpdateRequest
 
 try {
     $apiInstance->groupUpdate($group_id, $group_update_request);
@@ -868,7 +868,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **group_id** | **string**| The group ID.&lt;br&gt; Can be retrieved by calling the [**List groups**](/docs/api-reference/zoom-api/methods#operation/groups) API. |
- **group_update_request** | [**\OpenAPI\Client\Model\GroupUpdateRequest**](../Model/GroupUpdateRequest.md)|  |
+ **group_update_request** | [**\Zoom\Api\Model\GroupUpdateRequest**](../Model/GroupUpdateRequest.md)|  |
 
 ### Return type
 
@@ -890,7 +890,7 @@ void (empty response body)
 ## `groups()`
 
 ```php
-groups(): \OpenAPI\Client\Model\GroupList
+groups(): \Zoom\Api\Model\GroupList
 ```
 
 List groups
@@ -905,10 +905,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\GroupsApi(
+$apiInstance = new Zoom\Api\Api\GroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -929,7 +929,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GroupList**](../Model/GroupList.md)
+[**\Zoom\Api\Model\GroupList**](../Model/GroupList.md)
 
 ### Authorization
 
@@ -962,10 +962,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\GroupsApi(
+$apiInstance = new Zoom\Api\Api\GroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -973,7 +973,7 @@ $apiInstance = new OpenAPI\Client\Api\GroupsApi(
 );
 $group_id = SobVexyrQjqCkcxjpBWi6w; // string | The group's unique ID. To get this value, use the [**List groups**](/docs/api-reference/zoom-api/methods#operation/groups) API. * To set a user's primary group, use the `target_group_id` value for this parameter's value.  * To move a group member from one group to another, use the `groupId` of the designated group.
 $member_id = v4iyWT1LTfy8QvPG4GTvdg; // string | The group member's unique ID. To get this value, use the [**List group members**](/docs/api-reference/zoom-api/methods#operation/groupMembers) API.
-$update_a_group_member_request = new \OpenAPI\Client\Model\UpdateAGroupMemberRequest(); // \OpenAPI\Client\Model\UpdateAGroupMemberRequest
+$update_a_group_member_request = new \Zoom\Api\Model\UpdateAGroupMemberRequest(); // \Zoom\Api\Model\UpdateAGroupMemberRequest
 
 try {
     $apiInstance->updateAGroupMember($group_id, $member_id, $update_a_group_member_request);
@@ -988,7 +988,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **group_id** | **string**| The group&#39;s unique ID. To get this value, use the [**List groups**](/docs/api-reference/zoom-api/methods#operation/groups) API. * To set a user&#39;s primary group, use the &#x60;target_group_id&#x60; value for this parameter&#39;s value.  * To move a group member from one group to another, use the &#x60;groupId&#x60; of the designated group. |
  **member_id** | **string**| The group member&#39;s unique ID. To get this value, use the [**List group members**](/docs/api-reference/zoom-api/methods#operation/groupMembers) API. |
- **update_a_group_member_request** | [**\OpenAPI\Client\Model\UpdateAGroupMemberRequest**](../Model/UpdateAGroupMemberRequest.md)|  | [optional]
+ **update_a_group_member_request** | [**\Zoom\Api\Model\UpdateAGroupMemberRequest**](../Model/UpdateAGroupMemberRequest.md)|  | [optional]
 
 ### Return type
 
@@ -1025,10 +1025,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\GroupsApi(
+$apiInstance = new Zoom\Api\Api\GroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1036,7 +1036,7 @@ $apiInstance = new OpenAPI\Client\Api\GroupsApi(
 );
 $group_id = 0mgThLiRQH2bUHvIaL4t2g; // string | Id of the group.
 $option = meeting_security; // string | Optional query parameters:  * `meeting_authentication` — [Meeting authentication settings](https://support.zoom.us/hc/en-us/articles/360037117472-Authentication-Profiles-for-Meetings-and-Webinars).  * `recording_authentication` — [Recording authentication settings](https://support.zoom.us/hc/en-us/articles/360037756671-Authentication-Profiles-for-Cloud-Recordings).  * `meeting_security` — Meeting security settings.
-$update_group_settings_request = new \OpenAPI\Client\Model\UpdateGroupSettingsRequest(); // \OpenAPI\Client\Model\UpdateGroupSettingsRequest
+$update_group_settings_request = new \Zoom\Api\Model\UpdateGroupSettingsRequest(); // \Zoom\Api\Model\UpdateGroupSettingsRequest
 
 try {
     $apiInstance->updateGroupSettings($group_id, $option, $update_group_settings_request);
@@ -1051,7 +1051,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **group_id** | **string**| Id of the group. |
  **option** | **string**| Optional query parameters:  * &#x60;meeting_authentication&#x60; — [Meeting authentication settings](https://support.zoom.us/hc/en-us/articles/360037117472-Authentication-Profiles-for-Meetings-and-Webinars).  * &#x60;recording_authentication&#x60; — [Recording authentication settings](https://support.zoom.us/hc/en-us/articles/360037756671-Authentication-Profiles-for-Cloud-Recordings).  * &#x60;meeting_security&#x60; — Meeting security settings. | [optional]
- **update_group_settings_request** | [**\OpenAPI\Client\Model\UpdateGroupSettingsRequest**](../Model/UpdateGroupSettingsRequest.md)|  | [optional]
+ **update_group_settings_request** | [**\Zoom\Api\Model\UpdateGroupSettingsRequest**](../Model/UpdateGroupSettingsRequest.md)|  | [optional]
 
 ### Return type
 
@@ -1073,7 +1073,7 @@ void (empty response body)
 ## `uploadGroupVB()`
 
 ```php
-uploadGroupVB($group_id, $file): \OpenAPI\Client\Model\UploadGroupVB201Response
+uploadGroupVB($group_id, $file): \Zoom\Api\Model\UploadGroupVB201Response
 ```
 
 Upload Virtual Background files
@@ -1088,10 +1088,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\GroupsApi(
+$apiInstance = new Zoom\Api\Api\GroupsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1117,7 +1117,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\UploadGroupVB201Response**](../Model/UploadGroupVB201Response.md)
+[**\Zoom\Api\Model\UploadGroupVB201Response**](../Model/UploadGroupVB201Response.md)
 
 ### Authorization
 

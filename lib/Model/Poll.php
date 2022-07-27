@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * Poll Class Doc Comment
  *
  * @category Class
  * @description Information about meeting and webinar polling.
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -60,7 +60,7 @@ class Poll implements ModelInterface, ArrayAccess, \JsonSerializable
     protected static $openAPITypes = [
         'anonymous' => 'bool',
         'poll_type' => 'int',
-        'questions' => '\OpenAPI\Client\Model\PollQuestionsInner[]',
+        'questions' => '\Zoom\Api\Model\PollQuestionsInner[]',
         'title' => 'string'
     ];
 
@@ -313,7 +313,7 @@ class Poll implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets questions
      *
-     * @return \OpenAPI\Client\Model\PollQuestionsInner[]|null
+     * @return \Zoom\Api\Model\PollQuestionsInner[]|null
      */
     public function getQuestions()
     {
@@ -323,7 +323,7 @@ class Poll implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets questions
      *
-     * @param \OpenAPI\Client\Model\PollQuestionsInner[]|null $questions Information about the poll's questions.
+     * @param \Zoom\Api\Model\PollQuestionsInner[]|null $questions Information about the poll's questions.
      *
      * @return self
      */

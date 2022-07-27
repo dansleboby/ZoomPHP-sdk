@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * UserSchedulersList Class Doc Comment
  *
  * @category Class
  * @description List of user&#39;s schedulers.
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class UserSchedulersList implements ModelInterface, ArrayAccess, \JsonSerializab
       * @var string[]
       */
     protected static $openAPITypes = [
-        'schedulers' => '\OpenAPI\Client\Model\UserSchedulersListSchedulersInner[]'
+        'schedulers' => '\Zoom\Api\Model\UserSchedulersListSchedulersInner[]'
     ];
 
     /**
@@ -207,7 +207,7 @@ class UserSchedulersList implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Gets schedulers
      *
-     * @return \OpenAPI\Client\Model\UserSchedulersListSchedulersInner[]|null
+     * @return \Zoom\Api\Model\UserSchedulersListSchedulersInner[]|null
      */
     public function getSchedulers()
     {
@@ -217,7 +217,7 @@ class UserSchedulersList implements ModelInterface, ArrayAccess, \JsonSerializab
     /**
      * Sets schedulers
      *
-     * @param \OpenAPI\Client\Model\UserSchedulersListSchedulersInner[]|null $schedulers List of users for whom the current user can schedule meetings.
+     * @param \Zoom\Api\Model\UserSchedulersListSchedulersInner[]|null $schedulers List of users for whom the current user can schedule meetings.
      *
      * @return self
      */

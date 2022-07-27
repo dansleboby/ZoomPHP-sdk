@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * AccountListItem Class Doc Comment
  *
  * @category Class
  * @description Account object in the account list.
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,7 +58,7 @@ class AccountListItem implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'accounts' => '\OpenAPI\Client\Model\AccountListItemAccountsInner[]'
+        'accounts' => '\Zoom\Api\Model\AccountListItemAccountsInner[]'
     ];
 
     /**
@@ -207,7 +207,7 @@ class AccountListItem implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets accounts
      *
-     * @return \OpenAPI\Client\Model\AccountListItemAccountsInner[]|null
+     * @return \Zoom\Api\Model\AccountListItemAccountsInner[]|null
      */
     public function getAccounts()
     {
@@ -217,7 +217,7 @@ class AccountListItem implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets accounts
      *
-     * @param \OpenAPI\Client\Model\AccountListItemAccountsInner[]|null $accounts List of Account objects.
+     * @param \Zoom\Api\Model\AccountListItemAccountsInner[]|null $accounts List of Account objects.
      *
      * @return self
      */

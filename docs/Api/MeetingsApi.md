@@ -1,4 +1,4 @@
-# OpenAPI\Client\MeetingsApi
+# Zoom\Api\MeetingsApi
 
 All URIs are relative to https://api.zoom.us/v2.
 
@@ -46,7 +46,7 @@ Method | HTTP request | Description
 ## `addBatchRegistrants()`
 
 ```php
-addBatchRegistrants($meeting_id, $add_batch_registrants_request): \OpenAPI\Client\Model\AddBatchRegistrants200Response
+addBatchRegistrants($meeting_id, $add_batch_registrants_request): \Zoom\Api\Model\AddBatchRegistrants200Response
 ```
 
 Perform batch registration
@@ -61,22 +61,22 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Bearer
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = Zoom\Api\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
+$apiInstance = new Zoom\Api\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $meeting_id = 91498058927; // string | Unique identifier of the meeting (Meeting Number).
-$add_batch_registrants_request = new \OpenAPI\Client\Model\AddBatchRegistrantsRequest(); // \OpenAPI\Client\Model\AddBatchRegistrantsRequest
+$add_batch_registrants_request = new \Zoom\Api\Model\AddBatchRegistrantsRequest(); // \Zoom\Api\Model\AddBatchRegistrantsRequest
 
 try {
     $result = $apiInstance->addBatchRegistrants($meeting_id, $add_batch_registrants_request);
@@ -91,11 +91,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **meeting_id** | **string**| Unique identifier of the meeting (Meeting Number). |
- **add_batch_registrants_request** | [**\OpenAPI\Client\Model\AddBatchRegistrantsRequest**](../Model/AddBatchRegistrantsRequest.md)|  | [optional]
+ **add_batch_registrants_request** | [**\Zoom\Api\Model\AddBatchRegistrantsRequest**](../Model/AddBatchRegistrantsRequest.md)|  | [optional]
 
 ### Return type
 
-[**\OpenAPI\Client\Model\AddBatchRegistrants200Response**](../Model/AddBatchRegistrants200Response.md)
+[**\Zoom\Api\Model\AddBatchRegistrants200Response**](../Model/AddBatchRegistrants200Response.md)
 
 ### Authorization
 
@@ -113,7 +113,7 @@ Name | Type | Description  | Notes
 ## `createBatchPolls()`
 
 ```php
-createBatchPolls($meeting_id, $create_batch_polls_request): \OpenAPI\Client\Model\CreateBatchPolls201Response
+createBatchPolls($meeting_id, $create_batch_polls_request): \Zoom\Api\Model\CreateBatchPolls201Response
 ```
 
 Perform batch poll creation
@@ -128,17 +128,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
+$apiInstance = new Zoom\Api\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $meeting_id = 93398114182; // string
-$create_batch_polls_request = new \OpenAPI\Client\Model\CreateBatchPollsRequest(); // \OpenAPI\Client\Model\CreateBatchPollsRequest | Batch Meeting poll object
+$create_batch_polls_request = new \Zoom\Api\Model\CreateBatchPollsRequest(); // \Zoom\Api\Model\CreateBatchPollsRequest | Batch Meeting poll object
 
 try {
     $result = $apiInstance->createBatchPolls($meeting_id, $create_batch_polls_request);
@@ -153,11 +153,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **meeting_id** | **string**|  |
- **create_batch_polls_request** | [**\OpenAPI\Client\Model\CreateBatchPollsRequest**](../Model/CreateBatchPollsRequest.md)| Batch Meeting poll object | [optional]
+ **create_batch_polls_request** | [**\Zoom\Api\Model\CreateBatchPollsRequest**](../Model/CreateBatchPollsRequest.md)| Batch Meeting poll object | [optional]
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CreateBatchPolls201Response**](../Model/CreateBatchPolls201Response.md)
+[**\Zoom\Api\Model\CreateBatchPolls201Response**](../Model/CreateBatchPolls201Response.md)
 
 ### Authorization
 
@@ -190,10 +190,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
+$apiInstance = new Zoom\Api\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -236,7 +236,7 @@ void (empty response body)
 ## `getMeetingLiveStreamDetails()`
 
 ```php
-getMeetingLiveStreamDetails($meeting_id): \OpenAPI\Client\Model\GetMeetingLiveStreamDetails200Response
+getMeetingLiveStreamDetails($meeting_id): \Zoom\Api\Model\GetMeetingLiveStreamDetails200Response
 ```
 
 Get livestream details
@@ -251,10 +251,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
+$apiInstance = new Zoom\Api\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -278,7 +278,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GetMeetingLiveStreamDetails200Response**](../Model/GetMeetingLiveStreamDetails200Response.md)
+[**\Zoom\Api\Model\GetMeetingLiveStreamDetails200Response**](../Model/GetMeetingLiveStreamDetails200Response.md)
 
 ### Authorization
 
@@ -311,17 +311,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
+$apiInstance = new Zoom\Api\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $meeting_id = 93398114182; // string | The live meeting's ID.
-$in_meeting_control_request = new \OpenAPI\Client\Model\InMeetingControlRequest(); // \OpenAPI\Client\Model\InMeetingControlRequest
+$in_meeting_control_request = new \Zoom\Api\Model\InMeetingControlRequest(); // \Zoom\Api\Model\InMeetingControlRequest
 
 try {
     $apiInstance->inMeetingControl($meeting_id, $in_meeting_control_request);
@@ -335,7 +335,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **meeting_id** | **string**| The live meeting&#39;s ID. |
- **in_meeting_control_request** | [**\OpenAPI\Client\Model\InMeetingControlRequest**](../Model/InMeetingControlRequest.md)|  | [optional]
+ **in_meeting_control_request** | [**\Zoom\Api\Model\InMeetingControlRequest**](../Model/InMeetingControlRequest.md)|  | [optional]
 
 ### Return type
 
@@ -357,7 +357,7 @@ void (empty response body)
 ## `listMeetingTemplates()`
 
 ```php
-listMeetingTemplates($user_id): \OpenAPI\Client\Model\ListMeetingTemplates200Response
+listMeetingTemplates($user_id): \Zoom\Api\Model\ListMeetingTemplates200Response
 ```
 
 List meeting templates
@@ -372,10 +372,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
+$apiInstance = new Zoom\Api\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -399,7 +399,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ListMeetingTemplates200Response**](../Model/ListMeetingTemplates200Response.md)
+[**\Zoom\Api\Model\ListMeetingTemplates200Response**](../Model/ListMeetingTemplates200Response.md)
 
 ### Authorization
 
@@ -417,7 +417,7 @@ Name | Type | Description  | Notes
 ## `listPastMeetingPolls()`
 
 ```php
-listPastMeetingPolls($meeting_id): \OpenAPI\Client\Model\ListPastMeetingPolls200Response
+listPastMeetingPolls($meeting_id): \Zoom\Api\Model\ListPastMeetingPolls200Response
 ```
 
 List past meeting's poll results
@@ -432,16 +432,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
+$apiInstance = new Zoom\Api\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$meeting_id = new \OpenAPI\Client\Model\ListPastMeetingPollsMeetingIdParameter(); // ListPastMeetingPollsMeetingIdParameter | The meeting's ID or universally unique ID (UUID).  * If you provide a meeting ID, the API will return a response for the latest meeting instance.  * If you provide a meeting UUID that begins with a `/` character or contains the `//` characters, you **must** double-encode the meeting UUID before making an API request.
+$meeting_id = new \Zoom\Api\Model\ListPastMeetingPollsMeetingIdParameter(); // ListPastMeetingPollsMeetingIdParameter | The meeting's ID or universally unique ID (UUID).  * If you provide a meeting ID, the API will return a response for the latest meeting instance.  * If you provide a meeting UUID that begins with a `/` character or contains the `//` characters, you **must** double-encode the meeting UUID before making an API request.
 
 try {
     $result = $apiInstance->listPastMeetingPolls($meeting_id);
@@ -459,7 +459,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ListPastMeetingPolls200Response**](../Model/ListPastMeetingPolls200Response.md)
+[**\Zoom\Api\Model\ListPastMeetingPolls200Response**](../Model/ListPastMeetingPolls200Response.md)
 
 ### Authorization
 
@@ -477,7 +477,7 @@ Name | Type | Description  | Notes
 ## `meeting()`
 
 ```php
-meeting($meeting_id, $occurrence_id, $show_previous_occurrences): \OpenAPI\Client\Model\Meeting200Response
+meeting($meeting_id, $occurrence_id, $show_previous_occurrences): \Zoom\Api\Model\Meeting200Response
 ```
 
 Get a meeting
@@ -492,10 +492,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
+$apiInstance = new Zoom\Api\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -523,7 +523,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Meeting200Response**](../Model/Meeting200Response.md)
+[**\Zoom\Api\Model\Meeting200Response**](../Model/Meeting200Response.md)
 
 ### Authorization
 
@@ -541,7 +541,7 @@ Name | Type | Description  | Notes
 ## `meetingCreate()`
 
 ```php
-meetingCreate($user_id, $meeting_create): \OpenAPI\Client\Model\MeetingCreate201Response
+meetingCreate($user_id, $meeting_create): \Zoom\Api\Model\MeetingCreate201Response
 ```
 
 Create a meeting
@@ -556,17 +556,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
+$apiInstance = new Zoom\Api\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = new \OpenAPI\Client\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
-$meeting_create = array('key' => new \OpenAPI\Client\Model\MeetingCreate()); // \OpenAPI\Client\Model\MeetingCreate | Meeting object.
+$user_id = new \Zoom\Api\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
+$meeting_create = array('key' => new \Zoom\Api\Model\MeetingCreate()); // \Zoom\Api\Model\MeetingCreate | Meeting object.
 
 try {
     $result = $apiInstance->meetingCreate($user_id, $meeting_create);
@@ -581,11 +581,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_id** | [**GroupAdminsDeleteUserIdParameter**](../Model/.md)| The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. |
- **meeting_create** | [**\OpenAPI\Client\Model\MeetingCreate**](../Model/MeetingCreate.md)| Meeting object. |
+ **meeting_create** | [**\Zoom\Api\Model\MeetingCreate**](../Model/MeetingCreate.md)| Meeting object. |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\MeetingCreate201Response**](../Model/MeetingCreate201Response.md)
+[**\Zoom\Api\Model\MeetingCreate201Response**](../Model/MeetingCreate201Response.md)
 
 ### Authorization
 
@@ -618,10 +618,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
+$apiInstance = new Zoom\Api\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -668,7 +668,7 @@ void (empty response body)
 ## `meetingInvitation()`
 
 ```php
-meetingInvitation($meeting_id): \OpenAPI\Client\Model\MeetingInvitation
+meetingInvitation($meeting_id): \Zoom\Api\Model\MeetingInvitation
 ```
 
 Get meeting invitation
@@ -683,10 +683,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
+$apiInstance = new Zoom\Api\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -710,7 +710,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\MeetingInvitation**](../Model/MeetingInvitation.md)
+[**\Zoom\Api\Model\MeetingInvitation**](../Model/MeetingInvitation.md)
 
 ### Authorization
 
@@ -728,7 +728,7 @@ Name | Type | Description  | Notes
 ## `meetingInviteLinksCreate()`
 
 ```php
-meetingInviteLinksCreate($meeting_id, $meeting_invite_links_create_request): \OpenAPI\Client\Model\MeetingInviteLinksCreate201Response
+meetingInviteLinksCreate($meeting_id, $meeting_invite_links_create_request): \Zoom\Api\Model\MeetingInviteLinksCreate201Response
 ```
 
 Create meeting's invite links
@@ -743,17 +743,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
+$apiInstance = new Zoom\Api\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $meeting_id = 85746065; // int | The meeting's ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits.
-$meeting_invite_links_create_request = new \OpenAPI\Client\Model\MeetingInviteLinksCreateRequest(); // \OpenAPI\Client\Model\MeetingInviteLinksCreateRequest
+$meeting_invite_links_create_request = new \Zoom\Api\Model\MeetingInviteLinksCreateRequest(); // \Zoom\Api\Model\MeetingInviteLinksCreateRequest
 
 try {
     $result = $apiInstance->meetingInviteLinksCreate($meeting_id, $meeting_invite_links_create_request);
@@ -768,11 +768,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **meeting_id** | **int**| The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. |
- **meeting_invite_links_create_request** | [**\OpenAPI\Client\Model\MeetingInviteLinksCreateRequest**](../Model/MeetingInviteLinksCreateRequest.md)|  |
+ **meeting_invite_links_create_request** | [**\Zoom\Api\Model\MeetingInviteLinksCreateRequest**](../Model/MeetingInviteLinksCreateRequest.md)|  |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\MeetingInviteLinksCreate201Response**](../Model/MeetingInviteLinksCreate201Response.md)
+[**\Zoom\Api\Model\MeetingInviteLinksCreate201Response**](../Model/MeetingInviteLinksCreate201Response.md)
 
 ### Authorization
 
@@ -805,17 +805,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
+$apiInstance = new Zoom\Api\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $meeting_id = 85746065; // int | The meeting's ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits.
-$meeting_live_stream_status = new \OpenAPI\Client\Model\MeetingLiveStreamStatus(); // \OpenAPI\Client\Model\MeetingLiveStreamStatus | Meeting
+$meeting_live_stream_status = new \Zoom\Api\Model\MeetingLiveStreamStatus(); // \Zoom\Api\Model\MeetingLiveStreamStatus | Meeting
 
 try {
     $apiInstance->meetingLiveStreamStatusUpdate($meeting_id, $meeting_live_stream_status);
@@ -829,7 +829,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **meeting_id** | **int**| The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. |
- **meeting_live_stream_status** | [**\OpenAPI\Client\Model\MeetingLiveStreamStatus**](../Model/MeetingLiveStreamStatus.md)| Meeting |
+ **meeting_live_stream_status** | [**\Zoom\Api\Model\MeetingLiveStreamStatus**](../Model/MeetingLiveStreamStatus.md)| Meeting |
 
 ### Return type
 
@@ -866,17 +866,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
+$apiInstance = new Zoom\Api\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $meeting_id = 85746065; // int | The meeting's ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits.
-$meeting_live_stream = new \OpenAPI\Client\Model\MeetingLiveStream(); // \OpenAPI\Client\Model\MeetingLiveStream | Meeting
+$meeting_live_stream = new \Zoom\Api\Model\MeetingLiveStream(); // \Zoom\Api\Model\MeetingLiveStream | Meeting
 
 try {
     $apiInstance->meetingLiveStreamUpdate($meeting_id, $meeting_live_stream);
@@ -890,7 +890,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **meeting_id** | **int**| The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. |
- **meeting_live_stream** | [**\OpenAPI\Client\Model\MeetingLiveStream**](../Model/MeetingLiveStream.md)| Meeting |
+ **meeting_live_stream** | [**\Zoom\Api\Model\MeetingLiveStream**](../Model/MeetingLiveStream.md)| Meeting |
 
 ### Return type
 
@@ -912,7 +912,7 @@ void (empty response body)
 ## `meetingLocalRecordingJoinToken()`
 
 ```php
-meetingLocalRecordingJoinToken($meeting_id): \OpenAPI\Client\Model\MeetingLocalRecordingJoinToken200Response
+meetingLocalRecordingJoinToken($meeting_id): \Zoom\Api\Model\MeetingLocalRecordingJoinToken200Response
 ```
 
 Get a meeting's join token for local recording
@@ -927,10 +927,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
+$apiInstance = new Zoom\Api\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -954,7 +954,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\MeetingLocalRecordingJoinToken200Response**](../Model/MeetingLocalRecordingJoinToken200Response.md)
+[**\Zoom\Api\Model\MeetingLocalRecordingJoinToken200Response**](../Model/MeetingLocalRecordingJoinToken200Response.md)
 
 ### Authorization
 
@@ -972,7 +972,7 @@ Name | Type | Description  | Notes
 ## `meetingPollCreate()`
 
 ```php
-meetingPollCreate($meeting_id, $meeting_poll_create_request): \OpenAPI\Client\Model\MeetingPollCreate201Response
+meetingPollCreate($meeting_id, $meeting_poll_create_request): \Zoom\Api\Model\MeetingPollCreate201Response
 ```
 
 Create a meeting poll
@@ -987,17 +987,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
+$apiInstance = new Zoom\Api\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $meeting_id = 85746065; // int | The meeting's ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits.
-$meeting_poll_create_request = new \OpenAPI\Client\Model\MeetingPollCreateRequest(); // \OpenAPI\Client\Model\MeetingPollCreateRequest | Meeting poll object
+$meeting_poll_create_request = new \Zoom\Api\Model\MeetingPollCreateRequest(); // \Zoom\Api\Model\MeetingPollCreateRequest | Meeting poll object
 
 try {
     $result = $apiInstance->meetingPollCreate($meeting_id, $meeting_poll_create_request);
@@ -1012,11 +1012,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **meeting_id** | **int**| The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. |
- **meeting_poll_create_request** | [**\OpenAPI\Client\Model\MeetingPollCreateRequest**](../Model/MeetingPollCreateRequest.md)| Meeting poll object |
+ **meeting_poll_create_request** | [**\Zoom\Api\Model\MeetingPollCreateRequest**](../Model/MeetingPollCreateRequest.md)| Meeting poll object |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\MeetingPollCreate201Response**](../Model/MeetingPollCreate201Response.md)
+[**\Zoom\Api\Model\MeetingPollCreate201Response**](../Model/MeetingPollCreate201Response.md)
 
 ### Authorization
 
@@ -1049,10 +1049,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
+$apiInstance = new Zoom\Api\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1095,7 +1095,7 @@ void (empty response body)
 ## `meetingPollGet()`
 
 ```php
-meetingPollGet($meeting_id, $poll_id): \OpenAPI\Client\Model\MeetingPollCreate201Response
+meetingPollGet($meeting_id, $poll_id): \Zoom\Api\Model\MeetingPollCreate201Response
 ```
 
 Get a meeting poll
@@ -1110,10 +1110,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
+$apiInstance = new Zoom\Api\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1139,7 +1139,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\MeetingPollCreate201Response**](../Model/MeetingPollCreate201Response.md)
+[**\Zoom\Api\Model\MeetingPollCreate201Response**](../Model/MeetingPollCreate201Response.md)
 
 ### Authorization
 
@@ -1172,10 +1172,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
+$apiInstance = new Zoom\Api\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1183,7 +1183,7 @@ $apiInstance = new OpenAPI\Client\Api\MeetingsApi(
 );
 $meeting_id = 85746065; // int | The meeting's ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits.
 $poll_id = QalIoKWLTJehBJ8e1xRrbQ; // string | The poll ID
-$meeting_poll_create_request = new \OpenAPI\Client\Model\MeetingPollCreateRequest(); // \OpenAPI\Client\Model\MeetingPollCreateRequest | Meeting Poll
+$meeting_poll_create_request = new \Zoom\Api\Model\MeetingPollCreateRequest(); // \Zoom\Api\Model\MeetingPollCreateRequest | Meeting Poll
 
 try {
     $apiInstance->meetingPollUpdate($meeting_id, $poll_id, $meeting_poll_create_request);
@@ -1198,7 +1198,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **meeting_id** | **int**| The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. |
  **poll_id** | **string**| The poll ID |
- **meeting_poll_create_request** | [**\OpenAPI\Client\Model\MeetingPollCreateRequest**](../Model/MeetingPollCreateRequest.md)| Meeting Poll |
+ **meeting_poll_create_request** | [**\Zoom\Api\Model\MeetingPollCreateRequest**](../Model/MeetingPollCreateRequest.md)| Meeting Poll |
 
 ### Return type
 
@@ -1220,7 +1220,7 @@ void (empty response body)
 ## `meetingPolls()`
 
 ```php
-meetingPolls($meeting_id, $anonymous): \OpenAPI\Client\Model\PollList
+meetingPolls($meeting_id, $anonymous): \Zoom\Api\Model\PollList
 ```
 
 List meeting polls
@@ -1235,10 +1235,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
+$apiInstance = new Zoom\Api\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1264,7 +1264,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PollList**](../Model/PollList.md)
+[**\Zoom\Api\Model\PollList**](../Model/PollList.md)
 
 ### Authorization
 
@@ -1282,7 +1282,7 @@ Name | Type | Description  | Notes
 ## `meetingRegistrantCreate()`
 
 ```php
-meetingRegistrantCreate($meeting_id, $meeting_registrant_create_request, $occurrence_ids): \OpenAPI\Client\Model\MeetingRegistrantCreate201Response
+meetingRegistrantCreate($meeting_id, $meeting_registrant_create_request, $occurrence_ids): \Zoom\Api\Model\MeetingRegistrantCreate201Response
 ```
 
 Add a meeting registrant
@@ -1297,17 +1297,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
+$apiInstance = new Zoom\Api\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $meeting_id = 85746065; // int | The meeting's ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits.
-$meeting_registrant_create_request = new \OpenAPI\Client\Model\MeetingRegistrantCreateRequest(); // \OpenAPI\Client\Model\MeetingRegistrantCreateRequest
+$meeting_registrant_create_request = new \Zoom\Api\Model\MeetingRegistrantCreateRequest(); // \Zoom\Api\Model\MeetingRegistrantCreateRequest
 $occurrence_ids = 1648194360000,1648367160000; // string | A comma-separated list of meeting occurrence IDs. You can get this value with the [Get a meeting](/docs/api-reference/zoom-api/methods#operation/meeting) API.
 
 try {
@@ -1323,12 +1323,12 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **meeting_id** | **int**| The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. |
- **meeting_registrant_create_request** | [**\OpenAPI\Client\Model\MeetingRegistrantCreateRequest**](../Model/MeetingRegistrantCreateRequest.md)|  |
+ **meeting_registrant_create_request** | [**\Zoom\Api\Model\MeetingRegistrantCreateRequest**](../Model/MeetingRegistrantCreateRequest.md)|  |
  **occurrence_ids** | **string**| A comma-separated list of meeting occurrence IDs. You can get this value with the [Get a meeting](/docs/api-reference/zoom-api/methods#operation/meeting) API. | [optional]
 
 ### Return type
 
-[**\OpenAPI\Client\Model\MeetingRegistrantCreate201Response**](../Model/MeetingRegistrantCreate201Response.md)
+[**\Zoom\Api\Model\MeetingRegistrantCreate201Response**](../Model/MeetingRegistrantCreate201Response.md)
 
 ### Authorization
 
@@ -1346,7 +1346,7 @@ Name | Type | Description  | Notes
 ## `meetingRegistrantGet()`
 
 ```php
-meetingRegistrantGet($meeting_id, $registrant_id): \OpenAPI\Client\Model\MeetingRegistrant
+meetingRegistrantGet($meeting_id, $registrant_id): \Zoom\Api\Model\MeetingRegistrant
 ```
 
 Get a meeting registrant
@@ -1361,10 +1361,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
+$apiInstance = new Zoom\Api\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1390,7 +1390,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\MeetingRegistrant**](../Model/MeetingRegistrant.md)
+[**\Zoom\Api\Model\MeetingRegistrant**](../Model/MeetingRegistrant.md)
 
 ### Authorization
 
@@ -1423,17 +1423,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
+$apiInstance = new Zoom\Api\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $meeting_id = 85746065; // int | The meeting's ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits.
-$meeting_registrants_questions_get200_response = new \OpenAPI\Client\Model\MeetingRegistrantsQuestionsGet200Response(); // \OpenAPI\Client\Model\MeetingRegistrantsQuestionsGet200Response | Meeting Registrant Questions
+$meeting_registrants_questions_get200_response = new \Zoom\Api\Model\MeetingRegistrantsQuestionsGet200Response(); // \Zoom\Api\Model\MeetingRegistrantsQuestionsGet200Response | Meeting Registrant Questions
 
 try {
     $apiInstance->meetingRegistrantQuestionUpdate($meeting_id, $meeting_registrants_questions_get200_response);
@@ -1447,7 +1447,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **meeting_id** | **int**| The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. |
- **meeting_registrants_questions_get200_response** | [**\OpenAPI\Client\Model\MeetingRegistrantsQuestionsGet200Response**](../Model/MeetingRegistrantsQuestionsGet200Response.md)| Meeting Registrant Questions |
+ **meeting_registrants_questions_get200_response** | [**\Zoom\Api\Model\MeetingRegistrantsQuestionsGet200Response**](../Model/MeetingRegistrantsQuestionsGet200Response.md)| Meeting Registrant Questions |
 
 ### Return type
 
@@ -1484,17 +1484,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
+$apiInstance = new Zoom\Api\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $meeting_id = 85746065; // int | The meeting's ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits.
-$registrant_status = new \OpenAPI\Client\Model\RegistrantStatus(); // \OpenAPI\Client\Model\RegistrantStatus
+$registrant_status = new \Zoom\Api\Model\RegistrantStatus(); // \Zoom\Api\Model\RegistrantStatus
 $occurrence_id = 1648194360000; // string | The meeting or webinar occurrence ID.
 
 try {
@@ -1509,7 +1509,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **meeting_id** | **int**| The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. |
- **registrant_status** | [**\OpenAPI\Client\Model\RegistrantStatus**](../Model/RegistrantStatus.md)|  |
+ **registrant_status** | [**\Zoom\Api\Model\RegistrantStatus**](../Model/RegistrantStatus.md)|  |
  **occurrence_id** | **string**| The meeting or webinar occurrence ID. | [optional]
 
 ### Return type
@@ -1532,7 +1532,7 @@ void (empty response body)
 ## `meetingRegistrants()`
 
 ```php
-meetingRegistrants($meeting_id, $occurrence_id, $status, $page_size, $page_number, $next_page_token): \OpenAPI\Client\Model\MeetingRegistrantList
+meetingRegistrants($meeting_id, $occurrence_id, $status, $page_size, $page_number, $next_page_token): \Zoom\Api\Model\MeetingRegistrantList
 ```
 
 List meeting registrants
@@ -1547,10 +1547,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
+$apiInstance = new Zoom\Api\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1584,7 +1584,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\MeetingRegistrantList**](../Model/MeetingRegistrantList.md)
+[**\Zoom\Api\Model\MeetingRegistrantList**](../Model/MeetingRegistrantList.md)
 
 ### Authorization
 
@@ -1602,7 +1602,7 @@ Name | Type | Description  | Notes
 ## `meetingRegistrantsQuestionsGet()`
 
 ```php
-meetingRegistrantsQuestionsGet($meeting_id): \OpenAPI\Client\Model\MeetingRegistrantsQuestionsGet200Response
+meetingRegistrantsQuestionsGet($meeting_id): \Zoom\Api\Model\MeetingRegistrantsQuestionsGet200Response
 ```
 
 List registration questions
@@ -1617,10 +1617,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
+$apiInstance = new Zoom\Api\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1644,7 +1644,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\MeetingRegistrantsQuestionsGet200Response**](../Model/MeetingRegistrantsQuestionsGet200Response.md)
+[**\Zoom\Api\Model\MeetingRegistrantsQuestionsGet200Response**](../Model/MeetingRegistrantsQuestionsGet200Response.md)
 
 ### Authorization
 
@@ -1677,17 +1677,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
+$apiInstance = new Zoom\Api\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $meeting_id = 85746065; // int | The meeting's ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits.
-$meeting_status_request = new \OpenAPI\Client\Model\MeetingStatusRequest(); // \OpenAPI\Client\Model\MeetingStatusRequest
+$meeting_status_request = new \Zoom\Api\Model\MeetingStatusRequest(); // \Zoom\Api\Model\MeetingStatusRequest
 
 try {
     $apiInstance->meetingStatus($meeting_id, $meeting_status_request);
@@ -1701,7 +1701,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **meeting_id** | **int**| The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. |
- **meeting_status_request** | [**\OpenAPI\Client\Model\MeetingStatusRequest**](../Model/MeetingStatusRequest.md)|  |
+ **meeting_status_request** | [**\Zoom\Api\Model\MeetingStatusRequest**](../Model/MeetingStatusRequest.md)|  |
 
 ### Return type
 
@@ -1738,10 +1738,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
+$apiInstance = new Zoom\Api\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1782,7 +1782,7 @@ void (empty response body)
 ## `meetingSurveyGet()`
 
 ```php
-meetingSurveyGet($meeting_id): \OpenAPI\Client\Model\MeetingSurveyGet200Response
+meetingSurveyGet($meeting_id): \Zoom\Api\Model\MeetingSurveyGet200Response
 ```
 
 Get a meeting survey
@@ -1797,10 +1797,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
+$apiInstance = new Zoom\Api\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1824,7 +1824,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\MeetingSurveyGet200Response**](../Model/MeetingSurveyGet200Response.md)
+[**\Zoom\Api\Model\MeetingSurveyGet200Response**](../Model/MeetingSurveyGet200Response.md)
 
 ### Authorization
 
@@ -1857,17 +1857,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
+$apiInstance = new Zoom\Api\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $meeting_id = 85746065; // int | The meeting's ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits.
-$meeting_survey_get200_response = new \OpenAPI\Client\Model\MeetingSurveyGet200Response(); // \OpenAPI\Client\Model\MeetingSurveyGet200Response
+$meeting_survey_get200_response = new \Zoom\Api\Model\MeetingSurveyGet200Response(); // \Zoom\Api\Model\MeetingSurveyGet200Response
 
 try {
     $apiInstance->meetingSurveyUpdate($meeting_id, $meeting_survey_get200_response);
@@ -1881,7 +1881,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **meeting_id** | **int**| The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. |
- **meeting_survey_get200_response** | [**\OpenAPI\Client\Model\MeetingSurveyGet200Response**](../Model/MeetingSurveyGet200Response.md)|  |
+ **meeting_survey_get200_response** | [**\Zoom\Api\Model\MeetingSurveyGet200Response**](../Model/MeetingSurveyGet200Response.md)|  |
 
 ### Return type
 
@@ -1903,7 +1903,7 @@ void (empty response body)
 ## `meetingToken()`
 
 ```php
-meetingToken($meeting_id, $type): \OpenAPI\Client\Model\MeetingToken200Response
+meetingToken($meeting_id, $type): \Zoom\Api\Model\MeetingToken200Response
 ```
 
 Get meeting's token
@@ -1918,10 +1918,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
+$apiInstance = new Zoom\Api\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -1947,7 +1947,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\MeetingToken200Response**](../Model/MeetingToken200Response.md)
+[**\Zoom\Api\Model\MeetingToken200Response**](../Model/MeetingToken200Response.md)
 
 ### Authorization
 
@@ -1980,17 +1980,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
+$apiInstance = new Zoom\Api\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $meeting_id = 85746065; // int | The meeting's ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits.
-$meeting_update_request = new \OpenAPI\Client\Model\MeetingUpdateRequest(); // \OpenAPI\Client\Model\MeetingUpdateRequest | Meeting
+$meeting_update_request = new \Zoom\Api\Model\MeetingUpdateRequest(); // \Zoom\Api\Model\MeetingUpdateRequest | Meeting
 $occurrence_id = 1648194360000; // string | Meeting occurrence id. Support change of agenda, start_time, duration, settings: {host_video, participant_video, join_before_host, mute_upon_entry, waiting_room, watermark, auto_recording}
 
 try {
@@ -2005,7 +2005,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **meeting_id** | **int**| The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. |
- **meeting_update_request** | [**\OpenAPI\Client\Model\MeetingUpdateRequest**](../Model/MeetingUpdateRequest.md)| Meeting |
+ **meeting_update_request** | [**\Zoom\Api\Model\MeetingUpdateRequest**](../Model/MeetingUpdateRequest.md)| Meeting |
  **occurrence_id** | **string**| Meeting occurrence id. Support change of agenda, start_time, duration, settings: {host_video, participant_video, join_before_host, mute_upon_entry, waiting_room, watermark, auto_recording} | [optional]
 
 ### Return type
@@ -2043,10 +2043,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
+$apiInstance = new Zoom\Api\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2091,7 +2091,7 @@ void (empty response body)
 ## `meetings()`
 
 ```php
-meetings($user_id, $type, $page_size, $next_page_token, $page_number): \OpenAPI\Client\Model\GroupList
+meetings($user_id, $type, $page_size, $next_page_token, $page_number): \Zoom\Api\Model\GroupList
 ```
 
 List meetings
@@ -2106,16 +2106,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
+$apiInstance = new Zoom\Api\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = new \OpenAPI\Client\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
+$user_id = new \Zoom\Api\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
 $type = scheduled; // string | The type of meeting:  * `scheduled` — All valid previous (unexpired) meetings, live meetings, and upcoming scheduled meetings.  * `live` — All the ongoing meetings.  * `upcoming` — All upcoming meetings, including live meetings.  * `upcoming_meetings` — All upcoming meetings, including live meetings.  * `previous_meetings` — All the previous meetings.
 $page_size = 30; // int | The number of records returned within a single API call.
 $next_page_token = IAfJX3jsOLW7w3dokmFl84zOa0MAVGyMEB2; // string | The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
@@ -2141,7 +2141,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\GroupList**](../Model/GroupList.md)
+[**\Zoom\Api\Model\GroupList**](../Model/GroupList.md)
 
 ### Authorization
 
@@ -2159,7 +2159,7 @@ Name | Type | Description  | Notes
 ## `pastMeetingDetails()`
 
 ```php
-pastMeetingDetails($meeting_id): \OpenAPI\Client\Model\PastMeetingDetails200Response
+pastMeetingDetails($meeting_id): \Zoom\Api\Model\PastMeetingDetails200Response
 ```
 
 Get past meeting details
@@ -2174,16 +2174,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
+$apiInstance = new Zoom\Api\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$meeting_id = new \OpenAPI\Client\Model\ListPastMeetingPollsMeetingIdParameter(); // ListPastMeetingPollsMeetingIdParameter | The meeting's ID or universally unique ID (UUID).  * If you provide a meeting ID, the API will return a response for the latest meeting instance.  * If you provide a meeting UUID that begins with a `/` character or contains the `//` characters, you **must** double-encode the meeting UUID before making an API request.
+$meeting_id = new \Zoom\Api\Model\ListPastMeetingPollsMeetingIdParameter(); // ListPastMeetingPollsMeetingIdParameter | The meeting's ID or universally unique ID (UUID).  * If you provide a meeting ID, the API will return a response for the latest meeting instance.  * If you provide a meeting UUID that begins with a `/` character or contains the `//` characters, you **must** double-encode the meeting UUID before making an API request.
 
 try {
     $result = $apiInstance->pastMeetingDetails($meeting_id);
@@ -2201,7 +2201,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PastMeetingDetails200Response**](../Model/PastMeetingDetails200Response.md)
+[**\Zoom\Api\Model\PastMeetingDetails200Response**](../Model/PastMeetingDetails200Response.md)
 
 ### Authorization
 
@@ -2219,7 +2219,7 @@ Name | Type | Description  | Notes
 ## `pastMeetingParticipants()`
 
 ```php
-pastMeetingParticipants($meeting_id, $page_size, $next_page_token): \OpenAPI\Client\Model\PastMeetingParticipants200Response
+pastMeetingParticipants($meeting_id, $page_size, $next_page_token): \Zoom\Api\Model\PastMeetingParticipants200Response
 ```
 
 Get past meeting participants
@@ -2234,16 +2234,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
+$apiInstance = new Zoom\Api\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$meeting_id = new \OpenAPI\Client\Model\ListPastMeetingPollsMeetingIdParameter(); // ListPastMeetingPollsMeetingIdParameter | The meeting's ID or universally unique ID (UUID).  * If you provide a meeting ID, the API will return a response for the latest meeting instance.  * If you provide a meeting UUID that begins with a `/` character or contains the `//` characters, you **must** double-encode the meeting UUID before making an API request.
+$meeting_id = new \Zoom\Api\Model\ListPastMeetingPollsMeetingIdParameter(); // ListPastMeetingPollsMeetingIdParameter | The meeting's ID or universally unique ID (UUID).  * If you provide a meeting ID, the API will return a response for the latest meeting instance.  * If you provide a meeting UUID that begins with a `/` character or contains the `//` characters, you **must** double-encode the meeting UUID before making an API request.
 $page_size = 30; // int | The number of records returned within a single API call.
 $next_page_token = IAfJX3jsOLW7w3dokmFl84zOa0MAVGyMEB2; // string | The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
 
@@ -2265,7 +2265,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\PastMeetingParticipants200Response**](../Model/PastMeetingParticipants200Response.md)
+[**\Zoom\Api\Model\PastMeetingParticipants200Response**](../Model/PastMeetingParticipants200Response.md)
 
 ### Authorization
 
@@ -2283,7 +2283,7 @@ Name | Type | Description  | Notes
 ## `pastMeetings()`
 
 ```php
-pastMeetings($meeting_id): \OpenAPI\Client\Model\MeetingInstances
+pastMeetings($meeting_id): \Zoom\Api\Model\MeetingInstances
 ```
 
 List past meeting instances
@@ -2298,10 +2298,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
+$apiInstance = new Zoom\Api\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -2325,7 +2325,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\OpenAPI\Client\Model\MeetingInstances**](../Model/MeetingInstances.md)
+[**\Zoom\Api\Model\MeetingInstances**](../Model/MeetingInstances.md)
 
 ### Authorization
 

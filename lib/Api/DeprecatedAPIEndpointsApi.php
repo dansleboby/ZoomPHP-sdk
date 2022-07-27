@@ -4,7 +4,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -25,7 +25,7 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Api;
+namespace Zoom\Api\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use OpenAPI\Client\ApiException;
-use OpenAPI\Client\Configuration;
-use OpenAPI\Client\HeaderSelector;
-use OpenAPI\Client\ObjectSerializer;
+use Zoom\Api\ApiException;
+use Zoom\Api\Configuration;
+use Zoom\Api\HeaderSelector;
+use Zoom\Api\ObjectSerializer;
 
 /**
  * DeprecatedAPIEndpointsApi Class Doc Comment
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -122,9 +122,9 @@ class DeprecatedAPIEndpointsApi
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ListPastMeetingFiles200Response
+     * @return \Zoom\Api\Model\ListPastMeetingFiles200Response
      * @deprecated
      */
     public function listPastMeetingFiles($meeting_id)
@@ -140,9 +140,9 @@ class DeprecatedAPIEndpointsApi
      *
      * @param  int $meeting_id The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ListPastMeetingFiles200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\ListPastMeetingFiles200Response, HTTP status code, HTTP response headers (array of strings)
      * @deprecated
      */
     public function listPastMeetingFilesWithHttpInfo($meeting_id)
@@ -186,23 +186,23 @@ class DeprecatedAPIEndpointsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ListPastMeetingFiles200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\ListPastMeetingFiles200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ListPastMeetingFiles200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\ListPastMeetingFiles200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ListPastMeetingFiles200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\ListPastMeetingFiles200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ListPastMeetingFiles200Response';
+            $returnType = '\Zoom\Api\Model\ListPastMeetingFiles200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -223,7 +223,7 @@ class DeprecatedAPIEndpointsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ListPastMeetingFiles200Response',
+                        '\Zoom\Api\Model\ListPastMeetingFiles200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -267,7 +267,7 @@ class DeprecatedAPIEndpointsApi
      */
     public function listPastMeetingFilesAsyncWithHttpInfo($meeting_id)
     {
-        $returnType = '\OpenAPI\Client\Model\ListPastMeetingFiles200Response';
+        $returnType = '\Zoom\Api\Model\ListPastMeetingFiles200Response';
         $request = $this->listPastMeetingFilesRequest($meeting_id);
 
         return $this->client
@@ -411,9 +411,9 @@ class DeprecatedAPIEndpointsApi
      *
      * @param  string $webinar_id webinar_id (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \OpenAPI\Client\Model\ListPastWebinarFiles200Response
+     * @return \Zoom\Api\Model\ListPastWebinarFiles200Response
      * @deprecated
      */
     public function listPastWebinarFiles($webinar_id)
@@ -429,9 +429,9 @@ class DeprecatedAPIEndpointsApi
      *
      * @param  string $webinar_id (required)
      *
-     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \Zoom\Api\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\ListPastWebinarFiles200Response, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Zoom\Api\Model\ListPastWebinarFiles200Response, HTTP status code, HTTP response headers (array of strings)
      * @deprecated
      */
     public function listPastWebinarFilesWithHttpInfo($webinar_id)
@@ -475,23 +475,23 @@ class DeprecatedAPIEndpointsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\ListPastWebinarFiles200Response' === '\SplFileObject') {
+                    if ('\Zoom\Api\Model\ListPastWebinarFiles200Response' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\ListPastWebinarFiles200Response' !== 'string') {
+                        if ('\Zoom\Api\Model\ListPastWebinarFiles200Response' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\ListPastWebinarFiles200Response', []),
+                        ObjectSerializer::deserialize($content, '\Zoom\Api\Model\ListPastWebinarFiles200Response', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\ListPastWebinarFiles200Response';
+            $returnType = '\Zoom\Api\Model\ListPastWebinarFiles200Response';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -512,7 +512,7 @@ class DeprecatedAPIEndpointsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\ListPastWebinarFiles200Response',
+                        '\Zoom\Api\Model\ListPastWebinarFiles200Response',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -556,7 +556,7 @@ class DeprecatedAPIEndpointsApi
      */
     public function listPastWebinarFilesAsyncWithHttpInfo($webinar_id)
     {
-        $returnType = '\OpenAPI\Client\Model\ListPastWebinarFiles200Response';
+        $returnType = '\Zoom\Api\Model\ListPastWebinarFiles200Response';
         $request = $this->listPastWebinarFilesRequest($webinar_id);
 
         return $this->client

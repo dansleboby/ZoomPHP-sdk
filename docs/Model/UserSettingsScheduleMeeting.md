@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **force_pmi_jbh_password** | **bool** | Require a passcode for personal meetings if attendees can join before host. | [optional]
 **host_video** | **bool** | Start meetings with host video on. | [optional]
 **join_before_host** | **bool** | Join the meeting before host arrives. | [optional]
-**meeting_password_requirement** | [**\OpenAPI\Client\Model\UserSettingsScheduleMeetingMeetingPasswordRequirement**](UserSettingsScheduleMeetingMeetingPasswordRequirement.md) |  | [optional]
+**meeting_password_requirement** | [**\Zoom\Api\Model\UserSettingsScheduleMeetingMeetingPasswordRequirement**](UserSettingsScheduleMeetingMeetingPasswordRequirement.md) |  | [optional]
 **participants_video** | **bool** | Start meetings with participants video on. | [optional]
 **personal_meeting** | **bool** | Personal Meeting Setting.&lt;br&gt;&lt;br&gt; &#x60;true&#x60;: Indicates that the **\&quot;Enable [Personal Meeting ID (PMI)](https://marketplace.zoom.us/docs/api-reference/using-zoom-apis#understanding-personal-meeting-id-pmi)\&quot;** setting is turned on. Users can choose to use a PMI for their meetings. &lt;br&gt;&lt;br&gt; &#x60;false&#x60;: Indicates that the **\&quot;Enable Personal Meeting ID\&quot;** setting is [turned off](https://support.zoom.us/hc/en-us/articles/201362843-Personal-meeting-ID-PMI-and-personal-link#h_aa0335c8-3b06-41bc-bc1f-a8b84ef17f2a). If this setting is disabled, meetings that were scheduled with PMI will be invalid. Scheduled meetings will need to be manually updated. For Zoom Phone only:If a user has been assigned a desk phone, **\&quot;Elevate to Zoom Meeting\&quot;** on desk phone will be disabled. | [optional]
 **pmi_password** | **string** | PMI passcode | [optional]

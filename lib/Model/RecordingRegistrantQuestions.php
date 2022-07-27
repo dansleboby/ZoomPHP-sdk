@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * RecordingRegistrantQuestions Class Doc Comment
  *
  * @category Class
  * @description Recording Registrant Questions
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -58,8 +58,8 @@ class RecordingRegistrantQuestions implements ModelInterface, ArrayAccess, \Json
       * @var string[]
       */
     protected static $openAPITypes = [
-        'custom_questions' => '\OpenAPI\Client\Model\RecordingRegistrantQuestionsCustomQuestionsInner[]',
-        'questions' => '\OpenAPI\Client\Model\RecordingRegistrantQuestionsQuestionsInner[]'
+        'custom_questions' => '\Zoom\Api\Model\RecordingRegistrantQuestionsCustomQuestionsInner[]',
+        'questions' => '\Zoom\Api\Model\RecordingRegistrantQuestionsQuestionsInner[]'
     ];
 
     /**
@@ -213,7 +213,7 @@ class RecordingRegistrantQuestions implements ModelInterface, ArrayAccess, \Json
     /**
      * Gets custom_questions
      *
-     * @return \OpenAPI\Client\Model\RecordingRegistrantQuestionsCustomQuestionsInner[]|null
+     * @return \Zoom\Api\Model\RecordingRegistrantQuestionsCustomQuestionsInner[]|null
      */
     public function getCustomQuestions()
     {
@@ -223,7 +223,7 @@ class RecordingRegistrantQuestions implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets custom_questions
      *
-     * @param \OpenAPI\Client\Model\RecordingRegistrantQuestionsCustomQuestionsInner[]|null $custom_questions Array of Registrant Custom Questions
+     * @param \Zoom\Api\Model\RecordingRegistrantQuestionsCustomQuestionsInner[]|null $custom_questions Array of Registrant Custom Questions
      *
      * @return self
      */
@@ -237,7 +237,7 @@ class RecordingRegistrantQuestions implements ModelInterface, ArrayAccess, \Json
     /**
      * Gets questions
      *
-     * @return \OpenAPI\Client\Model\RecordingRegistrantQuestionsQuestionsInner[]|null
+     * @return \Zoom\Api\Model\RecordingRegistrantQuestionsQuestionsInner[]|null
      */
     public function getQuestions()
     {
@@ -247,7 +247,7 @@ class RecordingRegistrantQuestions implements ModelInterface, ArrayAccess, \Json
     /**
      * Sets questions
      *
-     * @param \OpenAPI\Client\Model\RecordingRegistrantQuestionsQuestionsInner[]|null $questions Array of Registrant Questions
+     * @param \Zoom\Api\Model\RecordingRegistrantQuestionsQuestionsInner[]|null $questions Array of Registrant Questions
      *
      * @return self
      */

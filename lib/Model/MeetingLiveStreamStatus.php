@@ -5,7 +5,7 @@
  * PHP version 7.4
  *
  * @category Class
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,17 +26,17 @@
  * Do not edit the class manually.
  */
 
-namespace OpenAPI\Client\Model;
+namespace Zoom\Api\Model;
 
 use \ArrayAccess;
-use \OpenAPI\Client\ObjectSerializer;
+use \Zoom\Api\ObjectSerializer;
 
 /**
  * MeetingLiveStreamStatus Class Doc Comment
  *
  * @category Class
  * @description Meeting live stream status.
- * @package  OpenAPI\Client
+ * @package  Zoom\Api
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
@@ -59,7 +59,7 @@ class MeetingLiveStreamStatus implements ModelInterface, ArrayAccess, \JsonSeria
       */
     protected static $openAPITypes = [
         'action' => 'string',
-        'settings' => '\OpenAPI\Client\Model\MeetingLiveStreamStatusSettings'
+        'settings' => '\Zoom\Api\Model\MeetingLiveStreamStatusSettings'
     ];
 
     /**
@@ -271,7 +271,7 @@ class MeetingLiveStreamStatus implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Gets settings
      *
-     * @return \OpenAPI\Client\Model\MeetingLiveStreamStatusSettings|null
+     * @return \Zoom\Api\Model\MeetingLiveStreamStatusSettings|null
      */
     public function getSettings()
     {
@@ -281,7 +281,7 @@ class MeetingLiveStreamStatus implements ModelInterface, ArrayAccess, \JsonSeria
     /**
      * Sets settings
      *
-     * @param \OpenAPI\Client\Model\MeetingLiveStreamStatusSettings|null $settings settings
+     * @param \Zoom\Api\Model\MeetingLiveStreamStatusSettings|null $settings settings
      *
      * @return self
      */

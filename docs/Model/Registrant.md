@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **city** | **string** | The registrant&#39;s city. | [optional]
 **comments** | **string** | The registrant&#39;s questions and comments. | [optional]
 **country** | **string** | The registrant&#39;s two-letter [country code](https://marketplace.zoom.us/docs/api-reference/other-references/abbreviation-lists#countries). | [optional]
-**custom_questions** | [**\OpenAPI\Client\Model\CustomQuestion[]**](CustomQuestion.md) | Information about custom questions. | [optional]
+**custom_questions** | [**\Zoom\Api\Model\CustomQuestion[]**](CustomQuestion.md) | Information about custom questions. | [optional]
 **email** | **string** | The registrant&#39;s email address. See [Email address display rules](https://marketplace.zoom.us/docs/api-reference/using-zoom-apis#email-address) for return value details. |
 **first_name** | **string** | The registrant&#39;s first name. |
 **industry** | **string** | The registrant&#39;s industry. | [optional]
