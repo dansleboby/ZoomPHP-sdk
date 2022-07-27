@@ -4,9 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | **string** | Account &lt;a href&#x3D;\&quot;https://marketplace.zoom.us/docs/api-reference/other-references/plans\&quot;&gt;plan type.&lt;/a&gt; | 
-**hosts** | **int** | Number of hosts for this plan. | 
+**hosts** | **int** | The account plan&#39;s number of hosts. |
+**type** | **string** | The account&#39;s [plan type](https://marketplace.zoom.us/docs/api-reference/other-references/plans). |
 
-[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
-
-
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

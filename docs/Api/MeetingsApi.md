@@ -1,43 +1,124 @@
-# Zoom\Api\MeetingsApi
+# OpenAPI\Client\MeetingsApi
 
-All URIs are relative to *https://api.zoom.us/v2*
+All URIs are relative to https://api.zoom.us/v2.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**inMeetingRecordingControl**](MeetingsApi.md#inMeetingRecordingControl) | **PATCH** /live_meetings/{meetingId}/events | Use In-Meeting Recording Controls
-[**listPastMeetingPolls**](MeetingsApi.md#listPastMeetingPolls) | **GET** /past_meetings/{meetingId}/polls | List Past Meeting&#39;s Poll Results
-[**meeting**](MeetingsApi.md#meeting) | **GET** /meetings/{meetingId} | Get a Meeting
-[**meetingCreate**](MeetingsApi.md#meetingCreate) | **POST** /users/{userId}/meetings | Create a Meeting
-[**meetingDelete**](MeetingsApi.md#meetingDelete) | **DELETE** /meetings/{meetingId} | Delete a Meeting
-[**meetingInvitation**](MeetingsApi.md#meetingInvitation) | **GET** /meetings/{meetingId}/invitation | Get Meeting Invitation
-[**meetingLiveStreamStatusUpdate**](MeetingsApi.md#meetingLiveStreamStatusUpdate) | **PATCH** /meetings/{meetingId}/livestream/status | Update Live Stream Status
-[**meetingLiveStreamUpdate**](MeetingsApi.md#meetingLiveStreamUpdate) | **PATCH** /meetings/{meetingId}/livestream | Update Live Stream
-[**meetingPollCreate**](MeetingsApi.md#meetingPollCreate) | **POST** /meetings/{meetingId}/polls | Create a Meeting Poll
-[**meetingPollDelete**](MeetingsApi.md#meetingPollDelete) | **DELETE** /meetings/{meetingId}/polls/{pollId} | Delete a Meeting Poll
-[**meetingPollGet**](MeetingsApi.md#meetingPollGet) | **GET** /meetings/{meetingId}/polls/{pollId} | Get a Meeting Poll
-[**meetingPollUpdate**](MeetingsApi.md#meetingPollUpdate) | **PUT** /meetings/{meetingId}/polls/{pollId} | Update a Meeting Poll
-[**meetingPolls**](MeetingsApi.md#meetingPolls) | **GET** /meetings/{meetingId}/polls | List Meeting Polls
-[**meetingRegistrantCreate**](MeetingsApi.md#meetingRegistrantCreate) | **POST** /meetings/{meetingId}/registrants | Add Meeting Registrant
-[**meetingRegistrantQuestionUpdate**](MeetingsApi.md#meetingRegistrantQuestionUpdate) | **PATCH** /meetings/{meetingId}/registrants/questions | Update Registration Questions
-[**meetingRegistrantStatus**](MeetingsApi.md#meetingRegistrantStatus) | **PUT** /meetings/{meetingId}/registrants/status | Update Meeting Registrant Status
-[**meetingRegistrants**](MeetingsApi.md#meetingRegistrants) | **GET** /meetings/{meetingId}/registrants | List Meeting Registrants
-[**meetingRegistrantsQuestionsGet**](MeetingsApi.md#meetingRegistrantsQuestionsGet) | **GET** /meetings/{meetingId}/registrants/questions | List Registration Questions
-[**meetingStatus**](MeetingsApi.md#meetingStatus) | **PUT** /meetings/{meetingId}/status | Update Meeting Status
-[**meetingUpdate**](MeetingsApi.md#meetingUpdate) | **PATCH** /meetings/{meetingId} | Update a Meeting
-[**meetings**](MeetingsApi.md#meetings) | **GET** /users/{userId}/meetings | List Meetings
-[**pastMeetingDetails**](MeetingsApi.md#pastMeetingDetails) | **GET** /past_meetings/{meetingUUID} | Get Past Meeting Details
-[**pastMeetingParticipants**](MeetingsApi.md#pastMeetingParticipants) | **GET** /past_meetings/{meetingUUID}/participants | Get Past Meeting Participants
-[**pastMeetings**](MeetingsApi.md#pastMeetings) | **GET** /past_meetings/{meetingId}/instances | List Ended Meeting Instances
+[**addBatchRegistrants()**](MeetingsApi.md#addBatchRegistrants) | **POST** /meetings/{meetingId}/batch_registrants | Perform batch registration
+[**createBatchPolls()**](MeetingsApi.md#createBatchPolls) | **POST** /meetings/{meetingId}/batch_polls | Perform batch poll creation
+[**deleteMeetingChatMessageById()**](MeetingsApi.md#deleteMeetingChatMessageById) | **DELETE** /live_meetings/{meetingId}/chat/messages/{messageId} | Delete a live meeting message
+[**getMeetingLiveStreamDetails()**](MeetingsApi.md#getMeetingLiveStreamDetails) | **GET** /meetings/{meetingId}/livestream | Get livestream details
+[**inMeetingControl()**](MeetingsApi.md#inMeetingControl) | **PATCH** /live_meetings/{meetingId}/events | Use in-meeting controls
+[**listMeetingTemplates()**](MeetingsApi.md#listMeetingTemplates) | **GET** /users/{userId}/meeting_templates | List meeting templates
+[**listPastMeetingPolls()**](MeetingsApi.md#listPastMeetingPolls) | **GET** /past_meetings/{meetingId}/polls | List past meeting&#39;s poll results
+[**meeting()**](MeetingsApi.md#meeting) | **GET** /meetings/{meetingId} | Get a meeting
+[**meetingCreate()**](MeetingsApi.md#meetingCreate) | **POST** /users/{userId}/meetings | Create a meeting
+[**meetingDelete()**](MeetingsApi.md#meetingDelete) | **DELETE** /meetings/{meetingId} | Delete a meeting
+[**meetingInvitation()**](MeetingsApi.md#meetingInvitation) | **GET** /meetings/{meetingId}/invitation | Get meeting invitation
+[**meetingInviteLinksCreate()**](MeetingsApi.md#meetingInviteLinksCreate) | **POST** /meetings/{meetingId}/invite_links | Create meeting&#39;s invite links
+[**meetingLiveStreamStatusUpdate()**](MeetingsApi.md#meetingLiveStreamStatusUpdate) | **PATCH** /meetings/{meetingId}/livestream/status | Update Live Stream Status
+[**meetingLiveStreamUpdate()**](MeetingsApi.md#meetingLiveStreamUpdate) | **PATCH** /meetings/{meetingId}/livestream | Update a livestream
+[**meetingLocalRecordingJoinToken()**](MeetingsApi.md#meetingLocalRecordingJoinToken) | **GET** /meetings/{meetingId}/jointoken/local_recording | Get a meeting&#39;s join token for local recording
+[**meetingPollCreate()**](MeetingsApi.md#meetingPollCreate) | **POST** /meetings/{meetingId}/polls | Create a meeting poll
+[**meetingPollDelete()**](MeetingsApi.md#meetingPollDelete) | **DELETE** /meetings/{meetingId}/polls/{pollId} | Delete a meeting poll
+[**meetingPollGet()**](MeetingsApi.md#meetingPollGet) | **GET** /meetings/{meetingId}/polls/{pollId} | Get a meeting poll
+[**meetingPollUpdate()**](MeetingsApi.md#meetingPollUpdate) | **PUT** /meetings/{meetingId}/polls/{pollId} | Update a meeting poll
+[**meetingPolls()**](MeetingsApi.md#meetingPolls) | **GET** /meetings/{meetingId}/polls | List meeting polls
+[**meetingRegistrantCreate()**](MeetingsApi.md#meetingRegistrantCreate) | **POST** /meetings/{meetingId}/registrants | Add a meeting registrant
+[**meetingRegistrantGet()**](MeetingsApi.md#meetingRegistrantGet) | **GET** /meetings/{meetingId}/registrants/{registrantId} | Get a meeting registrant
+[**meetingRegistrantQuestionUpdate()**](MeetingsApi.md#meetingRegistrantQuestionUpdate) | **PATCH** /meetings/{meetingId}/registrants/questions | Update registration questions
+[**meetingRegistrantStatus()**](MeetingsApi.md#meetingRegistrantStatus) | **PUT** /meetings/{meetingId}/registrants/status | Update registrant&#39;s status
+[**meetingRegistrants()**](MeetingsApi.md#meetingRegistrants) | **GET** /meetings/{meetingId}/registrants | List meeting registrants
+[**meetingRegistrantsQuestionsGet()**](MeetingsApi.md#meetingRegistrantsQuestionsGet) | **GET** /meetings/{meetingId}/registrants/questions | List registration questions
+[**meetingStatus()**](MeetingsApi.md#meetingStatus) | **PUT** /meetings/{meetingId}/status | Update meeting status
+[**meetingSurveyDelete()**](MeetingsApi.md#meetingSurveyDelete) | **DELETE** /meetings/{meetingId}/survey | Delete a meeting survey
+[**meetingSurveyGet()**](MeetingsApi.md#meetingSurveyGet) | **GET** /meetings/{meetingId}/survey | Get a meeting survey
+[**meetingSurveyUpdate()**](MeetingsApi.md#meetingSurveyUpdate) | **PATCH** /meetings/{meetingId}/survey | Update a meeting survey
+[**meetingToken()**](MeetingsApi.md#meetingToken) | **GET** /meetings/{meetingId}/token | Get meeting&#39;s token
+[**meetingUpdate()**](MeetingsApi.md#meetingUpdate) | **PATCH** /meetings/{meetingId} | Update a meeting
+[**meetingregistrantdelete()**](MeetingsApi.md#meetingregistrantdelete) | **DELETE** /meetings/{meetingId}/registrants/{registrantId} | Delete a meeting registrant
+[**meetings()**](MeetingsApi.md#meetings) | **GET** /users/{userId}/meetings | List meetings
+[**pastMeetingDetails()**](MeetingsApi.md#pastMeetingDetails) | **GET** /past_meetings/{meetingId} | Get past meeting details
+[**pastMeetingParticipants()**](MeetingsApi.md#pastMeetingParticipants) | **GET** /past_meetings/{meetingId}/participants | Get past meeting participants
+[**pastMeetings()**](MeetingsApi.md#pastMeetings) | **GET** /past_meetings/{meetingId}/instances | List past meeting instances
 
 
+## `addBatchRegistrants()`
 
-## inMeetingRecordingControl
+```php
+addBatchRegistrants($meeting_id, $add_batch_registrants_request): \OpenAPI\Client\Model\AddBatchRegistrants200Response
+```
 
-> object inMeetingRecordingControl($meeting_id, $body)
+Perform batch registration
 
-Use In-Meeting Recording Controls
+Register up to 30 registrants at once for a meeting that requires [registration](https://support.zoom.us/hc/en-us/articles/211579443-Registration-for-Meetings). <br>  **Prerequisites:**<br> * The meeting host must be a Licensed user. * The meeting must require registration and should be of type `2`, i.e., they should be scheduled meetings. Instant meetings and Recurring meetings are not supported by this API.<br><br> **Scope:** `meeting:write`, `meeting:write:admin`<br> **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Heavy`<br>
 
-Use this API to control the [in-meeting](https://support.zoom.us/hc/en-us/articles/360021921032-In-Meeting-Controls) **recording features** such as starting a recording, stopping a recording, pausing a recording, and resuming a recording. This API only works for Cloud Recordings and not for local recordings.  <p style=\"background-color:#feefe3; color:#bf360c; padding:8px\"> <b>Note:</b> This API is currently not operational. We have identified an issue with this API and we will be fixing it in an upcoming release.</p>  **Prerequisite:** * The meeting must be a live meeting. * Cloud Recording must be enabled. * The user using this API must either be the host or alternative host of the meeting.  **Scopes:** `meeting:write`, `meeting:write:admin`, `meeting:master`
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure API key authorization: Bearer
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
+// Configure OAuth2 access token for authorization: OAuth
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$meeting_id = 91498058927; // string | Unique identifier of the meeting (Meeting Number).
+$add_batch_registrants_request = new \OpenAPI\Client\Model\AddBatchRegistrantsRequest(); // \OpenAPI\Client\Model\AddBatchRegistrantsRequest
+
+try {
+    $result = $apiInstance->addBatchRegistrants($meeting_id, $add_batch_registrants_request);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling MeetingsApi->addBatchRegistrants: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **meeting_id** | **string**| Unique identifier of the meeting (Meeting Number). |
+ **add_batch_registrants_request** | [**\OpenAPI\Client\Model\AddBatchRegistrantsRequest**](../Model/AddBatchRegistrantsRequest.md)|  | [optional]
+
+### Return type
+
+[**\OpenAPI\Client\Model\AddBatchRegistrants200Response**](../Model/AddBatchRegistrants200Response.md)
+
+### Authorization
+
+[Bearer](../../README.md#Bearer), [OAuth](../../README.md#OAuth)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `createBatchPolls()`
+
+```php
+createBatchPolls($meeting_id, $create_batch_polls_request): \OpenAPI\Client\Model\CreateBatchPolls201Response
+```
+
+Perform batch poll creation
+
+Polls allow the meeting host to survey attendees. Use this API to create batch [polls](https://support.zoom.us/hc/en-us/articles/213756303-Polling-for-Meetings) for a meeting.<br><br>  **Scopes**: `meeting:write:admin` `meeting:write`<br>  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br> **Prerequisites**:<br> * Host user type must be **Pro** or higher plan. * Polling feature must be enabled in the host's account. * Meeting must be a scheduled meeting. Instant meetings do not have polling features enabled.
 
 ### Example
 
@@ -47,38 +128,36 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Zoom\Api\Api\MeetingsApi(
+$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$meeting_id = 'meeting_id_example'; // string | Unique identifier of the live meeting.
-$body = new \Zoom\Api\Model\InlineObject84(); // \Zoom\Api\Model\InlineObject84 | 
+$meeting_id = 93398114182; // string
+$create_batch_polls_request = new \OpenAPI\Client\Model\CreateBatchPollsRequest(); // \OpenAPI\Client\Model\CreateBatchPollsRequest | Batch Meeting poll object
 
 try {
-    $result = $apiInstance->inMeetingRecordingControl($meeting_id, $body);
+    $result = $apiInstance->createBatchPolls($meeting_id, $create_batch_polls_request);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling MeetingsApi->inMeetingRecordingControl: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling MeetingsApi->createBatchPolls: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **meeting_id** | **string**| Unique identifier of the live meeting. |
- **body** | [**\Zoom\Api\Model\InlineObject84**](../Model/InlineObject84.md)|  | [optional]
+ **meeting_id** | **string**|  |
+ **create_batch_polls_request** | [**\OpenAPI\Client\Model\CreateBatchPollsRequest**](../Model/CreateBatchPollsRequest.md)| Batch Meeting poll object | [optional]
 
 ### Return type
 
-**object**
+[**\OpenAPI\Client\Model\CreateBatchPolls201Response**](../Model/CreateBatchPolls201Response.md)
 
 ### Authorization
 
@@ -86,19 +165,262 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json, multipart/form-data
-- **Accept**: application/json, application/xml
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `deleteMeetingChatMessageById()`
 
-## listPastMeetingPolls
+```php
+deleteMeetingChatMessageById($meeting_id, $message_id)
+```
 
-> \Zoom\Api\Model\InlineResponse20083 listPastMeetingPolls($meeting_id)
+Delete a live meeting message
 
-List Past Meeting's Poll Results
+Deletes a message in a live meeting based on ID.   **Scopes:** `meeting:write` `meeting:write:admin` <br> **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure OAuth2 access token for authorization: OAuth
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$meeting_id = 85746065; // int | The meeting's ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits.
+$message_id = MS17MDQ5NjE4QjYtRjk4Ny00REEwLUFBQUItMTg3QTY0RjU2MzhFfQ==; // string | The live meeting chat message's unique identifier (UUID), in base64-encoded format.
+
+try {
+    $apiInstance->deleteMeetingChatMessageById($meeting_id, $message_id);
+} catch (Exception $e) {
+    echo 'Exception when calling MeetingsApi->deleteMeetingChatMessageById: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **meeting_id** | **int**| The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. |
+ **message_id** | **string**| The live meeting chat message&#39;s unique identifier (UUID), in base64-encoded format. |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[OAuth](../../README.md#OAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `getMeetingLiveStreamDetails()`
+
+```php
+getMeetingLiveStreamDetails($meeting_id): \OpenAPI\Client\Model\GetMeetingLiveStreamDetails200Response
+```
+
+Get livestream details
+
+Zoom allows users to [livestream a meeting](https://support.zoom.us/hc/en-us/articles/115001777826-Live-Streaming-Meetings-or-Webinars-Using-a-Custom-Service) to a custom platform. Use this API to get a meeting's livestream configuration details such as Stream URL, Stream Key and Page URL.<br><br> **Prerequisites:**<br> * Meeting host must be a licensed user with a Pro or higher plan.<br> * Live streaming details must have been [configured](https://support.zoom.us/hc/en-us/articles/115001777826-Live-Streaming-Meetings-or-Webinars-Using-a-Custom-Service#h_01589a6f-a40a-4e18-a448-cb746e52ebc5) for the meeting.<br><br> **Scopes:** `meeting:read:admin` `meeting:read`<br>  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure OAuth2 access token for authorization: OAuth
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$meeting_id = 93398114182; // string | Unique identifier of the meeting.
+
+try {
+    $result = $apiInstance->getMeetingLiveStreamDetails($meeting_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling MeetingsApi->getMeetingLiveStreamDetails: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **meeting_id** | **string**| Unique identifier of the meeting. |
+
+### Return type
+
+[**\OpenAPI\Client\Model\GetMeetingLiveStreamDetails200Response**](../Model/GetMeetingLiveStreamDetails200Response.md)
+
+### Authorization
+
+[OAuth](../../README.md#OAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `inMeetingControl()`
+
+```php
+inMeetingControl($meeting_id, $in_meeting_control_request)
+```
+
+Use in-meeting controls
+
+Use this API to control [in-meeting](https://support.zoom.us/hc/en-us/articles/360021921032-In-Meeting-Controls) features. In-meeting controls include starting and stopping a recording, pausing and resuming a recording, and inviting participants.   **Note:** This API's recording control only works for cloud recordings. It does **not** work for local recordings.   **Scopes:** `meeting:write`, `meeting:write:admin`, `meeting:master`   **Prerequisites:** * The meeting **must** be a live meeting **except** inviting participants to the meeting through [call out (phone)/(room system)].  * Recording control: [Cloud recording](https://support.zoom.us/hc/en-us/articles/360060231472-Enabling-cloud-recording) must be enabled on the account.  * The user calling this API must be the host or an alternative meeting host.   **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure OAuth2 access token for authorization: OAuth
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$meeting_id = 93398114182; // string | The live meeting's ID.
+$in_meeting_control_request = new \OpenAPI\Client\Model\InMeetingControlRequest(); // \OpenAPI\Client\Model\InMeetingControlRequest
+
+try {
+    $apiInstance->inMeetingControl($meeting_id, $in_meeting_control_request);
+} catch (Exception $e) {
+    echo 'Exception when calling MeetingsApi->inMeetingControl: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **meeting_id** | **string**| The live meeting&#39;s ID. |
+ **in_meeting_control_request** | [**\OpenAPI\Client\Model\InMeetingControlRequest**](../Model/InMeetingControlRequest.md)|  | [optional]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[OAuth](../../README.md#OAuth)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `listMeetingTemplates()`
+
+```php
+listMeetingTemplates($user_id): \OpenAPI\Client\Model\ListMeetingTemplates200Response
+```
+
+List meeting templates
+
+Use this API to list [meeting templates](https://support.zoom.us/hc/en-us/articles/360036559151-Meeting-templates) that are available to be used by a user. For user-level apps, pass [the `me` value](https://marketplace.zoom.us/docs/api-reference/using-zoom-apis#mekeyword) instead of the `userId` parameter.  **Scopes:** `meeting:read` or `meeting:read:admin`</br>**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure OAuth2 access token for authorization: OAuth
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$user_id = 30R7kT7bTIKSNUFEuH_Qlg; // string | Unique identifier of the user. Retrieve the value of this field by calling the [**List users**](/docs/api-reference/zoom-api/methods#operation/users) API.
+
+try {
+    $result = $apiInstance->listMeetingTemplates($user_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling MeetingsApi->listMeetingTemplates: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **string**| Unique identifier of the user. Retrieve the value of this field by calling the [**List users**](/docs/api-reference/zoom-api/methods#operation/users) API. |
+
+### Return type
+
+[**\OpenAPI\Client\Model\ListMeetingTemplates200Response**](../Model/ListMeetingTemplates200Response.md)
+
+### Authorization
+
+[OAuth](../../README.md#OAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `listPastMeetingPolls()`
+
+```php
+listPastMeetingPolls($meeting_id): \OpenAPI\Client\Model\ListPastMeetingPolls200Response
+```
+
+List past meeting's poll results
 
 [Polls](https://support.zoom.us/hc/en-us/articles/213756303-Polling-for-Meetings) allow the meeting host to survey attendees. Use this API to list poll results of a meeting.<br><br>  **Scopes**: `meeting:read:admin`, `meeting:read`<br>  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium` <br> **Prerequisites**:<br> * Host user type must be **Pro**. * Meeting must be a scheduled meeting. Instant meetings do not have polling features enabled.
 
@@ -110,16 +432,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Zoom\Api\Api\MeetingsApi(
+$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$meeting_id = 'meeting_id_example'; // string | The meeting ID or meeting UUID. If   meeting ID is provided, it will take the last meeting instance.
+$meeting_id = new \OpenAPI\Client\Model\ListPastMeetingPollsMeetingIdParameter(); // ListPastMeetingPollsMeetingIdParameter | The meeting's ID or universally unique ID (UUID).  * If you provide a meeting ID, the API will return a response for the latest meeting instance.  * If you provide a meeting UUID that begins with a `/` character or contains the `//` characters, you **must** double-encode the meeting UUID before making an API request.
 
 try {
     $result = $apiInstance->listPastMeetingPolls($meeting_id);
@@ -127,19 +449,17 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling MeetingsApi->listPastMeetingPolls: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **meeting_id** | **string**| The meeting ID or meeting UUID. If   meeting ID is provided, it will take the last meeting instance. |
+ **meeting_id** | [**ListPastMeetingPollsMeetingIdParameter**](../Model/.md)| The meeting&#39;s ID or universally unique ID (UUID).  * If you provide a meeting ID, the API will return a response for the latest meeting instance.  * If you provide a meeting UUID that begins with a &#x60;/&#x60; character or contains the &#x60;//&#x60; characters, you **must** double-encode the meeting UUID before making an API request. |
 
 ### Return type
 
-[**\Zoom\Api\Model\InlineResponse20083**](../Model/InlineResponse20083.md)
+[**\OpenAPI\Client\Model\ListPastMeetingPolls200Response**](../Model/ListPastMeetingPolls200Response.md)
 
 ### Authorization
 
@@ -148,18 +468,19 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/xml
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `meeting()`
 
-## meeting
+```php
+meeting($meeting_id, $occurrence_id, $show_previous_occurrences): \OpenAPI\Client\Model\Meeting200Response
+```
 
-> \Zoom\Api\Model\InlineResponse20022 meeting($meeting_id, $occurrence_id, $show_previous_occurrences)
-
-Get a Meeting
+Get a meeting
 
 Retrieve the details of a meeting.<br><br> **Scopes:** `meeting:read:admin` `meeting:read`<br>   **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 
@@ -171,18 +492,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Zoom\Api\Api\MeetingsApi(
+$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$meeting_id = 56; // int | The meeting ID in **long** format. The data type of this field is \"long\"(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits.
-$occurrence_id = 'occurrence_id_example'; // string | Meeting Occurrence ID. Provide this field to view meeting details of a particular occurrence of the [recurring meeting](https://support.zoom.us/hc/en-us/articles/214973206-Scheduling-Recurring-Meetings).
-$show_previous_occurrences = True; // bool | Set the value of this field to `true` if you would like to view meeting details of all previous occurrences of a [recurring meeting](https://support.zoom.us/hc/en-us/articles/214973206-Scheduling-Recurring-Meetings).
+$meeting_id = 85746065; // int | The meeting's ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits.
+$occurrence_id = 1648194360000; // string | Meeting Occurrence ID. Provide this field to view meeting details of a particular occurrence of the [recurring meeting](https://support.zoom.us/hc/en-us/articles/214973206-Scheduling-Recurring-Meetings).
+$show_previous_occurrences = true; // bool | Set the value of this field to `true` if you would like to view meeting details of all previous occurrences of a [recurring meeting](https://support.zoom.us/hc/en-us/articles/214973206-Scheduling-Recurring-Meetings).
 
 try {
     $result = $apiInstance->meeting($meeting_id, $occurrence_id, $show_previous_occurrences);
@@ -190,21 +511,19 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling MeetingsApi->meeting: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **meeting_id** | **int**| The meeting ID in **long** format. The data type of this field is \&quot;long\&quot;(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits. |
+ **meeting_id** | **int**| The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. |
  **occurrence_id** | **string**| Meeting Occurrence ID. Provide this field to view meeting details of a particular occurrence of the [recurring meeting](https://support.zoom.us/hc/en-us/articles/214973206-Scheduling-Recurring-Meetings). | [optional]
  **show_previous_occurrences** | **bool**| Set the value of this field to &#x60;true&#x60; if you would like to view meeting details of all previous occurrences of a [recurring meeting](https://support.zoom.us/hc/en-us/articles/214973206-Scheduling-Recurring-Meetings). | [optional]
 
 ### Return type
 
-[**\Zoom\Api\Model\InlineResponse20022**](../Model/InlineResponse20022.md)
+[**\OpenAPI\Client\Model\Meeting200Response**](../Model/Meeting200Response.md)
 
 ### Authorization
 
@@ -213,20 +532,21 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/xml
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `meetingCreate()`
 
-## meetingCreate
+```php
+meetingCreate($user_id, $meeting_create): \OpenAPI\Client\Model\MeetingCreate201Response
+```
 
-> \Zoom\Api\Model\InlineResponse20111 meetingCreate($user_id, $body)
+Create a meeting
 
-Create a Meeting
-
-[Create a meeting](https://support.zoom.us/hc/en-us/articles/201362413-Scheduling-meetings) for a user. <br>This API has a daily rate limit of 100 requests per day. Therefore, only 100 **Create a Meeting** API requests are permitted within a 24 hour window for a user.<br>  <aside>The <code>start_url</code> of a meeting is a URL using which a host or an alternative host can start a meeting. The expiration time for the <code>start_url</code> field is two hours for all regular users.    For custCreate meeting hosts( i.e., users created using the <code>custCreate</code> option via the [Create Users](https://marketplace.zoom.us/docs/api-reference/zoom-api/users/usercreate) API), the expiration time of the <code>start_url</code> field is 90 days from the generation of the <code>start_url</code>.   For security reasons, the recommended way to retrieve the updated value for the <code>start_url</code> field programmatically (after expiry) is by calling the [Retrieve a Meeting API](https://marketplace.zoom.us/docs/api-reference/zoom-api/meetings/meeting) and referring to the value of the <code>start_url</code> field in the response.</aside><br><br> Scopes: `meeting:write:admin` `meeting:write`    **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
+Use this API to [create a meeting](https://support.zoom.us/hc/en-us/articles/201362413-Scheduling-meetings) for a user. For user-level apps, pass [the `me` value](https://marketplace.zoom.us/docs/api-reference/using-zoom-apis#mekeyword) instead of the `userId` parameter.  * A meeting's `start_url` value is the URL a host or an alternative host can use to start a meeting. The expiration time for the `start_url` value is **two hours** for all regular users. * For `custCreate` meeting hosts (users created with the `custCreate` parameter via the [**Create users**](/docs/api-reference/zoom-api/methods#operation/userCreate) API), the expiration time of the `start_url` parameter is **90 days** from the generation of the `start_url`.  **Note:**   For security reasons, the recommended way to programmatically (after expiry) get the updated `start_url` value is to call the [**Get a meeting**](/docs/api-reference/zoom-api/methods#operation/meeting) API. Refer to the `start_url` value in the response.    **Scopes:** `meeting:write:admin`, `meeting:write`  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium` <br> * This API has a daily rate limit of **100 requests per day**. The rate limit is applied against the `userId` of the **meeting host** used to make the request.
 
 ### Example
 
@@ -236,38 +556,36 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Zoom\Api\Api\MeetingsApi(
+$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = 'user_id_example'; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
-$body = new \Zoom\Api\Model\InlineObject23(); // \Zoom\Api\Model\InlineObject23 | 
+$user_id = new \OpenAPI\Client\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
+$meeting_create = array('key' => new \OpenAPI\Client\Model\MeetingCreate()); // \OpenAPI\Client\Model\MeetingCreate | Meeting object.
 
 try {
-    $result = $apiInstance->meetingCreate($user_id, $body);
+    $result = $apiInstance->meetingCreate($user_id, $meeting_create);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MeetingsApi->meetingCreate: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **string**| The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. |
- **body** | [**\Zoom\Api\Model\InlineObject23**](../Model/InlineObject23.md)|  |
+ **user_id** | [**GroupAdminsDeleteUserIdParameter**](../Model/.md)| The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. |
+ **meeting_create** | [**\OpenAPI\Client\Model\MeetingCreate**](../Model/MeetingCreate.md)| Meeting object. |
 
 ### Return type
 
-[**\Zoom\Api\Model\InlineResponse20111**](../Model/InlineResponse20111.md)
+[**\OpenAPI\Client\Model\MeetingCreate201Response**](../Model/MeetingCreate201Response.md)
 
 ### Authorization
 
@@ -275,19 +593,20 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json, multipart/form-data
-- **Accept**: application/json, application/xml
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `meetingDelete()`
 
-## meetingDelete
+```php
+meetingDelete($meeting_id, $occurrence_id, $schedule_for_reminder, $cancel_meeting_reminder)
+```
 
-> meetingDelete($meeting_id, $occurrence_id, $schedule_for_reminder)
-
-Delete a Meeting
+Delete a meeting
 
 Delete a meeting.<br><br> **Scopes:** `meeting:write:admin` `meeting:write`<br>   **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 
@@ -299,35 +618,35 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Zoom\Api\Api\MeetingsApi(
+$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$meeting_id = 56; // int | The meeting ID in **long** format. The data type of this field is \"long\"(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits.
-$occurrence_id = 'occurrence_id_example'; // string | The meeting occurrence ID.
-$schedule_for_reminder = True; // bool | `true`: Notify host and alternative host about the meeting cancellation via email. `false`: Do not send any email notification.
+$meeting_id = 85746065; // int | The meeting's ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits.
+$occurrence_id = 1648194360000; // string | The meeting or webinar occurrence ID.
+$schedule_for_reminder = true; // bool | `true`: Notify host and alternative host about the meeting cancellation via email. `false`: Do not send any email notification.
+$cancel_meeting_reminder = true; // bool | `true`: Notify registrants about the meeting cancellation via email.   `false`: Do not send any email notification to meeting registrants.   The default value of this field is `false`.
 
 try {
-    $apiInstance->meetingDelete($meeting_id, $occurrence_id, $schedule_for_reminder);
+    $apiInstance->meetingDelete($meeting_id, $occurrence_id, $schedule_for_reminder, $cancel_meeting_reminder);
 } catch (Exception $e) {
     echo 'Exception when calling MeetingsApi->meetingDelete: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **meeting_id** | **int**| The meeting ID in **long** format. The data type of this field is \&quot;long\&quot;(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits. |
- **occurrence_id** | **string**| The meeting occurrence ID. | [optional]
+ **meeting_id** | **int**| The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. |
+ **occurrence_id** | **string**| The meeting or webinar occurrence ID. | [optional]
  **schedule_for_reminder** | **bool**| &#x60;true&#x60;: Notify host and alternative host about the meeting cancellation via email. &#x60;false&#x60;: Do not send any email notification. | [optional]
+ **cancel_meeting_reminder** | **bool**| &#x60;true&#x60;: Notify registrants about the meeting cancellation via email.   &#x60;false&#x60;: Do not send any email notification to meeting registrants.   The default value of this field is &#x60;false&#x60;. | [optional]
 
 ### Return type
 
@@ -342,16 +661,17 @@ void (empty response body)
 - **Content-Type**: Not defined
 - **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `meetingInvitation()`
 
-## meetingInvitation
+```php
+meetingInvitation($meeting_id): \OpenAPI\Client\Model\MeetingInvitation
+```
 
-> \Zoom\Api\Model\MeetingInvitation meetingInvitation($meeting_id)
-
-Get Meeting Invitation
+Get meeting invitation
 
 Retrieve the meeting invite note that was sent for a specific meeting.<br><br> **Scopes:** `meeting:read:admin` `meeting:read`<br>   **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 
@@ -363,16 +683,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Zoom\Api\Api\MeetingsApi(
+$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$meeting_id = 56; // int | The meeting ID in **long** format. The data type of this field is \"long\"(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits.
+$meeting_id = 85746065; // int | The meeting's ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits.
 
 try {
     $result = $apiInstance->meetingInvitation($meeting_id);
@@ -380,19 +700,17 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling MeetingsApi->meetingInvitation: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **meeting_id** | **int**| The meeting ID in **long** format. The data type of this field is \&quot;long\&quot;(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits. |
+ **meeting_id** | **int**| The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. |
 
 ### Return type
 
-[**\Zoom\Api\Model\MeetingInvitation**](../Model/MeetingInvitation.md)
+[**\OpenAPI\Client\Model\MeetingInvitation**](../Model/MeetingInvitation.md)
 
 ### Authorization
 
@@ -401,20 +719,83 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/xml
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `meetingInviteLinksCreate()`
 
-## meetingLiveStreamStatusUpdate
+```php
+meetingInviteLinksCreate($meeting_id, $meeting_invite_links_create_request): \OpenAPI\Client\Model\MeetingInviteLinksCreate201Response
+```
 
-> meetingLiveStreamStatusUpdate($meeting_id, $body)
+Create meeting's invite links
+
+Use this API to create a batch of invitation links for a meeting.  **Scopes**: `meeting:write:admin`, `meeting:write`</br>**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure OAuth2 access token for authorization: OAuth
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$meeting_id = 85746065; // int | The meeting's ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits.
+$meeting_invite_links_create_request = new \OpenAPI\Client\Model\MeetingInviteLinksCreateRequest(); // \OpenAPI\Client\Model\MeetingInviteLinksCreateRequest
+
+try {
+    $result = $apiInstance->meetingInviteLinksCreate($meeting_id, $meeting_invite_links_create_request);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling MeetingsApi->meetingInviteLinksCreate: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **meeting_id** | **int**| The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. |
+ **meeting_invite_links_create_request** | [**\OpenAPI\Client\Model\MeetingInviteLinksCreateRequest**](../Model/MeetingInviteLinksCreateRequest.md)|  |
+
+### Return type
+
+[**\OpenAPI\Client\Model\MeetingInviteLinksCreate201Response**](../Model/MeetingInviteLinksCreate201Response.md)
+
+### Authorization
+
+[OAuth](../../README.md#OAuth)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `meetingLiveStreamStatusUpdate()`
+
+```php
+meetingLiveStreamStatusUpdate($meeting_id, $meeting_live_stream_status)
+```
 
 Update Live Stream Status
 
-Zoom allows users to [live stream a meeting](https://support.zoom.us/hc/en-us/articles/115001777826-Live-Streaming-Meetings-or-Webinars-Using-a-Custom-Service) to a custom platform. Use this API to update the status of a meeting's live stream.<br><br> **Prerequisites:**<br> * Meeting host must have a Pro license.<br> **Scopes:** `meeting:write:admin` `meeting:write`<br>  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
+Zoom allows users to [livestream a meeting](https://support.zoom.us/hc/en-us/articles/115001777826-Live-Streaming-Meetings-or-Webinars-Using-a-Custom-Service) to a custom platform. Use this API to update the status of a meeting's livestream.<br><br> **Prerequisites:**<br> * Meeting host must have a Pro license.<br> **Scopes:** `meeting:write:admin` `meeting:write`<br>  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 
 ### Example
 
@@ -424,33 +805,31 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Zoom\Api\Api\MeetingsApi(
+$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$meeting_id = 56; // int | The meeting ID in **long** format. The data type of this field is \"long\"(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits.
-$body = new \Zoom\Api\Model\InlineObject44(); // \Zoom\Api\Model\InlineObject44 | 
+$meeting_id = 85746065; // int | The meeting's ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits.
+$meeting_live_stream_status = new \OpenAPI\Client\Model\MeetingLiveStreamStatus(); // \OpenAPI\Client\Model\MeetingLiveStreamStatus | Meeting
 
 try {
-    $apiInstance->meetingLiveStreamStatusUpdate($meeting_id, $body);
+    $apiInstance->meetingLiveStreamStatusUpdate($meeting_id, $meeting_live_stream_status);
 } catch (Exception $e) {
     echo 'Exception when calling MeetingsApi->meetingLiveStreamStatusUpdate: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **meeting_id** | **int**| The meeting ID in **long** format. The data type of this field is \&quot;long\&quot;(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits. |
- **body** | [**\Zoom\Api\Model\InlineObject44**](../Model/InlineObject44.md)|  |
+ **meeting_id** | **int**| The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. |
+ **meeting_live_stream_status** | [**\OpenAPI\Client\Model\MeetingLiveStreamStatus**](../Model/MeetingLiveStreamStatus.md)| Meeting |
 
 ### Return type
 
@@ -462,21 +841,22 @@ void (empty response body)
 
 ### HTTP request headers
 
-- **Content-Type**: application/json, multipart/form-data
+- **Content-Type**: `application/json`
 - **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `meetingLiveStreamUpdate()`
 
-## meetingLiveStreamUpdate
+```php
+meetingLiveStreamUpdate($meeting_id, $meeting_live_stream)
+```
 
-> meetingLiveStreamUpdate($meeting_id, $body)
+Update a livestream
 
-Update Live Stream
-
-Zoom allows users to [live stream a meeting](https://support.zoom.us/hc/en-us/articles/115001777826-Live-Streaming-Meetings-or-Webinars-Using-a-Custom-Service) to a custom platform. Use this API to update a meeting's live stream information.<br><br> **Prerequisites:**<br> * Meeting host must have a Pro license.<br> **Scopes:** `meeting:write:admin` `meeting:write`<br>  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
+Use this API to update a meeting's livestream information. Zoom allows users to [livestream a meeting](https://support.zoom.us/hc/en-us/articles/115001777826-Live-Streaming-Meetings-or-Webinars-Using-a-Custom-Service) to a custom platform.  **Scopes:** `meeting:write:admin`, `meeting:write`<br>**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`  **Prerequisites:**  * Meeting host must have a Pro license.
 
 ### Example
 
@@ -486,33 +866,31 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Zoom\Api\Api\MeetingsApi(
+$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$meeting_id = 56; // int | The meeting ID in **long** format. The data type of this field is \"long\"(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits.
-$body = new \Zoom\Api\Model\InlineObject43(); // \Zoom\Api\Model\InlineObject43 | 
+$meeting_id = 85746065; // int | The meeting's ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits.
+$meeting_live_stream = new \OpenAPI\Client\Model\MeetingLiveStream(); // \OpenAPI\Client\Model\MeetingLiveStream | Meeting
 
 try {
-    $apiInstance->meetingLiveStreamUpdate($meeting_id, $body);
+    $apiInstance->meetingLiveStreamUpdate($meeting_id, $meeting_live_stream);
 } catch (Exception $e) {
     echo 'Exception when calling MeetingsApi->meetingLiveStreamUpdate: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **meeting_id** | **int**| The meeting ID in **long** format. The data type of this field is \&quot;long\&quot;(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits. |
- **body** | [**\Zoom\Api\Model\InlineObject43**](../Model/InlineObject43.md)|  |
+ **meeting_id** | **int**| The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. |
+ **meeting_live_stream** | [**\OpenAPI\Client\Model\MeetingLiveStream**](../Model/MeetingLiveStream.md)| Meeting |
 
 ### Return type
 
@@ -524,21 +902,22 @@ void (empty response body)
 
 ### HTTP request headers
 
-- **Content-Type**: application/json, multipart/form-data
+- **Content-Type**: `application/json`
 - **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `meetingLocalRecordingJoinToken()`
 
-## meetingPollCreate
+```php
+meetingLocalRecordingJoinToken($meeting_id): \OpenAPI\Client\Model\MeetingLocalRecordingJoinToken200Response
+```
 
-> \Zoom\Api\Model\InlineResponse20113 meetingPollCreate($meeting_id, $body)
+Get a meeting's join token for local recording
 
-Create a Meeting Poll
-
-Polls allow the meeting host to survey attendees. Use this API to create a [poll](https://support.zoom.us/hc/en-us/articles/213756303-Polling-for-Meetings) for a meeting.<br><br>  **Scopes**: `meeting:write:admin` `meeting:write`<br>  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br> **Prerequisites**:<br> * Host user type must be **Pro**. * Polling feature should be enabled in the host's account. * Meeting must be a scheduled meeting. Instant meetings do not have polling features enabled.
+Use this API to get a meeting's join token to allow for local recording. The join token lets a recording bot implemented using Zoom Meeting SDK to connect to a Zoom meeting. The recording bot can then automatically start locally recording. This supports both regular and raw local recording types.   **Scopes:** `meeting_token:read:admin:local_recording`, `meeting_token:read:local_recording` <br> **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`   **Prerequisites:**  * A Pro or higher plan for the meeting host.  * The **Local recording** user setting enabled in the Zoom web portal.
 
 ### Example
 
@@ -548,38 +927,96 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Zoom\Api\Api\MeetingsApi(
+$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$meeting_id = 56; // int | The meeting ID in **long** format. The data type of this field is \"long\"(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits.
-$body = new \Zoom\Api\Model\UNKNOWN_BASE_TYPE(); // \Zoom\Api\Model\UNKNOWN_BASE_TYPE | Meeting poll object
+$meeting_id = 85746065; // int | The meeting's ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits.
 
 try {
-    $result = $apiInstance->meetingPollCreate($meeting_id, $body);
+    $result = $apiInstance->meetingLocalRecordingJoinToken($meeting_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling MeetingsApi->meetingLocalRecordingJoinToken: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **meeting_id** | **int**| The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. |
+
+### Return type
+
+[**\OpenAPI\Client\Model\MeetingLocalRecordingJoinToken200Response**](../Model/MeetingLocalRecordingJoinToken200Response.md)
+
+### Authorization
+
+[OAuth](../../README.md#OAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `meetingPollCreate()`
+
+```php
+meetingPollCreate($meeting_id, $meeting_poll_create_request): \OpenAPI\Client\Model\MeetingPollCreate201Response
+```
+
+Create a meeting poll
+
+Polls allow the meeting host to survey attendees. Use this API to create a [poll](https://support.zoom.us/hc/en-us/articles/213756303-Polling-for-Meetings) for a meeting.<br><br>  **Scopes**: `meeting:write:admin` `meeting:write`<br>  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br> **Prerequisites**:<br> * Host user type must be **Pro** or higher plan. * Polling feature must be enabled in the host's account. * Meeting must be a scheduled meeting. Instant meetings do not have polling features enabled.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure OAuth2 access token for authorization: OAuth
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$meeting_id = 85746065; // int | The meeting's ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits.
+$meeting_poll_create_request = new \OpenAPI\Client\Model\MeetingPollCreateRequest(); // \OpenAPI\Client\Model\MeetingPollCreateRequest | Meeting poll object
+
+try {
+    $result = $apiInstance->meetingPollCreate($meeting_id, $meeting_poll_create_request);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MeetingsApi->meetingPollCreate: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **meeting_id** | **int**| The meeting ID in **long** format. The data type of this field is \&quot;long\&quot;(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits. |
- **body** | [**\Zoom\Api\Model\UNKNOWN_BASE_TYPE**](../Model/UNKNOWN_BASE_TYPE.md)| Meeting poll object |
+ **meeting_id** | **int**| The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. |
+ **meeting_poll_create_request** | [**\OpenAPI\Client\Model\MeetingPollCreateRequest**](../Model/MeetingPollCreateRequest.md)| Meeting poll object |
 
 ### Return type
 
-[**\Zoom\Api\Model\InlineResponse20113**](../Model/InlineResponse20113.md)
+[**\OpenAPI\Client\Model\MeetingPollCreate201Response**](../Model/MeetingPollCreate201Response.md)
 
 ### Authorization
 
@@ -587,19 +1024,20 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json, multipart/form-data
-- **Accept**: application/json, application/xml
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `meetingPollDelete()`
 
-## meetingPollDelete
+```php
+meetingPollDelete($meeting_id, $poll_id)
+```
 
-> meetingPollDelete($meeting_id, $poll_id)
-
-Delete a Meeting Poll
+Delete a meeting poll
 
 Polls allow the meeting host to survey attendees. Use this API to delete a meeting [poll](https://support.zoom.us/hc/en-us/articles/213756303-Polling-for-Meetings).<br> **Scopes**: `meeting:write:admin` `meeting:write`<br>  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light` <br> **Prerequisites**:<br> * Host user type must be **Pro**. * Polling feature should be enabled in the host's account. * Meeting must be a scheduled meeting. Instant meetings do not have polling features enabled.
 
@@ -611,32 +1049,30 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Zoom\Api\Api\MeetingsApi(
+$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$meeting_id = 56; // int | The meeting ID in **long** format. The data type of this field is \"long\"(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits.
-$poll_id = 'poll_id_example'; // string | The poll ID
+$meeting_id = 85746065; // int | The meeting's ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits.
+$poll_id = QalIoKWLTJehBJ8e1xRrbQ; // string | The poll ID
 
 try {
     $apiInstance->meetingPollDelete($meeting_id, $poll_id);
 } catch (Exception $e) {
     echo 'Exception when calling MeetingsApi->meetingPollDelete: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **meeting_id** | **int**| The meeting ID in **long** format. The data type of this field is \&quot;long\&quot;(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits. |
+ **meeting_id** | **int**| The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. |
  **poll_id** | **string**| The poll ID |
 
 ### Return type
@@ -652,16 +1088,17 @@ void (empty response body)
 - **Content-Type**: Not defined
 - **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `meetingPollGet()`
 
-## meetingPollGet
+```php
+meetingPollGet($meeting_id, $poll_id): \OpenAPI\Client\Model\MeetingPollCreate201Response
+```
 
-> \Zoom\Api\Model\InlineResponse20113 meetingPollGet($meeting_id, $poll_id)
-
-Get a Meeting Poll
+Get a meeting poll
 
 Polls allow the meeting host to survey attendees. Use this API to get information about a specific meeting [poll](https://support.zoom.us/hc/en-us/articles/213756303-Polling-for-Meetings).<br><br> **Scopes**: `meeting:read:admin` `meeting:read`<br>   **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 
@@ -673,17 +1110,17 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Zoom\Api\Api\MeetingsApi(
+$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$meeting_id = 56; // int | The meeting ID in **long** format. The data type of this field is \"long\"(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits.
-$poll_id = 'poll_id_example'; // string | The poll ID
+$meeting_id = 85746065; // int | The meeting's ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits.
+$poll_id = QalIoKWLTJehBJ8e1xRrbQ; // string | The poll ID
 
 try {
     $result = $apiInstance->meetingPollGet($meeting_id, $poll_id);
@@ -691,20 +1128,18 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling MeetingsApi->meetingPollGet: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **meeting_id** | **int**| The meeting ID in **long** format. The data type of this field is \&quot;long\&quot;(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits. |
+ **meeting_id** | **int**| The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. |
  **poll_id** | **string**| The poll ID |
 
 ### Return type
 
-[**\Zoom\Api\Model\InlineResponse20113**](../Model/InlineResponse20113.md)
+[**\OpenAPI\Client\Model\MeetingPollCreate201Response**](../Model/MeetingPollCreate201Response.md)
 
 ### Authorization
 
@@ -713,18 +1148,19 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/xml
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `meetingPollUpdate()`
 
-## meetingPollUpdate
+```php
+meetingPollUpdate($meeting_id, $poll_id, $meeting_poll_create_request)
+```
 
-> meetingPollUpdate($meeting_id, $poll_id, $body)
-
-Update a Meeting Poll
+Update a meeting poll
 
 Polls allow the meeting host to survey attendees. Use this API to update information of a specific meeting [poll](https://support.zoom.us/hc/en-us/articles/213756303-Polling-for-Meetings)<br><br> **Scopes**: `meeting:write:admin` `meeting:write`   **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 
@@ -736,35 +1172,33 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Zoom\Api\Api\MeetingsApi(
+$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$meeting_id = 56; // int | The meeting ID in **long** format. The data type of this field is \"long\"(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits.
-$poll_id = 'poll_id_example'; // string | The poll ID
-$body = new \Zoom\Api\Model\UNKNOWN_BASE_TYPE(); // \Zoom\Api\Model\UNKNOWN_BASE_TYPE | Meeting Poll
+$meeting_id = 85746065; // int | The meeting's ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits.
+$poll_id = QalIoKWLTJehBJ8e1xRrbQ; // string | The poll ID
+$meeting_poll_create_request = new \OpenAPI\Client\Model\MeetingPollCreateRequest(); // \OpenAPI\Client\Model\MeetingPollCreateRequest | Meeting Poll
 
 try {
-    $apiInstance->meetingPollUpdate($meeting_id, $poll_id, $body);
+    $apiInstance->meetingPollUpdate($meeting_id, $poll_id, $meeting_poll_create_request);
 } catch (Exception $e) {
     echo 'Exception when calling MeetingsApi->meetingPollUpdate: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **meeting_id** | **int**| The meeting ID in **long** format. The data type of this field is \&quot;long\&quot;(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits. |
+ **meeting_id** | **int**| The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. |
  **poll_id** | **string**| The poll ID |
- **body** | [**\Zoom\Api\Model\UNKNOWN_BASE_TYPE**](../Model/UNKNOWN_BASE_TYPE.md)| Meeting Poll |
+ **meeting_poll_create_request** | [**\OpenAPI\Client\Model\MeetingPollCreateRequest**](../Model/MeetingPollCreateRequest.md)| Meeting Poll |
 
 ### Return type
 
@@ -776,21 +1210,22 @@ void (empty response body)
 
 ### HTTP request headers
 
-- **Content-Type**: application/json, multipart/form-data
+- **Content-Type**: `application/json`
 - **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `meetingPolls()`
 
-## meetingPolls
+```php
+meetingPolls($meeting_id, $anonymous): \OpenAPI\Client\Model\PollList
+```
 
-> object meetingPolls($meeting_id)
+List meeting polls
 
-List Meeting Polls
-
-Polls allow the meeting host to survey attendees. Use this API to list [polls](https://support.zoom.us/hc/en-us/articles/213756303-Polling-for-Meetings) of a meeting.<br><br>  **Scopes**: `meeting:read:admin` `meeting:read`<br>  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br> **Prerequisites**:<br> * Host user type must be **Pro**. * Meeting must be a scheduled meeting. Instant meetings do not have polling features enabled.
+Polls allow the meeting host to survey attendees. Use this API to list [polls](https://support.zoom.us/hc/en-us/articles/213756303-Polling-for-Meetings) of a meeting.<br><br>  **Scopes**: `meeting:read:admin` `meeting:read`<br>  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br> **Prerequisites**:<br> * Host user type must be **Pro** or higher plan. * Meeting must be a scheduled meeting. Instant meetings do not have polling features enabled.
 
 ### Example
 
@@ -800,36 +1235,36 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Zoom\Api\Api\MeetingsApi(
+$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$meeting_id = 56; // int | The meeting ID in **long** format. The data type of this field is \"long\"(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits.
+$meeting_id = 85746065; // int | The meeting's ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits.
+$anonymous = true; // bool | Whether to query for polls with the **Anonymous** option enabled:  * `true` — Query for polls with the **Anonymous** option enabled.  * `false` — Do not query for polls with the **Anonymous** option enabled.
 
 try {
-    $result = $apiInstance->meetingPolls($meeting_id);
+    $result = $apiInstance->meetingPolls($meeting_id, $anonymous);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MeetingsApi->meetingPolls: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **meeting_id** | **int**| The meeting ID in **long** format. The data type of this field is \&quot;long\&quot;(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits. |
+ **meeting_id** | **int**| The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. |
+ **anonymous** | **bool**| Whether to query for polls with the **Anonymous** option enabled:  * &#x60;true&#x60; — Query for polls with the **Anonymous** option enabled.  * &#x60;false&#x60; — Do not query for polls with the **Anonymous** option enabled. | [optional]
 
 ### Return type
 
-**object**
+[**\OpenAPI\Client\Model\PollList**](../Model/PollList.md)
 
 ### Authorization
 
@@ -838,20 +1273,21 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/xml
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `meetingRegistrantCreate()`
 
-## meetingRegistrantCreate
+```php
+meetingRegistrantCreate($meeting_id, $meeting_registrant_create_request, $occurrence_ids): \OpenAPI\Client\Model\MeetingRegistrantCreate201Response
+```
 
-> \Zoom\Api\Model\InlineResponse20112 meetingRegistrantCreate($meeting_id, $body, $occurrence_ids)
+Add a meeting registrant
 
-Add Meeting Registrant
-
-Register a participant for a meeting.<br><br>  **Prerequisite:**<br> * Host user type must be \"Licensed\".  **Scopes:** `meeting:write:admin` `meeting:write`  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
+Use this API to create and submit a user's registration to a meeting. See [Customizing webinar registration](https://support.zoom.us/hc/en-us/articles/202835649-Customizing-webinar-registration) for details on how to set the requirements for these fields. Note that there is a maximum limit of 4,999 registrants per meeting and users will see an error if the meeting's capacity is reached.    **Scopes:** `meeting:write:admin`, `meeting:write` <br> **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`    **Prerequisites:**  * The host must be a **Licensed** user type.
 
 ### Example
 
@@ -861,40 +1297,38 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Zoom\Api\Api\MeetingsApi(
+$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$meeting_id = 56; // int | The meeting ID in **long** format. The data type of this field is \"long\"(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits.
-$body = new \Zoom\Api\Model\UNKNOWN_BASE_TYPE(); // \Zoom\Api\Model\UNKNOWN_BASE_TYPE | 
-$occurrence_ids = 'occurrence_ids_example'; // string | Occurrence IDs. You can find these with the meeting get API. Multiple values separated by comma.
+$meeting_id = 85746065; // int | The meeting's ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits.
+$meeting_registrant_create_request = new \OpenAPI\Client\Model\MeetingRegistrantCreateRequest(); // \OpenAPI\Client\Model\MeetingRegistrantCreateRequest
+$occurrence_ids = 1648194360000,1648367160000; // string | A comma-separated list of meeting occurrence IDs. You can get this value with the [Get a meeting](/docs/api-reference/zoom-api/methods#operation/meeting) API.
 
 try {
-    $result = $apiInstance->meetingRegistrantCreate($meeting_id, $body, $occurrence_ids);
+    $result = $apiInstance->meetingRegistrantCreate($meeting_id, $meeting_registrant_create_request, $occurrence_ids);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MeetingsApi->meetingRegistrantCreate: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **meeting_id** | **int**| The meeting ID in **long** format. The data type of this field is \&quot;long\&quot;(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits. |
- **body** | [**\Zoom\Api\Model\UNKNOWN_BASE_TYPE**](../Model/UNKNOWN_BASE_TYPE.md)|  |
- **occurrence_ids** | **string**| Occurrence IDs. You can find these with the meeting get API. Multiple values separated by comma. | [optional]
+ **meeting_id** | **int**| The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. |
+ **meeting_registrant_create_request** | [**\OpenAPI\Client\Model\MeetingRegistrantCreateRequest**](../Model/MeetingRegistrantCreateRequest.md)|  |
+ **occurrence_ids** | **string**| A comma-separated list of meeting occurrence IDs. You can get this value with the [Get a meeting](/docs/api-reference/zoom-api/methods#operation/meeting) API. | [optional]
 
 ### Return type
 
-[**\Zoom\Api\Model\InlineResponse20112**](../Model/InlineResponse20112.md)
+[**\OpenAPI\Client\Model\MeetingRegistrantCreate201Response**](../Model/MeetingRegistrantCreate201Response.md)
 
 ### Authorization
 
@@ -902,21 +1336,22 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: application/json, multipart/form-data
-- **Accept**: application/json, application/xml
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `meetingRegistrantGet()`
 
-## meetingRegistrantQuestionUpdate
+```php
+meetingRegistrantGet($meeting_id, $registrant_id): \OpenAPI\Client\Model\MeetingRegistrant
+```
 
-> meetingRegistrantQuestionUpdate($meeting_id, $body)
+Get a meeting registrant
 
-Update Registration Questions
-
-Update registration questions that will be displayed to users while [registering for a meeeting](https://support.zoom.us/hc/en-us/articles/211579443-Registration-for-Meetings).<br><br> **Scopes:** `meeting:write`, `meeting:write:admin`<br>  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
+Use this API to get details on a specific user who has registered for the meeting. A host or a user with administrative permissions can require [registration for Zoom meetings](https://support.zoom.us/hc/en-us/articles/211579443-Registration-for-Meetings).  **Scopes:** `meeting:read:admin`, `meeting:read`<br>**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`  **Prerequisites:**  * The account must have a Meeting plan
 
 ### Example
 
@@ -926,33 +1361,93 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Zoom\Api\Api\MeetingsApi(
+$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$meeting_id = 56; // int | The meeting ID in **long** format. The data type of this field is \"long\"(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits.
-$body = new \Zoom\Api\Model\UNKNOWN_BASE_TYPE(); // \Zoom\Api\Model\UNKNOWN_BASE_TYPE | Meeting Registrant Questions
+$meeting_id = 85746065; // int | The meeting's ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits.
+$registrant_id = 9tboDiHUQAeOnbmudzWa5g; // string | The registrant ID.
 
 try {
-    $apiInstance->meetingRegistrantQuestionUpdate($meeting_id, $body);
+    $result = $apiInstance->meetingRegistrantGet($meeting_id, $registrant_id);
+    print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling MeetingsApi->meetingRegistrantQuestionUpdate: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling MeetingsApi->meetingRegistrantGet: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **meeting_id** | **int**| The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. |
+ **registrant_id** | **string**| The registrant ID. |
+
+### Return type
+
+[**\OpenAPI\Client\Model\MeetingRegistrant**](../Model/MeetingRegistrant.md)
+
+### Authorization
+
+[OAuth](../../README.md#OAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `meetingRegistrantQuestionUpdate()`
+
+```php
+meetingRegistrantQuestionUpdate($meeting_id, $meeting_registrants_questions_get200_response)
+```
+
+Update registration questions
+
+Update registration questions that will be displayed to users while [registering for a meeting](https://support.zoom.us/hc/en-us/articles/211579443-Registration-for-Meetings).<br><br> **Scopes:** `meeting:write`, `meeting:write:admin`<br>  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure OAuth2 access token for authorization: OAuth
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$meeting_id = 85746065; // int | The meeting's ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits.
+$meeting_registrants_questions_get200_response = new \OpenAPI\Client\Model\MeetingRegistrantsQuestionsGet200Response(); // \OpenAPI\Client\Model\MeetingRegistrantsQuestionsGet200Response | Meeting Registrant Questions
+
+try {
+    $apiInstance->meetingRegistrantQuestionUpdate($meeting_id, $meeting_registrants_questions_get200_response);
+} catch (Exception $e) {
+    echo 'Exception when calling MeetingsApi->meetingRegistrantQuestionUpdate: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **meeting_id** | **int**| The meeting ID in **long** format. The data type of this field is \&quot;long\&quot;(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits. |
- **body** | [**\Zoom\Api\Model\UNKNOWN_BASE_TYPE**](../Model/UNKNOWN_BASE_TYPE.md)| Meeting Registrant Questions |
+ **meeting_id** | **int**| The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. |
+ **meeting_registrants_questions_get200_response** | [**\OpenAPI\Client\Model\MeetingRegistrantsQuestionsGet200Response**](../Model/MeetingRegistrantsQuestionsGet200Response.md)| Meeting Registrant Questions |
 
 ### Return type
 
@@ -964,19 +1459,20 @@ void (empty response body)
 
 ### HTTP request headers
 
-- **Content-Type**: application/json, multipart/form-data
+- **Content-Type**: `application/json`
 - **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `meetingRegistrantStatus()`
 
-## meetingRegistrantStatus
+```php
+meetingRegistrantStatus($meeting_id, $registrant_status, $occurrence_id)
+```
 
-> meetingRegistrantStatus($meeting_id, $body, $occurrence_id)
-
-Update Meeting Registrant Status
+Update registrant's status
 
 Update a meeting registrant's status by either approving, cancelling or denying a registrant from joining the meeting.<br><br> **Scopes:** `meeting:write:admin` `meeting:write`  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
 
@@ -988,35 +1484,33 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Zoom\Api\Api\MeetingsApi(
+$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$meeting_id = 56; // int | The meeting ID in **long** format. The data type of this field is \"long\"(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits.
-$body = new \Zoom\Api\Model\InlineObject25(); // \Zoom\Api\Model\InlineObject25 | 
-$occurrence_id = 'occurrence_id_example'; // string | The meeting occurrence ID.
+$meeting_id = 85746065; // int | The meeting's ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits.
+$registrant_status = new \OpenAPI\Client\Model\RegistrantStatus(); // \OpenAPI\Client\Model\RegistrantStatus
+$occurrence_id = 1648194360000; // string | The meeting or webinar occurrence ID.
 
 try {
-    $apiInstance->meetingRegistrantStatus($meeting_id, $body, $occurrence_id);
+    $apiInstance->meetingRegistrantStatus($meeting_id, $registrant_status, $occurrence_id);
 } catch (Exception $e) {
     echo 'Exception when calling MeetingsApi->meetingRegistrantStatus: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **meeting_id** | **int**| The meeting ID in **long** format. The data type of this field is \&quot;long\&quot;(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits. |
- **body** | [**\Zoom\Api\Model\InlineObject25**](../Model/InlineObject25.md)|  |
- **occurrence_id** | **string**| The meeting occurrence ID. | [optional]
+ **meeting_id** | **int**| The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. |
+ **registrant_status** | [**\OpenAPI\Client\Model\RegistrantStatus**](../Model/RegistrantStatus.md)|  |
+ **occurrence_id** | **string**| The meeting or webinar occurrence ID. | [optional]
 
 ### Return type
 
@@ -1028,19 +1522,20 @@ void (empty response body)
 
 ### HTTP request headers
 
-- **Content-Type**: application/json, multipart/form-data
+- **Content-Type**: `application/json`
 - **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `meetingRegistrants()`
 
-## meetingRegistrants
+```php
+meetingRegistrants($meeting_id, $occurrence_id, $status, $page_size, $page_number, $next_page_token): \OpenAPI\Client\Model\MeetingRegistrantList
+```
 
-> \Zoom\Api\Model\RegistrationList meetingRegistrants($meeting_id, $occurrence_id, $status, $page_size, $page_number, $next_page_token)
-
-List Meeting Registrants
+List meeting registrants
 
 A host or a user with admin permission can require [registration for a Zoom meeting](https://support.zoom.us/hc/en-us/articles/211579443-Registration-for-Meetings). Use this API to list users that have registered for a meeting.<br><br> **Scopes**: `meeting:read:admin` `meeting:read`<br>   **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
 
@@ -1052,21 +1547,21 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Zoom\Api\Api\MeetingsApi(
+$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$meeting_id = 56; // int | The meeting ID in **long** format. The data type of this field is \"long\"(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits.
-$occurrence_id = 'occurrence_id_example'; // string | The meeting occurrence ID.
-$status = 'approved'; // string | The registrant status:<br>`pending` - Registrant's status is pending.<br>`approved` - Registrant's status is approved.<br>`denied` - Registrant's status is denied.
+$meeting_id = 85746065; // int | The meeting's ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits.
+$occurrence_id = 1648194360000; // string | The meeting or webinar occurrence ID.
+$status = pending; // string | Query by the registrant's status:  * `pending` — The registration is pending.  * `approved` — The registrant is approved.  * `denied` — The registration is denied.
 $page_size = 30; // int | The number of records returned within a single API call.
-$page_number = 1; // int | **Deprecated** - This field has been deprecated and we will stop supporting it completely in a future release. Please use \"next_page_token\" for pagination instead of this field.  The page number of the current page in the returned records.
-$next_page_token = 'next_page_token_example'; // string | The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
+$page_number = 1; // int | **Deprecated.** We will no longer support this field in a future release. Instead, use the `next_page_token` for pagination.
+$next_page_token = IAfJX3jsOLW7w3dokmFl84zOa0MAVGyMEB2; // string | The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
 
 try {
     $result = $apiInstance->meetingRegistrants($meeting_id, $occurrence_id, $status, $page_size, $page_number, $next_page_token);
@@ -1074,24 +1569,22 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling MeetingsApi->meetingRegistrants: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **meeting_id** | **int**| The meeting ID in **long** format. The data type of this field is \&quot;long\&quot;(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits. |
- **occurrence_id** | **string**| The meeting occurrence ID. | [optional]
- **status** | **string**| The registrant status:&lt;br&gt;&#x60;pending&#x60; - Registrant&#39;s status is pending.&lt;br&gt;&#x60;approved&#x60; - Registrant&#39;s status is approved.&lt;br&gt;&#x60;denied&#x60; - Registrant&#39;s status is denied. | [optional] [default to &#39;approved&#39;]
+ **meeting_id** | **int**| The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. |
+ **occurrence_id** | **string**| The meeting or webinar occurrence ID. | [optional]
+ **status** | **string**| Query by the registrant&#39;s status:  * &#x60;pending&#x60; — The registration is pending.  * &#x60;approved&#x60; — The registrant is approved.  * &#x60;denied&#x60; — The registration is denied. | [optional] [default to &#39;approved&#39;]
  **page_size** | **int**| The number of records returned within a single API call. | [optional] [default to 30]
- **page_number** | **int**| **Deprecated** - This field has been deprecated and we will stop supporting it completely in a future release. Please use \&quot;next_page_token\&quot; for pagination instead of this field.  The page number of the current page in the returned records. | [optional] [default to 1]
+ **page_number** | **int**| **Deprecated.** We will no longer support this field in a future release. Instead, use the &#x60;next_page_token&#x60; for pagination. | [optional] [default to 1]
  **next_page_token** | **string**| The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. | [optional]
 
 ### Return type
 
-[**\Zoom\Api\Model\RegistrationList**](../Model/RegistrationList.md)
+[**\OpenAPI\Client\Model\MeetingRegistrantList**](../Model/MeetingRegistrantList.md)
 
 ### Authorization
 
@@ -1100,20 +1593,21 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/xml
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `meetingRegistrantsQuestionsGet()`
 
-## meetingRegistrantsQuestionsGet
+```php
+meetingRegistrantsQuestionsGet($meeting_id): \OpenAPI\Client\Model\MeetingRegistrantsQuestionsGet200Response
+```
 
-> \Zoom\Api\Model\InlineResponse20025 meetingRegistrantsQuestionsGet($meeting_id)
+List registration questions
 
-List Registration Questions
-
-List registration questions that will be displayed to users while [registering for a meeeting](https://support.zoom.us/hc/en-us/articles/211579443-Registration-for-Meetings).<br>  **Scopes:** `meeting:read`, `meeting:read:admin`<br>   **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
+List registration questions that will be displayed to users while [registering for a meeting](https://support.zoom.us/hc/en-us/articles/211579443-Registration-for-Meetings).<br>  **Scopes:** `meeting:read`, `meeting:read:admin`<br>   **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 
 ### Example
 
@@ -1123,16 +1617,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Zoom\Api\Api\MeetingsApi(
+$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$meeting_id = 56; // int | The meeting ID in **long** format. The data type of this field is \"long\"(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits.
+$meeting_id = 85746065; // int | The meeting's ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits.
 
 try {
     $result = $apiInstance->meetingRegistrantsQuestionsGet($meeting_id);
@@ -1140,19 +1634,17 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling MeetingsApi->meetingRegistrantsQuestionsGet: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **meeting_id** | **int**| The meeting ID in **long** format. The data type of this field is \&quot;long\&quot;(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits. |
+ **meeting_id** | **int**| The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. |
 
 ### Return type
 
-[**\Zoom\Api\Model\InlineResponse20025**](../Model/InlineResponse20025.md)
+[**\OpenAPI\Client\Model\MeetingRegistrantsQuestionsGet200Response**](../Model/MeetingRegistrantsQuestionsGet200Response.md)
 
 ### Authorization
 
@@ -1161,18 +1653,19 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/xml
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `meetingStatus()`
 
-## meetingStatus
+```php
+meetingStatus($meeting_id, $meeting_status_request)
+```
 
-> meetingStatus($meeting_id, $body)
-
-Update Meeting Status
+Update meeting status
 
 Update the status of a meeting.<br><br> **Scopes:** `meeting:write:admin` `meeting:write`  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 
@@ -1184,33 +1677,31 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Zoom\Api\Api\MeetingsApi(
+$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$meeting_id = 56; // int | The meeting ID in **long** format. The data type of this field is \"long\"(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits.
-$body = new \Zoom\Api\Model\InlineObject24(); // \Zoom\Api\Model\InlineObject24 | 
+$meeting_id = 85746065; // int | The meeting's ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits.
+$meeting_status_request = new \OpenAPI\Client\Model\MeetingStatusRequest(); // \OpenAPI\Client\Model\MeetingStatusRequest
 
 try {
-    $apiInstance->meetingStatus($meeting_id, $body);
+    $apiInstance->meetingStatus($meeting_id, $meeting_status_request);
 } catch (Exception $e) {
     echo 'Exception when calling MeetingsApi->meetingStatus: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **meeting_id** | **int**| The meeting ID in **long** format. The data type of this field is \&quot;long\&quot;(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits. |
- **body** | [**\Zoom\Api\Model\InlineObject24**](../Model/InlineObject24.md)|  |
+ **meeting_id** | **int**| The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. |
+ **meeting_status_request** | [**\OpenAPI\Client\Model\MeetingStatusRequest**](../Model/MeetingStatusRequest.md)|  |
 
 ### Return type
 
@@ -1222,21 +1713,22 @@ void (empty response body)
 
 ### HTTP request headers
 
-- **Content-Type**: application/json, multipart/form-data
+- **Content-Type**: `application/json`
 - **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `meetingSurveyDelete()`
 
-## meetingUpdate
+```php
+meetingSurveyDelete($meeting_id)
+```
 
-> meetingUpdate($meeting_id, $body, $occurrence_id)
+Delete a meeting survey
 
-Update a Meeting
-
-Update the details of a meeting.<br>This API has a rate limit of 100 requests per day. Therefore, a meeting can only be updated for a maximum of 100 times within a 24 hour window.<br> **Scopes:** `meeting:write:admin` `meeting:write`<br>    **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
+Use this API to delete a [meeting survey](https://support.zoom.us/hc/en-us/articles/4404969060621-Post-meeting-survey-and-reporting).    **Scopes:** `meeting:write`, `meeting:write:admin` <br> **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`    **Prerequisites:**  * The host must be a **Pro** user type.  * The [**Meeting Survey**](https://support.zoom.us/hc/en-us/articles/4404939095053-Enabling-meeting-surveys) feature enabled in the host's account.  * The meeting must be a scheduled meeting. Instant meetings do not have survey features enabled.
 
 ### Example
 
@@ -1246,34 +1738,274 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Zoom\Api\Api\MeetingsApi(
+$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$meeting_id = 56; // int | The meeting ID in **long** format. The data type of this field is \"long\"(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits.
-$body = new \Zoom\Api\Model\UNKNOWN_BASE_TYPE(); // \Zoom\Api\Model\UNKNOWN_BASE_TYPE | Meeting
-$occurrence_id = 'occurrence_id_example'; // string | Meeting occurrence id. Support change of agenda, start_time, duration, settings: {host_video, participant_video, join_before_host, mute_upon_entry, waiting_room, watermark, auto_recording}
+$meeting_id = 85746065; // int | The meeting's ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits.
 
 try {
-    $apiInstance->meetingUpdate($meeting_id, $body, $occurrence_id);
+    $apiInstance->meetingSurveyDelete($meeting_id);
 } catch (Exception $e) {
-    echo 'Exception when calling MeetingsApi->meetingUpdate: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling MeetingsApi->meetingSurveyDelete: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **meeting_id** | **int**| The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[OAuth](../../README.md#OAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `meetingSurveyGet()`
+
+```php
+meetingSurveyGet($meeting_id): \OpenAPI\Client\Model\MeetingSurveyGet200Response
+```
+
+Get a meeting survey
+
+Use this API to return information about a [meeting survey](https://support.zoom.us/hc/en-us/articles/4404969060621-Post-meeting-survey-and-reporting).    **Scopes:** `meeting:read`, `meeting:read:admin` <br> **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`    **Prerequisites:**  * The host must be a **Pro** user type.  * The [**Meeting Survey**](https://support.zoom.us/hc/en-us/articles/4404939095053-Enabling-meeting-surveys) feature enabled in the host's account.  * The meeting must be a scheduled meeting. Instant meetings do not have survey features enabled.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure OAuth2 access token for authorization: OAuth
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$meeting_id = 85746065; // int | The meeting's ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits.
+
+try {
+    $result = $apiInstance->meetingSurveyGet($meeting_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling MeetingsApi->meetingSurveyGet: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **meeting_id** | **int**| The meeting ID in **long** format. The data type of this field is \&quot;long\&quot;(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits. |
- **body** | [**\Zoom\Api\Model\UNKNOWN_BASE_TYPE**](../Model/UNKNOWN_BASE_TYPE.md)| Meeting |
+ **meeting_id** | **int**| The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. |
+
+### Return type
+
+[**\OpenAPI\Client\Model\MeetingSurveyGet200Response**](../Model/MeetingSurveyGet200Response.md)
+
+### Authorization
+
+[OAuth](../../README.md#OAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `meetingSurveyUpdate()`
+
+```php
+meetingSurveyUpdate($meeting_id, $meeting_survey_get200_response)
+```
+
+Update a meeting survey
+
+Use this API to update a [meeting survey](https://support.zoom.us/hc/en-us/articles/4404969060621-Post-meeting-survey-and-reporting).    **Scopes:** `meeting:write`, `meeting:write:admin` <br> **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`    **Prerequisites:**  * The host must be a **Pro** user type.  * The [**Meeting Survey**](https://support.zoom.us/hc/en-us/articles/4404939095053-Enabling-meeting-surveys) feature enabled in the host's account.  * The meeting must be a scheduled meeting. Instant meetings do not have survey features enabled.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure OAuth2 access token for authorization: OAuth
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$meeting_id = 85746065; // int | The meeting's ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits.
+$meeting_survey_get200_response = new \OpenAPI\Client\Model\MeetingSurveyGet200Response(); // \OpenAPI\Client\Model\MeetingSurveyGet200Response
+
+try {
+    $apiInstance->meetingSurveyUpdate($meeting_id, $meeting_survey_get200_response);
+} catch (Exception $e) {
+    echo 'Exception when calling MeetingsApi->meetingSurveyUpdate: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **meeting_id** | **int**| The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. |
+ **meeting_survey_get200_response** | [**\OpenAPI\Client\Model\MeetingSurveyGet200Response**](../Model/MeetingSurveyGet200Response.md)|  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[OAuth](../../README.md#OAuth)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `meetingToken()`
+
+```php
+meetingToken($meeting_id, $type): \OpenAPI\Client\Model\MeetingToken200Response
+```
+
+Get meeting's token
+
+Use this API to get a meeting's [closed caption token (caption URL)](https://support.zoom.us/hc/en-us/articles/115002212983-Using-a-third-party-closed-captioning-service). This token lets you use a third-party service to stream text to their closed captioning software to the Zoom meeting.   **Scopes:** `meeting:read`, `meeting:read:admin` <br> **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`   **Prerequisites:**  * The **Closed captioning** setting enabled in the Zoom web portal.  * The **Allow use of caption API Token to integrate with 3rd-party Closed Captioning services** setting enabled.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure OAuth2 access token for authorization: OAuth
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$meeting_id = 85746065; // int | The meeting's ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits.
+$type = closed_caption_token; // string | The meeting token type:  * `closed_caption_token` — The third-party closed caption API token.   This defaults to `closed_caption_token`.
+
+try {
+    $result = $apiInstance->meetingToken($meeting_id, $type);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling MeetingsApi->meetingToken: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **meeting_id** | **int**| The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. |
+ **type** | **string**| The meeting token type:  * &#x60;closed_caption_token&#x60; — The third-party closed caption API token.   This defaults to &#x60;closed_caption_token&#x60;. | [optional] [default to &#39;closed_caption_token&#39;]
+
+### Return type
+
+[**\OpenAPI\Client\Model\MeetingToken200Response**](../Model/MeetingToken200Response.md)
+
+### Authorization
+
+[OAuth](../../README.md#OAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `meetingUpdate()`
+
+```php
+meetingUpdate($meeting_id, $meeting_update_request, $occurrence_id)
+```
+
+Update a meeting
+
+Use this API to update a meeting's details.  **Note:**  * This API has a rate limit of **100 requests per day**. Because of this, a meeting can only be updated for a maximum of **100 times within a 24-hour period**.  * The `start_time` value **must** be a future date. If the value is omitted or a date in the past, the API ignores this value and will **not** update any recurring meetings.  * If the `start_time` value is a future date, the `recurrence` object is **required**.  **Scopes:** `meeting:write:admin`, `meeting:write`</br>**[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure OAuth2 access token for authorization: OAuth
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$meeting_id = 85746065; // int | The meeting's ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits.
+$meeting_update_request = new \OpenAPI\Client\Model\MeetingUpdateRequest(); // \OpenAPI\Client\Model\MeetingUpdateRequest | Meeting
+$occurrence_id = 1648194360000; // string | Meeting occurrence id. Support change of agenda, start_time, duration, settings: {host_video, participant_video, join_before_host, mute_upon_entry, waiting_room, watermark, auto_recording}
+
+try {
+    $apiInstance->meetingUpdate($meeting_id, $meeting_update_request, $occurrence_id);
+} catch (Exception $e) {
+    echo 'Exception when calling MeetingsApi->meetingUpdate: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **meeting_id** | **int**| The meeting&#39;s ID.    When storing this value in your database, you must store it as a long format integer and **not** an integer. Meeting IDs can exceed 10 digits. |
+ **meeting_update_request** | [**\OpenAPI\Client\Model\MeetingUpdateRequest**](../Model/MeetingUpdateRequest.md)| Meeting |
  **occurrence_id** | **string**| Meeting occurrence id. Support change of agenda, start_time, duration, settings: {host_video, participant_video, join_before_host, mute_upon_entry, waiting_room, watermark, auto_recording} | [optional]
 
 ### Return type
@@ -1286,21 +2018,22 @@ void (empty response body)
 
 ### HTTP request headers
 
-- **Content-Type**: application/json, multipart/form-data
+- **Content-Type**: `application/json`
 - **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `meetingregistrantdelete()`
 
-## meetings
+```php
+meetingregistrantdelete($meeting_id, $registrant_id, $occurrence_id)
+```
 
-> \Zoom\Api\Model\GroupList meetings($user_id, $type, $page_size, $next_page_token, $page_number)
+Delete a meeting registrant
 
-List Meetings
-
-List all the meetings that were scheduled for a user (meeting host). This API only supports scheduled meetings and thus, details on instant meetings are not returned via this API.<br><br> **Scopes:** `meeting:read:admin` `meeting:read`<br>    **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
+Delete a meeting registrant.<br><br> **Scopes**: `meeting:write:admin` `meeting:write`<br>  <br>  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 
 ### Example
 
@@ -1310,20 +2043,83 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Zoom\Api\Api\MeetingsApi(
+$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = 'user_id_example'; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
-$type = 'live'; // string | The meeting types: <br>`scheduled` - This includes all valid past meetings (unexpired), live meetings and upcoming scheduled meetings. It is equivalent to the combined list of \"Previous Meetings\" and \"Upcoming Meetings\" displayed in the user's [Meetings page](https://zoom.us/meeting) on the Zoom Web Portal.<br>`live` - All the ongoing meetings.<br>`upcoming` - All upcoming meetings including live meetings.
+$meeting_id = 91498058927; // int | The meeting ID.
+$registrant_id = 9tboDiHUQAeOnbmudzWa5g; // string | The meeting registrant ID.
+$occurrence_id = approved; // string | The meeting occurrence ID.
+
+try {
+    $apiInstance->meetingregistrantdelete($meeting_id, $registrant_id, $occurrence_id);
+} catch (Exception $e) {
+    echo 'Exception when calling MeetingsApi->meetingregistrantdelete: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **meeting_id** | **int**| The meeting ID. |
+ **registrant_id** | **string**| The meeting registrant ID. |
+ **occurrence_id** | **string**| The meeting occurrence ID. | [optional]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[OAuth](../../README.md#OAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `meetings()`
+
+```php
+meetings($user_id, $type, $page_size, $next_page_token, $page_number): \OpenAPI\Client\Model\GroupList
+```
+
+List meetings
+
+Use this API to list a user's (meeting host) scheduled meetings. For user-level apps, pass [the `me` value](https://marketplace.zoom.us/docs/api-reference/using-zoom-apis#mekeyword) instead of the `userId` parameter.   **Note:**  * This API **only** supports scheduled meetings. This API does not return information about instant meetings.  * This API only returns a user's [unexpired meetings](https://support.zoom.us/hc/en-us/articles/201362373-Meeting-ID#h_c73f9b08-c1c0-4a1a-b538-e01ebb98e844).    **Scopes:** `meeting:read:admin`, `meeting:read` </br> **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure OAuth2 access token for authorization: OAuth
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$user_id = new \OpenAPI\Client\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
+$type = scheduled; // string | The type of meeting:  * `scheduled` — All valid previous (unexpired) meetings, live meetings, and upcoming scheduled meetings.  * `live` — All the ongoing meetings.  * `upcoming` — All upcoming meetings, including live meetings.  * `upcoming_meetings` — All upcoming meetings, including live meetings.  * `previous_meetings` — All the previous meetings.
 $page_size = 30; // int | The number of records returned within a single API call.
-$next_page_token = 'next_page_token_example'; // string | The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
-$page_number = 'page_number_example'; // string | The page number of the current page in the returned records.
+$next_page_token = IAfJX3jsOLW7w3dokmFl84zOa0MAVGyMEB2; // string | The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
+$page_number = 1; // int | The page number of the current page in the returned records.
 
 try {
     $result = $apiInstance->meetings($user_id, $type, $page_size, $next_page_token, $page_number);
@@ -1331,23 +2127,21 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling MeetingsApi->meetings: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **string**| The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. |
- **type** | **string**| The meeting types: &lt;br&gt;&#x60;scheduled&#x60; - This includes all valid past meetings (unexpired), live meetings and upcoming scheduled meetings. It is equivalent to the combined list of \&quot;Previous Meetings\&quot; and \&quot;Upcoming Meetings\&quot; displayed in the user&#39;s [Meetings page](https://zoom.us/meeting) on the Zoom Web Portal.&lt;br&gt;&#x60;live&#x60; - All the ongoing meetings.&lt;br&gt;&#x60;upcoming&#x60; - All upcoming meetings including live meetings. | [optional] [default to &#39;live&#39;]
+ **user_id** | [**GroupAdminsDeleteUserIdParameter**](../Model/.md)| The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. |
+ **type** | **string**| The type of meeting:  * &#x60;scheduled&#x60; — All valid previous (unexpired) meetings, live meetings, and upcoming scheduled meetings.  * &#x60;live&#x60; — All the ongoing meetings.  * &#x60;upcoming&#x60; — All upcoming meetings, including live meetings.  * &#x60;upcoming_meetings&#x60; — All upcoming meetings, including live meetings.  * &#x60;previous_meetings&#x60; — All the previous meetings. | [optional] [default to &#39;live&#39;]
  **page_size** | **int**| The number of records returned within a single API call. | [optional] [default to 30]
  **next_page_token** | **string**| The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. | [optional]
- **page_number** | **string**| The page number of the current page in the returned records. | [optional]
+ **page_number** | **int**| The page number of the current page in the returned records. | [optional]
 
 ### Return type
 
-[**\Zoom\Api\Model\GroupList**](../Model/GroupList.md)
+[**\OpenAPI\Client\Model\GroupList**](../Model/GroupList.md)
 
 ### Authorization
 
@@ -1356,20 +2150,21 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/xml
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `pastMeetingDetails()`
 
-## pastMeetingDetails
+```php
+pastMeetingDetails($meeting_id): \OpenAPI\Client\Model\PastMeetingDetails200Response
+```
 
-> \Zoom\Api\Model\InlineResponse20023 pastMeetingDetails($meeting_uuid)
+Get past meeting details
 
-Get Past Meeting Details
-
-Get details on a past meeting. <br><br> **Scopes:** `meeting:read:admin` `meeting:read`   **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light` > **Note**: Please double encode your UUID when using this API if the UUID begins with a '/'or contains '//' in it.
+Use this API to get information about a past meeting.    **Scopes:** `meeting:read:admin`, `meeting:read` <br> **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 
 ### Example
 
@@ -1379,36 +2174,34 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Zoom\Api\Api\MeetingsApi(
+$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$meeting_uuid = 'meeting_uuid_example'; // string | The meeting UUID. Each meeting instance will generate its own Meeting UUID (i.e., after a meeting ends, a new UUID will be generated for the next instance of the meeting). Please double encode your UUID when using it for other API calls if the UUID begins with a '/'or contains '//' in it.
+$meeting_id = new \OpenAPI\Client\Model\ListPastMeetingPollsMeetingIdParameter(); // ListPastMeetingPollsMeetingIdParameter | The meeting's ID or universally unique ID (UUID).  * If you provide a meeting ID, the API will return a response for the latest meeting instance.  * If you provide a meeting UUID that begins with a `/` character or contains the `//` characters, you **must** double-encode the meeting UUID before making an API request.
 
 try {
-    $result = $apiInstance->pastMeetingDetails($meeting_uuid);
+    $result = $apiInstance->pastMeetingDetails($meeting_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MeetingsApi->pastMeetingDetails: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **meeting_uuid** | **string**| The meeting UUID. Each meeting instance will generate its own Meeting UUID (i.e., after a meeting ends, a new UUID will be generated for the next instance of the meeting). Please double encode your UUID when using it for other API calls if the UUID begins with a &#39;/&#39;or contains &#39;//&#39; in it. |
+ **meeting_id** | [**ListPastMeetingPollsMeetingIdParameter**](../Model/.md)| The meeting&#39;s ID or universally unique ID (UUID).  * If you provide a meeting ID, the API will return a response for the latest meeting instance.  * If you provide a meeting UUID that begins with a &#x60;/&#x60; character or contains the &#x60;//&#x60; characters, you **must** double-encode the meeting UUID before making an API request. |
 
 ### Return type
 
-[**\Zoom\Api\Model\InlineResponse20023**](../Model/InlineResponse20023.md)
+[**\OpenAPI\Client\Model\PastMeetingDetails200Response**](../Model/PastMeetingDetails200Response.md)
 
 ### Authorization
 
@@ -1417,18 +2210,19 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/xml
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `pastMeetingParticipants()`
 
-## pastMeetingParticipants
+```php
+pastMeetingParticipants($meeting_id, $page_size, $next_page_token): \OpenAPI\Client\Model\PastMeetingParticipants200Response
+```
 
-> \Zoom\Api\Model\InlineResponse20024 pastMeetingParticipants($meeting_uuid, $page_size, $next_page_token)
-
-Get Past Meeting Participants
+Get past meeting participants
 
 Retrieve information on participants from a past meeting. <br><br> **Scopes:** `meeting:read:admin` `meeting:read`   **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium` **Prerequisites:**<br> * Paid account on a Pro or higher plan.  <br> <br>  **Note**: Please double encode your UUID when using this API if the UUID begins with a '/'or contains '//' in it.
 
@@ -1440,40 +2234,38 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Zoom\Api\Api\MeetingsApi(
+$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$meeting_uuid = 'meeting_uuid_example'; // string | The meeting UUID. Each meeting instance will generate its own Meeting UUID (i.e., after a meeting ends, a new UUID will be generated for the next instance of the meeting). Please double encode your UUID when using it for other API calls if the UUID begins with a '/'or contains '//' in it.
+$meeting_id = new \OpenAPI\Client\Model\ListPastMeetingPollsMeetingIdParameter(); // ListPastMeetingPollsMeetingIdParameter | The meeting's ID or universally unique ID (UUID).  * If you provide a meeting ID, the API will return a response for the latest meeting instance.  * If you provide a meeting UUID that begins with a `/` character or contains the `//` characters, you **must** double-encode the meeting UUID before making an API request.
 $page_size = 30; // int | The number of records returned within a single API call.
-$next_page_token = 'next_page_token_example'; // string | The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
+$next_page_token = IAfJX3jsOLW7w3dokmFl84zOa0MAVGyMEB2; // string | The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
 
 try {
-    $result = $apiInstance->pastMeetingParticipants($meeting_uuid, $page_size, $next_page_token);
+    $result = $apiInstance->pastMeetingParticipants($meeting_id, $page_size, $next_page_token);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MeetingsApi->pastMeetingParticipants: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **meeting_uuid** | **string**| The meeting UUID. Each meeting instance will generate its own Meeting UUID (i.e., after a meeting ends, a new UUID will be generated for the next instance of the meeting). Please double encode your UUID when using it for other API calls if the UUID begins with a &#39;/&#39;or contains &#39;//&#39; in it. |
+ **meeting_id** | [**ListPastMeetingPollsMeetingIdParameter**](../Model/.md)| The meeting&#39;s ID or universally unique ID (UUID).  * If you provide a meeting ID, the API will return a response for the latest meeting instance.  * If you provide a meeting UUID that begins with a &#x60;/&#x60; character or contains the &#x60;//&#x60; characters, you **must** double-encode the meeting UUID before making an API request. |
  **page_size** | **int**| The number of records returned within a single API call. | [optional] [default to 30]
  **next_page_token** | **string**| The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. | [optional]
 
 ### Return type
 
-[**\Zoom\Api\Model\InlineResponse20024**](../Model/InlineResponse20024.md)
+[**\OpenAPI\Client\Model\PastMeetingParticipants200Response**](../Model/PastMeetingParticipants200Response.md)
 
 ### Authorization
 
@@ -1482,20 +2274,21 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/xml
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `pastMeetings()`
 
-## pastMeetings
+```php
+pastMeetings($meeting_id): \OpenAPI\Client\Model\MeetingInstances
+```
 
-> object pastMeetings($meeting_id)
+List past meeting instances
 
-List Ended Meeting Instances
-
-Get a list of ended meeting instances<br><br> **Scopes:** `meeting:read:admin` `meeting:read`<br>   **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
+Use this API to return a list of past meeting instances.    **Scopes:** `meeting:read:admin`, `meeting:read` <br> **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`
 
 ### Example
 
@@ -1505,16 +2298,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Zoom\Api\Api\MeetingsApi(
+$apiInstance = new OpenAPI\Client\Api\MeetingsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$meeting_id = 56; // int | The meeting ID in **long** format. The data type of this field is \"long\"(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits.
+$meeting_id = 93398114182; // int | The past meeting's ID. The meeting ID must be from within the last 30 days. Past meeting IDs expire after 30 days.
 
 try {
     $result = $apiInstance->pastMeetings($meeting_id);
@@ -1522,19 +2315,17 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling MeetingsApi->pastMeetings: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **meeting_id** | **int**| The meeting ID in **long** format. The data type of this field is \&quot;long\&quot;(represented as int64 in JSON).  While storing it in your database, store it as a **long** data type and **not as an integer**, as the Meeting IDs can be longer than 10 digits. |
+ **meeting_id** | **int**| The past meeting&#39;s ID. The meeting ID must be from within the last 30 days. Past meeting IDs expire after 30 days. |
 
 ### Return type
 
-**object**
+[**\OpenAPI\Client\Model\MeetingInstances**](../Model/MeetingInstances.md)
 
 ### Authorization
 
@@ -1543,9 +2334,8 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/xml
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

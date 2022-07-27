@@ -1,20 +1,21 @@
-# Zoom\Api\PACApi
+# OpenAPI\Client\PACApi
 
-All URIs are relative to *https://api.zoom.us/v2*
+All URIs are relative to https://api.zoom.us/v2.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**userPACs**](PACApi.md#userPACs) | **GET** /users/{userId}/pac | List a User&#39;s PAC Accounts
+[**userPACs()**](PACApi.md#userPACs) | **GET** /users/{userId}/pac | List a user&#39;s PAC accounts
 
 
+## `userPACs()`
 
-## userPACs
+```php
+userPACs($user_id): \OpenAPI\Client\Model\UserPACs200Response
+```
 
-> \Zoom\Api\Model\InlineResponse20049 userPACs($user_id)
+List a user's PAC accounts
 
-List a User's PAC Accounts
-
-[Personal Audio Conference](https://support.zoom.us/hc/en-us/articles/204517069-Getting-Started-with-Personal-Audio-Conference) (PAC) allows Pro or higher account holders to host meetings through PSTN (phone dial-in) only.<br>Use this API to list a user's PAC accounts.<br><br> **Scopes:** `user:read:admin` `user:read`<br> <br>  **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`<br> **Prerequisites:**<br> * A Pro or higher plan with [Premium Audio Conferencing](https://support.zoom.us/hc/en-us/articles/204517069-Getting-Started-with-Personal-Audio-Conference) add-on. * Personal Audio Conference must be enabled in the user's profile.
+Use this API to list a user's [Personal Audio Conference (PAC)](https://support.zoom.us/hc/en-us/articles/204517069-Getting-Started-with-Personal-Audio-Conference) accounts. For user-level apps, pass [the `me` value](https://marketplace.zoom.us/docs/api-reference/using-zoom-apis#mekeyword) instead of the `userId` parameter.    PAC allows Pro or higher account holders to host meetings through PSTN (phone dial-in) only.    **Scopes:** `pac:read:admin`, `pac:read` <br> **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`    **Prerequisites:**  * A Pro or higher plan with an [Audio Conferencing](https://support.zoom.us/hc/en-us/articles/204517069-Getting-Started-with-Personal-Audio-Conference) subscription.  * The [**Personal Audio Conference**](https://support.zoom.us/hc/en-us/articles/204517069-Getting-Started-with-Personal-Audio-Conference#h_01F5BPM447M6QDJXX50RSFXKJ3) setting enabled in the user's profile.
 
 ### Example
 
@@ -24,16 +25,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Zoom\Api\Api\PACApi(
+$apiInstance = new OpenAPI\Client\Api\PACApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$user_id = 'user_id_example'; // string | The user ID or email address of the user. For user-level apps, pass `me` as the value for userId.
+$user_id = new \OpenAPI\Client\Model\GroupAdminsDeleteUserIdParameter(); // GroupAdminsDeleteUserIdParameter | The user ID or email address of the user. For user-level apps, pass the `me` value.
 
 try {
     $result = $apiInstance->userPACs($user_id);
@@ -41,19 +42,17 @@ try {
 } catch (Exception $e) {
     echo 'Exception when calling PACApi->userPACs: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **string**| The user ID or email address of the user. For user-level apps, pass &#x60;me&#x60; as the value for userId. |
+ **user_id** | [**GroupAdminsDeleteUserIdParameter**](../Model/.md)| The user ID or email address of the user. For user-level apps, pass the &#x60;me&#x60; value. |
 
 ### Return type
 
-[**\Zoom\Api\Model\InlineResponse20049**](../Model/InlineResponse20049.md)
+[**\OpenAPI\Client\Model\UserPACs200Response**](../Model/UserPACs200Response.md)
 
 ### Authorization
 
@@ -62,9 +61,8 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/xml
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

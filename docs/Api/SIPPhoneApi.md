@@ -1,23 +1,24 @@
-# Zoom\Api\SIPPhoneApi
+# OpenAPI\Client\SIPPhoneApi
 
-All URIs are relative to *https://api.zoom.us/v2*
+All URIs are relative to https://api.zoom.us/v2.
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**createSIPPhone**](SIPPhoneApi.md#createSIPPhone) | **POST** /sip_phones | Create SIP Phone
-[**deleteSIPPhone**](SIPPhoneApi.md#deleteSIPPhone) | **DELETE** /sip_phones/{phoneId} | Delete SIP Phone
-[**listSipPhones**](SIPPhoneApi.md#listSipPhones) | **GET** /sip_phones | List SIP Phones
-[**updateSIPPhone**](SIPPhoneApi.md#updateSIPPhone) | **PATCH** /sip_phones/{phoneId} | Update SIP Phone
+[**createSIPPhone()**](SIPPhoneApi.md#createSIPPhone) | **POST** /sip_phones | Enable SIP phone
+[**deleteSIPPhone()**](SIPPhoneApi.md#deleteSIPPhone) | **DELETE** /sip_phones/{phoneId} | Delete SIP phone
+[**listSipPhones()**](SIPPhoneApi.md#listSipPhones) | **GET** /sip_phones | List SIP phones
+[**updateSIPPhone()**](SIPPhoneApi.md#updateSIPPhone) | **PATCH** /sip_phones/{phoneId} | Update SIP phone
 
 
+## `createSIPPhone()`
 
-## createSIPPhone
+```php
+createSIPPhone($create_sip_phone_request)
+```
 
-> createSIPPhone($body)
+Enable SIP phone
 
-Create SIP Phone
-
-Zoom’s Phone System Integration (PSI), also referred as SIP phones, enables an organization to leverage the Zoom client to complete a softphone registration to supported premise based PBX system. End users will have the ability to have softphone functionality within a single client while maintaining a comparable interface to Zoom Phone. Use this API to enable a user to use SIP phone.<br><br> **Prerequisites**: * Currently only supported on Cisco and Avaya PBX systems.  * The account owner or account admin must first enable SIP Phone Integration by contacting the [Sales](https://zoom.us/contactsales) team.<br> **Scope:** `sip_phone:write:admin` <br>   **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
+Zoom's Phone System Integration (PSI), also referred as SIP phones, enables an organization to leverage the Zoom client to complete a softphone registration to supported premise based PBX system. End users will have the ability to have softphone functionality within a single client while maintaining a comparable interface to Zoom Phone. Use this API to enable a user to use SIP phone.<br><br> **Prerequisites**: * Currently only supported on Cisco and Avaya PBX systems.  * The account owner or account admin must first enable SIP Phone Integration by contacting the [Sales](https://zoom.us/contactsales) team.<br> **Scope:** `sip_phone:write:admin` <br>   **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 
 ### Example
 
@@ -27,31 +28,29 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Zoom\Api\Api\SIPPhoneApi(
+$apiInstance = new OpenAPI\Client\Api\SIPPhoneApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Zoom\Api\Model\InlineObject(); // \Zoom\Api\Model\InlineObject | 
+$create_sip_phone_request = new \OpenAPI\Client\Model\CreateSIPPhoneRequest(); // \OpenAPI\Client\Model\CreateSIPPhoneRequest
 
 try {
-    $apiInstance->createSIPPhone($body);
+    $apiInstance->createSIPPhone($create_sip_phone_request);
 } catch (Exception $e) {
     echo 'Exception when calling SIPPhoneApi->createSIPPhone: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Zoom\Api\Model\InlineObject**](../Model/InlineObject.md)|  | [optional]
+ **create_sip_phone_request** | [**\OpenAPI\Client\Model\CreateSIPPhoneRequest**](../Model/CreateSIPPhoneRequest.md)|  | [optional]
 
 ### Return type
 
@@ -63,21 +62,22 @@ void (empty response body)
 
 ### HTTP request headers
 
-- **Content-Type**: application/json, multipart/form-data
+- **Content-Type**: `application/json`
 - **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `deleteSIPPhone()`
 
-## deleteSIPPhone
+```php
+deleteSIPPhone($phone_id)
+```
 
-> deleteSIPPhone($phone_id)
+Delete SIP phone
 
-Delete SIP Phone
-
-Zoom’s Phone System Integration (PSI), also referred as SIP phones, enables an organization to leverage the Zoom client to complete a softphone registration to supported premise based PBX system. End users will have the ability to have softphone functionality within a single client while maintaining a comparable interface to Zoom Phone. Use this API to delete a specific SIP phone on a Zoom account.<br><br> **Prerequisites**: * Currently only supported on Cisco and Avaya PBX systems.  * User must enable SIP Phone Integration by contacting the [Sales](https://zoom.us/contactsales) team.<br> **Scope:** `sip_phone:read:admin` <br>   **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
+Use this API to delete a Zoom account's SIP phone.    **Scopes:** `sip_phone:write:admin` <br> **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`   **Prerequisites**:  * Currently only supported on Cisco and Avaya PBX systems.  * The user must enable **SIP Phone Integration** by contacting the [Zoom Sales](https://zoom.us/contactsales) team.
 
 ### Example
 
@@ -87,27 +87,25 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Zoom\Api\Api\SIPPhoneApi(
+$apiInstance = new OpenAPI\Client\Api\SIPPhoneApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$phone_id = 'phone_id_example'; // string | Unique Identifier of the SIP Phone. It can be retrieved from the List SIP Phones API.
+$phone_id = 123456; // string | Unique Identifier of the SIP Phone. It can be retrieved from the List SIP Phones API.
 
 try {
     $apiInstance->deleteSIPPhone($phone_id);
 } catch (Exception $e) {
     echo 'Exception when calling SIPPhoneApi->deleteSIPPhone: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
-
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -124,20 +122,21 @@ void (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/xml
+- **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `listSipPhones()`
 
-## listSipPhones
+```php
+listSipPhones($page_number, $search_key, $page_size, $next_page_token): \OpenAPI\Client\Model\ListSipPhones200Response
+```
 
-> \Zoom\Api\Model\InlineResponse2001 listSipPhones($page_number, $search_key, $page_size)
+List SIP phones
 
-List SIP Phones
-
-Zoom’s Phone System Integration (PSI), also referred as SIP phones, enables an organization to leverage the Zoom client to complete a softphone registration to supported premise based PBX system. End users will have the ability to have softphone functionality within a single client while maintaining a comparable interface to Zoom Phone. Use this API to list SIP phones on an account.<br><br> **Prerequisites**: * Currently only supported on Cisco and Avaya PBX systems.  * User must enable SIP Phone Integration by contacting the [Sales](https://zoom.us/contactsales) team.<br> **Scope:** `sip_phone:read:admin`<br>   **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`<br>
+Zoom's Phone System Integration (PSI), also referred as SIP phones, enables an organization to leverage the Zoom client to complete a softphone registration to supported premise based PBX system. End users will have the ability to have softphone functionality within a single client while maintaining a comparable interface to Zoom Phone. Use this API to list SIP phones on an account.<br><br> **Prerequisites**: * Currently only supported on Cisco and Avaya PBX systems.  * User must enable SIP Phone Integration by contacting the [Sales](https://zoom.us/contactsales) team.<br> **Scope:** `sip_phone:read:admin`<br>   **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Medium`<br>
 
 ### Example
 
@@ -147,40 +146,40 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Zoom\Api\Api\SIPPhoneApi(
+$apiInstance = new OpenAPI\Client\Api\SIPPhoneApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$page_number = 1; // int | **Deprecated** - This field has been deprecated and we will stop supporting it completely in a future release. Please use \"next_page_token\" for pagination instead of this field.  The page number of the current page in the returned records.
-$search_key = 'search_key_example'; // string | User name or email address of a user. If this parameter is provided, only the SIP phone system integration enabled for that specific user will be returned. Otherwise, all SIP phones on an account will be returned.
-$page_size = 56; // int | The number of records returned within a single API call.
+$page_number = 1; // int | **Deprecated.** We will no longer support this field in a future release. Instead, use the `next_page_token` for pagination.
+$search_key = jchill@example.com; // string | User name or email address of a user. If this parameter is provided, only the SIP phone system integration enabled for that specific user will be returned. Otherwise, all SIP phones on an account will be returned.
+$page_size = 30; // int | The number of records returned within a single API call.
+$next_page_token = Tva2CuIdTgsv8wAnhyAdU3m06Y2HuLQtlh3; // string | The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes.
 
 try {
-    $result = $apiInstance->listSipPhones($page_number, $search_key, $page_size);
+    $result = $apiInstance->listSipPhones($page_number, $search_key, $page_size, $next_page_token);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SIPPhoneApi->listSipPhones: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page_number** | **int**| **Deprecated** - This field has been deprecated and we will stop supporting it completely in a future release. Please use \&quot;next_page_token\&quot; for pagination instead of this field.  The page number of the current page in the returned records. | [optional] [default to 1]
+ **page_number** | **int**| **Deprecated.** We will no longer support this field in a future release. Instead, use the &#x60;next_page_token&#x60; for pagination. | [optional] [default to 1]
  **search_key** | **string**| User name or email address of a user. If this parameter is provided, only the SIP phone system integration enabled for that specific user will be returned. Otherwise, all SIP phones on an account will be returned. | [optional]
  **page_size** | **int**| The number of records returned within a single API call. | [optional]
+ **next_page_token** | **string**| The next page token is used to paginate through large result sets. A next page token will be returned whenever the set of available results exceeds the current page size. The expiration period for this token is 15 minutes. | [optional]
 
 ### Return type
 
-[**\Zoom\Api\Model\InlineResponse2001**](../Model/InlineResponse2001.md)
+[**\OpenAPI\Client\Model\ListSipPhones200Response**](../Model/ListSipPhones200Response.md)
 
 ### Authorization
 
@@ -189,20 +188,21 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/xml
+- **Accept**: `application/json`
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `updateSIPPhone()`
 
-## updateSIPPhone
+```php
+updateSIPPhone($phone_id, $update_sip_phone_request)
+```
 
-> updateSIPPhone($phone_id, $body)
+Update SIP phone
 
-Update SIP Phone
-
-Zoom’s Phone System Integration (PSI), also referred as SIP phones, enables an organization to leverage the Zoom client to complete a softphone registration to supported premise based PBX system. End users will have the ability to have softphone functionality within a single client while maintaining a comparable interface to Zoom Phone. Use this API to update information of a specific SIP Phone on a Zoom account.<br><br> **Prerequisites**: * Currently only supported on Cisco and Avaya PBX systems.  * The account owner or account admin must first enable SIP Phone Integration by contacting the [Sales](https://zoom.us/contactsales) team.<br> **Scope:** `sip_phone:write:admin` <br>   **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
+Zoom's Phone System Integration (PSI), also referred as SIP phones, enables an organization to leverage the Zoom client to complete a softphone registration to supported premise based PBX system. End users will have the ability to have softphone functionality within a single client while maintaining a comparable interface to Zoom Phone. Use this API to update information of a specific SIP Phone on a Zoom account.<br><br> **Prerequisites**: * Currently only supported on Cisco and Avaya PBX systems.  * The account owner or account admin must first enable SIP Phone Integration by contacting the [Sales](https://zoom.us/contactsales) team.<br> **Scope:** `sip_phone:write:admin` <br>   **[Rate Limit Label](https://marketplace.zoom.us/docs/api-reference/rate-limits#rate-limits):** `Light`
 
 ### Example
 
@@ -212,33 +212,31 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: OAuth
-$config = Zoom\Api\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Zoom\Api\Api\SIPPhoneApi(
+$apiInstance = new OpenAPI\Client\Api\SIPPhoneApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$phone_id = 'phone_id_example'; // string | Unique Identifier of the SIP Phone. This can be retrieved from the List SIP Phones API.
-$body = new \Zoom\Api\Model\InlineObject1(); // \Zoom\Api\Model\InlineObject1 | 
+$phone_id = 123456; // string | Unique Identifier of the SIP Phone. This can be retrieved from the List SIP Phones API.
+$update_sip_phone_request = new \OpenAPI\Client\Model\UpdateSIPPhoneRequest(); // \OpenAPI\Client\Model\UpdateSIPPhoneRequest
 
 try {
-    $apiInstance->updateSIPPhone($phone_id, $body);
+    $apiInstance->updateSIPPhone($phone_id, $update_sip_phone_request);
 } catch (Exception $e) {
     echo 'Exception when calling SIPPhoneApi->updateSIPPhone: ', $e->getMessage(), PHP_EOL;
 }
-?>
 ```
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **phone_id** | **string**| Unique Identifier of the SIP Phone. This can be retrieved from the List SIP Phones API. |
- **body** | [**\Zoom\Api\Model\InlineObject1**](../Model/InlineObject1.md)|  | [optional]
+ **update_sip_phone_request** | [**\OpenAPI\Client\Model\UpdateSIPPhoneRequest**](../Model/UpdateSIPPhoneRequest.md)|  | [optional]
 
 ### Return type
 
@@ -250,10 +248,9 @@ void (empty response body)
 
 ### HTTP request headers
 
-- **Content-Type**: application/json, multipart/form-data
-- **Accept**: application/json, application/xml
+- **Content-Type**: `application/json`
+- **Accept**: Not defined
 
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../../README.md#documentation-for-models)
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
-

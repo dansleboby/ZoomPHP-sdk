@@ -4,9 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**from** | [**\DateTime**](\DateTime.md) | Start Date. | [optional] 
-**to** | [**\DateTime**](\DateTime.md) | End Date. | [optional] 
+**meetings** | [**RecordingMeeting[]**](RecordingMeeting.md) | List of recordings. | [optional]
 
-[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
-
-
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

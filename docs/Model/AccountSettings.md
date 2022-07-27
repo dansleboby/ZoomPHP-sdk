@@ -4,17 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**schedule_meeting** | [**\Zoom\Api\Model\AccountSettingsScheduleMeeting**](AccountSettingsScheduleMeeting.md) |  | [optional] 
-**in_meeting** | [**\Zoom\Api\Model\AccountSettingsInMeeting**](AccountSettingsInMeeting.md) |  | [optional] 
-**email_notification** | [**\Zoom\Api\Model\AccountSettingsEmailNotification**](AccountSettingsEmailNotification.md) |  | [optional] 
-**zoom_rooms** | [**\Zoom\Api\Model\AccountSettingsZoomRooms**](AccountSettingsZoomRooms.md) |  | [optional] 
-**security** | [**\Zoom\Api\Model\AccountSettingsSecurity**](AccountSettingsSecurity.md) |  | [optional] 
-**recording** | [**\Zoom\Api\Model\AccountSettingsRecording**](AccountSettingsRecording.md) |  | [optional] 
-**telephony** | [**\Zoom\Api\Model\AccountSettingsTelephony**](AccountSettingsTelephony.md) |  | [optional] 
-**integration** | [**\Zoom\Api\Model\AccountSettingsIntegration**](AccountSettingsIntegration.md) |  | [optional] 
-**feature** | [**\Zoom\Api\Model\AccountSettingsFeature**](AccountSettingsFeature.md) |  | [optional] 
-**tsp** | [**\Zoom\Api\Model\AccountSettingsTsp**](AccountSettingsTsp.md) |  | [optional] 
+**security** | [**\OpenAPI\Client\Model\AccountSettingsSecurity**](AccountSettingsSecurity.md) |  | [optional]
+**audio_conferencing** | [**\OpenAPI\Client\Model\AccountSettingsAudioConference**](AccountSettingsAudioConference.md) |  | [optional]
+**email_notification** | [**\OpenAPI\Client\Model\AccountSettingsEmailNotification**](AccountSettingsEmailNotification.md) |  | [optional]
+**feature** | [**\OpenAPI\Client\Model\AccountSettingsFeature**](AccountSettingsFeature.md) |  | [optional]
+**in_meeting** | [**\OpenAPI\Client\Model\AccountSettingsInMeeting**](AccountSettingsInMeeting.md) |  | [optional]
+**integration** | [**\OpenAPI\Client\Model\AccountSettingsIntegration**](AccountSettingsIntegration.md) |  | [optional]
+**other_options** | [**\OpenAPI\Client\Model\AccountSettingsOtherOptions**](AccountSettingsOtherOptions.md) |  | [optional]
+**profile** | [**\OpenAPI\Client\Model\Profile**](Profile.md) |  | [optional]
+**recording** | [**\OpenAPI\Client\Model\AccountSettingsRecording**](AccountSettingsRecording.md) |  | [optional]
+**schedule_meeting** | [**\OpenAPI\Client\Model\AccountSettingsScheduleMeeting**](AccountSettingsScheduleMeeting.md) |  | [optional]
+**telephony** | [**\OpenAPI\Client\Model\AccountSettingsTelephony**](AccountSettingsTelephony.md) |  | [optional]
+**tsp** | [**\OpenAPI\Client\Model\AccountSettingsTSP**](AccountSettingsTSP.md) |  | [optional]
+**zoom_rooms** | [**\OpenAPI\Client\Model\AccountSettingsZoomRooms**](AccountSettingsZoomRooms.md) |  | [optional]
 
-[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
-
-
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

@@ -4,8 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**schedulers** | [**\Zoom\Api\Model\UserSchedulersListSchedulers[]**](UserSchedulersListSchedulers.md) | List of users for whom the current user can schedule meetings. | [optional] 
+**schedulers** | [**\OpenAPI\Client\Model\UserSchedulersListSchedulersInner[]**](UserSchedulersListSchedulersInner.md) | List of users for whom the current user can schedule meetings. | [optional]
 
-[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
-
-
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

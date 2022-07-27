@@ -4,8 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**assistants** | [**\Zoom\Api\Model\UserAssistantsListAssistants[]**](UserAssistantsListAssistants.md) | List of User&#39;s assistants. | [optional] 
+**assistants** | [**\OpenAPI\Client\Model\UserAssistantsListAssistantsInner[]**](UserAssistantsListAssistantsInner.md) | List of User&#39;s assistants. | [optional]
 
-[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
-
-
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

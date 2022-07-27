@@ -4,9 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**questions** | [**\Zoom\Api\Model\InlineResponse20025Questions[]**](InlineResponse20025Questions.md) | Array of Registrant Questions | [optional] 
-**custom_questions** | [**\Zoom\Api\Model\InlineResponse20025CustomQuestions[]**](InlineResponse20025CustomQuestions.md) | Array of Registrant Custom Questions | [optional] 
+**custom_questions** | [**\OpenAPI\Client\Model\MeetingRegistrantQuestionsCustomQuestionsInner[]**](MeetingRegistrantQuestionsCustomQuestionsInner.md) | Array of Registrant Custom Questions | [optional]
+**questions** | [**\OpenAPI\Client\Model\MeetingRegistrantQuestionsQuestionsInner[]**](MeetingRegistrantQuestionsQuestionsInner.md) | Array of Registrant Questions | [optional]
 
-[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
-
-
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

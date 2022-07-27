@@ -4,12 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**share_rc** | **bool** | Enable/disable the option for a Sub Account to use shared [Virtual Room Connector(s)](https://support.zoom.us/hc/en-us/articles/202134758-Getting-Started-With-Virtual-Room-Connector) that are set up by the Master Account. Virtual Room Connectors can only be used by On-prem users. | [optional] [default to false]
-**room_connector_list** | **string[]** | Specify the IP addresses of the Room Connectors that you would like to share with the Sub Account. Multiple values can be separated by comma. If no value is provided in this field, all the Room Connectors of a Master Account will be shared with the Sub Account.   **Note:** This option can only be used if the value of &#x60;share_rc&#x60; is set to &#x60;true&#x60;. | [optional] 
-**share_mc** | **bool** | Enable/disable the option for a Sub Account to use shared [Meeting Connector(s)](https://support.zoom.us/hc/en-us/articles/201363093-Getting-Started-with-the-Meeting-Connector) that are set up by the Master Account. Meeting Connectors can only be used by On-prem users. | [optional] [default to false]
-**meeting_connector_list** | **string[]** | Specify the IP addresses of the Meeting Connectors that you would like to share with the Sub Account. Multiple values can be separated by comma. If no value is provided in this field, all the Meeting Connectors of a Master Account will be shared with the Sub Account.   **Note:** This option can only be used if the value of &#x60;share_mc&#x60; is set to &#x60;true&#x60;. | [optional] 
-**pay_mode** | **string** | Payee:&lt;br&gt;&#x60;master&#x60; - Master account holder pays.&lt;br&gt;&#x60;sub&#x60; - Sub account holder pays. | [optional] [default to 'master']
+**billing_auto_renew** | **bool** | Whether to enable automatic billing renewal. | [optional]
+**meeting_connector_list** | **string[]** | A comma-separated list of Meeting Connector IP addresses shared with the sub account. If you do not provide a value for this field, all the Master account&#39;s Meeting Connectors will be shared with the sub account.    **Note:** You can only use this field if &#x60;share_mc&#x60; value is &#x60;true&#x60;. | [optional]
+**pay_mode** | **string** | The account&#39;s payee:  * &#x60;master&#x60; — The Master account holder pays.  * &#x60;sub&#x60; - The sub account holder pays.    This value defaults to &#x60;master&#x60;. | [optional] [default to 'master']
+**room_connector_list** | **string[]** | A comma-separated list of VRC IP addresses shared with the sub account. If you do not provide a value for this field, all of the Master account&#39;s VRCs will be shared with the sub account.    **Note:** You can only use this field if &#x60;share_rc&#x60; value is &#x60;true&#x60;. | [optional]
+**share_mc** | **bool** | Whether to enable the option for a sub account to use the Master account&#39;s shared [Meeting Connectors](https://support.zoom.us/hc/en-us/articles/201363093). Meeting Connectors are only available for On-Premise accounts.    This value defaults to &#x60;false&#x60;. | [optional] [default to false]
+**share_rc** | **bool** | Whether to enable the option for a sub account to use the Master account&#39;s shared [Virtual Room Connectors (VRC)](https://support.zoom.us/hc/en-us/articles/202134758-Deploying-the-Virtual-Room-Connector). VRCs are only available for On-premise accounts.    This value defaults to &#x60;false&#x60;. | [optional] [default to false]
 
-[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
-
-
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

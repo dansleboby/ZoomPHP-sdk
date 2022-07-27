@@ -4,15 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**plan_base** | [**\Zoom\Api\Model\InlineResponse2016PlanBase**](InlineResponse2016PlanBase.md) |  | 
-**plan_zoom_rooms** | [**\Zoom\Api\Model\InlineResponse2016PlanZoomRooms**](InlineResponse2016PlanZoomRooms.md) |  | [optional] 
-**plan_room_connector** | [**\Zoom\Api\Model\InlineResponse2016PlanZoomRooms**](InlineResponse2016PlanZoomRooms.md) |  | [optional] 
-**plan_large_meeting** | [**\Zoom\Api\Model\InlineResponse2016PlanZoomRooms[]**](InlineResponse2016PlanZoomRooms.md) | Additional large meeting Plans. | [optional] 
-**plan_webinar** | [**\Zoom\Api\Model\InlineResponse2016PlanZoomRooms[]**](InlineResponse2016PlanZoomRooms.md) | Additional webinar plans. | [optional] 
-**plan_recording** | **string** | Additional cloud recording plan. | [optional] 
-**plan_audio** | [**\Zoom\Api\Model\InlineResponse2016PlanAudio**](InlineResponse2016PlanAudio.md) |  | [optional] 
-**plan_phone** | [**\Zoom\Api\Model\PhonePlan2**](PhonePlan2.md) |  | [optional] 
+**plan_audio** | [**\OpenAPI\Client\Model\AccountPlansPlanAudio**](AccountPlansPlanAudio.md) |  | [optional]
+**plan_base** | [**\OpenAPI\Client\Model\AccountPlanBaseRequired**](AccountPlanBaseRequired.md) |  |
+**plan_large_meeting** | [**\OpenAPI\Client\Model\AccountPlansPlanLargeMeetingInner[]**](AccountPlansPlanLargeMeetingInner.md) | Information about the account&#39;s Large Meeting plan. | [optional]
+**plan_phone** | [**\OpenAPI\Client\Model\PhonePlan**](PhonePlan.md) |  | [optional]
+**plan_recording** | **string** | The account&#39;s [Cloud Recording plan](https://marketplace.zoom.us/docs/api-reference/other-references/plans#cloud-recording-plans). | [optional]
+**plan_room_connector** | [**\OpenAPI\Client\Model\AccountPlansPlanRoomConnectorInner[]**](AccountPlansPlanRoomConnectorInner.md) |  | [optional]
+**plan_webinar** | [**\OpenAPI\Client\Model\AccountPlansPlanWebinarInner[]**](AccountPlansPlanWebinarInner.md) | Information about the account&#39;s Webinar plan. | [optional]
+**plan_zoom_events** | [**\OpenAPI\Client\Model\AccountPlansPlanZoomEventsInner[]**](AccountPlansPlanZoomEventsInner.md) | Information about the account&#39;s Zoom Events plan. | [optional]
+**plan_zoom_rooms** | [**\OpenAPI\Client\Model\AccountPlansPlanZoomRooms**](AccountPlansPlanZoomRooms.md) |  | [optional]
+**plan_sdk_cmr** | [**\OpenAPI\Client\Model\AccountPlansPlanSdkCmrInner[]**](AccountPlansPlanSdkCmrInner.md) | Information about the account&#39;s Zoom Video SDK plan. | [optional]
+**plan_whiteboard** | [**\OpenAPI\Client\Model\AccountPlansPlanWhiteboard**](AccountPlansPlanWhiteboard.md) |  | [optional]
+**plan_bundle** | [**\OpenAPI\Client\Model\AccountPlansPlanBundleInner[]**](AccountPlansPlanBundleInner.md) | Information about the account&#39;s Zoom Bundle plan. | [optional]
 
-[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
-
-
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

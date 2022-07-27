@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**third_party_audio** | **bool** | Users can join the meeting using the existing third party audio configuration. | [optional] 
-**audio_conference_info** | **string** | Third party audio conference info. | [optional] 
+**audio_conference_info** | **string** | Third party audio conference info. | [optional]
+**telephony_regions** | [**\OpenAPI\Client\Model\AccountSettingsTelephonyTelephonyRegions**](AccountSettingsTelephonyTelephonyRegions.md) |  | [optional]
+**third_party_audio** | **bool** | Users can join the meeting using the existing third party audio configuration. | [optional]
 
-[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
-
-
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

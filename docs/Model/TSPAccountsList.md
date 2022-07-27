@@ -4,12 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** | The ID of the TSP account. | [optional] 
-**conference_code** | **string** | Conference code: numeric value, length is less than 16. | 
-**leader_pin** | **string** | Leader PIN: numeric value, length is less than 16. | 
-**dial_in_numbers** | [**\Zoom\Api\Model\InlineResponse20050DialInNumbers[]**](InlineResponse20050DialInNumbers.md) | List of dial in numbers. | [optional] 
-**tsp_bridge** | **string** | Telephony bridge | [optional] 
+**conference_code** | **string** | Conference code: numeric value, length is less than 16. |
+**dial_in_numbers** | [**\OpenAPI\Client\Model\TSPAccountsListDialInNumbersInner[]**](TSPAccountsListDialInNumbersInner.md) | List of dial in numbers. | [optional]
+**id** | **string** | The TSP credential ID. | [optional]
+**leader_pin** | **string** | Leader PIN: numeric value, length is less than 16. |
+**tsp_bridge** | **string** | Telephony bridge | [optional]
 
-[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
-
-
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

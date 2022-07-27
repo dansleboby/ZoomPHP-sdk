@@ -4,10 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**plan_base** | [**\Zoom\Api\Model\PhonePlan2PlanBase**](PhonePlan2PlanBase.md) |  | [optional] 
-**plan_calling** | [**\Zoom\Api\Model\PhonePlan2PlanCalling[]**](PhonePlan2PlanCalling.md) | Additional phone calling plans. | [optional] 
-**plan_number** | [**\Zoom\Api\Model\PhonePlan2PlanNumber[]**](PhonePlan2PlanNumber.md) | Additional phone number plans. | [optional] 
+**plan_base** | [**\OpenAPI\Client\Model\PhonePlanPlanBase**](PhonePlanPlanBase.md) |  | [optional]
+**plan_calling** | [**\OpenAPI\Client\Model\PhonePlanPlanCallingInner[]**](PhonePlanPlanCallingInner.md) | Information about the account&#39;s additional Zoom Phone calling plans. | [optional]
+**plan_calling_addons** | [**\OpenAPI\Client\Model\PhonePlanPlanCallingAddonsInner[]**](PhonePlanPlanCallingAddonsInner.md) | Information about the account&#39;s additional Zoom Phone add-on calling plan. A calling plan is required when adding an add-on calling plan. | [optional]
+**plan_number** | [**\OpenAPI\Client\Model\PhonePlanPlanNumberInner[]**](PhonePlanPlanNumberInner.md) | Information about the account&#39;s additional Zoom Phone number plans. | [optional]
 
-[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
-
-
+[[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
